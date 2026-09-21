@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/more_about_types.rst",
+    "line_start": 215,
+    "line_end": 253,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Character_Example is\n   type My_Char is ('a', 'b', 'c');\n   --  Our custom character type, an\n   --  enumeration type with 3 valid values.\n\n   C : Character;\n   --  ^ Built-in character type\n   --    (it's an enumeration type)\n\n   M : My_Char;\nbegin\n   C := '?';\n   --   ^ Character literal\n   --     (enumeration literal)\n\n   M := 'a';\n\n   C := 65;\n   --   ^ Invalid: 65 is not a\n   --     Character value\n\n   C := Character'Val (65);\n   --  Assign the character at\n   --  position 65 in the\n   --  enumeration (which is 'A')\n\n   M := C;\n   --   ^ Invalid: C is of type Character,\n   --     and M is a My_Char\n\n   M := 'd';\n   --   ^ Invalid: 'd' is not a valid\n   --     literal for type My_Char\nend Character_Example;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.More_About_Types.Character_Example",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "character_example.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "57d7ac466472d36db231178dd2117e25132f389b26b36c0fe56b0bcda5aa4b82c16b964540833377a402ac4ef93269c1447cf817faf97e50fbcf7bcb20c717e3",
+    "text_hash_short": "e4c5a07dbe8745749056f8c110d69fa3"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 9733,
+    "line_end": 9779,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\nwith System;\n\nprocedure Show_Fine_Delta_Accumulator is\n   D_31 : constant := 2.0 ** (-31);\n   D_48 : constant := 2.0 ** (-48);\n\n   type TQ31 is\n     delta D_31\n     range -1.0 .. 1.0 - D_31;\n\n   type TQ15_48 is\n     delta D_48\n     range -2.0 ** 15 ..\n            2.0 ** 15 - D_48;\n\n   type Fine_Acc is\n     delta System.Fine_Delta\n     range -1.0 ..\n            1.0 - System.Fine_Delta;\n\n   Coeff  : constant TQ31 := 0.01;\n   Sample : constant TQ31 := 0.05;\n\n   N : constant := 1_000;\n\n   Sum_TQ15_48  : TQ15_48  := 0.0;\n   Sum_Fine_Acc : Fine_Acc := 0.0;\nbegin\n   for I in 1 .. N loop\n      Sum_TQ15_48 := Sum_TQ15_48 +\n                     TQ15_48 (Coeff * Sample);\n   end loop;\n\n   for I in 1 .. N loop\n      Sum_Fine_Acc := Sum_Fine_Acc +\n                      Fine_Acc (Coeff * Sample);\n   end loop;\n\n   Put_Line (\"Sum_TQ15_48  = \"\n             & Sum_TQ15_48'Image);\n   Put_Line (\"Sum_Fine_Acc = \"\n             & Sum_Fine_Acc'Image);\nend Show_Fine_Delta_Accumulator;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Ordinary_Fixed_Point_Types.Fine_Delta_Accumulator",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_fine_delta_accumulator.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_fine_delta_accumulator.adb",
+    "text_hash": "a186bffe36370a75162c29d888dbc80f4308b06f0d30190602296d41cab5a16cba2d744f91b3ba4b34e6a4c341d643c4b64eb19ecdd6060151807786af6350ac",
+    "text_hash_short": "3140cf8fe960d310e711b207047b2558"
+}

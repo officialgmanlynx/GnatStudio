@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numeric_attributes.rst",
+    "line_start": 659,
+    "line_end": 690,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Roundings is\nbegin\n   Put_Line\n     (\"Float'Rounding (0.5):  \"\n      & Float'Rounding (0.5)'Image);\n   Put_Line\n     (\"Float'Rounding (1.5):  \"\n      & Float'Rounding (1.5)'Image);\n   Put_Line\n     (\"Float'Rounding (4.5):  \"\n      & Float'Rounding (4.5)'Image);\n   Put_Line\n     (\"Float'Rounding (-4.5): \"\n      & Float'Rounding (-4.5)'Image);\n   Put_Line\n     (\"Float'Unbiased_Rounding (0.5): \"\n      & Float'Unbiased_Rounding (0.5)'Image);\n   Put_Line\n     (\"Float'Unbiased_Rounding (1.5): \"\n      & Float'Unbiased_Rounding (1.5)'Image);\n   Put_Line\n     (\"Float'Machine_Rounding (0.5): \"\n      & Float'Machine_Rounding (0.5)'Image);\n   Put_Line\n     (\"Float'Machine_Rounding (1.5): \"\n      & Float'Machine_Rounding (1.5)'Image);\nend Show_Roundings;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numeric_Attributes.Floating_Point_Types.Rounding",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_roundings.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_roundings.adb",
+    "text_hash": "6bc62c5e1b9443f625069f7277b20344f5d5369d98b7fe076872b075168e45bab5f73d689fd6f54777bfc960f7c8ca90e432cdb5676d6b87d851d39c25f1709c",
+    "text_hash_short": "3f78165f092a163339cb9593ff15a50d"
+}

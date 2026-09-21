@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 1951,
+    "line_end": 1971,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main is\n   type Arr_Type is array (Integer range <>) of Character;\n   Arr : Arr_Type (1 .. 26);\n   C : Character := 'a';\nbegin\n   for I in Arr'Range loop\n      Arr (I) := C;\n      C := Character'Succ (C);\n\n      Put (Arr (I) & \" \");\n\n      if I mod 7 = 0 then\n         New_Line;\n      end if;\n   end loop;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Array_Range_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "e976e2d3394df7b79956cb3abe494a9789df1dc32ff4bb5398bc92def46a2bca50d099666c55fc3e0a5b70d1b5924d4e1e7503741cfcd7ed5d6127cfef2c9376",
+    "text_hash_short": "8e0597f6c040c740b35c79bc4706829b"
+}

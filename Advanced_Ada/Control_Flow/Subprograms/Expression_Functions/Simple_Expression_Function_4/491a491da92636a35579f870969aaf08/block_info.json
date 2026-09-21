@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/subprograms.rst",
+    "line_start": 1085,
+    "line_end": 1101,
+    "text": "package Expr_Func is\n\n   function Is_Zero (I : Integer)\n                     return Boolean;\n\nend Expr_Func;\n\npackage body Expr_Func is\n\n   function Is_Zero (I : Integer)\n                     return Boolean is\n     (I = 0);\n\nend Expr_Func;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Subprograms.Expression_Functions.Simple_Expression_Function_4",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "expr_func.ads",
+        "expr_func.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "7a125b70b22639ff52bb8e244f21dfe5456363faafb33def4e5124ec51e67cdab4e3d662bdda3cd20e10df0f4c01f59c2df3304b2941eaf88f0d7977db728a76",
+    "text_hash_short": "491a491da92636a35579f870969aaf08"
+}

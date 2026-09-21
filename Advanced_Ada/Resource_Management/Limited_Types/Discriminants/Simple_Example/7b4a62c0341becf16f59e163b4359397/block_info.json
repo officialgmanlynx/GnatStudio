@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 1518,
+    "line_end": 1541,
+    "text": "package Simple_Recs is\n\n   type Rec (L : Positive)\n     is limited null record;\n\nend Simple_Recs;\n\nwith Simple_Recs; use Simple_Recs;\n\nprocedure Test_Limitedness is\n   Dummy_1 : Rec (2);\n   Dummy_2 : Rec (3);\nbegin\n   Dummy_2 := Dummy_1;\n   --  ^^^^^^^^^^^^^^\n   --  ERRORS:\n   --    1. Cannot assign objects of\n   --       limited types.\n   --    2. Cannot assign objects with\n   --       different discriminants.\nend Test_Limitedness;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Discriminants.Simple_Example",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple_recs.ads",
+        "test_limitedness.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "test_limitedness.adb",
+    "text_hash": "ef387e11634785b7ca30e114fdad1805fc72d29bff5d6fde1037e1ae5e3c19c1f15afaaf0f5817e79f3d43487bd41483df8dfaec6ab217e5de5ed3c91a3fa31d",
+    "text_hash_short": "7b4a62c0341becf16f59e163b4359397"
+}

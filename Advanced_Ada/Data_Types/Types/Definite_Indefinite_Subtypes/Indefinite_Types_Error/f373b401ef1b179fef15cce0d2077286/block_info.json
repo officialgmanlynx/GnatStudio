@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 1344,
+    "line_end": 1360,
+    "text": "package Unconstrained_Types is\n\n   type Integer_Array is\n     array (Positive range <>) of Integer;\n\n   type Simple_Record (Arr : Integer_Array) is\n   --                  ^^^^^^^^^^^^^^^^^^^\n   --  ERROR: cannot use indefinite type\n   --         in discriminant.\n   record\n      L : Natural := Arr'Length;\n   end record;\n\nend Unconstrained_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Definite_Indefinite_Subtypes.Indefinite_Types_Error",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "unconstrained_types.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "e9078f5aff9b65e9a1f6297f68998501f030cf3b4bc1a15b9f86dc74320f36c5c1a6cab09678c3052bb219dcdf75726d16e72d88515226186c3147c70cf188bc",
+    "text_hash_short": "f373b401ef1b179fef15cce0d2077286"
+}

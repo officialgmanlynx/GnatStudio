@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 6473,
+    "line_end": 6494,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\nwith Ada.Decimal; use Ada.Decimal;\n\nprocedure Max_Decimal_Digits_Financial is\n\n   type Max_Fin_Decimal is\n     delta 0.01\n     digits Max_Decimal_Digits;\n\nbegin\n   Put_Line (\"Max_Fin_Decimal'Range : \"\n             & Max_Fin_Decimal'First'Image\n             & \" .. \"\n             & Max_Fin_Decimal'Last'Image);\n   Put_Line (\"Max_Fin_Decimal'Delta : \"\n             & Max_Fin_Decimal'Delta'Image);\n   Put_Line (\"Max_Fin_Decimal'Size  : \"\n             & Max_Fin_Decimal'Size'Image);\nend Max_Decimal_Digits_Financial;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Decimal_Fixed_Point_Types.Max_Decimal_Digits_Financial",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "max_decimal_digits_financial.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "max_decimal_digits_financial.adb",
+    "text_hash": "fab3f3b0ebe42aa7f415a15fc31050223e63961f35d0a5edb416634de8b1f7f1f027de0684fb90490ff6403032bf87e715f4f458d2a81452175800bb36951640",
+    "text_hash_short": "b159dbe6ae6a4e34ff781264cea9b14b"
+}

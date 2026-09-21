@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/modular_prog/packages.rst",
+    "line_start": 221,
+    "line_end": 228,
+    "text": "private package Data_Processing.Calculations is\n\n--  ...\n\nend Data_Processing.Calculations;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Modular_Prog.Packages.Private_Packages.Private_Package_Decl",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "data_processing-calculations.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "6ac3cc4f34acdb1e5a638696d83127a2b5716bcecb027b3cc1365654b895e8b817534c15191f643fd1a3488ae2f573777fa20e6e144de541dee7152c25767f31",
+    "text_hash_short": "20df8b2ac4c9aa93f03a12afd9b7ef30"
+}

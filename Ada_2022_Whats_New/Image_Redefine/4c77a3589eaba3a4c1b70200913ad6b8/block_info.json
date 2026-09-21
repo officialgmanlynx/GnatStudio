@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/whats-new-in-ada-2022/chapters/image_redefine.rst",
+    "line_start": 22,
+    "line_end": 56,
+    "text": "with Ada.Text_IO;\nwith Ada.Strings.Text_Buffers;\n\nprocedure Main is\n\n   type Source_Location is record\n      Line   : Positive;\n      Column : Positive;\n   end record\n     with Put_Image => My_Put_Image;\n\n   procedure My_Put_Image\n     (Output : in out Ada.Strings.Text_Buffers.Root_Buffer_Type'Class;\n      Value  : Source_Location);\n\n   procedure My_Put_Image\n     (Output : in out Ada.Strings.Text_Buffers.Root_Buffer_Type'Class;\n      Value  : Source_Location)\n   is\n      Line   : constant String := Value.Line'Image;\n      Column : constant String := Value.Column'Image;\n      Result : constant String :=\n        Line (2 .. Line'Last) & ':' & Column (2 .. Column'Last);\n   begin\n       Output.Put (Result);\n   end My_Put_Image;\n\n   Line_10 : constant Source_Location := (Line => 10, Column => 1);\n\nbegin\n   Ada.Text_IO.Put_Line (Line_10'Image);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_2022_Whats_New.Image_Redefine",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "9c61578d55d49ec0dbab32a265ebfdb84b1d416ca7f8b7a18a3d141d63fc7ec6388393f24be37886bcc2efefd81e6b88eff353862a7c720c890bf505b145b0bb",
+    "text_hash_short": "4c77a3589eaba3a4c1b70200913ad6b8"
+}

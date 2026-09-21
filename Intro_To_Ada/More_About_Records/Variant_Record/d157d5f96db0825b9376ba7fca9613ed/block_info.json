@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/more_about_records.rst",
+    "line_start": 226,
+    "line_end": 236,
+    "text": "with Variant_Record; use Variant_Record;\n\nprocedure Main is\n   E : Expr := (Num, 12);\nbegin\n   E.Left := new Expr'(Num, 15);\n   --  Will compile but fail at runtime\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.More_About_Records.Variant_Record",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "9292b75d5390f968fdd7f407acc9e6f03945ec906e03bf69ea273c24d7e58a7e1ed597178c503439c80cea637bb94ed2402cd80587418d076a4470b19411c26f",
+    "text_hash_short": "d157d5f96db0825b9376ba7fca9613ed"
+}

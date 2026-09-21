@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/exceptions.rst",
+    "line_start": 2080,
+    "line_end": 2131,
+    "text": "procedure Show_Index_Check is\n\n   type Integer_Array is\n     array (Positive range <>) of Integer;\n\n   pragma Suppress (Index_Check);\n   --  from now on, the compiler may\n   --  eliminate index checks...\n\n   function Unchecked_Value_Of\n     (A : Integer_Array;\n      I : Integer)\n      return Integer\n   is\n      type Half_Integer_Array is new\n        Integer_Array (A'First ..\n                       A'First + A'Length / 2);\n\n      A_2 : Half_Integer_Array := (others => 0);\n   begin\n      return A_2 (I);\n   end Unchecked_Value_Of;\n\n   pragma Unsuppress (Index_Check);\n   --  from now on, index checks are\n   --  typically performed...\n\n   function Value_Of\n     (A : Integer_Array;\n      I : Integer)\n      return Integer\n   is\n      type Half_Integer_Array is new\n        Integer_Array (A'First ..\n                       A'First + A'Length / 2);\n\n      A_2 : Half_Integer_Array := (others => 0);\n   begin\n      return A_2 (I);\n   end Value_Of;\n\n   Arr_1 : Integer_Array (1 .. 10) :=\n             (others => 1);\n\nbegin\n   Arr_1 (10) := Unchecked_Value_Of (Arr_1, 10);\n   Arr_1 (10) := Value_Of (Arr_1, 10);\n\nend Show_Index_Check;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Exceptions.Pragma_Unsuppress.Pragma_Unsuppress",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_index_check.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_index_check.adb",
+    "text_hash": "f3880c77bb3c42fe9673df48993b5dac2eea0dbbad1339612824a2d48e63e22b6813419270e928969ed637e67bd5b331ef6f4f48b8a434d4e4ce341d411ba6dd",
+    "text_hash_short": "0585b78fd57913d3172c7ab1ea6f4864"
+}

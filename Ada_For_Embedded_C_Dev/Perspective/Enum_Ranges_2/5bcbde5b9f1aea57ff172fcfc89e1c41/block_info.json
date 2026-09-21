@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 1625,
+    "line_end": 1643,
+    "text": "procedure Main is\n   type Day is\n     (Monday,\n      Tuesday,\n      Wednesday,\n      Thursday,\n      Friday,\n      Saturday,\n      Sunday);\n\n   subtype Business_Day is Day range Monday .. Friday;\n   subtype Weekend_Day is Day range Saturday .. Sunday;\n   subtype Dice_Throw is Integer range 1 .. 6;\nbegin\n   null;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Enum_Ranges_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "d3223471e3411d2e71a6519bcdf363652a26a945d11f7b4eb25c1b7086451454c89cace2899afe340db95b2393c2e12367af19e57f6c3cb577ee88188ee8f143",
+    "text_hash_short": "5bcbde5b9f1aea57ff172fcfc89e1c41"
+}

@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 5367,
+    "line_end": 5391,
+    "text": "package Show_Null_Procedure is\n   type Element is limited null record;\n   --  Not implemented yet\n\n   type Ref_Element is access all Element;\n\n   type Table is limited null record;\n   --  Not implemented yet\n\n   procedure Do_Nothing\n     (X : not null Ref_Element) is null;\n\n   type Iterate_Action is\n     access procedure\n       (X : not null Ref_Element);\n\n   procedure Iterate\n     (T      : Table;\n      Action : not null Iterate_Action\n                 := Do_Nothing'Access);\n\nend Show_Null_Procedure;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Access_To_Subprograms.Null_Procedure",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-syntax-only"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": true,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_null_procedure.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "3765af588f3954ac7a27f8372d9f32e46cdbd8afc454ede8c3675c4d3ca4bf18cb900216273fafafeacbe75d482af5616af6c5e85d51492be6ce86424e96907f",
+    "text_hash_short": "7341d8f23cd4efe45698481be452a9e8"
+}

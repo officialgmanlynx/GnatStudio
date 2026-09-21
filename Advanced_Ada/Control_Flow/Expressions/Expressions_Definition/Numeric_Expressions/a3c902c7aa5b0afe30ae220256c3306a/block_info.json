@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/expressions.rst",
+    "line_start": 206,
+    "line_end": 238,
+    "text": "procedure Show_Numeric_Expressions is\n   C1    : constant Integer := 5;\n   Dummy :          Integer;\nbegin\n   Dummy :=\n       -2 ** 4 + 3 * C1 ** 8;\n   --                      ^ numeric literal\n   --                      ^ primary\n   --                ^^      name\n   --                ^^      primary\n   --                ^^^^^^^ factor\n   --              ^ multiplying operator\n   --            ^           numeric literal\n   --            ^           primary\n   --            ^           factor\n   --            ^^^^^^^^^^^ term\n   --\n   --        ^ numeric literal\n   --        ^ primary\n   --   ^ numeric literal\n   --   ^ primary\n   --   ^^^^^^               factor\n   --   ^^^^^^               term\n   --          ^ binary adding operator\n   --  ^ unary adding operator\n   --\n   --  ^^^^^^^^^^^^^^^^^^^^^^ simple expression\n   --\n   --  ^^^^^^^^^^^^^^^^^^^^^^ expression\nend Show_Numeric_Expressions;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Expressions.Expressions_Definition.Numeric_Expressions",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_numeric_expressions.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_numeric_expressions.adb",
+    "text_hash": "b7f8a7960ca188bd1dfe7b382f2cd9e0d87d52aa8e3e9c0d2f9579e7012bc38f6513d24e59d6388df80dafd748afb1dda101f22bcdec2a580f83bc9e79f1f0c0",
+    "text_hash_short": "a3c902c7aa5b0afe30ae220256c3306a"
+}

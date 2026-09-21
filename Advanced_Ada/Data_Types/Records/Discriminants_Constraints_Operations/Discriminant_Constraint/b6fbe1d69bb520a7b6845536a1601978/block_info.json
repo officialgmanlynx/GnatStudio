@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 2172,
+    "line_end": 2183,
+    "text": "with Recs;        use Recs;\n\nprocedure Show_Object_Declaration is\n   A : T (L | M => 5);\n   --     ^^^^^\n   --  multiple selector names\nbegin\n   null;\nend Show_Object_Declaration;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Discriminants_Constraints_Operations.Discriminant_Constraint",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_object_declaration.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_object_declaration.adb",
+    "text_hash": "4b66714952abf2cb2dfcad48d2361a30b1c1fe559e57c8aa53de78d9f0b2cb90b15fc7b3d31a3ea13ae7ec37cb455bf56a9e8de8dc3a7785b5d0524d4402a9d5",
+    "text_hash_short": "b6fbe1d69bb520a7b6845536a1601978"
+}

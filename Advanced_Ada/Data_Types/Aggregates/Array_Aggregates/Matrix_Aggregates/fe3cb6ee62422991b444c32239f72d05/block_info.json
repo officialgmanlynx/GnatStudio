@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/aggregates.rst",
+    "line_start": 1235,
+    "line_end": 1259,
+    "text": "with Matrices; use Matrices;\n\nprocedure Show_Array_Aggregates is\n   M : Matrix (1 .. 2, 1 .. 3);\nbegin\n   --  Positional component association\n   M := [[0, 1, 2],\n         [3, 4, 5]];\n\n   Display (M);\n\n   --  Named component association\n   M := [[1 => 3,\n          2 => 4,\n          3 => 5],\n         [1 => 6,\n          2 => 7,\n          3 => 8]];\n\n   Display (M);\n\nend Show_Array_Aggregates;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Aggregates.Array_Aggregates.Matrix_Aggregates",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [
+        "nosyntax-check"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_array_aggregates.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_array_aggregates.adb",
+    "text_hash": "6559adcd5a73d2a424297963954d5e1a411ce7780e058835511be7e3f03d5f922a461b3fbe8dd86ba56d4464f8a5a0680e99701eb4c4d8e524d92664c83f6125",
+    "text_hash_short": "fe3cb6ee62422991b444c32239f72d05"
+}

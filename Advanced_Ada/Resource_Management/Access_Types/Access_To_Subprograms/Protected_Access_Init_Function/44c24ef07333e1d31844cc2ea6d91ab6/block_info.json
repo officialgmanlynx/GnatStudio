@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 5688,
+    "line_end": 5726,
+    "text": "with Work_Registry;\nuse  Work_Registry;\n\nwith Integer_Storage_System;\nuse  Integer_Storage_System;\n\nprocedure Show_Access_To_Protected_Subprograms is\n\n   WHR      : Work_Handler_Registry (5);\n   Int_Stor : Integer_Storage_Array (1 .. 3);\n\nbegin\n   --  Allocate and initialize integer storage\n   --\n   --  (For the initialization, we're just\n   --  assigning the index here, but we could\n   --  really have used any integer value.)\n\n   for I in Int_Stor'Range loop\n      Int_Stor (I) := new Integer_Storage;\n      Int_Stor (I).Set (I);\n   end loop;\n\n   --  Register handlers\n\n   for I in Int_Stor'Range loop\n      WHR.Register (Int_Stor (I).all.Show'Access);\n   end loop;\n\n   --  Now, use Process_All to call the handlers\n   --  (in this case, the Show procedure for\n   --  each protected object from Int_Stor).\n\n   WHR.Process_All;\n\nend Show_Access_To_Protected_Subprograms;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Access_To_Subprograms.Protected_Access_Init_Function",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_access_to_protected_subprograms.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_access_to_protected_subprograms.adb",
+    "text_hash": "dc0a7e113c4db712f868f537a0f9303de30e26387b4ea04bbff0bffd04db992eec01fa67146cb660b8ca551e238bfc2ecc2bd705a4a750a90f0b05bf3da9fa21",
+    "text_hash_short": "44c24ef07333e1d31844cc2ea6d91ab6"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_containers.rst",
+    "line_start": 1260,
+    "line_end": 1297,
+    "text": "with Ada.Containers.Indefinite_Ordered_Maps;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Ordered_Map is\n\n   package Integer_Ordered_Maps is new\n     Ada.Containers.Indefinite_Ordered_Maps\n       (Key_Type        => String,\n        Element_Type    => Integer);\n\n   use Integer_Ordered_Maps;\n\n   M : Map;\nbegin\n   M.Include (\"Alice\", 24);\n   M.Include (\"John\",  40);\n   M.Include (\"Bob\",   28);\n\n   if M.Contains (\"Alice\") then\n      Put_Line (\"Alice's age is \"\n                & Integer'Image (M (\"Alice\")));\n   end if;\n\n   --  Update Alice's age\n   --  Key must already exist in M\n   M (\"Alice\") := 25;\n\n   New_Line; Put_Line (\"Name & Age:\");\n   for C in M.Iterate loop\n      Put_Line (Key (C) & \": \"\n                & Integer'Image (M (C)));\n   end loop;\n\nend Show_Ordered_Map;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Ordered_Map",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_ordered_map.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_ordered_map.adb",
+    "text_hash": "4e8ed4ab3124677993bb45479bf167d3c5cd550f423f051242fc48dd1d9dbe04e5686a44c53e1abf8bac1303fdceb4104b637077677d624bc018c711a61cf30b",
+    "text_hash_short": "3deb3c685e767cee271b06e87727b086"
+}

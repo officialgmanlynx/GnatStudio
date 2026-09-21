@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 307,
+    "line_end": 350,
+    "text": "package Limited_Types is\n\n   type Integer_Access is access Integer;\n\n   type Simple_Rec is limited private;\n\n   function Init (I : Integer) return Simple_Rec;\n\nprivate\n\n   type Simple_Rec is limited record\n      V : Integer_Access;\n   end record;\n\nend Limited_Types;\n\npackage body Limited_Types is\n\n   function Init (I : Integer) return Simple_Rec\n   is\n   begin\n      return E : Simple_Rec do\n         E.V := new Integer'(I);\n      end return;\n   end Init;\n\nend Limited_Types;\n\nwith Ada.Text_IO;   use Ada.Text_IO;\nwith Limited_Types; use Limited_Types;\n\nprocedure Show_Limited_Equality is\n   A : Simple_Rec := Init (5);\n   B : Simple_Rec := Init (6);\nbegin\n   if A = B then\n      Put_Line (\"A = B\");\n   else\n      Put_Line (\"A /= B\");\n   end if;\nend Show_Limited_Equality;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Assignment_Equality.Equality",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "limited_types.ads",
+        "limited_types.adb",
+        "show_limited_equality.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_limited_equality.adb",
+    "text_hash": "91a62958303ccda59c656ceeccb8f592ae6ed37eccb1263a6e83531312f4bc05936de078e6f53060a8f84e2cff27348e2be84902c865f7d1437fd8d509f08ff6",
+    "text_hash_short": "dad31b5e36de0b3b7824f723a60e5aa0"
+}

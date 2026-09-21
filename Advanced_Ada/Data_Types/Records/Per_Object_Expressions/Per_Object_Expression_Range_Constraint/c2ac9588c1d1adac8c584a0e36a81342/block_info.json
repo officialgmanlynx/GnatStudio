@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 3857,
+    "line_end": 3874,
+    "text": "package Rec_Per_Object_Expressions is\n\n   type Bit_Field is\n     array (Positive range <>) of Boolean\n       with Pack;\n\n   type T is record\n      Arr : Bit_Field (1 .. T'Size);\n      --                    ^^^^^^\n      --  ERROR: per-object range constraint\n      --         using the Size attribute\n      --         is illegal.\n   end record;\n\nend Rec_Per_Object_Expressions;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Per_Object_Expressions.Per_Object_Expression_Range_Constraint",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "rec_per_object_expressions.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "3e6f54c25fd42708d405058a9a6f0e590a2562ff7acc7afe8e3d4bf0c236849c568d094ae332523573496779ce5ceca2632f46f45fdc3f70cd8ffbf16fc180c3",
+    "text_hash_short": "c2ac9588c1d1adac8c584a0e36a81342"
+}

@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/exceptions.rst",
+    "line_start": 869,
+    "line_end": 883,
+    "text": "with P; use P;\n\nprocedure Show_Accessibility_Check is\n\n   A : access T'Class := new T;\n\n   procedure P (A : T_Class) is null;\n\nbegin\n   P (T_Class (A));\n\nend Show_Accessibility_Check;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Exceptions.Checks_And_Exceptions.Accessibility_Check",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_accessibility_check.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_accessibility_check.adb",
+    "text_hash": "113e8fbf9bb183de38fe0f09607ec19ef715102f5cd11c45cb0f6879e04de7f992cab4c0940a94e3dbcf7292f46836e54efaf27484d1e514dfdf59aa652579ff",
+    "text_hash_short": "97db82410dd3459249d0e7a97118b7ef"
+}

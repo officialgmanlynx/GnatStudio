@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/interfacing_with_c.rst",
+    "line_start": 650,
+    "line_end": 682,
+    "text": "with System;\n\nwith Interfaces.C; use Interfaces.C;\nwith Interfaces.C.Strings;\n\npackage adapted_test_h is\n\n   type Test is new System.Address;\n\n   function Create return Test;\n   pragma Import (C, Create, \"test_create\");\n\n   procedure Destroy (T : Test);\n   pragma Import (C, Destroy, \"test_destroy\");\n\n   procedure Reset (T : Test);\n   pragma Import (C, Reset, \"test_reset\");\n\n   procedure Set_Name (T    : Test;\n                       Name : Interfaces.C.Strings.chars_ptr);  -- ./test.h:11\n   pragma Import (C, Set_Name, \"test_set_name\");\n\n   procedure Set_Address (T       : Test;\n                          Address : Interfaces.C.Strings.chars_ptr);\n   pragma Import (C, Set_Address, \"test_set_address\");\n\n   procedure Display (T : Test);  -- ./test.h:15\n   pragma Import (C, Display, \"test_display\");\n\nend adapted_test_h;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Interfacing_With_C.C_Binds_3",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "nosyntax-check"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "adapted_test_h.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "66c3d82413359bb36959a0a07c862b9b27f2c4459c84d6d7aa32d683bfac44185b951ed791cbf64f698d9dd44fc80cc5770e2d9feed56034c0881eb668d4084f",
+    "text_hash_short": "5cc875e1b01af839141e5e623f6c5b7a"
+}

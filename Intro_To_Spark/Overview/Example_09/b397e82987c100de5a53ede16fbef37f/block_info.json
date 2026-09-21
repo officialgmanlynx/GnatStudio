@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/01_Overview.rst",
+    "line_start": 780,
+    "line_end": 820,
+    "text": "with Ada.Finalization;\n\npackage P\n  with SPARK_Mode => On\nis\n   subtype Letter is Character range 'a' .. 'z';\n   type String_Access is private;\n   type Dictionary is array (Letter) of String_Access;\n\n   function New_String_Access (W : String) return String_Access;\n\nprivate\n   pragma SPARK_Mode (Off);\n\n   type String_Access is new Ada.Finalization.Controlled with record\n      Ptr : access String;\n   end record;\n\n   function New_String_Access (W : String) return String_Access is\n     (Ada.Finalization.Controlled with Ptr => new String'(W));\nend P;\n\nwith P; use P;\npackage Q\n  with SPARK_Mode => On\nis\n   procedure Store (D : in out Dictionary; W : String);\nend Q;\n\npackage body Q\n  with SPARK_Mode => On\nis\n   procedure Store (D : in out Dictionary; W : String)  is\n      First_Letter : constant Letter := W (W'First);\n   begin\n      D (First_Letter) := New_String_Access (W);\n   end Store;\nend Q;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Overview.Example_09",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "p.ads",
+        "q.ads",
+        "q.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "8ed6a3520a0aca42d15e24ac181b3f7c917e8e38a9a77d02a75763a09b9d32a03df28512e43e89f3d5bfc4bf09b361fe813a60efecf833caaae265b91ce8165f",
+    "text_hash_short": "b397e82987c100de5a53ede16fbef37f"
+}

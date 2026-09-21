@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/strings.rst",
+    "line_start": 1096,
+    "line_end": 1151,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Ada.Strings.UTF_Encoding;\nuse  Ada.Strings.UTF_Encoding;\n\nwith Ada.Strings.UTF_Encoding.Wide_Wide_Strings;\nuse  Ada.Strings.UTF_Encoding.Wide_Wide_Strings;\n\nprocedure Put_Line_UTF_8_Characters\n  (WSS : Wide_Wide_String)\nis\n   procedure Put_Complete_UTF_8_String\n     (WSS : Wide_Wide_String)\n   is\n      S_UTF_8 : constant UTF_8_String :=\n                  Encode (WSS);\n   begin\n      Put_Line (\"STRING: \" & S_UTF_8);\n      Put_Line (\"Length: \"\n                & WSS'Length'Image\n                & \" characters\");\n      New_Line;\n   end Put_Complete_UTF_8_String;\n\n   --  This is a wrapper function of the\n   --  Encode function for the\n   --  Wide_Wide_Character type:\n   function Encode (Item : Wide_Wide_Character)\n                    return UTF_8_String\n    is\n       SC : constant Wide_Wide_String (1 .. 1)\n              := (1 => Item);\n       --  We need a 1-character string\n       --  for the call to Encode.\n   begin\n       return Encode (SC);\n   end Encode;\n\n   procedure Put_UTF_8_Characters\n     (WSS : Wide_Wide_String) is\n   begin\n      for I in WSS'Range loop\n         Put (I'Image & \": \");\n         Put (Encode (WSS (I)));\n         New_Line;\n      end loop;\n   end Put_UTF_8_Characters;\n\nbegin\n    Put_Complete_UTF_8_String (WSS);\n    Put_UTF_8_Characters (WSS);\n    Put_Line (\"--------------------\");\nend Put_Line_UTF_8_Characters;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Strings.String_Encoding.UTF_8_File_Processing",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "put_line_utf_8_characters.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "223312cf0e8df86915b743bc99d75d311f0280f4859bf1ccd39f889985f2df30f8608a5760ff2a19cd4f9ed65a9fde667810a2e79598b43b0fae3018f9371ec0",
+    "text_hash_short": "14fae1f2b1d3795f3cef244f60082fcc"
+}

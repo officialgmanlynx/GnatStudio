@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 1032,
+    "line_end": 1055,
+    "text": "package Colors is\n\n   type Color is\n     (Salmon,\n      Firebrick,\n      Red,\n      Darkred,\n      Lime,\n      Forestgreen,\n      Green,\n      Darkgreen,\n      Blue,\n      Mediumblue,\n      Darkblue);\n\n   type Primary_Color is\n     (Red,\n      Green,\n      Blue);\n\nend Colors;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Enumerations.Enumeration_Overloading",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "colors.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "6554b5a762f3ad14f28679edd2318cfaf887f97d7f1b175b36655d26621f0f05b9c23fa8d0c105ec08ba267129028f567a200b777d218dca817118ab4ed2d7f2",
+    "text_hash_short": "b808f90d9164f044b6b7a8931863726f"
+}

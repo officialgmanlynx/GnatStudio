@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 3175,
+    "line_end": 3231,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Dangling_Reference is\n\n   type Integer_Access is\n     access all Integer;\n\n   I_Var_1 : aliased Integer := 22;\n\n   A1    : Integer_Access;\nbegin\n   A1 := I_Var_1'Access;\n   Put_Line (\"A1.all: \"\n             & Integer'Image (A1.all));\n\n   Put_Line (\"Inner_Block will start now!\");\n\n   Inner_Block : declare\n      --\n      --  I_Var_2 only exists in Inner_Block\n      --\n      I_Var_2 : aliased Integer := 42;\n\n      --\n      --  A2 only exists in Inner_Block\n      --\n      A2      : Integer_Access;\n   begin\n      A2 := I_Var_1'Access;\n      Put_Line (\"A2.all: \"\n                & Integer'Image (A2.all));\n\n      A1 := I_Var_2'Access;\n      --   PROBLEM: A1 and Integer_Access type\n      --            have longer lifetime than\n      --            I_Var_2\n\n      Put_Line (\"A1.all: \"\n                & Integer'Image (A1.all));\n\n      A2 := I_Var_2'Access;\n      --   PROBLEM: A2 has the same lifetime as\n      --            I_Var_2, but Integer_Access\n      --            type has a longer lifetime.\n\n      Put_Line (\"A2.all: \"\n                & Integer'Image (A2.all));\n   end Inner_Block;\n\n   Put_Line (\"Inner_Block has ended!\");\n   Put_Line (\"A1.all: \"\n             & Integer'Image (A1.all));\n\nend Show_Dangling_Reference;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Accessibility_Levels_Rules_Introduction.Dangling_Reference_Rules",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_dangling_reference.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_dangling_reference.adb",
+    "text_hash": "02aac56c38d13c80170309f3f0cb6d7bea4bdc493fdadfc1a5095ffc7af55b3d6426dca00f5329e48c4aab1ad9668f937b9aebe51b1de804c7e80243eb41b898",
+    "text_hash_short": "98e597f3f6a12075c474612bb42f4cb7"
+}

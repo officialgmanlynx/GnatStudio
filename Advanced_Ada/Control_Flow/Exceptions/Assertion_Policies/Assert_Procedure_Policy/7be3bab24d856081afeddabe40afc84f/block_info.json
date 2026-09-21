@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/exceptions.rst",
+    "line_start": 411,
+    "line_end": 429,
+    "text": "with Ada.Text_IO;    use Ada.Text_IO;\nwith Ada.Assertions; use Ada.Assertions;\n\nprocedure Show_Assert_Procedure_Policy is\n   pragma Assertion_Policy (Assert => Ignore);\n\n   I : constant Integer := 1;\nbegin\n   Put_Line (\"------ Pragma Assert -----\");\n   pragma Assert (I = 0);\n\n   Put_Line (\"---- Procedure Assert ----\");\n   Assert (I = 0);\n\n   Put_Line (\"Finished.\");\nend Show_Assert_Procedure_Policy;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Exceptions.Assertion_Policies.Assert_Procedure_Policy",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_assert_procedure_policy.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_assert_procedure_policy.adb",
+    "text_hash": "e03cd9283d22a3838dbb24aa960ea2204d15020bfa5254e1cb632762e64e03146a58f5576feb7a843a63e237544a03ae6b695ac84407dde3e039134d571946ad",
+    "text_hash_short": "7be3bab24d856081afeddabe40afc84f"
+}

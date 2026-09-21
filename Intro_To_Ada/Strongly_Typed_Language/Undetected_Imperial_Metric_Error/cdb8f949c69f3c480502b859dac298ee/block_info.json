@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/strongly_typed_language.rst",
+    "line_start": 734,
+    "line_end": 757,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Undetected_Imperial_Metric_Error is\n   --  Declare two type aliases\n   subtype Meters is Float;\n   subtype Miles is Float;\n\n   Dist_Imperial : Miles;\n\n   --  Declare a constant\n   Dist_Metric : constant Meters := 100.0;\nbegin\n   --  No conversion to Miles type required:\n   Dist_Imperial := (Dist_Metric * 1609.0)\n                      / 1000.0;\n\n   --  Not correct, but undetected:\n   Dist_Imperial := Dist_Metric;\n\n   Put_Line (Miles'Image (Dist_Imperial));\nend Undetected_Imperial_Metric_Error;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Strongly_Typed_Language.Undetected_Imperial_Metric_Error",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "undetected_imperial_metric_error.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "undetected_imperial_metric_error.adb",
+    "text_hash": "5b5c39efc6d96d283edf8a6f34c5b741d9b6002f2bb738f9ef1b09abf25a9f4861b5aab67508f81b6196bdecaf967253b008792d72f1a99b6a7022eefd8175ce",
+    "text_hash_short": "cdb8f949c69f3c480502b859dac298ee"
+}

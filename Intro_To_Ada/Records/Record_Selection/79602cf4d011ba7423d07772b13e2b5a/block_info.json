@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/records.rst",
+    "line_start": 101,
+    "line_end": 137,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Record_Selection is\n\n   type Months is\n     (January, February, March, April,\n      May, June, July, August, September,\n      October, November, December);\n\n   type Date is record\n      Day   : Integer range 1 .. 31;\n      Month : Months;\n      Year  : Integer range 1 .. 3000 := 2032;\n   end record;\n\n   procedure Display_Date (D : Date) is\n   begin\n      Put_Line (\"Day:\" & Integer'Image (D.Day)\n                & \", Month: \"\n                & Months'Image (D.Month)\n                & \", Year:\"\n                & Integer'Image (D.Year));\n   end Display_Date;\n\n   Some_Day : Date := (1, January, 2000);\n\nbegin\n   Display_Date (Some_Day);\n\n   Put_Line (\"Changing year...\");\n   Some_Day.Year := 2001;\n\n   Display_Date (Some_Day);\nend Record_Selection;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Records.Record_Selection",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "record_selection.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "record_selection.adb",
+    "text_hash": "d40cfb9f6ff4f162d45d93a90f0b4979b89e9a6c8542e50824daffe0b827f4e5ab255824149894adc3ac894fb7a057630082fea75f773e82b17c45e3f34665e5",
+    "text_hash_short": "79602cf4d011ba7423d07772b13e2b5a"
+}

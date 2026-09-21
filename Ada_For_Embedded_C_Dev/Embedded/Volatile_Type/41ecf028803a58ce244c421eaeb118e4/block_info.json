@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/04_Embedded.rst",
+    "line_start": 641,
+    "line_end": 657,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Volatile_Type is\n   type Volatile_Long_Float is new Long_Float with Volatile;\n\n   Val : Volatile_Long_Float;\nbegin\n   Val := 0.0;\n   for I in 0 .. 999 loop\n      Val := Val + 2.0 * Volatile_Long_Float (I);\n   end loop;\n\n   Put_Line (\"Val: \" & Volatile_Long_Float'Image (Val));\nend Show_Volatile_Type;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Embedded.Volatile_Type",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_volatile_type.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_volatile_type.adb",
+    "text_hash": "9fe481943fce268d987fe4a059ddf538d3210536bfad1ed3175e0236e8b8234e4d7244dbbce226682162069651ae0cb4a77914eb75db85f3f489dee5ae7a3d80",
+    "text_hash_short": "41ecf028803a58ce244c421eaeb118e4"
+}

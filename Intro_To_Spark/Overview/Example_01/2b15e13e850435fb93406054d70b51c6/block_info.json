@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/01_Overview.rst",
+    "line_start": 440,
+    "line_end": 459,
+    "text": "package Stack_Package\n  with SPARK_Mode => On\nis\n   type Element is new Natural;\n   type Stack is private;\n\n   function Empty return Stack;\n   procedure Push (S : in out Stack; E : Element);\n   function Pop (S : in out Stack) return Element;\n\nprivate\n   type Stack is record\n      Top : Integer;\n      --  ...\n   end record;\n\nend Stack_Package;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Overview.Example_01",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "stack_package.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "0f59115362db4723d2ee04053af908abb30461282cd50e8d9095081c45cc51d31e364440abb7b5003abb1784cbf6bc1d68e6fdf13f5ff75d02931f6a9e747e6f",
+    "text_hash_short": "2b15e13e850435fb93406054d70b51c6"
+}

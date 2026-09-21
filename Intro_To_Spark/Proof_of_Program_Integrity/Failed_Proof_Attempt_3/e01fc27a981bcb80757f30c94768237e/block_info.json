@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/03_Proof_Of_Program_Integrity.rst",
+    "line_start": 588,
+    "line_end": 613,
+    "text": "package Show_Failed_Proof_Attempt is\n\n   C : Natural := 100;\n\n   procedure Increase (X : in out Natural) with\n      Post => (if X'Old < C then X > X'Old else X = C);\n\nend Show_Failed_Proof_Attempt;\n\npackage body Show_Failed_Proof_Attempt is\n\n   procedure Increase (X : in out Natural) is\n   begin\n      if X < 90 then\n         X := X + 10;\n      elsif X >= C then\n         X := C;\n      else\n         X := X + 1;\n      end if;\n   end Increase;\n\nend Show_Failed_Proof_Attempt;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Proof_of_Program_Integrity.Failed_Proof_Attempt_3",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "show_failed_proof_attempt.ads",
+        "show_failed_proof_attempt.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "115e69912504df8efd25956f5b3ed32d92d1ecf964bc53c23128e6abf9e1cdf3a8d2001620c94fad5088cf6c8ccc7584054762a8c9b4036066ae557c44d3ebe9",
+    "text_hash_short": "e01fc27a981bcb80757f30c94768237e"
+}

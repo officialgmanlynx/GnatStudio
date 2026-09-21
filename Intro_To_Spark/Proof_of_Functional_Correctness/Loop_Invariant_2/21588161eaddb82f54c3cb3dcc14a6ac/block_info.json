@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/05_Proof_Of_Functional_Correctness.rst",
+    "line_start": 885,
+    "line_end": 911,
+    "text": "package Show_Find is\n\n   type Nat_Array is array (Positive range <>) of Natural;\n\n   function Find (A : Nat_Array; E : Natural) return Natural;\n\nend Show_Find;\n\npackage body Show_Find is\n\n   function Find (A : Nat_Array; E : Natural) return Natural is\n   begin\n      for I in A'Range loop\n         pragma Loop_Invariant\n           (for all J in A'First .. I - 1 => A (J) /= E);\n         if A (I) = E then\n            return I;\n         end if;\n      end loop;\n      pragma Assert (for all I in A'Range => A (I) /= E);\n      return 0;\n   end Find;\n\nend Show_Find;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Proof_of_Functional_Correctness.Loop_Invariant_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_report_all"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "show_find.ads",
+        "show_find.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "7a3a1e3cfbf35867b4960338660ac9c65fcf3c92077c38bef928a7e6714639225019b9bde68d765931c2c3fd52ba3dcf61fe2007947083db2bc28569bbfdf5fd",
+    "text_hash_short": "21588161eaddb82f54c3cb3dcc14a6ac"
+}

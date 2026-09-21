@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_numerics.rst",
+    "line_start": 93,
+    "line_end": 118,
+    "text": "with Ada.Text_IO;  use Ada.Text_IO;\n\nwith Ada.Numerics.Float_Random;\nuse  Ada.Numerics.Float_Random;\n\nprocedure Show_Float_Random_Num is\n   G : Generator;\n   X : Uniformly_Distributed;\nbegin\n   Reset (G);\n\n   Put_Line (\"Some random numbers between \"\n             & Float'Image\n                 (Uniformly_Distributed'First)\n             & \" and \"\n             & Float'Image\n                 (Uniformly_Distributed'Last)\n             & \":\");\n   for I in 1 .. 15 loop\n      X := Random (G);\n      Put_Line (Float'Image (X));\n   end loop;\nend Show_Float_Random_Num;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Float_Random_Num",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_float_random_num.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_float_random_num.adb",
+    "text_hash": "e2922177dc0adff85aebf37da013dea3a1f7b77d0be3eadd474c4cc46bc18a1490e1d2e0b07819f51cc9cff460205400cc6936e672361ac363d348d63be59181",
+    "text_hash_short": "cf38ab00e27bad4309010e678113dd36"
+}

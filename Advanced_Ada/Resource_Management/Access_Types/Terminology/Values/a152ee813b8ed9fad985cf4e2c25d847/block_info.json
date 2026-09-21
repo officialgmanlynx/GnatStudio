@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 108,
+    "line_end": 128,
+    "text": "procedure Show_Values is\n\n   --  Access-to-object type\n   type Integer_Access is access Integer;\n\n   I1, I2, I3 : Integer_Access;\n\nbegin\n   I1 := new Integer;\n   I3 := new Integer;\n\n   --  Copying the access value of I1 to I2\n   I2 := I1;\n\n   --  Copying the designated value of I1\n   I3.all := I1.all;\n\nend Show_Values;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Terminology.Values",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_values.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "c3177fbfdd85cd58a8eecc6becb2c46c3d8eb229339f5920804c6efea58779311c51ccfc0228430ad41fe5fdd52e091ef3ef23465b20658fa4399839ae83b3ac",
+    "text_hash_short": "a152ee813b8ed9fad985cf4e2c25d847"
+}

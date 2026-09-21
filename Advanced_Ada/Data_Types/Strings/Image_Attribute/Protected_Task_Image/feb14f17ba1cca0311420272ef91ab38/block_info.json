@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/strings.rst",
+    "line_start": 1664,
+    "line_end": 1718,
+    "text": "package Simple_Tasking is\n\n   protected type Protected_Float (I : Integer) is\n\n   private\n      V : Float := Float (I);\n   end Protected_Float;\n\n   protected type Protected_Null is\n   private\n   end Protected_Null;\n\n   task type T is\n      entry Start;\n   end T;\n\nend Simple_Tasking;\n\npackage body Simple_Tasking is\n\n   protected body Protected_Float is\n\n   end Protected_Float;\n\n   protected body Protected_Null is\n\n   end Protected_Null;\n\n   task body T is\n   begin\n      accept Start;\n   end T;\n\nend Simple_Tasking;\n\nwith Ada.Text_IO;    use Ada.Text_IO;\n\nwith Simple_Tasking; use Simple_Tasking;\n\nprocedure Show_Protected_Task_Image is\n\n   PF : Protected_Float (0);\n   PN : Protected_Null;\n   T1 : T;\n\nbegin\n   Put_Line (\"PF: \" & PF'Image);\n   Put_Line (\"PN: \" & PN'Image);\n   Put_Line (\"T1: \" & T1'Image);\n\n   T1.Start;\nend Show_Protected_Task_Image;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Strings.Image_Attribute.Protected_Task_Image",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple_tasking.ads",
+        "simple_tasking.adb",
+        "show_protected_task_image.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_protected_task_image.adb",
+    "text_hash": "e91548925336704aab3ce13a6faf87c5d295c21c6fc21ac6792a22379eac94c68155ba4ed5e682404a0ec2bb6be13bb69934109df194003f6df7961844c6cba1",
+    "text_hash_short": "feb14f17ba1cca0311420272ef91ab38"
+}

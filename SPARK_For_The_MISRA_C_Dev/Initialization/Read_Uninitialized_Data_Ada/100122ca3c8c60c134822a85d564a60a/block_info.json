@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/05_initialization.rst",
+    "line_start": 210,
+    "line_end": 246,
+    "text": "with Interfaces; use Interfaces;\n\npackage Init is\n   U : Unsigned_16;\n   procedure F (B : Boolean);\n   procedure G with Global => (Output => U);\nend Init;\n\npackage body Init is\n\n   procedure F (B : Boolean) is\n   begin\n      if B then\n         U := 3;\n      end if;\n   end F;\n\n   procedure G is\n   begin\n      F (False);\n\n      if U = 3 then\n         null;\n      end if;\n   end G;\n\nend Init;\n\nwith Init;\n\nprocedure Call_Init is\nbegin\n   Init.G;\nend Call_Init;\n",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Initialization.Read_Uninitialized_Data_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "init.ads",
+        "init.adb",
+        "call_init.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "2e8a88896741d20f66a014189a3db6113a5bebb08effbc9141ec21b150d1f9d5d32552f3839a8414dd3f2ce1672ec8b549806655c3d8e364815903985ea4e0fb",
+    "text_hash_short": "100122ca3c8c60c134822a85d564a60a"
+}

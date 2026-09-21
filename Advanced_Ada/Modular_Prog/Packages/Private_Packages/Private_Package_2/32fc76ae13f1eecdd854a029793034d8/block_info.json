@@ -1,0 +1,48 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/modular_prog/packages.rst",
+    "line_start": 293,
+    "line_end": 353,
+    "text": "package Data_Processing is\n\n   type Data is private;\n\n   procedure Process (D : in out Data);\n\nprivate\n\n   type Data is null record;\n\nend Data_Processing;\n\nprivate package Data_Processing.Calculations is\n\n   procedure Calculate (D : in out Data);\n\nend Data_Processing.Calculations;\n\nwith Data_Processing.Calculations;\nuse  Data_Processing.Calculations;\n\nprivate\npackage Data_Processing.Advanced_Calculations is\n\n   procedure Advanced_Calculate (D : in out Data)\n     renames Calculate;\n\nend Data_Processing.Advanced_Calculations;\n\nwith Data_Processing.Advanced_Calculations;\nuse  Data_Processing.Advanced_Calculations;\n\npackage body Data_Processing is\n\n   procedure Process (D : in out Data) is\n   begin\n      Advanced_Calculate (D);\n   end Process;\n\nend Data_Processing;\n\npackage body Data_Processing.Calculations is\n\n   procedure Calculate (D : in out Data) is\n   begin\n      --  Dummy implementation...\n      null;\n   end Calculate;\n\nend Data_Processing.Calculations;\n\nwith Data_Processing; use Data_Processing;\n\nprocedure Test_Data_Processing is\n   D : Data;\nbegin\n   Process (D);\nend Test_Data_Processing;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Modular_Prog.Packages.Private_Packages.Private_Package_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "data_processing.ads",
+        "data_processing-calculations.ads",
+        "data_processing-advanced_calculations.ads",
+        "data_processing.adb",
+        "data_processing-calculations.adb",
+        "test_data_processing.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "test_data_processing.adb",
+    "text_hash": "59475349acf0b6cc7f16688c993b974c8fbcb68ab5807414c35169175238b2268ad1bbb4ea6ef5aa54a802315704d39340e417cd428dede2dc366b200139e125",
+    "text_hash_short": "32fc76ae13f1eecdd854a029793034d8"
+}

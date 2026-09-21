@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 825,
+    "line_end": 855,
+    "text": "with Persons; use Persons;\n\nprocedure Show_Person is\n   S1 : String_Access := new String'(\"John\");\n   S2 : String_Access := new String'(\"Mark\");\n   P : Person := (Name => S1,\n                  Age  => 30);\nbegin\n   P := (Name => S1, Age => 31);\n   --            ^^ OK: we didn't change the\n   --                   discriminant.\n   Show (P);\n\n   --  We can just repeat the discriminant:\n   P := (Name => P.Name, Age => 32);\n   --            ^^^^^^ OK: we didn't change the\n   --                       discriminant.\n   Show (P);\n\n   --  Of course, we can change the string itself:\n   S1.all := \"Mark\";\n   Show (P);\n\n   P := (Name => S2, Age => 40);\n   --            ^^ ERROR: we changed the\n   --                      discriminant!\n   Show (P);\nend Show_Person;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Discriminants_As_Access_Values.Persons",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_person.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_person.adb",
+    "text_hash": "4ecb8e42be6dc1386f977d7b7df5937788d5653af0b1c6da96471fd82f3aec104b5daa7b29cb62504302a313ea5797f6ad3a42f69987532731c2626b9e794569",
+    "text_hash_short": "96f4742365eb6a07c377a5dec28b5767"
+}

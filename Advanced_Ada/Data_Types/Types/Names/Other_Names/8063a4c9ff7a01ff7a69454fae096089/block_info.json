@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 117,
+    "line_end": 198,
+    "text": "pragma Ada_2022;\n\nprocedure Show_Other_Names is\n\n   type Integer_Access is\n     access Integer;\n\n   type Integer_Array is array\n     (Positive range <>) of Integer;\n\n   type New_Integer is new\n     Integer;\n\n   function Zero\n     return New_Integer is\n       (0);\n\n   subtype Sub_Integer is\n     Integer;\n\n   type Rec is record\n      Val : Integer := 0;\n   end record;\n\n   type ABC_Enum is\n     ('A', 'B', 'C');\n\n   IA  : Integer_Access := new Integer;\n   Arr : Integer_Array (1 .. 5) :=\n           (others => 0);\n   R   : Rec;\n   NI  : New_Integer;\n   SI  : Sub_Integer;\n   E   : ABC_Enum := 'A';\nbegin\n   R.Val := IA.all;\n   --       ^^^^^^\n   --  explicit dereference\n\n   R.Val := Arr (1);\n   --       ^^^^^^^\n   --    indexed component\n\n   Arr (1 .. 2) := Arr (3 .. 4);\n   --              ^^^^^^^^^^^^\n   --                  slice\n\n   Arr (1 .. 2) := (others => R.Val);\n   --                         ^^^^^\n   --              selected component\n\n   R.Val := Arr'Size;\n   --       ^^^^^^^^\n   --  attribute reference\n\n   NI := New_Integer (IA.all);\n   --    ^^^^^^^^^^^^^^^^^^^^\n   --      type conversion\n\n   NI := Zero;\n   --    ^^^^\n   --  function call\n\n   E  := 'A';\n   --    ^^^\n   --  character literal\n\n   IA.all := Sub_Integer (R.Val);\n   --        ^^^^^^^^^^^^^^^^^^^\n   --        qualified expression\n\n   R.Val := @ + 1;\n   --       ^\n   --  target name\n   --\n   --  equivalent to:\n   --     R.Val := R.Val + 1;\n\nend Show_Other_Names;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Names.Other_Names",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_other_names.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_other_names.adb",
+    "text_hash": "0aba54ad005032225d774e80766e25def491c73252daecee13ad01d0baab040f5abc0880f4a0e5ef4cc7961c5fae6d5d5eeaf6e705353c852739f5a3f2e94e90",
+    "text_hash_short": "8063a4c9ff7a01ff7a69454fae096089"
+}

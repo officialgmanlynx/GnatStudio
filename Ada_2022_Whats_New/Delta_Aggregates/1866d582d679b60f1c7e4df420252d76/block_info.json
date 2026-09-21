@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/whats-new-in-ada-2022/chapters/delta_aggregates.rst",
+    "line_start": 58,
+    "line_end": 86,
+    "text": "with Ada.Text_IO;\n\nprocedure Main is\n\n   type Vector is record\n      X, Y, Z : Float;\n   end record;\n\n   Point_1 : constant Vector := (X => 1.0, Y => 2.0, Z => 3.0);\n   Projection_1 : constant Vector := (Point_1 with delta Z => 0.0);\n\n   type Vector_3D is array (1 .. 3) of Float;\n\n   Point_2 : constant Vector_3D := [1.0, 2.0, 3.0];\n   Projection_2 : constant Vector_3D := [Point_2 with delta 3 => 0.0];\nbegin\n   Ada.Text_IO.Put (Float'Image (Projection_1.X));\n   Ada.Text_IO.Put (Float'Image (Projection_1.Y));\n   Ada.Text_IO.Put (Float'Image (Projection_1.Z));\n   Ada.Text_IO.New_Line;\n   Ada.Text_IO.Put (Float'Image (Projection_2 (1)));\n   Ada.Text_IO.Put (Float'Image (Projection_2 (2)));\n   Ada.Text_IO.Put (Float'Image (Projection_2 (3)));\n   Ada.Text_IO.New_Line;\nend Main;\n\n",
+    "language": "ada",
+    "project": "Courses.Ada_2022_Whats_New.Delta_Aggregates",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "769c85a2ffaacc7ea426820746ea7e8ff1ad890c84240e44f7432787001a83cc945d77d7825ee7d6728df37b34cc96799ac4232d49ca96ee46c6a118788f899a",
+    "text_hash_short": "1866d582d679b60f1c7e4df420252d76"
+}

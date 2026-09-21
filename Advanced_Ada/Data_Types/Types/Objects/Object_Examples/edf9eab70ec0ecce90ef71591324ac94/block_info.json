@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 264,
+    "line_end": 328,
+    "text": "procedure Show_Objects is\n\n   type New_Integer is new\n     Integer;\n\n   type Integer_Array is\n     array (Positive range <>) of\n       Integer;\n\n   procedure Dummy (Obj : Integer)\n     is null;\n   --               ^^^\n   --              object\n\n   task type TT is\n      entry Start (Id : Integer);\n      --           ^^\n      --         object\n   end TT;\n\n   task body TT is\n   begin\n      accept Start (Id : Integer) do\n         null;\n      end Start;\n   end TT;\n\n   function Add_One (V : Integer)\n   --                ^\n   --    view of an object\n                     return Integer is\n   begin\n      return V + 1;\n      --     ^^^^^\n      --     object\n   end Add_One;\n\n   Arr : Integer_Array (1 .. 10);\n   --  ^^^^^^^^^^^^^^^\n   --  object\n\n   NI  : New_Integer;\nbegin\n   Arr (1 .. 3) := (others => 1);\n   --  ^^^^^^^^\n   --  object\n   --              ^^^^^^^^^^^^^\n   --                 object\n\n   NI := New_Integer (Arr (1));\n   --    ^^^^^^^^^^^^^^^^^^^^^\n   --      object\n\n   for I in Arr'Range loop\n   --  ^\n   --  object\n\n      Arr (I) := Add_One (Arr (I));\n      --                  ^^^^^^^\n      --                  object\n   end loop;\nend Show_Objects;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Objects.Object_Examples",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_objects.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_objects.adb",
+    "text_hash": "e33bd5dcab36bc55104956f316bdbb6f54b26be168c2118ec4a27dc998d8dd17204c79f5bdd97a0bc4885d0c9536cf070de2119ed161ecf100f4d32fb3754742",
+    "text_hash_short": "edf9eab70ec0ecce90ef71591324ac94"
+}

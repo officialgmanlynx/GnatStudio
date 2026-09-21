@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 2566,
+    "line_end": 2597,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Aliased_Components is\n\n   type Integer_Access is access all Integer;\n\n   type Rec is record\n      I_Var_1 :         Integer;\n      I_Var_2 : aliased Integer;\n   end record;\n\n   type Integer_Array is\n     array (Positive range <>) of aliased Integer;\n\n   R   : Rec := (22, 24);\n   Arr : Integer_Array (1 .. 3) := (others => 42);\n   A   : Integer_Access;\nbegin\n   --  A := R.I_Var_1'Access;\n   --                 ^ ERROR: cannot access\n   --                          non-aliased\n   --                          component\n\n   A := R.I_Var_2'Access;\n   Put_Line (\"A: \" & Integer'Image (A.all));\n\n   A := Arr (2)'Access;\n   Put_Line (\"A: \" & Integer'Image (A.all));\nend Show_Aliased_Components;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Aliasing.Aliased_Components",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_aliased_components.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_aliased_components.adb",
+    "text_hash": "de92ce939fe2cba2c993cfba863e18d19adf3161bd57efe0888956f86a2e516c7c8fb9c7706ada054788ff93118680ada0d5fed1a015dc280c50385e1c7e0418",
+    "text_hash_short": "5dfaa248caf8e37a4a3a1e1a24973777"
+}

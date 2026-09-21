@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 2839,
+    "line_end": 2891,
+    "text": "with System;\n\npackage Simple_Recs is\n\n   type Rec is limited record\n      I : Integer;\n   end record;\n\n   procedure Proc (R : in out Rec;\n                   A :    out System.Address);\n\nend Simple_Recs;\n\npackage body Simple_Recs is\n\n   procedure Proc (R : in out Rec;\n                   A :    out System.Address) is\n   begin\n      R.I := 0;\n      A   := R'Address;\n   end Proc;\n\nend Simple_Recs;\n\nwith Ada.Text_IO;           use Ada.Text_IO;\nwith System;                use System;\nwith System.Address_Image;\nwith Simple_Recs;           use Simple_Recs;\n\nprocedure Test is\n   R : Rec;\n\n   AR_Proc, AR_Test : System.Address;\nbegin\n   AR_Proc := R'Address;\n\n   Proc (R, AR_Test);\n\n   Put_Line (\"R'Address (Proc): \"\n             & System.Address_Image (AR_Proc));\n   Put_Line (\"R'Address (Test): \"\n             & System.Address_Image (AR_Test));\n\n   if AR_Proc = AR_Test then\n      Put_Line (\"R was passed by reference.\");\n   else\n      Put_Line (\"R was passed by copy.\");\n   end if;\n\nend Test;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Limited_Types_Parameters.Explicitly_Limited_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple_recs.ads",
+        "simple_recs.adb",
+        "test.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "test.adb",
+    "text_hash": "794dd4db3ad701829717aec47d4052c91189ad8714c0fc5d814d93f2e1797b3f8e9301683b12508d21c842f14cbf0d64b65c29e03fc2395cde031040c0d75083",
+    "text_hash_short": "d4fe2bb47d2223ef013d22aa305403e5"
+}

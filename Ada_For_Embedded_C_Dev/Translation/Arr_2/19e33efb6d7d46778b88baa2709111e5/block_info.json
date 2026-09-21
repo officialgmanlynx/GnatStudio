@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 254,
+    "line_end": 258,
+    "text": "!f.h\nint * f ();\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.Arr_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "f.h"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "9e5758934a83a0033e96535596fc08c65165109b9bdec6b37ab1439e3a8a6de93e1d9b6d29f0b0572b7edde1f912fc4d097cc61bef8c1021e11090750c14f876",
+    "text_hash_short": "19e33efb6d7d46778b88baa2709111e5"
+}

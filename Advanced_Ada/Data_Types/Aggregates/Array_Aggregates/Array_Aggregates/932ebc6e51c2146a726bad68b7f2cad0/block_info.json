@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/aggregates.rst",
+    "line_start": 1138,
+    "line_end": 1156,
+    "text": "with Points; use Points;\n\nprocedure Show_Array_Aggregates is\n   P : Point_3D := [for I in Point_3D'Range => I];\nbegin\n   --  Each component is doubled\n   P := [for E of P => E * 2];\n\n   Display (P);\n\n   --  Each component is increased\n   --  by one\n   P := [for E of P => E + 1];\n\n   Display (P);\nend Show_Array_Aggregates;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Aggregates.Array_Aggregates.Array_Aggregates",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_array_aggregates.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_array_aggregates.adb",
+    "text_hash": "36034d841a31e430ecf97eeea7726b4392668ae3f121555e05aa34189fbf781dc9c44da1b74c729ca0f5aa0c6775a57c4e9f21438e908d9fceda98e1d6950bca",
+    "text_hash_short": "932ebc6e51c2146a726bad68b7f2cad0"
+}

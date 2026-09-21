@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_files_streams.rst",
+    "line_start": 276,
+    "line_end": 307,
+    "text": "with Ada.Text_IO;\nwith Ada.Direct_IO;\n\nprocedure Show_Dir_Float_IO is\n   package Float_IO is new Ada.Direct_IO (Float);\n   use Float_IO;\n\n   F         : Float_IO.File_Type;\n   File_Name : constant String :=\n                 \"float_file.bin\";\nbegin\n   Create (F, Out_File, File_Name);\n   Write (F,  1.5);\n   Write (F,  2.4);\n   Write (F,  6.7);\n   Close (F);\n\n   declare\n      Value : Float;\n   begin\n      Open (F, In_File, File_Name);\n      while not End_Of_File (F) loop\n         Read (F, Value);\n         Ada.Text_IO.Put_Line\n           (Float'Image (Value));\n      end loop;\n      Close (F);\n   end;\nend Show_Dir_Float_IO;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Dir_Float_IO",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_dir_float_io.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_dir_float_io.adb",
+    "text_hash": "a2890429e8160c9c8ad464490fe65c1bffb1299d2a88a5d46355044e25cb1b1601f5374d43c65038bfebe91f489508d0a20f4443241c7dc2a88ab001d7fea805",
+    "text_hash_short": "e4e5855976de44f53a821eb90dcbb206"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/imperative_language.rst",
+    "line_start": 169,
+    "line_end": 192,
+    "text": "with Ada.Text_IO;         use Ada.Text_IO;\nwith Ada.Integer_Text_IO; use Ada.Integer_Text_IO;\n\nprocedure Check_Positive is\n   N : Integer;\nbegin\n   --  Put a String\n   Put (\"Enter an integer value: \");\n\n   --  Reads in an integer value\n   Get (N);\n\n   --  Put an Integer\n   Put (N);\n\n   if N > 0 then\n      Put_Line (\" is a positive number\");\n   else\n      Put_Line (\" is not a positive number\");\n   end if;\nend Check_Positive;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Imperative_Language.Check_Positive_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "check_positive.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "2c4f3ba012e58ea7f4ee6cde3b34e980acddcc970583de156b07fc75065dce59156421f12ca0337237c9e4b7b18debc730ae861041aa606fcaa6ee8427ed5955",
+    "text_hash_short": "28fca0d7840d06d478e5933e8182d1db"
+}

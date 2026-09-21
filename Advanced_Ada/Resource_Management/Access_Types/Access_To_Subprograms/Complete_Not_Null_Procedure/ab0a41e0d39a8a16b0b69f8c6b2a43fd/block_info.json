@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 5397,
+    "line_end": 5466,
+    "text": "package Example is\n\n   type Element is limited private;\n   type Ref_Element is access all Element;\n\n   type Table is limited private;\n\n   type Iterate_Action is\n     access procedure\n       (X : not null Ref_Element);\n\n   procedure Iterate\n     (T : Table;\n      Action : Iterate_Action := null);\n   --  If Action is null, do nothing.\n\n   procedure Do_Nothing\n     (X : not null Ref_Element) is null;\n   procedure Iterate_2\n     (T : Table;\n      Action : not null Iterate_Action\n                 := Do_Nothing'Access);\n\nprivate\n   type Element is limited\n      record\n         Component : Integer;\n      end record;\n   type Table is limited null record;\nend Example;\n\npackage body Example is\n\n   An_Element : aliased Element;\n\n   procedure Iterate\n     (T : Table;\n      Action : Iterate_Action := null)\n   is\n   begin\n      if Action /= null then\n         Action (An_Element'Access);\n         --  In a real program, this would do\n         --  something more sensible.\n      end if;\n   end Iterate;\n\n   procedure Iterate_2\n     (T : Table;\n      Action : not null Iterate_Action\n                 := Do_Nothing'Access)\n   is\n   begin\n      Action (An_Element'Access);\n      --  In a real program, this would do\n      --  something more sensible.\n   end Iterate_2;\n\nend Example;\n\nwith Example; use Example;\n\nprocedure Show_Example is\n   T : Table;\nbegin\n   Iterate_2 (T);\nend Show_Example;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Access_To_Subprograms.Complete_Not_Null_Procedure",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "example.ads",
+        "example.adb",
+        "show_example.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_example.adb",
+    "text_hash": "d12c2768d4b5dcb806e0bcd7791a4da57ae02fe4e27fa8fcdb90942ca726102010f2077ed1963653759ac64af00ee83af13a4581addf7f26cf20b9b02a270d82",
+    "text_hash_short": "ab0a41e0d39a8a16b0b69f8c6b2a43fd"
+}

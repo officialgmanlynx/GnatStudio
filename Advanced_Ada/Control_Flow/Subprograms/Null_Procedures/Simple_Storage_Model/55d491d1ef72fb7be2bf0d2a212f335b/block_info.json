@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/subprograms.rst",
+    "line_start": 1916,
+    "line_end": 1967,
+    "text": "package Simple_Storage is\n\n   type Storage_Model is null record;\n\n   procedure Set (S : in out Storage_Model;\n                  V :        String) is null;\n   procedure Display (S : Storage_Model) is null;\n\n   type Integer_Storage is private;\n\n   procedure Set (S : in out Integer_Storage;\n                  V :        String);\n   procedure Display (S : Integer_Storage);\n\nprivate\n\n   type Integer_Storage is record\n      V : Integer := 0;\n   end record;\n\nend Simple_Storage;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Simple_Storage is\n\n   procedure Set (S : in out Integer_Storage;\n                  V :        String) is\n   begin\n      S.V := Integer'Value (V);\n   end Set;\n\n   procedure Display (S : Integer_Storage) is\n   begin\n      Put_Line (\"Value: \" & S.V'Image);\n   end Display;\n\nend Simple_Storage;\n\nwith Ada.Text_IO;    use Ada.Text_IO;\nwith Simple_Storage; use Simple_Storage;\n\nprocedure Show_Null_Proc is\n   S : Integer_Storage;\nbegin\n   Put_Line (\"Setting 24...\");\n   Set (S, \"24\");\n   Display (S);\nend Show_Null_Proc;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Subprograms.Null_Procedures.Simple_Storage_Model",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple_storage.ads",
+        "simple_storage.adb",
+        "show_null_proc.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_null_proc.adb",
+    "text_hash": "9e6867e7f454033618cec8c1dc9761e4d06f67425a0d4c8c787df1b432f611c7e3bec4f789a0f9d2dfa4423027a8596eb7a5110f57b33a17b2bc0cad8d1d97a7",
+    "text_hash_short": "55d491d1ef72fb7be2bf0d2a212f335b"
+}

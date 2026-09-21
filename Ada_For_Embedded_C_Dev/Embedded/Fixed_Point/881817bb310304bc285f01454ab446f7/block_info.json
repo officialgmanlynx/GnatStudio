@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/04_Embedded.rst",
+    "line_start": 353,
+    "line_end": 378,
+    "text": "package Fixed_Definitions is\n\n   D : constant := 2.0 ** (-31);\n\n   type Fixed is delta D range -1.0 .. 1.0 - D;\n\nend Fixed_Definitions;\n\nwith Ada.Text_IO;       use Ada.Text_IO;\n\nwith Fixed_Definitions; use Fixed_Definitions;\n\nprocedure Show_Float_And_Fixed_Point is\n   Float_Value : Float := 0.25;\n   Fixed_Value : Fixed := 0.25;\nbegin\n\n   Float_Value := Float_Value + 0.25;\n   Fixed_Value := Fixed_Value + 0.25;\n\n   Put_Line (\"Float_Value = \" & Float'Image (Float_Value));\n   Put_Line (\"Fixed_Value = \" & Fixed'Image (Fixed_Value));\nend Show_Float_And_Fixed_Point;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Embedded.Fixed_Point",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "fixed_definitions.ads",
+        "show_float_and_fixed_point.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_float_and_fixed_point.adb",
+    "text_hash": "78ce60d2a3354ae3f3b74fc2b0ec46d2c76faf0945a09a6bbf97e9e186be4855ede16b3d1b78905e28ae32f1378ebe41c46e7d73e1dccae512d09d7afde62686",
+    "text_hash_short": "881817bb310304bc285f01454ab446f7"
+}

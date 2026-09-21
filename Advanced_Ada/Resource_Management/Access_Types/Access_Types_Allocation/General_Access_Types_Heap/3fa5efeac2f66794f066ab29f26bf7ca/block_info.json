@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 223,
+    "line_end": 242,
+    "text": "procedure Show_Simple_Allocation is\n\n   --  Declaring general access type:\n   type Integer_Access is access all Integer;\n\n   --  Declaring access object:\n   A1 : Integer_Access;\n\nbegin\n   --\n   --  Allocating an Integer object on the heap\n   --  and initializing an access object of\n   --  the general access type Integer_Access.\n   --\n   A1 := new Integer;\n\nend Show_Simple_Allocation;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Access_Types_Allocation.General_Access_Types_Heap",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_simple_allocation.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_simple_allocation.adb",
+    "text_hash": "f49d9cbaef457e25b2e35358ee9d15380c29ffa91f3c7a69a9ed20a05575edc3ffe123669e80f78801d31d14d9cca8ac42f8e5af0712cf6a6121ad0cf036d87f",
+    "text_hash_short": "3fa5efeac2f66794f066ab29f26bf7ca"
+}

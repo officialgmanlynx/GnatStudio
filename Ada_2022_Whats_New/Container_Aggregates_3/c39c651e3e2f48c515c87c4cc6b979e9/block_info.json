@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/whats-new-in-ada-2022/chapters/container_aggregates.rst",
+    "line_start": 91,
+    "line_end": 131,
+    "text": "procedure Main is\n\n   package JSON is\n      type JSON_Value is private\n        with Integer_Literal => To_JSON_Value;\n\n      function To_JSON_Value (Text : String) return JSON_Value;\n\n      type JSON_Object is private\n        with Aggregate => (Empty     => New_JSON_Object,\n                           Add_Named => Insert);\n\n      function New_JSON_Object return JSON_Object;\n\n      procedure Insert\n        (Self  : in out JSON_Object;\n         Key   : Wide_Wide_String;\n         Value : JSON_Value) is null;\n\n   private\n      type JSON_Value is null record;\n      type JSON_Object is null record;\n\n      function To_JSON_Value (Text : String) return JSON_Value\n        is (null record);\n\n      function New_JSON_Object return JSON_Object is (null record);\n   end JSON;\n\n   Object : JSON.JSON_Object := [\"a\" => 1, \"b\" => 2, \"c\" => 3];\n   ------------------------------------------------------------\nbegin\n   --  Equivalent old initialization code\n   Object := JSON.New_JSON_Object;\n   JSON.Insert (Object, \"a\", 1);\n   JSON.Insert (Object, \"b\", 2);\n   JSON.Insert (Object, \"c\", 3);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_2022_Whats_New.Container_Aggregates_3",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "977a39bdf290822c6a479004b060899909ad511d36fadbbcaf868a893794e171e760d3c29277d4a5c7b4fdc0e856bec6e0fc263c8e02677640b2b16e55461315",
+    "text_hash_short": "c39c651e3e2f48c515c87c4cc6b979e9"
+}

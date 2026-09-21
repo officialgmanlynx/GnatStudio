@@ -1,0 +1,49 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/Appendix_A_OOP.rst",
+    "line_start": 275,
+    "line_end": 454,
+    "text": "package System_A is\n\n   type Val_Array is array (Positive range <>) of Float;\n\n   type A is record\n      Val    : Val_Array (1 .. 2);\n      Active : Boolean;\n   end record;\n\n   procedure A_Activate (E : in out A);\n\n   function A_Is_Active (E : A) return Boolean;\n\n   function A_Value (E : A) return Float;\n\n   procedure A_Deactivate (E : in out A);\n\nend System_A;\n\npackage body System_A is\n\n   procedure A_Activate (E : in out A) is\n   begin\n      E.Val    := (others => 0.0);\n      E.Active := True;\n   end A_Activate;\n\n   function A_Is_Active (E : A) return Boolean is\n   begin\n      return E.Active;\n   end A_Is_Active;\n\n   function A_Value (E : A) return Float is\n   begin\n      return (E.Val (1) + E.Val (2)) / 2.0;\n   end A_Value;\n\n   procedure A_Deactivate (E : in out A) is\n   begin\n      E.Active := False;\n   end A_Deactivate;\n\nend System_A;\n\npackage System_B is\n\n   type B is record\n      Val    : Float;\n      Active : Boolean;\n   end record;\n\n   procedure B_Activate (E : in out B);\n\n   function B_Is_Active (E : B) return Boolean;\n\n   function B_Value (E : B) return Float;\n\n   procedure B_Deactivate (E : in out B);\n\nend System_B;\n\npackage body System_B is\n\n   procedure B_Activate (E : in out B) is\n   begin\n      E.Val    := 0.0;\n      E.Active := True;\n   end B_Activate;\n\n   function B_Is_Active (E : B) return Boolean is\n   begin\n      return E.Active;\n   end B_Is_Active;\n\n   function B_Value (E : B) return Float is\n   begin\n      return E.Val;\n   end B_Value;\n\n   procedure B_Deactivate (E : in out B) is\n   begin\n      E.Active := False;\n   end B_Deactivate;\n\nend System_B;\n\nwith System_A; use System_A;\nwith System_B; use System_B;\n\npackage System_AB is\n\n   type AB is record\n      SA : A;\n      SB : B;\n   end record;\n\n   procedure AB_Activate (E : in out AB);\n\n   function AB_Is_Active (E : AB) return Boolean;\n\n   function AB_Value (E : AB) return Float;\n\n   function AB_Check (E : AB) return Boolean;\n\n   procedure AB_Deactivate (E : in out AB);\n\nend System_AB;\n\npackage body System_AB is\n\n   procedure AB_Activate (E : in out AB) is\n   begin\n      A_Activate (E.SA);\n      B_Activate (E.SB);\n   end AB_Activate;\n\n   function AB_Is_Active (E : AB) return Boolean is\n   begin\n      return A_Is_Active (E.SA) and B_Is_Active (E.SB);\n   end AB_Is_Active;\n\n   function AB_Value (E : AB) return Float is\n   begin\n      return (A_Value (E.SA) + B_Value (E.SB)) / 2.0;\n   end AB_Value;\n\n   function AB_Check (E : AB) return Boolean is\n      Threshold : constant := 0.1;\n   begin\n      return abs (A_Value (E.SA) - B_Value (E.SB)) < Threshold;\n   end AB_Check;\n\n   procedure AB_Deactivate (E : in out AB) is\n   begin\n      A_Deactivate (E.SA);\n      B_Deactivate (E.SB);\n   end AB_Deactivate;\n\nend System_AB;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith System_AB;   use System_AB;\n\nprocedure Main is\n\n   procedure Display_Active (E : AB) is\n   begin\n      if AB_Is_Active (E) then\n         Put_Line (\"System AB is active\");\n      else\n         Put_Line (\"System AB is not active\");\n      end if;\n   end Display_Active;\n\n   procedure Display_Check (E : AB) is\n   begin\n      if AB_Check (E) then\n         Put_Line (\"System AB check: PASSED\");\n      else\n         Put_Line (\"System AB check: FAILED\");\n      end if;\n   end Display_Check;\n\n   S : AB;\nbegin\n   Put_Line (\"Activating system AB...\");\n   AB_Activate (S);\n\n   Display_Active (S);\n   Display_Check (S);\n\n   Put_Line (\"Deactivating system AB...\");\n   AB_Deactivate (S);\n\n   Display_Active (S);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.HandsOnOOP.System_AB_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "system_a.ads",
+        "system_a.adb",
+        "system_b.ads",
+        "system_b.adb",
+        "system_ab.ads",
+        "system_ab.adb",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "7e28625425159a07cdc7a39e2fb742307742469e9efef88dd35f0233e619cf9bf728ced8183da0c81a2c2b54ec6679d2ab69055b80ce1f3357c1858d12b16dfa",
+    "text_hash_short": "f2e3df0b3874e5edc5ea90c01961cf64"
+}

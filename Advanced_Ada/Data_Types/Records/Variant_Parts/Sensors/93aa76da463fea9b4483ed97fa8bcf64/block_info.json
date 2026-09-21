@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 3573,
+    "line_end": 3584,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Sensors;     use Sensors;\n\nprocedure Show_Sensors is\n   S1 : Sensor;\nbegin\n   Display (Current_Info (S1));\nend Show_Sensors;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Variant_Parts.Sensors",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_sensors.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_sensors.adb",
+    "text_hash": "d2cfe50ecaefc0c4449604211dca09693e4ce46995b9385fc93c41c3c64cb726b0cf8a162d1db030ad8379d9a13dc2e2b30e1afd75229e55448d939ff819890a",
+    "text_hash_short": "93aa76da463fea9b4483ed97fa8bcf64"
+}

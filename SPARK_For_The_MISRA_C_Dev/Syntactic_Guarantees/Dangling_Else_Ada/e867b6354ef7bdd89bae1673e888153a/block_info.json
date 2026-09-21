@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/03_syntactic_guarantees.rst",
+    "line_start": 513,
+    "line_end": 529,
+    "text": "function Absval (X : Integer) return Integer;\n\nfunction Absval (X : Integer) return Integer is\n   Result : Integer := X;\nbegin\n   if X >= 0 then\n      if X = 0 then\n         Result := 0;\n      end if;\n   else\n      Result := -X;\n   end if;\n   return Result;\nend Absval;\n",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Syntactic_Guarantees.Dangling_Else_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove",
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": true,
+    "source_files": [
+        "absval.ads",
+        "absval.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "09bc3f940e2713a82d211849c31b1a6983d91be59a6a5055a18b6dc85eb53b5d0fb4809fc52eb55d4879cdbf1349e7ce338696d92b31425e48dd6187750d3858",
+    "text_hash_short": "e867b6354ef7bdd89bae1673e888153a"
+}

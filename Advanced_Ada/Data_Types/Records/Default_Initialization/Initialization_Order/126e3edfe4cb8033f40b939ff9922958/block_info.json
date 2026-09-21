@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 154,
+    "line_end": 175,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\nwith Simple_Recs; use Simple_Recs;\n\nprocedure Show_Initialization_Order is\nbegin\n   Put_Line (\"Some processing first...\");\n   Put_Line\n     (\"Now, let's declare an object \"\n      & \"of the record type Rec...\");\n\n   declare\n      R : Rec;\n   begin\n      Put_Line\n        (\"An object of Rec type has \"\n         & \"just been created.\");\n   end;\n\nend Show_Initialization_Order;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Default_Initialization.Initialization_Order",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_initialization_order.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_initialization_order.adb",
+    "text_hash": "2c00e7a53e365cd1bcd7be9512d9174d2004adf3cc6180bc0d730777f72481666c21d4b0b2c9093c8cf134b9bf6cc6bb48b76e155fe02b6d1cf35470f8460b8d",
+    "text_hash_short": "126e3edfe4cb8033f40b939ff9922958"
+}

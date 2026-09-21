@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 2555,
+    "line_end": 2568,
+    "text": "with System;\n\npackage Shared_Var_Types is\n\nprivate\n   R : Integer\n         with Atomic,\n              Address =>\n                System'To_Address (16#FFFF00A0#);\n\nend Shared_Var_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Addresses.Show_Access_Address",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "shared_var_types.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "350969f11559fd17863fbc6804993cb8accaa638b8b0d0696beffd7af7e9051af622aae6829c9cb47ba83fd68b86a752d525ad503dc702f8cb5fd9a689c54aad",
+    "text_hash_short": "5c2d8e0a9615084c2a15f896c61adaa6"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_dates_times.rst",
+    "line_start": 324,
+    "line_end": 392,
+    "text": "with Ada.Text_IO;        use Ada.Text_IO;\nwith Ada.Real_Time;      use Ada.Real_Time;\nwith Ada.Execution_Time; use Ada.Execution_Time;\n\nwith Ada.Numerics.Generic_Elementary_Functions;\n\nprocedure Display_Benchmarking_Math is\n\n   procedure Computational_Intensive_App is\n      package Funcs is new\n        Ada.Numerics.Generic_Elementary_Functions\n          (Float_Type => Long_Long_Float);\n      use Funcs;\n\n      X : Long_Long_Float;\n   begin\n      for I in 0 .. 1_000_000 loop\n         X := Tan (Arctan\n                (Tan (Arctan\n                  (Tan (Arctan\n                    (Tan (Arctan\n                      (Tan (Arctan\n                        (Tan (Arctan\n                          (0.577))))))))))));\n      end loop;\n   end Computational_Intensive_App;\n\n   procedure Benchm_Elapsed_Time is\n      Start_Time, Stop_Time : Time;\n      Elapsed_Time          : Time_Span;\n\n   begin\n      Start_Time := Clock;\n\n      Computational_Intensive_App;\n\n      Stop_Time    := Clock;\n      Elapsed_Time := Stop_Time - Start_Time;\n\n      Put_Line (\"Elapsed time: \"\n                & Duration'Image\n                    (To_Duration (Elapsed_Time))\n                & \" seconds\");\n   end Benchm_Elapsed_Time;\n\n   procedure Benchm_CPU_Time is\n      Start_Time, Stop_Time : CPU_Time;\n      Elapsed_Time          : Time_Span;\n\n   begin\n      Start_Time := Clock;\n\n      Computational_Intensive_App;\n\n      Stop_Time    := Clock;\n      Elapsed_Time := Stop_Time - Start_Time;\n\n      Put_Line (\"CPU time: \"\n                & Duration'Image\n                    (To_Duration (Elapsed_Time))\n                & \" seconds\");\n   end Benchm_CPU_Time;\nbegin\n   Benchm_Elapsed_Time;\n   Benchm_CPU_Time;\nend Display_Benchmarking_Math;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Display_Benchmarking_Math",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "display_benchmarking_math.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "display_benchmarking_math.adb",
+    "text_hash": "bdb2e0dfcb92682af17d984a22a1de9363b4e92ce4d56580127b989dfa274778a165eb5b8095bbf79fa0db4ff9369d7c598eb27939d9895d5953808a7eed1240",
+    "text_hash_short": "06fe96bf03321c248dd1ed843648cf0b"
+}

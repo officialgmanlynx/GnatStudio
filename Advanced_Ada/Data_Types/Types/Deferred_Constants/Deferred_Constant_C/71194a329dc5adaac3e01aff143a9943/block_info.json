@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 3325,
+    "line_end": 3329,
+    "text": "!constants.c\ndouble light = 299792458.0;\n",
+    "language": "c",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Deferred_Constants.Deferred_Constant_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-syntax-only"
+    ],
+    "manual_chop": true,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": true,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "constants.c"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "04e306f48f7d48c3d26bb796797737b7743f1480fa44a33b1734523eda3b8e0a4facac7fdaee205d571ad8e84f99b03c4880f75d540e029c437b717b268ea3cb",
+    "text_hash_short": "71194a329dc5adaac3e01aff143a9943"
+}

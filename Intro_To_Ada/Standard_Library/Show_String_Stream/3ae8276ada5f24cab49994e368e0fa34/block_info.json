@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_files_streams.rst",
+    "line_start": 441,
+    "line_end": 489,
+    "text": "with Ada.Text_IO;\n\nwith Ada.Streams.Stream_IO;\nuse  Ada.Streams.Stream_IO;\n\nprocedure Show_String_Stream is\n   F         : File_Type;\n   S         : Stream_Access;\n   File_Name : constant String :=\n                 \"float_file.bin\";\n\n   procedure Output (S  : Stream_Access;\n                     FV : Float;\n                     SV : String) is\n   begin\n      String'Output (S, SV);\n      Float'Output (S,  FV);\n   end Output;\n\n   procedure Input_Display (S : Stream_Access) is\n      SV : String := String'Input (S);\n      FV : Float  := Float'Input (S);\n   begin\n      Ada.Text_IO.Put_Line (Float'Image (FV)\n                            & \" --- \" & SV);\n   end Input_Display;\n\nbegin\n   Create (F, Out_File, File_Name);\n   S := Stream (F);\n\n   Output (S, 1.5, \"Hi!!\");\n   Output (S, 2.4, \"Hello world!\");\n   Output (S, 6.7, \"Something longer here...\");\n\n   Close (F);\n\n   Open (F, In_File, File_Name);\n   S := Stream (F);\n\n   while not End_Of_File (F) loop\n      Input_Display (S);\n   end loop;\n   Close (F);\n\nend Show_String_Stream;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_String_Stream",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_string_stream.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_string_stream.adb",
+    "text_hash": "07a24f276682955276f06fd1af7222603dd2c8e1f225c03681759025eed6bfb3725c05028d1bf70e2285c773689cddaa2203264fa695b95565b77b32b90f7426",
+    "text_hash_short": "3ae8276ada5f24cab49994e368e0fa34"
+}

@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/exceptions.rst",
+    "line_start": 1342,
+    "line_end": 1431,
+    "text": "with Ada.Exceptions; use Ada.Exceptions;\n\npackage Exception_Tests is\n\n   Custom_Exception : exception;\n\n   type All_Exception_Occur is\n     array (Positive range <>) of\n       Exception_Occurrence;\n\n   procedure Test_Exceptions\n     (All_Occur  : in out All_Exception_Occur;\n      Last_Occur :    out Integer);\n\nend Exception_Tests;\n\npackage body Exception_Tests is\n\n   procedure Save_To_List\n     (E          :        Exception_Occurrence;\n      All_Occur  : in out All_Exception_Occur;\n      Last_Occur : in out Integer)\n   is\n      L : Integer renames Last_Occur;\n      O : All_Exception_Occur renames All_Occur;\n   begin\n      L := L + 1;\n      if L > O'Last then\n         raise Constraint_Error\n           with \"Cannot save occurrence\";\n      end if;\n\n      Save_Occurrence (Target => O (L),\n                       Source => E);\n   end Save_To_List;\n\n   procedure Test_Exceptions\n     (All_Occur  : in out All_Exception_Occur;\n      Last_Occur :    out Integer)\n   is\n\n      procedure Nested_1 is\n      begin\n         raise Custom_Exception\n           with \"We got a problem\";\n      exception\n         when E : others =>\n            Save_To_List (E,\n                          All_Occur,\n                          Last_Occur);\n      end Nested_1;\n\n      procedure Nested_2 is\n      begin\n         raise Constraint_Error\n           with \"Constraint is not correct\";\n      exception\n         when E : others =>\n            Save_To_List (E,\n                          All_Occur,\n                          Last_Occur);\n      end Nested_2;\n\n   begin\n      Last_Occur := 0;\n\n      Nested_1;\n      Nested_2;\n   end Test_Exceptions;\n\nend Exception_Tests;\n\nwith Ada.Text_IO;    use Ada.Text_IO;\nwith Ada.Exceptions; use Ada.Exceptions;\n\nwith Exception_Tests; use Exception_Tests;\n\nprocedure Show_Exception_Info is\n   L : Integer;\n   O : All_Exception_Occur (1 .. 10);\nbegin\n   Test_Exceptions (O, L);\n\n   for I in O 'First .. L loop\n      Put_Line (Exception_Information (O (I)));\n   end loop;\nend Show_Exception_Info;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Exceptions.Exceptions_Package.Save_Occurrence",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-g",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "exception_tests.ads",
+        "exception_tests.adb",
+        "show_exception_info.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_exception_info.adb",
+    "text_hash": "d50753106aed29cb06d4a807a880ad6a9deb2933269e286527917cc3a6626e84b7011cf7154e32146822d9ab211026c4af632a5b41e4644db796ad37b7062582",
+    "text_hash_short": "da0cc5db7039e1458dbcf8be49db969d"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 636,
+    "line_end": 648,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_First_Last_Real is\n   subtype Norm is Float range 0.0 .. 1.0;\nbegin\n   Put_Line (\"Float'First: \" & Float'First'Image);\n   Put_Line (\"Float'Last:  \" & Float'Last'Image);\n   Put_Line (\"Norm'First:  \" & Norm'First'Image);\n   Put_Line (\"Norm'Last:   \" & Norm'Last'Image);\nend Show_First_Last_Real;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Scalar_Types.Ranges_Real_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_first_last_real.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_first_last_real.adb",
+    "text_hash": "6b1033d963a87d689c4a5fe4b10372275a574acf554ed53347d966b1af45d5b43f5f50b6025019ab91188bb9dc65030359c436d21dbfdf09083e0b1aaa21a415",
+    "text_hash_short": "89745a94fbdc41a2880ba14e50401acb"
+}

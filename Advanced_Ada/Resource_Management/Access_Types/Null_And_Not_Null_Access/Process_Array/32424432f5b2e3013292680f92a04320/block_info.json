@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 4070,
+    "line_end": 4093,
+    "text": "package Show_Process_Array is\n\n   type My_Index is range 1 .. 10;\n   type My_Array is array (My_Index) of Integer;\n\n   procedure Process_Array\n     (X     : in out My_Array;\n      Index :        My_Index);\n\nend Show_Process_Array;\n\npackage body Show_Process_Array is\n\n   procedure Process_Array\n     (X     : in out My_Array;\n      Index :        My_Index) is\n   begin\n      X (Index) := X (Index) + 1;\n   end Process_Array;\n\nend Show_Process_Array;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Null_And_Not_Null_Access.Process_Array",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_process_array.ads",
+        "show_process_array.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "15f1b74a146129816dc0e2e2951a1d104690cad89039487b2ba17e98f8224dde32a68e825d67052021bff9a5ea111fe62e3e9ff0bb75edc37bfb9fb0eca8f609",
+    "text_hash_short": "32424432f5b2e3013292680f92a04320"
+}

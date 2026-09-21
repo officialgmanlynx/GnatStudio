@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 11045,
+    "line_end": 11062,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Ada.Numerics.Big_Numbers.Big_Integers;\nuse  Ada.Numerics.Big_Numbers.Big_Integers;\n\nprocedure Show_Simple_Big_Integer_Conversion is\n   BI : Big_Integer;\n   I  : Integer := 10000;\nbegin\n   BI := To_Big_Integer (I);\n   Put_Line (\"BI: \" & BI'Image);\n\n   I := To_Integer (BI + 1);\n   Put_Line (\"I:  \" & I'Image);\nend Show_Simple_Big_Integer_Conversion;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Big_Numbers.Simple_Big_Integer_Conversion",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_simple_big_integer_conversion.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_simple_big_integer_conversion.adb",
+    "text_hash": "d1a55d7cc9fac63e6cbf2817f2554548ffde3c5c6b4a01942c030fcc20e0e77943afe78eb0d9021f1217d14997f288c5622cd9b65c9065ee96559c20eeb31d29",
+    "text_hash_short": "83effc9da9835d92f4c49ed03d7ed84a"
+}

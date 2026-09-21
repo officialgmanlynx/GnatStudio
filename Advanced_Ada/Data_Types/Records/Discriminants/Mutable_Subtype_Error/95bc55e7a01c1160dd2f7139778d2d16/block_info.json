@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 1544,
+    "line_end": 1578,
+    "text": "package Mutability is\n\n   type T_Mutable_Array (L : Positive := 10) is\n     private;\n\nprivate\n\n   type Integer_Array is\n     array (Positive range <>) of Integer;\n\n   type T_Mutable_Array (L : Positive := 10) is\n   record\n      Arr : Integer_Array (1 .. L);\n   end record;\n\nend Mutability;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Mutability;  use Mutability;\n\nprocedure Show_Mutable_Subtype_Error is\n   A : T_Mutable_Array (10);\n   B : T_Mutable_Array (20);\nbegin\n   Put_Line (\"A'Size = \"\n             & A'Size'Image);\n   Put_Line (\"B'Size = \"\n             & B'Size'Image);\n\n   A := B;  --  ERROR!\nend Show_Mutable_Subtype_Error;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Discriminants.Mutable_Subtype_Error",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "mutability.ads",
+        "show_mutable_subtype_error.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_mutable_subtype_error.adb",
+    "text_hash": "98388d450bf5a2aa4d11aaed2bdf3e5df6e64c0465704deb74dee8c7cc8bd426ea78f7cc906b47f265390c9cc4e1993b47d6b72d946cd105ab98e53daf575371",
+    "text_hash_short": "95bc55e7a01c1160dd2f7139778d2d16"
+}

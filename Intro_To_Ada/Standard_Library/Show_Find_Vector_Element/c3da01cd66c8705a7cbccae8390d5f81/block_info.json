@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_containers.rst",
+    "line_start": 477,
+    "line_end": 509,
+    "text": "with Ada.Containers.Vectors;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Find_Vector_Element is\n\n   package Integer_Vectors is new\n     Ada.Containers.Vectors\n       (Index_Type   => Natural,\n        Element_Type => Integer);\n\n   use Integer_Vectors;\n\n   V : Vector := 20 & 10 & 0 & 13;\n   Idx : Extended_Index;\n   C   : Cursor;\nbegin\n   --  Using Find_Index to retrieve the index\n   --  of element with value 10\n   Idx := V.Find_Index (10);\n   Put_Line (\"Index of element with value 10 is \"\n             & Extended_Index'Image (Idx));\n\n   --  Using Find to retrieve the cursor for\n   --  the element with value 13\n   C   := V.Find (13);\n   Idx := To_Index (C);\n   Put_Line (\"Index of element with value 13 is \"\n             & Extended_Index'Image (Idx));\nend Show_Find_Vector_Element;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Find_Vector_Element",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_find_vector_element.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_find_vector_element.adb",
+    "text_hash": "3cc499fe9ec534834ea69b271b1b7e39ec4151a81c5493d8931c42f113f645cc392efa4be0579c9084ed98fa1765c359b80d9b2c64d8cd3e08189853e6037cd8",
+    "text_hash_short": "c3da01cd66c8705a7cbccae8390d5f81"
+}

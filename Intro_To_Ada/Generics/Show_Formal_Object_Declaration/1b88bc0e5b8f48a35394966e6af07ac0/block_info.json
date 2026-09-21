@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/generics.rst",
+    "line_start": 75,
+    "line_end": 88,
+    "text": "generic\n   type T is private;\n   X : in out T;\n   --  X can be used in the Set procedure\nprocedure Set (E : T);\n\nprocedure Set (E : T) is\n   pragma Unreferenced (E, X);\nbegin\n   null;\nend Set;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Generics.Show_Formal_Object_Declaration",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "set.ads",
+        "set.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "85ca6ac9f69f8c9e8b7aff28974b38672c80b92a76181d6d6952fb2bc9f8026ff2d4f0e70df778c2b1f4872969502cca301d16f99ab59b80392126c8bc669931",
+    "text_hash_short": "1b88bc0e5b8f48a35394966e6af07ac0"
+}

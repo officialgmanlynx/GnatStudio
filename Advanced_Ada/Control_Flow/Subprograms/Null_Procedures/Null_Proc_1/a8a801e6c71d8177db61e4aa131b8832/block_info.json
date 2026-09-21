@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/subprograms.rst",
+    "line_start": 1835,
+    "line_end": 1842,
+    "text": "package Null_Procs is\n\n   procedure Do_Nothing (Msg : String) is null;\n\nend Null_Procs;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Subprograms.Null_Procedures.Null_Proc_1",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "null_procs.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "21b3bdc87c2319392c88e149c7cf8c4e65e16b7edac13f08611cb07217e018231857ccfff894d5103aa1c137e48680737f9ad41df30e16c2aa304b1166480f93",
+    "text_hash_short": "a8a801e6c71d8177db61e4aa131b8832"
+}

@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 3422,
+    "line_end": 3462,
+    "text": "package Sensors is\n\n   type Sensor is private;\n\n   type Sensor_Info is\n   record\n      Info_1 : Float := 0.0;\n   end record;\n\n   function Current_Info (S : Sensor)\n                          return Sensor_Info;\n\n   procedure Display (SI : Sensor_Info);\n\nprivate\n\n   type Sensor is null record;\n\nend Sensors;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Sensors is\n\n   function Current_Info (S : Sensor)\n                          return Sensor_Info is\n     ((Info_1 => 4.0));\n   --            ^^^^\n   --  NOTE: we're returning dummy\n   --        information!\n\n   procedure Display (SI : Sensor_Info) is\n   begin\n      Put_Line (\"Info_1 : \"\n                & SI.Info_1'Image);\n   end Display;\n\nend Sensors;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Variant_Parts.Sensors",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "sensors.ads",
+        "sensors.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "9ed9f42ac58eed33e473857e0e059d43596b4afc09e3f846612d4b9f39d94e00e18120c1ccfe9e1517bd48e952f32506dbd43b81267d91fdc8b00e0189f26cd0",
+    "text_hash_short": "140a0d9cbca023de875417409c3f67d9"
+}

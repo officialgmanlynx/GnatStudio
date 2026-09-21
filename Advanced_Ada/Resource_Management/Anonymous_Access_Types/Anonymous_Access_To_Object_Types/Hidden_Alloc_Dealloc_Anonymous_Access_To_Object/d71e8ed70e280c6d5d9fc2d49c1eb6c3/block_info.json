@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 727,
+    "line_end": 763,
+    "text": "with Hidden_Anonymous_Allocation;\n\npackage Info is\n\n   type Rec is private;\n\n   function New_Rec return not null access Rec;\n\n   procedure Free (Obj : access Rec);\n\nprivate\n\n   type Rec is record\n      I : Integer;\n   end record;\n\n   package Rec_Allocation is new\n     Hidden_Anonymous_Allocation (T => Rec);\n\n   function New_Rec return not null access Rec\n     renames Rec_Allocation.New_T;\n\n   procedure Free (Obj : access Rec)\n     renames Rec_Allocation.Free;\n\nend Info;\n\nwith Info; use Info;\n\nprocedure Show_Info_Allocation_Deallocation is\n   RA : constant not null access Rec := New_Rec;\nbegin\n   Free (RA);\nend Show_Info_Allocation_Deallocation;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Anonymous_Access_To_Object_Types.Hidden_Alloc_Dealloc_Anonymous_Access_To_Object",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "info.ads",
+        "show_info_allocation_deallocation.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "ea5827c171c31fa2104d5779883e482d217202ac388e2bca4eb2277f7000010eb0166698fab8912272e3ab0be8ca37362ca607e157df3f830e7f709e27cd9521",
+    "text_hash_short": "d71e8ed70e280c6d5d9fc2d49c1eb6c3"
+}

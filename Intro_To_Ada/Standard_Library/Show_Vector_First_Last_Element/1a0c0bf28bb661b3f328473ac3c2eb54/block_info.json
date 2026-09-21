@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_containers.rst",
+    "line_start": 209,
+    "line_end": 240,
+    "text": "with Ada.Containers; use Ada.Containers;\nwith Ada.Containers.Vectors;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Vector_First_Last_Element is\n\n   package Integer_Vectors is new\n     Ada.Containers.Vectors\n       (Index_Type   => Natural,\n        Element_Type => Integer);\n\n   use Integer_Vectors;\n\n   function Img (I : Integer) return String\n     renames Integer'Image;\n\n   V : Vector := 20 & 10 & 0 & 13;\nbegin\n   --  We use V.First and V.Last to retrieve\n   --  cursor for first and last elements.\n   --  We use V.Swap to swap elements.\n   V.Swap (V.First, V.Last);\n\n   Put_Line (\"First element is now \"\n             & Img (V.First_Element));\n   Put_Line (\"Last element is now \"\n             & Img (V.Last_Element));\nend Show_Vector_First_Last_Element;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Vector_First_Last_Element",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_vector_first_last_element.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_vector_first_last_element.adb",
+    "text_hash": "26462797998bc38b2425cd8e615fb4bae439136ff124420d4147a91f9639fb469d4c8340c86f4975ad9f4d731a8206f2fd80dc561d242915051c60db294f781f",
+    "text_hash_short": "1a0c0bf28bb661b3f328473ac3c2eb54"
+}

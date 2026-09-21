@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/strongly_typed_language.rst",
+    "line_start": 697,
+    "line_end": 719,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Greet is\n   type Days is (Monday, Tuesday, Wednesday,\n                 Thursday, Friday,\n                 Saturday, Sunday);\n\n   subtype Weekend_Days is\n     Days range Saturday .. Sunday;\n\n   Day     : Days := Saturday;\n   Weekend : Weekend_Days;\nbegin\n   Weekend := Day;\n   --         ^ Correct: Same type, subtype\n   --           constraints are respected\n   Weekend := Monday;\n   --         ^ Wrong value for the subtype\n   --           Compiles, but exception at runtime\nend Greet;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Strongly_Typed_Language.Days_Subtype_Error",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "greet.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "greet.adb",
+    "text_hash": "34d533da18e39c7e3a63d5fc041245bf29dd99a3967021b1a66627e03159b8a3ae4ed158a94a7897260e7a4e2c0cd0f5c61e07b2fff72bc110ef59f9579e347c",
+    "text_hash_short": "84d42d276d26544f35edab5870459378"
+}

@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 1703,
+    "line_end": 1729,
+    "text": "package Custom_Integer_Types is\n\n   type Int_1024_Bits is\n     range -2**1023 .. +2**1023 - 1;\n\n   --  [...]\n\nend Custom_Integer_Types;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Custom_Integer_Types;\nuse Custom_Integer_Types;\n\nprocedure Show_Custom_Integer_Types is\nbegin\n   Put_Line (\"Int_1024_Bits'Size  :\"\n             & Int_1024_Bits'Size'Image\n             & \" bits\");\n   Put_Line (\"Int_1024_Bits'First :\"\n             & Int_1024_Bits'First'Image);\n   Put_Line (\"Int_1024_Bits'Last  :\"\n             & Int_1024_Bits'Last'Image);\nend Show_Custom_Integer_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Integer_Types.Illegal_Custom_Integer_Type",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_integer_types.ads",
+        "show_custom_integer_types.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_custom_integer_types.adb",
+    "text_hash": "9c03333c8334205fe7c73e2ad334d0afc80c84f7cf65f2a35ac274d87da7038d6ef6dbe9ecd2d65c8d80d97a79fa145a9019591748e07f896cecba027c5378fd",
+    "text_hash_short": "8b17662d3ceb8bc91fdb95006170dd97"
+}

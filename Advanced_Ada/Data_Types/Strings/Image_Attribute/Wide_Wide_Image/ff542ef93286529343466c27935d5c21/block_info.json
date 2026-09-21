@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/strings.rst",
+    "line_start": 1473,
+    "line_end": 1485,
+    "text": "with Ada.Wide_Wide_Text_IO;\nuse  Ada.Wide_Wide_Text_IO;\n\nprocedure Show_Wide_Wide_Image is\n   F : Float;\nbegin\n   F := 100.0;\n   Put_Line (\"F = \"\n             & F'Wide_Wide_Image);\nend Show_Wide_Wide_Image;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Strings.Image_Attribute.Wide_Wide_Image",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_wide_wide_image.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_wide_wide_image.adb",
+    "text_hash": "c4bd79a242b0366667d54e507420dabdd4db198974f65ee3a5ad25c0949c3220fb1afdf1ae2c4d216f2885d0d7c36022c73ac549b8183b4df6a2852010fb1d69",
+    "text_hash_short": "ff542ef93286529343466c27935d5c21"
+}

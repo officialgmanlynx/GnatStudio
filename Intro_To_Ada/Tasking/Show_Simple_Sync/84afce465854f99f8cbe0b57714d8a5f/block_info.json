@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/tasking.rst",
+    "line_start": 104,
+    "line_end": 121,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Simple_Sync is\n   task T;\n   task body T is\n   begin\n      for I in 1 .. 10 loop\n         Put_Line (\"hello\");\n      end loop;\n   end T;\nbegin\n   null;\n   --  Will wait here until all tasks\n   --  have terminated\nend Show_Simple_Sync;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Tasking.Show_Simple_Sync",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_simple_sync.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_simple_sync.adb",
+    "text_hash": "b668158e2b3bf2b4af653cfd03e780de6cb4c3cb2bf18da5ec7f8a593b6e111a693005736c21ebab44e9042bf9e08bcdb34890945a6f3ac96904049183abec02",
+    "text_hash_short": "84afce465854f99f8cbe0b57714d8a5f"
+}

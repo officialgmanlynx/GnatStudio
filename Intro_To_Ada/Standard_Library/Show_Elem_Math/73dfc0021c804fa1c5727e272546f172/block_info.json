@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_numerics.rst",
+    "line_start": 174,
+    "line_end": 238,
+    "text": "with Ada.Text_IO;  use Ada.Text_IO;\nwith Ada.Numerics; use Ada.Numerics;\n\nwith Ada.Numerics.Complex_Types;\nuse  Ada.Numerics.Complex_Types;\n\nwith Ada.Numerics.Complex_Elementary_Functions;\nuse  Ada.Numerics.Complex_Elementary_Functions;\n\nwith Ada.Text_IO.Complex_IO;\n\nprocedure Show_Elem_Math is\n\n   package C_IO is new\n     Ada.Text_IO.Complex_IO (Complex_Types);\n   use C_IO;\n\n   X, Y  : Complex;\n   R, Th : Float;\nbegin\n   X := (2.0, -1.0);\n   Y := (3.0,  4.0);\n\n   Put (X);\n   Put (\" * \");\n   Put (Y);\n   Put (\" is \");\n   Put (X * Y);\n   New_Line;\n   New_Line;\n\n   R  := 3.0;\n   Th := Pi / 2.0;\n   X  := Compose_From_Polar (R, Th);\n   --  Alternatively:\n   --  X := R * Exp ((0.0, Th));\n   --  X := R * e ** Complex'(0.0, Th);\n\n   Put (\"Polar form:    \"\n        & Float'Image (R)  & \" * e**(i * \"\n        & Float'Image (Th) & \")\");\n   New_Line;\n\n   Put (\"Modulus     of \");\n   Put (X);\n   Put (\" is \");\n   Put (Float'Image (abs X));\n   New_Line;\n\n   Put (\"Argument    of \");\n   Put (X);\n   Put (\" is \");\n   Put (Float'Image (Argument (X)));\n   New_Line;\n   New_Line;\n\n   Put (\"Sqrt        of \");\n   Put (X);\n   Put (\" is \");\n   Put (Sqrt (X));\n   New_Line;\nend Show_Elem_Math;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Elem_Math",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_elem_math.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_elem_math.adb",
+    "text_hash": "880f684dfbcc41b94956e50876272df8c84b709182e9c7a83d9c7300c5b9a5947dd483b07b65ad419e15c35deb5433dc1b7a60d30d4f990b6cf83b4173e2c67d",
+    "text_hash_short": "73dfc0021c804fa1c5727e272546f172"
+}

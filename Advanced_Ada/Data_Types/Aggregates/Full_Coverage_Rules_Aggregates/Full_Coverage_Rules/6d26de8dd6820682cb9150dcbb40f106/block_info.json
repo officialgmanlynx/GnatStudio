@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/aggregates.rst",
+    "line_start": 705,
+    "line_end": 721,
+    "text": "with Ada.Strings.Unbounded;\nuse  Ada.Strings.Unbounded;\n\nwith Persons; use Persons;\n\nprocedure Show_Aggregate_Init_Others is\n\n   X : constant Person :=\n         (Name   =>\n            To_Unbounded_String (\"John Doe\"),\n          others => 25);\nbegin\n   null;\nend Show_Aggregate_Init_Others;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Aggregates.Full_Coverage_Rules_Aggregates.Full_Coverage_Rules",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_aggregate_init_others.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_aggregate_init_others.adb",
+    "text_hash": "5ec8e28a4062c9a119be92c51d6a8f095b4def2514f47e658c6c3ed60c3505b1ce494ce5bc6e1d37cf3137bc0d9c9b57bab2a37b5e08c0dfb71317868c91fc08",
+    "text_hash_short": "6d26de8dd6820682cb9150dcbb40f106"
+}

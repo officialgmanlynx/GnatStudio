@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 202,
+    "line_end": 232,
+    "text": "with Ada.Text_IO;\n\nprocedure Ada_Numeric_Literals is\n   Lights_On  : constant := 2#1000_1000#;\n   Lights_Off : constant := 2#0111_0111#;\n\n   type Byte is mod 256;\n   Output_Devices : Byte := 0;\n\n   --  for Output_Devices'Address\n   --    use 16#DEAD_BEEF#;\n   --  ^^^^^^^^^^^^^^^^^^^^^^^^^^\n   --  Memory mapped Output\n\n   use Ada.Text_IO;\nbegin\n   Output_Devices := Output_Devices or\n                       Lights_On;\n\n   Put_Line (\"Output_Devices (lights on ) = \"\n             & Byte'Image (Output_Devices));\n\n   Output_Devices := Output_Devices and\n                       Lights_Off;\n\n   Put_Line (\"Output_Devices (lights off) = \"\n             & Byte'Image (Output_Devices));\nend Ada_Numeric_Literals;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Numeric_Literals.Literal_Lights",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "ada_numeric_literals.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "ada_numeric_literals.adb",
+    "text_hash": "b86a19fa9486cb12dfbbdb46a344aa841c71eaea1217c81b77ce9af6dbe6a302627fe3301e165aad9400702f714826a5ea3e7c341c2ab66e0d18d32897e065c6",
+    "text_hash_short": "c3e72b25366d8d815a1f425f2695ad0b"
+}

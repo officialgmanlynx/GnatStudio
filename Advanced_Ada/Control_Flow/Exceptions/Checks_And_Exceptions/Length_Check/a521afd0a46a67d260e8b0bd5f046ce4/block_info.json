@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/exceptions.rst",
+    "line_start": 704,
+    "line_end": 724,
+    "text": "procedure Show_Length_Check is\n\n   type Integer_Array is\n     array (Positive range <>) of Integer;\n\n   procedure Assign (To   : out Integer_Array;\n                     From :     Integer_Array) is\n   begin\n      To := From;\n   end Assign;\n\n   Arr_1 : Integer_Array (1 .. 10);\n   Arr_2 : Integer_Array (1 .. 9) :=\n             (others => 1);\n\nbegin\n   Assign (Arr_1, Arr_2);\nend Show_Length_Check;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Exceptions.Checks_And_Exceptions.Length_Check",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_length_check.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_length_check.adb",
+    "text_hash": "daf1b6534a27c336f68f2ba8c4aec0f67c22f5fe00f366644b930872b8d39a789f71a0bc77f10841aee4625cf3e9c7d7400834b2732d3452454fd178a484f982",
+    "text_hash_short": "a521afd0a46a67d260e8b0bd5f046ce4"
+}

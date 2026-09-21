@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/tasking.rst",
+    "line_start": 550,
+    "line_end": 584,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Protected_Objects is\n\n   protected Obj is\n      --  Operations go here (only subprograms)\n      procedure Set (V : Integer);\n      function Get return Integer;\n   private\n      --  Data goes here\n      Local : Integer := 0;\n   end Obj;\n\n   protected body Obj is\n      --  procedures can modify the data\n      procedure Set (V : Integer) is\n      begin\n         Local := V;\n      end Set;\n\n      --  functions cannot modify the data\n      function Get return Integer is\n      begin\n         return Local;\n      end Get;\n   end Obj;\n\nbegin\n   Obj.Set (5);\n   Put_Line (\"Number is: \"\n             & Integer'Image (Obj.Get));\nend Show_Protected_Objects;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Tasking.Show_Protected_Objects",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_protected_objects.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_protected_objects.adb",
+    "text_hash": "6a2d38a8cd0a2983c98b548b58174483cd811296c829e7e73f5cecf6c3aad284096c62de1abc92d3722a1f20359c8104c2fb2bf6cca693a7e6d6cf73ac94420d",
+    "text_hash_short": "dd97dd584ba2f13def3c04725d4e48a7"
+}

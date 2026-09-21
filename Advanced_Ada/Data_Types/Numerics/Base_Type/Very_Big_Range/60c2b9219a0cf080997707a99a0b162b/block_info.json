@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 1148,
+    "line_end": 1156,
+    "text": "package Int_Def is\n\n    type Too_Big_To_Fail is\n      range -2 ** 255 .. 2 ** 255 - 1;\n\nend Int_Def;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Base_Type.Very_Big_Range",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "int_def.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "dce93d67c4c4617af6c6f485d5524c80babebac809e123d589bb06f78d2d3739119814438b9c571fcd87611162eaf8539263c7249ea1e26bf7965cd974adb438",
+    "text_hash_short": "60c2b9219a0cf080997707a99a0b162b"
+}

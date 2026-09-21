@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/shared_variable_control.rst",
+    "line_start": 279,
+    "line_end": 290,
+    "text": "package Shared_Var_Types is\n\n   type Flags is\n     array (Positive range <>) of Boolean\n       with Independent_Components, Pack;\n\n   F : Flags (1 .. 8) with Size => 8;\n\nend Shared_Var_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Shared_Variable_Control.Independent.Packed_Independent_Components",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "shared_var_types.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "5335bd9481937df7bd26c7c9527aa055f3b5730ce54259caf4191a0a8f7efae8e8904f99f2870e32a629c7a6a5ef85225514e52ae3917cbe98ec45a4f4afe5c1",
+    "text_hash_short": "dbaff4f2559ef8a449dad251f42cddc0"
+}

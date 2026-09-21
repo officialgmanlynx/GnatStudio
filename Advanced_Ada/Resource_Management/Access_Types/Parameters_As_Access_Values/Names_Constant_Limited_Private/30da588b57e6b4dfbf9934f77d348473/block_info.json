@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 1307,
+    "line_end": 1365,
+    "text": "package Names is\n\n   type Name is limited private;\n\n   type Constant_Name is limited private;\n\n   function Init (S : String) return Name;\n\n   function To_Constant_Name\n     (N : Name)\n      return Constant_Name;\n\n   procedure Show (N : Constant_Name);\n\nprivate\n\n   type Name is\n     access String;\n\n   type Constant_Name is\n     access constant String;\n\n   function Init (S : String) return Name is\n     (new String'(S));\n\n   function To_Constant_Name\n     (N : Name)\n      return Constant_Name is\n        (Constant_Name (N));\n\nend Names;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\n--  with Ada.Characters.Handling;\n--  use  Ada.Characters.Handling;\n\npackage body Names is\n\n   procedure Show (N : Constant_Name) is\n   begin\n      --  for I in N'Range loop\n      --     N (I) := To_Lower (N (I));\n      --  end loop;\n      Put_Line (\"Name: \" & N.all);\n   end Show;\n\nend Names;\n\nwith Names; use Names;\n\nprocedure Show_Names is\n   N : Name := Init (\"John\");\nbegin\n   Show (To_Constant_Name (N));\nend Show_Names;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Parameters_As_Access_Values.Names_Constant_Limited_Private",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "names.ads",
+        "names.adb",
+        "show_names.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_names.adb",
+    "text_hash": "02e722172dbedfaeeb37b3157b642b1a5975919298ef9572c8f5e7e3a9d7f046e854c6fd4ad5815a96f33f98dfbf10cda3a6b06a4193a1f75b959c317928625b",
+    "text_hash_short": "30da588b57e6b4dfbf9934f77d348473"
+}

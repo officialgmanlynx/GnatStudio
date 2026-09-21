@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/subprograms.rst",
+    "line_start": 443,
+    "line_end": 456,
+    "text": "procedure Outp is\n   procedure Foo (A : out Integer) is\n      B : Integer := A;\n      --             ^ Warning on reference\n      --               to uninitialized A\n   begin\n      A := B;\n   end Foo;\nbegin\n   null;\nend Outp;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Subprograms.Out_Params",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "outp.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "c6541550d2a597a3e98d7eef8169fbc1eff864fe60ce662bacbb0b4f448e145620b3f7d4cc566049edb1ac9988c4599b5de7e765a5819f19cd4ec170bbf40b2e",
+    "text_hash_short": "36bdb4e541297d7fb0b075816cb6e73a"
+}

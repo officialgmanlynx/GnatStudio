@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/07_undefined_behavior.rst",
+    "line_start": 218,
+    "line_end": 243,
+    "text": "package No_Runtime_Errors is\n\n   subtype Index_Range is Integer range 0 .. 100;\n\n   type Nat_Array is array (Index_Range range <>) of Natural;\n\n   procedure Update (A    : in out Nat_Array;\n                     I, J : Index_Range;\n                     P, Q : Positive)\n   with\n     Pre => I + J in A'Range;\n\nend No_Runtime_Errors;\n\npackage body No_Runtime_Errors is\n\n   procedure Update (A    : in out Nat_Array;\n                     I, J : Index_Range;\n                     P, Q : Positive) is\n   begin\n      A (I + J) := P / Q;\n   end Update;\n\nend No_Runtime_Errors;",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Undefined_Behavior.No_Runtime_Errors",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_report_all",
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": true,
+    "source_files": [
+        "no_runtime_errors.ads",
+        "no_runtime_errors.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "64d85e87ca03319597f17593c7c81c23c0db1c1119162d212de5095c98e9399bfcd0f5a566c2a50df76056545ce3f2239edbbae22f862ab9a06fffba8d5dbeca",
+    "text_hash_short": "1cdb79080b4e87e47d23ba935e425f75"
+}

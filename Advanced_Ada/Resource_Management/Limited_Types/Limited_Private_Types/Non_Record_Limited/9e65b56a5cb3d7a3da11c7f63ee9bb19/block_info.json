@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 523,
+    "line_end": 549,
+    "text": "package Simple_Recs is\n\n   type Limited_Enumeration is\n     limited private;\n\n   type Limited_Integer is\n     limited private;\n\n   type Limited_Integer_Array_2 is\n     limited private;\n\nprivate\n\n   type Limited_Enumeration is (Off, On);\n\n   type Limited_Integer is new Integer;\n\n   type Integer_Array is\n     array (Positive range <>) of Integer;\n\n   type Limited_Integer_Array_2 is\n     new Integer_Array (1 .. 2);\n\nend Simple_Recs;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Limited_Private_Types.Non_Record_Limited",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple_recs.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "d595df2923cff3dab47ca31af94eb02ea922909f00a0a77a9a74692084b924fd0089d6809f49c04a84a9b155a5c65572b899ffaab00614f7f1b55c16f5094aa4",
+    "text_hash_short": "9e65b56a5cb3d7a3da11c7f63ee9bb19"
+}

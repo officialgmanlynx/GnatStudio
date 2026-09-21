@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/01_Overview.rst",
+    "line_start": 193,
+    "line_end": 209,
+    "text": "procedure Show_Illegal_SPARK_Code is\n\n   Dummy : Integer := 0;\n\n   function F return Integer is\n      Tmp : constant Integer := Dummy;\n   begin\n      Dummy := Dummy + 1;\n      return Tmp;\n   end F;\n\nbegin\n   Dummy := F - F; -- ??\nend Show_Illegal_SPARK_Code;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Overview.Illegal_SPARK_Code",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow",
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": true,
+    "source_files": [
+        "show_illegal_spark_code.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": "show_illegal_spark_code.adb",
+    "text_hash": "2921cc0b3dd513143cf4fd7149e432c87b1cf0075e35a50b6c98fecb1c9b86f11ee38fc53f29a60cef4988f29c5e68d80c9af6f00d32e3aca7d9b34cde3ae832",
+    "text_hash_short": "e747edb6ee147adb7fba97c9e7c8d5ef"
+}

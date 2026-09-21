@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/tasking.rst",
+    "line_start": 728,
+    "line_end": 744,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Simple_Task_Type is\n   task type TT;\n\n   task body TT is\n   begin\n      Put_Line (\"In task type TT\");\n   end TT;\n\n   A_Task : TT;\nbegin\n   Put_Line (\"In main\");\nend Show_Simple_Task_Type;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Tasking.Show_Simple_Task_Type",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_simple_task_type.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_simple_task_type.adb",
+    "text_hash": "7f9ee0d70ebb312462877eb20bb51379cb9aa2ee4b778db5c3667706c57bf955b6e2f48c2bcccbbeddfd51577c79f349240fb8028387d51ca24a4b43482660a9",
+    "text_hash_short": "24c26dcbba6f5c54f0a7d47c3c0da728"
+}

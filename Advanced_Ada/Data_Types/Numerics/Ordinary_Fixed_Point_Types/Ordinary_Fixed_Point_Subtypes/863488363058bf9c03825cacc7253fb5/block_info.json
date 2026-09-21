@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 7735,
+    "line_end": 7763,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Ordinary_Fixed_Point_Subtypes is\n   D : constant := 2.0 ** (-15);\n\n   type TQ15 is\n     delta D\n     range -1.0 .. 1.0 - D;\n\n   subtype TQ15_Pos is\n     TQ15 range 0.0 .. 1.0 - D;\n\n   A : TQ15     := 0.25;\n   B : TQ15_Pos := 0.5;\nbegin\n   --  Subtype to parent: always safe,\n   --  no conversion needed\n   A := B;\n   Put_Line (\"A = \" & A'Image);\n\n   --  Parent to subtype:\n   --  range check at run time\n   A := 0.75;\n   B := A;\n   Put_Line (\"B = \" & B'Image);\nend Show_Ordinary_Fixed_Point_Subtypes;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Ordinary_Fixed_Point_Types.Ordinary_Fixed_Point_Subtypes",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_ordinary_fixed_point_subtypes.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_ordinary_fixed_point_subtypes.adb",
+    "text_hash": "18b37b43a0de6a97398be4b7e5e65f8759a4c31936e8cf15472c7606fe07e456eb51ae6726a99d24471b720968f315e0ca5efdd814ed385d9f91d44983d2a692",
+    "text_hash_short": "863488363058bf9c03825cacc7253fb5"
+}

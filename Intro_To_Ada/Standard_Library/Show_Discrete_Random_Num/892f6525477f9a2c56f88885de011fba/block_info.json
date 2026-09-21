@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_numerics.rst",
+    "line_start": 126,
+    "line_end": 155,
+    "text": "with Ada.Text_IO;  use Ada.Text_IO;\nwith Ada.Numerics.Discrete_Random;\n\nprocedure Show_Discrete_Random_Num is\n\n   subtype Random_Range is Integer range 1 .. 10;\n\n   package R is new\n     Ada.Numerics.Discrete_Random (Random_Range);\n   use R;\n\n   G : Generator;\n   X : Random_Range;\nbegin\n   Reset (G);\n\n   Put_Line (\"Some random numbers between \"\n             & Integer'Image (Random_Range'First)\n             & \" and \"\n             & Integer'Image (Random_Range'Last)\n             & \":\");\n\n   for I in 1 .. 15 loop\n      X := Random (G);\n      Put_Line (Integer'Image (X));\n   end loop;\nend Show_Discrete_Random_Num;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Discrete_Random_Num",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_discrete_random_num.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_discrete_random_num.adb",
+    "text_hash": "708e8b37cea6b335cb85d50f09430601698995179d533c97042f4f7d08161e696a20911f2214a0448c1b760067e18450f249efcf6739cca0a080a06e702571ef",
+    "text_hash_short": "892f6525477f9a2c56f88885de011fba"
+}

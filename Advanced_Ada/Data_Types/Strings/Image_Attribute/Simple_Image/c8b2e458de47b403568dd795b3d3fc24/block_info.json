@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/strings.rst",
+    "line_start": 1433,
+    "line_end": 1446,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Simple_Image is\n   V : Integer;\nbegin\n   V := 10;\n   Put_Line (\"V: \" & V'Image);\n\n   --  Equivalent to:\n   --  Put_Line (\"V: \" & Integer'Image (V));\nend Show_Simple_Image;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Strings.Image_Attribute.Simple_Image",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_simple_image.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_simple_image.adb",
+    "text_hash": "4521528c54c685e66f32878d3b7d1e0c8ad906918c5b60925ec7840f01ce04ce75ec8899367597d34c1d9ec3d60f05dffa2842d192ac09e454a495cbe7935a76",
+    "text_hash_short": "c8b2e458de47b403568dd795b3d3fc24"
+}

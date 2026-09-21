@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 2305,
+    "line_end": 2322,
+    "text": "with States; use States;\n\nprocedure Show_Unchecked_Union is\n   V : Unchecked_State_Or_Integer\n         (Use_Enum => True);\nbegin\n   V.S := On;\n   Display_State_Value (V);\n\n   V.I := 4;\n   --  Error: cannot directly assign to V.I,\n   --         as Use_Enum is set to True.\n\n   Display_State_Value (V);\nend Show_Unchecked_Union;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Unchecked_Union.Unchecked_State_Or_Integer",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_unchecked_union.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_unchecked_union.adb",
+    "text_hash": "9fe5204147dfb513f270aaa2d0cc3d084837aa846b6503a788215934dd4da6fc5f071645820250b8f1b289b7b610fba6b350051c666bd3e015f2542870b83c64",
+    "text_hash_short": "74ac11a3effdafd3959fface295a86da"
+}

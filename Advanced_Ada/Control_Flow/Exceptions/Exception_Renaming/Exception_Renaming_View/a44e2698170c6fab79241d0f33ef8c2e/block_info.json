@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/exceptions.rst",
+    "line_start": 1695,
+    "line_end": 1725,
+    "text": "package Internal_Exceptions is\n\n   Int_E : exception;\n\nend Internal_Exceptions;\n\nwith Internal_Exceptions;\n\npackage Test_Constraints is\n\n   Ext_E : exception renames\n             Internal_Exceptions.Int_E;\n\nend Test_Constraints;\n\nwith Ada.Text_IO;    use Ada.Text_IO;\nwith Ada.Exceptions; use Ada.Exceptions;\n\nwith Test_Constraints; use Test_Constraints;\n\nprocedure Show_Exception_Renaming_View is\nbegin\n   raise Ext_E;\nexception\n   when E : others =>\n      Put_Line\n       (Ada.Exceptions.Exception_Information (E));\nend Show_Exception_Renaming_View;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Exceptions.Exception_Renaming.Exception_Renaming_View",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-g",
+        "-gnateE",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "internal_exceptions.ads",
+        "test_constraints.ads",
+        "show_exception_renaming_view.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_exception_renaming_view.adb",
+    "text_hash": "07257c7374b0c58ed0a200299a7ce8890b387e0415b26c5d3b11ab960a4c18b77c9869523ee56de47e498bc22a07c9c949195a1b600eb15ed3681d7e4f127e96",
+    "text_hash_short": "a44e2698170c6fab79241d0f33ef8c2e"
+}

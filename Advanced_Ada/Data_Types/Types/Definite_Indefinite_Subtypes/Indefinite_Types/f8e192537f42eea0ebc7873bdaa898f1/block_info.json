@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 1500,
+    "line_end": 1521,
+    "text": "with Unconstrained_Types; use Unconstrained_Types;\n\nprocedure Using_Unconstrained_Type is\n\n   subtype Integer_Array_5 is\n     Integer_Array (1 .. 5);\n\n   A1 : Integer_Array_5;\n   A2 : Integer_Array (1 .. 5);\n\n   subtype Simple_Record_Ext is\n     Simple_Record (Extended => True);\n\n   R1 : Simple_Record_Ext;\n   R2 : Simple_Record (Extended => True);\n\nbegin\n   null;\nend Using_Unconstrained_Type;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Definite_Indefinite_Subtypes.Indefinite_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "using_unconstrained_type.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "c1814ce46a6ae145253ba1da0f258737e439f2ad6278f86c776f97e8252ea053f84b1d4297636e57e06447d02bea28b5e48c6c537044f52ab3289ece876b814b",
+    "text_hash_short": "f8e192537f42eea0ebc7873bdaa898f1"
+}

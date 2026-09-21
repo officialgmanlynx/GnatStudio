@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 3679,
+    "line_end": 3709,
+    "text": "package Rec_Per_Object_Expressions is\n\n   type T is private;\n\n   type T_Processor (Selected_T : access T) is\n     private;\n\nprivate\n\n   type T is null record;\n\n   type T_Container (Selected_T : access T) is\n     null record;\n\n   type T_Processor (Selected_T : access T) is\n   record\n      E : T_Container (Selected_T);\n      --\n      --               Selected_T\n      --               ^^^^^^^^^^\n      --    Per-object expression\n      --\n      --              (Selected_T)\n      --              ^^^^^^^^^^^^\n      --     Per-object constraint\n   end record;\n\nend Rec_Per_Object_Expressions;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Per_Object_Expressions.Per_Object_Expression_Access_Discriminant",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "rec_per_object_expressions.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "0c333f7f7f5f55ae2f9645f69b373954391344757f27d7ca2f138a383f996600e9e61e879f5971b6753a4b24c52227d85d40f59ed46b568d43cc8c1f0af67237",
+    "text_hash_short": "8b404688be1e103773c28a6977785836"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 2523,
+    "line_end": 2542,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Simple_Overlay is\n   type State is (Off, State_1, State_2)\n     with Size => Integer'Size;\n\n   for State use (Off     => 0,\n                  State_1 => 32,\n                  State_2 => 64);\n\n   S : State;\n   I : Integer\n     with Address => S'Address, Import, Volatile;\nbegin\n   S := State_2;\n   Put_Line (\"I = \" & Integer'Image (I));\nend Simple_Overlay;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Addresses.Simple_Overlay",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple_overlay.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "simple_overlay.adb",
+    "text_hash": "77a1e40d1261f09cf54c5b07a46b9e063439c3d4705f50517a30f9941af8a9c90de91acce413233dc5ebb0286981408bac5f427dce6eb2682849f46718bbc42c",
+    "text_hash_short": "a65057882518824d3ea173d193a7ae67"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/imperative_language.rst",
+    "line_start": 580,
+    "line_end": 593,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main is\n   procedure Nested is\n   begin\n      Put_Line (\"Hello World\");\n   end Nested;\nbegin\n   Nested;\n   --  Call to Nested\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Imperative_Language.Nested_Procedure",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "728f0ec95a6289d7819efec9b808087bc804488a6780a3708b837cff92ceae6350d4b97381690061ae2830f99f7cd189bda25712017ad9ab885edd26a4f4a116",
+    "text_hash_short": "2e7fb267e31232196065febd5e35e6ef"
+}

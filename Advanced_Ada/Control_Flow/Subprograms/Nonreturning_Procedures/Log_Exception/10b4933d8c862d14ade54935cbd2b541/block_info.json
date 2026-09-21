@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/subprograms.rst",
+    "line_start": 1619,
+    "line_end": 1653,
+    "text": "package Loggers is\n\n   Logged_Failure : exception;\n\n   procedure Log_And_Raise (Msg : String)\n     with No_Return;\n\nend Loggers;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Loggers is\n\n   procedure Log_And_Raise (Msg : String) is\n   begin\n      Put_Line (Msg);\n      raise Logged_Failure;\n   end Log_And_Raise;\n\nend Loggers;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Loggers;     use Loggers;\n\nprocedure Show_No_Return_Exception is\n   Check_Passed : constant Boolean := False;\nbegin\n   if not Check_Passed then\n      Log_And_Raise (\"Check failed!\");\n      Put_Line (\"This line will not be reached!\");\n   end if;\nend Show_No_Return_Exception;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Subprograms.Nonreturning_Procedures.Log_Exception",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-norun"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "loggers.ads",
+        "loggers.adb",
+        "show_no_return_exception.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "279c1f13209208ad84e257a2f8fa3687ca72ab4079300926a2133757372a9b974b56296db6360a3821b083c329e3b0e4cb30bb26384d464e0850fb7a25dd1a11",
+    "text_hash_short": "10b4933d8c862d14ade54935cbd2b541"
+}

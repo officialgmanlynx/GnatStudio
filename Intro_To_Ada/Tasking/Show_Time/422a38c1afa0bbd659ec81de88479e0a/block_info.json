@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/tasking.rst",
+    "line_start": 387,
+    "line_end": 430,
+    "text": "with Ada.Real_Time; use Ada.Real_Time;\n\npackage Delay_Aux_Pkg is\n\n   function Get_Start_Time return Time\n     with Inline;\n\n   procedure Show_Elapsed_Time\n     with Inline;\n\n   procedure Computational_Intensive_App;\nprivate\n   Start_Time   : Time := Clock;\n\n   function Get_Start_Time return Time is\n     (Start_Time);\n\nend Delay_Aux_Pkg;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Delay_Aux_Pkg is\n\n   procedure Show_Elapsed_Time is\n      Now_Time     : Time;\n      Elapsed_Time : Time_Span;\n   begin\n      Now_Time     := Clock;\n      Elapsed_Time := Now_Time - Start_Time;\n      Put_Line (\"Elapsed time \"\n                & Duration'Image\n                    (To_Duration (Elapsed_Time))\n                & \" seconds\");\n   end Show_Elapsed_Time;\n\n   procedure Computational_Intensive_App is\n   begin\n      delay 0.5;\n   end Computational_Intensive_App;\n\nend Delay_Aux_Pkg;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Tasking.Show_Time",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "delay_aux_pkg.ads",
+        "delay_aux_pkg.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "3219cc0302ad266defefe2cbdbc9f36eac68ebd49bc427676330d6c53376418fce3da163f5ba7a4aaea8044a00826a5b7e0132b0d8508756c049cfdeac7fb546",
+    "text_hash_short": "422a38c1afa0bbd659ec81de88479e0a"
+}

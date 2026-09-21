@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numeric_attributes.rst",
+    "line_start": 302,
+    "line_end": 318,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Machine_Radix is\nbegin\n   Put_Line\n     (\"Float'Machine_Radix:           \"\n      & Float'Machine_Radix'Image);\n   Put_Line\n     (\"Long_Float'Machine_Radix:      \"\n      & Long_Float'Machine_Radix'Image);\n   Put_Line\n     (\"Long_Long_Float'Machine_Radix: \"\n      & Long_Long_Float'Machine_Radix'Image);\nend Show_Machine_Radix;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numeric_Attributes.Floating_Point_Types.Machine_Radix",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_machine_radix.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_machine_radix.adb",
+    "text_hash": "a4c369495cac0958cd17df7f364372d157fb2cb547989ce3e0a2fbd326f3a56150d3e5ae08fee5136ae9c794ade2aff7e54d6ccd21bf1f600637d84ed39d7a71",
+    "text_hash_short": "88680df680f1db4ff803912850370551"
+}

@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 2254,
+    "line_end": 2278,
+    "text": "with Ada.Containers.Ordered_Sets;\n\npackage Aux is\n   generic\n      with package OS is new\n        Ada.Containers.Ordered_Sets (<>);\n   function Gen_Singleton_Set\n     (Element : OS.Element_Type)\n      return OS.Set;\nend Aux;\n\npackage body Aux is\n   function Gen_Singleton_Set\n     (Element : OS.Element_Type)\n      return OS.Set\n   is\n   begin\n      return S : OS.Set := OS.Empty_Set do\n         S.Insert (Element);\n      end return;\n   end Gen_Singleton_Set;\nend Aux;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Constructor_Functions_Limited_Types.Constructor_Functions_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "aux.ads",
+        "aux.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "cd6f16964fc344cd4e8813967fd20d2063d995f682d762f83f9e346598de7b8a3f8bb033c51a9ec0b2beae611cd3326b9e5f5d0d5147084b390b64586dcdd556",
+    "text_hash_short": "b715ae504c49ed59b7fd5ead4cc7bbb4"
+}

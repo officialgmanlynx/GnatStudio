@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/access_types.rst",
+    "line_start": 122,
+    "line_end": 132,
+    "text": "with Dates; use Dates;\n\npackage Access_Types is\n    type Date_Acc is access Date;\n\n    D : Date_Acc := new Date;\n    --              ^ Allocate a new Date record\nend Access_Types;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Access_Types.Access_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "access_types.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "0962567f457eb651eeb5fe58ed8ec6f8eb152f7384b51862de628b34d9486517c0c917086f518f87171054833620c9cf1efc71f50692ca8847d0d813dd726065",
+    "text_hash_short": "e0be95b966e4aebaaf25db646d60c35c"
+}

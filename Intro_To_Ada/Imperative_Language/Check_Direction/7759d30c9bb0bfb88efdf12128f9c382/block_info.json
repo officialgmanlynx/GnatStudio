@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/imperative_language.rst",
+    "line_start": 199,
+    "line_end": 231,
+    "text": "with Ada.Text_IO;         use Ada.Text_IO;\nwith Ada.Integer_Text_IO; use Ada.Integer_Text_IO;\n\nprocedure Check_Direction is\n   N : Integer;\nbegin\n   Put (\"Enter an integer value: \");\n   Get (N);\n   Put (N);\n\n   if N = 0 or N = 360 then\n      Put_Line (\" is due north\");\n   elsif N in 1 .. 89 then\n      Put_Line (\" is in the northeast quadrant\");\n   elsif N = 90 then\n      Put_Line (\" is due east\");\n   elsif N in 91 .. 179 then\n      Put_Line (\" is in the southeast quadrant\");\n   elsif N = 180 then\n      Put_Line (\" is due south\");\n   elsif N in 181 .. 269 then\n      Put_Line (\" is in the southwest quadrant\");\n   elsif N = 270 then\n      Put_Line (\" is due west\");\n   elsif N in 271 .. 359 then\n      Put_Line (\" is in the northwest quadrant\");\n   else\n      Put_Line (\" is not in the range 0..360\");\n   end if;\nend Check_Direction;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Imperative_Language.Check_Direction",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "check_direction.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "79a8a29a346a4670f46ef7e5b21265fae6fbbdc88794d0d742dedd34004960883ff101e079cf9c6e4f46fdabd8aa379c33ee054998923562daf56538fdd01dfe",
+    "text_hash_short": "7759d30c9bb0bfb88efdf12128f9c382"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/interfacing_with_c.rst",
+    "line_start": 411,
+    "line_end": 431,
+    "text": "with Interfaces.C; use Interfaces.C;\nwith Ada.Text_IO;  use Ada.Text_IO;\nwith test_h;       use test_h;\n\nprocedure Show_C_Func is\n   V : int;\nbegin\n   V := my_func (1);\n   V := my_func (2);\n   V := my_func (3);\n\n   Put_Line (\"Result is \"\n             & int'Image (V));\n\n   Put_Line (\"Function was called \"\n             & int'Image (func_cnt)\n             & \" times\");\nend Show_C_Func;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Interfacing_With_C.C_Binds",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "show_c_func.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "7d5d416b05df9cf4edce478d62fe2efc84786d107cb80ae37bd982f68e4d6b977cf075105a5ac6ace9ec19abef105ea0b7c333ee4097fe116a38942ca59c343b",
+    "text_hash_short": "8a07aae87b9f36c3fce84b75e8388933"
+}

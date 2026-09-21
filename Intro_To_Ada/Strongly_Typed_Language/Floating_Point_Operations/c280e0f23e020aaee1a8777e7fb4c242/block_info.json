@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/strongly_typed_language.rst",
+    "line_start": 276,
+    "line_end": 291,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Floating_Point_Operations is\n   A : Float := 2.5;\nbegin\n   A := abs (A - 4.5);\n   Put_Line (\"The value of A is \"\n             & Float'Image (A));\n\n   A := A ** 2 + 1.0;\n   Put_Line (\"The value of A is \"\n             & Float'Image (A));\nend Floating_Point_Operations;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Strongly_Typed_Language.Floating_Point_Operations",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "floating_point_operations.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "floating_point_operations.adb",
+    "text_hash": "c20439728a470f904e88a4d08f92fe2a8326a7385ea9cd8fbff1e5ed67b07b7d0a98b3daf9754711f0628953ca277c7bb8823821409993a321c34f753cdec874",
+    "text_hash_short": "c280e0f23e020aaee1a8777e7fb4c242"
+}

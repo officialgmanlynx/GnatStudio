@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 3495,
+    "line_end": 3508,
+    "text": "package Activation_States is\n\n   type Activation_State is (Unknown, Off, On)\n     with Integer_Literal =>\n            Integer_To_Activation_State;\n\n   function Integer_To_Activation_State\n     (S : String)\n      return Activation_State;\n\nend Activation_States;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.User_Defined_Literals.User_Defined_Literals",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "activation_states.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "c20408c1109420fa23811582ee35ddfe6c34251ac990a5d65e9ffe9de3b058c1422df06f674aa3b4adf729c1818108962cd915bbf4d0bcc3252e50f76ef47aca",
+    "text_hash_short": "37c497105ea3a5ad67f72955911eb31a"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/02_program_consistency.rst",
+    "line_start": 211,
+    "line_end": 217,
+    "text": "!origin.h\nextern int var;\nextern int fun();\nextern void print();\n",
+    "language": "c",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Program_Consistency.Origin",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "origin.h"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "6dbde6babb51471d7f3dc8b8ee52b81dd17bd5085509e39e7a57c3bdafbf97705e51b25d6489b02391318ad7a9b864d8731ee6922b06f4d017113fe4fdfcab64",
+    "text_hash_short": "e8e880a16f5099dc1e0a75ffeeeb9468"
+}

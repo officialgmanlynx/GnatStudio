@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/04_Embedded.rst",
+    "line_start": 592,
+    "line_end": 610,
+    "text": "!main.c\n#include <stdio.h>\n\nint main(int argc, const char * argv[])\n{\n    volatile double val = 0.0;\n    int i;\n\n    for (i = 0; i < 1000; i++)\n    {\n        val += i * 2.0;\n    }\n    printf (\"val: %5.3f\\n\", val);\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Embedded.Volatile_Object_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "5860c4cfc4dd0f132fdf6920ab57375511161f7dc57eba7b368f390c389a5e4bfd49f76afee348491910ab4cdf2308401dc4dbb9f5529ba910bd09a2d78ea50a",
+    "text_hash_short": "863c7dda4acb3286976a1edab29bab08"
+}

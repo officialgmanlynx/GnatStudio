@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 1660,
+    "line_end": 1686,
+    "text": "package Custom_Integer_Types is\n\n   type Coefficient is\n     range -2**31 .. +2**31 - 1;\n\n   --  [...]\n\nend Custom_Integer_Types;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Custom_Integer_Types;\nuse Custom_Integer_Types;\n\nprocedure Show_Custom_Integer_Types is\nbegin\n   Put_Line (\"Coefficient'Size  :\"\n             & Coefficient'Size'Image\n             & \" bits\");\n   Put_Line (\"Coefficient'First :\"\n             & Coefficient'First'Image);\n   Put_Line (\"Coefficient'Last  :\"\n             & Coefficient'Last'Image);\nend Show_Custom_Integer_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Integer_Types.Custom_Integer_Type",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_integer_types.ads",
+        "show_custom_integer_types.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_custom_integer_types.adb",
+    "text_hash": "52c5702c76390a605e99b558ba8d4cd7c4f5e2ff4e7950cc594e59f57c8b2f911c151edbb11e5e45b849a35280ef85557798785114b04dc36913b87c1373b55a",
+    "text_hash_short": "44284e0eb7c1e37fbc2b4a969fd0928f"
+}

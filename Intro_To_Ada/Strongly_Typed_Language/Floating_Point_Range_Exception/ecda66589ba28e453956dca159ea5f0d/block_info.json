@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/strongly_typed_language.rst",
+    "line_start": 396,
+    "line_end": 408,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Floating_Point_Range_Exception is\n   type T_Norm  is new Float range -1.0 .. 1.0;\n   A  : T_Norm;\nbegin\n   A := 2.0;\n   Put_Line (\"The value of A is \"\n             & T_Norm'Image (A));\nend Floating_Point_Range_Exception;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Strongly_Typed_Language.Floating_Point_Range_Exception",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "floating_point_range_exception.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "floating_point_range_exception.adb",
+    "text_hash": "b0cab9bcf9695986af250e2aad83d0ec7037cc5e59ec38f778cbbfc50581f33d48690f87ef55180b2333425f60c11b96627d173f5e01bae152ea7be3ea2ca7e9",
+    "text_hash_short": "ecda66589ba28e453956dca159ea5f0d"
+}

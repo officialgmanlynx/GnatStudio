@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 3376,
+    "line_end": 3438,
+    "text": "generic\n   type Element is private;\npackage Data_Processing is\n\n   type Data_Container (Last : Positive) is\n     private;\n\n   Data_Container_Full : exception;\n\n   procedure Append (D : in out Data_Container;\n                     E :        Element);\n\n   type Process_Element is\n     not null access procedure (E : Element);\n\n   procedure Iterate\n     (D    : Data_Container;\n      Proc : Process_Element);\n\nprivate\n\n   type Data_Container_Storage is\n     array (Positive range <>) of Element;\n\n   type Data_Container (Last : Positive) is\n   record\n      S    : Data_Container_Storage (1 .. Last);\n      Curr : Natural := 0;\n   end record;\n\nend Data_Processing;\n\npackage body Data_Processing is\n\n   procedure Append (D : in out Data_Container;\n                     E :        Element) is\n   begin\n      if D.Curr < D.S'Last then\n         D.Curr := D.Curr + 1;\n         D.S (D.Curr) := E;\n      else\n         raise Data_Container_Full;\n         --  NOTE: This is just a dummy\n         --        implementation. A better\n         --        strategy is to add actual error\n         --        handling when the container is\n         --        full.\n      end if;\n   end Append;\n\n   procedure Iterate\n     (D    : Data_Container;\n      Proc : Process_Element) is\n   begin\n      for I in D.S'First .. D.Curr loop\n         Proc (D.S (I));\n      end loop;\n   end Iterate;\n\nend Data_Processing;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Accessibility_Rules_Anonymous_Access_To_Subprograms.Iterator_Named",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "data_processing.ads",
+        "data_processing.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "ed224dd98f49ca944592be2ced7edc8418cc0ebca35447f36360f6958cc3f12880c231d0cb9f1d4365fc40999fec157f8685a182b07f2508fbeaf2448f495dcb",
+    "text_hash_short": "e48e8200e571b62d027753ee96c47fcb"
+}

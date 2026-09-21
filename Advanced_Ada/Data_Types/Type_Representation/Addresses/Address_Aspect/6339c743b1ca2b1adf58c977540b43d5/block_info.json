@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 2495,
+    "line_end": 2515,
+    "text": "with System; use System;\nwith System.Address_Image;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Address is\n\n   I_Main   : aliased Integer;\n   I_Mapped : Integer\n                with Address => I_Main'Address;\nbegin\n   Put_Line (\"I_Main'Address   : \"\n              & System.Address_Image\n                  (I_Main'Address));\n   Put_Line (\"I_Mapped'Address : \"\n              & System.Address_Image\n                  (I_Mapped'Address));\nend Show_Address;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Addresses.Address_Aspect",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_address.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_address.adb",
+    "text_hash": "baf96c18d8dabbaeff53487b9cead69670a9835ef0cd88b94dc10758ceb4387ca3c9161b15a3b8f38bb806d2ba4ae045c28999c40649b2f8e07acc437aefa10e",
+    "text_hash_short": "6339c743b1ca2b1adf58c977540b43d5"
+}

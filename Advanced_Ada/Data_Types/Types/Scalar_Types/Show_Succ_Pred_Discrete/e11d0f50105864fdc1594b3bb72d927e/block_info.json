@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 662,
+    "line_end": 689,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Succ_Pred_Discrete is\n   type State is (Idle, Started,\n                  Processing, Stopped);\n\n   Machine_State : constant State := Started;\n\n   I : constant Integer := 2;\nbegin\n   Put_Line (\"State                     : \"\n             & Machine_State'Image);\n   Put_Line (\"State'Pred (Machine_State): \"\n             & State'Pred (Machine_State)'Image);\n   Put_Line (\"State'Succ (Machine_State): \"\n             & State'Succ (Machine_State)'Image);\n   Put_Line (\"----------\");\n\n   Put_Line (\"I               : \"\n             & I'Image);\n   Put_Line (\"Integer'Pred (I): \"\n             & Integer'Pred (I)'Image);\n   Put_Line (\"Integer'Succ (I): \"\n             & Integer'Succ (I)'Image);\nend Show_Succ_Pred_Discrete;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Scalar_Types.Show_Succ_Pred_Discrete",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_succ_pred_discrete.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_succ_pred_discrete.adb",
+    "text_hash": "3ccc011dd670bc45996207fdec763378f7b8f779ee6e7770f8e7d354975420a806d4c31c82e98817b6ebcbab9881633809ef10d7cfcc1b2b11be42b7a64c3869",
+    "text_hash_short": "e11d0f50105864fdc1594b3bb72d927e"
+}

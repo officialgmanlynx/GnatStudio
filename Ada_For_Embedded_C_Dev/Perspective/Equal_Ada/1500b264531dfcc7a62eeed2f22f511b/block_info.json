@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 657,
+    "line_end": 673,
+    "text": "!main.adb\nwith Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main\nis\n   A : Integer := 0;\nbegin\n\n   if A := 10 then\n      Put_Line (\"True\");\n   else\n      Put_Line (\"False\");\n   end if;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Equal_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-nocheck"
+    ],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": true,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "46a5247b4b6bcf351df7082d2b8382c9dc6626efb5af45ce549b9eda2834338ff1b9b4717ec506faff842f9636d5e079844f6d58861d65077de8da5946334684",
+    "text_hash_short": "1500b264531dfcc7a62eeed2f22f511b"
+}

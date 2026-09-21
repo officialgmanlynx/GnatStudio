@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 3490,
+    "line_end": 3559,
+    "text": "package Sensors is\n\n   type Sensor_Model is (Sensor_V1,\n                         Sensor_V2);\n\n   type Sensor\n     (Model : Sensor_Model := Sensor_V1) is\n       private;\n\n   type Sensor_Info\n     (Model : Sensor_Model := Sensor_V1) is\n   record\n      Info_1 : Float := 0.0;\n      case Model is\n         when Sensor_V1 =>\n            null;\n         when Sensor_V2 =>\n            Info_2 : Float := 0.0;\n      end case;\n   end record;\n\n   function Current_Info (S : Sensor)\n                          return Sensor_Info;\n\n   procedure Display (SI : Sensor_Info);\n\nprivate\n\n   type Sensor\n     (Model : Sensor_Model := Sensor_V1) is\n       null record;\n\nend Sensors;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Sensors is\n\n   function Current_Info (S : Sensor)\n                          return Sensor_Info is\n   begin\n      --  Using dummy info for the information\n      --  returned by the function\n      case S.Model is\n         when Sensor_V1 =>\n            return ((Model  => Sensor_V1,\n                     Info_1 => 4.0));\n         when Sensor_V2 =>\n            return ((Model  => Sensor_V2,\n                     Info_1 => 8.0,\n                     Info_2 => 6.0));\n      end case;\n   end Current_Info;\n\n   procedure Display (SI : Sensor_Info) is\n   begin\n      Put_Line (\"Model  : \"\n                & SI.Model'Image);\n      Put_Line (\"Info_1 : \"\n                & SI.Info_1'Image);\n      if SI.Model = Sensor_V2 then\n         Put_Line (\"Info_2 : \"\n                   & SI.Info_2'Image);\n      end if;\n   end Display;\n\nend Sensors;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Variant_Parts.Sensors",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "sensors.ads",
+        "sensors.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "87622f98961c13d132639a04902a0adb2c902d1bd1303a4603d0784d60b64d12116d4aec159c5fb799abbe6c1828d64283d7fd9dd9b62aeacacd4130b9ae7a60",
+    "text_hash_short": "74198e928e3dfa3a7a7f2786971da8a7"
+}

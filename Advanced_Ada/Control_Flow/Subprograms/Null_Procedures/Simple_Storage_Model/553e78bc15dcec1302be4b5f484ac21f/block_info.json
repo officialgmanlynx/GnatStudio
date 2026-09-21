@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/subprograms.rst",
+    "line_start": 1883,
+    "line_end": 1894,
+    "text": "package Simple_Storage is\n\n   type Storage_Model is null record;\n\n   procedure Set (S : in out Storage_Model;\n                  V :        String) is null;\n   procedure Display (S : Storage_Model) is null;\n\nend Simple_Storage;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Subprograms.Null_Procedures.Simple_Storage_Model",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple_storage.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "dc7ddb35ebb41adad7c5f39f6de8fa8e5b2d47a2aff80f85e5cbad3e5991ea5b56067bb09dd39e766bea4ef8e425ee75370d5e3804b725b31d4c0092a1eb0605",
+    "text_hash_short": "553e78bc15dcec1302be4b5f484ac21f"
+}

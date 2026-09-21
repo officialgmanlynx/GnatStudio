@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 270,
+    "line_end": 284,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\nwith Drivers_1;   use Drivers_1;\n\nprocedure Main is\n   D : Device_1;\n   I : Integer;\nbegin\n   Startup (D);\n   Send_Fast (D, 999);\n   Receive (D, I);\n   Put_Line (Integer'Image (I));\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.Derived_Drivers",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "d32ce3e6b290cab691b81a3f5d80e707094bb33fa83a36055986859d37c789496b427c7fde8d77c0f6eca0fa94739d207b60b470e908ca2de522236120d87012",
+    "text_hash_short": "1b28f2c8ca92498cbcda582f092b9912"
+}

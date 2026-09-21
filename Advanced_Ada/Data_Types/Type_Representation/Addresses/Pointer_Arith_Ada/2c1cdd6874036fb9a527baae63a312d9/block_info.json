@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 2700,
+    "line_end": 2750,
+    "text": "with System;      use System;\n\nwith System.Storage_Elements;\nuse  System.Storage_Elements;\n\nwith System.Address_Image;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Address is\n\n   Arr : array (1 .. 10) of Integer;\n   A   : Address := Arr'Address;\n   --               ^^^^^^^^^^^\n   --   Initializing address object with\n   --   address of the first component of Arr.\n   --\n   --   We could write this as well:\n   --   ___ := Arr (1)'Address\n\nbegin\n   for I in Arr'Range loop\n      declare\n         Curr : Integer\n                  with Address => A;\n      begin\n         Curr := I;\n         Put_Line (\"Curr'Address : \"\n                   & System.Address_Image\n                       (Curr'Address));\n      end;\n\n      --\n      --  Address arithmetic\n      --\n      A := A + Storage_Offset (Integer'Size)\n                 / Storage_Unit;\n      --     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n      --       Moving to next component\n   end loop;\n\n   for I in Arr'Range loop\n     Put_Line (\"Arr (\"\n               & Integer'Image (I)\n               & \") :\"\n               & Integer'Image (Arr (I)));\n   end loop;\nend Show_Address;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Addresses.Pointer_Arith_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_address.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_address.adb",
+    "text_hash": "de14177d5fabdcd70d29ebaf6b004d10f0086baf030b6a4c78068bf72acf31fbfb10aeb9dd90d80c6b2e8fb1f2dd53ce8e344cafef9e24ab22c075f916bea468",
+    "text_hash_short": "2c1cdd6874036fb9a527baae63a312d9"
+}

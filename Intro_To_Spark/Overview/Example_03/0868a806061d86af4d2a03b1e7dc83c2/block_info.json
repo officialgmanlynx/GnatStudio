@@ -1,0 +1,49 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/01_Overview.rst",
+    "line_start": 515,
+    "line_end": 551,
+    "text": "package P\n  with SPARK_Mode => On\nis\n   procedure Permute (X, Y, Z : in out Positive);\n   procedure Swap (X, Y : in out Positive);\nend P;\n\npackage body P\n  with SPARK_Mode => On\nis\n   procedure Permute (X, Y, Z : in out Positive) is\n      Tmp : constant Positive := X;\n   begin\n      X := Y;\n      Y := Z;\n      Z := Tmp;\n   end Permute;\n\n   procedure Swap (X, Y : in out Positive) is\n   begin\n      Permute (X, Y, Y);\n   end Swap;\nend P;\n\nwith P; use P;\n\nprocedure Test_Swap\n  with SPARK_Mode => On\nis\n   A : Integer := 1;\n   B : Integer := 2;\nbegin\n   Swap (A, B);\nend Test_Swap;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Overview.Example_03",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error",
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run",
+        "prove_flow"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": true,
+    "source_files": [
+        "p.ads",
+        "p.adb",
+        "test_swap.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": "test_swap.adb",
+    "text_hash": "0b6dd9771a649bc120bdf3c60a44a7342aae84c9395bc7e027be1fac4c65fb53a1b0922c0dc8f68b76617a9ffd8c594b5fae7fe3e7431eda061a2867f7f66fd3",
+    "text_hash_short": "0868a806061d86af4d2a03b1e7dc83c2"
+}

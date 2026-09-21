@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 2735,
+    "line_end": 2754,
+    "text": "with P;     use P;\nwith P.Aux; use P.Aux;\n\nprocedure Show_Outer_Type is\n\n   type Outer_Type is limited record\n      This : T;\n      That : T;\n   end record;\n\n   Outer_Obj : Outer_Type :=\n                (This => Make_Rumplestiltskin,\n                 That => Make_T (Name => \"\"));\n\nbegin\n   null;\nend Show_Outer_Type;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Building_Objects_From_Constructors.Building_Objs_From_Constructors",
+    "main_file": "show_outer_type.adb",
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_outer_type.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_outer_type.adb",
+    "text_hash": "74f45bd8031420b79f21ae41d04c3ab627c616b69ba63dbab6d1776588c4d6e5361549601b3c3fa5bff2a80776194a0fa633c193dd47282aad940301e2834e07",
+    "text_hash_short": "00817649406492b79977d67eb0fd3955"
+}

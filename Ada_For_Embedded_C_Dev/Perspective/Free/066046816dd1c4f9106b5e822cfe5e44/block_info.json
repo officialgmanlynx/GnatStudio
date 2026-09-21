@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 2583,
+    "line_end": 2595,
+    "text": "!main.c\n#include <stdlib.h>\n\nint main(int argc, const char * argv[])\n{\n    int * my_pointer = malloc (sizeof(int));\n    free (my_pointer);\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Free",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "1e7af7656d2b1dc85d1db9f8b36c63de4f09c230c5448a2acabe50a94907a03842ab102df5b4cc18dc83e4373914bca4b08e018588f1a62cdef3067dc748646b",
+    "text_hash_short": "066046816dd1c4f9106b5e822cfe5e44"
+}

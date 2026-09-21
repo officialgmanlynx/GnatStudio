@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/whats-new-in-ada-2022/chapters/assignment_target.rst",
+    "line_start": 40,
+    "line_end": 64,
+    "text": "with Ada.Text_IO;\n\nprocedure Main is\n\n   type Statistic is record\n      Count : Natural := 0;\n      Total : Float := 0.0;\n   end record;\n\n   My_Data : constant array (1 .. 5) of Float :=\n     [for J in 1 .. 5 => Float (J)];\n\n   Statistic_For_My_Data : Statistic;\n\nbegin\n   for Data of My_Data loop\n      Statistic_For_My_Data.Count := @ + 1;\n      Statistic_For_My_Data.Total := @ + Data;\n   end loop;\n\n   Ada.Text_IO.Put_Line (Statistic_For_My_Data'Image);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_2022_Whats_New.Assignment_Tagged_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "24dcf2829d4b67bd1508c9f44b91cea63e991bb9c593250ceae9930dd41c72cca6b5641d40f7d9daf55080bb1449f2cb1d2637ea796e0eb38584776c4f48a6ed",
+    "text_hash_short": "b116e7a172d43547b227eb27fb994366"
+}

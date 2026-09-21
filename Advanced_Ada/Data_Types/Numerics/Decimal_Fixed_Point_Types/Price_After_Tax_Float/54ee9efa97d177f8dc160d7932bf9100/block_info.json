@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 6923,
+    "line_end": 6938,
+    "text": "package Custom_Float_Types is\n\n   type Price is\n     digits 16;\n\n   type Price_Array is\n     array (Positive range <>) of\n       Price;\n\n   type Rate is\n     digits 18;\n\nend Custom_Float_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Decimal_Fixed_Point_Types.Price_After_Tax_Float",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_float_types.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "ed88d762f0f27210c2e0666d8fa774c914bc0afff3b8511e7c9493cdfcff26350898020bb79fd3ea341b46fe59c1b8041da810a3a1ccfdf1ff2c57b9bcb3365b",
+    "text_hash_short": "54ee9efa97d177f8dc160d7932bf9100"
+}

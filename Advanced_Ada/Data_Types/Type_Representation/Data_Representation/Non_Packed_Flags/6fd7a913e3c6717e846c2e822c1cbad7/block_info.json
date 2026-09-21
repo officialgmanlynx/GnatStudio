@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 944,
+    "line_end": 968,
+    "text": "package Flag_Definitions is\n\n   type Flags is\n     array (Positive range <>) of Boolean;\n\nend Flag_Definitions;\n\nwith Ada.Text_IO;      use Ada.Text_IO;\nwith Flag_Definitions; use Flag_Definitions;\n\nprocedure Show_Flags is\n   Flags_1 : Flags (1 .. 8);\nbegin\n   Put_Line (\"Boolean'Size:           \"\n             & Boolean'Size'Image);\n   Put_Line (\"Boolean'Object_Size:    \"\n             & Boolean'Object_Size'Image);\n   Put_Line (\"Flags_1'Size:           \"\n             & Flags_1'Size'Image);\n   Put_Line (\"Flags_1'Component_Size: \"\n             & Flags_1'Component_Size'Image);\nend Show_Flags;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Data_Representation.Non_Packed_Flags",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "flag_definitions.ads",
+        "show_flags.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_flags.adb",
+    "text_hash": "b32e78909e4c16644f315b3174d3f6ef0702c8dc3017a30001e7827aead009d87597ba3007ef116443c54c4144d502b257d22ce86569aad05277612d4afb9875",
+    "text_hash_short": "6fd7a913e3c6717e846c2e822c1cbad7"
+}

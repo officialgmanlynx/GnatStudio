@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 890,
+    "line_end": 910,
+    "text": "package Days is\n\n   type Day is (Mon, Tue, Wed,\n                Thu, Fri,\n                Sat, Sun);\n\n   --  Essentially, we're declaring\n   --  these functions:\n   --\n   --  function Mon return Day;\n   --  function Tue return Day;\n   --  function Wed return Day;\n   --  function Thu return Day;\n   --  function Fri return Day;\n   --  function Sat return Day;\n   --  function Sun return Day;\n\nend Days;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Enumerations.Enumeration_As_Function",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "days.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "64d4455816f78f743f68b72b38897901e892fefc3af784e748f58822e7633dd1703b98e2f7bc83469a02aa43f41e2159e6e19de58abf2e08b1f208f8d600aa94",
+    "text_hash_short": "fa3e58b58edffa5a3e04b060a7f8cb8b"
+}

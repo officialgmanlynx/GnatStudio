@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/generics.rst",
+    "line_start": 440,
+    "line_end": 524,
+    "text": "generic\n   Max : Positive;\n   type T is private;\npackage Stacks is\n\n   type Stack is limited private;\n\n   Stack_Underflow, Stack_Overflow : exception;\n\n   function Is_Empty (S : Stack) return Boolean;\n\n   function Pop (S : in out Stack) return T;\n\n   procedure Push (S : in out Stack;\n                   V :        T);\n\nprivate\n\n   type Stack_Array is\n     array (Natural range <>) of T;\n\n   Min : constant := 1;\n\n   type Stack is record\n      Container : Stack_Array (Min .. Max);\n      Top       : Natural := Min - 1;\n   end record;\n\nend Stacks;\n\npackage body Stacks is\n\n   function Is_Empty (S : Stack) return Boolean is\n     (S.Top < S.Container'First);\n\n   function Is_Full (S : Stack) return Boolean is\n     (S.Top >= S.Container'Last);\n\n   function Pop (S : in out Stack) return T is\n   begin\n      if Is_Empty (S) then\n         raise Stack_Underflow;\n      else\n         return X : T do\n            X     := S.Container (S.Top);\n            S.Top := S.Top - 1;\n         end return;\n      end if;\n   end Pop;\n\n   procedure Push (S : in out Stack;\n                   V :        T) is\n   begin\n      if Is_Full (S) then\n         raise Stack_Overflow;\n      else\n         S.Top               := S.Top + 1;\n         S.Container (S.Top) := V;\n      end if;\n   end Push;\n\nend Stacks;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Stacks;\n\nprocedure Show_Stack is\n\n   package Integer_Stacks is new\n     Stacks (Max => 10,\n             T   => Integer);\n   use Integer_Stacks;\n\n   Values : Integer_Stacks.Stack;\n\nbegin\n   Push (Values, 10);\n   Push (Values, 20);\n\n   Put_Line (\"Last value was \"\n             & Integer'Image (Pop (Values)));\nend Show_Stack;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Generics.Show_Stack",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "stacks.ads",
+        "stacks.adb",
+        "show_stack.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_stack.adb",
+    "text_hash": "85407dac6a31ad82f65f25e4e8c270e3ad4adcb3c5f5c705b8937dc907336033ccf1b0b6da7bed0032c424cd13af5eb3aa13a75927098ba72ab8f69e5cfb7f13",
+    "text_hash_short": "ee112d395552c1a02d211b9e5425dc71"
+}

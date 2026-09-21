@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/03_Proof_Of_Program_Integrity.rst",
+    "line_start": 688,
+    "line_end": 724,
+    "text": "package Show_Failed_Proof_Attempt is\n\n   function GCD (A, B : Positive) return Positive with\n     Post =>\n       A mod GCD'Result = 0\n       and B mod GCD'Result = 0;\n\nend Show_Failed_Proof_Attempt;\n\npackage body Show_Failed_Proof_Attempt is\n\n   function GCD (A, B : Positive) return Positive\n   is\n      Result : Positive;\n   begin\n      if A > B then\n         Result := GCD (A - B, B);\n         pragma Assert ((A - B) mod Result = 0);\n         --  info: assertion proved\n         pragma Assert (B mod Result = 0);\n         --  info: assertion proved\n         pragma Assert (A mod Result = 0);\n         --  medium: assertion might fail\n      elsif B > A then\n         Result := GCD (A, B - A);\n         pragma Assert ((B - A) mod Result = 0);\n         --  info: assertion proved\n      else\n         Result := A;\n      end if;\n      return Result;\n   end GCD;\n\nend Show_Failed_Proof_Attempt;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Proof_of_Program_Integrity.Failed_Proof_Attempt_5",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove_report_all"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "show_failed_proof_attempt.ads",
+        "show_failed_proof_attempt.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "f4f320766043c2b75daca3d76b3ca22f3794380a6c8cb3c65ff765c4a4d53381d1c40b311ba834ad5f0e40583d0ba0129e35e2d049db40e6631a8420e86f83d5",
+    "text_hash_short": "954ecbf2177705770c3a44a477c1de17"
+}

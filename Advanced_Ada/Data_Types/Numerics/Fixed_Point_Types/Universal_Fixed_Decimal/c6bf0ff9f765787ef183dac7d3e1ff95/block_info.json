@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 4727,
+    "line_end": 4740,
+    "text": "package Custom_Decimal_Types is\n\n   type Short_Decimal is\n     delta 10.0 ** (-0) digits 4;\n    --  range -9_999.0 .. 9_999.0;\n\n   type Decimal is\n     delta 10.0 ** (-2) digits 6;\n    --  range -9_999.99 .. 9_999.99;\n\nend Custom_Decimal_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Fixed_Point_Types.Universal_Fixed_Decimal",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_decimal_types.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "bed4e433dee2410b5881be7b9ef37a94bdb9653731815be6e3c6ef7dc58883f19b334c0d44f196c51961545b180c1e0613542c0ac59c3e1f0a675e7343d1f1c4",
+    "text_hash_short": "c6bf0ff9f765787ef183dac7d3e1ff95"
+}

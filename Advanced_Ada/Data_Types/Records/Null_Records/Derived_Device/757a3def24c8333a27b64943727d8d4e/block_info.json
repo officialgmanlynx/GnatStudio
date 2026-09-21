@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 676,
+    "line_end": 706,
+    "text": "package Many_Devices is\n\n   type Device is null record;\n\n   type Device_Config is null record;\n\n   function Create (Config : Device_Config)\n                    return Device is\n     (null record);\n\n   type Derived_Device is new Device;\n\n   procedure Process (D : Derived_Device) is null;\n\nend Many_Devices;\n\nwith Many_Devices; use Many_Devices;\n\nprocedure Show_Derived_Device is\n   A : Device;\n   B : Derived_Device;\n   C : Device_Config;\nbegin\n   A := Create (Config => C);\n   B := Create (Config => C);\n\n   Process (B);\nend Show_Derived_Device;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Null_Records.Derived_Device",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "many_devices.ads",
+        "show_derived_device.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_derived_device.adb",
+    "text_hash": "e2f9a07066bf1ec61af474caa4f6c1daa79c538a3b426593fdb4a70dfab111c0dbdff9e850af911f4d8e35d83805d54832950622035aa2b84f94db2ab3774c15",
+    "text_hash_short": "757a3def24c8333a27b64943727d8d4e"
+}

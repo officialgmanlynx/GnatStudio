@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/expressions.rst",
+    "line_start": 277,
+    "line_end": 311,
+    "text": "procedure Show_Parenthesized_Expressions is\n   C1 : constant Integer := 4;\n   C2 : constant Integer := 5;\n\n   Dummy : Integer;\nbegin\n   Dummy :=\n       (2 + C1) * C2;\n   --       ^^       name\n   --       ^^       primary\n   --       ^^       factor\n   --       ^^       term\n   --\n   --   ^            numeric literal\n   --   ^            primary\n   --   ^            factor\n   --   ^            term\n   --\n   --     ^          binary adding operator\n   --  ^^^^^^^^      simple expression\n   --\n   --  ^^^^^^^^      expression\n   --  ^^^^^^^^      primary\n   --  ^^^^^^^^      factor\n   --\n   --             ^^ factor\n   --  ^^^^^^^^^^^^^ term\n   --\n   --  ^^^^^^^^^^^^^ simple expression\n   --\n   --  ^^^^^^^^^^^^^ expression\nend Show_Parenthesized_Expressions;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Expressions.Expressions_Definition.Parenthesized_Expressions",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_parenthesized_expressions.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_parenthesized_expressions.adb",
+    "text_hash": "add3de5aa75b87deed3b258423fbb4ece80d4ab9d52d0d5e982aeeac43ddc9f0d51b23ba79738642f6472ed0a2462452e67d9fbb17e6dc1fb5a2a6ccf2d70669",
+    "text_hash_short": "5871d2b0cd33e4f562b96381e0f0d293"
+}

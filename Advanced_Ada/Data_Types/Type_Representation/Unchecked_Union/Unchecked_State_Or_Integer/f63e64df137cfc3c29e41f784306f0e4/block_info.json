@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 2335,
+    "line_end": 2346,
+    "text": "with States; use States;\n\nprocedure Show_Unchecked_Union is\n   V : Unchecked_State_Or_Integer\n         (Use_Enum => True);\nbegin\n   V := (Use_Enum => False, I => 3);\n   Display_State_Value (V);\nend Show_Unchecked_Union;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Unchecked_Union.Unchecked_State_Or_Integer",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_unchecked_union.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_unchecked_union.adb",
+    "text_hash": "7f46dff76f833255273c9295407761a81fb82adb56d7aa7ea33360074b07eea7d382b404fd6b9e3f6b71e8a95848309ab600a60a268800c95927316f6ff4dc22",
+    "text_hash_short": "f63e64df137cfc3c29e41f784306f0e4"
+}

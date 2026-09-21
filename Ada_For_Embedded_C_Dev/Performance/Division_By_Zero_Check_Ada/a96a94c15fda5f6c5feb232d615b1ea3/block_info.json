@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/08_Performance.rst",
+    "line_start": 299,
+    "line_end": 317,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Division_By_Zero is\n   A   : Integer := 8;\n   B   : Integer := 0;\n   Res : Integer;\nbegin\n   Res := A / B;\n\n   Put_Line (\"Res = \" & Integer'Image (Res));\nexception\n   when Constraint_Error =>\n      Put_Line (\"Error: cannot calculate value (division by zero)\");\n   when others =>\n      null;\nend Show_Division_By_Zero;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Performance.Division_By_Zero_Check_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_division_by_zero.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_division_by_zero.adb",
+    "text_hash": "7510fb505c1bc41917492670ffa8d9b01fddfd58d06b59c7f6bc411f3aac7a58a21c50258f5b3dce95f758dd8c6b64222f949c1ed4aedc052c71ac0bf2220f40",
+    "text_hash_short": "a96a94c15fda5f6c5feb232d615b1ea3"
+}

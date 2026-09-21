@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 2782,
+    "line_end": 2822,
+    "text": "package Custom_Integers is\n\n   type Int is new Integer\n     with Dynamic_Predicate => Int /= 0;\n\n   subtype Sub_Int_1 is Integer\n     with Dynamic_Predicate => Sub_Int_1 /= 0;\n\n   subtype Sub_Int_2 is Sub_Int_1\n     with Dynamic_Predicate => Sub_Int_2 /= 1;\n\nend Custom_Integers;\n\nwith Ada.Text_IO;     use Ada.Text_IO;\nwith Custom_Integers; use Custom_Integers;\n\nprocedure Show_Conversion is\n   Int_Var       : Int;\n   Sub_Int_1_Var : Sub_Int_1;\n   Sub_Int_2_Var : Sub_Int_2;\n   Integer_Var   : Integer;\nbegin\n   Integer_Var := 5;\n   Int_Var     := Int (Integer_Var);\n\n   Put_Line (\"Int_Var :       \"\n             & Int_Var'Image);\n\n   --  Implicit conversions:\n   --  no explicit conversion required!\n   Sub_Int_1_Var := Integer_Var;\n   Sub_Int_2_Var := Integer_Var;\n\n   Put_Line (\"Sub_Int_1_Var : \"\n             & Sub_Int_1_Var'Image);\n   Put_Line (\"Sub_Int_2_Var : \"\n             & Sub_Int_2_Var'Image);\nend Show_Conversion;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Type_Conversion.Implicit_Subtype_Conversion",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_integers.ads",
+        "show_conversion.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_conversion.adb",
+    "text_hash": "f0e3d1f87688f762d2d36f4e9e3bb66c3578ef11d3c3a68e1488b29e6e275180d90acb5adbf9c42ac1fc3290f3c7cc90cd82b2fc344681b6821500c7b2d992d7",
+    "text_hash_short": "dbbe498fa66701ca94f48119b1bc1a91"
+}

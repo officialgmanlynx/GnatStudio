@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 10568,
+    "line_end": 10669,
+    "text": "package Biquads.Fixed_P is\n\n   --  Public sample type: normalized Q31\n   --  (the \"pcm_sample\" type in\n   --  the C version)\n   Sample_Bits : constant := 31;\n   D_Sample    : constant\n     := 2.0 ** (-Sample_Bits);\n   type PCM_Sample is\n     delta D_Sample\n     range -1.0 .. 1.0 - D_Sample;\n\n   --  Two-element delay line\n   --  (transposed direct form II)\n   type Filter_Delay is private;\n\n   --  Fixed-point biquad filter\n   function Biquad (D    : in out Filter_Delay;\n                    X_In : PCM_Sample)\n                    return PCM_Sample;\n\nprivate\n\n   --  Internal type with two guard bits: the\n   --  same delta as PCM_Sample, but two extra\n   --  integer bits of headroom so the feedback\n   --  term b1 * y stays in range, with no\n   --  input/output scaling.\n   Headroom_Bits      : constant := 2;\n   Scaled_Sample_Bits : constant :=\n     Sample_Bits - Headroom_Bits;\n   D_Scaled           : constant :=\n     2.0 ** (-Scaled_Sample_Bits);\n   type Scaled_PCM_Sample is\n     delta D_Scaled\n     range -(2.0 ** Headroom_Bits)\n             .. 2.0 ** Headroom_Bits - D_Scaled;\n\n   type Filter_Delay is record\n      Z1 : Scaled_PCM_Sample := 0.0;\n      Z2 : Scaled_PCM_Sample := 0.0;\n   end record;\n\nend Biquads.Fixed_P;\n\npackage body Biquads.Fixed_P is\n\n   --  Low-pass biquad (16-bit quantized):\n   --  sample rate = 44,100 Hz, Fc = 500 Hz,\n   --  Q = 0.4\n   A0 : constant Scaled_PCM_Sample\n          :=  0.00115966796875;\n   A1 : constant Scaled_PCM_Sample\n          :=  0.0023193359375;\n   A2 : constant Scaled_PCM_Sample\n          :=  0.00115966796875;\n   B1 : constant Scaled_PCM_Sample\n          := -1.8319091796875;\n   B2 : constant Scaled_PCM_Sample\n          :=  0.836578369140625;\n\n   --  The two guard bits give the feedback\n   --  path enough headroom for any full-scale\n   --  input, so the body needs no input/output\n   --  scaling.\n   function Biquad (D    : in out Filter_Delay;\n                    X_In : PCM_Sample)\n                    return PCM_Sample\n   is\n      X : constant Scaled_PCM_Sample :=\n        Scaled_PCM_Sample (X_In);\n      Y : Scaled_PCM_Sample;\n   begin\n      Y    := Scaled_PCM_Sample (X * A0) + D.Z1;\n      D.Z1 := Scaled_PCM_Sample (X * A1) + D.Z2\n              - Scaled_PCM_Sample (B1 * Y);\n      D.Z2 := Scaled_PCM_Sample (X * A2)\n              - Scaled_PCM_Sample (B2 * Y);\n      return PCM_Sample (Y);\n   end Biquad;\n\nend Biquads.Fixed_P;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Biquads.Fixed_P;\n\nprocedure Show_Biquad is\n   QD : Biquads.Fixed_P.Filter_Delay;\n   QY : Biquads.Fixed_P.PCM_Sample;\nbegin\n   Put_Line (\" n |   fixed (guard bits)\");\n   for N in 0 .. 2000 loop\n      QY := Biquads.Fixed_P.Biquad (QD, 0.875);\n      if N <= 4 or else N mod 400 = 0 then\n         Put_Line (N'Image & \" | \" & QY'Image);\n      end if;\n   end loop;\nend Show_Biquad;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Ordinary_Fixed_Point_Types.Biquad",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "biquads-fixed_p.ads",
+        "biquads-fixed_p.adb",
+        "show_biquad.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_biquad.adb",
+    "text_hash": "f6ca68012a939132e013e5d9d7b0d15b22a187d2f70d15755496c392ced6f89e1794fdc1cdf6e0c56491c8553435aa8d5a5daf03fb74e1fa98bc7aa580ed695d",
+    "text_hash_short": "f08c6639f7c57c01e6f62dde02990565"
+}

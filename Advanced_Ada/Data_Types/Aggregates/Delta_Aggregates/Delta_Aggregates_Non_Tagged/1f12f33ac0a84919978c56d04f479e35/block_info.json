@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/aggregates.rst",
+    "line_start": 2054,
+    "line_end": 2095,
+    "text": "package Points is\n\n   type Point_3D is record\n      X : Float;\n      Y : Float;\n      Z : Float;\n   end record;\n\n   procedure Display (P : Point_3D);\n\nend Points;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Points is\n\n   procedure Display (P : Point_3D) is\n   begin\n      Put_Line (\"(X => \" & P.X'Image\n                & \", Y => \" & P.Y'Image\n                & \", Z => \" & P.Z'Image & \")\");\n   end Display;\n\nend Points;\n\nwith Points; use Points;\n\nprocedure Show_Points is\n   P1, P2, P3 : Point_3D;\nbegin\n   P1 := (X => 0.5, Y => 0.7, Z => 0.3);\n   Display (P1);\n\n   P2 := (P1 with delta X => 1.0);\n   Display (P2);\n\n   P3 := (P1 with delta X => 0.2, Y => 0.3);\n   Display (P3);\nend Show_Points;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Aggregates.Delta_Aggregates.Delta_Aggregates_Non_Tagged",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "points.ads",
+        "points.adb",
+        "show_points.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_points.adb",
+    "text_hash": "b0a15f6d9e09320f5aa0862ade7fb8f1eb31161f46ad20ce83ed10d755f9321a71d51765f7fa2da986eaba8e5d3e43463d1a4529d31dd3f1aa455c0bdfc45b36",
+    "text_hash_short": "1f12f33ac0a84919978c56d04f479e35"
+}

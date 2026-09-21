@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 2528,
+    "line_end": 2536,
+    "text": "generic\n   type T is private;\npackage Custom_Arrays is\n   type T_Array is\n     array (Positive range <>) of T;\nend Custom_Arrays;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Type_Conversion.Generic_Array_Type_Conversion",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_arrays.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "5eaab678dc1e14291c042a3d794483bd37826ec64b4869470b38b7fa41c61829b9b3911df0a41a5cba9e3230412819b9f820953bed74e22f0eb185768cea2882",
+    "text_hash_short": "8b3a963a1292a90d99d83c6d81ce3995"
+}

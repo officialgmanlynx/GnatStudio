@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/interfacing_with_c.rst",
+    "line_start": 323,
+    "line_end": 334,
+    "text": "package body C_API is\n\n   function My_Func (a : int) return int is\n   begin\n      func_cnt := func_cnt + 1;\n      return a * 2;\n   end My_Func;\n\nend C_API;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Interfacing_With_C.C_Ada_Vars",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "c_api.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "d73ba0cf484727e351616b6b3c90f399ad427af91ba1070f086198eb90cc065c176ff5db59f753450a40a7d76a04fc82442ec421a471c2d8fd180914fe1060fe",
+    "text_hash_short": "adff5f3088da8b0dd853f1fb8b1e204f"
+}

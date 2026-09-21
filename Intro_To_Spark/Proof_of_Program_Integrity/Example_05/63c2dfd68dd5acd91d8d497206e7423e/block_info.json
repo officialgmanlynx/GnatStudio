@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/03_Proof_Of_Program_Integrity.rst",
+    "line_start": 967,
+    "line_end": 1010,
+    "text": "package Stacks with SPARK_Mode is\n\n   type Stack is private;\n\n   Is_Full_E : exception;\n\n   function  Peek (S : Stack) return Natural;\n   function  Is_Full (S : Stack) return Boolean;\n   procedure Push (S : in out Stack; E : Natural) with\n     Pre  => not Is_Full (S),\n     Post => Peek (S) = E;\n\nprivate\n\n   Max : constant := 10;\n\n   type Stack_Array is array (1 .. Max) of Natural;\n\n   type Stack is record\n      Top     : Positive;\n      Content : Stack_Array;\n   end record;\n\n   function Peek (S : Stack) return Natural is\n     (if S.Top in S.Content'Range then S.Content (S.Top) else 0);\n   function Is_Full (S : Stack) return Boolean is (S.Top >= Max);\n\nend Stacks;\n\npackage body Stacks with SPARK_Mode is\n\n   procedure Push (S : in out Stack; E : Natural) is\n   begin\n      if S.Top >= Max then\n         raise Is_Full_E;\n      end if;\n      S.Top := S.Top + 1;\n      S.Content (S.Top) := E;\n   end Push;\n\nend Stacks;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Proof_of_Program_Integrity.Example_05",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_report_all"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "stacks.ads",
+        "stacks.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "60144c9ac6b089ce674bb1fe28478e57f5ec2ecd6ff3aed38ca9b9f0f85dfba316f5bb5f2da9563d6f24752f35d076b5f3d264bf927d66ee2af82a7c4ccd4903",
+    "text_hash_short": "63c2dfd68dd5acd91d8d497206e7423e"
+}

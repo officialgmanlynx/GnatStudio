@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 152,
+    "line_end": 166,
+    "text": "with Gen;\n\nprocedure Main is\n   package I1 is new Gen (Integer);\n   package I2 is new Gen (Integer);\n   subtype Str10 is String (1 .. 10);\n   package I3 is new Gen (Str10);\nbegin\n   I1.G := 0;\n   I2.G := 1;\n   I3.G := 2;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.Gen_Pkg_1",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "b835c178b4b4a1e422aabca2c11f04749fd47fe2e03fc3dd1bcc7d550e6a0c251acb72fe6630fe4ee37d680f49c125c4d2d09a81a3673012ac3f8d8c9255da14",
+    "text_hash_short": "ab0e99dedf40fff1bced048a96a0fbb6"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 822,
+    "line_end": 833,
+    "text": "package Null_Recs is\n\n   type Tagged_Null_Record is\n     tagged null record;\n\n   type Abstract_Tagged_Null_Record is\n     abstract tagged null record;\n\nend Null_Recs;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Null_Records.Tagged_Null_Record",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "null_recs.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "ea7f4975432905052b26e4f08b54f91cd592daa4931645968c38d9b9e17f8e2d2c43cf50fc14d0860ebbafa03869f9223e397e78d8764096d9f8bb2c824daa1b",
+    "text_hash_short": "918572d2c50911b84c80a9c601b75439"
+}

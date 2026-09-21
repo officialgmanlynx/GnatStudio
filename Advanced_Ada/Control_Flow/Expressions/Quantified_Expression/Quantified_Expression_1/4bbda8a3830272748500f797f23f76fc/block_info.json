@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/expressions.rst",
+    "line_start": 561,
+    "line_end": 618,
+    "text": "package Int_Arrays is\n\n   type Integer_Arr is\n     array (Positive range <>) of Integer;\n\n   function Is_Zero (A : Integer_Arr)\n                     return Boolean is\n      (for all I in A'Range => A (I) = 0);\n\n   function Has_Zero (A : Integer_Arr)\n                      return Boolean is\n      (for some I in A'Range => A (I) = 0);\n\n   procedure Display_Array (A    : Integer_Arr;\n                            Name : String);\n\nend Int_Arrays;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Int_Arrays is\n\n   procedure Display_Array (A    : Integer_Arr;\n                            Name : String) is\n   begin\n      Put (Name & \": \");\n      for E of A loop\n         Put (E'Image & \" \");\n      end loop;\n      New_Line;\n   end Display_Array;\n\nend Int_Arrays;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Int_Arrays;  use Int_Arrays;\n\nprocedure Test_Int_Arrays is\n   A : Integer_Arr := (0, 0, 1);\nbegin\n   Display_Array (A, \"A\");\n   Put_Line (\"Is_Zero: \"\n             & Boolean'Image (Is_Zero (A)));\n   Put_Line (\"Has_Zero: \"\n             & Boolean'Image (Has_Zero (A)));\n\n   A := (0, 0, 0);\n\n   Display_Array (A, \"A\");\n   Put_Line (\"Is_Zero: \"\n             & Boolean'Image (Is_Zero (A)));\n   Put_Line (\"Has_Zero: \"\n             & Boolean'Image (Has_Zero (A)));\nend Test_Int_Arrays;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Expressions.Quantified_Expression.Quantified_Expression_1",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "int_arrays.ads",
+        "int_arrays.adb",
+        "test_int_arrays.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "test_int_arrays.adb",
+    "text_hash": "580a1726906e04c19b1e73e5e5cad9d8f22dba801e6f632432ffa71bdc9a3794d22ceefc183c78f8f5517b0a6fefcc557d15fcf7d27897e6082cc1c3f2c99677",
+    "text_hash_short": "4bbda8a3830272748500f797f23f76fc"
+}

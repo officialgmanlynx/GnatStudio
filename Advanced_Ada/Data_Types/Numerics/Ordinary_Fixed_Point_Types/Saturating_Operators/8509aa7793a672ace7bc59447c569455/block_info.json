@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 9971,
+    "line_end": 9996,
+    "text": "package Fixed_Types is\n\n   D : constant := 2.0 ** (-15);\n\n   --  Q15: normalized range,\n   --  -1.0 .. 1.0 - small\n   type Sample is\n     delta D\n     range -1.0 .. 1.0 - D;\n\n   --  Same representation as Sample,\n   --  but \"+\"/\"-\"/\"*\" saturate instead\n   --  of raising Constraint_Error.\n   type Sat_Sample is new Sample;\n\n   function \"+\" (A, B : Sat_Sample)\n                 return Sat_Sample;\n   function \"-\" (A, B : Sat_Sample)\n                 return Sat_Sample;\n   function \"*\" (A, B : Sat_Sample)\n                 return Sat_Sample;\n\nend Fixed_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Ordinary_Fixed_Point_Types.Saturating_Operators",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "fixed_types.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "8c5d1394276499a2363de01c58e461b618255d16249bec111d3caa2108974f420317a341ff8cfcfd00ad4f55dad614a230b77898153658113a3b12bc058bbf0e",
+    "text_hash_short": "8509aa7793a672ace7bc59447c569455"
+}

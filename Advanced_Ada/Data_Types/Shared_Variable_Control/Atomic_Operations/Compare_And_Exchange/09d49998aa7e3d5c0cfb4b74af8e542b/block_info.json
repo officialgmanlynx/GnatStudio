@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/shared_variable_control.rst",
+    "line_start": 1465,
+    "line_end": 1496,
+    "text": "with System.Atomic_Operations.Exchange;\nwith Ada.Numerics.Discrete_Random;\n\npackage Lazy_Initialization is\n\n   subtype Lazy_Value_Total_Range is\n     Integer range 99 .. 1000;\n\n   Lazy_Value_Default_Value : constant\n      := Lazy_Value_Total_Range'First;\n\n   subtype Lazy_Value_Range is Integer\n     range Lazy_Value_Default_Value + 1 ..\n           Lazy_Value_Total_Range'Last;\n\n   type Lazy_Value is new Lazy_Value_Total_Range\n     with Atomic,\n          Default_Value =>\n            Lazy_Value_Default_Value;\n\n   package Value_Exchange is new\n     System.Atomic_Operations.Exchange\n       (Lazy_Value);\n\n   package Lazy_Value_Random is new\n     Ada.Numerics.Discrete_Random\n       (Lazy_Value_Range);\n\nend Lazy_Initialization;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Shared_Variable_Control.Atomic_Operations.Compare_And_Exchange",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "lazy_initialization.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "4fc6ab7fa88e4bb30de47a510911098c4fe84e8be522016a5b50dd069b86dc3d717d817bc3f424455e48213eafc0afd75103814a4ba850dec456f96ff9701f4c",
+    "text_hash_short": "09d49998aa7e3d5c0cfb4b74af8e542b"
+}

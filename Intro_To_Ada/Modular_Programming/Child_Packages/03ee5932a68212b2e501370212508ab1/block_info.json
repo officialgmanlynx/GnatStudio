@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/modular_programming.rst",
+    "line_start": 336,
+    "line_end": 352,
+    "text": "package Week.Child.Grandchild is\n\n   function Get_Second_Of_Week return String;\n\nend Week.Child.Grandchild;\n\npackage body Week.Child.Grandchild is\n\n   function Get_Second_Of_Week return String is\n   begin\n      return Tue;\n   end Get_Second_Of_Week;\n\nend Week.Child.Grandchild;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Modular_Programming.Child_Packages",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "week-child-grandchild.ads",
+        "week-child-grandchild.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "6f1e52a43c39385773a452255bb84c4207ec2d530dc69201ef08e0c7d8860106beefbddf2dafadce32f664b13ae0dfdbfee84b67413da60410a90542de002320",
+    "text_hash_short": "03ee5932a68212b2e501370212508ab1"
+}

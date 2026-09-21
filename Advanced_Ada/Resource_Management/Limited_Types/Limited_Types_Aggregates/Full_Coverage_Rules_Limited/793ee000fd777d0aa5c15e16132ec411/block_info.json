@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 2050,
+    "line_end": 2067,
+    "text": "with Ada.Strings.Unbounded;\nuse  Ada.Strings.Unbounded;\nwith Persons; use Persons;\n\nprocedure Show_Aggregate_Init is\n\n   X : aliased Limited_Person :=\n         (Self      => null, -- Wrong!\n          Name      =>\n            To_Unbounded_String (\"John Doe\"),\n          Age       => 25,\n          Shoe_Size => 10);\nbegin\n   X.Self := X'Unchecked_Access;\nend Show_Aggregate_Init;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Limited_Types_Aggregates.Full_Coverage_Rules_Limited",
+    "main_file": "show_aggregate_init.adb",
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_aggregate_init.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_aggregate_init.adb",
+    "text_hash": "6bfaef862bf1710b0a0ed38dad848f2bcf264d9f5248e5198b99f2b42665e89c406af5e2ceaad4df41582027ea4f2954ccd0b913ce1afa27d294d4041cf830b4",
+    "text_hash_short": "793ee000fd777d0aa5c15e16132ec411"
+}

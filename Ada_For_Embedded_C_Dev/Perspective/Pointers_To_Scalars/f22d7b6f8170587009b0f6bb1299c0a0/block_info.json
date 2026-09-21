@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 2498,
+    "line_end": 2509,
+    "text": "!main.c\n#include <stdlib.h>\n\nint main(int argc, const char * argv[])\n{\n    int * Var = malloc (sizeof(int));\n    *Var = 0;\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Pointers_To_Scalars",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "2698cf4e31fc122a11b470b3e3656a328e5ea8f79771c1d1592f28380ff2b4f629c6798ef71132ce814814bac5e8834eb76941cca1f3b13f2c0bdb157aed1072",
+    "text_hash_short": "f22d7b6f8170587009b0f6bb1299c0a0"
+}

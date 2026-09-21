@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/modular_prog/packages.rst",
+    "line_start": 1348,
+    "line_end": 1372,
+    "text": "package Points is\n\n   type Point is private;\n\n   function Init return Point;\n\n   function \"+\" (P : Point;\n                 I : Integer) return Point;\n\nprivate\n\n   type Point is record\n      X, Y : Integer;\n   end record;\n\n   function Init return Point is (0, 0);\n\n   function \"+\" (P : Point;\n                 I : Integer) return Point is\n     (P.X + I, P.Y + I);\n\nend Points;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Modular_Prog.Packages.Use_Type_Clause.Use_Type_Clause",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "points.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "a91e2a04d9ee7191ce980fd836a08646e2e9f078551859ae0983a71f176550fb261ca181d84467afb1aab2eb556fb6ecccd2bce8b6429e8d22d1ef333ea0d1d0",
+    "text_hash_short": "1a43740d7231a3cc497e778866a12c55"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 6542,
+    "line_end": 6563,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\nwith Ada.Decimal; use Ada.Decimal;\n\nprocedure Show_Max_Decimal_Digits_Max_Scale is\n\n   type Smallest_Decimal is\n     delta 10.0 ** (-Max_Scale)\n     digits Max_Decimal_Digits;\n\nbegin\n   Put_Line (\"Smallest_Decimal'Range : \"\n             & Smallest_Decimal'First'Image\n             & \" .. \"\n             & Smallest_Decimal'Last'Image);\n   Put_Line (\"Smallest_Decimal'Delta : \"\n             & Smallest_Decimal'Delta'Image);\n   Put_Line (\"Smallest_Decimal'Size  : \"\n             & Smallest_Decimal'Size'Image);\nend Show_Max_Decimal_Digits_Max_Scale;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Decimal_Fixed_Point_Types.Max_Decimal_Digits_Max_Scale",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_max_decimal_digits_max_scale.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_max_decimal_digits_max_scale.adb",
+    "text_hash": "9bfaa891aa9a8b1b7a72cceaaa9719db6ea8f5fc3d5178596fed76941bf49001e3bf914dd7df917127bb23832b6d5503423e798ae816159f6f2c3b8795ced94d",
+    "text_hash_short": "7cbdcf07eeaf73818a17c8b1d69d26f2"
+}

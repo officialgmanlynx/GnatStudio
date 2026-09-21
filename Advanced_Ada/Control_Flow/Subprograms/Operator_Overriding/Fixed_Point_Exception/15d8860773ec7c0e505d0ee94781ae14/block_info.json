@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/subprograms.rst",
+    "line_start": 1451,
+    "line_end": 1483,
+    "text": "package Fixed_Point is\n\n   D : constant := 2.0 ** (-31);\n   type TQ31 is delta D range -1.0 .. 1.0 - D;\n\nend Fixed_Point;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Fixed_Point; use Fixed_Point;\n\nprocedure Show_Sat_Op is\n   A, B, C : TQ31;\nbegin\n   A := TQ31'Last;\n   B := TQ31'Last;\n   C := A + B;\n\n   Put_Line (A'Image   & \" + \"\n             & B'Image & \" = \"\n             & C'Image);\n\n   A := TQ31'First;\n   B := TQ31'First;\n   C := A + B;\n\n   Put_Line (A'Image   & \" + \"\n             & B'Image & \" = \"\n             & C'Image);\n\nend Show_Sat_Op;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Subprograms.Operator_Overriding.Fixed_Point_Exception",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "fixed_point.ads",
+        "show_sat_op.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_sat_op.adb",
+    "text_hash": "3d4f6cf91e578479485f50776dc93ef670802771298502f71df02c3e7b9e33a756d1c838731de875014e84a8c5527394c83cc5c4984b8ba0c43bd682192f6828",
+    "text_hash_short": "15d8860773ec7c0e505d0ee94781ae14"
+}

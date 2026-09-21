@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/generics.rst",
+    "line_start": 99,
+    "line_end": 112,
+    "text": "generic\n   type T is private;\n   X : in out T;\nprocedure Set (E : T);\n\nprocedure Set (E : T) is\n--  Body definition: \"generic\" keyword\n--  is not used\nbegin\n   X := E;\nend Set;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Generics.Show_Generic_Body_Definition",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "set.ads",
+        "set.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "e73435e53e7e04562427c6fbe43653a5fd482e92d8a19ba9aa8cfe0ef37c1dc5ecd38d30322aace8a45e823168be6c58a1dd1667edb3e3a66e2725018531292d",
+    "text_hash_short": "de611ef77b528543fd6bad82c53857f7"
+}

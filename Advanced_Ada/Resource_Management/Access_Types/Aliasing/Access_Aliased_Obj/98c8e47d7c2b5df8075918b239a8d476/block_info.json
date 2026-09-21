@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 2274,
+    "line_end": 2289,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Aliased_Obj is\n   type Integer_Access is access all Integer;\n\n   I_Var : aliased Integer;\n   A1    : Integer_Access;\nbegin\n   A1 := I_Var'Access;\n\n   A1.all := 22;\n   Put_Line (\"A1: \" & Integer'Image (A1.all));\nend Show_Aliased_Obj;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Aliasing.Access_Aliased_Obj",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_aliased_obj.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_aliased_obj.adb",
+    "text_hash": "bcfd6614bb395a251c249509844e334dd357fd1cf229f522c8c99f8c7021d04f87cfa42a768243942e97558c1c96c620fa15a1dd079b809f238a82a6cda82c2d",
+    "text_hash_short": "98c8e47d7c2b5df8075918b239a8d476"
+}

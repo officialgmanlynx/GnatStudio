@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/04_strong_typing.rst",
+    "line_start": 74,
+    "line_end": 86,
+    "text": "with System;\nwith System.Storage_Elements;\n\nprocedure Pointer is\n   A : constant System.Address := System.Storage_Elements.To_Address (42);\n   M : aliased Integer with Address => A;\n   P : constant access Integer := M'Access;\nbegin\n   P.all := 0;\nend Pointer;\n",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Strong_Typing.Pointers_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "pointer.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "1358d4a434e11be1b69ead6cdac31465382c28c53f434c84f821840e7d22bccababb8dd963430183f62cce2af8c7bd18381bdc6517424f6a4dcdcd58b1d9dbdb",
+    "text_hash_short": "32ac91ade61a39d3505d155d7b97a8a5"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/exceptions.rst",
+    "line_start": 1750,
+    "line_end": 1774,
+    "text": "with Ada.Text_IO;  use Ada.Text_IO;\nprocedure Show_Out_Uninitialized is\n\n   procedure Local (A     : in out Integer;\n                    Error : Boolean) is\n   begin\n      A := 1;\n\n      if Error then\n         raise Program_Error;\n      end if;\n   end Local;\n\n   B : Integer := 0;\n\nbegin\n   Local (B, Error => True);\nexception\n   when Program_Error =>\n      Put_Line (\"Value for B is\"\n                & Integer'Image (B));  --  \"0\"\nend Show_Out_Uninitialized;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Exceptions.Out_Uninitialized.Out_Uninitialized_1",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_out_uninitialized.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_out_uninitialized.adb",
+    "text_hash": "f29335552d61805f2663be570792de8aaf5dd5b0eca07097fdefee8987fc1ae7052be64116b55fc1df23ae8e51c216e10ced9271f3a888f76da2fe058ec87f01",
+    "text_hash_short": "cebcf14e9fd088e38b98a5132d9fd998"
+}

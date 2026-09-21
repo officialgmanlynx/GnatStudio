@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/more_about_types.rst",
+    "line_start": 24,
+    "line_end": 33,
+    "text": "package Incorrect is\n   type Point is record\n      X, Y : Integer := 0;\n   end record;\n\n   Origin : Point := (X => 0);\nend Incorrect;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.More_About_Types.Incorrect_Aggregate",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "incorrect.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "239ba4e72a3f8ffb32b31328dff3b9885da3e442decd4e03a67b7231416264690b36a630d3ef0f0baaef244f1bb7f04f0ba5826e8628b78da2b8b9d3a31f5335",
+    "text_hash_short": "80a3475dece1c42cfb67b1d57b5bd464"
+}

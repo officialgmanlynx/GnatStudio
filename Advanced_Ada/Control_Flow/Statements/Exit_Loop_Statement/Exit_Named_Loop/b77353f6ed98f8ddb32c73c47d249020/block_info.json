@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/statements.rst",
+    "line_start": 277,
+    "line_end": 307,
+    "text": "with Ada.Text_IO;            use Ada.Text_IO;\nwith Ada.Containers.Vectors;\n\nprocedure Show_Vector_Cursor_Iteration is\n\n   package Integer_Vectors is new\n     Ada.Containers.Vectors\n       (Index_Type   => Positive,\n        Element_Type => Integer);\n\n   use Integer_Vectors;\n\n   V : constant Vector := 20 & 10 & 0 & 13;\n   C : Cursor;\nbegin\n   C := V.First;\n   Put_Line (\"Vector elements are: \");\n\n   Show_Elements :\n      loop\n         exit Show_Elements when C = No_Element;\n\n         Put_Line (\"Element: \"\n                   & Integer'Image (V (C)));\n         C := Next (C);\n      end loop Show_Elements;\n\nend Show_Vector_Cursor_Iteration;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Statements.Exit_Loop_Statement.Exit_Named_Loop",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_vector_cursor_iteration.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_vector_cursor_iteration.adb",
+    "text_hash": "02a134a5a097f09f7dcd56fa619aed288532ee6f8bff93b9703535553b6274eeb93afa05be5fba06dfceb04da6b35ba7c5131932d4d8d22a70cf533d6d2a5e4c",
+    "text_hash_short": "b77353f6ed98f8ddb32c73c47d249020"
+}

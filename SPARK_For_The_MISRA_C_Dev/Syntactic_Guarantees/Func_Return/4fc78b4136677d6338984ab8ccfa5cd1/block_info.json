@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/03_syntactic_guarantees.rst",
+    "line_start": 96,
+    "line_end": 116,
+    "text": "package Fun is\n   function F return Integer is (1);\nend Fun;\n\nprocedure Use_F (Z : out Integer);\n\nwith Fun; use Fun;\n\nprocedure Use_F (Z : out Integer) is\n   X, Y : Integer;\nbegin\n   X := F;\n\n   Y := F;\n   X := Y;\n\n   Z := F;\nend Use_F;\n",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Syntactic_Guarantees.Func_Return",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow",
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": true,
+    "source_files": [
+        "fun.ads",
+        "use_f.ads",
+        "use_f.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "3822b6f300df29741e47ae4ea95e1862f530aacc217c8d5c63769721d28ff439ad24f841fc4220bc6a4037e3cae707cd2161c60de07611179423740141894749",
+    "text_hash_short": "4fc78b4136677d6338984ab8ccfa5cd1"
+}

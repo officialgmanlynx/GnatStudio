@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 9484,
+    "line_end": 9510,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Fixed_Float_Conversion is\n   D : constant := 2.0 ** (-15);\n\n   type TQ15 is\n     delta D\n     range -1.0 .. 1.0 - D;\n\n   F : TQ15;\n   R : Float;\nbegin\n   F := 0.1;\n   R := Float (F);\n   Put_Line (\"Fixed 0.1  = \" & F'Image);\n   Put_Line (\"Float (F)  = \" & R'Image);\n\n   Put_Line (\"----------\");\n\n   R := 0.333_333;\n   F := TQ15 (R);\n   Put_Line (\"Float 0.333333 = \" & R'Image);\n   Put_Line (\"TQ15  (R)      = \" & F'Image);\nend Show_Fixed_Float_Conversion;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Ordinary_Fixed_Point_Types.Fixed_Float_Conversion",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_fixed_float_conversion.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_fixed_float_conversion.adb",
+    "text_hash": "e3777bc802bdc9eacae40453037abdc1400be6f18377c1eb1a0ae7eb2e3534349ae4c3ca0807e67b4915ab1775db16526083ab98872d9dfea956da7f3a73f9ae",
+    "text_hash_short": "f1d9fdc84a7619dedfe4d9c3e1e78e55"
+}

@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 11067,
+    "line_end": 11104,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Ada.Numerics.Big_Numbers.Big_Integers;\nuse  Ada.Numerics.Big_Numbers.Big_Integers;\n\nprocedure Show_Arbitrary_Big_Integer_Conversion is\n\n   type Mod_32_Bit is mod 2 ** 32;\n\n   package Long_Long_Integer_Conversions is new\n     Signed_Conversions (Long_Long_Integer);\n   use Long_Long_Integer_Conversions;\n\n   package Mod_32_Bit_Conversions is new\n     Unsigned_Conversions (Mod_32_Bit);\n   use Mod_32_Bit_Conversions;\n\n   BI   : Big_Integer;\n   LLI  : Long_Long_Integer := 10000;\n   U_32 : Mod_32_Bit        := 2 ** 32 + 1;\n\nbegin\n   BI := To_Big_Integer (LLI);\n   Put_Line (\"BI:   \" & BI'Image);\n\n   LLI := From_Big_Integer (BI + 1);\n   Put_Line (\"LLI:  \" & LLI'Image);\n\n   BI := To_Big_Integer (U_32);\n   Put_Line (\"BI:   \" & BI'Image);\n\n   U_32 := From_Big_Integer (BI + 1);\n   Put_Line (\"U_32: \" & U_32'Image);\n\nend Show_Arbitrary_Big_Integer_Conversion;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Big_Numbers.Arbitrary_Big_Integer_Conversion",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_arbitrary_big_integer_conversion.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_arbitrary_big_integer_conversion.adb",
+    "text_hash": "7f9efdbd1048b6050d4804172260a17df908e5deb84940ec2e341bb50f0155d62d30645551a8bfc6de93d52c2e95c808a829a4fabcb80f1f7732680c57c05d36",
+    "text_hash_short": "a89b42ff012c8729770eefa2d2b1f6c1"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 71,
+    "line_end": 89,
+    "text": "package Days is\n\n   type Day is (Mon, Tue, Wed,\n                Thu, Fri,\n                Sat, Sun);\n\n   for Day use (Mon =>  5,\n                Tue =>  9,\n                Wed => 42,\n                Thu => 49,\n                Fri => 50,\n                Sat => 66,\n                Sun => 99);\n\nend Days;\n\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Enumeration_Representation_Clauses.Enumeration_Values",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "days.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "046d602353ce3be6983d29f71fc1b2174e2d3c977989121e3cea5f4ffeb1389c74b649a7b8c24c01892b02d6806dca55428f632c53826d22e9c79ce11d5d7df5",
+    "text_hash_short": "60fa9f07526ed4127b6010b1f0517f88"
+}

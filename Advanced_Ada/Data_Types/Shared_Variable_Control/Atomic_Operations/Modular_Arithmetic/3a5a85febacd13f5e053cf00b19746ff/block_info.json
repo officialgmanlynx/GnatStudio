@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/shared_variable_control.rst",
+    "line_start": 1857,
+    "line_end": 1898,
+    "text": "with System.Atomic_Operations.Modular_Arithmetic;\n\npackage Atomic_Modulars is\n\n   type Atomic_Modular is mod 100\n     with Atomic;\n\n   package Atomic_Modular_Arithmetic is new\n     System.Atomic_Operations.Modular_Arithmetic\n       (Atomic_Modular);\n\nend Atomic_Modulars;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Atomic_Modulars;\nuse  Atomic_Modulars;\nuse  Atomic_Modulars.Atomic_Modular_Arithmetic;\n\nprocedure Show_Atomic_Modulars is\n   Task_Count : aliased Atomic_Modular := 0;\n\n   task type A_Task;\n\n   task body A_Task is\n      Task_Number : Atomic_Modular;\n   begin\n      Task_Number :=\n        Atomic_Fetch_And_Add (Task_Count, 1);\n\n      Put_Line (\"Task_Number: \"\n                & Task_Number'Image);\n\n   end A_Task;\n\n   A, B, C, D, E, F : A_Task;\nbegin\n   null;\nend Show_Atomic_Modulars;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Shared_Variable_Control.Atomic_Operations.Modular_Arithmetic",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "atomic_modulars.ads",
+        "show_atomic_modulars.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_atomic_modulars.adb",
+    "text_hash": "24c3741b8db096e49ba4ae7e4e5d4397e6f07f3ae2bfca98382b3da62534c5b8b1178327e6e95fb362b61a80d5afd0f51eda8341ef9d1a82ca5855b625b21054",
+    "text_hash_short": "3a5a85febacd13f5e053cf00b19746ff"
+}

@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 297,
+    "line_end": 327,
+    "text": "with System;\n\npackage Fg is\n\n   type Arr is array (Integer range <>) of Integer;\n\n   function F_Arr return System.Address;\n   pragma Import (C, F_Arr, \"f_arr\");\n\n   function F_Size return Integer;\n   pragma Import (C, F_Size, \"f_size\");\n\n   F : Arr (0 .. F_Size - 1) with Address => F_Arr;\n\n   G_Size : Integer;\n   pragma Import (C, G_Size, \"g_size\");\n\n   G_Arr : Arr (0 .. G_Size - 1);\n   pragma Import (C, G_Arr, \"g_arr\");\n\nend Fg;\n\nwith Fg;\n\nprocedure Main is\nbegin\n   null;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.Arr_3",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "fg.ads",
+        "main.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "1b3f9aee8f7b6dbba818945acb959e002de628f96ae3d74080b49f7e12bdba2dd93ac42d82626d82429da18e642f6588e01709f983bdd72536835bc932c5be3b",
+    "text_hash_short": "5c74f9bca93520ecf85a2010760cc2f8"
+}

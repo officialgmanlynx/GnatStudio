@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/05_SPARK.rst",
+    "line_start": 788,
+    "line_end": 805,
+    "text": "with Mid;\nwith Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Demo is\n   A, B, C : Integer;\nbegin\n   A := Mid (1, 2);\n   B := Mid (1, -2);\n   C := Mid (A, B);\n   Put_Line (C'Image);\nend Demo;\n\nfunction Mid (X, Y : Integer) return Integer with\n   Pre  => X + Y /= 0,\n   Post => Mid'Result > X;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.SPARK.Contracts_3",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "selected",
+        "14.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnato23",
+        "-gnata"
+    ],
+    "classes": [
+        "ada-prove"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "demo.adb",
+        "mid.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "03a700e7472f82f1c74e96925ea26fa9237bd66c84fe190f34d9bc9f041b31a82aba4fad74343a2f4de2a083a48ba76ba2be112e9ed1a8f1764fddbe5c521fbc",
+    "text_hash_short": "496937d76e16ba524f98f5a94398e929"
+}

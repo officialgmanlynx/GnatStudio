@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 36,
+    "line_end": 135,
+    "text": "package Nonlimited_Types is\n\n   type Simple_Rec is private;\n\n   type Integer_Access is access Integer;\n\n   function Init (I : Integer) return Simple_Rec;\n\n   procedure Set (E : Simple_Rec;\n                  I : Integer);\n\n   procedure Show (E      : Simple_Rec;\n                   E_Name : String);\n\nprivate\n\n   type Simple_Rec is record\n      V : Integer_Access;\n   end record;\n\nend Nonlimited_Types;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Nonlimited_Types is\n\n   function Init (I : Integer) return Simple_Rec\n   is\n   begin\n      return E : Simple_Rec do\n         E.V := new Integer'(I);\n      end return;\n   end Init;\n\n   procedure Set (E : Simple_Rec;\n                  I : Integer) is\n   begin\n      E.V.all := I;\n   end Set;\n\n   procedure Show (E      : Simple_Rec;\n                   E_Name : String) is\n   begin\n      Put_Line (E_Name\n                & \".V.all = \"\n                & Integer'Image (E.V.all));\n   end Show;\n\nend Nonlimited_Types;\n\nwith Ada.Text_IO;      use Ada.Text_IO;\nwith Nonlimited_Types; use Nonlimited_Types;\n\nprocedure Show_Wrong_Assignment_Equality is\n   A, B : Simple_Rec := Init (0);\n\n   procedure Show_Compare is\n   begin\n      if A = B then\n         Put_Line (\"A = B\");\n      else\n         Put_Line (\"A /= B\");\n      end if;\n   end Show_Compare;\nbegin\n\n   Put_Line (\"A := Init (0); A := Init (0);\");\n   Show (A, \"A\");\n   Show (B, \"B\");\n   Show_Compare;\n   Put_Line (\"--------\");\n\n   Put_Line (\"Set (A, 2); Set (B, 3);\");\n   Set (A, 2);\n   Set (B, 3);\n\n   Show (A, \"A\");\n   Show (B, \"B\");\n   Put_Line (\"--------\");\n\n   Put_Line (\"B := A\");\n   B := A;\n\n   Show (A, \"A\");\n   Show (B, \"B\");\n   Show_Compare;\n   Put_Line (\"--------\");\n\n   Put_Line (\"Set (B, 7);\");\n   Set (B, 7);\n\n   Show (A, \"A\");\n   Show (B, \"B\");\n   Show_Compare;\n   Put_Line (\"--------\");\n\nend Show_Wrong_Assignment_Equality;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Assignment_Equality.Wrong_Assignment_Equality",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "nonlimited_types.ads",
+        "nonlimited_types.adb",
+        "show_wrong_assignment_equality.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_wrong_assignment_equality.adb",
+    "text_hash": "210a5d2b76454003d92f2e1fbc225df87942261763b8acbaf051be16ea53e86cfe02d1c2d504ca787e947d5638e2c4bb2f9a8f2cf812e502799644106f2cf0dd",
+    "text_hash_short": "72cf7145cd26a8628580c5a837d9cb61"
+}

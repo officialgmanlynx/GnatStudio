@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/06_side_effects.rst",
+    "line_start": 136,
+    "line_end": 149,
+    "text": "package Volatile_Read is\n   X : Integer with Volatile;\n   procedure P (Y : out Integer);\nend Volatile_Read;\n\npackage body Volatile_Read is\n   procedure P (Y : out Integer) is\n   begin\n      Y := X - X;  --  ERROR\n   end P;\nend Volatile_Read;\n",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Side_Effect.Volatile_Read_1",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow",
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": true,
+    "source_files": [
+        "volatile_read.ads",
+        "volatile_read.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "b354b12a2529c24b9e6a2812e5c44cf6165ec3d09e97e100f6f374e4a8dd45551d28faa70576040ed91b1e09772f73a52272d6c4a5564bc3350e7570d1d67b72",
+    "text_hash_short": "7ec58b4d1432d03d60b5ea6019cc031e"
+}

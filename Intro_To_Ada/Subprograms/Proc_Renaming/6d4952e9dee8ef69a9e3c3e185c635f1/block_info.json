@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/subprograms.rst",
+    "line_start": 510,
+    "line_end": 522,
+    "text": " procedure A_Procedure_With_Very_Long_Name_That_Cannot_Be_Changed\n   (A_Message : String);\n\n with Ada.Text_IO; use Ada.Text_IO;\n\n procedure A_Procedure_With_Very_Long_Name_That_Cannot_Be_Changed\n   (A_Message : String) is\n begin\n    Put_Line (A_Message);\n end A_Procedure_With_Very_Long_Name_That_Cannot_Be_Changed;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Subprograms.Proc_Renaming",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "nosyntax-check"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "a_procedure_with_very_long_name_that_cannot_be_changed.ads",
+        "a_procedure_with_very_long_name_that_cannot_be_changed.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "8ff66dc6210f8e760870bc8b22ce35f8ef2dd34f00ede39e36587888e9634154b9faef40ca663286c661b01ccaaa41f2e948d8659168a793ef2afdf188410997",
+    "text_hash_short": "6d4952e9dee8ef69a9e3c3e185c635f1"
+}

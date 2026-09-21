@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 2713,
+    "line_end": 2721,
+    "text": "procedure Double (X : in out Float);\n\nprocedure Double (X : in out Float) is\nbegin\n   X := X * 2.0;\nend Double;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Type_Conversion.Untagged_Type_View_Conversion",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "double.ads",
+        "double.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "649f3e4f54f693fdc7c3464ad74e3ff1291908aa60314e0ddbd27278c945e7cb23d7161ceca142134c2b4b8a6f46eea5d98852b1a98c7277654a0bf74171299a",
+    "text_hash_short": "31f4409d9faeaf213c5940de65eeb014"
+}

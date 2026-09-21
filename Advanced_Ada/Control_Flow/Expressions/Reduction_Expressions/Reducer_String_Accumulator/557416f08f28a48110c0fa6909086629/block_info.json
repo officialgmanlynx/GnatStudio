@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/expressions.rst",
+    "line_start": 1222,
+    "line_end": 1254,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Ada.Strings.Unbounded;\nuse  Ada.Strings.Unbounded;\n\nprocedure Show_Reduction_Expression is\n   type Integer_Array is\n     array (Positive range <>) of Integer;\n\n   A : Integer_Array (1 .. 3);\n\n   function Unbounded_String_List\n     (Accumulator : Unbounded_String;\n      Value       : Integer)\n          return Unbounded_String is\n   begin\n      return Accumulator\n             & \", \" & Value'Image;\n   end Unbounded_String_List;\n\nbegin\n   A := [2, 3, 4];\n\n   Put_Line (\"A = \"\n             & A'Image);\n   Put_Line (\"L = \"\n             & To_String (A'Reduce\n               (Unbounded_String_List,\n                  To_Unbounded_String (\"0\"))));\nend Show_Reduction_Expression;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Expressions.Reduction_Expressions.Reducer_String_Accumulator",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnatX",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_reduction_expression.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_reduction_expression.adb",
+    "text_hash": "4bd102366a6bc112cafe7df76aa7bda7920142d41189e07ca471908b539a9a229bebb328921290d749b56b01fd367d2a0e8f29fe1d52f686772e5aa3ab08b8da",
+    "text_hash_short": "557416f08f28a48110c0fa6909086629"
+}

@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 892,
+    "line_end": 930,
+    "text": "package Persons is\n\n   --  Declaring a discriminant with an anonymous\n   --  access type whose designated subtype is\n   --  unconstrained:\n   type Person (Name : access String) is record\n      Age : Integer;\n   end record;\n\n   procedure Show (P : Person);\n\nend Persons;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Persons is\n\n   procedure Show (P : Person) is\n   begin\n      Put_Line (\"Name = \"\n                & P.Name.all);\n      Put_Line (\"Age  = \"\n                & Integer'Image (P.Age));\n   end Show;\n\nend Persons;\n\nwith Persons; use Persons;\n\nprocedure Show_Person is\n   S : aliased String := \"John\";\n   P : Person (S'Access);\nbegin\n   P.Age := 30;\n   Show (P);\nend Show_Person;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Access_Discriminants.Persons",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "persons.ads",
+        "persons.adb",
+        "show_person.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_person.adb",
+    "text_hash": "d5e604a83027dcd7665b1a9b9171c86a15a0d02541648e15a5dc5d7767302b4507a717034c60ba7a1576882d5054d1921508361786d7f9bdac483d151696ac7d",
+    "text_hash_short": "f0149d572e0ec192476836bfdf00dd9e"
+}

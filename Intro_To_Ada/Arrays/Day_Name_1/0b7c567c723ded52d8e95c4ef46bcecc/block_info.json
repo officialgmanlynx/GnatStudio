@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/arrays.rst",
+    "line_start": 608,
+    "line_end": 636,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main is\n\n   type Days is (Monday, Tuesday, Wednesday,\n                 Thursday, Friday,\n                 Saturday, Sunday);\n\n   function Get_Day_Name (Day : Days := Monday)\n                          return String is\n   begin\n      return\n        (case Day is\n         when Monday    => \"Monday\",\n         when Tuesday   => \"Tuesday\",\n         when Wednesday => \"Wednesday\",\n         when Thursday  => \"Thursday\",\n         when Friday    => \"Friday\",\n         when Saturday  => \"Saturday\",\n         when Sunday    => \"Sunday\");\n   end Get_Day_Name;\n\nbegin\n   Put_Line (\"First day is \"\n             & Get_Day_Name (Days'First));\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Arrays.Day_Name_1",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "fed335b3c779bbce86d3b4e0bf350250705ba735e0e5ff0d58dff7586426c1f3023c810278959d69521c42c4dcdf13579b3e0847917a92c25fe6fd42ae6b1aed",
+    "text_hash_short": "0b7c567c723ded52d8e95c4ef46bcecc"
+}

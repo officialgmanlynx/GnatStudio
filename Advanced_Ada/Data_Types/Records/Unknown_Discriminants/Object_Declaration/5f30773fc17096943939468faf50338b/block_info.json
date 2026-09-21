@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 2553,
+    "line_end": 2563,
+    "text": "with Unknown_Discriminants;\nuse  Unknown_Discriminants;\n\nprocedure Show_Object_Declaration is\n   A : Rec;\nbegin\n   null;\nend Show_Object_Declaration;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Unknown_Discriminants.Object_Declaration",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_object_declaration.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "49111371db3b55caef28ae79daf0433573e8f0bd5d495e504b239a86a7fae93e6bf764dd5d27c9c632051308d43be2b44a8135ff103fea3b01cb096389a4605b",
+    "text_hash_short": "5f30773fc17096943939468faf50338b"
+}

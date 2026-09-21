@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 2439,
+    "line_end": 2449,
+    "text": "with System; use System;\n\nprocedure Use_Address is\n   I : aliased Integer := 5;\n   A : Address;\nbegin\n   A := I'Address;\nend Use_Address;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Addresses.Address_Attribute",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "use_address.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "use_address.adb",
+    "text_hash": "1fc091557a22d9718ec3df7127da2eda49f951081ccc305d4763492283bb71ba07f4d21a90271a289b7dfdaa85efce27911ed64afdd99dd0437f11881690f8d1",
+    "text_hash_short": "1ee71b7cd3ed278647eb72f383da877f"
+}

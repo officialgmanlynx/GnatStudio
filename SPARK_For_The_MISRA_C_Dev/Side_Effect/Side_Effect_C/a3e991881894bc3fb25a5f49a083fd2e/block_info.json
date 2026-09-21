@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/06_side_effects.rst",
+    "line_start": 68,
+    "line_end": 88,
+    "text": "!main.c\n#include <stdio.h>\n\nvoid decrease_until_one_is_null (int *x, int *y) {\n   if (x == 0 || y == 0) {\n      return;\n   }\n   while (--*x != 0 && --*y != 0) {\n      // nothing\n   }\n}\n\nint main() {\n   int x = 42, y = 42;\n   decrease_until_one_is_null (&x, &y);\n   printf(\"x = %d, y = %d\\n\", x, y);\n   return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Side_Effect.Side_Effect_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "4287204ef2eb173278b2ae5107137f150c09ede044f27b8561dd41eef4a38e6bc3e1630bf47af23beef774e38c21f31f012c81fa330edeb29d5325b0b5b792de",
+    "text_hash_short": "a3e991881894bc3fb25a5f49a083fd2e"
+}

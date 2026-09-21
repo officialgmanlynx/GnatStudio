@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/strongly_typed_language.rst",
+    "line_start": 578,
+    "line_end": 614,
+    "text": "procedure Main is\n   --  ID card number type,\n   --  incompatible with Integer.\n   type Social_Security_Number is new Integer\n     range 0 .. 999_99_9999;\n   --      ^ Since a SSN has 9 digits\n   --        max., and cannot be\n   --        negative, we enforce\n   --        a validity constraint.\n\n   SSN : Social_Security_Number :=\n     555_55_5555;\n   --   ^ You can put underscores as\n   --     formatting in any number.\n\n   I   : Integer;\n\n   --  The value -1 below will cause a\n   --  runtime error and a compile time\n   --  warning with GNAT.\n   Invalid : Social_Security_Number := -1;\nbegin\n   --  Illegal, they have different types:\n   I := SSN;\n\n   --  Likewise illegal:\n   SSN := I;\n\n   --  OK with explicit conversion:\n   I := Integer (SSN);\n\n   --  Likewise OK:\n   SSN := Social_Security_Number (I);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Strongly_Typed_Language.Derived_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "1d37071cbb6d06ee5f79db2b83b024b49ec7a935e1840877b7f26aca9b3e5dbd583957bf3bc49a4a232ee224ab389657f44832619b3e104ee4a711f28375a408",
+    "text_hash_short": "63445601ddb5e52dceab095d3305623a"
+}

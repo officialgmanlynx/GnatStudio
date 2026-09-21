@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/contracts.rst",
+    "line_start": 40,
+    "line_end": 58,
+    "text": "procedure Show_Simple_Precondition is\n\n   procedure DB_Entry (Name : String;\n                       Age  : Natural)\n     with Pre => Name'Length > 0\n   is\n   begin\n      --  Missing implementation\n      null;\n   end DB_Entry;\nbegin\n   DB_Entry (\"John\", 30);\n\n   --  Precondition will fail!\n   DB_Entry (\"\",     21);\nend Show_Simple_Precondition;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Contracts.Show_Simple_Precondition",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_simple_precondition.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_simple_precondition.adb",
+    "text_hash": "8f0127637c7e0e46628618fc00edf928f5d063b1e9c7bf1a9c07acdc2f2a22a136f36e0b66b12e4eca2fb5d069b8aa436fafd9476dafcff310f677f271a987fb",
+    "text_hash_short": "87b6e080555603111801a0fcd2469acd"
+}

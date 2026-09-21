@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 2761,
+    "line_end": 2790,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Lifetime is\n   I_Var_1 : Integer := 22;\nbegin\n\n   Inner_Block : declare\n      I_Var_2 : Integer := 42;\n   begin\n      Put_Line (\"I_Var_1: \"\n                & Integer'Image (I_Var_1));\n      Put_Line (\"I_Var_2: \"\n                & Integer'Image (I_Var_2));\n\n      --  I_Var_2 will get out of scope\n      --  when the block finishes.\n   end Inner_Block;\n\n   --  I_Var_2 is now out of scope...\n\n   Put_Line (\"I_Var_1: \"\n             & Integer'Image (I_Var_1));\n   Put_Line (\"I_Var_2: \"\n             & Integer'Image (I_Var_2));\n   --                         ^^^^^^^\n   --  ERROR: lifetime of I_Var_2 has ended!\nend Show_Lifetime;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Accessibility_Levels_Rules_Introduction.Lifetime",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_lifetime.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_lifetime.adb",
+    "text_hash": "b5c016ecca680d9b820423b38de100d0d59bf98ca23a7b1963d5c80eaf6779224c525ebde6bf5f1151788d3edd66750ce9618323c3017031070507bc3b6941c5",
+    "text_hash_short": "ebe36f12c832ecfe71399b89801808d4"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 190,
+    "line_end": 210,
+    "text": "procedure Show_General_Access_Type is\n\n   --  Declaring general access type:\n   type Integer_Access is access all Integer;\n\n   --  Declaring access object:\n   A1 : Integer_Access;\n\n   --  Allocating an Integer object on the\n   --  stack:\n   I : aliased Integer;\n\nbegin\n   --  Getting access to an Integer object that\n   --  was allocated on the stack\n   A1 := I'Access;\n\nend Show_General_Access_Type;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Access_Types_Allocation.General_Access_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_general_access_type.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_general_access_type.adb",
+    "text_hash": "3daf70bde2a25792c810919c7bc1737a93ed4af9189255107271eb3c850393907a947c8188fd37554345b6c0c819e627feb4c4ac7f6a09170cb4d5e141e23a4c",
+    "text_hash_short": "f166291ad1975396131775d0aff6ad9d"
+}

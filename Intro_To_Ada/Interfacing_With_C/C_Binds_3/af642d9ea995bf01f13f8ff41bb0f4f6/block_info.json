@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/interfacing_with_c.rst",
+    "line_start": 465,
+    "line_end": 483,
+    "text": "!test.h\nstruct test;\n\nstruct test * test_create(void);\n\nvoid test_destroy(struct test *t);\n\nvoid test_reset(struct test *t);\n\nvoid test_set_name(struct test *t,\n                   char        *name);\n\nvoid test_set_address(struct test *t,\n                      char        *address);\n\nvoid test_display(const struct test *t);\n",
+    "language": "c",
+    "project": "Courses.Intro_To_Ada.Interfacing_With_C.C_Binds_3",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "test.h"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "7067445c19e8fae8c4567e85989fb2fba316e02e638ef6d195adad3726f8ac7a115233860f7656f7cf6529041d24eac19d04a7cad687c5031c843f4e83a73266",
+    "text_hash_short": "af642d9ea995bf01f13f8ff41bb0f4f6"
+}

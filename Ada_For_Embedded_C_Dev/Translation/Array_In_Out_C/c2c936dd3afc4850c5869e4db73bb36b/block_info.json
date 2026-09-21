@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 545,
+    "line_end": 549,
+    "text": "!p.h\nvoid p (int * a, int * b);\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.Array_In_Out_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "p.h"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "59e56a7a1db8e043c52a7534ff3e428b889abf20d26abb837403709081ed08fe77bdb0ce3531aa48174c5e96a9f32b624342fa6a7ff09bbe94b2cedd6ee2309b",
+    "text_hash_short": "c2c936dd3afc4850c5869e4db73bb36b"
+}

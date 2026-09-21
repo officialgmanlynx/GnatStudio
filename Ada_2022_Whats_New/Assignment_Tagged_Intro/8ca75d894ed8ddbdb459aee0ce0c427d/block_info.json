@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/whats-new-in-ada-2022/chapters/assignment_target.rst",
+    "line_start": 23,
+    "line_end": 37,
+    "text": "package Statistics is\n\n   type Statistic is record\n      Count : Natural := 0;\n      Total : Float := 0.0;\n   end record;\n\n   My_Data : array (1 .. 5) of Float := [for J in 1 .. 5 => Float (J)];\n\n   Statistic_For_My_Data : Statistic;\n\nend Statistics;\n",
+    "language": "ada",
+    "project": "Courses.Ada_2022_Whats_New.Assignment_Tagged_Intro",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "statistics.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "1b0224ef077bb0ef2164e3be2ee299447079747903adb6b31837f921c0af151283dcab4a43a042b8af0f7154a6d6a73ae69790829f9601de6fb5a40d042f5fde",
+    "text_hash_short": "8ca75d894ed8ddbdb459aee0ce0c427d"
+}

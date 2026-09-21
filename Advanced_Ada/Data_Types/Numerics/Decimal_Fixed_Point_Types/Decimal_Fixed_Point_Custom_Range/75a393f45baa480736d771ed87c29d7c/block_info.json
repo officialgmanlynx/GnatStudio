@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 6081,
+    "line_end": 6103,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Decimal_Custom_Range is\n\n   type D6 is\n     delta 1.0 digits 6;\n   type D6_R100 is\n     delta 1.0 digits 6\n       range -100_000.0 .. 100_000.0;\n\nbegin\n   Put_Line (\"D6'Range      : \"\n             & D6'First'Image\n             & \" .. \"\n             & D6'Last'Image);\n   Put_Line (\"D6_R100'Range : \"\n             & D6_R100'First'Image\n             & \" .. \"\n             & D6_R100'Last'Image);\nend Show_Decimal_Custom_Range;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Decimal_Fixed_Point_Types.Decimal_Fixed_Point_Custom_Range",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_decimal_custom_range.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_decimal_custom_range.adb",
+    "text_hash": "173bc7c8c15515a79b97bd0e2bcbb5febb9b2d74f83be21f29de275578de81e8c9d288167788a7bd2ac8e6cdf396ff49bdf2fe05a8b2278f02967d23bce9bb08",
+    "text_hash_short": "75a393f45baa480736d771ed87c29d7c"
+}

@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 2331,
+    "line_end": 2381,
+    "text": "package Values_Processing is\n\n   type Integer_Array is array (Positive range <>) of Integer;\n\n   type Process_One_Callback is not null access\n     function (Value : Integer) return Integer;\n\n   procedure Process_Values (Values      : in out Integer_Array;\n                             Process_One :        Process_One_Callback);\n\nend Values_Processing;\n\npackage body Values_Processing is\n\n   procedure Process_Values (Values      : in out Integer_Array;\n                             Process_One :        Process_One_Callback) is\n   begin\n      for I in Values'Range loop\n         Values (I) := Process_One (Values (I));\n      end loop;\n   end Process_Values;\n\nend Values_Processing;\n\nfunction Proc_10 (Value : Integer) return Integer;\n\nfunction Proc_10 (Value : Integer) return Integer is\nbegin\n   return Value + 10;\nend Proc_10;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Values_Processing; use Values_Processing;\nwith Proc_10;\n\nprocedure Show_Callback is\n   Values : Integer_Array := (1, 2, 3, 4, 5);\nbegin\n   Process_Values (Values, Proc_10'Access);\n\n   for I in Values'Range loop\n      Put_Line (\"Value [\"\n                & Positive'Image (I)\n                & \"] = \"\n                & Integer'Image (Values (I)));\n   end loop;\nend Show_Callback;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.Callback_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "values_processing.ads",
+        "values_processing.adb",
+        "proc_10.ads",
+        "proc_10.adb",
+        "show_callback.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_callback.adb",
+    "text_hash": "a9674378c534bb494fb5f11ad89fda6c2239fa072897efe70af727b1b5dbe916e36a77effc68f35efb02a602aea6bb95b97a5a7ecb06a99311c58f79f9e1789f",
+    "text_hash_short": "f49c54f0d14193d305c0e962a392ab67"
+}

@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 11372,
+    "line_end": 11388,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Ada.Numerics.Big_Numbers.Big_Integers;\nuse  Ada.Numerics.Big_Numbers.Big_Integers;\n\nprocedure Show_Big_Positive_Natural is\n   BI, D, N : Big_Integer;\nbegin\n   D  := 3;\n   N  := 2;\n   BI := Big_Natural (D / Big_Positive (N));\n\n   Put_Line (\"BI: \" & BI'Image);\nend Show_Big_Positive_Natural;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Big_Numbers.Big_Positive_Natural",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_big_positive_natural.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_big_positive_natural.adb",
+    "text_hash": "499e6d9dbdf40d77820a0c6ff30322c94524f0e0fe641794b4f4bd26306ff23715cc5c302f6677745508e123f879bc82a4cc97bd85969a73478072534b30ad27",
+    "text_hash_short": "844b41f001c9aed9cb99decb221d93fd"
+}

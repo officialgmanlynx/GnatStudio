@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 522,
+    "line_end": 544,
+    "text": "with Ada.Text_IO;\n\nprocedure Main is\n   type Int_Array is array (Natural range <>) of Integer;\n\n   function Average (List : Int_Array) return Integer\n   is\n      Sum : Integer := 0;\n   begin\n      for I in List'Range loop\n         Sum := Sum + List (I);\n      end loop;\n\n      return (Sum / List'Length);\n   end Average;\n\n   Vals : constant Int_Array (1 .. 4) := (2, 2, 4, 4);\nbegin\n   Ada.Text_IO.Put_Line (\"Average: \" & Integer'Image (Average (Vals)));\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Average_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "1b2ccb41914c3c421e9e93871c1cf9cab3d0d622b7672912735eaac05fc47e1b0fdb9011c64df9175973ea0988de1c056e449991d20eda6b94234b77f7828226",
+    "text_hash_short": "52abb574d7a8b3bdb56715735dcd1d54"
+}

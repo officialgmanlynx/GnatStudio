@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 2234,
+    "line_end": 2250,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Renaming is\n   A1 : Integer;\n   A2 : Integer renames A1;\nbegin\n   A1 := 22;\n   Put_Line (\"A1: \" & Integer'Image (A1));\n   Put_Line (\"A2: \" & Integer'Image (A2));\n\n   A2 := 24;\n   Put_Line (\"A1: \" & Integer'Image (A1));\n   Put_Line (\"A2: \" & Integer'Image (A2));\nend Show_Renaming;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Aliasing.Renaming",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_renaming.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_renaming.adb",
+    "text_hash": "989e10f75dba22573a950c5f0611a8781aad5b4acd4358b417969d91f3b1c5c40d3888410842fa69ddb00211f5c1a6c6aa8109d0583a80a440fdb0fedfebde2e",
+    "text_hash_short": "99a47d02000b91f7464dffe994fd8ee6"
+}

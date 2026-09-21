@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 596,
+    "line_end": 622,
+    "text": "!main.c\n#include <stdio.h>\n\nint main(int argc, const char * argv[])\n{\n    // variable declarations\n    int a = 0, b = 0, c = 100, d;\n\n    // c shorthand for increment\n    a++;\n\n    // regular addition\n    d = a + b + c;\n\n    // printing the result\n    printf(\"d = %d\\n\", d);\n\n    {\n        const int e = d * 100;\n        printf(\"e = %d\\n\", e);\n    }\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Var_Decl_Block_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "2418a91f72a21aeaaffd9e965c36a55c448704536f6e959e04a9f55967d72e61ec5719ffdcd15961c1e9dcdeaded38a4782956c3473c2ea3cf308d9f814dbdc5",
+    "text_hash_short": "1a837795575ddc026738d92c8655ab6c"
+}

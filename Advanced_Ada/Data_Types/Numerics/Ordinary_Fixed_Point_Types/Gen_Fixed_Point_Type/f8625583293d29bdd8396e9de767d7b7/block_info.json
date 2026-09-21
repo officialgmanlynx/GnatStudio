@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 7518,
+    "line_end": 7559,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Q14_1_Fixed_Point_Type is\n\n   --\n   --  Values for Q14.1\n   --\n   Int_Bits  : constant := 14;\n   Frac_Bits : constant := 1;\n\n   --\n   --  Generalized definition of a\n   --  fixed-point type\n   --\n   D : constant := 2.0 ** (-Frac_Bits);\n\n   type Fixed is\n     delta D\n     range -2.0 ** Int_Bits ..\n            2.0 ** Int_Bits - D;\n\n   --\n   --  Declaring Q14.1 fixed-point type\n   --  as a subtype of the \"template\"\n   --  declared above.\n   --\n   subtype TQ14_1 is\n     Fixed;\nbegin\n   Put_Line (\"TQ14_1 requires \"\n             & TQ14_1'Size'Image\n             & \" bits\");\n   Put_Line (\"The delta    value of TQ14_1 is \"\n             & TQ14_1'Delta'Image);\n   Put_Line (\"The minimum  value of TQ14_1 is \"\n             & TQ14_1'First'Image);\n   Put_Line (\"The maximum  value of TQ14_1 is \"\n             & TQ14_1'Last'Image);\nend Q14_1_Fixed_Point_Type;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Ordinary_Fixed_Point_Types.Gen_Fixed_Point_Type",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "q14_1_fixed_point_type.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "q14_1_fixed_point_type.adb",
+    "text_hash": "303a54550eaff2ceeba9fb54c92ba7845c23c43b92d50f676725990b13c64560b2398dffe5a4926ed5f4280f71d6fdf98c60cb84f8dd5a7ff95849c7156a56f4",
+    "text_hash_short": "f8625583293d29bdd8396e9de767d7b7"
+}

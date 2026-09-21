@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/modular_prog/packages.rst",
+    "line_start": 709,
+    "line_end": 730,
+    "text": "with B; use B;\n\npackage A is\n\n   type T1 is record\n      Value : T2;\n   end record;\n\nend A;\n\nwith A; use A;\n\npackage B is\n\n   type T2 is record\n      Value : T1;\n   end record;\n\nend B;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Modular_Prog.Packages.Limited_Visibility.Circular_Dependency",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "a.ads",
+        "b.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "f05f7673e6977be2433b802474b096616547d92444ff08e1e0ba787ed05088426b36af1f9f0821f7a85be87b062de1de5721336fc9c46a130fab506b3bf5dde7",
+    "text_hash_short": "ae64f33706f1c58603aff2c33b02c910"
+}

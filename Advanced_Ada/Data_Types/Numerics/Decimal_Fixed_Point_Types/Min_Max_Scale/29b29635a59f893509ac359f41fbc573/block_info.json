@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 6372,
+    "line_end": 6389,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\nwith Ada.Decimal; use Ada.Decimal;\n\nprocedure Show_Min_Max_Scale is\nbegin\n   Put_Line (\"Min_Scale : \"\n             & Min_Scale'Image);\n   Put_Line (\"Max_Scale : \"\n             & Max_Scale'Image);\n   Put_Line (\"--------------------\");\n   Put_Line (\"Min_Delta : \"\n             & Min_Delta'Image);\n   Put_Line (\"Max_Delta : \"\n             & Max_Delta'Image);\nend Show_Min_Max_Scale;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Decimal_Fixed_Point_Types.Min_Max_Scale",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_min_max_scale.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_min_max_scale.adb",
+    "text_hash": "ffa741b073672d32527fcd6152277985c575ebff957b4d4c25e56adc45b1711a48fecc7ea913611ac172ee8ba1431eb66a4241eb55fae245ab07547012806ae8",
+    "text_hash_short": "29b29635a59f893509ac359f41fbc573"
+}

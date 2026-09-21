@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/imperative_language.rst",
+    "line_start": 600,
+    "line_end": 623,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Greet is\nbegin\n   loop\n      Put_Line (\"Please enter your name: \");\n\n      declare\n         Name : String := Get_Line;\n         --               ^ Call to the\n         --                 Get_Line function\n      begin\n         exit when Name = \"\";\n         Put_Line (\"Hi \" & Name & \"!\");\n      end;\n\n      --  Name is undefined here\n   end loop;\n\n  Put_Line (\"Bye!\");\nend Greet;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Imperative_Language.Greet_6",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "greet.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "0bdb4c45d7aa23a81c1d3168846509a47bcba6b5a59aa0a0892c50effaff2a3dbdc5d84de62019dea360f8f61909050233353209e24d9449fdf2d91745a80326",
+    "text_hash_short": "a9c0c14a1b3e2ebe07cd88f442787e3a"
+}

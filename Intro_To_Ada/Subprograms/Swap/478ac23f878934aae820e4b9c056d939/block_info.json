@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/subprograms.rst",
+    "line_start": 335,
+    "line_end": 350,
+    "text": "procedure Swap (A, B : Integer) is\n   Tmp : Integer;\nbegin\n   Tmp := A;\n\n   --  Error: assignment to \"in\" mode\n   --         parameter not allowed\n   A := B;\n\n   --  Error: assignment to \"in\" mode\n   --         parameter not allowed\n   B := Tmp;\nend Swap;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Subprograms.Swap",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "swap.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "swap.adb",
+    "text_hash": "2a77df1357a61140bcbf2c1d08e878a433466f9c92eaa3442c5f216bb113318fb27b86e2ad63337d61cd4f4f2597725f4836362676c602c0099b9e002ab2f68e",
+    "text_hash_short": "478ac23f878934aae820e4b9c056d939"
+}

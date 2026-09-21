@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/03_syntactic_guarantees.rst",
+    "line_start": 334,
+    "line_end": 368,
+    "text": "package Sign_Domain is\n\n   type Sign is (Negative, Zero, Positive);\n\n   function Opposite (A : Sign) return Sign is\n     (case A is\n         when Negative => Positive,\n         when Zero     => Zero,\n         when Positive => Negative);\n\n   function Multiply (A, B : Sign) return Sign is\n     (case A is\n         when Negative => Opposite (B),\n         when Zero     => Zero,\n         when Positive => B);\n\n   procedure Get_Sign (X : Integer; S : out Sign);\n\nend Sign_Domain;\n\npackage body Sign_Domain is\n\n   procedure Get_Sign (X : Integer; S : out Sign) is\n   begin\n      case X is\n         when 0 => S := Zero;\n         when 1 .. Integer'Last => S := Positive;\n         when others => S := Negative;\n      end case;\n   end Get_Sign;\n\nend Sign_Domain;\n",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Syntactic_Guarantees.Case_Statement",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow_report_all",
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": true,
+    "source_files": [
+        "sign_domain.ads",
+        "sign_domain.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "e334f8619056222ddc1f466fd9eb6749e98c9c3cc6519f0c58dcfd4b7560960163bd9dc9c6edc73f24f41a2e048e7dca6fcb921e039022aedfbda99ae168d8ce",
+    "text_hash_short": "1c99fc53d2d2c0dddbea5e5b0a6c5746"
+}

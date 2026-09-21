@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/exceptions.rst",
+    "line_start": 763,
+    "line_end": 774,
+    "text": "procedure Show_Range_Check is\n\n   subtype Int_1_10 is Integer range 1 .. 10;\n\n   I : Int_1_10;\n\nbegin\n   I := 11;\nend Show_Range_Check;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Exceptions.Checks_And_Exceptions.Range_Check",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_range_check.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_range_check.adb",
+    "text_hash": "97225072a56b047428ce8f31dff126a6b57f60f993c9b45fba548b36cc13848c60fe322c16de1e95bc997cf92227cf998741a346743414923397aba8502908de",
+    "text_hash_short": "54b1d67d98d97a58d4265a854fcfa992"
+}

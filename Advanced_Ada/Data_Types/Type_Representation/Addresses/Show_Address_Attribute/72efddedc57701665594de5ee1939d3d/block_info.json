@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 2466,
+    "line_end": 2477,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\nwith System.Address_Image;\n\nprocedure Show_Address_Attribute is\n   I  : aliased Integer := 5;\nbegin\n   Put_Line (\"Address : \"\n             & System.Address_Image (I'Address));\nend Show_Address_Attribute;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Addresses.Show_Address_Attribute",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_address_attribute.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_address_attribute.adb",
+    "text_hash": "8cce6aded9b658121da5c4e75506b6f7db3bc092a25d84344ebbf0de1c81e580f187e391059aa323922bd5408e3e974ecf3e42e153649697f2a941784f473824",
+    "text_hash_short": "72efddedc57701665594de5ee1939d3d"
+}

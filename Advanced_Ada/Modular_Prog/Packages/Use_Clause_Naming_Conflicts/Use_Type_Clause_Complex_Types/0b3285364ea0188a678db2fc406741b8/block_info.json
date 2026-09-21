@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/modular_prog/packages.rst",
+    "line_start": 1598,
+    "line_end": 1631,
+    "text": "with Ada.Numerics; use Ada.Numerics;\n\nwith Ada.Numerics.Generic_Complex_Types;\n\nwith Show_Any_Complex;\n\nprocedure Show_Use is\n   package Complex_Float_Types is new\n     Ada.Numerics.Generic_Complex_Types\n       (Real => Float);\n   use Complex_Float_Types;\n\n   package Complex_Long_Float_Types is new\n     Ada.Numerics.Generic_Complex_Types\n       (Real => Long_Float);\n   use Complex_Long_Float_Types;\n\n   procedure Show_Complex_Float is new\n     Show_Any_Complex (Complex_Float_Types);\n\n   C, D, X : Complex_Float_Types.Complex;\n   --        ^ SOLVED: package is now specified.\nbegin\n   C := Compose_From_Polar (3.0, Pi / 2.0);\n   D := Compose_From_Polar (5.0, Pi / 2.0);\n   X := C + D;\n\n   Show_Complex_Float (\"C:\", C);\n   Show_Complex_Float (\"D:\", D);\n   Show_Complex_Float (\"X:\", X);\nend Show_Use;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Modular_Prog.Packages.Use_Clause_Naming_Conflicts.Use_Type_Clause_Complex_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_use.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_use.adb",
+    "text_hash": "c3357f9fafef51eb98bff3c6d13de1af86406e17a45d3aa02831bcb19d79c6f6c542b097288ba8604896f376132f11261877c61459df4138fbee19c794d3ecac",
+    "text_hash_short": "0b3285364ea0188a678db2fc406741b8"
+}

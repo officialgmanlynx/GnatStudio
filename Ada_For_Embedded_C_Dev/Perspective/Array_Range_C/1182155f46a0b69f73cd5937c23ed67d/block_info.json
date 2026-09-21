@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 1974,
+    "line_end": 1995,
+    "text": "!main.c\n#include <stdio.h>\n\nint main(int argc, const char * argv[])\n{\n    char Arr [26];\n    char C = 'a';\n\n    for (int I = 0; I < 26; ++I) {\n        Arr [I] = C++;\n        printf (\"%c \", Arr [I]);\n\n        if ((I + 1) % 7 == 0) {\n            printf (\"\\n\");\n        }\n    }\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Array_Range_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "a32669587ccaf1aa50dd9c2b04dd4ea00f27bf26bf4288f462d4fe24b3c2f05f6c2cd8c92bab16af72b31932f48135f3b434d9f317a943c6841c2da92a319f83",
+    "text_hash_short": "1182155f46a0b69f73cd5937c23ed67d"
+}

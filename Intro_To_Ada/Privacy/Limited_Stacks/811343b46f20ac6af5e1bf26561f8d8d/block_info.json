@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/privacy.rst",
+    "line_start": 175,
+    "line_end": 224,
+    "text": "package Stacks is\n   type Stack is limited private;\n   --  Limited type. Cannot assign nor compare.\n\n   procedure Push (S   : in out Stack;\n                   Val :        Integer);\n   procedure Pop (S   : in out Stack;\n                  Val :    out Integer);\nprivate\n   subtype Stack_Index is\n     Natural range 1 .. 10;\n\n   type Content_Type is\n     array (Stack_Index) of Natural;\n\n   type Stack is limited record\n      Top     : Stack_Index;\n      Content : Content_Type;\n   end record;\nend Stacks;\n\npackage body Stacks is\n\n   procedure Push (S   : in out Stack;\n                   Val :        Integer) is\n   begin\n      --  Missing implementation!\n      null;\n   end Push;\n\n   procedure Pop (S   : in out Stack;\n                  Val :    out Integer) is\n   begin\n      --  Dummy implementation!\n      Val := 0;\n   end Pop;\n\nend Stacks;\n\nwith Stacks; use Stacks;\n\nprocedure Main is\n   S, S2 : Stack;\nbegin\n   S := S2;\n   --  Illegal: S is limited.\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Privacy.Limited_Stacks",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "stacks.ads",
+        "stacks.adb",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "2c3ec834862caa6e9449ac0c86ae2191743fd07b1c80621b7c7d92a4c8245d0a410e8d0dab258f672f7d89f43bbadf6df371e5ae523076cf90ba5a86b6fa4f67",
+    "text_hash_short": "811343b46f20ac6af5e1bf26561f8d8d"
+}

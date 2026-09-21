@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/imperative_language.rst",
+    "line_start": 687,
+    "line_end": 699,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main is\nbegin\n   for I in 1 .. 10 loop\n      Put_Line (if I mod 2 = 0\n                  then \"Even\"\n                  else \"Odd\");\n   end loop;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Imperative_Language.Even_Odd",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "c7058af0d94d20046308b6ff3ff7655428cc68de35d4e58e5eba6f3328035634913b619ef1ee85db34f7a63ca59ff8e7b0f5ad1c9bbef3af2abff64ae9f4d723",
+    "text_hash_short": "c89c3233ab8822c828f7a7bba8fd3f1c"
+}

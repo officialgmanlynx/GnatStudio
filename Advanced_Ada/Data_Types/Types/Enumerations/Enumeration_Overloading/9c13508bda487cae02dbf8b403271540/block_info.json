@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 1095,
+    "line_end": 1103,
+    "text": "package Colors.Shades is\n\n   subtype Blue_Shades is\n     Colors range Blue .. Darkblue;\n\nend Colors.Shades;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Enumerations.Enumeration_Overloading",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "colors-shades.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "171c29449a357edb4bfd3ccfbb408e3007fe2d326030ed0ec00daa506f76cee5a9016f00d7473120b2e8d40bde96ccaad53fa825bad332887ffc2d493f7c261b",
+    "text_hash_short": "9c13508bda487cae02dbf8b403271540"
+}

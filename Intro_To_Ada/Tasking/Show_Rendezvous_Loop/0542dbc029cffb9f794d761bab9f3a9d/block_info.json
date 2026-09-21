@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/tasking.rst",
+    "line_start": 280,
+    "line_end": 328,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Rendezvous_Loop is\n\n   task T is\n      entry Reset;\n      entry Increment;\n   end T;\n\n   task body T is\n      Cnt : Integer := 0;\n   begin\n      loop\n         select\n            accept Reset do\n               Cnt := 0;\n            end Reset;\n            Put_Line (\"Reset\");\n         or\n            accept Increment do\n               Cnt := Cnt + 1;\n            end Increment;\n            Put_Line (\"In T's loop (\"\n                      & Integer'Image (Cnt)\n                      & \")\");\n         or\n            terminate;\n         end select;\n      end loop;\n   end T;\n\nbegin\n   Put_Line (\"In Main\");\n\n   for I in 1 .. 4 loop\n      --  Calling T's entry multiple times\n      T.Increment;\n   end loop;\n\n   T.Reset;\n   for I in 1 .. 4 loop\n      --  Calling T's entry multiple times\n      T.Increment;\n   end loop;\n\nend Show_Rendezvous_Loop;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Tasking.Show_Rendezvous_Loop",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_rendezvous_loop.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_rendezvous_loop.adb",
+    "text_hash": "64bcc3c59f97ce4b4922480277430e3d5d308170662f588bb6941ba72a32aaae2ca490c17667b26b9b3cf0a5ca0bd83f86b72b8fe84ec6a89be3cd2237bdce3e",
+    "text_hash_short": "0542dbc029cffb9f794d761bab9f3a9d"
+}

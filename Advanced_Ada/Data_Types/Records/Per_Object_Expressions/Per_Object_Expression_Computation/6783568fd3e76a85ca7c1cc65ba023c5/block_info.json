@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 3801,
+    "line_end": 3840,
+    "text": "package Rec_Per_Object_Expressions is\n\n   type Stack (S : Positive) is private;\n\nprivate\n\n   type Integer_Array is\n     array (Positive range <>) of Integer;\n\n   type Stack (S : Positive) is record\n      Arr : Integer_Array (1 .. S);\n\n      Top : Natural := 0;\n\n      Overflow_Warning : Positive\n        := S * 9 / 10;\n      --   ^^^^^^^^^^\n      --   Per-object expression\n      --   using computation for\n      --   the default expression.\n   end record\n     with\n       Dynamic_Predicate =>\n         Overflow_Warning in\n           (S + 1) / 2 .. S - 1;\n      --\n      --   (S + 1) / 2\n      --   ^^^^^^^^^^^\n      --   Per-object expression\n      --   using computation.\n      --\n      --                  S - 1\n      --                  ^^^^^\n      --   Per-object expression\n      --   using computation.\n\nend Rec_Per_Object_Expressions;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Per_Object_Expressions.Per_Object_Expression_Computation",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "rec_per_object_expressions.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "5075109bb193d08c88b1d90306102f14eebd4ee253f64161b1ad5fb7b1ba273395dc9a75cdf231053c66732a0361699196ac86fb974c9eaa5e5658be56403b05",
+    "text_hash_short": "6783568fd3e76a85ca7c1cc65ba023c5"
+}

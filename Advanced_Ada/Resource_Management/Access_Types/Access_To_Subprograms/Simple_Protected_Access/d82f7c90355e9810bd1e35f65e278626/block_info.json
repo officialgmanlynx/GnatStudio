@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 5480,
+    "line_end": 5511,
+    "text": "package Simple_Protected_Access is\n\n   type Access_Proc is\n     access protected procedure;\n\n   protected Obj is\n\n      procedure Do_Something;\n\n   end Obj;\n\n   Acc : Access_Proc := Obj.Do_Something'Access;\n\nend Simple_Protected_Access;\n\npackage body Simple_Protected_Access is\n\n   protected body Obj is\n\n      procedure Do_Something is\n      begin\n         --  Not doing anything\n         --  for the moment...\n         null;\n      end Do_Something;\n\n   end Obj;\n\nend Simple_Protected_Access;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Access_To_Subprograms.Simple_Protected_Access",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple_protected_access.ads",
+        "simple_protected_access.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "45653a9dd7720ad73ccb1d49dd900ffdbb10dab1ddebf34f297b2f9b4056708f9cf4461f3da51abae63abd9045c5924d98cb125a15223c37339758b168769d56",
+    "text_hash_short": "d82f7c90355e9810bd1e35f65e278626"
+}

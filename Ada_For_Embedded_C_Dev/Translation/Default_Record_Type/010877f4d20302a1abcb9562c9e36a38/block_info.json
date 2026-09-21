@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 855,
+    "line_end": 871,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main is\n\n   type Rec is record\n      X : Integer := 10;\n      Y : Integer := 11;\n   end record;\n\n   R : Rec;\nbegin\n   Put_Line (\"R.X = \" & Integer'Image (R.X));\n   Put_Line (\"R.Y = \" & Integer'Image (R.Y));\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.Default_Record_Type",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "2cc360bece8996f8f2a2f5ecb4046f608352115cc5571be0e965ea893d39296c6e1f4a7d07c4ef388424a7f9d6b6adb9d7f0e7952a7e6a1fdb0bdaf114862bfb",
+    "text_hash_short": "010877f4d20302a1abcb9562c9e36a38"
+}

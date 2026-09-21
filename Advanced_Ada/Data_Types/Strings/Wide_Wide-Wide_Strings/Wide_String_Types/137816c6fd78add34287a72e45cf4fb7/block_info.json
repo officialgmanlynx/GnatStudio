@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/strings.rst",
+    "line_start": 212,
+    "line_end": 257,
+    "text": "with Ada.Text_IO;\nwith Ada.Wide_Text_IO;\nwith Ada.Wide_Wide_Text_IO;\n\nprocedure Show_Wide_String_Types is\n   package TI   renames Ada.Text_IO;\n   package WTI  renames Ada.Wide_Text_IO;\n   package WWTI renames Ada.Wide_Wide_Text_IO;\n\n   S   : constant String           := \"hello\";\n   WS  : constant Wide_String      := \"hello\";\n   WWS : constant Wide_Wide_String := \"hello\";\nbegin\n   TI.Put_Line (\"String:           \" & S);\n   TI.Put_Line (\"Length:           \"\n                & Integer'Image (S'Length));\n   TI.Put_Line (\"Size:             \"\n                & Integer'Image (S'Size));\n   TI.Put_Line (\"Component_Size:   \"\n                & Integer'Image\n                    (S'Component_Size));\n   TI.Put_Line (\"------------------------\");\n\n   WTI.Put_Line (\"Wide string:      \" & WS);\n   TI.Put_Line (\"Length:           \"\n                & Integer'Image (WS'Length));\n   TI.Put_Line (\"Size:             \"\n                & Integer'Image (WS'Size));\n   TI.Put_Line (\"Component_Size:   \"\n                & Integer'Image\n                    (WS'Component_Size));\n   TI.Put_Line (\"------------------------\");\n\n   WWTI.Put_Line (\"Wide-wide string: \" & WWS);\n   TI.Put_Line (\"Length:           \"\n                & Integer'Image (WWS'Length));\n   TI.Put_Line (\"Size:             \"\n                & Integer'Image (WWS'Size));\n   TI.Put_Line (\"Component_Size:   \"\n                & Integer'Image\n                    (WWS'Component_Size));\n   TI.Put_Line (\"------------------------\");\nend Show_Wide_String_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Strings.Wide_Wide-Wide_Strings.Wide_String_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_wide_string_types.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_wide_string_types.adb",
+    "text_hash": "126b292543944d261e0d883529faa29e384caacb8917145f8ebb2446af1a96322e36e964c9306099ca2a36b4f8dbca1739180de0f6c26fdc967741177a2dbe6a",
+    "text_hash_short": "137816c6fd78add34287a72e45cf4fb7"
+}

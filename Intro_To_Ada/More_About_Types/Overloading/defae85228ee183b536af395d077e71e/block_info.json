@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/more_about_types.rst",
+    "line_start": 83,
+    "line_end": 89,
+    "text": "package Pkg is\n   function F (A : Integer) return Integer;\n   function F (A : Character) return Integer;\nend Pkg;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.More_About_Types.Overloading",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-syntax-only"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": true,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "pkg.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "fb5834223636e9dc525163b76ed00b9e8cee6086c61841ce55595c4be58442c19b6ed67abdf975aff5989ac40704259b004489edf86f3d66d0d5736bcbd158a3",
+    "text_hash_short": "defae85228ee183b536af395d077e71e"
+}

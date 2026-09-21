@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 2199,
+    "line_end": 2212,
+    "text": "with Recs;        use Recs;\n\nprocedure Show_Object_Declaration is\n   subtype T_5_6 is T (L => 5, M => 6);\n   --                  ^^^^^^^^^^^^^^\n   --  discriminant constraints for subtype\n\n   A : T_5_6;\nbegin\n   null;\nend Show_Object_Declaration;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Discriminants_Constraints_Operations.Discriminant_Constraint",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_object_declaration.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_object_declaration.adb",
+    "text_hash": "6d3368fb20b6d3384c7eaf9cc1e8a13bca0d018331b8540e17eeab7de2233936f6c613e2c82e1ced9c463d1dfecb8979b9361a862695b2e2bb9758ea20f8b601",
+    "text_hash_short": "c6c4226073f4282d68d621519ca4d420"
+}

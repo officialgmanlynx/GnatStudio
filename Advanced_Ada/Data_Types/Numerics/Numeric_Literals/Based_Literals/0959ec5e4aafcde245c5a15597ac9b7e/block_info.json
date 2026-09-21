@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 149,
+    "line_end": 175,
+    "text": "with Ada.Text_IO;\n\nprocedure Ada_Numeric_Literals is\n   Bin_136 : constant := 2#1000_1000#;\n   Oct_136 : constant := 8#210#;\n   Dec_136 : constant := 10#136#;\n   Hex_136 : constant := 16#88#;\n   pragma Assert (Bin_136 = 136);\n   pragma Assert (Oct_136 = 136);\n   pragma Assert (Dec_136 = 136);\n   pragma Assert (Hex_136 = 136);\n\n   use Ada.Text_IO;\n\nbegin\n   Put_Line (\"Bin_136 = \"\n             & Integer'Image (Bin_136));\n   Put_Line (\"Oct_136 = \"\n             & Integer'Image (Oct_136));\n   Put_Line (\"Dec_136 = \"\n             & Integer'Image (Dec_136));\n   Put_Line (\"Hex_136 = \"\n             & Integer'Image (Hex_136));\nend Ada_Numeric_Literals;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Numeric_Literals.Based_Literals",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "ada_numeric_literals.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "ada_numeric_literals.adb",
+    "text_hash": "a0ed4e6db5cd4278de1fa2b10c013f1813fb42d3d735ec82adbac59a84c8889a903d3ddc67f544c7387e803cb8449984d50f4916c7e9a2f850441367d785ea41",
+    "text_hash_short": "0959ec5e4aafcde245c5a15597ac9b7e"
+}

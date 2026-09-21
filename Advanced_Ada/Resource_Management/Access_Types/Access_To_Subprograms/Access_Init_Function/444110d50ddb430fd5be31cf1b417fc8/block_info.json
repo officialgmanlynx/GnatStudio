@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 5269,
+    "line_end": 5283,
+    "text": "function Init_Zero return Float;\nfunction Init_One return Float;\n\nfunction Init_Zero return Float is\nbegin\n   return 0.0;\nend Init_Zero;\n\nfunction Init_One return Float is\nbegin\n   return 1.0;\nend Init_One;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Access_To_Subprograms.Access_Init_Function",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "init_zero.ads",
+        "init_one.ads",
+        "init_zero.adb",
+        "init_one.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "34293db407f941adf1c56bc902c62597e1e298a1c5b69a6fe953b2aa163dba59d73c52bf9cf5ab7053e6882bfd290ba7fae22e7f7037e4f908e91965ae42b708",
+    "text_hash_short": "444110d50ddb430fd5be31cf1b417fc8"
+}

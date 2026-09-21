@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 1013,
+    "line_end": 1065,
+    "text": "!main.c\n#include <stdio.h>\n#include <stdlib.h>\n\ntypedef struct {\n    int use_float;\n    union {\n        float f;\n        int   i;\n    };\n} float_int;\n\nfloat_int init_float (float f)\n{\n    float_int v;\n\n    v.use_float = 1;\n    v.f         = f;\n    return v;\n}\n\nfloat_int init_int (int i)\n{\n    float_int v;\n\n    v.use_float = 0;\n    v.i         = i;\n    return v;\n}\n\nvoid display (float_int v)\n{\n    if (v.use_float) {\n        printf(\"Float value   : %f\\n\", v.f);\n    }\n    else {\n        printf(\"Integer value : %d\\n\", v.i);\n    }\n}\n\nint main(int argc, const char * argv[])\n{\n    float_int f = init_float (10.0);\n    float_int i = init_int (9);\n\n    display (f);\n    display (i);\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.Var_Rec_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "51dd76c1ac0330e12be5edfe652aa822dc4609e667f1cbd7dae96d099087e3cb966e9ae4f0cdc64342a375284dffecb81ffa19ce68cfcef93363a99cd5b68fe4",
+    "text_hash_short": "ac0ad1e6ff7f2154e9dbb6838999a62e"
+}

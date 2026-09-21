@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numeric_attributes.rst",
+    "line_start": 756,
+    "line_end": 788,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Truncation_Remainder_Adjacent is\nbegin\n   Put_Line\n     (\"Float'Truncation (1.55):  \"\n      & Float'Truncation (1.55)'Image);\n   Put_Line\n     (\"Float'Truncation (-1.55): \"\n      & Float'Truncation (-1.55)'Image);\n   Put_Line\n     (\"Float'Remainder (1.25, 0.25): \"\n      & Float'Remainder (1.25, 0.25)'Image);\n   Put_Line\n     (\"Float'Remainder (1.25, 0.5):  \"\n      & Float'Remainder (1.25, 0.5)'Image);\n   Put_Line\n     (\"Float'Remainder (1.25, 1.0):  \"\n      & Float'Remainder (1.25, 1.0)'Image);\n   Put_Line\n     (\"Float'Remainder (1.25, 2.0):  \"\n      & Float'Remainder (1.25, 2.0)'Image);\n   Put_Line\n     (\"Float'Adjacent (1.0e-83, 0.0): \"\n      & Float'Adjacent (1.0e-83, 0.0)'Image);\n   Put_Line\n     (\"Float'Adjacent (1.0e-83, 1.0): \"\n      & Float'Adjacent (1.0e-83, 1.0)'Image);\nend Show_Truncation_Remainder_Adjacent;\n\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numeric_Attributes.Floating_Point_Types.Truncation_Remainder",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_truncation_remainder_adjacent.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_truncation_remainder_adjacent.adb",
+    "text_hash": "6e3489ac915da0e977a89155adc4f33eebe0b3f5c40170a7f9e3a4195e1ae53b4fd828a05121200bac7ad709a3b1743e32a9ce789733a57facf69ad4514e1bb1",
+    "text_hash_short": "135e9222d1e04849dee16db817e1f769"
+}

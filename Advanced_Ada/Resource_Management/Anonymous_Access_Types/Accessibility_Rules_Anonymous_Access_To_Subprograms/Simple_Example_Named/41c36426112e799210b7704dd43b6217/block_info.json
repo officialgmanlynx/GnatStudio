@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 3126,
+    "line_end": 3148,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Access_To_Subprogram_Error is\n\n   type PI is access\n     procedure (I : in out Integer);\n\n   P : PI;\n\n   I : Integer := 0;\nbegin\n   declare\n      procedure Add_One (I : in out Integer) is\n      begin\n         I := I + 1;\n      end Add_One;\n   begin\n      P := Add_One'Access;\n   end;\nend Show_Access_To_Subprogram_Error;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Accessibility_Rules_Anonymous_Access_To_Subprograms.Simple_Example_Named",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_access_to_subprogram_error.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_access_to_subprogram_error.adb",
+    "text_hash": "8159c47411d600f15bbe57c5d3981d0100e298a2724b81d42a87a2880e19d83e89605898579c8b68a9862bd2e635eed8cd0e6f18e39a4b244e24483de77830d1",
+    "text_hash_short": "41c36426112e799210b7704dd43b6217"
+}

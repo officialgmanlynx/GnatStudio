@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 2084,
+    "line_end": 2092,
+    "text": "procedure Show_String_Box_Init is\n    Uninitialized_Const_Str : constant String :=\n                                (1 .. 10 => <>);\nbegin\n   null;\nend Show_String_Box_Init;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Limited_Types_Aggregates.String_Box_Init",
+    "main_file": "show_string_box_init.adb",
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_string_box_init.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_string_box_init.adb",
+    "text_hash": "e7fe61129ce79f162316bfa9e51e67d5c2fab350202e4f47c5599b1f52e2c9dec13924a816fe0d9ede033e514922df0c328713eeabb3cf5f7889b49226add601",
+    "text_hash_short": "28931ced4e1113d55bdc9dc64b42f70a"
+}

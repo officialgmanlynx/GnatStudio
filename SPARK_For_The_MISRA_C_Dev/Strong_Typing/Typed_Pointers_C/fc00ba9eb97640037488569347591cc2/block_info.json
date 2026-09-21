@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/04_strong_typing.rst",
+    "line_start": 316,
+    "line_end": 342,
+    "text": "!main.c\n#include <stdio.h>\n\nvoid assign_int (int *p) {\n   *p = 42;\n}\n\nvoid assign_float (float *p) {\n   *p = 42.0;\n}\n\ntypedef void (*assign_fun)(void *p);\n\nvoid assign(assign_fun fun, void *p) {\n   fun(p);\n}\n\nint main() {\n   int i;\n   float f;\n   assign((assign_fun)&assign_int, &i);\n   assign((assign_fun)&assign_float, &f);\n   printf(\"i = %d; f = %f\\n\", i, f);\n}\n",
+    "language": "c",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Strong_Typing.Typed_Pointers_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "3ea8391c8efcd58e1774536cfec12a881597d618c79c27f674beb27335941d17dbec16d8df786dc23d5c0b2682c9254c2bcab1ee85a306fdd6350e913e5a02f6",
+    "text_hash_short": "fc00ba9eb97640037488569347591cc2"
+}

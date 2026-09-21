@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 9646,
+    "line_end": 9670,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Custom_Fixed_Point;\nuse  Custom_Fixed_Point;\n\nprocedure Show_Mixing_Fixed_Point is\n   A : TQ7_24;\n   B : TQ31;\nbegin\n   A := 1.0;\n   B := 0.222_222_222_222_222;\n   Put_Line (\"A = \" &\n             A'Image);\n   Put_Line (\"B = \" &\n             B'Image);\n\n   Put_Line (\"--------------\");\n   Put_Line (\"A := A + B\");\n   A := A + TQ7_24 (B);\n   Put_Line (\"A = \" &\n             A'Image);\nend Show_Mixing_Fixed_Point;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Ordinary_Fixed_Point_Types.Mixing_Fixed_Point_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_mixing_fixed_point.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_mixing_fixed_point.adb",
+    "text_hash": "899b44db5b28e4746d896de5d5f567e77c95ac3f9cfa198806080c69ba1416d1f9a18efeb9acac350fa7b3c800ba80d2fab2e189aa4b713fe44789d5d6b976b1",
+    "text_hash_short": "4281aa567f89a58e5d30895395bc693e"
+}

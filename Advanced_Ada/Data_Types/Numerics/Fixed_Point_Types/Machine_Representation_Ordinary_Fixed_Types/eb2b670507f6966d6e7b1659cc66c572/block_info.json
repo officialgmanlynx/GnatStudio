@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 3764,
+    "line_end": 3804,
+    "text": "with Ada.Text_IO;   use Ada.Text_IO;\n\nwith Angles;        use  Angles;\n\nwith Angles.Show_Info_Procs;\nuse  Angles.Show_Info_Procs;\n\nprocedure Show_Ordinary_Fixed_Machine_Repr is\nbegin\n   Put_Line (\"=============================\");\n   Put_Line (\"Angle\");\n   Put_Line (\"=============================\");\n\n   Show_Info (Angle'First,  \"Angle'First \");\n   Show_Info (Angle'(0.25), \"0.25        \");\n   Show_Info (Angle'(0.50), \"0.50        \");\n   Show_Info (Angle'(0.75), \"0.75        \");\n   Show_Info (Angle'(0.80), \"0.80        \");\n   Show_Info (Angle'Last,   \"Angle'Last  \");\n\n   Put_Line (\"=============================\");\n   Put_Line (\"Angle_Adj\");\n   Put_Line (\"=============================\");\n\n   Show_Info (Angle_Adj'First,\n              \"Angle_Adj'First \");\n   Show_Info (Angle_Adj'(0.25),\n              \"0.25            \");\n   Show_Info (Angle_Adj'(0.50),\n              \"0.50            \");\n   Show_Info (Angle_Adj'(0.75),\n              \"0.75            \");\n   Show_Info (Angle_Adj'(0.80),\n              \"0.80            \");\n   Show_Info (Angle_Adj'Last,\n              \"Angle_Adj'Last  \");\n\nend Show_Ordinary_Fixed_Machine_Repr;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Fixed_Point_Types.Machine_Representation_Ordinary_Fixed_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_ordinary_fixed_machine_repr.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_ordinary_fixed_machine_repr.adb",
+    "text_hash": "c44b03cd143c5587523511959c76d919a586fad1a940dac834947721115dc2937278aa77d238bfaeaedcdf90c0184f552f62be51fd7eacc015b6dd9c5a7ea855",
+    "text_hash_short": "eb2b670507f6966d6e7b1659cc66c572"
+}

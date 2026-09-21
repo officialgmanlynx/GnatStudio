@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/expressions.rst",
+    "line_start": 407,
+    "line_end": 416,
+    "text": "package Expr_Func is\n\n   function Max (A, B : Integer) return Integer is\n     (if A >= B then A else B);\n\nend Expr_Func;\n\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Expressions.Conditional_Expressions.Simple_Conditional_If_Expressions",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "expr_func.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "9d3f9d25f710f25892560ceb8d723df51dc40bbfa3e2191e5267ec7b6a354a3d7b299657266b7d52922704f3752eb33eb1fdec99a759457c37846eae442191d1",
+    "text_hash_short": "71d4165d7ae46d2f81a7eb694d628c7a"
+}

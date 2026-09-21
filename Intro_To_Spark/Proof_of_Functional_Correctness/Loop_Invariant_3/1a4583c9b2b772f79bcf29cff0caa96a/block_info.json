@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/05_Proof_Of_Functional_Correctness.rst",
+    "line_start": 971,
+    "line_end": 998,
+    "text": "package Show_Map is\n\n   type Nat_Array is array (Positive range <>) of Natural;\n\n   function F (V : Natural) return Natural is\n     (if V /= Natural'Last then V + 1 else V);\n\n   procedure Map (A : in out Nat_Array);\n\nend Show_Map;\n\npackage body Show_Map is\n\n   procedure Map (A : in out Nat_Array) is\n      A_I : constant Nat_Array := A with Ghost;\n   begin\n      for K in A'Range loop\n         A (K) := F (A (K));\n         pragma Loop_Invariant\n           (for all J in A'First .. K => A (J) = F (A'Loop_Entry (J)));\n      end loop;\n      pragma Assert (for all K in A'Range => A (K) = F (A_I (K)));\n   end Map;\n\nend Show_Map;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Proof_of_Functional_Correctness.Loop_Invariant_3",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_report_all"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "show_map.ads",
+        "show_map.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "29f774f718df4e20c88e1cf95e92235bf94bc84d26a021fe53a5268d6aeca5806a7eec9175d3f7c0a583ac2385d56ae065a258fa387599893389de78cd3095e9",
+    "text_hash_short": "1a4583c9b2b772f79bcf29cff0caa96a"
+}

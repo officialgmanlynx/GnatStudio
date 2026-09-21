@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/modular_prog/packages.rst",
+    "line_start": 584,
+    "line_end": 626,
+    "text": "package P is\n\n   type T is null record;\n\n   procedure Process (A : T) is null;\n\nend P;\n\nprivate with P;\n\npackage Data is\n\n   type T2 is private;\n\n   procedure Process (A : T2);\n\nprivate\n\n   --  Information from P is\n   --  visible here\n   type T2 is new P.T;\n\nend Data;\n\npackage body Data is\n\n   procedure Process (A : T2) is\n   begin\n      P.Process (P.T (A));\n   end Process;\n\nend Data;\n\nwith Data; use Data;\n\nprocedure Main is\n   A : T2;\nbegin\n   null;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Modular_Prog.Packages.Private_With_Clauses.Simple_Private_With_Clause",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "p.ads",
+        "data.ads",
+        "data.adb",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "ca2251761c96444004f648b8fb4b1489d536a11686928aab3f248c336bcf80947c2f451276821778031613580e3c527112d9c90210e07128247f155ff08d5925",
+    "text_hash_short": "cecc09f95bd43dd7fd34a9e289bd2674"
+}

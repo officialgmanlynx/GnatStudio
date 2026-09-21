@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/shared_variable_control.rst",
+    "line_start": 441,
+    "line_end": 454,
+    "text": "package Shared_Var_Types is\n\n   type Atomic_Integer_1 is new Integer\n     with Atomic;\n\n   type Atomic_Integer_2 is new Integer\n     with Atomic,\n          Volatile,\n          Independent;\n\nend Shared_Var_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Shared_Variable_Control.Atomic.Volatile_Independent",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "shared_var_types.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "2be2b94ee0152f6a427034cc7769e53a9dfd285eb8e7006024d5edbc414b25ec5b04cfee8ac4de2bc01dbe2fb135c04f8ccdfe0be35f3c2bf90499b4a90adff4",
+    "text_hash_short": "3034c7a07698491f961d9b4fb74f03d8"
+}

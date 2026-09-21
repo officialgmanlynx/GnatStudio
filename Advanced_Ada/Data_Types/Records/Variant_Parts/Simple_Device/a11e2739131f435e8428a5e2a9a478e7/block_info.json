@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 2975,
+    "line_end": 2998,
+    "text": "with Devices; use Devices;\n\nprocedure Show_Device is\n   D     : Device;\n   D_Off : Device (Off);\n   D_On  : Device (On);\nbegin\n   D := D_Off;\n   --  OK!\n\n   D := D_On;\n   --  OK!\n\n   D_Off := D_On;\n   --       ^^^^\n   --  CONSTRAINT_ERROR!\n\n   D_On  := D_Off;\n   --       ^^^^^\n   --  CONSTRAINT_ERROR!\nend Show_Device;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Variant_Parts.Simple_Device",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_device.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_device.adb",
+    "text_hash": "8118174ffe10a1005f94aec8d9249bd0b7b213a1abd079051e4e58c108bbf0712bb29ae3fb558b7458866c8aa11c080889f56abd535596f6bf6dd280698b0324",
+    "text_hash_short": "a11e2739131f435e8428a5e2a9a478e7"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/statements.rst",
+    "line_start": 36,
+    "line_end": 50,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Statement_Identifier is\n   pragma Warnings (Off, \"is not referenced\");\nbegin\n   <<Show_Hello>> Put_Line (\"Hello World!\");\n   <<Show_Test>>  Put_Line (\"This is a test.\");\n\n   <<Show_Separator>>\n   <<Show_Block_Separator>>\n   Put_Line (\"====================\");\nend Show_Statement_Identifier;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Statements.Labels.Simple_Labels",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_statement_identifier.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_statement_identifier.adb",
+    "text_hash": "6265db713bc3af262cbff1b8346407b23b67a6109aec884bd8936fee908fddc1a8ee3c52502843d42264329794fa15b1b5e826d40c5c50182484669e74301334",
+    "text_hash_short": "820f5963b476af5c04314fd4373d2286"
+}

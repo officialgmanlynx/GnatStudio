@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/strings.rst",
+    "line_start": 1605,
+    "line_end": 1651,
+    "text": "package Simple_Records is\n\n   type Rec is tagged limited private;\n\n   function Init return Rec;\n\n   type Rec_Child is new Rec with private;\n\n   overriding function Init return Rec_Child;\n\nprivate\n\n   type Status is (Unknown, Off, On);\n\n   type Rec is tagged limited record\n      F : Float;\n      I : Integer;\n   end record;\n\n   function Init return Rec is\n      ((F => 10.0, I => 4));\n\n   type Rec_Child is new Rec with record\n      Z : Status;\n   end record;\n\n   function Init return Rec_Child is\n      (Rec'(Init) with Z => Off);\n\nend Simple_Records;\n\nwith Ada.Text_IO;    use Ada.Text_IO;\n\nwith Simple_Records; use Simple_Records;\n\nprocedure Show_Tagged_Image is\n   R       : constant Rec       := Init;\n   R_Class : constant Rec'Class := Rec'(Init);\n   R_C     : constant Rec_Child := Init;\nbegin\n   Put_Line (\"R:       \" & R'Image);\n   Put_Line (\"R_Class: \" & R_Class'Image);\n   Put_Line (\"R_A:     \" & R_C'Image);\nend Show_Tagged_Image;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Strings.Image_Attribute.Tagged_Image",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple_records.ads",
+        "show_tagged_image.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_tagged_image.adb",
+    "text_hash": "5b2fb1d6d9d7dcda4e6f26c57addfeb90fbe3dfe3bd0af138c44b6aceb58d52f245f8d16397c3d02f4af11725dbe4c7ace1ecb922d2394ab75105bcd81492517",
+    "text_hash_short": "496827d5f81f8b7bec3b1d4a104f550e"
+}

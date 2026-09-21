@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 2609,
+    "line_end": 2665,
+    "text": "with Ada.Strings.Unbounded;\nuse  Ada.Strings.Unbounded;\n\npackage P is\n   task type Some_Task_Type;\n\n   protected type Some_Protected_Type is\n      --  dummy type\n   end Some_Protected_Type;\n\n   type T is limited private;\n   function Make_T (Name : String) return T;\n   --       ^^^^^^\n   --  constructor function\nprivate\n   type T is limited\n      record\n         Name    : Unbounded_String;\n         My_Task : Some_Task_Type;\n         My_Prot : Some_Protected_Type;\n      end record;\nend P;\n\npackage body P is\n\n   task body Some_Task_Type is\n   begin\n      null;\n   end Some_Task_Type;\n\n   protected body Some_Protected_Type is\n   end Some_Protected_Type;\n\n   function Make_T (Name : String) return T is\n   begin\n      return (Name   =>\n                To_Unbounded_String (Name),\n              others => <>);\n   end Make_T;\n\nend P;\n\npackage P.Aux is\n   function Make_Rumplestiltskin return T;\nend P.Aux;\n\npackage body P.Aux is\n\n   function Make_Rumplestiltskin return T is\n   begin\n      return Make_T (Name => \"Rumplestiltskin\");\n   end Make_Rumplestiltskin;\n\nend P.Aux;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Building_Objects_From_Constructors.Building_Objs_From_Constructors",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "p.ads",
+        "p.adb",
+        "p-aux.ads",
+        "p-aux.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "0ee4bdfa74a0918045da6864fa50834d4b6dd7d62f6eb8f657cd86e26fd75802be86272b8aeab07a22e66490076ac669b64301a404b35ef57bf689b61ec04d02",
+    "text_hash_short": "1956721292a82899d244afcd10ff63ed"
+}

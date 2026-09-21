@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 1724,
+    "line_end": 1761,
+    "text": "package Inherited_Primitives is\n\n   type T is tagged private;\n\n   procedure Proc (N : access T);\n   --  Proc is a primitive of type T.\n\n   type T_Child is new T with private;\n\nprivate\n\n   type T is tagged null record;\n\n   type T_Child is new T with null record;\n\nend Inherited_Primitives;\n\npackage body Inherited_Primitives is\n\n   procedure Proc (N : access T) is null;\n\nend Inherited_Primitives;\n\nwith Inherited_Primitives;\nuse  Inherited_Primitives;\n\nprocedure Show_Inherited_Primitives is\n   Obj       : access T       := new T;\n   Obj_Child : access T_Child := new T_Child;\nbegin\n   Proc (Obj);\n   Proc (Obj_Child);\n   --    ^^^^^^^^^\n   --    OK: Proc is inherited!\nend Show_Inherited_Primitives;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Anonymous_Access_Parameters.Inherited_Primitives",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "inherited_primitives.ads",
+        "inherited_primitives.adb",
+        "show_inherited_primitives.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_inherited_primitives.adb",
+    "text_hash": "d3d8de075253b89caca82aea598e5dca78b68892db036956855e94f287b770df51b9ad9d02a9aa91a325720972b2aa368f2dd3cb1eeb5f26d74a8f2fc740cc29",
+    "text_hash_short": "a7e9b8bc92e346758cc4ade43bb4b02d"
+}

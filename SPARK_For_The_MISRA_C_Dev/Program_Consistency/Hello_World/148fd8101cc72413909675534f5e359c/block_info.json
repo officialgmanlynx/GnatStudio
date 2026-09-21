@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/02_program_consistency.rst",
+    "line_start": 306,
+    "line_end": 341,
+    "text": "package Helper is\n   procedure Public_Put_Line (S : String);\nprivate\n   procedure Private_Put_Line (S : String);\nend Helper;\n\nwith Ada.Text_IO;\n\npackage body Helper is\n   procedure Public_Put_Line (S : String) is\n   begin\n      Ada.Text_IO.Put_Line (S);\n   end Public_Put_Line;\n\n   procedure Private_Put_Line (S : String) is\n   begin\n      Ada.Text_IO.Put_Line (S);\n   end Private_Put_Line;\n\n   procedure Body_Put_Line (S : String) is\n   begin\n      Ada.Text_IO.Put_Line (S);\n   end Body_Put_Line;\nend Helper;\n\nwith Helper; use Helper;\n\nprocedure Hello_World is\nbegin\n   Public_Put_Line (\"hello, world!\");\n   Private_Put_Line (\"hello, world!\");  --  ERROR\n   Body_Put_Line (\"hello, world!\");  --  ERROR\nend Hello_World;\n",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Program_Consistency.Hello_World",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "helper.ads",
+        "helper.adb",
+        "hello_world.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "hello_world.adb",
+    "text_hash": "941cd977de8357c128233fa81ecf4d5beaf3ff6873fb66080bee6ae4fd23d2bb57ef7ca0da198916e28c25a10cbb15aa2a9d7b3c0a6f341434b192e38820c301",
+    "text_hash_short": "148fd8101cc72413909675534f5e359c"
+}

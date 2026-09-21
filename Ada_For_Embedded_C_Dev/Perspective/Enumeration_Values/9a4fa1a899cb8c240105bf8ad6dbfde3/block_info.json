@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 1494,
+    "line_end": 1524,
+    "text": "with Ada.Text_IO;\n\nprocedure Main is\n   type Day is\n     (Monday,\n      Tuesday,\n      Wednesday,\n      Thursday,\n      Friday,\n      Saturday,\n      Sunday);\n\n   --  Representation clause for Day type:\n   for Day use\n     (Monday    => 10,\n      Tuesday   => 11,\n      Wednesday => 12,\n      Thursday  => 13,\n      Friday    => 14,\n      Saturday  => 15,\n      Sunday    => 16);\n\n   D : Day := Monday;\n   V : Integer;\nbegin\n   V := Day'Enum_Rep (D);\n   Ada.Text_IO.Put_Line (Integer'Image (V));\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Enumeration_Values",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "9d03e40af6a7da8e5d3c95a02b61ebe6840457957d3c495fe53799232c29050dad6df7799f21edb8f533ea3f2b6d6cc7bdef7c7034196c811bd6a2961f03d6ab",
+    "text_hash_short": "9a4fa1a899cb8c240105bf8ad6dbfde3"
+}

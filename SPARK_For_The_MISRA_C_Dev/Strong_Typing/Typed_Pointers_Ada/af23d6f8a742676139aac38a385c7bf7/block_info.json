@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/04_strong_typing.rst",
+    "line_start": 362,
+    "line_end": 398,
+    "text": "generic\n   type T is private;\n   with procedure Initialize (V : out T);\nprocedure Assign (V : out T);\n\nprocedure Assign (V : out T) is\nbegin\n   Initialize (V);\nend Assign;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Assign;\n\nprocedure Apply_Assign is\n   procedure Assign_Int (V : out Integer) is\n   begin\n      V := 42;\n   end Assign_Int;\n\n   procedure Assign_Float (V : out Float) is\n   begin\n      V := 42.0;\n   end Assign_Float;\n\n   procedure Assign_I is new Assign (Integer, Assign_Int);\n   procedure Assign_F is new Assign (Float, Assign_Float);\n\n   I : Integer;\n   F : Float;\nbegin\n   Assign_I (I);\n   Assign_F (F);\n   Put_Line (\"I =\" & I'Img & \"; F =\" & F'Img);\nend Apply_Assign;\n",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Strong_Typing.Typed_Pointers_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "assign.ads",
+        "assign.adb",
+        "apply_assign.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "apply_assign.adb",
+    "text_hash": "cd44db9db21bd1e7fc5f2fda6fae432ce7cea8556abdaf919dbb525675a86dcf3326aea9fd02a6ffb03b53d94aa11657d0bc6e09ebef951c5e4e89fb6a7d5a05",
+    "text_hash_short": "af23d6f8a742676139aac38a385c7bf7"
+}

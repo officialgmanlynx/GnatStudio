@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/interfacing_with_c.rst",
+    "line_start": 166,
+    "line_end": 179,
+    "text": "with Interfaces.C; use Interfaces.C;\n\npackage C_API is\n\n   function My_Func (a : int) return int\n     with\n       Export        => True,\n       Convention    => C,\n       External_Name => \"my_func\";\n\nend C_API;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Interfacing_With_C.C_Ada_Func",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "c_api.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "b3aa8194f33adb9cf7d7e92695ae36c3ce28d18a74b29f4a7c0668fdcaab8dfd590a6d3092336b9b07aa75ace363b2bba4a5ff5702ab9605c78eb1dfb3ea637c",
+    "text_hash_short": "00aa4ec29fc551e710900e2ee7d96bc9"
+}

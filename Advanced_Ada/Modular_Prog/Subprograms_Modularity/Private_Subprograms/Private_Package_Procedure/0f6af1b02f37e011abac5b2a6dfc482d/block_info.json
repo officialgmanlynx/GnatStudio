@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/modular_prog/subprograms_modularity.rst",
+    "line_start": 54,
+    "line_end": 100,
+    "text": "package Data_Processing is\n\n   type Data is private;\n\n   procedure Process (D : in out Data);\n\nprivate\n\n    type Data is record\n       F : Float;\n    end record;\n\nend Data_Processing;\n\nwith Data_Processing.Calculate;\n\npackage body Data_Processing is\n\n   procedure Process (D : in out Data) is\n   begin\n      Calculate (D);\n   end Process;\n\nend Data_Processing;\n\nprivate\nprocedure Data_Processing.Calculate\n  (D : in out Data);\n\nprocedure Data_Processing.Calculate\n  (D : in out Data)\nis\nbegin\n   --  Dummy implementation...\n   D.F := 0.0;\nend Data_Processing.Calculate;\n\nwith Data_Processing; use Data_Processing;\n\nprocedure Test_Data_Processing is\n   D : Data;\nbegin\n   Process (D);\nend Test_Data_Processing;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Modular_Prog.Subprograms_Modularity.Private_Subprograms.Private_Package_Procedure",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "data_processing.ads",
+        "data_processing.adb",
+        "data_processing-calculate.ads",
+        "data_processing-calculate.adb",
+        "test_data_processing.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "test_data_processing.adb",
+    "text_hash": "e77203849594673ff236a7f30841f6d7b740014c11b90a73b26d0323b575d92c8b06cf59c47ccd135f03fc443ed330cdae7d6d5388bb6845e76dae9088c9ee3f",
+    "text_hash_short": "0f6af1b02f37e011abac5b2a6dfc482d"
+}

@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 1644,
+    "line_end": 1676,
+    "text": "with Unconstrained_Types; use Unconstrained_Types;\n\nprocedure Show_Integer_Array_Plus\n  (A : Integer_Array;\n   V : Integer);\n\nwith Show_Integer_Array;\n\nprocedure Show_Integer_Array_Plus\n  (A : Integer_Array;\n   V : Integer)\nis\n   A_Plus : Integer_Array (A'Range);\nbegin\n   for I in A_Plus'Range loop\n      A_Plus (I) := A (I) + V;\n   end loop;\n   Show_Integer_Array (A_Plus);\nend Show_Integer_Array_Plus;\n\nwith Unconstrained_Types; use Unconstrained_Types;\n\nwith Show_Integer_Array_Plus;\n\nprocedure Using_Unconstrained_Type is\n   A_5 : constant Integer_Array (1 .. 5) :=\n           (1, 2, 3, 4, 5);\nbegin\n   Show_Integer_Array_Plus (A_5, 5);\nend Using_Unconstrained_Type;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Definite_Indefinite_Subtypes.Indefinite_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_integer_array_plus.ads",
+        "show_integer_array_plus.adb",
+        "using_unconstrained_type.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "using_unconstrained_type.adb",
+    "text_hash": "ad5c47f3012d246d96a71caf9859271c9e716feb56e361dc975fbd0ab048cb95f5d71a50417a79f508f61514335c9a4fd918285c4c9e6399b892a13110ec1e74",
+    "text_hash_short": "e58ae62272ff0b27c5f6e171c88a6880"
+}

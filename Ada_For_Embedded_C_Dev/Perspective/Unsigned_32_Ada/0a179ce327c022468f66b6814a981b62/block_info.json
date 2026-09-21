@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 1695,
+    "line_end": 1706,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main is\n   type Unsigned_Int_32 is range 0 .. 2 ** 32 - 1;\n\n   X : Unsigned_Int_32 := 42;\nbegin\n   Put_Line (\"X = \" & Unsigned_Int_32'Image (X));\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Unsigned_32_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "6d71e6f1631a8095d07eafe51ca3b2852d061b792f63be7252d78ee2abc88625f777a298c1d699a2af7cf18c0f54be30d4921ea4e60472ecd7ec46b7a1ff1696",
+    "text_hash_short": "0a179ce327c022468f66b6814a981b62"
+}

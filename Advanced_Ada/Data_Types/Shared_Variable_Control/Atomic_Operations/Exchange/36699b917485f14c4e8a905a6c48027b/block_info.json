@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/shared_variable_control.rst",
+    "line_start": 1324,
+    "line_end": 1356,
+    "text": "with System.Atomic_Operations.Exchange;\n\npackage Spinlocks is\n\n   type Lock is new Boolean with Atomic;\n\n   package Lock_Exchange is new\n     System.Atomic_Operations.Exchange (Lock);\n\nend Spinlocks;\n\nwith Spinlocks;\nuse Spinlocks;\nuse Spinlocks.Lock_Exchange;\n\nprocedure Show_Locks is\n   L : aliased Lock := False;\nbegin\n   --  Get the lock\n   while Atomic_Exchange (Item  => L,\n                          Value => True) loop\n      null;\n   end loop;\n\n   --  At this point, we got the lock.\n   --  Do some stuff here...\n\n   --  Release the lock.\n   L := False;\nend Show_Locks;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Shared_Variable_Control.Atomic_Operations.Exchange",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "spinlocks.ads",
+        "show_locks.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_locks.adb",
+    "text_hash": "7478034ca906b1338cc6391ea91acd4bca55793f49cabc124cce5a0a0ea3515a9c228d171d2f40ec3dca56102d32e6b3837fc270c0a242f6a577a3858165b9eb",
+    "text_hash_short": "36699b917485f14c4e8a905a6c48027b"
+}

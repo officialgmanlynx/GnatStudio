@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_containers.rst",
+    "line_start": 110,
+    "line_end": 147,
+    "text": "with Ada.Containers; use Ada.Containers;\nwith Ada.Containers.Vectors;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Vector_Append is\n\n   package Integer_Vectors is new\n     Ada.Containers.Vectors\n       (Index_Type   => Natural,\n        Element_Type => Integer);\n\n   use Integer_Vectors;\n\n   V : Vector;\nbegin\n   Put_Line (\"Appending some elements \"\n             & \"to the vector...\");\n   V.Append (20);\n   V.Append (10);\n   V.Append (0);\n   V.Append (13);\n   Put_Line (\"Finished appending.\");\n\n   Put_Line (\"Prepending some elements\"\n             & \"to the vector...\");\n   V.Prepend (30);\n   V.Prepend (40);\n   V.Prepend (100);\n   Put_Line (\"Finished prepending.\");\n\n   Put_Line (\"Vector has \"\n             & Count_Type'Image (V.Length)\n             & \" elements\");\nend Show_Vector_Append;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Vector_Append",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_vector_append.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_vector_append.adb",
+    "text_hash": "db6b9161b580000c9190a975bb8c9d6ecb26c8120adba92e56771a26d534e1582605329ed0dabde308ef1f9ab63ca3e6b09cca4b12f9b19b48962c71420044d4",
+    "text_hash_short": "f88d393ba96a7950f58d9f1c0c74a021"
+}

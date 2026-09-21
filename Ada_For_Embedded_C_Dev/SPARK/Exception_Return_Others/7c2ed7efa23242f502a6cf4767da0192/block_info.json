@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/05_SPARK.rst",
+    "line_start": 393,
+    "line_end": 416,
+    "text": "package Arrays is\n\n   type List is array (Natural range <>) of Integer;\n\n   function Value (A : List; X, Y : Integer) return Integer;\n\nend Arrays;\n\npackage body Arrays is\n\n   function Value (A : List; X, Y : Integer) return Integer is\n   begin\n      return A (X + Y * 10);\n   exception\n      when Constraint_Error =>\n         return 0;\n      when others =>\n         return -1;\n   end Value;\n\nend Arrays;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.SPARK.Exception_Return_Others",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "arrays.ads",
+        "arrays.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "b81890295e4f3c810f4e941b7d00b43c303197902d8f560f481c55b425757f6fd6bbd08bb616f1fc7aa681811b85ec70b77f62ee3d062e78a2935ca061177246",
+    "text_hash_short": "7c2ed7efa23242f502a6cf4767da0192"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 9696,
+    "line_end": 9711,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\nwith System;\n\nprocedure Show_Fine_Delta is\n   type Fraction is\n     delta System.Fine_Delta\n     range -1.0 .. 1.0 - System.Fine_Delta;\nbegin\n   Put_Line (\"Fraction'Small = \"\n             & Fraction'Small'Image);\n   Put_Line (\"Fraction'Size  = \"\n             & Fraction'Size'Image);\nend Show_Fine_Delta;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Ordinary_Fixed_Point_Types.Fine_Delta_Fraction",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_fine_delta.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_fine_delta.adb",
+    "text_hash": "230f17e0949f3d63348e152dcc90259b1c3c242fb3a4953725dd32ca328ef212b62e89d9864b6a2b840ae771187fa5c3fd4be7b94e7b609a40f33b5bcaedd9bd",
+    "text_hash_short": "49541ca1fd1fc103d5214e67d173b6c7"
+}

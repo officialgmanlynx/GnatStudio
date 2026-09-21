@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/arrays.rst",
+    "line_start": 751,
+    "line_end": 771,
+    "text": "with Measurement_Defs; use Measurement_Defs;\n\nprocedure Show_Measurements is\n   M1, M2  : Measurements (1 .. 10)\n               := (others => 0.0);\n   MS      : Measurements_Sub (1 .. 10);\n   MD10    : Measurements_10;\n   M_Max20 : Measurements_Max_20 (1 .. 40);\n   M_F2    : Measurements_First_Two;\nbegin\n   MS       := M1;\n   MD10     := M1;\n\n   M_Max20  := (others => 0.0);  --  ERROR!\n\n   MD10 (1) := 4.0;\n   M_F2     := MD10;             --  ERROR!\nend Show_Measurements;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Arrays.Derived_Arrays_And_Subtypes.Array_Subtypes",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_measurements.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_measurements.adb",
+    "text_hash": "d6e8bc3822d6c9176b746f898ed6655244d4f3c8764fbb3621b3627c6cd2ef69bb112aa0fee48a3313c5618798441bd6a4175175ec6535ebf25f24c51124b41c",
+    "text_hash_short": "003ddaab65d8c163302811abd7889745"
+}

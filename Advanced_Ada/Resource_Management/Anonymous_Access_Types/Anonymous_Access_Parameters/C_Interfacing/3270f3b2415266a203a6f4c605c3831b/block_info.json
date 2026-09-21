@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 1498,
+    "line_end": 1508,
+    "text": "!operations_c.h\nvoid add_one(int *p_i);\n\n!operations_c.c\nvoid add_one(int *p_i)\n{\n    *p_i = *p_i + 1;\n}\n",
+    "language": "c",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Anonymous_Access_Parameters.C_Interfacing",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "operations_c.h",
+        "operations_c.c"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "1400e3baad2ecb6b7ac2e8e2899d1e0f685af39a86a066cf60449517d652233c3525b46e0ee87c2589125d0037dd59d74aaec4d551fa0cd8fd43f35b7a91b5b5",
+    "text_hash_short": "3270f3b2415266a203a6f4c605c3831b"
+}

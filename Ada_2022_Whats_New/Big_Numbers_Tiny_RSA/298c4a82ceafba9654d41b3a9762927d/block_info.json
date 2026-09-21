@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/whats-new-in-ada-2022/chapters/big_numbers.rst",
+    "line_start": 114,
+    "line_end": 153,
+    "text": "with Ada.Text_IO;\nwith Ada.Numerics.Big_Numbers.Big_Integers;\nuse  Ada.Numerics.Big_Numbers.Big_Integers;\n\nprocedure Main is\n\n   --  Calculate M ** D mod N\n\n   function Power_Mod (M, D, N : Big_Integer) return Big_Integer is\n\n      function Is_Odd (X : Big_Integer) return Boolean is\n        (X mod 2 /= 0);\n\n         Result : Big_Integer := 1;\n         Exp    : Big_Integer := D;\n         Mult   : Big_Integer := M mod N;\n   begin\n      while Exp /= 0 loop\n         --  Loop invariant is Power_Mod'Result = Result * Mult**Exp mod N\n         if Is_Odd (Exp) then\n            Result := (Result * Mult) mod N;\n         end if;\n\n         Mult := Mult ** 2 mod N;\n         Exp := Exp / 2;\n      end loop;\n\n      return Result;\n   end Power_Mod;\n\nbegin\n   Ada.Text_IO.Put_Line (Big_Integer'Image (2 ** 256));\n   --  Encrypt:\n   Ada.Text_IO.Put_Line (Power_Mod (M => 65, D => 17, N => 3233)'Image);\n   --  Decrypt:\n   Ada.Text_IO.Put_Line (Power_Mod (M => 2790, D => 413, N => 3233)'Image);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_2022_Whats_New.Big_Numbers_Tiny_RSA",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "788872e75b8735a2851ad0639000e82315069ec051f1c0fa07fc88923043d081f0c5eb5ba1201149b29fbbc3b215473fdb96d7e0874185e1ee32609d0fa28990",
+    "text_hash_short": "298c4a82ceafba9654d41b3a9762927d"
+}

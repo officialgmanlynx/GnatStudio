@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 2703,
+    "line_end": 2727,
+    "text": "with P;     use P;\nwith P.Aux; use P.Aux;\n\nprocedure Show_Heap_Constructor is\n\n   type T_Ref is access all T;\n\n   Global : T_Ref;\n\n   procedure Heap_Alloc is\n      Local : T_Ref;\n      To_Global : Boolean := True;\n   begin\n      Local := new T'(Make_Rumplestiltskin);\n      if To_Global then\n         Global := Local;\n      end if;\n   end Heap_Alloc;\n\nbegin\n   null;\nend Show_Heap_Constructor;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Building_Objects_From_Constructors.Building_Objs_From_Constructors",
+    "main_file": "show_heap_constructor.adb",
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_heap_constructor.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_heap_constructor.adb",
+    "text_hash": "392754df2da9ce3a46752f96706d0620680670bacc42efe50de0436ab0dcd6be83082d6162612522b293019c5acf45e0ddd59b611833b3b1c8e34abb7377eb55",
+    "text_hash_short": "8eb794884f1dfbdbedf1bc4369f45cf8"
+}

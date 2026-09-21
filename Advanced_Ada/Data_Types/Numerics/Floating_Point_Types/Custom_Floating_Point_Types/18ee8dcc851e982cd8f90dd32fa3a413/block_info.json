@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 2257,
+    "line_end": 2282,
+    "text": "package Custom_Floating_Point_Types is\n\n   type Coefficient is\n     digits 12;\n\n   --  [...]\n\nend Custom_Floating_Point_Types;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Custom_Floating_Point_Types;\nuse Custom_Floating_Point_Types;\n\nprocedure Show_Custom_Floating_Point_Types is\nbegin\n   Put_Line (\"Coefficient'Digits :\"\n             & Coefficient'Digits'Image\n             & \" digits\");\n   Put_Line (\"Coefficient'Size   :\"\n             & Coefficient'Size'Image\n             & \" bits\");\nend Show_Custom_Floating_Point_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Floating_Point_Types.Custom_Floating_Point_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_floating_point_types.ads",
+        "show_custom_floating_point_types.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_custom_floating_point_types.adb",
+    "text_hash": "dd13fc816b80a3f7b3b80e2164470a52288bd0457b381374d1faac90e8ff8187f5c7e3dd54b0f82de460187a5fdffde7f5ba9c906b5ea94bbf652b0f2cf26c1e",
+    "text_hash_short": "18ee8dcc851e982cd8f90dd32fa3a413"
+}

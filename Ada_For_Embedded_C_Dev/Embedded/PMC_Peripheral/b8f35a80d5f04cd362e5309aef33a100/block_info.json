@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/04_Embedded.rst",
+    "line_start": 985,
+    "line_end": 993,
+    "text": "with Registers;\n\nprocedure Enable_USB_Clock is\nbegin\n   Registers.PMC_Periph.PMC_SCER.USBCLK := 1;\nend Enable_USB_Clock;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Embedded.PMC_Peripheral",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "enable_usb_clock.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "f85401d112c48a232532384a637f4abb214364c4b742a7596a85234549290ab6bf57108eb30bb9c8bac32affa7542142ab9ec94aff9df39dce2a0069da62ea71",
+    "text_hash_short": "b8f35a80d5f04cd362e5309aef33a100"
+}

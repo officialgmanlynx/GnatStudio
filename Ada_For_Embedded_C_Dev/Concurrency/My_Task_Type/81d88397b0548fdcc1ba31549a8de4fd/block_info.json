@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/03_Concurrency.rst",
+    "line_start": 107,
+    "line_end": 136,
+    "text": "package My_Tasks is\n\n   task type My_Task (First : Character);\n\nend My_Tasks;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body My_Tasks is\n\n   task body My_Task is\n   begin\n      for I in First .. 'Z' loop\n         Put (I);\n      end loop;\n      New_Line;\n   end My_Task;\n\nend My_Tasks;\n\nwith My_Tasks; use My_Tasks;\n\nprocedure Main is\n   Dummy_Tab : array (0 .. 3) of My_Task ('W');\nbegin\n   null;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Concurrency.My_Task_Type",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "my_tasks.ads",
+        "my_tasks.adb",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "35fd02f1cc6b829ca4eb2f4899e3df7383fe91857eaa7a2de51273a08f23aaa4cfc353cc762ec6f5b47a815355d9f3a902953547f5f6e7bc27f94bc2db3f9b55",
+    "text_hash_short": "81d88397b0548fdcc1ba31549a8de4fd"
+}

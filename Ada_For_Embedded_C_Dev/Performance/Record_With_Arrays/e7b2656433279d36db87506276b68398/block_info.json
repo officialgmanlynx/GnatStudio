@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/08_Performance.rst",
+    "line_start": 426,
+    "line_end": 436,
+    "text": "package Arr_Def is\n   type Arr is array (Integer range <>) of Integer;\n\n   type R (D1, D2 : Integer) is record\n      F1 : Arr (1 .. D1);\n      F2 : Arr (1 .. D2);\n   end record;\nend Arr_Def;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Performance.Record_With_Arrays",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "arr_def.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "3631c73b4e1a5a89277e885cfd5812a65c3a78e45a0b281a8d6edb7c453c08f52e515d151a130415c6c78c7ceba181bfb5ec9c934b4e3f331fc3b9c1b3a66f5d",
+    "text_hash_short": "e7b2656433279d36db87506276b68398"
+}

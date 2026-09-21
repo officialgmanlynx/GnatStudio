@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 791,
+    "line_end": 812,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main\nis\n   --  try changing the initial value to change the\n   --    output of the program\n   V : constant Integer := 0;\nbegin\n   case V is\n      when 0 =>\n         Put_Line (\"Zero\");\n      when 1 .. 9 =>\n         Put_Line (\"Positive\");\n      when 10 | 12 | 14 | 16 | 18 =>\n         Put_Line (\"Even number between 10 and 18\");\n      when others =>\n         Put_Line (\"Something else\");\n   end case;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Switch_Case_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "3b85b074a57839baf1b2ca19d9a686d24f3f8b1f1c04011d757017d0de0c648c9cc5ed9d31d0fe5af607039919cbfd389aec909953b746f1ebe1087a5eb1e466",
+    "text_hash_short": "09e2318b56069281c95f23310dc121d1"
+}

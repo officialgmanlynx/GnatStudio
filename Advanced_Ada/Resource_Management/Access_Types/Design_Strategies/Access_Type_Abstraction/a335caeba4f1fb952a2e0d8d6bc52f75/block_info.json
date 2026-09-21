@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 4132,
+    "line_end": 4268,
+    "text": "package Access_Type_Abstraction is\n\n   type Info is limited private;\n\n   function To_Info (S : String) return Info;\n\n   function To_String (Obj : Info)\n                       return String;\n\n   function Copy (Obj : Info) return Info;\n\n   procedure Copy (To   : in out Info;\n                   From :        Info);\n\n   procedure Append (Obj : in out Info;\n                     S   : String);\n\n   procedure Reset (Obj : in out Info);\n\n   procedure Destroy (Obj : in out Info);\n\nprivate\n\n   type Info is access String;\n\nend Access_Type_Abstraction;\n\nwith Ada.Unchecked_Deallocation;\n\npackage body Access_Type_Abstraction is\n\n   function To_Info (S : String) return Info is\n     (new String'(S));\n\n   function To_String (Obj : Info)\n                       return String is\n     (if Obj /= null then Obj.all else \"\");\n\n   function Copy (Obj : Info) return Info is\n     (To_Info (To_String (Obj)));\n\n   procedure Copy (To   : in out Info;\n                   From :        Info) is\n   begin\n      Destroy (To);\n      To := Copy (From);\n   end Copy;\n\n   procedure Append (Obj : in out Info;\n                     S   : String) is\n      New_Info : constant Info :=\n                   To_Info (To_String (Obj) & S);\n   begin\n      Destroy (Obj);\n      Obj := New_Info;\n   end Append;\n\n   procedure Reset (Obj : in out Info) is\n   begin\n      Destroy (Obj);\n   end Reset;\n\n   procedure Destroy (Obj : in out Info) is\n      procedure Free is\n        new Ada.Unchecked_Deallocation\n          (Object => String,\n           Name   => Info);\n   begin\n      Free (Obj);\n   end Destroy;\n\nend Access_Type_Abstraction;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Access_Type_Abstraction;\nuse  Access_Type_Abstraction;\n\nprocedure Main is\n   Obj_1 : Info := To_Info (\"hello\");\n   Obj_2 : Info := Copy (Obj_1);\nbegin\n   Put_Line (\"TO_INFO / COPY\");\n   Put_Line (\"Obj_1 : \"\n             & To_String (Obj_1));\n   Put_Line (\"Obj_2 : \"\n             & To_String (Obj_2));\n   Put_Line (\"----------\");\n\n   Reset (Obj_1);\n   Append (Obj_2, \" world\");\n\n   Put_Line (\"RESET / APPEND\");\n   Put_Line (\"Obj_1 : \"\n             & To_String (Obj_1));\n   Put_Line (\"Obj_2 : \"\n             & To_String (Obj_2));\n   Put_Line (\"----------\");\n\n   Copy (From => Obj_2,\n         To   => Obj_1);\n\n   Put_Line (\"COPY\");\n   Put_Line (\"Obj_1 : \"\n             & To_String (Obj_1));\n   Put_Line (\"Obj_2 : \"\n             & To_String (Obj_2));\n   Put_Line (\"----------\");\n\n   Destroy (Obj_1);\n   Destroy (Obj_2);\n\n   Put_Line (\"DESTROY\");\n   Put_Line (\"Obj_1 : \"\n             & To_String (Obj_1));\n   Put_Line (\"Obj_2 : \"\n             & To_String (Obj_2));\n   Put_Line (\"----------\");\n\n   Append (Obj_1, \"hey\");\n\n   Put_Line (\"APPEND\");\n   Put_Line (\"Obj_1 : \"\n             & To_String (Obj_1));\n   Put_Line (\"----------\");\n\n   Put_Line (\"APPEND\");\n   Append (Obj_1, \" there\");\n   Put_Line (\"Obj_1 : \"\n             & To_String (Obj_1));\n\n   Destroy (Obj_1);\n   Destroy (Obj_2);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Design_Strategies.Access_Type_Abstraction",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "access_type_abstraction.ads",
+        "access_type_abstraction.adb",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "0b5abb866c85f6b4d68b1a84f9b8cab067b95b35354acb4e429a80514b6ab9603bb19b25b9dac3dbf0e542ebe0fe649e61a02dd5222deb778cdea845c46ebb37",
+    "text_hash_short": "a335caeba4f1fb952a2e0d8d6bc52f75"
+}

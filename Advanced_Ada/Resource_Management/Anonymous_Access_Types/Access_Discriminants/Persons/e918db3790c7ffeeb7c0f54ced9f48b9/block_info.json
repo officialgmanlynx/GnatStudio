@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 1037,
+    "line_end": 1084,
+    "text": "package Persons is\n\n   type Access_String is access all String;\n\n   --  Declaring a discriminant with a named\n   --  access type:\n   type Person (Name : Access_String) is record\n      Age : Integer;\n   end record;\n\n   procedure Show (P : Person);\n\nend Persons;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Persons is\n\n   procedure Show (P : Person) is\n   begin\n      Put_Line (\"Name = \"\n                & P.Name.all);\n      Put_Line (\"Age  = \"\n                & Integer'Image (P.Age));\n   end Show;\n\nend Persons;\n\nwith Persons; use Persons;\n\nprocedure Show_Person is\n   S : aliased String := \"John\";\n   P : Person (S'Access);\n   --          ^^^^^^^^ ERROR: cannot use local\n   --                          object\n   --\n   --  We can, however, allocate the string via\n   --  new:\n   --\n   --  S : Access_String := new String'(\"John\");\n   --  P : Person (S);\nbegin\n   P.Age := 30;\n   Show (P);\nend Show_Person;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Access_Discriminants.Persons",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "persons.ads",
+        "persons.adb",
+        "show_person.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_person.adb",
+    "text_hash": "2e9345b9bf49edad652b96fa6db60e9c565c11da872131b15cfbe8ac546e5f4145e40cb30ae70642c2c70a3b54c591161262f927d1856a4735fa71aeb6cf298b",
+    "text_hash_short": "e918db3790c7ffeeb7c0f54ced9f48b9"
+}

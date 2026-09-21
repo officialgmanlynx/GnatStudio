@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 1406,
+    "line_end": 1439,
+    "text": "package Recs is\n\n   type T (L : Positive := 1;\n           M : Positive := 2) is\n     private;\n\nprivate\n\n   type T (L : Positive := 1;\n           M : Positive := 2) is\n     null record;\n\nend Recs;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Recs;        use Recs;\n\nprocedure Show_Object_Declaration is\n   A : T;\n   B : T (7, 8);\nbegin\n   Put_Line (\"A.L = \"\n             & A.L'Image);\n   Put_Line (\"A.M = \"\n             & A.M'Image);\n   Put_Line (\"B.L = \"\n             & B.L'Image);\n   Put_Line (\"B.M = \"\n             & B.M'Image);\nend Show_Object_Declaration;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Discriminants.Discriminant_Default_Value",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "recs.ads",
+        "show_object_declaration.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_object_declaration.adb",
+    "text_hash": "f528f526f753e521918d3fe574299f4512d0c658d9099780636104b2544c35065113f96b3751104d6d85033abb1bb1efc198093156fd72f3709705fb44c839c2",
+    "text_hash_short": "33385c4ba4ed9fc90c55990bde0b70cb"
+}

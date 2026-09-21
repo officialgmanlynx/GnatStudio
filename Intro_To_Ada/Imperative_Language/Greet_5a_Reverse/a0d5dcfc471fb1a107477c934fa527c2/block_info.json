@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/imperative_language.rst",
+    "line_start": 315,
+    "line_end": 326,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Greet_5a_Reverse is\nbegin\n   for I in reverse 1 .. 5 loop\n      Put_Line (\"Hello, World!\"\n                & Integer'Image (I));\n   end loop;\nend Greet_5a_Reverse;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Imperative_Language.Greet_5a_Reverse",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "greet_5a_reverse.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "greet_5a_reverse.adb",
+    "text_hash": "9ee27db5ed178ac1a4547b2e37fed69d07d5ccb11ff983deb631de971f60bcb54e35db7e2f60d5143786f8264950d08bfb2a9cfa7e1fa17ad354ecfab178917a",
+    "text_hash_short": "a0d5dcfc471fb1a107477c934fa527c2"
+}

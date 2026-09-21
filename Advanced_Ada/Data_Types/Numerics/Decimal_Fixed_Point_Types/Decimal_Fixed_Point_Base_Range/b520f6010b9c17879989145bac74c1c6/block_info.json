@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 6202,
+    "line_end": 6221,
+    "text": "with Ada.Text_IO;   use Ada.Text_IO;\n\nprocedure Show_Decimal_Fixed_Point_Base_Range is\n\n   type D6 is\n     delta 1.0 digits 6;\n\nbegin\n   Put_Line (\"D6'Range      : \"\n             & D6'First'Image\n             & \" .. \"\n             & D6'Last'Image);\n   Put_Line (\"D6'Base'Range : \"\n             & D6'Base'First'Image\n             & \" .. \"\n             & D6'Base'Last'Image);\nend Show_Decimal_Fixed_Point_Base_Range;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Decimal_Fixed_Point_Types.Decimal_Fixed_Point_Base_Range",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_decimal_fixed_point_base_range.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_decimal_fixed_point_base_range.adb",
+    "text_hash": "30253d50912b072e7f72b093ef435ffa59ef51586d192a6fa076cd737f3866e315362fb910b312300524186d4bbb41275d3f0fadbfbc168b056b40c82e1f988a",
+    "text_hash_short": "b520f6010b9c17879989145bac74c1c6"
+}

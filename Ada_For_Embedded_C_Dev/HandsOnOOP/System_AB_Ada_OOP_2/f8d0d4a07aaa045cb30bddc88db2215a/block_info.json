@@ -1,0 +1,51 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/Appendix_A_OOP.rst",
+    "line_start": 1364,
+    "line_end": 1594,
+    "text": "package Simple is\n\n   type Activation_IF is limited interface;\n\n   procedure Activate (E : in out Activation_IF) is abstract;\n   function Is_Active (E : Activation_IF) return Boolean is abstract;\n   procedure Deactivate (E : in out Activation_IF) is abstract;\n\n   type Value_Retrieval_IF is limited interface;\n\n   function Value (E : Value_Retrieval_IF) return Float is abstract;\n\n   type Sys_Base is abstract new Activation_IF and Value_Retrieval_IF with\n     private;\n\n   overriding procedure Activate (E : in out Sys_Base);\n   overriding function Is_Active (E : Sys_Base) return Boolean;\n   overriding procedure Deactivate (E : in out Sys_Base);\n\n   not overriding procedure Activation_Reset (E : in out Sys_Base) is abstract;\n\nprivate\n\n   type Sys_Base is abstract new Activation_IF and Value_Retrieval_IF with\n      record\n         Active : Boolean;\n      end record;\n\nend Simple;\n\npackage body Simple is\n\n   procedure Activate (E : in out Sys_Base) is\n   begin\n      --  NOTE: calling \"E.Activation_Reset\" does NOT dispatch!\n      --        We need to use the 'Class attribute:\n      Sys_Base'Class (E).Activation_Reset;\n\n      E.Active := True;\n   end Activate;\n\n   function Is_Active (E : Sys_Base) return Boolean is\n      (E.Active);\n\n   procedure Deactivate (E : in out Sys_Base) is\n   begin\n      E.Active := False;\n   end Deactivate;\n\nend Simple;\n\npackage Simple.System_A is\n\n   type A is new Sys_Base with private;\n\n   overriding function Value (E : A) return Float;\n\nprivate\n\n   type Val_Array is array (Positive range <>) of Float;\n\n   type A is new Sys_Base with record\n      Val : Val_Array (1 .. 2);\n   end record;\n\n   overriding procedure Activation_Reset (E : in out A);\n\nend Simple.System_A;\n\npackage body Simple.System_A is\n\n   procedure Activation_Reset (E : in out A) is\n   begin\n      E.Val := (others => 0.0);\n   end Activation_Reset;\n\n   function Value (E : A) return Float is\n      pragma Assert (E.Val'Length = 2);\n   begin\n      return (E.Val (1) + E.Val (2)) / 2.0;\n   end Value;\n\nend Simple.System_A;\n\npackage Simple.System_B is\n\n   type B is new Sys_Base with private;\n\n   overriding function Value (E : B) return Float;\n\nprivate\n\n   type B is new Sys_Base with record\n      Val : Float;\n   end record;\n\n   overriding procedure Activation_Reset (E : in out B);\n\nend Simple.System_B;\n\npackage body Simple.System_B is\n\n   procedure Activation_Reset (E : in out B) is\n   begin\n      E.Val := 0.0;\n   end Activation_Reset;\n\n   function Value (E : B) return Float is\n     (E.Val);\n\nend Simple.System_B;\n\nwith Ada.Finalization;\n\npackage Simple.System_AB is\n\n   type AB is limited new Ada.Finalization.Limited_Controlled and\n     Activation_IF and Value_Retrieval_IF with private;\n\n   overriding procedure Activate (E : in out AB);\n   overriding function Is_Active (E : AB) return Boolean;\n   overriding procedure Deactivate (E : in out AB);\n\n   overriding function Value (E : AB) return Float;\n\n   not overriding function Check (E : AB) return Boolean;\n\nprivate\n\n   type Sys_Base_Class_Access is access Sys_Base'Class;\n   type Sys_Base_Array is array (Positive range <>) of Sys_Base_Class_Access;\n\n   type AB is limited new Ada.Finalization.Limited_Controlled and\n     Activation_IF and Value_Retrieval_IF with record\n      S_Array : Sys_Base_Array (1 .. 2);\n   end record;\n\n   overriding procedure Initialize (E : in out AB);\n   overriding procedure Finalize   (E : in out AB);\n\nend Simple.System_AB;\n\nwith Ada.Unchecked_Deallocation;\n\nwith Simple.System_A; use Simple.System_A;\nwith Simple.System_B; use Simple.System_B;\n\npackage body Simple.System_AB is\n\n   overriding procedure Initialize (E : in out AB) is\n   begin\n      E.S_Array := (new A, new B);\n   end Initialize;\n\n   overriding procedure Finalize   (E : in out AB) is\n      procedure Free is\n        new Ada.Unchecked_Deallocation (Sys_Base'Class, Sys_Base_Class_Access);\n   begin\n      for S of E.S_Array loop\n         Free (S);\n      end loop;\n   end Finalize;\n\n   procedure Activate (E : in out AB) is\n   begin\n      for S of E.S_Array loop\n         S.Activate;\n      end loop;\n   end Activate;\n\n   function Is_Active (E : AB) return Boolean is\n     (for all S of E.S_Array => S.Is_Active);\n\n   procedure Deactivate (E : in out AB) is\n   begin\n      for S of E.S_Array loop\n         S.Deactivate;\n      end loop;\n   end Deactivate;\n\n   function Value (E : AB) return Float is\n     ((E.S_Array (1).Value + E.S_Array (2).Value) / 2.0);\n\n   function Check (E : AB) return Boolean is\n      Threshold : constant := 0.1;\n   begin\n      return abs (E.S_Array (1).Value - E.S_Array (2).Value) < Threshold;\n   end Check;\n\nend Simple.System_AB;\n\nwith Ada.Text_IO;      use Ada.Text_IO;\n\nwith Simple.System_AB; use Simple.System_AB;\n\nprocedure Main is\n\n   procedure Display_Active (E : AB) is\n   begin\n      if Is_Active (E) then\n         Put_Line (\"System AB is active\");\n      else\n         Put_Line (\"System AB is not active\");\n      end if;\n   end Display_Active;\n\n   procedure Display_Check (E : AB) is\n   begin\n      if Check (E) then\n         Put_Line (\"System AB check: PASSED\");\n      else\n         Put_Line (\"System AB check: FAILED\");\n      end if;\n   end Display_Check;\n\n   S : AB;\nbegin\n   Put_Line (\"Activating system AB...\");\n   Activate (S);\n\n   Display_Active (S);\n   Display_Check (S);\n\n   Put_Line (\"Deactivating system AB...\");\n   Deactivate (S);\n\n   Display_Active (S);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.HandsOnOOP.System_AB_Ada_OOP_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple.ads",
+        "simple.adb",
+        "simple-system_a.ads",
+        "simple-system_a.adb",
+        "simple-system_b.ads",
+        "simple-system_b.adb",
+        "simple-system_ab.ads",
+        "simple-system_ab.adb",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "97773e25411f957307d6de78e642a48ebada5907db2e248766b77ac8d6bed93b145a1c061d77f9c11deca15c4df9c01d592b6cce0281f6f2091b7f8a3647e5d0",
+    "text_hash_short": "f8d0d4a07aaa045cb30bddc88db2215a"
+}

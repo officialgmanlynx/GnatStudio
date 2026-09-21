@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/whats-new-in-ada-2022/chapters/image_attribute.rst",
+    "line_start": 40,
+    "line_end": 65,
+    "text": "with Ada.Text_IO;\n\nprocedure Main is\n   type Vector is array (Positive range <>) of Integer;\n\n   V1 : aliased Vector := [1, 2, 3];\n\n   type Text_Position is record\n      Line, Column : Positive;\n   end record;\n\n   Pos : constant Text_Position := (Line => 10, Column => 3);\n\n   type Vector_Access is access all Vector;\n\n   V1_Ptr : constant Vector_Access := V1'Access;\n\nbegin\n   Ada.Text_IO.Put_Line (V1'Image);\n   Ada.Text_IO.Put_Line (Pos'Image);\n   Ada.Text_IO.New_Line;\n   Ada.Text_IO.Put_Line (V1_Ptr'Image);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_2022_Whats_New.Image_Attribute",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "d4682a8b09d6e960ab372e6dae2c2b3d39daabda9a7506840ad67822991737ab23335ffb2a64e5606677cd283f86a3607ed69fbcd8a70de943bec7e71f51e846",
+    "text_hash_short": "c58d3133c45d780305a2b5c88d159764"
+}

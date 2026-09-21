@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/shared_variable_control.rst",
+    "line_start": 91,
+    "line_end": 111,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Volatile_Array_Components is\n   Arr : array (1 .. 2) of Long_Float\n           with Volatile_Components;\nbegin\n   Arr := (others => 0.0);\n\n   for I in 0 .. 999 loop\n      Arr (1) := Arr (1) +  2.0 * Long_Float (I);\n      Arr (2) := Arr (2) + 10.0 * Long_Float (I);\n   end loop;\n\n   Put_Line (\"Arr (1): \"\n             & Long_Float'Image (Arr (1)));\n   Put_Line (\"Arr (2): \"\n             & Long_Float'Image (Arr (2)));\nend Show_Volatile_Array_Components;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Shared_Variable_Control.Volatile.Array_Components",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_volatile_array_components.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_volatile_array_components.adb",
+    "text_hash": "3ec7df0845f0a68e6334cb00734e85e85da1f292a1c24f2c0c2136d847499e9f84e40c1e4784e20d2c971c326b40cf5c102c35b5a0846a451d8d775122d8e976",
+    "text_hash_short": "05b3ee20f08c5a85f5872727a61c148d"
+}

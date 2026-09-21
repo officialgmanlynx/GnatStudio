@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/04_State_Abstraction.rst",
+    "line_start": 45,
+    "line_end": 56,
+    "text": "procedure Increase (X : in out Integer) with\n  Global => null,\n  Pre    => X <= 100,\n  Post   => X'Old < X;\n\nprocedure Increase (X : in out Integer) is\nbegin\n   X := X + 1;\nend Increase;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.State_Abstraction.No_Abstraction",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_report_all"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "increase.ads",
+        "increase.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "f97cade15f9326b2b31f7c32e84128461c1715f786891af8280a313c595dc3425359b6bf7fa39f3884e005bc677ab90798ba3b4877e90ccccea8bc214b48f94e",
+    "text_hash_short": "c4c8f229aeb1b5c12744d26369a8603f"
+}

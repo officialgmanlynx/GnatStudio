@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 2833,
+    "line_end": 2869,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Enumeration_Image is\n\n   type Months is\n     (January, February, March, April,\n      May, June, July, August, September,\n      October, November, December);\n\n   M : constant Months := January;\n\n   function Months_Image (M : Months)\n                          return String is\n   begin\n      case M is\n         when January   => return \"JANUARY\";\n         when February  => return \"FEBRUARY\";\n         when March     => return \"MARCH\";\n         when April     => return \"APRIL\";\n         when May       => return \"MAY\";\n         when June      => return \"JUNE\";\n         when July      => return \"JULY\";\n         when August    => return \"AUGUST\";\n         when September => return \"SEPTEMBER\";\n         when October   => return \"OCTOBER\";\n         when November  => return \"NOVEMBER\";\n         when December  => return \"DECEMBER\";\n      end case;\n   end Months_Image;\n\nbegin\n   Put_Line (\"Month: \"\n             & Months_Image (M));\nend Show_Enumeration_Image;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Discarding_Names.Enumeration_Image",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_enumeration_image.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_enumeration_image.adb",
+    "text_hash": "4df6ff9db324bb4782d0b0b836cd35fe9afc7e6ee1ac213cf62a2c8da90fe151d69a9a1fbc3f49c6fa80967481b4ff7c0b38c778bcd88de95027b24bded69cf8",
+    "text_hash_short": "2db86044d2045bd9d4c3998cca36d51c"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/04_Embedded.rst",
+    "line_start": 822,
+    "line_end": 830,
+    "text": "package My_Device_Types is\n\n   type UInt10 is mod 2 ** 10\n     with Size => 10;\n\nend My_Device_Types;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Size_Aspect",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "my_device_types.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "a2798157b1b191f311b511d123d305f5f9901fb720fba4cfd28bc8a23789b660a5c459fc17077399f168618ec7264fd4e948ab80dbc409903dae34c3ffd20e91",
+    "text_hash_short": "049be992b876dba42cf091afc256db35"
+}

@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 2360,
+    "line_end": 2375,
+    "text": "with Ada.Text_IO;         use Ada.Text_IO;\nwith Custom_Enumerations; use Custom_Enumerations;\n\nprocedure Show_Conversion is\n   P  : Priority;\n   IP : Important_Priority;\nbegin\n   P  := Low;\n   IP := Important_Priority (P);\n\n   Put_Line (\"IP: \"\n             & IP'Image);\nend Show_Conversion;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Type_Conversion.Enumeration_Type_Conversion",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_conversion.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_conversion.adb",
+    "text_hash": "9515e4b03a95f8a41e49325d1f361b895feab61ee1229c5037f43ae604ea2b259be44dc670ef7f0b02754c0743f2eff9a22a9181db42cce544a9e2027e6d493e",
+    "text_hash_short": "6bbc777d4b44023bf572ca5dc6c2b4f8"
+}

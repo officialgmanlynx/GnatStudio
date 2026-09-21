@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_files_streams.rst",
+    "line_start": 45,
+    "line_end": 54,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Std_Text_Out is\nbegin\n   Put_Line (Standard_Output, \"Hello World #1\");\n   Put_Line (Standard_Error,  \"Hello World #2\");\nend Show_Std_Text_Out;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Std_Text_Out",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_std_text_out.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_std_text_out.adb",
+    "text_hash": "118768d11bcb732da3318bf8a4e5e002153e72687aefba037dcb491e890524c1b181aa0f8d9321a0d617b63aa4decaff8d31a98605aabdbad6364c6f7caa7cca",
+    "text_hash_short": "4d75bd2906226897244e3d2a611c9725"
+}

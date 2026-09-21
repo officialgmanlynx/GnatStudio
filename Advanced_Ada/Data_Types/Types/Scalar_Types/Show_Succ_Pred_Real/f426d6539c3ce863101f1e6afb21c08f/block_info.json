@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 707,
+    "line_end": 757,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Succ_Pred_Real is\n   subtype My_Float is\n     Float range 0.0 .. 0.5;\n\n   type Decimal is\n     delta 0.1 digits 2\n     range 0.0 .. 0.5;\n\n   D : Decimal;\n   N : My_Float;\nbegin\n   Put_Line (\"---- DECIMAL -----\");\n   Put_Line (\"Small: \" & Decimal'Small'Image);\n   Put_Line (\"----- Succ -------\");\n   D := Decimal'First;\n   loop\n      Put_Line (D'Image);\n      D := Decimal'Succ (D);\n\n      exit when D = Decimal'Last;\n   end loop;\n   Put_Line (\"----- Pred -------\");\n\n   D := Decimal'Last;\n   loop\n      Put_Line (D'Image);\n      D := Decimal'Pred (D);\n\n      exit when D = Decimal'First;\n   end loop;\n   Put_Line (\"==================\");\n\n   Put_Line (\"---- MY_FLOAT ----\");\n   Put_Line (\"----- Succ -------\");\n   N := My_Float'First;\n   for I in 1 .. 5 loop\n      Put_Line (N'Image);\n      N := My_Float'Succ (N);\n   end loop;\n   Put_Line (\"----- Pred -------\");\n\n   for I in 1 .. 5 loop\n      Put_Line (N'Image);\n      N := My_Float'Pred (N);\n   end loop;\nend Show_Succ_Pred_Real;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Scalar_Types.Show_Succ_Pred_Real",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_succ_pred_real.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_succ_pred_real.adb",
+    "text_hash": "7320e815c48e9e1a2c4449e46b89236d32bec624a55a55eaafe2d143f810b04d5b84a3e6894c7e4d1197cf8b16b7c43cb2bacb5021c9066ee7b4847c3d85ab05",
+    "text_hash_short": "f426d6539c3ce863101f1e6afb21c08f"
+}

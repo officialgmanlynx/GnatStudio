@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 1821,
+    "line_end": 1832,
+    "text": "with System;\n\npackage Custom_Int_Out_Of_Range is\n\n   type Custom_Int is\n     range System.Min_Int - 1 ..\n           System.Max_Int + 1;\n\nend Custom_Int_Out_Of_Range;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Integer_Types.Custom_Int_Out_Of_Range",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_int_out_of_range.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "bad49df4aa89961a543119dfaec81daa8b6c2530e8eb42ebb10de3c9ef984c82cdb6ddad99d492bc336ed8a92439fc92c97799f67b5c7865183a90914821e16f",
+    "text_hash_short": "8f7a58a8097f4caf521338c6a3f90dd0"
+}

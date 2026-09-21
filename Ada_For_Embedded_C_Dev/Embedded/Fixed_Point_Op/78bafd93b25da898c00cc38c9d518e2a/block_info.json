@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/04_Embedded.rst",
+    "line_start": 475,
+    "line_end": 489,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Fixed_Point_Op is\n   type TQ31 is delta 2.0 ** (-31) range -1.0 .. 1.0 - 2.0 ** (-31);\n\n   A, B, R : TQ31;\nbegin\n   A := 0.25;\n   B := 0.50;\n   R := A + B;\n   Put_Line (\"R is \" & TQ31'Image (R));\nend Fixed_Point_Op;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Embedded.Fixed_Point_Op",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "fixed_point_op.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "fixed_point_op.adb",
+    "text_hash": "df08ef9ac4b0a0b93961b35f62367e83335958fff50718946dcef955eeb892c684f9dc73ef4688911ec8cd6033f1f881346ce98aa4edddd8199270d34636e605",
+    "text_hash_short": "78bafd93b25da898c00cc38c9d518e2a"
+}

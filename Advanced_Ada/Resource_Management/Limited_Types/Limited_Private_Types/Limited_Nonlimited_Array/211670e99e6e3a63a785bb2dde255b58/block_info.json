@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 745,
+    "line_end": 799,
+    "text": "package Limited_Nonlimited_Arrays is\n\n   type Limited_Private is\n     limited private;\n\n   function Init return Limited_Private;\n\n   --  The array type Limited_Private_Array\n   --  is limited because the type of its\n   --  component is limited.\n   type Limited_Private_Array is\n     array (Positive range <>) of\n       Limited_Private;\n\nprivate\n\n   type Limited_Private is\n   record\n      A : Integer;\n   end record;\n\n   --  Limited_Private_Array type is\n   --  nonlimited at this point because\n   --  its component is nonlimited.\n   --\n   --  The assignments below are OK:\n   A1 : Limited_Private_Array (1 .. 5);\n\n   A2 : Limited_Private_Array := A1;\n\nend Limited_Nonlimited_Arrays;\n\npackage body Limited_Nonlimited_Arrays is\n\n   function Init return Limited_Private is\n     ((A => 1));\n\nend Limited_Nonlimited_Arrays;\n\nwith Limited_Nonlimited_Arrays;\nuse  Limited_Nonlimited_Arrays;\n\nprocedure Show_Limited_Nonlimited_Array is\n   A3 : Limited_Private_Array (1 .. 2) :=\n          (others => Init);\n   A4 : Limited_Private_Array (1 .. 2);\nbegin\n   --  ERROR: this assignment is illegal because\n   --  Limited_Private_Array is limited, as\n   --  its component is limited at this point.\n   A4 := A3;\nend Show_Limited_Nonlimited_Array;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Limited_Private_Types.Limited_Nonlimited_Array",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "limited_nonlimited_arrays.ads",
+        "limited_nonlimited_arrays.adb",
+        "show_limited_nonlimited_array.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_limited_nonlimited_array.adb",
+    "text_hash": "9d84ad8dd7907e49095592e25a8a6b43f8038c95f3dbabf368e9a24474b472a842f8e0409544c0fd244824b5bd79a1d20356380df082b5d93d46c45e383f002c",
+    "text_hash_short": "211670e99e6e3a63a785bb2dde255b58"
+}

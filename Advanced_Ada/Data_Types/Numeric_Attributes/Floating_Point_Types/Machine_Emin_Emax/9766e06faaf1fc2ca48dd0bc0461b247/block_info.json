@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numeric_attributes.rst",
+    "line_start": 356,
+    "line_end": 381,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Machine_Emin_Emax is\nbegin\n   Put_Line\n     (\"Float'Machine_Emin:               \"\n      & Float'Machine_Emin'Image);\n   Put_Line\n     (\"Float'Machine_Emax:               \"\n      & Float'Machine_Emax'Image);\n   Put_Line\n     (\"Long_Float'Machine_Emin:          \"\n      & Long_Float'Machine_Emin'Image);\n   Put_Line\n     (\"Long_Float'Machine_Emax:          \"\n      & Long_Float'Machine_Emax'Image);\n   Put_Line\n     (\"Long_Long_Float'Machine_Emin:     \"\n      & Long_Long_Float'Machine_Emin'Image);\n   Put_Line\n     (\"Long_Long_Float'Machine_Emax:     \"\n      & Long_Long_Float'Machine_Emax'Image);\nend Show_Machine_Emin_Emax;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numeric_Attributes.Floating_Point_Types.Machine_Emin_Emax",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_machine_emin_emax.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_machine_emin_emax.adb",
+    "text_hash": "cf2db1972b435f53f3cb302c5bf6f7cad120f135f2a9bc8d9131b5294777d87ddbbf2e22756d4ec0b49b19c1f5ef093b90006602750e2d675ff7dfccebff8c75",
+    "text_hash_short": "9766e06faaf1fc2ca48dd0bc0461b247"
+}

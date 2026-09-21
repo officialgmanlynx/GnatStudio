@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 6074,
+    "line_end": 6108,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith System.Address_To_Access_Conversions;\nwith System.Address_Image;\n\nprocedure Show_Address_Conversion is\n\n   package Integer_AAC is\n     new System.Address_To_Access_Conversions\n       (Object => Integer);\n   use Integer_AAC;\n\n   subtype Integer_Access is\n     Integer_AAC.Object_Pointer;\n   --  This is similar to:\n   --\n   --  type Integer_Access is access all Integer;\n\n   I  : aliased Integer := 5;\n   AI : Integer_Access  := I'Access;\nbegin\n   Put_Line (\"I'Address : \"\n             & System.Address_Image (I'Address));\n\n   Put_Line (\"AI.all'Address : \"\n             & System.Address_Image\n                 (AI.all'Address));\n\n   Put_Line (\"To_Address (AI) : \"\n             & System.Address_Image\n                 (To_Address (AI)));\nend Show_Address_Conversion;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Access_Address.Address_Conversion",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_address_conversion.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_address_conversion.adb",
+    "text_hash": "0e3d575723c64febd14940a1c1ed1213da883f4979225899b1a3e92684ab7059b5365ddcae73a920647e3c2bda8d55dc16d75fab999f4eaeeae6c2aee68545b6",
+    "text_hash_short": "717532026247044a667b60f6c1e1c7da"
+}

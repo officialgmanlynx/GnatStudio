@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/02_program_consistency.rst",
+    "line_start": 124,
+    "line_end": 150,
+    "text": "package Helper is\n   procedure Put_Line (S : String);\nend Helper;\n\nwith Ada.Text_IO;\n\npackage body Helper is\n   procedure Put_Line (S : String) is\n   begin\n      Ada.Text_IO.Put_Line (\"Start helper version\");\n      Ada.Text_IO.Put_Line (S);\n      Ada.Text_IO.Put_Line (\"End helper version\");\n   end Put_Line;\nend Helper;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Helper; use Helper;\n\nprocedure Hello_World is\nbegin\n   Ada.Text_IO.Put_Line (\"hello, world!\");\n   Helper.Put_Line (\"hello, world!\");\n   Put_Line (\"hello, world!\");  --  ERROR\nend Hello_World;\n",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Program_Consistency.Hello_World",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "helper.ads",
+        "helper.adb",
+        "hello_world.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "hello_world.adb",
+    "text_hash": "e30bcd23a25492bcc7af7664a497a2e86699799974924c60f86a0be77e5885c665b31e317ee2f5deeb5e812a9188d42e054f4c868260da2268e02fe199e781a4",
+    "text_hash_short": "405e138d78e0dc869e8a340681d87e61"
+}

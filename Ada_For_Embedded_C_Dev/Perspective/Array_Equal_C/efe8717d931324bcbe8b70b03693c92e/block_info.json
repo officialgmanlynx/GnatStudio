@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 2149,
+    "line_end": 2177,
+    "text": "!main.c\n#include <stdio.h>\n\nint main(int argc, const char * argv[])\n{\n    int A1 [2] = { 10, 20 };\n    int A2 [2] = { 10, 20 };\n\n    int eq = 1;\n\n    for (int i = 0; i < 2; ++i) {\n        if (A1 [i] != A2 [i]) {\n            eq = 0;\n            break;\n        }\n    }\n\n    if (eq) {\n        printf(\"A1 == A2\\n\");\n    }\n    else {\n        printf(\"A1 != A2\\n\");\n    }\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Array_Equal_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "72b2c774b10fa343775127e463bc0e3cc54dd6b4fae3dc44b2a2f8036e7119a20c1318d4f49224e4e4e816f5ab67c501b3ec60b89b83d4a31f253a4d6780a637",
+    "text_hash_short": "efe8717d931324bcbe8b70b03693c92e"
+}

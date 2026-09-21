@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/controlled_types.rst",
+    "line_start": 2137,
+    "line_end": 2217,
+    "text": "with Ada.Finalization;\n\npackage CT_Finalize_Exception is\n\n   type T is tagged private;\n\n   procedure Dummy (E : T);\n\n   procedure Reset_Counter;\n\nprivate\n\n   type T is new\n     Ada.Finalization.Controlled\n       with null record;\n\n   overriding\n   procedure Initialize (E : in out T);\n\n   overriding\n   procedure Adjust (E : in out T);\n\n   overriding\n   procedure Finalize (E : in out T);\n\nend CT_Finalize_Exception;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body CT_Finalize_Exception is\n\n   Cnt : Integer := Integer'Last;\n\n   procedure Dummy (E : T) is\n   begin\n      Put_Line (\"(Dummy...)\");\n   end Dummy;\n\n   procedure Initialize (E : in out T) is\n   begin\n      Put_Line (\"Initialize...\");\n   end Initialize;\n\n   overriding\n   procedure Adjust (E : in out T) is\n   begin\n      Put_Line (\"Adjust...\");\n   end Adjust;\n\n   procedure Finalize (E : in out T) is\n   begin\n      Put_Line (\"Finalize...\");\n      Cnt := Cnt + 1;\n   end Finalize;\n\n   procedure Reset_Counter is\n   begin\n      Cnt := 0;\n   end Reset_Counter;\n\nend CT_Finalize_Exception;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith CT_Finalize_Exception;\nuse  CT_Finalize_Exception;\n\nprocedure Show_Finalize_Exception is\n   A, B : T;\nbegin\n   Dummy (A);\n\n   --  When A is about to get out of\n   --  scope:\n   --\n   --  Finalize (A);\n   --\nend Show_Finalize_Exception;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Controlled_Types.Exception_Handling.CT_Finalize_Exception",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "ct_finalize_exception.ads",
+        "ct_finalize_exception.adb",
+        "show_finalize_exception.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_finalize_exception.adb",
+    "text_hash": "94245061e423b7f0a071611454634ddf76498da3a8011d24c766dbc7a949f7fb989d9fe4110ab4922b01b987890c5d61c81c10ca1f297738595787fae7a3a08d",
+    "text_hash_short": "eacb64b0a9d68ce3484a3bda9b633495"
+}

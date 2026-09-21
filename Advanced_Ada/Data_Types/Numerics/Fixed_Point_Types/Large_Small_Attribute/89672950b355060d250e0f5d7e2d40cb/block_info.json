@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 3197,
+    "line_end": 3227,
+    "text": "package Fixed_Point_Defs is\n   S     : constant := 32;\n   Exp   : constant := 128;\n   D     : constant := 2.0 ** (-S + Exp + 1);\n\n   type Fixed is delta D\n     range -1.0 * 2.0 ** Exp ..\n            1.0 * 2.0 ** Exp - D;\n\n   pragma Assert (Fixed'Size = S);\nend Fixed_Point_Defs;\n\nwith Fixed_Point_Defs; use Fixed_Point_Defs;\nwith Ada.Text_IO;      use Ada.Text_IO;\n\nprocedure Show_Fixed_Type_Info is\nbegin\n   Put_Line (\"Size : \"\n             & Fixed'Size'Image);\n   Put_Line (\"Small : \"\n             & Fixed'Small'Image);\n   Put_Line (\"Delta : \"\n             & Fixed'Delta'Image);\n   Put_Line (\"First : \"\n             & Fixed'First'Image);\n   Put_Line (\"Last : \"\n             & Fixed'Last'Image);\nend Show_Fixed_Type_Info;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Fixed_Point_Types.Large_Small_Attribute",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "fixed_point_defs.ads",
+        "show_fixed_type_info.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_fixed_type_info.adb",
+    "text_hash": "f25a1c48927456c3a4409965b9c26213e8f21cb7699bc0c7b0341fb1ef3e3f4e0c1fd8e0115578a4788cf05f8d9c6fff116c8466c9cf7697c83e5b09514ce3b8",
+    "text_hash_short": "89672950b355060d250e0f5d7e2d40cb"
+}

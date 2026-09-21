@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/subprograms.rst",
+    "line_start": 1108,
+    "line_end": 1128,
+    "text": "package My_Data is\n\n   type Data is private;\n\n   function Is_Valid (D : Data)\n                      return Boolean;\n\nprivate\n\n   type Data is record\n      Valid : Boolean;\n   end record;\n\n   function Is_Valid (D : Data)\n                      return Boolean is\n     (D.Valid);\n\nend My_Data;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Subprograms.Expression_Functions.Private_Expression_Function_1",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "my_data.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "dcf2c8897909566a997e864b840ce9d8706ce1b12c5e95c3874b6b2eda8c37e7ff3fe5aa4f24437953a235a35513730a8e120968acd28d4efd384665d450a674",
+    "text_hash_short": "beb57eca67b3954097e0f7ac00ea70c9"
+}

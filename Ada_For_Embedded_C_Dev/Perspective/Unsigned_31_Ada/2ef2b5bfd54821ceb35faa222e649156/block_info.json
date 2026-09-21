@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 1732,
+    "line_end": 1747,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main is\n   type Signed_Int_32 is range -2 ** 31 .. 2 ** 31 - 1;\n\n   subtype Unsigned_Int_31 is Signed_Int_32 range 0 .. Signed_Int_32'Last;\n   --  Equivalent to:\n   --  subtype Unsigned_Int_31 is Signed_Int_32 range 0 .. 2 ** 31 - 1;\n\n   X : Unsigned_Int_31 := 42;\nbegin\n   Put_Line (\"X = \" & Unsigned_Int_31'Image (X));\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Unsigned_31_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "b3ee7dd01b80d3d1a171a49d5973f1be9851df2788c7bd1d6f24723db22d7036dc5fbe1951ceb3b7e91ac99268e45405e3eea56454adf4b923baa1b4dd6d13b4",
+    "text_hash_short": "2ef2b5bfd54821ceb35faa222e649156"
+}

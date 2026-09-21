@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/04_Embedded.rst",
+    "line_start": 1079,
+    "line_end": 1127,
+    "text": "package Arbitrary_Types is\n\n   type Arbitrary_Record is record\n      A : Integer;\n      B : Integer;\n      C : Integer;\n   end record;\n\nend Arbitrary_Types;\n\nwith Arbitrary_Types;\n\nprocedure Serialize_Data (Some_Object : Arbitrary_Types.Arbitrary_Record);\n\nwith Arbitrary_Types;\n\nprocedure Serialize_Data (Some_Object : Arbitrary_Types.Arbitrary_Record) is\n   type UByte is new Natural range 0 .. 255\n     with Size => 8;\n\n   type UByte_Array is array (Positive range <>) of UByte;\n\n   --\n   --  We can access the serialized data in Raw_TX, which is our overlay\n   --\n   Raw_TX : UByte_Array (1 .. Some_Object'Size / 8)\n     with Address => Some_Object'Address;\nbegin\n   null;\n   --\n   --  Now, we could stream the data from Some_Object.\n   --\n   --  For example, we could send the bytes (from Raw_TX) via the\n   --  serial port.\n   --\nend Serialize_Data;\n\nwith Arbitrary_Types;\nwith Serialize_Data;\n\nprocedure Data_Stream_Declaration is\n   Dummy_Object : Arbitrary_Types.Arbitrary_Record;\n\nbegin\n    Serialize_Data (Dummy_Object);\nend Data_Stream_Declaration;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Embedded.Data_Stream_Declaration",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "arbitrary_types.ads",
+        "serialize_data.ads",
+        "serialize_data.adb",
+        "data_stream_declaration.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "data_stream_declaration.adb",
+    "text_hash": "c8a82a3d9cc893543f023cd4a8bf2eff5ac082d489803d4c2f0b002ebd55983df940acfda0521e319e553136c26063deadf6da2bc557e4fa326c838e89029c3f",
+    "text_hash_short": "1de6f518520010c28fd8deb29a2bf209"
+}

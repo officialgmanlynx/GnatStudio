@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/statements.rst",
+    "line_start": 69,
+    "line_end": 84,
+    "text": "procedure Show_Cleanup is\n   pragma Warnings (Off, \"always false\");\n\n   Some_Error : Boolean;\nbegin\n   Some_Error := False;\n\n   if Some_Error then\n      goto Cleanup;\n   end if;\n\n   <<Cleanup>> null;\nend Show_Cleanup;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Statements.Labels.Label_Goto",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_cleanup.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_cleanup.adb",
+    "text_hash": "8705745934c80b6358b33edcf65f5e6100250e6fc581534c9906846e463bc7ed657a5bae862c028a79ab6929de8455abee8f47d8c0141d580731cd4ea7ffb182",
+    "text_hash_short": "0ce06582bbefae818d4da3b7d2d3436b"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/subprograms.rst",
+    "line_start": 550,
+    "line_end": 563,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Image_Renaming is\n\n   function Img (I : Integer) return String\n     renames Integer'Image;\n\nbegin\n   Put_Line (Img (2));\n   Put_Line (Img (3));\nend Show_Image_Renaming;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Subprograms.Integer_Image_Renaming",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_image_renaming.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_image_renaming.adb",
+    "text_hash": "752fdbd4947be12864119f32a4895c9b7fdf347c9e56e5176d34200f73acfdebfa6bbca7efbecb26ae542fdb998dc8af14f8932f1501ca6fab9a1846297903a1",
+    "text_hash_short": "9843b9d5967679c4fe8bd83a5213829f"
+}

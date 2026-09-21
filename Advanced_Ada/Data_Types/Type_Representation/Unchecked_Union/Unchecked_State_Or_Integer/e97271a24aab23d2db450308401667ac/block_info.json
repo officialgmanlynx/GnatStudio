@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 2218,
+    "line_end": 2260,
+    "text": "package States is\n\n   type State is (Off, On, Waiting)\n     with Size => Integer'Size;\n\n   for State use (Off     => 1,\n                  On      => 2,\n                  Waiting => 4);\n\n   type State_Or_Integer (Use_Enum : Boolean) is\n   record\n      case Use_Enum is\n         when False => I : Integer;\n         when True  => S : State;\n      end case;\n   end record;\n\n   type Unchecked_State_Or_Integer\n     (Use_Enum : Boolean) is new\n       State_Or_Integer (Use_Enum)\n         with Unchecked_Union;\n\n   procedure Display_State_Value\n     (V : Unchecked_State_Or_Integer);\n\nend States;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body States is\n\n   procedure Display_State_Value\n     (V : Unchecked_State_Or_Integer)\n   is\n   begin\n      Put_Line (\"State: \" & V.S'Image);\n      Put_Line (\"Value: \" & V.I'Image);\n   end Display_State_Value;\n\nend States;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Unchecked_Union.Unchecked_State_Or_Integer",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "states.ads",
+        "states.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "37fb55bec0e4c36cf8ae7536f1a787a0a8de7fb6e3761935e438d2849fa435d55da0b2f51c064ad635483fe72c28f8a483f8b59cb883a9afc6c6153b897b59df",
+    "text_hash_short": "e97271a24aab23d2db450308401667ac"
+}

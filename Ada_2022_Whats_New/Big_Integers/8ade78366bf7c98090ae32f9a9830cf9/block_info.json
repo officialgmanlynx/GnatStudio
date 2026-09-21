@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/whats-new-in-ada-2022/chapters/big_numbers.rst",
+    "line_start": 54,
+    "line_end": 84,
+    "text": "with Ada.Numerics.Big_Numbers.Big_Integers;\nuse  Ada.Numerics.Big_Numbers.Big_Integers;\n\n--  Calculate M ** D mod N\n\nfunction Power_Mod (M, D, N : Big_Integer) return Big_Integer;\n\nfunction Power_Mod (M, D, N : Big_Integer) return Big_Integer is\n\n   function Is_Odd (X : Big_Integer) return Boolean is\n     (X mod 2 /= 0);\n\n   Result : Big_Integer := 1;\n   Exp    : Big_Integer := D;\n   Mult   : Big_Integer := M mod N;\nbegin\n   while Exp /= 0 loop\n      --  Loop invariant is Power_Mod'Result = Result * Mult**Exp mod N\n      if Is_Odd (Exp) then\n         Result := (Result * Mult) mod N;\n      end if;\n\n      Mult := Mult ** 2 mod N;\n      Exp := Exp / 2;\n   end loop;\n\n   return Result;\nend Power_Mod;\n",
+    "language": "ada",
+    "project": "Courses.Ada_2022_Whats_New.Big_Integers",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "power_mod.ads",
+        "power_mod.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "0671b4d2eb1ff3e4f49aeb462ca5224171f297b00d9c6bd70fa06c2063cf386150b600a0a77e2bceb9b6a976efc2f9b32d154df8390d8031d87a3ddc0180662c",
+    "text_hash_short": "8ade78366bf7c98090ae32f9a9830cf9"
+}

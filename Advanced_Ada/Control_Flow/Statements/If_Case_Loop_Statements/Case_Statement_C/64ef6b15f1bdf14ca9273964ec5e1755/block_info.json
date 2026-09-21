@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/statements.rst",
+    "line_start": 485,
+    "line_end": 504,
+    "text": "!main.c\n\n#include <stdio.h>\n\nint main(int argc, const char * argv[])\n{\n   int s = 0;\n\n   switch (s)\n   {\n      case 0:\n      case 1:\n         printf(\"Value in the 0 -- 1 range\\n\");\n      default:\n         printf(\"Value > 1\\n\");\n   }\n}\n",
+    "language": "c",
+    "project": "Courses.Advanced_Ada.Control_Flow.Statements.If_Case_Loop_Statements.Case_Statement_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "88313d242fcff78a88c20a19fc48f4fd5b2ee13e628c9b86dc30639f5d8ee5e7b41f9e8fbba2973c06bee7f496f6db57548edca2c49b6ba0fe69fd040a8bc634",
+    "text_hash_short": "64ef6b15f1bdf14ca9273964ec5e1755"
+}

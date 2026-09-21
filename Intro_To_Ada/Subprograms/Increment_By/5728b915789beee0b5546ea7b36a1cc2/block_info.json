@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/subprograms.rst",
+    "line_start": 45,
+    "line_end": 51,
+    "text": "function Increment_By\n  (I    : Integer := 0;\n   Incr : Integer := 1) return Integer;\n--                ^ Default value for parameters\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Subprograms.Increment_By",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-syntax-only"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": true,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "increment_by.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "b0683df7675564df400c692cf7b2f0edde2f5bc9e3be1a4feacbc1b7591062b07904ccecfa54e858011b409e003cb13b64115a4aaf1c9fc28a5a933579a4e605",
+    "text_hash_short": "5728b915789beee0b5546ea7b36a1cc2"
+}

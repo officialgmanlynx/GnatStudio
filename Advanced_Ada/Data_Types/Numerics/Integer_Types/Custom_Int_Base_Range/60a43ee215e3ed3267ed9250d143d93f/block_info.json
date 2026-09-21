@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 1846,
+    "line_end": 1879,
+    "text": "with System;\n\npackage Custom_Integer_Types is\n\n   type Custom_Int is\n     range 1 .. 10;\n\nend Custom_Integer_Types;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Custom_Integer_Types;\nuse  Custom_Integer_Types;\n\nprocedure Show_Custom_Integer_Types is\nbegin\n   Put_Line (\"Custom_Int'Size  :\"\n             & Custom_Int'Size'Image\n             & \" bits\");\n   Put_Line (\"Custom_Int'First :\"\n             & Custom_Int'First'Image);\n   Put_Line (\"Custom_Int'Last  :\"\n             & Custom_Int'Last'Image);\n\n   Put_Line (\"Custom_Int'Base'Size  :\"\n             & Custom_Int'Base'Size'Image);\n   Put_Line (\"Custom_Int'Base'First :\"\n             & Custom_Int'Base'First'Image);\n   Put_Line (\"Custom_Int'Base'Last  :\"\n             & Custom_Int'Base'Last'Image);\nend Show_Custom_Integer_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Integer_Types.Custom_Int_Base_Range",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_integer_types.ads",
+        "show_custom_integer_types.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_custom_integer_types.adb",
+    "text_hash": "ddfbc3d715219db387f06ae482284a03cf2c318664595f14183999814827cc53cb618cb09f936136ed84b3d3306f598fc0687311aaa9bfd0f31df7d6b4121bbe",
+    "text_hash_short": "60a43ee215e3ed3267ed9250d143d93f"
+}

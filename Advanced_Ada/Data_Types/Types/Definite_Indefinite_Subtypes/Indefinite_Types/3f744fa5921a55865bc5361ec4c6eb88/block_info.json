@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 1541,
+    "line_end": 1572,
+    "text": "with Unconstrained_Types; use Unconstrained_Types;\n\nprocedure Show_Integer_Array (A : Integer_Array);\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Integer_Array (A : Integer_Array)\nis\nbegin\n   for I in A'Range loop\n      Put_Line (Positive'Image (I)\n                & \": \"\n                & Integer'Image (A (I)));\n   end loop;\n   Put_Line (\"--------\");\nend Show_Integer_Array;\n\nwith Unconstrained_Types; use Unconstrained_Types;\nwith Show_Integer_Array;\n\nprocedure Using_Unconstrained_Type is\n   A_5  : constant Integer_Array (1 .. 5)  :=\n            (1, 2, 3, 4, 5);\n   A_10 : constant Integer_Array (1 .. 10) :=\n            (1, 2, 3, 4, 5, others => 99);\nbegin\n   Show_Integer_Array (A_5);\n   Show_Integer_Array (A_10);\nend Using_Unconstrained_Type;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Definite_Indefinite_Subtypes.Indefinite_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_integer_array.ads",
+        "show_integer_array.adb",
+        "using_unconstrained_type.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "using_unconstrained_type.adb",
+    "text_hash": "7136a3acd4fa2a3f0d32854ac4b575657d055641ae515d8172a896aed0a482463ac963ca0e58c72d5b8ec22d68f0895afdd4b79c58d532571fadc4ba5684d260",
+    "text_hash_short": "3f744fa5921a55865bc5361ec4c6eb88"
+}

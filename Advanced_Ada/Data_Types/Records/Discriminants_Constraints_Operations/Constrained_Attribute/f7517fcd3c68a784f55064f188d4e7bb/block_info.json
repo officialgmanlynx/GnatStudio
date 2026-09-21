@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 2344,
+    "line_end": 2376,
+    "text": "with Ada.Text_IO;         use Ada.Text_IO;\n\nwith Unconstrained_Types; use Unconstrained_Types;\n\nprocedure Using_Constrained_Attribute is\n   R1 : Simple_Record;\n   R2 : Simple_Record (Extended => False);\n\n   procedure Show_Rs is\n   begin\n      Put_Line (\"R1'Constrained => \"\n                & R1'Constrained'Image);\n      Put_Line (\"R1.Extended => \"\n                & R1.Extended'Image);\n      Put_Line (\"--\");\n      Put_Line (\"R2'Constrained => \"\n                & R2'Constrained'Image);\n      Put_Line (\"R2.Extended => \"\n                & R2.Extended'Image);\n      Put_Line (\"----------------\");\n   end Show_Rs;\nbegin\n   Show_Rs;\n\n   Reset (R1);\n   Reset (R2);\n   Put_Line (\"----------------\");\n\n   Show_Rs;\nend Using_Constrained_Attribute;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Discriminants_Constraints_Operations.Constrained_Attribute",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "using_constrained_attribute.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "using_constrained_attribute.adb",
+    "text_hash": "2d8c437a25ea9a1f5a4ae0ffe862d0671092f01ca425b4e515b245ddc28cf5333af553ca157a2c939a62b479c64d3077ad994d1dd906492e2c4c1d6e3c7428b1",
+    "text_hash_short": "f7517fcd3c68a784f55064f188d4e7bb"
+}

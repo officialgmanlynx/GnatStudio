@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 4319,
+    "line_end": 4414,
+    "text": "package Custom_Types is\n   D_48 : constant := 2.0 ** (-48);\n\n   type TQ15_48 is\n     delta  D_48\n     range -2.0 ** 15 ..\n            2.0 ** 15 - D_48;\n\n   type T2_D6 is\n     delta 10.0 ** (-2) digits 6;\n   --  Decimal type\n\n   type TD18 is\n     digits 18;\n   --  Floating-point type\n\n   type Int15 is\n     range -2 ** 15 ..\n            2 ** 15;\n   --  Integer type\n\nend Custom_Types;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Custom_Types;\nuse  Custom_Types;\n\nprocedure Show_Decimal_Type_Conversions is\n   V_2_D6   : T2_D6;\n   V_D18    : TD18;\n   V_Q15_48 : TQ15_48;\n   V_Int15  : Int15;\nbegin\n   V_Q15_48 := 1.0;\n\n   V_2_D6   := T2_D6 (V_Q15_48);\n   V_D18    := TD18 (V_Q15_48);\n   V_Int15  := Int15 (V_Q15_48);\n   --          ^^^^^^^^^^^^^^^^\n   --  Conversions from\n   --  ordinary fixed-point\n\n   Put_Line (\"V_Q15_48 = \"\n             & V_Q15_48'Image);\n   Put_Line (\"V_2_D6   = \"\n             & V_2_D6'Image);\n   Put_Line (\"V_D18    = \"\n             & V_D18'Image);\n   Put_Line (\"V_Int15  = \"\n             & V_Int15'Image);\n   Put_Line (\"-----------------------------\");\n\n   V_D18    := TD18 (TQ15_48'Last);\n\n   V_Q15_48 := TQ15_48 (V_D18);\n   --          ^^^^^^^^^^^^^\n   --  Conversion to\n   --  ordinary fixed-point\n\n   Put_Line (\"V_Q15_48 = \"\n             & V_Q15_48'Image);\n   Put_Line (\"V_D18    = \"\n             & V_D18'Image);\n   Put_Line (\"-----------------------------\");\n\n   V_2_D6   := 2.0;\n\n   V_Q15_48 := TQ15_48 (V_2_D6);\n   --          ^^^^^^^^^^^^^^^\n   --  Conversion to\n   --  ordinary fixed-point\n\n   Put_Line (\"V_Q15_48 = \"\n             & V_Q15_48'Image);\n   Put_Line (\"V_2_D6   = \"\n             & V_2_D6'Image);\n   Put_Line (\"-----------------------------\");\n\n   V_Int15  := 4;\n\n   V_Q15_48 := TQ15_48 (V_Int15);\n   --          ^^^^^^^^^^^^^^^^^\n   --  Conversion to\n   --  ordinary fixed-point\n\n   Put_Line (\"V_Q15_48 = \"\n             & V_Q15_48'Image);\n   Put_Line (\"V_Int15  = \"\n             & V_Int15'Image);\n   Put_Line (\"-----------------------------\");\n\nend Show_Decimal_Type_Conversions;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Fixed_Point_Types.Ordinary_Fixed_Type_Conversions_Other_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_types.ads",
+        "show_decimal_type_conversions.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_decimal_type_conversions.adb",
+    "text_hash": "abea94815bcce1bd3e19adb605c05baad1ec05414a1208728966c6eaaa19f5df0e8fdc7821f8e1c4fc1ee7c1e5c2c93c42a466b6c4ae9131e4dc8ab820062ce8",
+    "text_hash_short": "3d6596c88ab524352a7b1bedaf914ae2"
+}

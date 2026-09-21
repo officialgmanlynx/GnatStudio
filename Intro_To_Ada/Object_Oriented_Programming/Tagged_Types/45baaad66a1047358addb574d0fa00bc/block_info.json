@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/object_oriented_programming.rst",
+    "line_start": 189,
+    "line_end": 231,
+    "text": "package P is\n   type My_Class is tagged null record;\n   --  Just like a regular record, but\n   --  with tagged qualifier\n\n   --  Methods are outside of the type\n   --  definition:\n\n   procedure Foo (Self : in out My_Class);\n   --  If you define a procedure taking a\n   --  My_Class argument in the same package,\n   --  it will be a method.\n\n   --  Here's how you derive a tagged type:\n\n   type Derived is new My_Class with record\n      A : Integer;\n      --  You can add fields in derived types.\n   end record;\n\n   overriding\n   procedure Foo (Self : in out Derived);\n   --  The \"overriding\" qualifier is optional,\n   --  but if it is present, it must be valid.\nend P;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body P is\n   procedure Foo (Self : in out My_Class) is\n   begin\n      Put_Line (\"In My_Class.Foo\");\n   end Foo;\n\n   procedure Foo (Self : in out Derived) is\n   begin\n      Put_Line (\"In Derived.Foo, A = \"\n                & Integer'Image (Self.A));\n   end Foo;\nend P;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Object_Oriented_Programming.Tagged_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "p.ads",
+        "p.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "e5c688bda7c5b1b31d8fade16f8c7ded2e2a371399c3e6afab4e2da0743b577a4d4709e54de2b53f3a244e005331ce2a2bf43fea5615896f519b1b0df431cbeb",
+    "text_hash_short": "45baaad66a1047358addb574d0fa00bc"
+}

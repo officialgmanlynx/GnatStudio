@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/generics.rst",
+    "line_start": 176,
+    "line_end": 248,
+    "text": "generic\n   type T is private;\npackage Element is\n\n   procedure Set (E : T);\n   procedure Reset;\n   function Get return T;\n   function Is_Valid return Boolean;\n\n   Invalid_Element : exception;\n\nprivate\n   Value : T;\n   Valid : Boolean := False;\nend Element;\n\npackage body Element is\n\n   procedure Set (E : T) is\n   begin\n      Value := E;\n      Valid := True;\n   end Set;\n\n   procedure Reset is\n   begin\n      Valid := False;\n   end Reset;\n\n   function Get return T is\n   begin\n      if not Valid then\n         raise Invalid_Element;\n      end if;\n      return Value;\n   end Get;\n\n   function Is_Valid return Boolean is (Valid);\nend Element;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Element;\n\nprocedure Show_Generic_Package is\n\n   package I is new Element (T => Integer);\n\n   procedure Display_Initialized is\n   begin\n      if I.Is_Valid then\n         Put_Line (\"Value is initialized\");\n      else\n         Put_Line (\"Value is not initialized\");\n      end if;\n   end Display_Initialized;\n\nbegin\n   Display_Initialized;\n\n   Put_Line (\"Initializing...\");\n   I.Set (5);\n   Display_Initialized;\n   Put_Line (\"Value is now set to \"\n             & Integer'Image (I.Get));\n\n   Put_Line (\"Resetting...\");\n   I.Reset;\n   Display_Initialized;\n\nend Show_Generic_Package;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Generics.Show_Generic_Package",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "element.ads",
+        "element.adb",
+        "show_generic_package.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_generic_package.adb",
+    "text_hash": "faaeedb9393650dc7f5853efeaedd18d97ee2a23e4850e5e34bcfbdabddaf398dde9871e48c9e1c8ce8b31ef6fd630baecfa91c7618ae5110c6b75ed26c38669",
+    "text_hash_short": "c5278a06c6d06f1f37353ee0ca6686ec"
+}

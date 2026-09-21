@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/strings.rst",
+    "line_start": 193,
+    "line_end": 209,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Wide_Char_Types is\nbegin\n   Put_Line (\"Character'Size:           \"\n             & Integer'Image\n                 (Character'Size));\n   Put_Line (\"Wide_Character'Size:      \"\n             & Integer'Image\n                 (Wide_Character'Size));\n   Put_Line (\"Wide_Wide_Character'Size: \"\n             & Integer'Image\n                 (Wide_Wide_Character'Size));\nend Show_Wide_Char_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Strings.Wide_Wide-Wide_Strings.Wide_Char_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_wide_char_types.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_wide_char_types.adb",
+    "text_hash": "4f91210a7d54bfdee6dcdc881b5c1e04e64cbf0e21e41476780758ab6676aa8ee2c4cd075b383c696197583ce025a0f1be5dde6aa8d8224a1cda6049a19dfbec",
+    "text_hash_short": "a0e9fb9e8d43e9fa707dc8c57f7562f8"
+}

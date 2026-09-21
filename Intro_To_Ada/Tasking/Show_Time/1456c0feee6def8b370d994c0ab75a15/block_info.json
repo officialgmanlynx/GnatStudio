@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/tasking.rst",
+    "line_start": 472,
+    "line_end": 512,
+    "text": "with Ada.Text_IO;   use Ada.Text_IO;\nwith Ada.Real_Time; use Ada.Real_Time;\n\nwith Delay_Aux_Pkg;\n\nprocedure Show_Time_Task is\n   package Aux renames Delay_Aux_Pkg;\n\n   task T;\n\n   task body T is\n      Cycle : constant Time_Span :=\n        Milliseconds (1000);\n      Next  : Time := Aux.Get_Start_Time\n                      + Cycle;\n\n      Cnt   : Integer := 1;\n   begin\n      for I in 1 .. 5 loop\n         delay until Next;\n\n         Aux.Show_Elapsed_Time;\n         Aux.Computational_Intensive_App;\n\n         --  Calculate next execution time\n         --  using a cycle of one second\n         Next := Next + Cycle;\n\n         Put_Line (\"Cycle # \"\n                   & Integer'Image (Cnt));\n         Cnt  := Cnt + 1;\n      end loop;\n      Put_Line (\"Finished cycling\");\n   end T;\n\nbegin\n   null;\nend Show_Time_Task;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Tasking.Show_Time",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_time_task.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_time_task.adb",
+    "text_hash": "e08526063641098459fa9f3202d62383f5080ae40581f097513a6d929aba66f1613da0bf07835d1d0358b275b088a145b5f4788c2f672258fa91664af18cbe03",
+    "text_hash_short": "1456c0feee6def8b370d994c0ab75a15"
+}

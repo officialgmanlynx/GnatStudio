@@ -1,0 +1,49 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/05_Proof_Of_Functional_Correctness.rst",
+    "line_start": 285,
+    "line_end": 329,
+    "text": "package Show_Ghost is\n\n   type T is record\n      A, B, C, D, E : Boolean;\n   end record;\n\n   function Formula (X : T) return Boolean is\n     ((X.A and X.B) or (X.C and (X.D or X.E)));\n\n   function Is_Correct (X, Y : T) return Boolean is\n     (Formula (X) = Formula (Y));\n\n   procedure Do_Something (X : in out T);\n\nend Show_Ghost;\n\npackage body Show_Ghost is\n\n   procedure Do_Some_Complex_Stuff (X : in out T) is\n   begin\n      X := T'(X.B, X.A, X.C, X.E, X.D);\n   end Do_Some_Complex_Stuff;\n\n   procedure Do_Something (X : in out T) is\n      X_Init : constant T := X with Ghost;\n   begin\n      Do_Some_Complex_Stuff (X);\n      pragma Assert (Is_Correct (X_Init, X));\n\n      X := X_Init; -- ERROR\n\n   end Do_Something;\n\nend Show_Ghost;\n\nwith Show_Ghost; use Show_Ghost;\n\nprocedure Use_Ghost is\n   X : T := (True, True, False, False, True);\nbegin\n   Do_Something (X);\nend Use_Ghost;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Proof_of_Functional_Correctness.Ghost_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error",
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove",
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": true,
+    "source_files": [
+        "show_ghost.ads",
+        "show_ghost.adb",
+        "use_ghost.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": "use_ghost.adb",
+    "text_hash": "6f8d066c44a1403b204d46c8996d1c6acb5d26d75d5b7d629130d136c5ae1e67b4401a79b71c333b79ba469310dedff8f74aa29b47a3026325de984091b53b07",
+    "text_hash_short": "464bb4bc355a648e2b92940ec80b4717"
+}

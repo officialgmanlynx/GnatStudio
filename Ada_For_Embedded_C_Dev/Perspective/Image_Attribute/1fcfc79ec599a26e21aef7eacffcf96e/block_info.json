@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 1851,
+    "line_end": 1862,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main is\n   A : Integer := 10;\nbegin\n   Put_Line (Integer'Image (A));\n   A := Integer'Value (\"99\");\n   Put_Line (Integer'Image (A));\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Image_Attribute",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "de4757535214f28e63c2c4ef37822813ed23258ebfb1d72d5dfa57c0d11d85f4466fce1e87c79261b56f44db507f5981dbab7b26c3b94324bba9b9f4bf8666a4",
+    "text_hash_short": "1fcfc79ec599a26e21aef7eacffcf96e"
+}

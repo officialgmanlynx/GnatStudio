@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 2707,
+    "line_end": 2823,
+    "text": "package All_Anonymous_Access_To_Subprogram is\n\n   --\n   --  Anonymous access-to-subprogram as\n   --  subprogram parameter:\n   --\n   procedure Proc\n     (P : access procedure (I : in out Integer));\n\n   --\n   --  Anonymous access-to-subprogram in\n   --  array type declaration:\n   --\n   type Access_To_Procedure_Array is\n     array (Positive range <>) of\n       access procedure (I : in out Integer);\n\n   protected type Protected_Integer is\n\n     procedure Mult_Ten;\n\n     procedure Mult_Twenty;\n\n   private\n     I : Integer := 1;\n   end Protected_Integer;\n\n   --\n   --  Anonymous access-to-subprogram as\n   --  component of a record type.\n   --\n   type Rec_Access_To_Procedure is record\n      AP  : access procedure (I : in out Integer);\n   end record;\n\n   --\n   --  Anonymous access-to-subprogram as\n   --  discriminant:\n   --\n   type Rec_Access_To_Procedure_Discriminant\n          (AP : access procedure\n                  (I : in out Integer)) is\n   record\n      I : Integer := 0;\n   end record;\n\n   procedure Process\n     (R : in out\n            Rec_Access_To_Procedure_Discriminant);\n\n   generic\n      type T is private;\n\n      --\n      --  Anonymous access-to-subprogram as\n      --  formal parameter:\n      --\n      Proc_T : access procedure\n                 (Element : in out T);\n   procedure Gen_Process (Element : in out T);\n\nend All_Anonymous_Access_To_Subprogram;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body All_Anonymous_Access_To_Subprogram is\n\n   procedure Proc\n     (P : access procedure (I : in out Integer))\n   is\n      I : Integer := 0;\n   begin\n      Put_Line\n        (\"Calling procedure for Proc...\");\n      P (I);\n      Put_Line (\"Finished.\");\n   end Proc;\n\n   procedure Process\n     (R : in out\n            Rec_Access_To_Procedure_Discriminant)\n   is\n   begin\n      Put_Line\n        (\"Calling procedure for\"\n         & \" Rec_Access_To_Procedure_Discriminant\"\n         & \" type...\");\n      R.AP (R.I);\n      Put_Line (\"Finished.\");\n   end Process;\n\n   procedure Gen_Process (Element : in out T) is\n   begin\n      Put_Line\n        (\"Calling procedure for Gen_Process...\");\n      Proc_T (Element);\n      Put_Line (\"Finished.\");\n   end Gen_Process;\n\n   protected body Protected_Integer is\n\n      procedure Mult_Ten is\n      begin\n         I := I * 10;\n      end Mult_Ten;\n\n      procedure Mult_Twenty is\n      begin\n         I := I * 20;\n      end Mult_Twenty;\n\n   end Protected_Integer;\n\nend All_Anonymous_Access_To_Subprogram;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Anonymous_Access_To_Subprograms.Anonymous_Access_To_Subprogram_Example",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "all_anonymous_access_to_subprogram.ads",
+        "all_anonymous_access_to_subprogram.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "68748ff2c8de0a15d0dca9fcca54217d8efaeac35f1cec1dc277adbfcb968b5baadfccc741ab3d1cb16bd72a95191bd7eae7525c5a672e060c6835cb624eaaed",
+    "text_hash_short": "628dcfdc5fe9b712f33fa044057093c2"
+}

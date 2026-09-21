@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/03_Concurrency.rst",
+    "line_start": 163,
+    "line_end": 183,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main is\n\n   task After is\n      entry Go;\n   end After;\n\n   task body After is\n   begin\n      accept Go;\n      Put_Line (\"After\");\n   end After;\n\nbegin\n   Put_Line (\"Before\");\n   After.Go;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Concurrency.Rendezvous",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "4955bc160313d589e495444a506c70beff9f05e19fe7cc48ceb5e037a8b84af9c2523a8d3a98bedd94fb2dfd840d07cb78f6dc2a49d4595a7d73211bc8490f97",
+    "text_hash_short": "b0a595b1eecac793e40b6d1d41171766"
+}

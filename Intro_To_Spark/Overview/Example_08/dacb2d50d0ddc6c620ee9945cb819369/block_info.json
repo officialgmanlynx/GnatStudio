@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/01_Overview.rst",
+    "line_start": 732,
+    "line_end": 767,
+    "text": "with Ada.Finalization;\n\npackage P\n  with SPARK_Mode => On\nis\n   subtype Letter is Character range 'a' .. 'z';\n   type String_Access is private;\n   type Dictionary is array (Letter) of String_Access;\n\n   function New_String_Access (W : String) return String_Access;\n\n   procedure Store (D : in out Dictionary; W : String);\n\nprivate\n   pragma SPARK_Mode (Off);\n\n   type String_Access is new Ada.Finalization.Controlled with record\n      Ptr : access String;\n   end record;\n\n   function New_String_Access (W : String) return String_Access is\n     (Ada.Finalization.Controlled with Ptr => new String'(W));\nend P;\n\npackage body P\n  with SPARK_Mode => On\nis\n   procedure Store (D : in out Dictionary; W : String) is\n      First_Letter : constant Letter := W (W'First);\n   begin\n      D (First_Letter) := New_String_Access (W);\n   end Store;\nend P;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Overview.Example_08",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "p.ads",
+        "p.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "df74f3e3cbdf7dae576dfcb286be6e7f01fdf9d7eec7b4bb82f7ad134e7317e1c29f2d0bda83044a759f5d655558952ba6e1f5e5432512dd7ecdaeb75232ba93",
+    "text_hash_short": "dacb2d50d0ddc6c620ee9945cb819369"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 44,
+    "line_end": 65,
+    "text": "procedure Show_Identifiers is\n--        ^^^^^^^^^^^^^^^^\n--           identifier\n\n   type New_Integer is new\n   --   ^^^^^^^^^^^\n   --     identifier\n     Integer;\n   --  ^^^^^\n   --   identifier\n\n   Something_Important : New_Integer;\n   --  ^^^^^^^^^^^^^^^\n   --  identifier\n   --                    ^^^^^^^^^^^\n   --                     identifier\nbegin\n  null;\nend Show_Identifiers;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Names.Identifiers",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_identifiers.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_identifiers.adb",
+    "text_hash": "65594c588ba9fc1bf94956680d49ef7619d5fd49303e57445c6b680ea2ba0c12f1070ad65529f26ded46a56286d20d80a4293e9b3d26d7ffe3fc8e216c2e50df",
+    "text_hash_short": "e427d3e5fe5f549df593b5e5941cf2ba"
+}

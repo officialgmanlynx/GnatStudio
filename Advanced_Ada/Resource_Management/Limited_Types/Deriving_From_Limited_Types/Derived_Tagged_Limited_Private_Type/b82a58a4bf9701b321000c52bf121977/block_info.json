@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 1253,
+    "line_end": 1266,
+    "text": "package Simple_Recs.Ext is\n\n   type Rec_Derived is limited new\n     Tagged_Rec with private;\n\nprivate\n\n   type Rec_Derived is limited new\n     Tagged_Rec with null record;\n\nend Simple_Recs.Ext;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Deriving_From_Limited_Types.Derived_Tagged_Limited_Private_Type",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple_recs-ext.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "simple_recs-ext.ads",
+    "text_hash": "7f5ad7ebad969fe32bbe80ca873171892949a48507326edf6df4cc6010f4c5b8285cc965b6b16875c37022c79dec2bb62fd8a86f1b183169fbbd6f0fa25a9fa6",
+    "text_hash_short": "b82a58a4bf9701b321000c52bf121977"
+}

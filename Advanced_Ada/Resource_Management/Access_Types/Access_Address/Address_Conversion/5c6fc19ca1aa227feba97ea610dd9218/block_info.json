@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 6132,
+    "line_end": 6171,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\nwith System;      use System;\n\nwith System.Address_To_Access_Conversions;\nwith System.Address_Image;\n\nprocedure Show_Address_Conversion is\n\n   package Integer_AAC is\n     new System.Address_To_Access_Conversions\n       (Object => Integer);\n   use Integer_AAC;\n\n   subtype Integer_Access is\n     Integer_AAC.Object_Pointer;\n\n   I          : aliased Integer := 5;\n   AI_1, AI_2 : Integer_Access;\n   A          : Address;\nbegin\n   AI_1 := I'Access;\n   A    := To_Address (AI_1);\n   AI_2 := To_Pointer (A);\n\n   Put_Line (\"AI_1.all'Address : \"\n             & System.Address_Image\n                 (AI_1.all'Address));\n   Put_Line (\"AI_2.all'Address : \"\n             & System.Address_Image\n                 (AI_2.all'Address));\n\n   if AI_1 = AI_2 then\n      Put_Line (\"AI_1 = AI_2\");\n   else\n      Put_Line (\"AI_1 /= AI_2\");\n   end if;\nend Show_Address_Conversion;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Access_Address.Address_Conversion",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_address_conversion.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_address_conversion.adb",
+    "text_hash": "fe4a37743489ce14f8313e84e9f4d2fa2273804e355637093d41bd27a0aeb3f425c4a64737911b8ae549338e0d1e75bdb4ef6c8bb7d2bba1ce6b58bda989e315",
+    "text_hash_short": "5c6fc19ca1aa227feba97ea610dd9218"
+}

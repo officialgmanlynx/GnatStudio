@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 776,
+    "line_end": 803,
+    "text": "--  ./src/app_1/app_defs.ads\n\npackage App_Defs is\n\n   Mod_Value : constant Integer := 4;\n\nend App_Defs;\n\nfunction Func (X : Integer) return Integer;\n\nwith App_Defs;\n\nfunction Func (X : Integer) return Integer is\nbegin\n    return X mod App_Defs.Mod_Value;\nend Func;\n\nwith Func;\n\nprocedure Main is\n   A, B : Integer;\nbegin\n   A := 10;\n   B := Func (A);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.App_Version_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "app_defs.ads",
+        "func.ads",
+        "func.adb",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "5a32b9d891924a50d5b62e6b43d86a6e79592afaf6b25f136722b518458d037c1e7f37cc8d7d18486837c7843803e9224f24bc3da42601f793253cd50cee47ab",
+    "text_hash_short": "7c8e4280e74c04ab51073b25e8f53995"
+}

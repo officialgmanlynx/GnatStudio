@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/modular_prog/subprograms_modularity.rst",
+    "line_start": 16,
+    "line_end": 24,
+    "text": "private procedure Test;\n\nprocedure Test is\nbegin\n   null;\nend Test;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Modular_Prog.Subprograms_Modularity.Private_Subprograms.Private_Test_Procedure",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "test.ads",
+        "test.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "a76d516a5a035754631e863acfd02c73ca0e9ed0203dcc0eb808aaad4c56b8bfebc75057467c5a58247fae67314f9fe33ca4e65769727069365d6f2163e32148",
+    "text_hash_short": "2ea1770a5fd5dee40f015b9d33d2f309"
+}

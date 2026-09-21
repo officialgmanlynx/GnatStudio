@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 2637,
+    "line_end": 2676,
+    "text": "procedure Proc\n (Var1 : Integer;\n  Var2 : out Integer;\n  Var3 : in out Integer);\n\nfunction Func (Var : Integer) return Integer;\n\nwith Func;\n\nprocedure Proc\n (Var1 : Integer;\n  Var2 : out Integer;\n  Var3 : in out Integer)\nis\nbegin\n   Var2 := Func (Var1);\n   Var3 := Var3 + 1;\nend Proc;\n\nfunction Func (Var : Integer) return Integer\nis\nbegin\n   return Var + 1;\nend Func;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Proc;\n\nprocedure Main is\n   V1, V2 : Integer;\nbegin\n   V2 := 2;\n   Proc (5, V1, V2);\n\n   Put_Line (\"V1: \" & Integer'Image (V1));\n   Put_Line (\"V2: \" & Integer'Image (V2));\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Subroutines_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "proc.ads",
+        "func.ads",
+        "proc.adb",
+        "func.adb",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "89aae4c72d017cd3e94c80e2fb03c1f58f4234d3bb8a1f7ee04ee1691956b6031556c8ffaecbcabde130d747596dd7a686788aa18187653bc1007a3c3197aca9",
+    "text_hash_short": "a35fb6ae1b37325c3f39b3316e4246a8"
+}

@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/fixed_point_types.rst",
+    "line_start": 112,
+    "line_end": 127,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Decimal_Fixed_Point_Types is\n   type Decimal is\n     delta 10.0 ** (0) digits 3;\n\n   D : Decimal := 0.1;\n   --             ^^^\n   --  ERROR: value cannot be represented\n   --         by Decimal type.\nbegin\n   Put_Line (D'Image);\nend Decimal_Fixed_Point_Types;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Fixed_Point_Types.Decimal_Fixed_Point_Type_Precision_Error",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "decimal_fixed_point_types.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "decimal_fixed_point_types.adb",
+    "text_hash": "3e1f750fe973186a2c49b4618149748d53d303faf53dbd7dc5c962f3854fe045f38e82daf1bc5ecf1c9cd8372cb4587bf0707401cf9743c725b83645f4678f15",
+    "text_hash_short": "d169d7796b61392baada9795ee8b8187"
+}

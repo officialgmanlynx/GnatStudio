@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/04_State_Abstraction.rst",
+    "line_start": 366,
+    "line_end": 411,
+    "text": "package Stack with\n  Abstract_State => The_Stack\nis\n   type Element is new Integer;\n\n   procedure Pop  (E : out Element);\n   procedure Push (E : Element);\nend Stack;\n\npackage Configuration with\n  Initializes => External_Variable\nis\n   External_Variable : Positive with Volatile;\nend Configuration;\n\nwith Configuration;\npragma Elaborate (Configuration);\n\npackage body Stack with\n  Refined_State => (The_Stack => (Content, Top, Max))\n  --  Max has variable inputs. It must appear as a\n  --  constituent of The_Stack\nis\n   Max : constant Positive := Configuration.External_Variable;\n\n   type Element_Array is array (1 .. Max) of Element;\n\n   Content : Element_Array := (others => 0);\n   Top     : Natural range 0 .. Max := 0;\n\n   procedure Pop (E : out Element) is\n   begin\n      E   := Content (Top);\n      Top := Top - 1;\n   end Pop;\n\n   procedure Push (E : Element) is\n   begin\n      Top           := Top + 1;\n      Content (Top) := E;\n   end Push;\n\nend Stack;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.State_Abstraction.Constants_And_Variables",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow_report_all"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "stack.ads",
+        "configuration.ads",
+        "stack.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "31d8c68547559fe9e558a30b467472baca7ace0765564ccdbbeddd4e15902dd1b373420ab131882e522fc1fbda22bf07bc1896e300c0a0b753a7399653e15096",
+    "text_hash_short": "109a6340ef0f3b0dc88e0fe5888b9a53"
+}

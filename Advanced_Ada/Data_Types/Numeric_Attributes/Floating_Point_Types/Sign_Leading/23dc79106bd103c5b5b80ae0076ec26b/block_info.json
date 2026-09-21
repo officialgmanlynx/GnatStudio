@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numeric_attributes.rst",
+    "line_start": 841,
+    "line_end": 873,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Copy_Sign_Leading_Part_Machine is\nbegin\n   Put_Line\n     (\"Float'Copy_Sign (1.0, -10.0): \"\n      & Float'Copy_Sign (1.0, -10.0)'Image);\n   Put_Line\n     (\"Float'Copy_Sign (-1.0, -10.0): \"\n      & Float'Copy_Sign (-1.0, -10.0)'Image);\n   Put_Line\n     (\"Float'Copy_Sign (1.0,  10.0): \"\n      & Float'Copy_Sign (1.0,  10.0)'Image);\n   Put_Line\n     (\"Float'Copy_Sign (1.0, -0.0):  \"\n      & Float'Copy_Sign (1.0, -0.0)'Image);\n   Put_Line\n     (\"Float'Copy_Sign (1.0,  0.0):  \"\n      & Float'Copy_Sign (1.0,  0.0)'Image);\n   Put_Line\n     (\"Float'Leading_Part (1.75, 1): \"\n      & Float'Leading_Part (1.75, 1)'Image);\n   Put_Line\n     (\"Float'Leading_Part (1.75, 2): \"\n      & Float'Leading_Part (1.75, 2)'Image);\n   Put_Line\n     (\"Float'Leading_Part (1.75, 3): \"\n      & Float'Leading_Part (1.75, 3)'Image);\nend Show_Copy_Sign_Leading_Part_Machine;\n\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numeric_Attributes.Floating_Point_Types.Sign_Leading",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_copy_sign_leading_part_machine.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_copy_sign_leading_part_machine.adb",
+    "text_hash": "c80a898278985644def19b30a9bcb003ea56042ebbbfe383407afaeaf72191b9be247e70ba71d3ac86816a3780956f97bc7c4b5689ee783904c88219cc17c667",
+    "text_hash_short": "23dc79106bd103c5b5b80ae0076ec26b"
+}

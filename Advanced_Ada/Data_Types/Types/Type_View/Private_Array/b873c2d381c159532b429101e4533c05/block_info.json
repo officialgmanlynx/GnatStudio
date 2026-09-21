@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 2008,
+    "line_end": 2037,
+    "text": "!private_arrays.ads\npackage Private_Arrays is\n\n   type Private_Unconstrained_Array is private;\n\n   type Private_Constrained_Array\n     (L : Positive) is private;\n\nprivate\n\n   type Integer_Array is\n     array (Positive range <>) of Integer;\n\n   type Private_Unconstrained_Array is\n     array (Positive range <>) of Integer;\n\n   type Private_Constrained_Array\n     (L : Positive) is\n       array (1 .. 2) of Integer;\n\n   --  NOTE: using an array type fails as well:\n   --\n   --  type Private_Constrained_Array\n   --    (L : Positive) is\n   --      Integer_Array (1 .. L);\n\nend Private_Arrays;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Type_View.Private_Array",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": true,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "private_arrays.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "d9bb5914f480e8acf6097bfae2e8cbf983d1d1afacc37eb282f84e2903aac7a6dea252b5a380c49d93e424454d7f812df330cc86bba7d320fa82eb7d14185c94",
+    "text_hash_short": "b873c2d381c159532b429101e4533c05"
+}

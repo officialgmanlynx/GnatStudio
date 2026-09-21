@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 622,
+    "line_end": 649,
+    "text": "with Ada.Unchecked_Deallocation;\n\nprocedure Show_Successful_Deallocation is\n\n   type Integer_Access is\n      access Integer;\n\n   procedure Free is\n     new Ada.Unchecked_Deallocation\n       (Object => Integer,\n        Name   => Integer_Access);\n\n   IA       : access Integer;\n   Typed_IA : Integer_Access;\n\nbegin\n   Typed_IA := new Integer;\n   IA := Typed_IA;\n   IA.all := 30;\n\n   --  Deallocation of the access object that has\n   --  an associated type:\n   Free (Typed_IA);\n\nend Show_Successful_Deallocation;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Anonymous_Access_To_Object_Types.Deallocation_Anonymous_Access_To_Object_1",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_successful_deallocation.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_successful_deallocation.adb",
+    "text_hash": "14f4898a4eb528c3478ec0d6c594e8da158c20b5b91dc3a167eb6ff48af9c1f819a407cfe6c141a356c4000be6cf095a86cda004ad3d17b1b64f2629b1e1f845",
+    "text_hash_short": "eff8b54adfcc8cce10920dc3620ff1b9"
+}

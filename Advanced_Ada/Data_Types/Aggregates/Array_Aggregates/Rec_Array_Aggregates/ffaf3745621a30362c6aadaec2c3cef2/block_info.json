@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/aggregates.rst",
+    "line_start": 1373,
+    "line_end": 1429,
+    "text": "package Points is\n\n   subtype Point_Value is Integer;\n\n   type Point_3D is record\n      X, Y, Z : Point_Value;\n   end record;\n\n   procedure Display (P : Point_3D);\n\n   type Point_3D_Array is\n     array (Positive range <>) of Point_3D;\n\n   procedure Display (PA : Point_3D_Array);\n\nend Points;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Points is\n\n   procedure Display (P : Point_3D) is\n   begin\n      Put (\"      (X => \"\n           & Point_Value'Image (P.X)\n           & \",\");\n      New_Line;\n      Put (\"       Y => \"\n           & Point_Value'Image (P.Y)\n           & \",\");\n      New_Line;\n      Put (\"       Z => \"\n           & Point_Value'Image (P.Z)\n           & \")\");\n   end Display;\n\n   procedure Display (PA : Point_3D_Array) is\n   begin\n      Put_Line (\"(\");\n      for I in PA'Range (1) loop\n         Put_Line (\"  \"\n                   & Integer'Image (I)\n                   & \" =>\");\n         Display (PA (I));\n         if I /= PA'Last (1) then\n            Put_Line (\",\");\n         else\n            New_Line;\n         end if;\n      end loop;\n      Put_Line (\")\");\n   end Display;\n\nend Points;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Aggregates.Array_Aggregates.Rec_Array_Aggregates",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "points.ads",
+        "points.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "64b6e6f307ad393d9545b44bdb048f5f6a7681f10892eef2a6f615c7182eff3de899ea16893939ef3b805d5e74f82ea1d0bb94c6757d349baa74105c08b35b39",
+    "text_hash_short": "ffaf3745621a30362c6aadaec2c3cef2"
+}

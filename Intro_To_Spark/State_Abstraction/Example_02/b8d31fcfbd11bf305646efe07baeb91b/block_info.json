@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/04_State_Abstraction.rst",
+    "line_start": 849,
+    "line_end": 887,
+    "text": "package Configuration is\n\n   External_Variable : Natural := 1;\n\nend Configuration;\n\nwith Configuration;\n\npackage Communication with\n  Abstract_State => State\nis\nprivate\n\n   package Ring_Buffer with\n     Abstract_State => (B_State with Part_Of => State),\n     Initializes    => (B_State => Configuration.External_Variable)\n   is\n      function Get_Capacity return Natural;\n   private\n      Capacity : constant Natural := Configuration.External_Variable\n        with Part_Of => B_State;\n   end Ring_Buffer;\n\nend Communication;\n\npackage body Communication with\n  Refined_State => (State => Ring_Buffer.B_State)\nis\n\n   package body Ring_Buffer with\n      Refined_State => (B_State => Capacity)\n   is\n      function Get_Capacity return Natural is (Capacity);\n   end Ring_Buffer;\n\nend Communication;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.State_Abstraction.Example_02",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow_report_all"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "configuration.ads",
+        "communication.ads",
+        "communication.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "8e110d28c1bb90146af33f624354a10a87e2fe33680d1a4839f8433f8fe37f6fd31b9a6cc72cf9691a878e6d02b600a5ef205eb00d98d5406d4dc844d37b0baa",
+    "text_hash_short": "b8d31fcfbd11bf305646efe07baeb91b"
+}

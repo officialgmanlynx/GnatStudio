@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 1345,
+    "line_end": 1360,
+    "text": "package Names is\n\n   function Init (S1, S2 : String)\n                  return access String;\n   --             ^^^^^^^^^^^^^^^^^^^^\n   --  Anonymous access type as the access\n   --  result type.\n\n   procedure Show (N : access constant String);\n   --                  ^^^^^^^^^^^^^^^^^^^^^^\n   --  Anonymous access type as a parameter type.\n\nend Names;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Anonymous_Access_Parameters.Names",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "names.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "9bd12558a5035d2608c9bed138241beb53419c7f9e1ce93f9f65eb2d05ac3d3636b8f8d8004d1057ccc3e81a6b34793e22ad48e3c2db67ebdd58c2e6ca5ce3ef",
+    "text_hash_short": "622a76c4b133ed2715f18c175694cbe2"
+}

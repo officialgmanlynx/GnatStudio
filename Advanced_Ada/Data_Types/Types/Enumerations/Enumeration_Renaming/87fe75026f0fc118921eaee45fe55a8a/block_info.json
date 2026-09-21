@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 978,
+    "line_end": 1021,
+    "text": "package Enumeration_Example is\n\n   type Day is (Mon, Tue, Wed,\n                Thu, Fri,\n                Sat, Sun);\n\nend Enumeration_Example;\n\nwith Enumeration_Example;\n\npackage Enumeration_Renaming is\n\n   subtype Day is Enumeration_Example.Day;\n\n   function Monday    return Day renames\n     Enumeration_Example.Mon;\n   function Tuesday   return Day renames\n     Enumeration_Example.Tue;\n   function Wednesday return Day renames\n     Enumeration_Example.Wed;\n   function Thursday  return Day renames\n     Enumeration_Example.Thu;\n   function Friday    return Day renames\n     Enumeration_Example.Fri;\n   function Saturday  return Day renames\n     Enumeration_Example.Sat;\n   function Sunday    return Day renames\n     Enumeration_Example.Sun;\n\nend Enumeration_Renaming;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Enumeration_Renaming;\nuse  Enumeration_Renaming;\n\nprocedure Show_Renaming is\n   D1 : constant Day := Monday;\nbegin\n   Put_Line (Day'Image (D1));\nend Show_Renaming;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Enumerations.Enumeration_Renaming",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "enumeration_example.ads",
+        "enumeration_renaming.ads",
+        "show_renaming.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_renaming.adb",
+    "text_hash": "ec9a8cbee2184a9674ad1ed2d79cd347b30e3b44946cf447905a9e68deec7e9d50bafdfea6999499e02be9d4495d4defeef810ab94773268dee55131376f2f16",
+    "text_hash_short": "87fe75026f0fc118921eaee45fe55a8a"
+}

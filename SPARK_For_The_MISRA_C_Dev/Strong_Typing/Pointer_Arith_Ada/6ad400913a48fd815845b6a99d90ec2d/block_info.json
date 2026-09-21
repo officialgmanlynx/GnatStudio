@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/04_strong_typing.rst",
+    "line_start": 548,
+    "line_end": 575,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Ok_Arith is\n\n   B1 : constant Boolean := False;\n   B2 : constant Boolean := Boolean'Succ (B1);\n   B3 : constant Boolean := Boolean'Pred (B2);\n\n   type Fruit is (Apple, Orange);\n   F1 : constant Fruit := Apple;\n   F2 : constant Fruit := Fruit'Succ (F1);\n   F3 : constant Fruit := Fruit'Pred (F2);\n\nbegin\n   pragma Assert (B1 = B3);\n   pragma Assert (F1 = F3);\n\n   for B in Boolean loop\n      Put_Line (B'Img);\n   end loop;\n\n   for F in Fruit loop\n      Put_Line (F'Img);\n   end loop;\nend Ok_Arith;\n",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Strong_Typing.Pointer_Arith_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "ok_arith.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "ok_arith.adb",
+    "text_hash": "b45a1c47a0b2ee2e72f7acdce9ea148dc5af342d6366515ce3f5658f5c5b07af160e87ae3a034d49c1310a92014c7f8439499cd3f1c00ac7acde85b621fa0a07",
+    "text_hash_short": "6ad400913a48fd815845b6a99d90ec2d"
+}

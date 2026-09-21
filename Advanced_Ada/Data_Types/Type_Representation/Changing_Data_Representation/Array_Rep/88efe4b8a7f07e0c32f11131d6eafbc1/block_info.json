@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 1706,
+    "line_end": 1728,
+    "text": "with Array_Representation;\nuse  Array_Representation;\n\nprocedure Using_Array_For_IO is\n   Input_Data  : External_Arr;\n   Work_Data   : Arr;\n   Output_Data : External_Arr;\nbegin\n   --  (read data into Input_Data)\n\n   --  Now convert to internal form\n   Work_Data := Arr (Input_Data);\n\n   --  (computations using efficient\n   --   Work_Data form)\n\n   --  Convert back to external form\n   Output_Data := External_Arr (Work_Data);\n\nend Using_Array_For_IO;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Changing_Data_Representation.Array_Rep",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "using_array_for_io.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "1f3f883fb217ec1ca8ffd804681a855157c139dafd17b585dec0ce9a73ad264b58c4b7275e2c3b31710ddd1a94ca414aba82af3a1a4a47c2135f90a51b720647",
+    "text_hash_short": "88efe4b8a7f07e0c32f11131d6eafbc1"
+}

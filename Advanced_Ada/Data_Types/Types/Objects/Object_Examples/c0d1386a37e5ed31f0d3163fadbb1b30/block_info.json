@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 400,
+    "line_end": 435,
+    "text": "procedure Show_Objects is\n\n   type Device (Id : Positive) is\n   record\n      Value : Integer;\n   end record;\n\n   type Device_Access is\n     access all Device;\n\n   Dev : aliased Device (99);\n   --                    ^^\n   --  Discriminant `Id` is a\n   --  constant object.\n   --\n   --  `Dev` is a variable object,\n   --  though.\n\n   Dev_Acc : Device_Access := Dev'Access;\n\n   procedure Process (D : Device) is\n     null;\n   --                 ^\n   --         constant object\nbegin\n   Dev.Value := 0;\n   --  ^^^^^\n   --  variable object\n\n   Dev_Acc.all.Value := 1;\n   --  ^^^^^^^\n   --  variable object\nend Show_Objects;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Objects.Object_Examples",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_objects.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_objects.adb",
+    "text_hash": "dd7426d56df3e4bacab41f01d74cad5a3f29d0536069db074fdc72a0991639030716e7771deb4ba63b87fd784938b3679c9e3ba158e083d7254a5f44e2f9a325",
+    "text_hash_short": "c0d1386a37e5ed31f0d3163fadbb1b30"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 4808,
+    "line_end": 4832,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Custom_Decimal_Types;\nuse  Custom_Decimal_Types;\n\nprocedure Show_Mixing_Decimal_Types is\n   A : Short_Decimal;\n   B : Decimal;\nbegin\n   A := 1000.0;\n   B := 0.19;\n   Put_Line (\"A = \" &\n             A'Image);\n   Put_Line (\"B = \" &\n             B'Image);\n   Put_Line (\"----------\");\n\n   A := A / B;\n   Put_Line (\"A := A / B\");\n   Put_Line (\"A = \" &\n             A'Image);\nend Show_Mixing_Decimal_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Fixed_Point_Types.Universal_Fixed_Decimal",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_mixing_decimal_types.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_mixing_decimal_types.adb",
+    "text_hash": "08599c76bc617354e1f74b0a103cc74c217bd836a819e7e164b00c85e6a74bc885c0001fe14e2185fb36bbf027b78c9d61a0e2f39da3c05fe59f9c9de1649bbe",
+    "text_hash_short": "444f69fb660c8b7928de04347d8de999"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/interfacing_with_c.rst",
+    "line_start": 102,
+    "line_end": 111,
+    "text": "!my_func.c\n#include \"my_func.h\"\n\nint my_func (int a)\n{\n    return a * 2;\n}\n",
+    "language": "c",
+    "project": "Courses.Intro_To_Ada.Interfacing_With_C.Ada_C_Func",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "my_func.c"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "36e7b9728ddc9325976355630be6a14972a63128c925e5fa5c69b22b3703f4445fc9ceaf3ca9e5c8a31e31ba24bba37bdedcf137259b77b9a1899639bc395576",
+    "text_hash_short": "284b1639cb393fc14ed196d78429f3ba"
+}

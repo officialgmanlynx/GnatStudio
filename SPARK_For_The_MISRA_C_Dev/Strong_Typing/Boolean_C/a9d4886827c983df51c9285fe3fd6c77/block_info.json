@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/04_strong_typing.rst",
+    "line_start": 583,
+    "line_end": 595,
+    "text": "!main.c\n#include <stdbool.h>\n#include <stdio.h>\n\nint main() {\n   typedef enum {Ape, Bee, Cat} Animal;\n   bool answer = (2 * Bee) || ! (2 * Bee);\n   printf(\"two bee or not two bee? %d\\n\", answer);\n   return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Strong_Typing.Boolean_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "f50dc1402577b7f9da5349d9efce0394cbcd809b4d6be2f3c0a1bb84ba861afe21c0b254ecd222d2a70299af8946be25ee26790e3f428ceaacf1a94675d10a68",
+    "text_hash_short": "a9d4886827c983df51c9285fe3fd6c77"
+}

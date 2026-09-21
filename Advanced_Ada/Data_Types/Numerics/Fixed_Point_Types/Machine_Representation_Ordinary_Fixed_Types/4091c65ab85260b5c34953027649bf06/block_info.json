@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 5120,
+    "line_end": 5153,
+    "text": "with Ada.Text_IO;   use Ada.Text_IO;\n\nwith Angles;        use  Angles;\n\nwith Angles.Show_Info_Procs;\nuse  Angles.Show_Info_Procs;\n\nprocedure Show_Ordinary_Fixed_Machine_Repr\nis\n   V_Angle     : Angle;\n   V_Angle_Adj : Angle_Adj;\nbegin\n   Put_Line (\"-----------------------------\");\n   Put_Line (\"---- 90.0\");\n   Put_Line (\"-----------------------------\");\n\n   V_Angle     := 90.0;\n   V_Angle_Adj := 90.0;\n\n   Show_Info (V_Angle,     \"V_Angle     \");\n   Show_Info (V_Angle_Adj, \"V_Angle_Adj \");\n\n   Put_Line (\"-----------------------------\");\n   Put_Line (\"---- V := V * 2\");\n   Put_Line (\"-----------------------------\");\n   V_Angle     := V_Angle     * 2;\n   V_Angle_Adj := V_Angle_Adj * 2;\n\n   Show_Info (V_Angle,     \"V_Angle     \");\n   Show_Info (V_Angle_Adj, \"V_Angle_Adj \");\nend Show_Ordinary_Fixed_Machine_Repr;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Fixed_Point_Types.Machine_Representation_Ordinary_Fixed_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_ordinary_fixed_machine_repr.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_ordinary_fixed_machine_repr.adb",
+    "text_hash": "7838abab5c946a016e49aa05b92b83e627cb678376b25b62df46fe30f1452d4105e3c5879ab57f83324866b8c0eb33438f01cd97e550b331342a07191f4da970",
+    "text_hash_short": "4091c65ab85260b5c34953027649bf06"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/object_oriented_programming.rst",
+    "line_start": 413,
+    "line_end": 440,
+    "text": "with P; use P;\n\nprocedure Main is\n   package Extend is\n      type D2 is new Derived with null record;\n\n      procedure Bar (Self : in out D2;\n                     Val  :        Integer);\n   end Extend;\n\n   package body Extend is\n      procedure Bar (Self : in out D2;\n                     Val  :        Integer) is\n      begin\n         Self.A := Self.A + Val;\n      end Bar;\n   end Extend;\n\n   use Extend;\n\n   Obj : D2 := (A => 15);\nbegin\n   Obj.Bar (2);\n   Obj.Foo;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Object_Oriented_Programming.Tagged_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "bdcc7405e42a3ca81fb427110114825e1ce319f0fe9d112f2f1329d8b6392c0a7e36a683b9dbe45448f8b91042ad126e077bb2457e3ad60823b7144c260f00b7",
+    "text_hash_short": "fec4f5cc4213cc111708dcc276e870c2"
+}

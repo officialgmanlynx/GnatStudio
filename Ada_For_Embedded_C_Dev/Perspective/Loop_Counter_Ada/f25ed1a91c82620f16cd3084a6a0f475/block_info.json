@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 1031,
+    "line_end": 1043,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main\nis\n   My_Range : constant := 10;\nbegin\n   for I in reverse 0 .. My_Range loop\n      Put_Line (I'Img);\n   end loop;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Loop_Counter_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "b61d7fd9322d372a2cc01a49927210937b230eed386a553b51660243c1d59941362e1e3bd64edb71e01f2e0c875cf437eae6f57f644e9a8c29c0b881e6e8a1a5",
+    "text_hash_short": "f25ed1a91c82620f16cd3084a6a0f475"
+}

@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 1852,
+    "line_end": 1873,
+    "text": "package My_Ints is\n\n   type My_Int_1 is range 1 .. 10;\n\n   function Odd (Arg : My_Int_1)\n                 return Boolean;\n\n   type My_Int_2 is new My_Int_1;\n\nend My_Ints;\n\npackage body My_Ints is\n\n   function Odd (Arg : My_Int_1)\n                return Boolean is\n     (True);\n   --  Dummy implementation!\n\nend My_Ints;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Changing_Data_Representation.My_Int",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "my_ints.ads",
+        "my_ints.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "01b118528232b43f384a2fe62942a9a378c85c7cbb5bd17788cc13a7c28505c1e318c17d45deb7df1def4e7b82fc0c225c5ab33b9b8c1c2fe0cc5242e0054a34",
+    "text_hash_short": "a29401698307998288f02b349d04d1d2"
+}

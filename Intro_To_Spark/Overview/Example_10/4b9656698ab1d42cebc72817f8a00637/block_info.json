@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/01_Overview.rst",
+    "line_start": 834,
+    "line_end": 868,
+    "text": "package P\n  with SPARK_Mode => On\nis\n   type N_Array is array (Positive range <>) of Natural;\n   Not_Found : exception;\n\n   function Search_Zero_P (A : N_Array) return Positive;\n\n   function Search_Zero_N (A : N_Array) return Natural;\nend P;\n\npackage body P\n  with SPARK_Mode => On\nis\n   function Search_Zero_P (A : N_Array) return Positive is\n   begin\n      for I in A'Range loop\n         if A (I) = 0 then\n            return I;\n         end if;\n      end loop;\n      raise Not_Found;\n   end Search_Zero_P;\n\n   function Search_Zero_N (A : N_Array) return Natural\n     with SPARK_Mode => Off is\n   begin\n      return Search_Zero_P (A);\n   exception\n      when Not_Found => return 0;\n   end Search_Zero_N;\nend P;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Overview.Example_10",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "p.ads",
+        "p.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "eddbf7998b6b7c811de4bdee20daf33793cc7df5695f1680ec87fb51e28f3a31af27b1bb8b4e81ad9da4da42f4a5ecfdbbbc299560b715381dcae74eaec1c6f8",
+    "text_hash_short": "4b9656698ab1d42cebc72817f8a00637"
+}

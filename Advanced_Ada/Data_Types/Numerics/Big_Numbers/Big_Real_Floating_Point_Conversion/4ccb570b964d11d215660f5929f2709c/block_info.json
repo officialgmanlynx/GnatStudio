@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 11120,
+    "line_end": 11157,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Ada.Numerics.Big_Numbers.Big_Reals;\nuse  Ada.Numerics.Big_Numbers.Big_Reals;\n\nprocedure Show_Big_Real_Floating_Point_Conversion\nis\n   type D10 is digits 10;\n\n   package D10_Conversions is new\n     Float_Conversions (D10);\n   use D10_Conversions;\n\n   package Long_Float_Conversions is new\n     Float_Conversions (Long_Float);\n   use Long_Float_Conversions;\n\n   BR  : Big_Real;\n   LF  : Long_Float := 2.0;\n   F10 : D10        := 1.999;\n\nbegin\n   BR := To_Big_Real (LF);\n   Put_Line (\"BR:   \" & BR'Image);\n\n   LF := From_Big_Real (BR + 1.0);\n   Put_Line (\"LF:   \" & LF'Image);\n\n   BR := To_Big_Real (F10);\n   Put_Line (\"BR:   \" & BR'Image);\n\n   F10 := From_Big_Real (BR + 0.1);\n   Put_Line (\"F10:  \" & F10'Image);\n\nend Show_Big_Real_Floating_Point_Conversion;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Big_Numbers.Big_Real_Floating_Point_Conversion",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_big_real_floating_point_conversion.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_big_real_floating_point_conversion.adb",
+    "text_hash": "7c4905bed9c2f31773795c8a54122c879f0acccf242a2c4481b4f7b81d58861bd2e611d256135bd7287921ee955ad73338323cbadc339663818c58714c66b85c",
+    "text_hash_short": "4ccb570b964d11d215660f5929f2709c"
+}

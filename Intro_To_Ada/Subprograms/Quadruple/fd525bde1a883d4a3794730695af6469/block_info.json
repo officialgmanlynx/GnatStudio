@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/subprograms.rst",
+    "line_start": 214,
+    "line_end": 240,
+    "text": "function Quadruple (I : Integer)\n                    return Integer;\n\nfunction Quadruple (I : Integer)\n                    return Integer is\n\n    function Double (I : Integer)\n                     return Integer is\n    begin\n       return I * 2;\n    end Double;\n\n   Res : Integer;\nbegin\n   Double (Double (I));\n   --  ERROR: cannot use call to function\n   --         \"Double\" as a statement\n\n   Res := Double (Double (I));\n   --  OK: return value of Double is\n   --      assigned to Res\n\n   return Res;\nend Quadruple;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Subprograms.Quadruple",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "quadruple.ads",
+        "quadruple.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "94ecdae26a4097fefc64afba296d9e22989f7cbc9ffc9cfa401993cdebe45edfc4b5f12d113fbc7c42b5207c27e682f0fd87f75022a62f8d1d80b6cb72123b0c",
+    "text_hash_short": "fd525bde1a883d4a3794730695af6469"
+}

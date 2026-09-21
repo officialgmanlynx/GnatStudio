@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 1940,
+    "line_end": 1964,
+    "text": "with Info; use Info;\n\nprocedure Show_User_Defined_Reference is\n\n   --  Reference type:\n   type Id_Ref (Ref : access Id_Number) is\n     null record\n       with Implicit_Dereference => Ref;\n\n   --  Access value:\n   I : constant access Id_Number :=\n         new Id_Number (42);\n\n   --  Reference object:\n   R : Id_Ref (I);\nbegin\n\n   R.Show;\n   --  Equivalent to:\n   --  R.Ref.all.Show;\n\nend Show_User_Defined_Reference;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.User_Defined_References.Dereferencing_Tagged_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_user_defined_reference.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_user_defined_reference.adb",
+    "text_hash": "a61e5e7b28647cd9a0380aa155a3c7eeebfd43bf1334f19a14e1537640b1c68790e008b5583b0b5f925e061f7a55ccb6416f091335cbdf3784b7a45a9d00d603",
+    "text_hash_short": "9c5dfc4f2b8e085efde9e61689243f70"
+}

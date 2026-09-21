@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 1597,
+    "line_end": 1617,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Dereferencing is\n\n   --  Declaring access type:\n   type Integer_Access is access Integer;\n\n   --  Declaring access object:\n   A1 : Integer_Access;\n\nbegin\n   A1 := new Integer;\n\n   --  Dereferencing access value:\n   A1.all := 22;\n\n   Put_Line (\"A1: \" & Integer'Image (A1.all));\nend Show_Dereferencing;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Dereferencing.Simple_Dereferencing",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_dereferencing.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_dereferencing.adb",
+    "text_hash": "f0d3292c1df1c8dcdc0d6583334bbf6a80de14243143bcb795f9d1e2dbd1083206f2ebb228ef873503ac58f29de93cb6e8c55711e9b2027fab3ba2cc4029dea6",
+    "text_hash_short": "65655768c17a02991ffeda9a853b6ffb"
+}

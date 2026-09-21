@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 673,
+    "line_end": 713,
+    "text": "package Persons is\n\n   --  Declaring an access type whose\n   --  designated subtype is unconstrained:\n   type String_Access is access String;\n\n   --  Declaring a discriminant with this\n   --  access type:\n   type Person (Name : String_Access) is record\n      Age : Integer;\n   end record;\n\n   procedure Show (P : Person);\n\nend Persons;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Persons is\n\n   procedure Show (P : Person) is\n   begin\n      Put_Line (\"Name = \"\n                & P.Name.all);\n      Put_Line (\"Age  = \"\n                & Integer'Image (P.Age));\n   end Show;\n\nend Persons;\n\nwith Persons; use Persons;\n\nprocedure Show_Person is\n   P : Person (new String'(\"John\"));\nbegin\n   P.Age := 30;\n   Show (P);\nend Show_Person;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Discriminants_As_Access_Values.Persons",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "persons.ads",
+        "persons.adb",
+        "show_person.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_person.adb",
+    "text_hash": "beba2df56e82b140dc2663e9e0ff67be648bd9f7a8cfe3f6d8ba27aec785d705814416da29c8705b48f70430ed559d660e60922c49b0d8d6da5c86faf84d179c",
+    "text_hash_short": "9b1109d076b6f06632c8685a41616210"
+}

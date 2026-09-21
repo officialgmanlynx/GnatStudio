@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 602,
+    "line_end": 612,
+    "text": "with Simple_Recs; use Simple_Recs;\n\nprocedure Use_Rec_In_Subprogram is\n   R1, R2 : Rec;\nbegin\n   R1.I := 1;\n   R2   := R1;\nend Use_Rec_In_Subprogram;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Limited_Private_Types.Limited_Partial_Full_View",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "use_rec_in_subprogram.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "use_rec_in_subprogram.adb",
+    "text_hash": "a8bc46206783502813fd0971ea3fd84208ac741d9f85f64bc2dcf42903270017c0c0339d2e464997deb5116504afeb30ae4c1d61beb636fd4fe278e2e63aaa88",
+    "text_hash_short": "f0af323a951853b97a2b67ce9b13e732"
+}

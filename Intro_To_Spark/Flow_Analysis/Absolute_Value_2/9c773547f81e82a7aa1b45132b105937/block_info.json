@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/02_Flow_Analysis.rst",
+    "line_start": 592,
+    "line_end": 606,
+    "text": "procedure Absolute_Value\n  (X :     Integer;\n   R : out Natural)\nis\nbegin\n   if X < 0 then\n      R := -X;\n   else\n      R := X;\n   end if;\n   --  flow analysis knows that R is initialized\nend Absolute_Value;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Flow_Analysis.Absolute_Value_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "absolute_value.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "1aab75be32f238aa01ddd146d1bba482de474afc39490bbe76d07dc3a826105259b2be5dd5b02fe1945dd3675f13522b7941d67076ed7d164b2409c2ad829bfc",
+    "text_hash_short": "9c773547f81e82a7aa1b45132b105937"
+}

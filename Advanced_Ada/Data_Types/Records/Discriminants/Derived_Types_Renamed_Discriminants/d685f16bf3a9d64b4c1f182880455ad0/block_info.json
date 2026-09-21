@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 1843,
+    "line_end": 1854,
+    "text": "with Derived_With_Discriminants;\nuse  Derived_With_Discriminants;\n\nprocedure Show_Derived_With_Discriminants is\n   A : T (L => 1, M => 2);\n   B : T_Derived (X => 1, Y => 2);\nbegin\n   B := T_Derived (A);  --  OK\nend Show_Derived_With_Discriminants;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Discriminants.Derived_Types_Renamed_Discriminants",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_derived_with_discriminants.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_derived_with_discriminants.adb",
+    "text_hash": "eb31a6a68a74e5e509238f5fe9607f0cd86c7cfa485450b0f66ca5d808c2a2d166bd8ef80d150cf9a39748dcee0a41a1a0eb627ee9febc358d73334dc6293012",
+    "text_hash_short": "d685f16bf3a9d64b4c1f182880455ad0"
+}

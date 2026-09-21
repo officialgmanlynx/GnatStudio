@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/02_Flow_Analysis.rst",
+    "line_start": 643,
+    "line_end": 676,
+    "text": "package Show_Search_Array is\n\n   type Array_Of_Positives is array (Natural range <>) of Positive;\n\n   procedure Search_Array\n     (A      :     Array_Of_Positives;\n      E      :     Positive;\n      Result : out Integer;\n      Found  : out Boolean);\n\nend Show_Search_Array;\n\npackage body Show_Search_Array is\n\n   procedure Search_Array\n     (A      :     Array_Of_Positives;\n      E      :     Positive;\n      Result : out Integer;\n      Found  : out Boolean) is\n   begin\n      for I in A'Range loop\n         if A (I) = E then\n            Result := I;\n            Found  := True;\n            return;\n         end if;\n      end loop;\n      Found := False;\n   end Search_Array;\n\nend Show_Search_Array;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Flow_Analysis.Example_01",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "show_search_array.ads",
+        "show_search_array.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "80640f0d0d252c6e8fc74edf87b30cab0a88e19ccce3416ad41c30383991f7985ce6cb6af7d044d31dad2e94fe624b83ae7e80cb2d402cb67c9b6ab83190a379",
+    "text_hash_short": "d2a27a5bde247767e2f6cd2d42a2d629"
+}

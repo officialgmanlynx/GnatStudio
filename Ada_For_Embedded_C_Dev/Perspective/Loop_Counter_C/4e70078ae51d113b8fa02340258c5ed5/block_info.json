@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 1012,
+    "line_end": 1028,
+    "text": "!main.c\n#include <stdio.h>\n\n#define MY_RANGE (10)\n\nint main(int argc, const char * argv[])\n{\n\n    for (int i = MY_RANGE; i >= 0; --i) {\n        printf(\"%d\\n\", i);\n    }\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Loop_Counter_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "c59b1e32670bb5faaee6be29727069df93766276a1e9707fcb623b91721db1f365dcb43cbb8f3e3f01a2543dd7d7152068d5aa8a5f085b28b1dda69c50a6b2fe",
+    "text_hash_short": "4e70078ae51d113b8fa02340258c5ed5"
+}

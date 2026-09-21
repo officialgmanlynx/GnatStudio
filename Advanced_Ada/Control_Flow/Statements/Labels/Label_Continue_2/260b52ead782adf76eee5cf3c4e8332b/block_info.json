@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/statements.rst",
+    "line_start": 127,
+    "line_end": 155,
+    "text": "procedure Show_Continue is\n   function Is_Further_Processing_Needed\n     (Dummy : Integer)\n      return Boolean\n   is\n   begin\n      --  Dummy implementation\n      return False;\n   end Is_Further_Processing_Needed;\n\n   A : constant array (1 .. 10) of Integer :=\n     (others => 0);\nbegin\n   for E of A loop\n\n      --  Some stuff here...\n\n      if not Is_Further_Processing_Needed (E) then\n         goto Continue;\n      end if;\n\n      --  Do more stuff...\n\n      <<Continue>>\n   end loop;\nend Show_Continue;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Statements.Labels.Label_Continue_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_continue.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_continue.adb",
+    "text_hash": "2edf5febc0c611b1aac3c613f764b1373b45f9a4c5a0bdb08dbeb0fa6b8fc7341efa444948f1fe97792394226089b4a69976d05a09ff28dc07c9678508fb565d",
+    "text_hash_short": "260b52ead782adf76eee5cf3c4e8332b"
+}

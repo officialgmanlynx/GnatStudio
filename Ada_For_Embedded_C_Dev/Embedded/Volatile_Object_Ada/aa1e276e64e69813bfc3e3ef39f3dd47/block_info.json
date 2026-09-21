@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/04_Embedded.rst",
+    "line_start": 620,
+    "line_end": 634,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Volatile_Object is\n   Val : Long_Float with Volatile;\nbegin\n   Val := 0.0;\n   for I in 0 .. 999 loop\n      Val := Val + 2.0 * Long_Float (I);\n   end loop;\n\n   Put_Line (\"Val: \" & Long_Float'Image (Val));\nend Show_Volatile_Object;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Embedded.Volatile_Object_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_volatile_object.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_volatile_object.adb",
+    "text_hash": "623a5d0a2f986aa071575ed208df302ebe994cc26361c7e481a3f0fd52aba1c887692d29fe560f2d618a93a9dcbc8924f25fff39de6a57864060dac54c72b702",
+    "text_hash_short": "aa1e276e64e69813bfc3e3ef39f3dd47"
+}

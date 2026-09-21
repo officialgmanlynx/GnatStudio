@@ -1,0 +1,48 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 420,
+    "line_end": 479,
+    "text": "package Drivers_1 is\n\n   type Transceiver is null record;\n   procedure Send (Device : Transceiver; Data : Integer);\n   procedure Receive (Device : Transceiver; Data : out Integer);\n\nend Drivers_1;\n\npackage body Drivers_1 is\n\n   procedure Send (Device : Transceiver; Data : Integer) is null;\n\n   procedure Receive (Device : Transceiver; Data : out Integer) is\n      pragma Unreferenced (Device);\n   begin\n      Data := 42;\n   end Receive;\n\nend Drivers_1;\n\nwith Drivers_1;\n\npackage Drivers_2 is\n\n   type Transceiver is new Drivers_1.Transceiver;\n   procedure Send (Device : Transceiver; Data : Integer);\n   procedure Receive (Device : Transceiver; Data : out Integer);\n\nend Drivers_2;\n\npackage body Drivers_2 is\n\n   procedure Send (Device : Transceiver; Data : Integer) is null;\n\n   procedure Receive (Device : Transceiver; Data : out Integer) is\n      pragma Unreferenced (Device);\n   begin\n      Data := 42;\n   end Receive;\n\nend Drivers_2;\n\nwith Drivers_1;\n\npackage Drivers renames Drivers_1;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Drivers;     use Drivers;\n\nprocedure Main is\n   D : Transceiver;\n   I : Integer;\nbegin\n   Send (D, 999);\n   Receive (D, I);\n   Put_Line (Integer'Image (I));\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.Derived_Drivers",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "drivers_1.ads",
+        "drivers_1.adb",
+        "drivers_2.ads",
+        "drivers_2.adb",
+        "drivers.ads",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "0cb2339d3db2bf8bf9814031ca5a1e6f9bcbb628f02dc2c2284bb8c5f53161d0cf7980a748b08e2b80f693ab447a35d70618bc3bf45e20cb86e6c63da4f19abe",
+    "text_hash_short": "e92590e4b91fef33f4fec23362a52873"
+}

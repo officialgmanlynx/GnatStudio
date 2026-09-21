@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 1217,
+    "line_end": 1328,
+    "text": "package Serializer is\n\n   type Bit_Field is array (Natural range <>) of Boolean with Pack;\n\n   procedure Transmit (B : Bit_Field);\n\nend Serializer;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Serializer is\n\n   procedure Transmit (B : Bit_Field) is\n\n      procedure Show_Bit (V : Boolean) is\n      begin\n         case V is\n            when False => Put (\"0\");\n            when True  => Put (\"1\");\n         end case;\n      end Show_Bit;\n\n   begin\n      Put (\"Bits: \");\n      for E of B loop\n         Show_Bit (E);\n      end loop;\n      New_Line;\n   end Transmit;\n\nend Serializer;\n\nwith Serializer;  use Serializer;\n\npackage My_Recs is\n\n   type Rec is record\n      V : Integer;\n      S : String (1 .. 3);\n   end record;\n\n   procedure To_Rec (B :     Bit_Field;\n                     R : out Rec);\n\n   function To_Rec (B : Bit_Field) return Rec;\n\n   procedure Display (R : Rec);\n\nend My_Recs;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body My_Recs is\n\n   procedure To_Rec (B :     Bit_Field;\n                     R : out Rec) is\n      B_R : Rec\n        with Address => B'Address, Import, Volatile;\n   begin\n      --  Assigning data from overlayed record B_R to output parameter R.\n      R := B_R;\n   end To_Rec;\n\n   function To_Rec (B : Bit_Field) return Rec is\n      R   : Rec;\n      B_R : Rec\n        with Address => B'Address, Import, Volatile;\n   begin\n      --  Assigning data from overlayed record B_R to local record R.\n      R := B_R;\n\n      return R;\n   end To_Rec;\n\n   procedure Display (R : Rec) is\n   begin\n      Put (\"(\"  & Integer'Image (R.V) & \", \"\n           & (R.S) & \")\");\n   end Display;\n\nend My_Recs;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Serializer;  use Serializer;\nwith My_Recs;     use My_Recs;\n\nprocedure Main is\n   R1 : Rec := (5, \"abc\");\n   R2 : Rec := (0, \"zzz\");\n\n   B1 : Bit_Field (0 .. R1'Size - 1)\n     with Address => R1'Address, Import, Volatile;\nbegin\n   Put (\"R2 = \");\n   Display (R2);\n   New_Line;\n\n   --  Getting Rec type using data from B1, which is a bit-field\n   --  representation of R1.\n   To_Rec (B1, R2);\n\n   --  We could use the function version of To_Rec:\n   --  R2 := To_Rec (B1);\n\n   Put_Line (\"New bitstream received!\");\n   Put (\"R2 = \");\n   Display (R2);\n   New_Line;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.Bitfield_Deserialization_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "serializer.ads",
+        "serializer.adb",
+        "my_recs.ads",
+        "my_recs.adb",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "62de0d134705e723657e994e15f55ed6eb8d13f5b069176c2a08c42fa1f5b1e9707015d9b43d79c140e4ccf962e2f7f4588bb38028d7b1ef5bb418aeb5594c0d",
+    "text_hash_short": "bf5cb5ef048ed1f95dba8e85275f6e32"
+}

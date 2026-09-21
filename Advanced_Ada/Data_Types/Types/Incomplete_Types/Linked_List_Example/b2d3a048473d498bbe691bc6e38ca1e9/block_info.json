@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 1757,
+    "line_end": 1771,
+    "text": "package Linked_List_Example is\n\n   type Integer_List;\n\n   type Next is access Integer_List;\n\n   type Integer_List is record\n      I : Integer;\n      N : Next;\n   end record;\n\nend Linked_List_Example;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Incomplete_Types.Linked_List_Example",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "linked_list_example.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "eea3d5c42d1fd423db49aea76947ac729012cf88f35d012525c1bba77c79a3156eda574e99ace6498baae9035416142924e05161392378b82579053652b41cb4",
+    "text_hash_short": "b2d3a048473d498bbe691bc6e38ca1e9"
+}

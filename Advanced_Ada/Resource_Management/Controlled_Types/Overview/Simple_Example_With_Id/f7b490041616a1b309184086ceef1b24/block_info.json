@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/controlled_types.rst",
+    "line_start": 428,
+    "line_end": 554,
+    "text": "with Ada.Finalization;\n\npackage Simple_Controlled_Types is\n\n   type T is tagged private;\n\n   procedure Show (E    : T;\n                   Name : String);\n\nprivate\n\n   protected Id_Gen is\n      procedure New_Id (Id_Out : out Positive);\n   private\n      Id : Natural := 0;\n   end Id_Gen;\n\n   type T is new\n     Ada.Finalization.Controlled with\n   record\n      Id : Positive;\n   end record;\n\n   overriding\n   procedure Initialize (E : in out T);\n\n   overriding\n   procedure Adjust (E : in out T);\n\n   overriding\n   procedure Finalize (E : in out T);\n\nend Simple_Controlled_Types;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Simple_Controlled_Types is\n\n   protected body Id_Gen is\n\n      procedure New_Id (Id_Out : out Positive) is\n      begin\n         Id := Id + 1;\n         Id_Out := Id;\n      end New_Id;\n\n   end Id_Gen;\n\n   procedure Initialize (E : in out T) is\n   begin\n      Id_Gen.New_Id (E.Id);\n      Put_Line (\"Initialize: ID => \"\n                & E.Id'Image);\n   end Initialize;\n\n   procedure Adjust (E : in out T) is\n      Prev_Id : constant Positive := E.Id;\n   begin\n      Id_Gen.New_Id (E.Id);\n      Put_Line (\"Adjust:     ID => \"\n                & E.Id'Image);\n      Put_Line (\"    (Previous ID => \"\n                & Prev_Id'Image\n                & \")\");\n   end Adjust;\n\n   procedure Finalize (E : in out T) is\n   begin\n      Put_Line (\"Finalize:   ID => \"\n                & E.Id'Image);\n   end Finalize;\n\n   procedure Show (E    : T;\n                   Name : String) is\n   begin\n      Put_Line (\"Obj. \" & Name\n                & \": ID => \"\n                & E.Id'Image);\n   end Show;\n\nend Simple_Controlled_Types;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Simple_Controlled_Types;\nuse  Simple_Controlled_Types;\n\nprocedure Show_Controlled_Types is\n   A, B : T;\n   --\n   --  Declaration corresponds to:\n   --\n   --  declare\n   --     A, B : T;\n   --  begin\n   --     Initialize (A);\n   --     Initialize (B);\n   --  end;\nbegin\n   Put_Line (\"--------\");\n   Show (A, \"A\");\n   Show (B, \"B\");\n\n   Put_Line (\"--------\");\n   Put_Line (\"A := B;\");\n\n   A := B;\n   --  Statement corresponds to:\n   --\n   --  Finalize (A);\n   --  A := B;\n   --  Adjust (A);\n\n   Put_Line (\"--------\");\n   Show (A, \"A\");\n   Show (B, \"B\");\n   Put_Line (\"--------\");\n\n   --  When A and B get out of scope::\n   --\n   --  Finalize (A);\n   --  Finalize (B);\n   --\nend Show_Controlled_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Controlled_Types.Overview.Simple_Example_With_Id",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple_controlled_types.ads",
+        "simple_controlled_types.adb",
+        "show_controlled_types.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_controlled_types.adb",
+    "text_hash": "e611ea474af679293f556cabb5666508025d27843c5879aa0b384535967fe12466edfc6b7b70555b938cb0ef6b2ff5ca718fd86cc767e544a0e249d4fcf948e6",
+    "text_hash_short": "f7b490041616a1b309184086ceef1b24"
+}

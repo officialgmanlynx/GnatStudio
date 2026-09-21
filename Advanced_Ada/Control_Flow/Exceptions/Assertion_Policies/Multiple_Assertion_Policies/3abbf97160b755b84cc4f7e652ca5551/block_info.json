@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/exceptions.rst",
+    "line_start": 375,
+    "line_end": 391,
+    "text": "procedure Show_Multiple_Assertion_Policies is\n   pragma Assertion_Policy\n     (Assert               => Check,\n      Static_Predicate     => Check,\n      Dynamic_Predicate    => Check,\n      Pre                  => Check,\n      Pre'Class            => Check,\n      Post                 => Check,\n      Post'Class           => Check,\n      Type_Invariant       => Check,\n      Type_Invariant'Class => Check);\nbegin\n   null;\nend Show_Multiple_Assertion_Policies;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Exceptions.Assertion_Policies.Multiple_Assertion_Policies",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_multiple_assertion_policies.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_multiple_assertion_policies.adb",
+    "text_hash": "1c03474e699cfffa6ac1412701080c231abb37ee916948b640fbac9f1564c63ada1e0f2aa092e76888ad0f6e81445f031f54829323ee0df9ac2fbf957482b4cd",
+    "text_hash_short": "3abbf97160b755b84cc4f7e652ca5551"
+}

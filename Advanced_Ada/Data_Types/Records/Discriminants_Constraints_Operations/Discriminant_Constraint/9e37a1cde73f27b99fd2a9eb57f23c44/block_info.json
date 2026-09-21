@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 2143,
+    "line_end": 2162,
+    "text": "package Recs is\n\n   type T (L : Positive;\n           M : Positive) is\n     null record;\n\nend Recs;\n\nwith Recs;        use Recs;\n\nprocedure Show_Object_Declaration is\n   A : T (L => 5, M => 6);\n   B : T (7, 8);\n   C : T (7, M => 8);\nbegin\n   null;\nend Show_Object_Declaration;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Discriminants_Constraints_Operations.Discriminant_Constraint",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "recs.ads",
+        "show_object_declaration.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_object_declaration.adb",
+    "text_hash": "982da45b3f20879f36e72ba275b91d06a0f10e01dd34394186e008a89e40fdf2c2a52c9d00ed47dadaf412ba7f558d1df8d5d0ee52745cc7613ae1d654a04a80",
+    "text_hash_short": "9e37a1cde73f27b99fd2a9eb57f23c44"
+}

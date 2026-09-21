@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 1152,
+    "line_end": 1201,
+    "text": "!my_recs.h\ntypedef struct {\n    int v;\n    char s[4];\n} rec;\n\n!serializer.h\nvoid transmit (void *bits, int len);\n\n!serializer.c\n#include \"serializer.h\"\n\n#include <stdio.h>\n#include <assert.h>\n\nvoid transmit (void *bits, int len)\n{\n    int i, j;\n    char *c = (char *)bits;\n\n    assert(sizeof(char) == 1);\n\n    printf(\"Bits: \");\n    for (i = 0; i < len / (sizeof(char) * 8); i++)\n    {\n        for (j = 0; j < sizeof(char) * 8; j++)\n        {\n            printf(\"%d\", c[i] >> j & 1);\n        }\n    }\n    printf(\"\\n\");\n}\n\n!bitfield_serialization.c\n#include <stdio.h>\n\n#include \"my_recs.h\"\n#include \"serializer.h\"\n\nint main(int argc, const char * argv[])\n{\n    rec r = {5, \"abc\"};\n\n    transmit(&r, sizeof(r) * 8);\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.Bitfield_Serialization_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "my_recs.h",
+        "serializer.h",
+        "serializer.c",
+        "bitfield_serialization.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "bitfield_serialization.c",
+    "text_hash": "417927d7dbdf6cc9b9cfc207356f91a81e7d8015842044b9d4876b606e9d6774203425310ff59cf60c00341032245f5a009e41aa509afc36d2dc447c0d441bf1",
+    "text_hash_short": "47f0a4efcbec9303f44d535064e5d6ce"
+}

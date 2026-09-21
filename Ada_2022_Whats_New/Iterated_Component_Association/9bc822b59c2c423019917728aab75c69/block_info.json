@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/whats-new-in-ada-2022/chapters/array_aggregates.rst",
+    "line_start": 90,
+    "line_end": 120,
+    "text": "with Ada.Text_IO;\n\nprocedure Show_Iterated_Component_Association is\n\n   type Integer_Array is array (Positive range <>) of Integer;\n\n   Old_Style_Empty : Integer_Array := (1 .. 0 => <>);\n   New_Style_Empty : Integer_Array := [];\n\n   Old_Style_One_Item : Integer_Array := (1 => 5);\n   New_Style_One_Item : Integer_Array := [5];\n\n   Vector : constant Integer_Array := [for J in 1 .. 5 => J * 2];\n\n   Matrix : constant array (1 .. 3, 1 .. 3) of Positive :=\n     [for J in 1 .. 3 =>\n       [for K in 1 .. 3 => J * 10 + K]];\n\n   Data : constant Integer_Array (1 .. 5) :=\n     [for J in 2 .. 3 => J, 5 => 5, others => 0];\n\n   Vector_2 : constant Integer_Array := [for X of Vector => X / 2];\nbegin\n   Ada.Text_IO.Put_Line (Vector'Image);\n   Ada.Text_IO.Put_Line (Matrix'Image);\n   Ada.Text_IO.Put_Line (Data'Image);\n   Ada.Text_IO.Put_Line (Vector_2'Image);\nend Show_Iterated_Component_Association;\n",
+    "language": "ada",
+    "project": "Courses.Ada_2022_Whats_New.Iterated_Component_Association",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnatX",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_iterated_component_association.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_iterated_component_association.adb",
+    "text_hash": "b9029368485f2a1eee6ce03df34871d5a9cd693d939d33a768c0551417ddc71fdff7bbe28a7fdca85f751759a155a8671bb687701ffec5acd0e7ac850e397630",
+    "text_hash_short": "9bc822b59c2c423019917728aab75c69"
+}

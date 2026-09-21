@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 3674,
+    "line_end": 3699,
+    "text": "package Angles is\n\n   D : constant := 0.2;\n   --  Note: D is not a power of two.\n\n   type Angle is\n     delta D\n       range 0.0 .. 360.0 - D;\n\n   type Int_Angle is\n     range -2 ** (Angle'Size - 1) ..\n            2 ** (Angle'Size - 1) - 1;\n\n   type Angle_Adj is\n     delta D\n       range 0.0 .. 360.0 - D\n     with Small => D;\n\n   type Int_Angle_Adj is\n     range -2 ** (Angle_Adj'Size - 1) ..\n            2 ** (Angle_Adj'Size - 1) - 1;\n\nend Angles;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Fixed_Point_Types.Machine_Representation_Ordinary_Fixed_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "angles.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "d79a3482bab2e01c64fd703c84c12c3497f733ce1125dd58f63872fd99e5a3d68cd94cf9a7133759bdabb33ccc056ec6638efccb56392d567994a6ba39af1e27",
+    "text_hash_short": "d416db31b2b5efede493b0c333c7e742"
+}

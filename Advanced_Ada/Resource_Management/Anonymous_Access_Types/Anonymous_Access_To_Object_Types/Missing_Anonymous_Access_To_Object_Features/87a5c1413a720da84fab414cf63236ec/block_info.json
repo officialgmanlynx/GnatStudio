@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 466,
+    "line_end": 518,
+    "text": "with Ada.Unchecked_Deallocation;\n\npackage Missing_Features is\n\n   --  We cannot specify which pool will be used\n   --  in the anonymous access-to-object\n   --  allocation; the pool is selected by the\n   --  compiler:\n   IA : access Integer := new Integer;\n\n   --\n   --  All the features below aren't available\n   --  for an anonymous access-to-object:\n   --\n\n   --  Having a specific storage pool associated\n   --  with the access type:\n   type String_Access is\n     access String;\n   --  Automatically creates\n   --  String_Access'Storage_Pool\n\n   type Integer_Access is\n     access Integer\n       with Storage_Pool =>\n              String_Access'Storage_Pool;\n   --       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n   --         Using the pool from another\n   --         access type.\n\n   --  Specifying a deallocation function for the\n   --  access type:\n   procedure Free is\n     new Ada.Unchecked_Deallocation\n       (Object => Integer,\n        Name   => Integer_Access);\n\n   --  Specifying a limited storage size for\n   --  the access type:\n   type Integer_Access_Store_128 is\n      access Integer\n        with Storage_Size => 128;\n\n   --  Limiting the storage size for the\n   --  access type to zero:\n   type Integer_Access_Store_0 is\n      access Integer\n        with Storage_Size => 0;\n\nend Missing_Features;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Anonymous_Access_To_Object_Types.Missing_Anonymous_Access_To_Object_Features",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "missing_features.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "db143e535b0c38ae10dd42502f6d44f4cb423ab36024209e4d98bb61b2777556a6d4f9b9a1786e4a1bd2a905218ec01f0fac85eb21bb809d7b0c905b781bd791",
+    "text_hash_short": "87a5c1413a720da84fab414cf63236ec"
+}

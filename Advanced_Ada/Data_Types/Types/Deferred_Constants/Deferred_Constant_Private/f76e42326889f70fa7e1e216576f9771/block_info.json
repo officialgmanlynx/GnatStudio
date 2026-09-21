@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 3303,
+    "line_end": 3318,
+    "text": "package Deferred_Constants is\n\n   type Speed is new Long_Float;\n\n   Light : constant Speed;\n   --      ^ deferred constant declaration\n\nprivate\n\n   Light : constant Speed := 299_792_458.0;\n   --      ^ full constant declaration\n\nend Deferred_Constants;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Deferred_Constants.Deferred_Constant_Private",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "deferred_constants.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "3217e9805ecd1c81f45b5a3c8de3ef7db25494607709bea28a227ae837c4896a7b68bdd5ed8c0753315059d9aa58bbc543cc9627471e144bb64589105dbf12d6",
+    "text_hash_short": "f76e42326889f70fa7e1e216576f9771"
+}

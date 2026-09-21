@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 6408,
+    "line_end": 6419,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Scale_Attribute is\n   type T4_D8 is\n     delta 10.0 ** (-4) digits 8;\nbegin\n   Put_Line (\"T4_D8'Scale : \"\n             & T4_D8'Scale'Image);\nend Show_Scale_Attribute;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Decimal_Fixed_Point_Types.Scale_Attribute",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_scale_attribute.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_scale_attribute.adb",
+    "text_hash": "3b89437e0fd2504f3faf422d2fda5001d30404400409a4139b258e05dc0a5f8c307c430be5ed5cd356525e3b1e1375b412b92bf6f274fc49c4c166e8f3dfd203",
+    "text_hash_short": "3ffb056224543638932d0c6d955e4c19"
+}

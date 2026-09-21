@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 2471,
+    "line_end": 2576,
+    "text": "package Custom_Floating_Point_Types is\n\n   type Float_1_Digits is\n     digits 1;\n   type Float_2_Digits is\n     digits 2;\n   type Float_3_Digits is\n     digits 3;\n   type Float_4_Digits is\n     digits 4;\n   type Float_5_Digits is\n     digits 5;\n   type Float_6_Digits is\n     digits 6;\n   type Float_7_Digits is\n     digits 7;\n   type Float_8_Digits is\n     digits 8;\n   type Float_9_Digits is\n     digits 9;\n   type Float_10_Digits is\n     digits 10;\n   type Float_11_Digits is\n     digits 11;\n   type Float_12_Digits is\n     digits 12;\n   type Float_13_Digits is\n     digits 13;\n   type Float_14_Digits is\n     digits 14;\n   type Float_15_Digits is\n     digits 15;\n   type Float_16_Digits is\n     digits 16;\n   type Float_17_Digits is\n     digits 17;\n   type Float_18_Digits is\n     digits 18;\n\nend Custom_Floating_Point_Types;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Custom_Floating_Point_Types;\nuse  Custom_Floating_Point_Types;\n\nprocedure Show_Decimal_Digits is\nbegin\n   Put_Line (\"Float_1_Digits'Size   :\"\n             & Float_1_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Float_2_Digits'Size   :\"\n             & Float_2_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Float_3_Digits'Size   :\"\n             & Float_3_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Float_4_Digits'Size   :\"\n             & Float_4_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Float_5_Digits'Size   :\"\n             & Float_5_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Float_6_Digits'Size   :\"\n             & Float_6_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Float_7_Digits'Size   :\"\n             & Float_7_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Float_8_Digits'Size   :\"\n             & Float_8_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Float_9_Digits'Size   :\"\n             & Float_9_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Float_10_Digits'Size  :\"\n             & Float_10_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Float_11_Digits'Size  :\"\n             & Float_11_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Float_12_Digits'Size  :\"\n             & Float_12_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Float_13_Digits'Size  :\"\n             & Float_13_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Float_14_Digits'Size  :\"\n             & Float_14_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Float_15_Digits'Size  :\"\n             & Float_15_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Float_16_Digits'Size  :\"\n             & Float_16_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Float_17_Digits'Size  :\"\n             & Float_17_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Float_18_Digits'Size  :\"\n             & Float_18_Digits'Size'Image\n             & \" bits\");\nend Show_Decimal_Digits;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Floating_Point_Types.Floating_Point_Decimal_Precision",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_floating_point_types.ads",
+        "show_decimal_digits.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_decimal_digits.adb",
+    "text_hash": "7f75025ba0da5b12a45bf9bda3f001bc279b960fdeb2713eaf82e5f1c21faab0a210a98f9abe48d51b85ddc0fd466aebb3a6478002c0e4312cb5793b010f0841",
+    "text_hash_short": "06ccb5c6a584c6e35328738fd1d693ad"
+}

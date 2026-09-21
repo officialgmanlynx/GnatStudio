@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 2680,
+    "line_end": 2698,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\nwith Points;      use Points;\n\nprocedure Show_Conversion is\n   P_1D : Point_1D;\n   P_3D : Point_3D;\nbegin\n   P_3D := (X => 0.1, Y => 0.5, Z => 0.3);\n   P_1D := Point_1D (P_3D);\n\n   Put (\"P_3D : \");\n   Display (P_3D);\n\n   Put (\"P_1D : \");\n   Display (P_1D);\nend Show_Conversion;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Type_Conversion.Tagged_Type_Conversion",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_conversion.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_conversion.adb",
+    "text_hash": "d052d16affa3cd4fa06f0e5de7e5bb563c256f89be2dea4f4ff8da4206588ae0d321d6089d8e31f3aa615fb73cddb31acc2b1195a71d5d092f0fb531865e3153",
+    "text_hash_short": "fb8e07c8f2399cfae935179d8f413150"
+}

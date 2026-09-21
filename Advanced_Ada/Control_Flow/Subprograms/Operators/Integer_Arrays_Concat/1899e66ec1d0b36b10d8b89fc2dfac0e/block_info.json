@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/subprograms.rst",
+    "line_start": 727,
+    "line_end": 752,
+    "text": "package Integer_Arrays is\n\n   type Integer_Array is\n     array (Positive range <>) of Integer;\n\nend Integer_Arrays;\n\nwith Ada.Text_IO;    use Ada.Text_IO;\nwith Integer_Arrays; use Integer_Arrays;\n\nprocedure Show_Array_Concatenation is\n   A, B : Integer_Array (1 .. 5);\n   R    : Integer_Array (1 .. 10);\nbegin\n   A := (1 & 2 & 3 & 4 & 5);\n   B := (6 & 7 & 8 & 9 & 10);\n   R := A & B;\n\n   for E of R loop\n      Put (E'Image & ' ');\n   end loop;\n   New_Line;\nend Show_Array_Concatenation;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Subprograms.Operators.Integer_Arrays_Concat",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "integer_arrays.ads",
+        "show_array_concatenation.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_array_concatenation.adb",
+    "text_hash": "b6394b57eb7cff76b9535f4ad41d7c3807bc4ce552d5a0aa62881387fa445436998bf95b394b15a64d37bfef42593bee986c19a1d233ebacec32625eab7b5a6d",
+    "text_hash_short": "1899e66ec1d0b36b10d8b89fc2dfac0e"
+}

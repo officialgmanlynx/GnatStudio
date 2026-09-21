@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/statements.rst",
+    "line_start": 539,
+    "line_end": 552,
+    "text": "procedure Show_Block_Statement is\n   pragma Warnings (Off);\nbegin\n\n   Simple_Block : declare\n      I : Integer;\n   begin\n      I := 0;\n   end Simple_Block;\n\nend Show_Block_Statement;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Statements.Block_Statements.Block_Statement_Identifier",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_block_statement.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_block_statement.adb",
+    "text_hash": "68f0daa48757837e953205081d609c5d3ca2a086b4f6c75856a5c966a0a7814e9cf61147c551cdea30f171c3da04bbf36b305d06f09f724a475c8403314ed94f",
+    "text_hash_short": "b327b7675931d9b994637671c806c7c3"
+}

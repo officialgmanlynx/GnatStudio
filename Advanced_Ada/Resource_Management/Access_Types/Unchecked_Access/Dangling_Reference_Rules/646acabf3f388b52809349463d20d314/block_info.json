@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 3341,
+    "line_end": 3365,
+    "text": "package Integers is\n\n   type Integer_Access is access all Integer;\n\nend Integers;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Integers; use Integers;\n\nprocedure Show_Access_Issue is\n   I_Var : aliased Integer := 42;\n\n   A     : Integer_Access;\nbegin\n   A := I_Var'Access;\n   --   PROBLEM: A has the same lifetime as I_Var,\n   --            but Integer_Access type has a\n   --            longer lifetime.\n\n   Put_Line (\"A.all: \" & Integer'Image (A.all));\nend Show_Access_Issue;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Unchecked_Access.Dangling_Reference_Rules",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "integers.ads",
+        "show_access_issue.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_access_issue.adb",
+    "text_hash": "3023f9c044e07499fce35b3214fe92ffeadf7d0034446fedefccd840ecf50dec972295b722bd99abe9b37f6b6d51bcf584b9789584c3c28c5bb5025cd98a6012",
+    "text_hash_short": "646acabf3f388b52809349463d20d314"
+}

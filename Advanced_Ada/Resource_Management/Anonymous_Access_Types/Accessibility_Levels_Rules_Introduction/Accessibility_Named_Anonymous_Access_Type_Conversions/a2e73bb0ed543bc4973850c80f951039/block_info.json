@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 2440,
+    "line_end": 2545,
+    "text": "package Library_Level is\n\n   type L0_Integer_Access is\n     access all Integer;\n\n   L0_Var : aliased Integer;\n\n   L0_IA  : L0_Integer_Access;\n   L0_AO  : access Integer;\n\nend Library_Level;\n\nwith Library_Level; use Library_Level;\n\nprocedure Show_Library_Level is\n   type L1_Integer_Access is\n     access all Integer;\n\n   L1_IA  : L1_Integer_Access;\n   L1_AO  : access Integer;\n\n   L1_Var : aliased Integer;\n\nbegin\n   ---------------------------------------\n   --  From named type to anonymous type\n   ---------------------------------------\n\n   L0_IA := new Integer'(22);\n   L1_IA := new Integer'(42);\n\n   L0_AO := L0_IA;\n   --       ^^^^^\n   --       LEGAL: assignment from\n   --              L0 access object (named type)\n   --              to\n   --              L0 access object\n   --                (anonymous type)\n\n   L0_AO := L1_IA;\n   --       ^^^^^\n   --       ILLEGAL: assignment from\n   --                L1 access object (named type)\n   --                to\n   --                L0 access object\n   --                  (anonymous type)\n\n   L1_AO := L0_IA;\n   --       ^^^^^\n   --       LEGAL: assignment from\n   --              L0 access object (named type)\n   --              to\n   --              L1 access object\n   --                (anonymous type)\n\n   L1_AO := L1_IA;\n   --       ^^^^^\n   --       LEGAL: assignment from\n   --              L1 access object (named type)\n   --              to\n   --              L1 access object\n   --                (anonymous type)\n\n   ---------------------------------------\n   --  From anonymous type to named type\n   ---------------------------------------\n\n   L0_AO := L0_Var'Access;\n   L1_AO := L1_Var'Access;\n\n   L0_IA := L0_Integer_Access (L0_AO);\n   --       ^^^^^^^^^^^^^^^^^\n   --       LEGAL: conversion / assignment from\n   --              L0 access object\n   --                (anonymous type)\n   --              to\n   --              L0 access object (named type)\n\n   L0_IA := L0_Integer_Access (L1_AO);\n   --       ^^^^^^^^^^^^^^^^^\n   --       ILLEGAL: conversion / assignment from\n   --                L1 access object\n   --                  (anonymous type)\n   --                to\n   --                L0 access object (named type)\n   --                (accessibility check fails)\n\n   L1_IA := L1_Integer_Access (L0_AO);\n   --       ^^^^^^^^^^^^^^^^^\n   --       LEGAL: conversion / assignment from\n   --              L0 access object\n   --                (anonymous type)\n   --              to\n   --              L1 access object (named type)\n\n   L1_IA := L1_Integer_Access (L1_AO);\n   --       ^^^^^^^^^^^^^^^^^\n   --       LEGAL: conversion / assignment from\n   --              L1 access object\n   --                (anonymous type)\n   --              to\n   --              L1 access object (named type)\nend Show_Library_Level;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Accessibility_Levels_Rules_Introduction.Accessibility_Named_Anonymous_Access_Type_Conversions",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "library_level.ads",
+        "show_library_level.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_library_level.adb",
+    "text_hash": "5be2c44c8a3c2c36f27c145a16372fa221105f5164d79008ae93da95400ec619130e38f25caa497a02f3e322ab1b12555e06c62b75e224ab39a6e7ae85a5ef60",
+    "text_hash_short": "a2e73bb0ed543bc4973850c80f951039"
+}

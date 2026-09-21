@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/subprograms.rst",
+    "line_start": 1362,
+    "line_end": 1377,
+    "text": "procedure Show_Record_Resolution_Error is\n\n   type Complex is record\n      Re, Im : Float;\n   end record;\n\n   procedure Grind (X : Complex) is null;\n   procedure Grind (X : String) is null;\nbegin\n   Grind (X => (Re => 1.0, Im => 1.0));\n   --  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n   --  Illegal!\nend Show_Record_Resolution_Error;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Subprograms.Overloading.Record_Resolution_Error",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_record_resolution_error.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_record_resolution_error.adb",
+    "text_hash": "ed53e172e9f288106b997b3e1dc101226c2d905eb69b04674921470500fa2c65b7f8ec3fcd076db6a3c7777931d59053fa224f6d5b17de170163fc4a2e0a9bbd",
+    "text_hash_short": "e3dd1f1d0c403bcf672f4bab881b8ef9"
+}

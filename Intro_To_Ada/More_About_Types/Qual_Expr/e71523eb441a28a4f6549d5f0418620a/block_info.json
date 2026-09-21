@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/more_about_types.rst",
+    "line_start": 171,
+    "line_end": 182,
+    "text": "package Qual_Expr is\n   type Point is record\n      A, B : Integer;\n   end record;\n\n   P : Point := Point'(12, 15);\n\n   A : Integer := Integer'(12);\nend Qual_Expr;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.More_About_Types.Qual_Expr",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "qual_expr.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "4776d8cdab86e65635607d847fd95b10fc16ef03c9b6ac4c1c89ff10e649279436b5170375117985b40663a200e42a93ff33eb570175536aa2f63d7684e6249d",
+    "text_hash_short": "e71523eb441a28a4f6549d5f0418620a"
+}

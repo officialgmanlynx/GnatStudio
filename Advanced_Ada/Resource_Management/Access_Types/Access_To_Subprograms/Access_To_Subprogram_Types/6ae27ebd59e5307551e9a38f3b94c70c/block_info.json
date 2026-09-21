@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 5067,
+    "line_end": 5105,
+    "text": "with Gen_Custom_Processing;\n\nwith Add_Ten;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nprocedure\n  Show_Access_To_Subprogram_As_Formal_Parameter\nis\n   type Integer_Processing is\n     access procedure (I : in out Integer);\n\n   package Custom_Processing is new\n     Gen_Custom_Processing\n       (T            => Integer,\n        T_Processing => Integer_Processing,\n        --              ^^^^^^^^^^^^^^^^^^\n        --              access-to-subprogram type\n        Proc         => Add_Ten'Access,\n        --              ^^^^^^^^^^^^^^^^^^\n        --              access-to-subprogram\n        Image_T      => Integer'Image);\n   use Custom_Processing;\n\n   R_Add_Ten  : Rec;\n\nbegin\n   Init (R_Add_Ten,  1);\n\n   Put_Line (\"---- R_Add_Ten ----\");\n   Show (R_Add_Ten);\n\n   Put_Line (\"Calling Process procedure...\");\n   Process (R_Add_Ten);\n   Show (R_Add_Ten);\nend Show_Access_To_Subprogram_As_Formal_Parameter;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Access_To_Subprograms.Access_To_Subprogram_Types",
+    "main_file": "show_access_to_subprogram_as_formal_parameter.adb",
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_access_to_subprogram_as_formal_parameter.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_access_to_subprogram_as_formal_parameter.adb",
+    "text_hash": "bb56476849a27b6b7490c36b6d71f861d6e6dfe3b36fc4040b7d5f76eb117b64dbadf731cd4e1543a0508db1d1322fdd5df2afad03b4f38c21ae3bf9c6f3570d",
+    "text_hash_short": "6ae27ebd59e5307551e9a38f3b94c70c"
+}

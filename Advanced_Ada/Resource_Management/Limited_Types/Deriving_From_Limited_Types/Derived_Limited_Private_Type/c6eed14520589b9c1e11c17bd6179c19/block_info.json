@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 1061,
+    "line_end": 1091,
+    "text": "package Simple_Recs is\n\n   type Rec is limited private;\n\nprivate\n\n   type Rec is limited null record;\n\nend Simple_Recs;\n\npackage Simple_Recs.Ext is\n\n   type Rec_Derived is new Rec;\n\n   --  OR:\n   --\n   --  type Rec_Derived is\n   --    limited new Rec;\n\nend Simple_Recs.Ext;\n\nwith Simple_Recs.Ext; use Simple_Recs.Ext;\n\nprocedure Test_Limitedness is\n   Dummy_1, Dummy_2 : Rec_Derived;\nbegin\n   Dummy_2 := Dummy_1;\nend Test_Limitedness;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Deriving_From_Limited_Types.Derived_Limited_Private_Type",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple_recs.ads",
+        "simple_recs-ext.ads",
+        "test_limitedness.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "test_limitedness.adb",
+    "text_hash": "fbd21702f105c7e7138f100aa3c128aeea8465827f42415209de22bbb7241c9745a0cf1c7bd4b37bcb5ad6e35ce8cfbffb4880345cca00b352a04079865b4bee",
+    "text_hash_short": "c6eed14520589b9c1e11c17bd6179c19"
+}

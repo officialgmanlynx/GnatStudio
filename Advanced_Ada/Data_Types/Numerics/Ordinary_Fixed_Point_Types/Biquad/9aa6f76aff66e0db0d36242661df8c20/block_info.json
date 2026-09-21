@@ -1,0 +1,48 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 10293,
+    "line_end": 10428,
+    "text": "--  Transposed direct form II biquad:\n--\n--     y(n)  = a0*x(n) + z1(n-1)\n--     z1(n) = a1*x(n) - b1*y(n) + z2(n-1)\n--     z2(n) = a2*x(n) - b2*y(n)\npackage Biquads is\n\nend Biquads;\n\npackage Biquads.Fixed_P is\n\n   --  PCM_Sample fixed-point type\n   --  (-1.0 .. 1.0)\n   D_31 : constant := 2.0 ** (-31);\n   type PCM_Sample is\n     delta D_31\n     range -1.0 .. 1.0 - D_31;\n\n   --  Two-element delay line\n   --  (transposed direct form II)\n   type Filter_Delay is record\n      Z1 : PCM_Sample := 0.0;\n      Z2 : PCM_Sample := 0.0;\n   end record;\n\n   --  Fixed-point biquad filter\n   function Biquad (D    : in out Filter_Delay;\n                    X_In : PCM_Sample)\n                    return PCM_Sample;\n\nend Biquads.Fixed_P;\n\npackage body Biquads.Fixed_P is\n\n   --  Low-pass biquad (16-bit quantized):\n   --  sample rate = 44,100 Hz, Fc = 500 Hz,\n   --  Q = 0.4\n   A0 : constant PCM_Sample\n          :=  0.00115966796875;\n   A1 : constant PCM_Sample\n          :=  0.0023193359375;\n   A2 : constant PCM_Sample\n          :=  0.00115966796875;\n   B1 : constant PCM_Sample\n          := -1.8319091796875 / 2;\n   B2 : constant PCM_Sample\n          :=  0.836578369140625;\n\n   function Biquad (D    : in out Filter_Delay;\n                    X_In : PCM_Sample)\n                    return PCM_Sample\n   is\n      X, Y : PCM_Sample;\n   begin\n      X    := X_In;\n      Y    := PCM_Sample (X * A0) + D.Z1;\n      D.Z1 := PCM_Sample (X * A1) + D.Z2\n              - PCM_Sample (B1 * Y) * 2;\n      D.Z2 := PCM_Sample (X * A2) -\n              PCM_Sample (B2 * Y);\n      return Y;\n   end Biquad;\n\nend Biquads.Fixed_P;\n\npackage Biquads.Float_P is\n\n   --  Two-element delay line\n   --  (transposed direct form II)\n   type Filter_Delay is record\n      Z1 : Float := 0.0;\n      Z2 : Float := 0.0;\n   end record;\n\n   --  Floating-point biquad filter\n   function Biquad (D    : in out Filter_Delay;\n                    X_In : Float)\n                    return Float;\n\nend Biquads.Float_P;\n\npackage body Biquads.Float_P is\n\n   --  Floating-point coefficients\n   --  (for comparison)\n   FA0 : constant Float :=  0.00115966796875;\n   FA1 : constant Float :=  0.0023193359375;\n   FA2 : constant Float :=  0.00115966796875;\n   FB1 : constant Float := -1.8319091796875;\n   FB2 : constant Float :=  0.836578369140625;\n\n   function Biquad (D    : in out Filter_Delay;\n                    X_In : Float)\n                    return Float\n   is\n      X, Y : Float;\n   begin\n      X    := X_In;\n      Y    := FA0 * X + D.Z1;\n      D.Z1 := FA1 * X + D.Z2 - FB1 * Y;\n      D.Z2 := FA2 * X - FB2 * Y;\n      return Y;\n   end Biquad;\n\nend Biquads.Float_P;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Biquads.Fixed_P;\nwith Biquads.Float_P;\n\nprocedure Show_Biquad is\n   FD : Biquads.Float_P.Filter_Delay;\n   QD : Biquads.Fixed_P.Filter_Delay;\n   FY : Float;\n   QY : Biquads.Fixed_P.PCM_Sample;\nbegin\n   Put_Line (\" n |    float    |   fixed\");\n   for N in 0 .. 2000 loop\n      FY := Biquads.Float_P.Biquad (FD, 0.5);\n      QY := Biquads.Fixed_P.Biquad (QD, 0.5);\n\n      --  Print the first few samples and\n      --  then every 400th, to watch the\n      --  step response settle towards its\n      --  steady-state value.\n      if N <= 4 or else N mod 400 = 0 then\n         Put_Line (N'Image\n                   & \" | \" & FY'Image\n                   & \" | \" & QY'Image);\n      end if;\n   end loop;\nend Show_Biquad;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Ordinary_Fixed_Point_Types.Biquad",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "biquads.ads",
+        "biquads-fixed_p.ads",
+        "biquads-fixed_p.adb",
+        "biquads-float_p.ads",
+        "biquads-float_p.adb",
+        "show_biquad.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_biquad.adb",
+    "text_hash": "76e544a8ab6c4204d66e73c8babd90055df532aae966c9b32a2f50469433790627255287aa31f2d94e93b1227692df0ee4c3dfb5a556e1ff0a40b126355125fd",
+    "text_hash_short": "9aa6f76aff66e0db0d36242661df8c20"
+}

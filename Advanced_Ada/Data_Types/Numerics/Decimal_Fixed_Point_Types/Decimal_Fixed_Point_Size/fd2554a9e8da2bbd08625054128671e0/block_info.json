@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 5582,
+    "line_end": 5786,
+    "text": "package Decimal_Types is\n\n   type Decimal_1_Digits is\n     delta 10.0 ** (-2) digits 1;\n   type Decimal_2_Digits is\n     delta 10.0 ** (-2) digits 2;\n   type Decimal_3_Digits is\n     delta 10.0 ** (-2) digits 3;\n   type Decimal_4_Digits is\n     delta 10.0 ** (-2) digits 4;\n   type Decimal_5_Digits is\n     delta 10.0 ** (-2) digits 5;\n   type Decimal_6_Digits is\n     delta 10.0 ** (-2) digits 6;\n   type Decimal_7_Digits is\n     delta 10.0 ** (-2) digits 7;\n   type Decimal_8_Digits is\n     delta 10.0 ** (-2) digits 8;\n   type Decimal_9_Digits is\n     delta 10.0 ** (-2) digits 9;\n   type Decimal_10_Digits is\n     delta 10.0 ** (-2) digits 10;\n   type Decimal_11_Digits is\n     delta 10.0 ** (-2) digits 11;\n   type Decimal_12_Digits is\n     delta 10.0 ** (-2) digits 12;\n   type Decimal_13_Digits is\n     delta 10.0 ** (-2) digits 13;\n   type Decimal_14_Digits is\n     delta 10.0 ** (-2) digits 14;\n   type Decimal_15_Digits is\n     delta 10.0 ** (-2) digits 15;\n   type Decimal_16_Digits is\n     delta 10.0 ** (-2) digits 16;\n   type Decimal_17_Digits is\n     delta 10.0 ** (-2) digits 17;\n   type Decimal_18_Digits is\n     delta 10.0 ** (-2) digits 18;\n   type Decimal_19_Digits is\n     delta 10.0 ** (-2) digits 19;\n   type Decimal_20_Digits is\n     delta 10.0 ** (-2) digits 20;\n   type Decimal_21_Digits is\n     delta 10.0 ** (-2) digits 21;\n   type Decimal_22_Digits is\n     delta 10.0 ** (-2) digits 22;\n   type Decimal_23_Digits is\n     delta 10.0 ** (-2) digits 23;\n   type Decimal_24_Digits is\n     delta 10.0 ** (-2) digits 24;\n   type Decimal_25_Digits is\n     delta 10.0 ** (-2) digits 25;\n   type Decimal_26_Digits is\n     delta 10.0 ** (-2) digits 26;\n   type Decimal_27_Digits is\n     delta 10.0 ** (-2) digits 27;\n   type Decimal_28_Digits is\n     delta 10.0 ** (-2) digits 28;\n   type Decimal_29_Digits is\n     delta 10.0 ** (-2) digits 29;\n   type Decimal_30_Digits is\n     delta 10.0 ** (-2) digits 30;\n   type Decimal_31_Digits is\n     delta 10.0 ** (-2) digits 31;\n   type Decimal_32_Digits is\n     delta 10.0 ** (-2) digits 32;\n   type Decimal_33_Digits is\n     delta 10.0 ** (-2) digits 33;\n   type Decimal_34_Digits is\n     delta 10.0 ** (-2) digits 34;\n   type Decimal_35_Digits is\n     delta 10.0 ** (-2) digits 35;\n   type Decimal_36_Digits is\n     delta 10.0 ** (-2) digits 36;\n   type Decimal_37_Digits is\n     delta 10.0 ** (-2) digits 37;\n   type Decimal_38_Digits is\n     delta 10.0 ** (-2) digits 38;\n\nend Decimal_Types;\n\nwith Ada.Text_IO;   use Ada.Text_IO;\n\nwith Decimal_Types; use Decimal_Types;\n\nprocedure Show_Decimal_Digits_Size is\nbegin\n   Put_Line (\"Decimal_1_Digits'Size   :\"\n             & Decimal_1_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_2_Digits'Size   :\"\n             & Decimal_2_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_3_Digits'Size   :\"\n             & Decimal_3_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_4_Digits'Size   :\"\n             & Decimal_4_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_5_Digits'Size   :\"\n             & Decimal_5_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_6_Digits'Size   :\"\n             & Decimal_6_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_7_Digits'Size   :\"\n             & Decimal_7_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_8_Digits'Size   :\"\n             & Decimal_8_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_9_Digits'Size   :\"\n             & Decimal_9_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_10_Digits'Size  :\"\n             & Decimal_10_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_11_Digits'Size  :\"\n             & Decimal_11_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_12_Digits'Size  :\"\n             & Decimal_12_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_13_Digits'Size  :\"\n             & Decimal_13_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_14_Digits'Size  :\"\n             & Decimal_14_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_15_Digits'Size  :\"\n             & Decimal_15_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_16_Digits'Size  :\"\n             & Decimal_16_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_17_Digits'Size  :\"\n             & Decimal_17_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_18_Digits'Size  :\"\n             & Decimal_18_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_19_Digits'Size  :\"\n             & Decimal_19_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_20_Digits'Size  :\"\n             & Decimal_20_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_21_Digits'Size  :\"\n             & Decimal_21_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_22_Digits'Size  :\"\n             & Decimal_22_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_23_Digits'Size  :\"\n             & Decimal_23_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_24_Digits'Size  :\"\n             & Decimal_24_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_25_Digits'Size  :\"\n             & Decimal_25_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_26_Digits'Size  :\"\n             & Decimal_26_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_27_Digits'Size  :\"\n             & Decimal_27_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_28_Digits'Size  :\"\n             & Decimal_28_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_29_Digits'Size  :\"\n             & Decimal_29_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_30_Digits'Size  :\"\n             & Decimal_30_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_31_Digits'Size  :\"\n             & Decimal_31_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_32_Digits'Size  :\"\n             & Decimal_32_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_33_Digits'Size  :\"\n             & Decimal_33_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_34_Digits'Size  :\"\n             & Decimal_34_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_35_Digits'Size  :\"\n             & Decimal_35_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_36_Digits'Size  :\"\n             & Decimal_36_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_37_Digits'Size  :\"\n             & Decimal_37_Digits'Size'Image\n             & \" bits\");\n   Put_Line (\"Decimal_38_Digits'Size  :\"\n             & Decimal_38_Digits'Size'Image\n             & \" bits\");\nend Show_Decimal_Digits_Size;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Decimal_Fixed_Point_Types.Decimal_Fixed_Point_Size",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "decimal_types.ads",
+        "show_decimal_digits_size.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_decimal_digits_size.adb",
+    "text_hash": "2cf4a467fdf2f58fdf378542c3016f768642147c9c92f584d96e07bb0302fa8e8046f7e9c29aa9a8131c1aec543bec25b0690ab84ab006b62c7ed33e1c24ab03",
+    "text_hash_short": "fd2554a9e8da2bbd08625054128671e0"
+}

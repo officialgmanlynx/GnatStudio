@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/08_Performance.rst",
+    "line_start": 247,
+    "line_end": 270,
+    "text": "!main.c\n#include <stdio.h>\n\nint main(int argc, const char * argv[])\n{\n    int a = 8, b = 0, res;\n\n    if (b != 0) {\n        res = a / b;\n\n        // printing the result\n        printf(\"res = %d\\n\", res);\n    }\n    else\n    {\n        // printing error message\n        printf(\"Error: cannot calculate value (division by zero)\\n\");\n    }\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Performance.Division_By_Zero_Check_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "b115c08f6f980163da788d1d0056b8f286f6910641bcaf26d4d70d99c377921640a955dca10e08698703e4d755ce19612bcec146bd7b4075e46970d70e4513aa",
+    "text_hash_short": "67ea0140d8248674b4aac06825c7cdbe"
+}

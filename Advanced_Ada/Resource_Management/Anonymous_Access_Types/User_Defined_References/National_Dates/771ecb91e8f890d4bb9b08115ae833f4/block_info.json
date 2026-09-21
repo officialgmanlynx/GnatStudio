@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 2095,
+    "line_end": 2121,
+    "text": "with National_Date_Info;\nuse  National_Date_Info;\n\nwith National_Date_Containers;\nuse  National_Date_Containers;\n\nprocedure Show_National_Dates is\n\n   Nat_Dates : constant National_Dates (1 .. 5) :=\n     (new National_Date'(\"USA\",\n                         Time'(1776,  7,  4)),\n      new National_Date'(\"FRA\",\n                         Time'(1789,  7, 14)),\n      new National_Date'(\"DEU\",\n                         Time'(1990, 10,  3)),\n      new National_Date'(\"SPA\",\n                         Time'(1492, 10, 12)),\n      new National_Date'(\"BRA\",\n                         Time'(1822,  9,  7)));\n\nbegin\n   Find (Nat_Dates, \"FRA\").Show;\n   --                     ^ implicit dereference\nend Show_National_Dates;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.User_Defined_References.National_Dates",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_national_dates.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_national_dates.adb",
+    "text_hash": "be0b9c8f835af7da70af97ce82984986184e1bbb799d2e2043eeb6abd76776309f6e0882c2bcd6fe56d829317685f676777ebe07a5b92fe246fbf1388f63451b",
+    "text_hash_short": "771ecb91e8f890d4bb9b08115ae833f4"
+}

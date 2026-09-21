@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 502,
+    "line_end": 519,
+    "text": "!array_decl.c\n#include <stdlib.h>\n\ntypedef struct {\n    int * a;\n} S;\n\nint main(int argc, const char * argv[])\n{\n    S v;\n\n    v.a = malloc(sizeof(int) * 10);\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.Struct_Array_Stack_Alloc_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "array_decl.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "array_decl.c",
+    "text_hash": "301ae4d1f91267d9b5454e4f674b7c0fe47ce2940eff3ceefff5105e03fe60baf5ca06b082c57f4de0c724af3b9f49f499a85cad8d7c2da1ac3134643bcadcdf",
+    "text_hash_short": "f8e5a877977387986b3e2353834a2989"
+}

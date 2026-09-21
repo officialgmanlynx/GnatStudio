@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 2225,
+    "line_end": 2250,
+    "text": "package Recs is\n\n   type T (L : Positive := 1) is\n     null record;\n\nend Recs;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Recs;        use Recs;\n\nprocedure Show_Constrained_Attribute is\n   Constr   : T (L => 5);\n   --            ^^^^^^ constrained.\n   Unconstr : T;\n   --         ^ unconstrained;\n   --           using defaults.\nbegin\n   Put_Line (\"Constr'Constrained:   \"\n             & Constr'Constrained'Image);\n   Put_Line (\"Unconstr'Constrained: \"\n             & Unconstr'Constrained'Image);\nend Show_Constrained_Attribute;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Discriminants_Constraints_Operations.Simple_Constrained_Attribute",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "recs.ads",
+        "show_constrained_attribute.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_constrained_attribute.adb",
+    "text_hash": "1637630df91e3ae948ec225cb83bbcbf4568b13277f8952e045a21a91771d34f07e820cbd501d14101d547f2cc2ae2bc97db87a8d9d32c02669de8d16eee1f56",
+    "text_hash_short": "6a9a807f5af132a07949d2887fa5bfe5"
+}

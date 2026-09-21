@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/statements.rst",
+    "line_start": 611,
+    "line_end": 632,
+    "text": "procedure Show_Extended_Return is\n\n   type Array_Of_Natural is\n     array (Positive range <>) of Natural;\n\n   function Sum (A : Array_Of_Natural)\n                 return Natural\n   is\n   begin\n      return Result : Natural := 0 do\n         for Index in A'Range loop\n            Result := Result + A (Index);\n         end loop;\n      end return;\n   end Sum;\n\nbegin\n   null;\nend Show_Extended_Return;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Statements.Extended_Return_Statements.Extended_Return",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_extended_return.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_extended_return.adb",
+    "text_hash": "2f4db233924f869976e24503a6749f64fe6afe06f3d05780d51622ea0e545cfdeb56c7abaa9656acd89eb860b3f176790bf83be99ea16ec9bb7d301e9660793e",
+    "text_hash_short": "d6d6edaf800a0e346ff8ede13cbbe100"
+}

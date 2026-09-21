@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 951,
+    "line_end": 964,
+    "text": "package Custom_Recs is\n\n   --  Declaring a discriminant with an anonymous\n   --  access type and a default value:\n   type Rec (IA : access Integer :=\n                    new Integer'(0)) is\n   record\n      I : Integer := IA.all;\n   end record;\n\nend Custom_Recs;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Access_Discriminants.Default_Expression_Non_Limited_Type",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_recs.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "1bcd238345cbd13ade8d1fc1a7def761f72d7b95ebbeefe82d9bf72c3e6452d34a72682ce5496c6e793b2f34da3729260f77cb566488b65086a45d12752972f2",
+    "text_hash_short": "c3ddf1cdfdaefa873ad66b9e47e03058"
+}

@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 1085,
+    "line_end": 1138,
+    "text": "package Serializer is\n\n   type Bit_Field is array (Natural range <>) of Boolean with Pack;\n\n   procedure Transmit (B : Bit_Field);\n\nend Serializer;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Serializer is\n\n   procedure Transmit (B : Bit_Field) is\n\n      procedure Show_Bit (V : Boolean) is\n      begin\n         case V is\n            when False => Put (\"0\");\n            when True  => Put (\"1\");\n         end case;\n      end Show_Bit;\n\n   begin\n      Put (\"Bits: \");\n      for E of B loop\n         Show_Bit (E);\n      end loop;\n      New_Line;\n   end Transmit;\n\nend Serializer;\n\npackage My_Recs is\n\n   type Rec is record\n      V : Integer;\n      S : String (1 .. 3);\n   end record;\n\nend My_Recs;\n\nwith Serializer;  use Serializer;\nwith My_Recs;     use My_Recs;\n\nprocedure Main is\n   R : Rec := (5, \"abc\");\n   B : Bit_Field (0 .. R'Size - 1)\n     with Address => R'Address, Import, Volatile;\nbegin\n   Transmit (B);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.Bitfield_Serialization_ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "serializer.ads",
+        "serializer.adb",
+        "my_recs.ads",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "5584b4d39bc7cc7e10212a63253af9b05351cf2da68386d7ba4f5c8c877244c4a94943b557c5c980022aa2f73211ac96161959f34c742e3dbb78dc440df9f56a",
+    "text_hash_short": "5c9c2d18bab7c78456d1d795c6334cd9"
+}

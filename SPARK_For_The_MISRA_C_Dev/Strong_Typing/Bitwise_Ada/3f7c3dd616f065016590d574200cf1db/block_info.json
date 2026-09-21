@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/04_strong_typing.rst",
+    "line_start": 657,
+    "line_end": 664,
+    "text": "package Bad_Genetics is\n   type Animal is (Ape, Bee, Cat, Dog);\n   Mutant : Animal := Bee xor Dog;  --  ERROR\n   pragma Assert (Mutant = Cat);\nend Bad_Genetics;\n",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Strong_Typing.Bitwise_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "bad_genetics.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "bad_genetics.ads",
+    "text_hash": "79b71546158a66a42aedd45a1c4fb4371572de70ca4d8e8201a1df113d3f5a9129465204d966d830165b3a02d46f1dab2942fb87671a6704cd6a2f3434ba224a",
+    "text_hash_short": "3f7c3dd616f065016590d574200cf1db"
+}

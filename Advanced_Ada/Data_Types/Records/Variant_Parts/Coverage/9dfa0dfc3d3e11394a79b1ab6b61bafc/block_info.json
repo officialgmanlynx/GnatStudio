@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 3088,
+    "line_end": 3105,
+    "text": "package Subtype_Coverage is\n\n   type Var_Rec (Value : Integer) is\n   record\n      case Value is\n         when Integer'First .. -1 =>\n            null;\n         when 0 .. 100 =>\n            I : Integer;\n         when 101 .. Integer'Last =>\n            null;\n      end case;\n   end record;\n\nend Subtype_Coverage;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Variant_Parts.Coverage",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "subtype_coverage.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "ae06e50e8f88878d692dc3c2c53bb15486a5130ef40277a569fc5f7b72c6852dba2e7259fff7090da9f8c046fdcb9d393893e6666b722a0f960a0ea61880fb77",
+    "text_hash_short": "9dfa0dfc3d3e11394a79b1ab6b61bafc"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 10127,
+    "line_end": 10191,
+    "text": "with Fixed_Types.Wide; use Fixed_Types.Wide;\n\npackage body Fixed_Types is\n\n   function \"+\" (A, B : Sat_Sample)\n                return Sat_Sample\n   is\n      Res : constant Wide_Sample :=\n        Wide_Sample (A) +\n        Wide_Sample (B);\n   begin\n      if Res > Wide_Sample (Sample'Last)\n      then\n         return Sat_Sample (Sample'Last);\n      elsif\n        Res < Wide_Sample (Sample'First)\n      then\n         return Sat_Sample (Sample'First);\n      else\n         return Sat_Sample (Res);\n      end if;\n   end \"+\";\n\n   function \"-\" (A, B : Sat_Sample)\n                return Sat_Sample\n   is\n      Res : constant Wide_Sample :=\n        Wide_Sample (A) -\n        Wide_Sample (B);\n   begin\n      if Res > Wide_Sample (Sample'Last)\n      then\n         return Sat_Sample (Sample'Last);\n      elsif\n        Res < Wide_Sample (Sample'First)\n      then\n         return Sat_Sample (Sample'First);\n      else\n         return Sat_Sample (Res);\n      end if;\n   end \"-\";\n\n   function \"*\" (A, B : Sat_Sample)\n                return Sat_Sample\n   is\n      Res : constant Wide_Product :=\n        Wide_Product (A) *\n        Wide_Product (B);\n   begin\n      if Res > Wide_Product (Sample'Last)\n      then\n         return Sat_Sample (Sample'Last);\n      elsif\n        Res < Wide_Product (Sample'First)\n      then\n         return Sat_Sample (Sample'First);\n      else\n         return Sat_Sample (Res);\n      end if;\n   end \"*\";\n\nend Fixed_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Ordinary_Fixed_Point_Types.Saturating_Operators",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "fixed_types.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "81fac688f88db2031904e3444086a72b6652899390307c0d9b70ea1b3c43f0bacd395c6d4b9ee63f08f8b95c64f0b21d96f7b24e547683d0034b2a40fc49d436",
+    "text_hash_short": "d6bb7d3bbab7073d65536e556221ca28"
+}

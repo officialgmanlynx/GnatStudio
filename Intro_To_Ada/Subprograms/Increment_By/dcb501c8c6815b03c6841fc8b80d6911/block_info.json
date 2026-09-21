@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/subprograms.rst",
+    "line_start": 99,
+    "line_end": 140,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\nwith Increment_By;\n\nprocedure Show_Increment is\n   A, B, C : Integer;\nbegin\n   C := Increment_By;\n   --              ^ Parameterless call,\n   --                value of I is 0\n   --                and Incr is 1\n\n   Put_Line (\"Using defaults for Increment_By is \"\n             & Integer'Image (C));\n\n   A := 10;\n   B := 3;\n   C := Increment_By (A, B);\n   --                 ^ Regular parameter passing\n\n   Put_Line (\"Increment of \"\n             & Integer'Image (A)\n             & \" with \"\n             & Integer'Image (B)\n             & \" is \"\n             & Integer'Image (C));\n\n   A := 20;\n   B := 5;\n   C := Increment_By (I    => A,\n                      Incr => B);\n    --                ^ Named parameter passing\n\n   Put_Line (\"Increment of \"\n             & Integer'Image (A)\n             & \" with \"\n             & Integer'Image (B)\n             & \" is \"\n             & Integer'Image (C));\nend Show_Increment;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Subprograms.Increment_By",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_increment.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_increment.adb",
+    "text_hash": "80530574a63ee9939aab38cae994a6bde4a19c77ac38844c2158ecb5e3eed92d23e28ba411069a8ef65ed28913c3290230d4881ec886bb439ffd04d99f9060bb",
+    "text_hash_short": "dcb501c8c6815b03c6841fc8b80d6911"
+}

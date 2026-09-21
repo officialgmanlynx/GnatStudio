@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_strings.rst",
+    "line_start": 185,
+    "line_end": 264,
+    "text": "with Ada.Strings;       use Ada.Strings;\nwith Ada.Strings.Fixed; use Ada.Strings.Fixed;\nwith Ada.Text_IO;       use Ada.Text_IO;\n\nprocedure Show_Adapted_Strings is\n\n   S   : String := \"Hello World\";\n   P   : constant String := \"World\";\n   N   : constant String := \"Beautiful\";\n\n   procedure Display_Adapted_String\n     (Source   : String;\n      Before   : Positive;\n      New_Item : String;\n      Pattern  : String)\n   is\n      S_Ins_In : String := Source;\n      S_Ovr_In : String := Source;\n      S_Del_In : String := Source;\n\n      S_Ins : String :=\n        Insert (Source,\n                Before,\n                New_Item & \" \");\n      S_Ovr : String :=\n        Overwrite (Source,\n                   Before,\n                   New_Item);\n      S_Del : String :=\n        Trim (Delete (Source,\n                      Before,\n                      Before +\n                        Pattern'Length - 1),\n              Ada.Strings.Right);\n   begin\n      Insert (S_Ins_In,\n              Before,\n              New_Item,\n              Right);\n\n      Overwrite (S_Ovr_In,\n                 Before,\n                 New_Item,\n                 Right);\n\n      Delete (S_Del_In,\n              Before,\n              Before + Pattern'Length - 1);\n\n      Put_Line (\"Original:  '\"\n                & Source & \"'\");\n\n      Put_Line (\"Insert:    '\"\n                & S_Ins  & \"'\");\n      Put_Line (\"Overwrite: '\"\n                & S_Ovr  & \"'\");\n      Put_Line (\"Delete:    '\"\n                & S_Del  & \"'\");\n\n      Put_Line (\"Insert    (in-place): '\"\n                & S_Ins_In & \"'\");\n      Put_Line (\"Overwrite (in-place): '\"\n                & S_Ovr_In & \"'\");\n      Put_Line (\"Delete    (in-place): '\"\n                & S_Del_In & \"'\");\n   end Display_Adapted_String;\n\n   Idx : Natural;\nbegin\n   Idx := Index\n     (Source  => S,\n      Pattern => P);\n\n   if Idx > 0 then\n      Display_Adapted_String (S, Idx, N, P);\n   end if;\nend Show_Adapted_Strings;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Adapted_Strings",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_adapted_strings.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_adapted_strings.adb",
+    "text_hash": "9f8488e2fa93cd8ca10094057bf7f0b10e138f1ed00a09007e59e297a017b365f5f5e81a2a94b8edd9cc729ea45c835b721f8af15e569b42e697e1fc5fdf227b",
+    "text_hash_short": "b31b6bc94d8bdbec717c6b6b2534beb6"
+}

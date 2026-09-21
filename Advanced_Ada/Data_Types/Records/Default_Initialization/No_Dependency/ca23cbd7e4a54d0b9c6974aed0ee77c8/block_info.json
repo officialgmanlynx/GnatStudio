@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 50,
+    "line_end": 64,
+    "text": "!show_default_initialization_dependency.ads\npackage Show_Default_Initialization_Dependency is\n\n   function Init return Integer is\n     (42);\n\n   type Rec is record\n      A : Integer := Init;\n      B : Integer := Rec.A;  --  Illegal!\n   end record;\n\nend Show_Default_Initialization_Dependency;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Default_Initialization.No_Dependency",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": true,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_default_initialization_dependency.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "9b21650c139a819f63d78b9925c72b031c1736374b85cc6137555b24b41e7def66174c91c8290df852b21fa433feb842bb3aa16675bcfc02cc47638c5bbd337d",
+    "text_hash_short": "ca23cbd7e4a54d0b9c6974aed0ee77c8"
+}

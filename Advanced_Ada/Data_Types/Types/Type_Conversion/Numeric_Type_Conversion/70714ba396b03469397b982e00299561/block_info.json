@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 2274,
+    "line_end": 2313,
+    "text": "package Fixed_Point_Defs is\n   S     : constant := 32;\n   Exp   : constant := 15;\n   D     : constant := 2.0 ** (-S + Exp + 1);\n\n   type TQ15_31 is delta D\n     range -1.0 * 2.0 ** Exp ..\n            1.0 * 2.0 ** Exp - D;\n\n   pragma Assert (TQ15_31'Size = S);\nend Fixed_Point_Defs;\n\nwith Fixed_Point_Defs; use Fixed_Point_Defs;\nwith Ada.Text_IO;      use Ada.Text_IO;\n\nprocedure Show_Conversion is\n   F  : Float;\n   FP : TQ15_31;\n   I  : Integer;\nbegin\n   FP := TQ15_31 (10.25);\n   I  := Integer (FP);\n\n   Put_Line (\"FP : \"\n             & FP'Image);\n   Put_Line (\"I : \"\n             & I'Image);\n\n   I  := 128;\n   FP := TQ15_31 (I);\n   F  := Float (FP);\n\n   Put_Line (\"FP : \"\n             & FP'Image);\n   Put_Line (\"F :   \"\n             & F'Image);\nend Show_Conversion;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Type_Conversion.Numeric_Type_Conversion",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "fixed_point_defs.ads",
+        "show_conversion.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_conversion.adb",
+    "text_hash": "f8cd1cf1e574ec84a75b634014bbebf72238de4c0b0e73c392b22375db16a77174cc556547cb19ac70e693d4709174c2c74a39f8e0708b8b32d471ab4864262d",
+    "text_hash_short": "70714ba396b03469397b982e00299561"
+}

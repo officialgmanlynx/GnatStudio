@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 8836,
+    "line_end": 8866,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Narrow_Base_Type is\n\n   D : constant := 2.0 ** (-10);\n\n   type T_Narrow is\n     delta D\n     range 0.0 .. 4.0 - D;\n\nbegin\n   Put_Line (\"T_Narrow'First      = \"\n             & T_Narrow'First'Image);\n   Put_Line (\"T_Narrow'Last       = \"\n             & T_Narrow'Last'Image);\n   Put_Line (\"T_Narrow'Size       = \"\n             & T_Narrow'Size'Image);\n\n   Put_Line (\"------------------------------\");\n\n   Put_Line (\"T_Narrow'Base'First = \"\n             & T_Narrow'Base'First'Image);\n   Put_Line (\"T_Narrow'Base'Last  = \"\n             & T_Narrow'Base'Last'Image);\n   Put_Line (\"T_Narrow'Base'Size  = \"\n             & T_Narrow'Base'Size'Image);\n\nend Show_Narrow_Base_Type;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Ordinary_Fixed_Point_Types.Base_Type_Narrow_Type",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_narrow_base_type.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_narrow_base_type.adb",
+    "text_hash": "f9af5ae7ab436d53d945df6472bdbda4b1719baf51497e107dbafd0e679fbfba12382b6e5f51c7d1900a1e6af34cbc0ee829fa0db6ca41764a0ebbcce29c739e",
+    "text_hash_short": "b84ded4b5ba0566580583a61e4e0e447"
+}

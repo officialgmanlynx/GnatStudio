@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numeric_attributes.rst",
+    "line_start": 1173,
+    "line_end": 1204,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Safe_First_Last is\nbegin\n   Put_Line (\"Float'First:                \"\n             & Float'First'Image);\n   Put_Line (\"Float'Last:                 \"\n             & Float'Last'Image);\n   Put_Line (\"Float'Safe_First:           \"\n             & Float'Safe_First'Image);\n   Put_Line (\"Float'Safe_Last:            \"\n             & Float'Safe_Last'Image);\n   Put_Line (\"Long_Float'First:           \"\n             & Long_Float'First'Image);\n   Put_Line (\"Long_Float'Last:            \"\n             & Long_Float'Last'Image);\n   Put_Line (\"Long_Float'Safe_First:      \"\n             & Long_Float'Safe_First'Image);\n   Put_Line (\"Long_Float'Safe_Last:       \"\n             & Long_Float'Safe_Last'Image);\n   Put_Line (\"Long_Long_Float'First:      \"\n             & Long_Long_Float'First'Image);\n   Put_Line (\"Long_Long_Float'Last:       \"\n             & Long_Long_Float'Last'Image);\n   Put_Line (\"Long_Long_Float'Safe_First: \"\n             & Long_Long_Float'Safe_First'Image);\n   Put_Line (\"Long_Long_Float'Safe_Last:  \"\n             & Long_Long_Float'Safe_Last'Image);\nend Show_Safe_First_Last;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numeric_Attributes.Floating_Point_Types.Safe_First_Last",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_safe_first_last.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_safe_first_last.adb",
+    "text_hash": "036fbfd144a314e6c8f8b0b461f0f23c62b031a4324f415a7f9129525075d9bfb2092d35b6a8577266f71e2a16157d4a2d18fe7e30270c3627e36267abb03ad6",
+    "text_hash_short": "dc4f3598bcf270711f809414411c6e89"
+}

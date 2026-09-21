@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 1329,
+    "line_end": 1364,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main is\n\n   type Opt_Float (Success : Boolean) is record\n      case Success is\n        when False => null;\n        when True  => F : Float;\n      end case;\n   end record;\n\n   function Calculate (F1, F2 : Float) return Opt_Float is\n   begin\n      if F1 < F2 then\n         return (Success => True, F => F2 - F1);\n      else\n         return (Success => False);\n      end if;\n   end Calculate;\n\n   procedure Display (V : Opt_Float) is\n   begin\n      if V.Success then\n         Put_Line (\"Value = \" & Float'Image (V.F));\n      else\n         Put_Line (\"Calculation error!\");\n      end if;\n   end Display;\n\nbegin\n   Display (Calculate (1.0, 0.5));\n   Display (Calculate (0.5, 1.0));\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.Opt_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "a6e27e8946114db71067eaff2cc26eea0a5260a5e84166e024f743afb788b79c8ac6c7472f2fd611890b6fb050bbe2d4b53ed472484c6bcbaf1f31bfe6d2333f",
+    "text_hash_short": "8b70cd16d5ff13611567fa71059d6891"
+}

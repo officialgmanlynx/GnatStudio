@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 545,
+    "line_end": 591,
+    "text": "package Custom_Types is\n\n   type UInt_7 is range 0 .. 127;\n\n   type UInt_7_Reserved_Access is access UInt_7\n     with Storage_Size => 8;\n\nend Custom_Types;\n\nwith Ada.Text_IO;  use Ada.Text_IO;\nwith System;\n\nwith Custom_Types; use Custom_Types;\n\nprocedure Show_Sizes is\n   RAV1, RAV2 : UInt_7_Reserved_Access;\nbegin\n   Put_Line\n   (\"UInt_7_Reserved_Access'Storage_Size:        \"\n    & UInt_7_Reserved_Access'Storage_Size'Image);\n\n   Put_Line\n   (\"UInt_7_Reserved_Access'Storage_Size (bits): \"\n    & Integer'Image\n        (UInt_7_Reserved_Access'Storage_Size\n         * System.Storage_Unit));\n\n   Put_Line\n     (\"UInt_7_Reserved_Access'Size:        \"\n      & UInt_7_Reserved_Access'Size'Image);\n   Put_Line\n     (\"UInt_7_Reserved_Access'Object_Size: \"\n      & UInt_7_Reserved_Access'Object_Size'Image);\n   Put_Line\n     (\"RAV1'Size:                          \"\n      & RAV1'Size'Image);\n   New_Line;\n\n   Put_Line (\"Allocating RAV1...\");\n   RAV1 := new UInt_7;\n   Put_Line (\"Allocating RAV2...\");\n   RAV2 := new UInt_7;\n   New_Line;\nend Show_Sizes;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Data_Representation.Sizes",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_types.ads",
+        "show_sizes.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_sizes.adb",
+    "text_hash": "f6bd3450061e57c4e8b92028d0389460bab2d86239a75e8be785926af61971a01ce3d94f0655de1339cd64571f832062fc2cbd128c6cd1f03f83c56478d52c3d",
+    "text_hash_short": "6ac085d8467a61ba4f9cd138c024442d"
+}

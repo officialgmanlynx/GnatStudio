@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 5350,
+    "line_end": 5380,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Decimal_Fixed_Point_Smaller is\n   type T3_D3 is\n     delta 10.0 ** (-3) digits 3;\n   type T6_D6 is\n     delta 10.0 ** (-6) digits 6;\n\n   A, B : T3_D3;\n   C    : T6_D6;\nbegin\n   A := T3_D3'Delta;\n   B := 0.5;\n\n   Put_Line (\"The value of A     is \"\n             & T3_D3'Image (A));\n   Put_Line (\"The value of B     is \"\n             & T3_D3'Image (B));\n\n   A := A * B;\n   Put_Line (\"The value of A * B is \"\n             & T3_D3'Image (A));\n\n   A := T3_D3'Delta;\n   C := A * B;\n   Put_Line (\"The value of A * B is \"\n             & T6_D6'Image (C));\nend Decimal_Fixed_Point_Smaller;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Decimal_Fixed_Point_Types.Decimal_Fixed_Point_Smaller",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "decimal_fixed_point_smaller.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "decimal_fixed_point_smaller.adb",
+    "text_hash": "2d57db83ab6eb66325fa1cd64fd824bb2efeadaa61e67c57fcc61aa45a9a0071cf5765820a98043604d7bb424e58400386db5223361fe69cbed9939d0e92815d",
+    "text_hash_short": "4da76ada595cce7c61816ca74c925304"
+}

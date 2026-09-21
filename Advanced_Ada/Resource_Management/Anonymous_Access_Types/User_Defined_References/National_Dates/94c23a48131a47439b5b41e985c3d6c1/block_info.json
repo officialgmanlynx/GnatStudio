@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 2135,
+    "line_end": 2176,
+    "text": "generic\n   type T is private;\n   type T_Access is access T;\n   type T_Cmp is private;\n   with function Matches (E    : T_Access;\n                          Elem : T_Cmp)\n                          return Boolean;\npackage Generic_Containers is\n\n   type Ref_Type (Ref : access T) is\n     tagged limited null record\n       with Implicit_Dereference => Ref;\n\n   type Container is\n     array (Positive range <>) of\n       T_Access;\n\n   function Find (Cont : Container;\n                  Elem : T_Cmp)\n                  return Ref_Type;\n\nend Generic_Containers;\n\npackage body Generic_Containers is\n\n   function Find (Cont : Container;\n                  Elem : T_Cmp)\n                  return Ref_Type is\n   begin\n      for I in Cont'Range loop\n         if Matches (Cont (I), Elem) then\n            return Ref_Type'(Ref => Cont (I));\n         end if;\n      end loop;\n\n      return Ref_Type'(Ref => null);\n   end Find;\n\nend Generic_Containers;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.User_Defined_References.National_Dates",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "generic_containers.ads",
+        "generic_containers.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "8a4e26155ba0d50a4965ff4bbd0640274884bc3053db12a15c8fbb05de4a327adbe860f5d25dcf870a381fb251e0ac92054757da38a690ab838c0d5e2e11bc0c",
+    "text_hash_short": "94c23a48131a47439b5b41e985c3d6c1"
+}

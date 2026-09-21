@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 3895,
+    "line_end": 3904,
+    "text": "package Show_Not_Found_Exception is\n   Not_Found : exception;\n\n   function Lookup (T : Table) return Ref_Element;\n   --  Raises Not_Found if not found.\n   --  Never returns null.\nend Show_Not_Found_Exception;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Null_And_Not_Null_Access.Not_Found_Exception",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-syntax-only"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": true,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_not_found_exception.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "24b96b8aba27dd78882a9884d823b720ebbf80f29cb58f75ad1d4d30348e56fb97d2695b91681cc6de974b9d674e87e857ec78bfbe7cd05d62a940c9aefa441e",
+    "text_hash_short": "6ef47b32d4923838ffc28f43e5db323c"
+}

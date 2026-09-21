@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 675,
+    "line_end": 726,
+    "text": "package Simple_Recs is\n\n   type Rec_Limited_Full is limited private;\n   type Rec_Nonlimited_Full is limited private;\n\n   procedure Copy\n     (From :        Rec_Limited_Full;\n      To   : in out Rec_Limited_Full);\n   procedure Copy\n     (From :        Rec_Nonlimited_Full;\n      To   : in out Rec_Nonlimited_Full);\n\nprivate\n\n   type Rec_Limited_Full is limited record\n      I : Integer;\n   end record;\n\n   type Rec_Nonlimited_Full is record\n      I : Integer;\n   end record;\n\nend Simple_Recs;\n\npackage body Simple_Recs is\n\n   procedure Copy\n     (From :        Rec_Limited_Full;\n      To   : in out Rec_Limited_Full)\n   is\n   begin\n      To := From;\n      --  ERROR: assignment is forbidden because\n      --         Rec_Limited_Full is limited in\n      --         its full view.\n   end Copy;\n\n   procedure Copy\n     (From :        Rec_Nonlimited_Full;\n      To   : in out Rec_Nonlimited_Full)\n   is\n   begin\n      To := From;\n      --  OK: assignment is allowed because\n      --      Rec_Nonlimited_Full is\n      --      nonlimited in its full view.\n   end Copy;\n\nend Simple_Recs;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Limited_Private_Types.Limited_Non_Limited_Partial_Full_View",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple_recs.ads",
+        "simple_recs.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "5c6a445ca10bcf2f7b7d161bf97bfcb32b994fc2a8e5355207f82fd2f75f904e3a97e682b7e9917a7e5bb3ba461ba8691bffc5c191c9f0b813bc4deadf3d5b21",
+    "text_hash_short": "24b75bb97ddd485bd6825bb8647607c1"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/strongly_typed_language.rst",
+    "line_start": 626,
+    "line_end": 642,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Greet is\n   type Days is (Monday, Tuesday, Wednesday,\n                 Thursday, Friday,\n                 Saturday, Sunday);\n\n   type Weekend_Days is new\n     Days range Saturday .. Sunday;\n   --  New type, where only Saturday and Sunday\n   --  are valid literals.\nbegin\n   null;\nend Greet;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Strongly_Typed_Language.Days",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "greet.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "greet.adb",
+    "text_hash": "0e4e84fa0dc6496feb18541de00ed0a2d7daa17ee8ab21502042c81773f71fb685d94b5e224873e7b26365ddfb426ea409aff7d82ee5376004bb1e2414712883",
+    "text_hash_short": "853b5c1576961c7c20d4306275122364"
+}

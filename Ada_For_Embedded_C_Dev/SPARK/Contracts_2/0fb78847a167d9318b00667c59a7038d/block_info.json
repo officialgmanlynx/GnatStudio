@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/05_SPARK.rst",
+    "line_start": 749,
+    "line_end": 754,
+    "text": "function Mid (X, Y : Integer) return Integer with\n   Pre  => X + Y /= 0,\n   Post => Mid'Result > X;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.SPARK.Contracts_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "mid.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "ff374ff02d26abc32146c6b2b4245c5bdc42c3cdd9776eb0b8b7b9a22fde19312878b26b45c4a6e44a41f509f350571b51ab6a0fd29f055bda42cc9eb5dd8f1c",
+    "text_hash_short": "0fb78847a167d9318b00667c59a7038d"
+}

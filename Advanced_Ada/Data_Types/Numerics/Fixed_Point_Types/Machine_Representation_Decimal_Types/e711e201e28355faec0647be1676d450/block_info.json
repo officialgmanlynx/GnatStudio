@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 3592,
+    "line_end": 3621,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Custom_Decimal_Types;\nuse  Custom_Decimal_Types;\n\nwith Custom_Decimal_Types.Show_Info_Procs;\nuse  Custom_Decimal_Types.Show_Info_Procs;\n\nprocedure Show_Decimal_Types_Machine_Repr is\nbegin\n   Put_Line (\"=============================\");\n   Put_Line (\"T0_D4\");\n   Put_Line (\"=============================\");\n\n   Show_Info (T0_D4'(1.0), \"1.0     \");\n   Show_Info (T0_D4 (T2_D6'(1.55)),\n              \"1.55    \");\n   Show_Info (T0_D4'(2.0), \"2.0     \");\n\n   Put_Line (\"=============================\");\n   Put_Line (\"T2_D6\");\n   Put_Line (\"=============================\");\n\n   Show_Info (T2_D6'(1.0),  \"1.0     \");\n   Show_Info (T2_D6'(1.55), \"1.55    \");\n   Show_Info (T2_D6'(2.0),  \"2.0     \");\nend Show_Decimal_Types_Machine_Repr;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Fixed_Point_Types.Machine_Representation_Decimal_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_decimal_types_machine_repr.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_decimal_types_machine_repr.adb",
+    "text_hash": "6d29e5a0179f67c948a5b6309514571e0a97d846809c8caea758d90813a123f7175e9a7e08a9e7557d0665685539d9972294c2a33c93b1e0ad7e7bf10f42f6bb",
+    "text_hash_short": "e711e201e28355faec0647be1676d450"
+}

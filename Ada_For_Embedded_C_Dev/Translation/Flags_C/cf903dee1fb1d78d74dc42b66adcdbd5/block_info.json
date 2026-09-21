@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 609,
+    "line_end": 625,
+    "text": "!flags.c\n#define FLAG_1 0b0001\n#define FLAG_2 0b0010\n#define FLAG_3 0b0100\n#define FLAG_4 0b1000\n\nint main(int argc, const char * argv[])\n{\n    int value = 0;\n\n    value |= FLAG_2 | FLAG_4;\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.Flags_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "flags.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "flags.c",
+    "text_hash": "0216b8e558d1905a5849192707b3f3ce614ac7302d74fe18db83f2decce3bbc57406ab494f9923f55d42ecec17e7808d1fc2383ca191c8da2ccc93be305b363e",
+    "text_hash_short": "cf903dee1fb1d78d74dc42b66adcdbd5"
+}

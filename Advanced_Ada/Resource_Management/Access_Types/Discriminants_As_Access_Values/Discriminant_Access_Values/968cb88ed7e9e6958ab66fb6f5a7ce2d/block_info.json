@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 615,
+    "line_end": 649,
+    "text": "package Custom_Recs is\n\n   type Integer_Access is access Integer;\n\n   type Rec (IA : Integer_Access\n                    := new Integer'(0)) is\n      --               ^^^^^^^^^^^^^^^\n      --                default value\n   record\n      I : Integer := IA.all;\n   end record;\n\n   procedure Show (R : Rec);\n\nend Custom_Recs;\n\nwith Custom_Recs; use Custom_Recs;\n\nprocedure Show_Discriminants_As_Access_Values is\n\n   R1 : Rec;\n   --   ^^^\n   --   no discriminant: use default\n\n   R2 : Rec (new Integer'(20));\n   --        ^^^^^^^^^^^^^^^^\n   --        allocating an unnamed integer object\n\nbegin\n   Show (R1);\n   Show (R2);\nend Show_Discriminants_As_Access_Values;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Discriminants_As_Access_Values.Discriminant_Access_Values",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_recs.ads",
+        "show_discriminants_as_access_values.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_discriminants_as_access_values.adb",
+    "text_hash": "3bdf521c3f1c33fb33b93e9e8c9739847ea784874f37e762d27b799fcba3fcd0ff5c8536653e3b74bbcb1b84b2058a033dfc712f757034a1c0148b69a65cb050",
+    "text_hash_short": "968cb88ed7e9e6958ab66fb6f5a7ce2d"
+}

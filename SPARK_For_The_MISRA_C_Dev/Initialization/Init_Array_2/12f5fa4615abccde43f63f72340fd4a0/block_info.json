@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/05_initialization.rst",
+    "line_start": 339,
+    "line_end": 345,
+    "text": "package Init_Array is\n   type Arr is array (1 .. 10) of Integer;\n   A : Arr := (1 .. 8 => 1, 9 .. 10 => 2, 7 => 3);  --  ERROR, A(7) duplicated\nend Init_Array;\n",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Initialization.Init_Array_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "init_array.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "7f37701b252bf735a936e3b6a27840670d3456f388f55e7864bfdd898f30668392a79f664d71c5ae3378f909e46d37ddb804003221b5923141de4ad24a94fe00",
+    "text_hash_short": "12f5fa4615abccde43f63f72340fd4a0"
+}

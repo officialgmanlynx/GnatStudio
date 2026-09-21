@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/aggregates.rst",
+    "line_start": 165,
+    "line_end": 195,
+    "text": "package Points is\n\n   type Point_3D is record\n      X, Y, Z : Integer;\n   end record;\n\n   procedure Display (P : Point_3D);\n\nend Points;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Points is\n\n   procedure Display (P : Point_3D) is\n   begin\n      Put_Line (\"(X => \"\n                & Integer'Image (P.X)\n                & \",\");\n      Put_Line (\" Y => \"\n                & Integer'Image (P.Y)\n                & \",\");\n      Put_Line (\" Z => \"\n                & Integer'Image (P.Z)\n                & \")\");\n   end Display;\n\nend Points;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Aggregates.Record_Aggregates.Pos_Named_Rec_Aggregates",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "points.ads",
+        "points.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "76d4e15356a25cf65f85b3cefc41f73fae848c354f4be5be96db614bc9742e2c9da6b440d67165c1112dc761f677f52f6a98b921f0cf9480d2deb6b9a2128cd3",
+    "text_hash_short": "fd01961cf1da9b48d2a6150da30f7377"
+}

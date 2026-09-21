@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/more_about_records.rst",
+    "line_start": 118,
+    "line_end": 136,
+    "text": "package Test_Discriminants is\n   type Point (X, Y : Natural := 0) is record\n      null;\n   end record;\n\n   P : Point;\n   --  We can now simply declare a \"Point\"\n   --  without further ado. In this case,\n   --  we're using the default values (0)\n   --  for X and Y.\n\n   P2 : Point (1, 2);\n   P3 : Point := (1, 2);\n   --  We can still specify discriminants.\n\nend Test_Discriminants;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.More_About_Records.Test_Discriminants",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "test_discriminants.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "803112327a593978d5916c825e7f27d6e9b6841e0764940c6b60e7b20b02d7d8912e3c2819d03862fbfedb5e4ec1ecaf373b1303a31292cc23728d74aeb844d2",
+    "text_hash_short": "259f6cdf7fa857cc006dac6d1daedd73"
+}

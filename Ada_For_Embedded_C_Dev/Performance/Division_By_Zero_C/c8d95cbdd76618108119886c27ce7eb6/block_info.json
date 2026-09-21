@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/08_Performance.rst",
+    "line_start": 222,
+    "line_end": 238,
+    "text": "!main.c\n#include <stdio.h>\n\nint main(int argc, const char * argv[])\n{\n    int a = 8, b = 0, res;\n\n    res = a / b;\n\n    // printing the result\n    printf(\"res = %d\\n\", res);\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Performance.Division_By_Zero_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "c-run-expect-failure"
+    ],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "b36707e10a74b6d817abc21aa77e8908a491708f3480c182a3157e2b81ed0ec138de0a413a40f6a5a6aabd90922c82f5b59b200f862bf47336dad72928e9cb13",
+    "text_hash_short": "c8d95cbdd76618108119886c27ce7eb6"
+}

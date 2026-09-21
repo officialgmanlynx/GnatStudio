@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 1674,
+    "line_end": 1689,
+    "text": "package Recs is\n\n   type LTT (L : Positive := 1;\n             M : Positive := 2) is\n     limited private;\n\nprivate\n\n   type LTT (L : Positive := 1;\n             M : Positive := 2) is\n     limited null record;\n\nend Recs;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Discriminants.Discriminant_Default_Value_Tagged_TYpe",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "recs.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "f7b3556a4b21204c4f93e755dc9173f4ff39ea05a96e0210bb67b6419dd3086beae99a34ae2c95a988ff84e4139657ce82e5e4929d297e31c67353dcefe1a0ae",
+    "text_hash_short": "536d7dfbe84c818cb94a8b972e3d77cb"
+}

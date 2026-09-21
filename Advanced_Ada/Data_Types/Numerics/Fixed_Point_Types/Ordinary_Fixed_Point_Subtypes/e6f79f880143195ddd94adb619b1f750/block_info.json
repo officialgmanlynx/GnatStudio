@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 3367,
+    "line_end": 3409,
+    "text": "package Custom_Fixed_Point is\n\n   D : constant := 2.0 ** (-15);\n   type Short_Fixed is\n     delta D\n     range -1.0 .. 1.0 - D;\n\n   subtype Coefficient is Short_Fixed\n     range 0.0 .. 1.0 - D;\n\nend Custom_Fixed_Point;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Custom_Fixed_Point;\nuse  Custom_Fixed_Point;\n\nprocedure Show_Fixed_Point_Subtypes is\n   SF : Short_Fixed;\n   C  : Coefficient;\nbegin\n   SF := 0.25;\n   Put_Line (\"SF = \"\n             & SF'Image);\n\n   C := SF;\n   Put_Line (\"C  = \"\n             & C'Image);\n   Put_Line (\"---------\");\n\n   SF := -0.25;\n   Put_Line\n     (\"SF in Short_Fixed: \"\n      & Boolean'Image\n          (SF in Short_Fixed));\n   Put_Line\n     (\"SF in Coefficient: \"\n      & Boolean'Image\n          (SF in Coefficient));\nend Show_Fixed_Point_Subtypes;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Fixed_Point_Types.Ordinary_Fixed_Point_Subtypes",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_fixed_point.ads",
+        "show_fixed_point_subtypes.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_fixed_point_subtypes.adb",
+    "text_hash": "7a794b9942e61157b49c0f7b79b4b779e36e83438c96c6e9fb8d963f8861360f196edebbb51ca1630a8c017bf7587a46e59f178f8b1a7b1b37b72d0d666495e4",
+    "text_hash_short": "e6f79f880143195ddd94adb619b1f750"
+}

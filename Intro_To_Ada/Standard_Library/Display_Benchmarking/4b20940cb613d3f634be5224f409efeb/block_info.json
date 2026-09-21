@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_dates_times.rst",
+    "line_start": 245,
+    "line_end": 273,
+    "text": "with Ada.Text_IO;   use Ada.Text_IO;\nwith Ada.Real_Time; use Ada.Real_Time;\n\nprocedure Display_Benchmarking is\n\n   procedure Computational_Intensive_App is\n   begin\n      delay 5.0;\n   end Computational_Intensive_App;\n\n   Start_Time, Stop_Time : Time;\n   Elapsed_Time          : Time_Span;\n\nbegin\n   Start_Time := Clock;\n\n   Computational_Intensive_App;\n\n   Stop_Time    := Clock;\n   Elapsed_Time := Stop_Time - Start_Time;\n\n   Put_Line (\"Elapsed time: \"\n             & Duration'Image\n                 (To_Duration (Elapsed_Time))\n             & \" seconds\");\nend Display_Benchmarking;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Display_Benchmarking",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "display_benchmarking.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "display_benchmarking.adb",
+    "text_hash": "d346ffbeb34f96595251507e10d2c5ef1e16146069b67c72ebf00f4adb2d3caf9012f241887b5a9654a2107dc4475a647beaedf0666ce78e320c0e06bca1316c",
+    "text_hash_short": "4b20940cb613d3f634be5224f409efeb"
+}

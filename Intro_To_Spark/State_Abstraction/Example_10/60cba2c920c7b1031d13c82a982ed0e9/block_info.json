@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/04_State_Abstraction.rst",
+    "line_start": 1303,
+    "line_end": 1348,
+    "text": "package External_Interface with\n  Abstract_State => File_System,\n  Initializes    => File_System\nis\n   type Data_Type_1 is new Integer;\n   type Data_Type_2 is new Integer;\n   type Data_Type_3 is new Integer;\n\n   type Data_Record is record\n      Field_1 : Data_Type_1;\n      Field_2 : Data_Type_2;\n      Field_3 : Data_Type_3;\n   end record;\n\n   procedure Read_Data (File_Name : String; Data : out Data_Record)\n     with Global => File_System;\nend External_Interface;\n\nwith External_Interface; use External_Interface;\n\npackage Data is\n   pragma Elaborate_Body;\n\n   Data_1 : Data_Type_1;\n   Data_2 : Data_Type_2;\n   Data_3 : Data_Type_3;\n\nend Data;\n\nwith External_Interface;\npragma Elaborate_All (External_Interface);\n\npackage body Data is\nbegin\n   declare\n      Data_Read : Data_Record;\n   begin\n      Read_Data (\"data_file_name\", Data_Read);\n      Data_1 := Data_Read.Field_1;\n      Data_2 := Data_Read.Field_2;\n      Data_3 := Data_Read.Field_3;\n   end;\nend Data;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.State_Abstraction.Example_10",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow_report_all"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "external_interface.ads",
+        "data.ads",
+        "data.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "e5917d8c8cde3a464136c0996592b3309123d94cbfb17debf49fb8baf085fb47f22d718500747023064304c8d624d37cd0f1feef0d9c33aa6778c1c04eda896c",
+    "text_hash_short": "60cba2c920c7b1031d13c82a982ed0e9"
+}

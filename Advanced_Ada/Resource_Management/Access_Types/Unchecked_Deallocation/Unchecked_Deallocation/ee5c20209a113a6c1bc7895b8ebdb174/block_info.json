@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 3615,
+    "line_end": 3653,
+    "text": "with Integer_Types; use Integer_Types;\n\nprocedure Show_Unchecked_Deallocation is\n\n   I, I_2 : Integer_Access;\n\nbegin\n   I := new Integer;\n\n   I_2 := I;\n\n   --  NOTE: I_2 points to the same\n   --        object as I.\n\n   --\n   --  Use I and I_2...\n   --\n   --  ... then deallocate memory...\n   --\n\n   Free (I);\n\n   --  NOTE: at this point, I_2 is a\n   --        dangling reference!\n\n   --  Further calls to Free (I)\n   --  are OK!\n\n   Free (I);\n   Free (I);\n\n   --  A call to Free (I_2) is\n   --  NOT OK:\n\n   Free (I_2);\nend Show_Unchecked_Deallocation;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Unchecked_Deallocation.Unchecked_Deallocation",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_unchecked_deallocation.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_unchecked_deallocation.adb",
+    "text_hash": "0d5ac1cbc590c046c6a461fb1be67fab4b5a10380cde2edaf51565be95d55ca02b2a0ee0d8a81c054f8a26b01f4eab452ed6f8eaf4c79e353a6ec33f988f34f8",
+    "text_hash_short": "ee5c20209a113a6c1bc7895b8ebdb174"
+}

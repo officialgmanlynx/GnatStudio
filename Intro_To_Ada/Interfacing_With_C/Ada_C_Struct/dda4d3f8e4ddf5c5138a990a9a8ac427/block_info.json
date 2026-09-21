@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/interfacing_with_c.rst",
+    "line_start": 53,
+    "line_end": 70,
+    "text": "with Interfaces.C; use Interfaces.C;\n\nprocedure Show_C_Struct is\n\n   type c_struct is record\n      a : int;\n      b : long;\n      c : unsigned;\n      d : double;\n   end record\n     with Convention => C;\n\nbegin\n   null;\nend Show_C_Struct;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Interfacing_With_C.Ada_C_Struct",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_c_struct.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_c_struct.adb",
+    "text_hash": "51834cdc395b56ccd6189a5db9c31b97caa1b311b61c9fd5853910c3f76822a8d1bb8cbe5fb8aa67454b13f71c2cf025b3159ae64aeab52ebd3493a08fd2289e",
+    "text_hash_short": "dda4d3f8e4ddf5c5138a990a9a8ac427"
+}

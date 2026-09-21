@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 1816,
+    "line_end": 1831,
+    "text": "package Partial_Full_Views is\n\n   --  Partial view of the R type:\n   type R is private;\n\nprivate\n\n   --  Full view of the R type:\n   type R is record\n      I : Integer;\n   end record;\n\nend Partial_Full_Views;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Type_View.Partial_Full_View",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "partial_full_views.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "e4a55ba8c2c15e1ad474eb6ba372dce48e3655dd006507444121c36d5b80024da794f61b0df21a4774bea48dae39331c0b2e5aa119d27d4c9dea8964e805ce09",
+    "text_hash_short": "b0cf748e43b23ea6c845e283c4266ff3"
+}

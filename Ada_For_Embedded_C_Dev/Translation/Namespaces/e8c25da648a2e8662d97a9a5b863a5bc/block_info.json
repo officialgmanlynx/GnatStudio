@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 401,
+    "line_end": 415,
+    "text": "!reg_interface.h\nvoid registerInterface_Initialize (int size);\n\n!reg_interface_test.c\n#include \"reg_interface.h\"\n\nint main(int argc, const char * argv[])\n{\n    registerInterface_Initialize(15);\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.Namespaces",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "reg_interface.h",
+        "reg_interface_test.c"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "257dd0a87ee8c31679aec5c93dd785e7f764083664b00d6d0967f7127ecd208d11424b312bb96fb78e108a5eb09fba1835819add3ae95779b8d1d096a4662e7e",
+    "text_hash_short": "e8c25da648a2e8662d97a9a5b863a5bc"
+}

@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 3929,
+    "line_end": 4004,
+    "text": "package Example is\n\n   type Element is limited private;\n   type Ref_Element is access all Element;\n\n   type Table is limited private;\n\n   Not_Found : constant Ref_Element := null;\n   function Lookup (T : Table)\n                    return Ref_Element;\n   --  Returns Not_Found if not found.\n\n   Not_Found_2 : exception;\n   function Lookup_2 (T : Table)\n                      return not null Ref_Element;\n   --  Raises Not_Found_2 if not found.\n\n   procedure P (X : not null Ref_Element);\n\n   procedure Q (X : not null Ref_Element);\n\nprivate\n   type Element is limited\n      record\n         Component : Integer;\n      end record;\n   type Table is limited null record;\nend Example;\n\npackage body Example is\n\n   An_Element : aliased Element;\n\n   function Lookup (T : Table)\n                    return Ref_Element is\n      pragma Unreferenced (T);\n   begin\n      --  ...\n      return Not_Found;\n   end Lookup;\n\n   function Lookup_2 (T : Table)\n                      return not null Ref_Element\n   is\n   begin\n      --  ...\n      raise Not_Found_2;\n\n      return An_Element'Access;\n      --  suppress error: 'missing \"return\"\n      --  statement in function body'\n   end Lookup_2;\n\n   procedure P (X : not null Ref_Element) is\n   begin\n      X.all.Component := X.all.Component + 1;\n   end P;\n\n   procedure Q (X : not null Ref_Element) is\n   begin\n      for I in 1 .. 1000 loop\n         P (X);\n      end loop;\n   end Q;\n\n   procedure R is\n   begin\n      Q (An_Element'Access);\n   end R;\n\n  pragma Unreferenced (R);\n\nend Example;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Null_And_Not_Null_Access.Complete_Null_Return",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "example.ads",
+        "example.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "485b84f2f8d233dca1a2018f9a1b5c7e56072b1065d41d5f7e7e051e2a5083e2a500d177e1dc19a9316bb18229cee871338db718a9d54b019a5d8979da1e96e5",
+    "text_hash_short": "01895c7d5f843fd215dcc21d807d4187"
+}

@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 10856,
+    "line_end": 10875,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Ada.Numerics.Big_Numbers.Big_Integers;\nuse  Ada.Numerics.Big_Numbers.Big_Integers;\n\nprocedure Show_Simple_Big_Numbers_Operators is\n   BI : Big_Integer;\nbegin\n   BI := 12345678901234567890;\n\n   Put_Line (\"BI: \" & BI'Image);\n\n   BI := -BI + BI / 2;\n   BI :=  BI - BI * 2;\n\n   Put_Line (\"BI: \" & BI'Image);\nend Show_Simple_Big_Numbers_Operators;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Big_Numbers.Simple_Big_Numbers_Operators",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_simple_big_numbers_operators.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_simple_big_numbers_operators.adb",
+    "text_hash": "ec38cea56ff6cd345be18ad573499b195b4a94be6aef0a785bd7e99b8d83b81bf5e4b68ed8054e89013b5942907c49d21b2370acfa48cfc5efbaf5a96e2e5f83",
+    "text_hash_short": "198708787bfcd6e16ec4fba718706af6"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/subprograms.rst",
+    "line_start": 1301,
+    "line_end": 1311,
+    "text": "procedure Show_Literal_Resolution is\n\n   type Apple_Count is range 0 .. 100;\n\n   procedure Peel (Count : Apple_Count) is null;\nbegin\n   Peel (20);\nend Show_Literal_Resolution;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Subprograms.Overloading.Literal_Resolution",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_literal_resolution.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_literal_resolution.adb",
+    "text_hash": "e8a8efb7063c38788351fed56bb0abdfb85aa3cb7c212bc870cd49dbb0a4d27ec996d3928706f4e22fb3878010c46f5612cab10a139d3dc36726b115709c1718",
+    "text_hash_short": "f428b6b4c642c44ede6bc21e7522c532"
+}

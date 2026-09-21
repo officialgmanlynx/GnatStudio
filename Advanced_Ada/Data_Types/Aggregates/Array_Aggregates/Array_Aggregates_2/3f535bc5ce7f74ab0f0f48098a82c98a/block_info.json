@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/aggregates.rst",
+    "line_start": 1499,
+    "line_end": 1524,
+    "text": "package Integer_Arrays is\n\n   type Value is new Integer;\n\n   type Integer_Array is\n     array (Positive range <>) of Value\n       with Default_Component_Value => 9999;\n\n   procedure Display (A : Integer_Array);\n\nend Integer_Arrays;\n\nwith Integer_Arrays; use Integer_Arrays;\n\nprocedure Show_Array_Aggregates is\n   N : Integer_Array (1 .. 4);\nbegin\n   N := [for I in N'Range => Value (I)];\n   Display (N);\n\n   N := [others => <>];\n   Display (N);\nend Show_Array_Aggregates;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Aggregates.Array_Aggregates.Array_Aggregates_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "integer_arrays.ads",
+        "show_array_aggregates.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_array_aggregates.adb",
+    "text_hash": "ba4ba20fd007530f0ebd24517018342615bf65be9b28375e087901551e4faabb83e0f9ec4255dac733262df7da8490e3eadc729be19b0dfd44f320861fcaf146",
+    "text_hash_short": "3f535bc5ce7f74ab0f0f48098a82c98a"
+}

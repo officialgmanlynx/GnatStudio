@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 1373,
+    "line_end": 1387,
+    "text": "package Show_Root_Integer_Real is\n\n   type Score is range 0 .. 10;\n   --  Type Score is derived from\n   --  the root integer type.\n\n   type Real_Score is\n     digits 10 range 0.0 .. 10.0;\n   --  Type Real_Score is derived from\n   --  the root real type.\n\nend Show_Root_Integer_Real;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Universal_And_Root_Types.Root_Integer_Real",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_root_integer_real.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "38327c618a13802b463e4dfd9ff1c8bf8ef3adf5549eae0aeffc02a88a2aa38a0e6fc4ce4e128b9c3f4d61ba98db30ef4e85ee9a35eb6b6264fd0824398c7316",
+    "text_hash_short": "619ecddeab6fd751cc1af9daa8794a25"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/strings.rst",
+    "line_start": 1210,
+    "line_end": 1260,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Ada.Strings.UTF_Encoding;\nuse  Ada.Strings.UTF_Encoding;\n\nwith Ada.Strings.UTF_Encoding.Wide_Wide_Strings;\nuse  Ada.Strings.UTF_Encoding.Wide_Wide_Strings;\n\nwith Generate_UTF_8_File;\nwith Put_Line_UTF_8_Characters;\n\nprocedure Show_UTF_8 is\n\n   File_Name_In  : constant String :=\n                     \"utf-8_test.txt\";\n   File_Name_Out : constant String :=\n                     \"utf-8_copy.txt\";\n\n   procedure Read_Write_UTF_8_File\n     (Input_File_Name,\n     Output_File_Name : String)\n   is\n      F_In, F_Out : File_Type;\n   begin\n      Open (F_In, In_File, Input_File_Name);\n      Create (F_Out, Out_File, Output_File_Name);\n\n      while not End_Of_File (F_In) loop\n         declare\n            S : constant Wide_Wide_String :=\n                  Decode (Get_Line (F_In));\n         begin\n            Put_Line_UTF_8_Characters (S);\n            Put_Line (F_Out, Encode (S));\n         end;\n      end loop;\n\n      Close (F_In);\n      Close (F_Out);\n   end Read_Write_UTF_8_File;\n\nbegin\n   Generate_UTF_8_File (File_Name_In);\n\n   Read_Write_UTF_8_File\n     (Input_File_Name  => File_Name_In,\n      Output_File_Name => File_Name_Out);\nend Show_UTF_8;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Strings.String_Encoding.UTF_8_File_Processing",
+    "main_file": "show_utf_8.adb",
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_utf_8.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_utf_8.adb",
+    "text_hash": "ab59106742b64de593c021aa048089ff814642cce59641ee409ce126893e7b02ad1e34db3f8f7a6a5cd5e219a927cf9f362324840820f577aec2e77120103992",
+    "text_hash_short": "8cd13e8a565266fa5dd854ff6a34524c"
+}

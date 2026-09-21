@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/object_oriented_programming.rst",
+    "line_start": 243,
+    "line_end": 262,
+    "text": "with P; use P;\n\nprocedure Main is\n\n   O1 : My_Class;\n   --  Declaring an object of type My_Class\n\n   O2 : Derived := (A => 12);\n   --  Declaring an object of type Derived\n\n   O3 : My_Class := O2;\n   --  INVALID: Trying to assign a value\n   --  of type derived to a variable of\n   --  type My_Class.\nbegin\n   null;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Object_Oriented_Programming.Tagged_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "48cc119c2f199c7ca2d3e86f800de8a82caf272329fe45b5114f0714113e861e9f04141df0b52bfc20ba3752af583a99908f8f7b094ba7ba9d2bce771d1a2e4b",
+    "text_hash_short": "c87ad8bb686cb1763740750846258357"
+}

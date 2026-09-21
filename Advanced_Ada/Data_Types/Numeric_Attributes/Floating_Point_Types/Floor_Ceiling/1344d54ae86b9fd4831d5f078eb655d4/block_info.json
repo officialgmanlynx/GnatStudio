@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numeric_attributes.rst",
+    "line_start": 633,
+    "line_end": 644,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Floor_Ceiling is\nbegin\n   Put_Line (\"Float'Floor (0.25):   \"\n             & Float'Floor (0.25)'Image);\n   Put_Line (\"Float'Ceiling (0.25): \"\n             & Float'Ceiling (0.25)'Image);\nend Show_Floor_Ceiling;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numeric_Attributes.Floating_Point_Types.Floor_Ceiling",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_floor_ceiling.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_floor_ceiling.adb",
+    "text_hash": "e6c444b28ff854743bf7d9b0be15d36f44e952730df82bf0dac2d74e51e83cf3b1923626375efa8da1ba3925dd6c6574fad659c8f8b89cf1d94fa4b9072af798",
+    "text_hash_short": "1344d54ae86b9fd4831d5f078eb655d4"
+}

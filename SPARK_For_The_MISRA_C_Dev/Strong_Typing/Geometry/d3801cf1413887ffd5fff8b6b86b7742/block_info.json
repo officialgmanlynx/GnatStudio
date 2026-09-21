@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/04_strong_typing.rst",
+    "line_start": 129,
+    "line_end": 152,
+    "text": "package Geometry is\n\n   type Point_3D is record\n      X, Y, Z : Float;\n   end record;\n\n   procedure Rotate_X (P : in out Point_3D) with\n     Post => P = P'Old'Update (Y => P.Z'Old, Z => -P.Y'Old);\n\nend Geometry;\n\npackage body Geometry is\n\n   procedure Rotate_X (P : in out Point_3D) is\n      Tmp : constant Float := P.Y;\n   begin\n      P.Y := P.Z;\n      P.Z := -Tmp;\n   end Rotate_X;\n\nend Geometry;\n",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Strong_Typing.Geometry",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_report_all",
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": true,
+    "source_files": [
+        "geometry.ads",
+        "geometry.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "4172a117905a04f0c9c9c1989cf2f4b44150e0ca14f274a402aab05ef53621ec4a5088b869ca1b4344a229d1a5af8b382f22210cb06d683b796b55394aad9735",
+    "text_hash_short": "d3801cf1413887ffd5fff8b6b86b7742"
+}

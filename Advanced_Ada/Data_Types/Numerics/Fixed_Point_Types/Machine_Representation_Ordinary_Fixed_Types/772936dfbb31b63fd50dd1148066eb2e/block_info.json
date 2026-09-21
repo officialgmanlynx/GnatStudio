@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 3867,
+    "line_end": 3882,
+    "text": "with Angles;      use  Angles;\n\nwith Gen_Show_Type_Info;\n\nprocedure Show_Ordinary_Fixed_Machine_Repr is\n   procedure Show_Angle_Type_Info is new\n     Gen_Show_Type_Info (T_Fixed => Angle);\n   procedure Show_Angle_Adj_Type_Info is new\n     Gen_Show_Type_Info (T_Fixed => Angle_Adj);\nbegin\n   Show_Angle_Type_Info (\"Angle     \");\n   Show_Angle_Adj_Type_Info (\"Angle_Adj \");\nend Show_Ordinary_Fixed_Machine_Repr;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Fixed_Point_Types.Machine_Representation_Ordinary_Fixed_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_ordinary_fixed_machine_repr.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_ordinary_fixed_machine_repr.adb",
+    "text_hash": "b1c10e3511749527b3767a3fc083d917c22299e7930b388780a2c581fd9efc3ddd02abb0c4418cc83f882b199999f7f86c33455cb376e0bcde06e49ff14593f8",
+    "text_hash_short": "772936dfbb31b63fd50dd1148066eb2e"
+}

@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 1054,
+    "line_end": 1087,
+    "text": "package Flag_Definitions is\n\n   type Flags is\n     array (Positive range <>) of Boolean;\n\n   type Packed_Flags is\n     array (Positive range <>) of Boolean\n       with Pack;\n\n   Default_Flags : constant Flags :=\n     (True, True, False, True,\n      False, False, True, True);\n\nend Flag_Definitions;\n\nwith Ada.Text_IO;      use Ada.Text_IO;\nwith Flag_Definitions; use Flag_Definitions;\n\nprocedure Show_Flag_Conversion is\n   Flags_1 : Flags (1 .. 8);\n   Flags_2 : Packed_Flags (1 .. 8);\nbegin\n   Flags_1 := Default_Flags;\n   Flags_2 := Packed_Flags (Flags_1);\n\n   for I in Flags_2'Range loop\n      Put_Line (I'Image & \": \"\n                & Flags_1 (I)'Image & \", \"\n                & Flags_2 (I)'Image);\n   end loop;\nend Show_Flag_Conversion;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Data_Representation.Flag_Conversion",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "flag_definitions.ads",
+        "show_flag_conversion.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_flag_conversion.adb",
+    "text_hash": "ebea7a14fce5c6acdffe450e6121e8c610da3e808308fc8101e608a38d95ded109cfaab0d05a9477d1082cad0bc476ff2196e26d053af1a7b3b65395f5ec4ba1",
+    "text_hash_short": "faff2079f6779097b6e0f7cd6cd48612"
+}

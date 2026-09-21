@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/expressions.rst",
+    "line_start": 749,
+    "line_end": 760,
+    "text": "package P is\n\n   function Max (A, B : Integer) return Integer is\n     (declare\n         Bigger_A : constant Boolean := (A >= B);\n      begin\n         (if Bigger_A then A else B));\n\nend P;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Expressions.Declare_Expressions.Simple_Declare_Expression",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "p.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "9106a19c1c6cbc1df945ac9ded50b6bdc414282e0b737bb84fe39f58bfee22a17438f005126bc271908226c4cbc4bf837fc093a279d54176586e67ad9aad8517",
+    "text_hash_short": "c4773c3749eea045ac5db147fbac594b"
+}

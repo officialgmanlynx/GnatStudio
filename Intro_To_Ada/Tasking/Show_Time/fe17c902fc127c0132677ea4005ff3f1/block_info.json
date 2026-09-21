@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/tasking.rst",
+    "line_start": 434,
+    "line_end": 465,
+    "text": "with Ada.Text_IO;   use Ada.Text_IO;\nwith Ada.Real_Time; use Ada.Real_Time;\n\nwith Delay_Aux_Pkg;\n\nprocedure Show_Time_Task is\n   package Aux renames Delay_Aux_Pkg;\n\n   task T;\n\n   task body T is\n      Cnt   : Integer := 1;\n   begin\n      for I in 1 .. 5 loop\n         delay 1.0;\n\n         Aux.Show_Elapsed_Time;\n         Aux.Computational_Intensive_App;\n\n         Put_Line (\"Cycle # \"\n                   & Integer'Image (Cnt));\n         Cnt  := Cnt + 1;\n      end loop;\n      Put_Line (\"Finished time-drifting loop\");\n   end T;\n\nbegin\n   null;\nend Show_Time_Task;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Tasking.Show_Time",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_time_task.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_time_task.adb",
+    "text_hash": "00b31e07c5623fe8eecd227d69f30027ad9f56344db57c441bec9e5296f22124129abc8c7dc67f275ea89c858421cb13575f41883ed57a4411b4f23e8813da44",
+    "text_hash_short": "fe17c902fc127c0132677ea4005ff3f1"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 1164,
+    "line_end": 1188,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main is\n   type Arr is array (Integer range <>) of Integer;\n\n   type Extra_Info is (No, Yes);\n\n   type S_Var (Last : Integer; Has_Extra_Info : Extra_Info) is record\n      A : Arr (0 .. Last);\n\n      case Has_Extra_Info is\n        when No   => null;\n        when Yes  => B : Arr (0 .. Last);\n      end case;\n   end record;\n\n   V1 : S_Var (Last => 9, Has_Extra_Info => Yes);\n   V2 : S_Var (Last => 9, Has_Extra_Info => No);\nbegin\n   Put_Line (\"Size of V1 is: \" & Integer'Image (V1'Size));\n   Put_Line (\"Size of V2 is: \" & Integer'Image (V2'Size));\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.Var_Rec_Null_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "74bce9deac6c479ac6641ca35bcc3f475fdf732aca5f282538f5db38110aecc00006a1fda27efc258c1077d87c3a112768f38149d14a3d67ed8c1a39b86a778b",
+    "text_hash_short": "548235fa8458302ba025c8fa49e61777"
+}

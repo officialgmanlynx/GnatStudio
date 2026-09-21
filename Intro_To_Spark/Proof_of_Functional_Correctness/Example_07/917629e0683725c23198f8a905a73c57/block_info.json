@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/05_Proof_Of_Functional_Correctness.rst",
+    "line_start": 1469,
+    "line_end": 1501,
+    "text": "package Array_Util is\n\n   type Nat_Array is array (Positive range <>) of Natural;\n\n   function Max_Array (A, B : Nat_Array) return Nat_Array with\n     Pre => A'Length = B'Length;\n\nend Array_Util;\n\npackage body Array_Util is\n\n   function Max_Array (A, B : Nat_Array) return Nat_Array is\n      R : Nat_Array (A'Range);\n      J : Integer := B'First;\n   begin\n      for I in A'Range loop\n         pragma Loop_Invariant (J in B'Range);\n         if A (I) > B (J) then\n            R (I) := A (I);\n         else\n            R (I) := B (J);\n         end if;\n         if J < Integer'Last then\n            J := J + 1;\n         end if;\n      end loop;\n      return R;\n   end Max_Array;\n\nend Array_Util;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Proof_of_Functional_Correctness.Example_07",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "array_util.ads",
+        "array_util.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "9d44d3f0df800460986350f384dbb17b98b85b6ad1e15817e95dd9347ae6457297f0b9ed0c14ccf9f505293bb973565617409e04ae5eecea0459a0e2981475bf",
+    "text_hash_short": "917629e0683725c23198f8a905a73c57"
+}

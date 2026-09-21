@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/03_syntactic_guarantees.rst",
+    "line_start": 179,
+    "line_end": 189,
+    "text": "procedure Swap (X, Y : in out Integer);\n\nprocedure Swap (X, Y : in out Integer) is\n   Tmp : constant Integer := X;\nbegin\n   X := Y;\n   Y := Tmp;\nend Swap;\n",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Syntactic_Guarantees.Swap",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow_report_all",
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": true,
+    "source_files": [
+        "swap.ads",
+        "swap.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "3b1763bc0ebf8860716e8cad477e77bfdcf5f2534de2b4a770ef9c2befb780e6513f01c6e33bc487e7a474d8c17a76a00cf01a6f7175bb13d13b5cdde3eb7b61",
+    "text_hash_short": "c983a229fc5a69db5dbb85f49a91b325"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/object_oriented_programming.rst",
+    "line_start": 79,
+    "line_end": 88,
+    "text": "package Newtypes is\n   type Point is record\n      X, Y : Integer;\n   end record;\n\n   type New_Point is new Point;\nend Newtypes;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Object_Oriented_Programming.Newtypes",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "newtypes.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "44f786a190e88e956b9c7aadbcfd900dd853d95bc7cbaaa50793c812c0b9e4722d83f7ab24430a8c762ccb80e13c150a1a38843e826ae287e253c0de1d7a2678",
+    "text_hash_short": "0d45096755b4bfb08ba8db19ecba3f57"
+}

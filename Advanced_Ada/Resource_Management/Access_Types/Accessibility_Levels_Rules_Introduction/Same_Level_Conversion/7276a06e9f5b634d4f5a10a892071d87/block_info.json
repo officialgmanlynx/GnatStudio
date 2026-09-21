@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 3058,
+    "line_end": 3080,
+    "text": "procedure Show_Same_Level_Conversion is\n   type L1_Integer_Access is\n     access all Integer;\n\n   type L1_B_Integer_Access is\n     access all Integer;\n\n   L1_IA   : L1_Integer_Access;\n   L1_B_IA : L1_B_Integer_Access;\n\n   L1_Var  : aliased Integer;\nbegin\n   L1_IA := L1_Var'Access;\n\n   L1_B_IA := L1_B_Integer_Access (L1_IA);\n   --         ^^^^^^^^^^^^^^^^^^^\n   --         LEGAL: conversion from\n   --                L1 access object to\n   --                L1 access object\nend Show_Same_Level_Conversion;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Accessibility_Levels_Rules_Introduction.Same_Level_Conversion",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_same_level_conversion.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_same_level_conversion.adb",
+    "text_hash": "a1038cca0be0f76253b7917eec0d851bd7f4520014a985ee0754136353d0e0f2d207f9a7c40dc978d4c7add1d08697f245994131d2e910d9adb5b12e7234e30e",
+    "text_hash_short": "7276a06e9f5b634d4f5a10a892071d87"
+}

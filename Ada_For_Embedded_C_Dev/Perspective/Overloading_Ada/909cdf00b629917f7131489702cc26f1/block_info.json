@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 2782,
+    "line_end": 2830,
+    "text": "package Machine is\n   type Status is (Off, On);\n   type Code is new Integer range 0 .. 3;\n   type Threshold is new Float range 0.0 .. 10.0;\n\n   function Get (S : Status) return Code;\n   function Get (S : Status) return Threshold;\n\nend Machine;\n\npackage body Machine is\n\n   function Get (S : Status) return Code is\n   begin\n      case S is\n         when Off => return 1;\n         when On  => return 3;\n      end case;\n   end Get;\n\n   function Get (S : Status) return Threshold is\n   begin\n      case S is\n         when Off => return  2.0;\n         when On  => return 10.0;\n      end case;\n   end Get;\n\nend Machine;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Machine;     use Machine;\n\nprocedure Main is\n   S : Status;\n   C : Code;\n   T : Threshold;\nbegin\n   S := On;\n   C := Get (S);\n   T := Get (S);\n\n   Put_Line (\"S: \" & Status'Image (S));\n   Put_Line (\"C: \" & Code'Image (C));\n   Put_Line (\"T: \" & Threshold'Image (T));\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Overloading_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "machine.ads",
+        "machine.adb",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "bdfb6927b0c2a5be1265be2cdab65ec9786f8e5850f16e05c4ec2b41bf27630710ae2a3aba72382691aaf203d1d94ec7a91e7e2f12a4116fa1d90f189bfa5ad2",
+    "text_hash_short": "909cdf00b629917f7131489702cc26f1"
+}

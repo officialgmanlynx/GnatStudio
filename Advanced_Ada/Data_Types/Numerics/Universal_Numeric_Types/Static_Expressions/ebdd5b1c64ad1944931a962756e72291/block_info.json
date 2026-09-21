@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 484,
+    "line_end": 498,
+    "text": "package Static_Expressions is\n\n   C1 : constant := 300_453.5;\n   C2 : constant := 455_233.5 * C1;\n   C3 : constant := 872_922.5 * C2;\n   C4 : constant := 155_277.5 * C1 + C2 / C3;\n   C5 : constant := 2.0 * C1 +\n                    3.0 * (C2 / (C4 * C3)) +\n                    4.0 * (C1 / (C2 * C2)) +\n                    5.0 * (C3 / (C1 * C1));\n\nend Static_Expressions;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Universal_Numeric_Types.Static_Expressions",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "static_expressions.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "d8517cdbb69165112bcac93f8ea3c4c7c8901bcca3aa7a4444e9f2879265399561131b9d9fd0159049c7fad8bd40a223ab0b522bf18f5e512a6da5d43955a8fc",
+    "text_hash_short": "ebdd5b1c64ad1944931a962756e72291"
+}

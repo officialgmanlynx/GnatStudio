@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/interfacing_with_c.rst",
+    "line_start": 196,
+    "line_end": 211,
+    "text": "!main.c\n#include <stdio.h>\n\nextern int my_func (int a);\n\nint main (int argc, char **argv) {\n\n  int v = my_func(2);\n\n  printf(\"Result is %d\\n\", v);\n\n  return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Intro_To_Ada.Interfacing_With_C.C_Ada_Func",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "919722947939d406d7429a289ec2098e31fb9700781d8ab1a8f329f12a973e143b79701c6022fc2ff93ba7fe19de070746157ef299d57b1de547ac8aec4f0ae1",
+    "text_hash_short": "69301036be9be16ed45895c2a86bc352"
+}

@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/05_Proof_Of_Functional_Correctness.rst",
+    "line_start": 241,
+    "line_end": 275,
+    "text": "package Show_Ghost is\n\n   type T is record\n      A, B, C, D, E : Boolean;\n   end record;\n\n   function Formula (X : T) return Boolean is\n     ((X.A and X.B) or (X.C and (X.D or X.E)));\n\n   function Is_Correct (X, Y : T) return Boolean is\n     (Formula (X) = Formula (Y));\n\n   procedure Do_Something (X : in out T);\n\nend Show_Ghost;\n\npackage body Show_Ghost is\n\n   procedure Do_Some_Complex_Stuff (X : in out T) is\n   begin\n      X := T'(X.B, X.A, X.C, X.E, X.D);\n   end Do_Some_Complex_Stuff;\n\n   procedure Do_Something (X : in out T) is\n      X_Init : constant T := X with Ghost;\n   begin\n      Do_Some_Complex_Stuff (X);\n      pragma Assert (Is_Correct (X_Init, X));\n      --  It is OK to use X_Init inside an assertion.\n   end Do_Something;\n\nend Show_Ghost;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Proof_of_Functional_Correctness.Ghost_1",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_report_all"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "show_ghost.ads",
+        "show_ghost.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "0cb2a73bbdca9073679613f325b8135ff5f4865ef181746676b80401e68b9c8babc9c37965b7cb0dd815a7a843f07e4c03791433098534329958c5f5edcf4553",
+    "text_hash_short": "0a6caaec950b3b043a53c18bab3cb39b"
+}

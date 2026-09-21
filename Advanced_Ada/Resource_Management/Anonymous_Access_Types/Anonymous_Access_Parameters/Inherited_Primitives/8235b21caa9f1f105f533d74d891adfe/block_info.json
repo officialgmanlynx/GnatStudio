@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 1670,
+    "line_end": 1713,
+    "text": "package Inherited_Primitives is\n\n   type T is tagged private;\n\n   type T_Access is access all T;\n\n   procedure Proc (N : T_Access);\n   --  Proc is not a primitive of type T.\n\n   type T_Child is new T with private;\n\n   type T_Child_Access is access all T_Child;\n\nprivate\n\n   type T is tagged null record;\n\n   type T_Child is new T with null record;\n\nend Inherited_Primitives;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Inherited_Primitives is\n\n   procedure Proc (N : T_Access) is null;\n\nend Inherited_Primitives;\n\nwith Inherited_Primitives;\nuse  Inherited_Primitives;\n\nprocedure Show_Inherited_Primitives is\n   Obj       : T_Access       := new T;\n   Obj_Child : T_Child_Access := new T_Child;\nbegin\n   Proc (Obj);\n   Proc (Obj_Child);\n   --    ^^^^^^^^^\n   --    ERROR: Proc is not inherited!\nend Show_Inherited_Primitives;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Anonymous_Access_Parameters.Inherited_Primitives",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "inherited_primitives.ads",
+        "inherited_primitives.adb",
+        "show_inherited_primitives.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_inherited_primitives.adb",
+    "text_hash": "50ae0c793b6717e5c2947abe9466e7429c8786b607488fd861be8c267b04f67db29dc3dbcc41792f2c1eae782cf31bf3fd3beb2b940cdcedf619a0c92ed920cb",
+    "text_hash_short": "8235b21caa9f1f105f533d74d891adfe"
+}

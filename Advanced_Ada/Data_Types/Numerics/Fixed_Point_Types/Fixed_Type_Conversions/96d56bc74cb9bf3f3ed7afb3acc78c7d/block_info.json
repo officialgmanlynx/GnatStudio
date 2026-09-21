@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 4119,
+    "line_end": 4212,
+    "text": "package Fixed_Point_Type_Info is\n\n   generic\n      type T_Fixed is delta <>;\n   procedure Gen_Show_Fixed_Type_Info\n     (T_Fixed_Name : String);\n\n   generic\n      type T_Decimal is delta <> digits <>;\n   procedure Gen_Show_Decimal_Type_Info\n     (T_Decimal_Name : String);\n\nend Fixed_Point_Type_Info;\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Fixed_Point_Type_Info is\n\n   procedure Gen_Show_Fixed_Type_Info\n     (T_Fixed_Name : String) is\n   begin\n      Put_Line (\"The size           of \"\n                & T_Fixed_Name\n                & \" is \"\n                & T_Fixed'Size'Image\n                & \" bits\");\n      Put_Line (\"The small          of \"\n                & T_Fixed_Name\n                & \" is \"\n                & T_Fixed'Small'Image);\n      Put_Line (\"The delta    value of \"\n                & T_Fixed_Name\n                & \" is \"\n                & T_Fixed'Delta'Image);\n      Put_Line (\"The minimum  value of \"\n                & T_Fixed_Name\n                & \" is \"\n                & T_Fixed'First'Image);\n      Put_Line (\"The maximum  value of \"\n                & T_Fixed_Name\n                & \" is \"\n                & T_Fixed'Last'Image);\n      Put_Line (\"-----------------------------\");\n   end Gen_Show_Fixed_Type_Info;\n\n   procedure Gen_Show_Decimal_Type_Info\n     (T_Decimal_Name : String) is\n   begin\n      Put_Line (\"The size           of \"\n                & T_Decimal_Name\n                & \" is \"\n                & T_Decimal'Size'Image\n                & \" bits\");\n      Put_Line (\"The small          of \"\n                & T_Decimal_Name\n                & \" is \"\n                & T_Decimal'Small'Image);\n      Put_Line (\"The delta    value of \"\n                & T_Decimal_Name\n                & \" is \"\n                & T_Decimal'Delta'Image);\n      Put_Line (\"The minimum  value of \"\n                & T_Decimal_Name\n                & \" is \"\n                & T_Decimal'First'Image);\n      Put_Line (\"The maximum  value of \"\n                & T_Decimal_Name\n                & \" is \"\n                & T_Decimal'Last'Image);\n      Put_Line (\"-----------------------------\");\n   end Gen_Show_Decimal_Type_Info;\n\nend Fixed_Point_Type_Info;\n\nwith Custom_Fixed_Point;\nuse  Custom_Fixed_Point;\n\nwith Fixed_Point_Type_Info;\nuse  Fixed_Point_Type_Info;\n\nprocedure Show_Fixed_Point_Conversions is\n   procedure Show_Fixed_Point_Type_Info is new\n     Gen_Show_Fixed_Type_Info\n       (T_Fixed => Fixed_Point);\n\n   procedure Show_Decimal_Type_Info is new\n     Gen_Show_Decimal_Type_Info\n       (T_Decimal => Decimal);\nbegin\n   Show_Decimal_Type_Info (\"Decimal     \");\n   Show_Fixed_Point_Type_Info (\"Fixed_Point \");\nend Show_Fixed_Point_Conversions;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Fixed_Point_Types.Fixed_Type_Conversions",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "fixed_point_type_info.ads",
+        "fixed_point_type_info.adb",
+        "show_fixed_point_conversions.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_fixed_point_conversions.adb",
+    "text_hash": "289c24f412406b69b57096f4198c30bdcf92674dae35cc89923c61fc23912c94b426ce5c314ed0781bbcd1ca7edd8ee3677311e3b8cf8f669a53915f05883719",
+    "text_hash_short": "96d56bc74cb9bf3f3ed7afb3acc78c7d"
+}

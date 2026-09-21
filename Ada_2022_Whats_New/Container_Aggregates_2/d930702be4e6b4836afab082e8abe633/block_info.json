@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/whats-new-in-ada-2022/chapters/container_aggregates.rst",
+    "line_start": 49,
+    "line_end": 88,
+    "text": "procedure Main is\n\n   package JSON is\n      type JSON_Value is private\n        with Integer_Literal => To_JSON_Value;\n\n      function To_JSON_Value (Text : String) return JSON_Value;\n\n      type JSON_Array is private\n        with Aggregate => (Empty       => New_JSON_Array,\n                           Add_Unnamed => Append);\n\n      function New_JSON_Array return JSON_Array;\n\n      procedure Append\n        (Self  : in out JSON_Array;\n         Value : JSON_Value) is null;\n\n   private\n      type JSON_Value is null record;\n      type JSON_Array is null record;\n\n      function To_JSON_Value (Text : String) return JSON_Value\n        is (null record);\n\n      function New_JSON_Array return JSON_Array is (null record);\n   end JSON;\n\n   List : JSON.JSON_Array := [1, 2, 3];\n   ------------------------------------\nbegin\n   --  Equivalent old initialization code\n   List := JSON.New_JSON_Array;\n   JSON.Append (List, 1);\n   JSON.Append (List, 2);\n   JSON.Append (List, 3);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_2022_Whats_New.Container_Aggregates_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "054c3146e31f3385027f666dd46f628e1d12817261cf8179d5a0e76dcf14e4f851a90d670795d77f8e75847171274cf0a0778342dddf27ed9120c83cfc31868b",
+    "text_hash_short": "d930702be4e6b4836afab082e8abe633"
+}

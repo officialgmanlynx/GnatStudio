@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/statements.rst",
+    "line_start": 224,
+    "line_end": 242,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Statement_Identifier is\n   Arr   : constant array (1 .. 5) of Integer :=\n             (1, 4, 6, 42, 49);\n   Found : Boolean := False;\nbegin\n   Find_42 : for E of Arr loop\n      if E = 42 then\n         Found := True;\n         exit Find_42;\n      end if;\n   end loop Find_42;\n\n   Put_Line (\"Found: \" & Found'Image);\nend Show_Statement_Identifier;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Statements.Labels.Loop_Statement_Identifier",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_statement_identifier.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_statement_identifier.adb",
+    "text_hash": "a6bb46e1cd958b57adba3a481d27ca8331b2787df2a9742be933b7021b2de096448d352d82212d02b197d87bda87e79147fbfbd5b51d8f415ff07261712e6dc1",
+    "text_hash_short": "e52cb5eea9427addf3cabe64dd73bc2d"
+}

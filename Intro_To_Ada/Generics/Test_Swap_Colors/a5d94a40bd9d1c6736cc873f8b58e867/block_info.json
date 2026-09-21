@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/generics.rst",
+    "line_start": 596,
+    "line_end": 650,
+    "text": "generic\n   type T is private;\nprocedure Generic_Swap (X, Y : in out T);\n\nprocedure Generic_Swap (X, Y : in out T) is\n   Tmp : constant T := X;\nbegin\n   X := Y;\n   Y := Tmp;\nend Generic_Swap;\n\nwith Generic_Swap;\n\npackage Colors is\n\n   type Color is (Black, Red, Green,\n                  Blue, White);\n\n   procedure Swap_Colors is new\n     Generic_Swap (T => Color);\n\nend Colors;\n\nwith Ada.Text_IO;  use Ada.Text_IO;\nwith Colors;       use Colors;\n\nprocedure Test_Swap_Colors is\n   A, B, C : Color;\nbegin\n   A := Blue;\n   B := White;\n   C := Red;\n\n   Put_Line (\"Value of A is \"\n             & Color'Image (A));\n   Put_Line (\"Value of B is \"\n             & Color'Image (B));\n   Put_Line (\"Value of C is \"\n             & Color'Image (C));\n\n   New_Line;\n   Put_Line (\"Swapping A and C...\");\n   New_Line;\n   Swap_Colors (A, C);\n\n   Put_Line (\"Value of A is \"\n             & Color'Image (A));\n   Put_Line (\"Value of B is \"\n             & Color'Image (B));\n   Put_Line (\"Value of C is \"\n             & Color'Image (C));\nend Test_Swap_Colors;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Generics.Test_Swap_Colors",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "generic_swap.ads",
+        "generic_swap.adb",
+        "colors.ads",
+        "test_swap_colors.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "test_swap_colors.adb",
+    "text_hash": "32f176beadcdef414396b3b3c9e9b47dcaadb3e6e9393289378b483d501554da18bdaa593f8c4bda836696608f89461162140125b131dfe86082793c392aeec6",
+    "text_hash_short": "a5d94a40bd9d1c6736cc873f8b58e867"
+}

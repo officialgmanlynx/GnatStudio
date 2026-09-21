@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 1869,
+    "line_end": 1884,
+    "text": "package Derived_With_Discriminants is\n\n   type T\n     (L : Integer;\n      M : Integer) is\n     null record;\n\n   type T_Derived_2\n     (X : Natural;\n      Y : Positive) is\n     new T (L => X, M => Y);\n\nend Derived_With_Discriminants;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Discriminants.Derived_Types_More_Constrained_Discriminants",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "derived_with_discriminants.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "953192586bef185c233af17b896cc7ba9f5d2251a9ecfec6a2d71bdac2f835b2d3b1281b3b3e3ab7100d1932d0bab69aaaf7d26156096fa1e8db2504a13b3f44",
+    "text_hash_short": "413f04f1f98dde2a6e0df3ee6955da7f"
+}

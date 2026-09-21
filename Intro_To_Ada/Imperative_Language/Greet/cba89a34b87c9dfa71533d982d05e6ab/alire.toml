@@ -1,0 +1,12 @@
+name = "greet"
+description = "Its a basic hello world"
+version = "0.1.0-dev"
+
+authors = ["Gohan"]
+maintainers = ["Gohan <officialgmanlynx@proton.me>"]
+maintainers-logins = ["officialgmanlynx"]
+licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
+website = ""
+tags = []
+
+executables = ["greet"]

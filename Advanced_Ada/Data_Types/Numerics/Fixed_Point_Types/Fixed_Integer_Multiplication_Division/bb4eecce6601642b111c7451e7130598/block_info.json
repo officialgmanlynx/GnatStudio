@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 4995,
+    "line_end": 5045,
+    "text": "package Custom_Fixed_Point is\n\n   type Decimal is\n     delta  10.0 ** (-9) digits 9;\n\n   D_31 : constant :=  2.0 ** (-31);\n   type Fixed_Point is\n     delta D_31\n     range -1.0 .. 1.0 - D_31;\n\nend Custom_Fixed_Point;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Custom_Fixed_Point;\nuse  Custom_Fixed_Point;\n\nprocedure Show_Fixed_Point_Integer_Mult_Div is\n   FP : Fixed_Point;\n   D  : Decimal;\n\n   procedure Show_Vars is\n   begin\n      Put_Line (\"FP = \"\n                & FP'Image);\n      Put_Line (\"D  = \"\n                & D'Image);\n      Put_Line (\"------------------------------\");\n   end Show_Vars;\n\n   I : Integer := 8;\nbegin\n   FP := 0.25;\n   D  := 0.25;\n   Show_Vars;\n\n   FP := FP * 2;\n   D  := D  * 2;\n   Show_Vars;\n\n   FP := FP / 4;\n   D  := D  / 4;\n   Show_Vars;\n\n   FP := FP / I;\n   D  := D  / I;\n   Show_Vars;\nend Show_Fixed_Point_Integer_Mult_Div;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Fixed_Point_Types.Fixed_Integer_Multiplication_Division",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_fixed_point.ads",
+        "show_fixed_point_integer_mult_div.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_fixed_point_integer_mult_div.adb",
+    "text_hash": "69e644996d66ef9daedfc5c332f88a0fb27ddf46d1a466d38eb836b8f7e905212f66f8d206bd247788eac0b8e16fa5e4d9a1aa283b861ce1ad45365669ad52e1",
+    "text_hash_short": "bb4eecce6601642b111c7451e7130598"
+}

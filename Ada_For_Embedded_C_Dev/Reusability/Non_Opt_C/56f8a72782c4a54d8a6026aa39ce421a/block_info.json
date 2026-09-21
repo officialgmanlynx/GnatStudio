@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 1206,
+    "line_end": 1250,
+    "text": "!main.c\n#include <stdio.h>\n#include <stdlib.h>\n\nfloat calculate (float  f1,\n                 float  f2,\n                 int   *success)\n{\n    if (f1 < f2) {\n        *success = 1;\n        return f2 - f1;\n    }\n    else {\n        *success = 0;\n        return 0.0;\n    }\n}\n\nvoid display (float v,\n              int   success)\n{\n    if (success) {\n        printf(\"Value = %f\\n\", v);\n    }\n    else {\n        printf(\"Calculation error!\\n\");\n    }\n}\n\nint main(int argc, const char * argv[])\n{\n    float f;\n    int success;\n\n    f = calculate (1.0, 0.5, &success);\n    display (f, success);\n\n    f = calculate (0.5, 1.0, &success);\n    display (f, success);\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.Non_Opt_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "463cf65e3a5a4a401261dd43dd292168d52083db480b18ebd77fd4aedc6479c6775e86e4f058e8239f18778d482fe467ad7bed13f7a250a54314af47d72efb1e",
+    "text_hash_short": "56f8a72782c4a54d8a6026aa39ce421a"
+}

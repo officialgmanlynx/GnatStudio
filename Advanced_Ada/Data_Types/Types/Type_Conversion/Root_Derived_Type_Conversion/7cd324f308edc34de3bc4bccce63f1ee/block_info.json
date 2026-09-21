@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 2172,
+    "line_end": 2212,
+    "text": "package Custom_Integers is\n\n   type Int is new Integer\n     with Dynamic_Predicate => Int /= 0;\n\n   function Double (I : Integer)\n                    return Integer is\n     (I * 2);\n\nend Custom_Integers;\n\nwith Ada.Text_IO;     use Ada.Text_IO;\nwith Custom_Integers; use Custom_Integers;\n\nprocedure Show_Conversion is\n   Int_Var     : Int     := 1;\n   Integer_Var : Integer := 2;\nbegin\n   --  Int to Integer conversion\n   Integer_Var := Integer (Int_Var);\n\n   Put_Line (\"Integer_Var : \"\n             & Integer_Var'Image);\n\n   --  Int to Integer conversion\n   --  as an actual parameter\n   Integer_Var := Double (Integer (Int_Var));\n\n   Put_Line (\"Integer_Var : \"\n             & Integer_Var'Image);\n\n   --  Integer to Int conversion\n   --  using an expression\n   Int_Var     := Int (Integer_Var * 2);\n\n   Put_Line (\"Int_Var :     \"\n             & Int_Var'Image);\nend Show_Conversion;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Type_Conversion.Root_Derived_Type_Conversion",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_integers.ads",
+        "show_conversion.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_conversion.adb",
+    "text_hash": "08b83530d0349241b898d1921d296037d2a4584fd1dd3457607b560d45cc7be85ff9282a677e7f361ffbd965a7bb3986e6781cf1fdf5dd02e25c485929bf3831",
+    "text_hash_short": "7cd324f308edc34de3bc4bccce63f1ee"
+}

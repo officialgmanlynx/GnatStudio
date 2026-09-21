@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/06_side_effects.rst",
+    "line_start": 181,
+    "line_end": 185,
+    "text": "function Bad_Function (X, Y : Integer; Sum, Max : out Integer) return Boolean;\n--  ERROR, since \"out\" parameters are not allowed\n",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Side_Effect.Function_With_Out_Param",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "bad_function.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "a5a197f510d026d052590556c7abc3a14cec4b6808e7e0f0ea80d25cdef4f457a16eb27c16dc80ae70be26c4252689e3ff91b6c32ab1ebbc0808c249f9653bde",
+    "text_hash_short": "204dd22df61fe15208ae34ebc3828974"
+}

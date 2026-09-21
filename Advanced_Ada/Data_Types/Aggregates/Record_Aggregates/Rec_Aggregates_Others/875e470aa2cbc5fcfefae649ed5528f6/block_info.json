@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/aggregates.rst",
+    "line_start": 460,
+    "line_end": 470,
+    "text": "package Custom_Records is\n\n   type Integer_Float is record\n     A, B : Integer := 0;\n     Y, Z : Float   := 0.0;\n   end record;\n\nend Custom_Records;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Aggregates.Record_Aggregates.Rec_Aggregates_Others",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "custom_records.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "fd7ee37da8161158387690267fd1ea8a20b78965d96a6e0db66f9c261b881221872afacc9766340df00c5fead2fc23d63e1328313c7dfbf415a76e7a978b453e",
+    "text_hash_short": "875e470aa2cbc5fcfefae649ed5528f6"
+}

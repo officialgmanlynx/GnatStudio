@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/shared_variable_control.rst",
+    "line_start": 222,
+    "line_end": 236,
+    "text": "with System;\n\npackage Shared_Var_Types.Representation is\n\n   type Rep_Flags is new Flags;\n\n   for Rep_Flags use record\n      F1 at 0 range 0 .. System.Storage_Unit - 1;\n      F2 at 1 range 0 .. System.Storage_Unit - 1;\n   end record;\n\nend Shared_Var_Types.Representation;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Shared_Variable_Control.Independent.Type",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "shared_var_types-representation.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "b308fdd9dbbfc15ee4c07a45370290d3ff51e890464601ba9ca7aec8cb8475bdbd24f1c35458aab4f19563185e2ace46d716905b5decaf8691205cbb6846f9ae",
+    "text_hash_short": "ed57e57cd746698909a4f7ce40a29dfc"
+}

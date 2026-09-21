@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numeric_attributes.rst",
+    "line_start": 1079,
+    "line_end": 1104,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Model_Epsilon_Small is\nbegin\n   Put_Line\n     (\"Float'Model_Epsilon:           \"\n      & Float'Model_Epsilon'Image);\n   Put_Line\n     (\"Long_Float'Model_Epsilon:      \"\n      & Long_Float'Model_Epsilon'Image);\n   Put_Line\n     (\"Long_Long_Float'Model_Epsilon: \"\n      & Long_Long_Float'Model_Epsilon'Image);\n   Put_Line\n     (\"Float'Model_Small:           \"\n      & Float'Model_Small'Image);\n   Put_Line\n     (\"Long_Float'Model_Small:      \"\n      & Long_Float'Model_Small'Image);\n   Put_Line\n     (\"Long_Long_Float'Model_Small: \"\n      & Long_Long_Float'Model_Small'Image);\nend Show_Model_Epsilon_Small;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numeric_Attributes.Floating_Point_Types.Model_Epsilon_Small",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_model_epsilon_small.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_model_epsilon_small.adb",
+    "text_hash": "a3aca8ed732e65d5510975f45bf8807a4c7dc671953f1d291d74cdd5fcdf7d14ccc30ec76ef3c5fd5dc7f4dd4847ce525fc2b199497a61995fbedf6dea837d4a",
+    "text_hash_short": "a7ea5964c3c9422b6162a8a9256963d6"
+}

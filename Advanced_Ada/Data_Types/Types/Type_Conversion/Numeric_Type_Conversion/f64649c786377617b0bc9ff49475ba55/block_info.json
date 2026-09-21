@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 2251,
+    "line_end": 2270,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Conversion is\n   F : Float   := 1.0;\n   I : Integer := 2;\nbegin\n   I := Integer (F);\n\n   Put_Line (\"I : \"\n             & I'Image);\n\n   I := 4;\n   F := Float (I);\n\n   Put_Line (\"F :   \"\n             & F'Image);\nend Show_Conversion;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Type_Conversion.Numeric_Type_Conversion",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_conversion.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_conversion.adb",
+    "text_hash": "a3a81cd24540d36b841b5128442d62defdcf31492113639e54632f8d348db5bc553fdc6e1050124454eb93de6d8421a75bc341c0078a3228ffec609153bf8d18",
+    "text_hash_short": "f64649c786377617b0bc9ff49475ba55"
+}

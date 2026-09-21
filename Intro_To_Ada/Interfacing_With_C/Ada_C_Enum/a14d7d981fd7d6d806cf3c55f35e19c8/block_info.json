@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/interfacing_with_c.rst",
+    "line_start": 39,
+    "line_end": 49,
+    "text": "procedure Show_C_Enum is\n\n   type C_Enum is (A, B, C)\n     with Convention => C;\n   --  Use C convention for C_Enum\nbegin\n   null;\nend Show_C_Enum;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Interfacing_With_C.Ada_C_Enum",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_c_enum.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_c_enum.adb",
+    "text_hash": "b14de62eaab9340985ebe3d67054ae3dfe54bcc8959d15903eb36c82832b7ba6ec8d3a9f6387ad17e3f2d8eb78f2447a2690d2e58ecfc3319f38786eff9f0d80",
+    "text_hash_short": "a14d7d981fd7d6d806cf3c55f35e19c8"
+}

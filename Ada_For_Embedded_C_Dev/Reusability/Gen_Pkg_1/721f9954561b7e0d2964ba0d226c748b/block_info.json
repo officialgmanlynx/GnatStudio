@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 138,
+    "line_end": 149,
+    "text": "generic\n   type T is private;\npackage Gen is\n   type C is tagged record\n      V : T;\n   end record;\n\n   G : Integer;\nend Gen;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.Gen_Pkg_1",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "gen.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "597132ada44c172cefd7c0884187eaf8acd8fc52bcde8e45fa81fe9a93516a12f083bd8a9b5f8da32e5a40565f85a9652a2631b8ddbddf800a4aa8d237a9556b",
+    "text_hash_short": "721f9954561b7e0d2964ba0d226c748b"
+}

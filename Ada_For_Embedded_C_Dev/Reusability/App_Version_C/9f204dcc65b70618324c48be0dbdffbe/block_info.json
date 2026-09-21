@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 731,
+    "line_end": 766,
+    "text": "!defs.h\n#ifndef APP_VERSION\n#define APP_VERSION     1\n#endif\n\n#if APP_VERSION == 1\n#define MOD_VALUE       4\n#endif\n\n#if APP_VERSION == 2\n#define MOD_VALUE       5\n#endif\n\n!main.c\n#include <stdio.h>\n#include <stdlib.h>\n\n#include \"defs.h\"\n\nint func(int x)\n{\n    return x % MOD_VALUE;\n}\n\nint main()\n{\n    int a, b;\n\n    a = 10;\n    b = func(a);\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.App_Version_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "defs.h",
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "777d6d918474e12f6a298d836affa9b59eb4e88e062b997a5b2bc7c5b95bd78b816736817c6240dfd576e2e5e08c06e36bcda65230c57dc97c06324bb8931d83",
+    "text_hash_short": "9f204dcc65b70618324c48be0dbdffbe"
+}

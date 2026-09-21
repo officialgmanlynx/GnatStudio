@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 1245,
+    "line_end": 1321,
+    "text": "package My_Integers is\n\n   subtype One_To_Ten is Integer range 1 .. 10;\n\n   function Sat_Add (V1, V2 : One_To_Ten'Base)\n                     return One_To_Ten;\n\n   function Sat_Sub (V1, V2 : One_To_Ten'Base)\n                     return One_To_Ten;\n\nend My_Integers;\n\n--  with Ada.Text_IO; use Ada.Text_IO;\n\npackage body My_Integers is\n\n   function Saturate (V : One_To_Ten'Base)\n                      return One_To_Ten is\n   begin\n      --  Put_Line (\"SATURATE \" & V'Image);\n\n      if V < One_To_Ten'First then\n         return One_To_Ten'First;\n      elsif V > One_To_Ten'Last then\n         return One_To_Ten'Last;\n      else\n         return V;\n      end if;\n   end Saturate;\n\n   function Sat_Add (V1, V2 : One_To_Ten'Base)\n                     return One_To_Ten is\n   begin\n      return Saturate (V1 + V2);\n   end Sat_Add;\n\n   function Sat_Sub (V1, V2 : One_To_Ten'Base)\n                     return One_To_Ten is\n   begin\n      return Saturate (V1 - V2);\n   end Sat_Sub;\n\nend My_Integers;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith My_Integers; use My_Integers;\n\nprocedure Show_Base is\n\n   type Display_Saturate_Op is (Add, Sub);\n\n   procedure Display_Saturate\n     (V1, V2 : One_To_Ten;\n      Op     : Display_Saturate_Op)\n   is\n      Res : One_To_Ten;\n   begin\n      case Op is\n      when Add =>\n         Res := Sat_Add (V1, V2);\n      when Sub =>\n         Res := Sat_Sub (V1, V2);\n      end case;\n      Put_Line (\"SATURATE \" & Op'Image\n                & \" (\" & V1'Image\n                & \", \" & V2'Image\n                & \") = \" & Res'Image);\n   end Display_Saturate;\n\nbegin\n   Display_Saturate (1,  1, Add);\n   Display_Saturate (10, 8, Add);\n   Display_Saturate (1,  8, Sub);\nend Show_Base;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Base_Type.Base_Attr_Sat",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "my_integers.ads",
+        "my_integers.adb",
+        "show_base.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_base.adb",
+    "text_hash": "485469e49dc19fd3f3b416ead21fe6ac8035f2f60ba844bea6d38e75fb56b613ea591eb6c6cde808a9a3524eae7ba4751ad6333550334efdd6c6562d4a16646c",
+    "text_hash_short": "e9b31345c2efc056bdb71824072852d0"
+}

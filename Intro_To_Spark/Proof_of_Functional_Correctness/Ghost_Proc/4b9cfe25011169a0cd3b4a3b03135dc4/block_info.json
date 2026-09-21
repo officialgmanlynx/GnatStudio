@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/05_Proof_Of_Functional_Correctness.rst",
+    "line_start": 679,
+    "line_end": 703,
+    "text": "package Show_Ghost_Proc is\n\n   type Nat_Array is array (Integer range <>) of Natural;\n\n   A : Nat_Array (1 .. 100) with Ghost;\n\n   procedure Increase_A with\n     Ghost,\n     Pre => (for all I in A'Range => A (I) < Natural'Last);\n\nend Show_Ghost_Proc;\n\npackage body Show_Ghost_Proc is\n\n   procedure Increase_A is\n   begin\n      for I in A'Range loop\n         A (I) := A (I) + 1;\n      end loop;\n   end Increase_A;\n\nend Show_Ghost_Proc;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Proof_of_Functional_Correctness.Ghost_Proc",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_report_all"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "show_ghost_proc.ads",
+        "show_ghost_proc.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "95b723d4268321efbd510b60c3687c52c66acb4dcc82be6ca1f155e1673b9b5bdfc6ea55cba36fb96095f3c405cf4fb501bc63e70c823692ed0d25abeb980173",
+    "text_hash_short": "4b9cfe25011169a0cd3b4a3b03135dc4"
+}

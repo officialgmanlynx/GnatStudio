@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_strings.rst",
+    "line_start": 454,
+    "line_end": 488,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\nwith Ada.Strings; use Ada.Strings;\n\nwith Ada.Strings.Unbounded;\nuse  Ada.Strings.Unbounded;\n\nprocedure Show_Unbounded_String is\n   S1, S2 : Unbounded_String;\n\n   procedure Display_String_Info\n     (S : Unbounded_String)\n   is\n   begin\n      Put_Line (\"String: \" & To_String (S));\n      Put_Line (\"String Length: \"\n                & Integer'Image (Length (S)));\n   end Display_String_Info;\nbegin\n   S1 := To_Unbounded_String (\"Hello\");\n   --  Alternatively:\n   --\n   --  A := Null_Unbounded_String & \"Hello\";\n\n   Display_String_Info (S1);\n\n   S2 := To_Unbounded_String (\"Hello World\");\n   Display_String_Info (S2);\n\n   S1 := To_Unbounded_String\n           (\"Something longer to say here...\");\n   Display_String_Info (S1);\nend Show_Unbounded_String;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Unbounded_String",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_unbounded_string.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_unbounded_string.adb",
+    "text_hash": "9fa3557a3b0ca3f0717cfc602486dfd7d8d8673189d3685e5697d84dcee83fefdd5f57aa9c9f47c154c0cce993be56596ee5748a0be59d14a7856cf6d244da8a",
+    "text_hash_short": "904402992c96eb393b875d1b7cf49c1b"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/statements.rst",
+    "line_start": 656,
+    "line_end": 697,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_String_Construct is\n\n   function Make_String\n     (S          : String;\n      Prefix     : String;\n      Use_Prefix : Boolean) return String\n   is\n      Length : Natural := S'Length;\n   begin\n      if Use_Prefix then\n         Length := Length + Prefix'Length;\n      end if;\n\n      return Result : String (1 .. Length) do\n\n         --  fill in the characters\n         if Use_Prefix then\n            Result\n              (1 .. Prefix'Length) := Prefix;\n\n            Result\n              (Prefix'Length + 1 .. Length) := S;\n         else\n            Result := S;\n         end if;\n\n      end return;\n   end Make_String;\n\n   S1 : String := \"Ada\";\n   S2 : String := \"Make_With_\";\nbegin\n   Put_Line (\"No prefix:   \"\n             & Make_String (S1, S2, False));\n   Put_Line (\"With prefix: \"\n             & Make_String (S1, S2, True));\nend Show_String_Construct;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Statements.Extended_Return_Statements.Extended_Return_Other_Usages",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_string_construct.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_string_construct.adb",
+    "text_hash": "86943431c9bdbc22b66243dbd7bc126b27e630d1a23705129fc3e6445d4042869b38302239adee2e6ffab669263599b5f6fce86212838166facb1a47f2651cba",
+    "text_hash_short": "a2b26ceed06a0ab66aff6c2b59c02003"
+}

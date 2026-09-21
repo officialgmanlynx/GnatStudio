@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 11495,
+    "line_end": 11541,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Ada.Numerics.Big_Numbers.Big_Integers;\nuse  Ada.Numerics.Big_Numbers.Big_Integers;\n\nwith Ada.Numerics.Big_Numbers.Big_Reals;\nuse  Ada.Numerics.Big_Numbers.Big_Reals;\n\nprocedure Show_Big_Numbers_In_Range is\n\n   BI : Big_Integer;\n   BR : Big_Real;\n\n   BI_From : constant Big_Integer := 0;\n   BI_To   : constant Big_Integer := 1024;\n\n   BR_From : constant Big_Real := 0.0;\n   BR_To   : constant Big_Real := 1024.0;\n\nbegin\n   BI := 1023;\n   BR := 1023.9;\n\n   if In_Range (BI, BI_From, BI_To) then\n      Put_Line (\"BI (\"\n                & BI'Image\n                & \") is in the \"\n                & BI_From'Image\n                & \" .. \"\n                & BI_To'Image\n                & \" range\");\n   end if;\n\n   if In_Range (BR, BR_From, BR_To) then\n      Put_Line (\"BR (\"\n                & BR'Image\n                & \") is in the \"\n                & BR_From'Image\n                & \" .. \"\n                & BR_To'Image\n                & \" range\");\n   end if;\n\nend Show_Big_Numbers_In_Range;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Big_Numbers.Big_Numbers_In_Range",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_big_numbers_in_range.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_big_numbers_in_range.adb",
+    "text_hash": "297018ff2dac24946e2e6e010f97e8f021712a8e76d72c7b40aa16bd6587844ac9b0855a3373cc2966ab72bb2e820ca02e648e252e12d138874ae292b5286ad9",
+    "text_hash_short": "ded52ef7e9ef13a83264940ff9d8bcb3"
+}

@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/subprograms.rst",
+    "line_start": 60,
+    "line_end": 122,
+    "text": "with System;\n\nprocedure Check_Param_Passing\n  (Formal : System.Address;\n   Actual : System.Address);\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith System.Address_Image;\n\nprocedure Check_Param_Passing\n  (Formal : System.Address;\n   Actual : System.Address) is\nbegin\n   Put_Line (\"Formal parameter at \"\n             & System.Address_Image (Formal));\n   Put_Line (\"Actual parameter at \"\n             & System.Address_Image (Actual));\n   if System.Address_Image (Formal) =\n      System.Address_Image (Actual)\n   then\n      Put_Line\n        (\"Parameter is passed by reference.\");\n   else\n      Put_Line\n        (\"Parameter is passed by copy.\");\n   end if;\nend Check_Param_Passing;\n\nwith System;\n\npackage Machine_X is\n\n   procedure Update_Value\n     (V  : in out Integer;\n      AV :        System.Address);\n\nend Machine_X;\n\nwith Check_Param_Passing;\n\npackage body Machine_X is\n\n   procedure Update_Value\n     (V  : in out Integer;\n      AV :        System.Address) is\n   begin\n      V := V + 1;\n      Check_Param_Passing (Formal => V'Address,\n                           Actual => AV);\n   end Update_Value;\n\nend Machine_X;\n\nwith Machine_X; use Machine_X;\n\nprocedure Show_By_Copy_By_Ref_Params is\n   A : Integer := 5;\nbegin\n   Update_Value (A, A'Address);\nend Show_By_Copy_By_Ref_Params;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Subprograms.Parameter_Modes_Associations.By_Copy_By_Ref_Params",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "check_param_passing.ads",
+        "check_param_passing.adb",
+        "machine_x.ads",
+        "machine_x.adb",
+        "show_by_copy_by_ref_params.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_by_copy_by_ref_params.adb",
+    "text_hash": "e33f69945a8ec0b4f2074ad54890498c8c95e0d7311f119f2a3b80a9da3f0d572eba13587d3d837deb54a2265855797e40090367675b97b7cf5c8db5b2f55f9e",
+    "text_hash_short": "e437d3432703124496f0a217177959eb"
+}

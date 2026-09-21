@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/modular_programming.rst",
+    "line_start": 125,
+    "line_end": 140,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n--                ^ Make every entity of the\n--                  Ada.Text_IO package\n--                  directly visible.\nwith Week;\n\nprocedure Main is\n   use Week;\n   --  Make every entity of the Week\n   --  package directly visible.\nbegin\n   Put_Line (\"First day of the week is \" & Mon);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Modular_Programming.Week",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "0efd02e0eca05f4b40197ffae1ddf3c5d780676c643abe5e7c15c31d4d88542df15d322412edfe58e9f66ebf79897bbd34e5b8e8337226bbdeb4d9990ec5baa3",
+    "text_hash_short": "ea54077d4ae165b28ae8facfe8ba2db7"
+}

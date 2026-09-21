@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 2131,
+    "line_end": 2146,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main is\n   type Arr_Type is array (Integer range <>) of Integer;\n   A1 : Arr_Type (1 .. 2) := (10, 20);\n   A2 : Arr_Type (1 .. 2) := (10, 20);\nbegin\n   if A1 = A2 then\n     Put_Line (\"A1 = A2\");\n   else\n     Put_Line (\"A1 /= A2\");\n   end if;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Array_Equal_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "68d22eb46543de38b28663d9a5a972eb436f2e8ed94bbefbb6f4fe4af6fc5a0380fecc655204cd629981396b36e10d6b6aa504a5f65f8e0ae3901c8c9af1775e",
+    "text_hash_short": "650a734875a02b2fb3678bbc3f8dd82a"
+}

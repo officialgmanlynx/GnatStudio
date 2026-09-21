@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/05_initialization.rst",
+    "line_start": 262,
+    "line_end": 273,
+    "text": "!main.c\nint main() {\n   int a[10] = {0};\n   int b[10] = {0, 0};\n   int c[10] = {0, [8] = 0};\n   int d[10] = {0, [8] = 0, 0};\n   int e[10] = {0, [8] = 0, 0, [8] = 1};\n   return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Initialization.Redundant_Init",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "d51603055014f6bb46682cd4b458000a8fcafba14a54e171c6f4db34095851bdc46f6316eb7a03174a8f68d0fe6915cc9065b0a52f98f21098b607a941b4f5a2",
+    "text_hash_short": "1212a5565fc3a382e7f967d1cf0b48f9"
+}

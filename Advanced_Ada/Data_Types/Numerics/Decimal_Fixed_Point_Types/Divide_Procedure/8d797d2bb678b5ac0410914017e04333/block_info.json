@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 6622,
+    "line_end": 6658,
+    "text": "with Ada.Decimal;\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Custom_Decimal_Types;\nuse  Custom_Decimal_Types;\n\nprocedure Show_Divide_Procedure is\n\n   procedure Div is new\n     Ada.Decimal.Divide\n       (Dividend_Type  => T0_D4,\n        Divisor_Type   => T0_D4,\n        Quotient_Type  => T0_D4,\n        Remainder_Type => T0_D4);\n\n   Dividend  : T0_D4;\n   Divisor   : T0_D4;\n   Quotient  : T0_D4;\n   Remainder : T0_D4;\nbegin\n   Dividend := 501.0;\n   Divisor  := 2.0;\n\n   Div (Dividend, Divisor, Quotient, Remainder);\n\n   Put_Line (\"Dividend  : \"\n             & Dividend'Image);\n   Put_Line (\"Divisor   : \"\n             & Divisor'Image);\n   Put_Line (\"Quotient  : \"\n             & Quotient'Image);\n   Put_Line (\"Remainder : \"\n             & Remainder'Image);\nend Show_Divide_Procedure;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Decimal_Fixed_Point_Types.Divide_Procedure",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_divide_procedure.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_divide_procedure.adb",
+    "text_hash": "68411f90ea8b4997a1aba0cf7fa8b37123aaf8fee5132e482918d4f82ca894946d10d1a0fe4617e9d22f0757e1a640574315f055bd082ddf41a324fc18f6ebba",
+    "text_hash_short": "8d797d2bb678b5ac0410914017e04333"
+}

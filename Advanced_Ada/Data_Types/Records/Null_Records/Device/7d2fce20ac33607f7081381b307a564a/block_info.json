@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 497,
+    "line_end": 550,
+    "text": "package Devices is\n\n   type Device is private;\n\n   function Create\n     (Active : Boolean)\n      return Device;\n\n   procedure Reset\n     (D : out Device) is null;\n\n   procedure Process\n     (D : in out Device) is null;\n\n   procedure Activate\n     (D : in out Device) is null;\n\n   procedure Deactivate\n     (D : in out Device) is null;\n\nprivate\n\n   type Device is null record;\n\n   function Create (Active : Boolean)\n                    return Device is\n     (null record);\n\nend Devices;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Devices;     use Devices;\n\nprocedure Show_Device is\n   A : Device;\nbegin\n   Put_Line (\"Creating device...\");\n   A := Create (Active => True);\n\n   Put_Line (\"Processing on device...\");\n   Process (A);\n\n   Put_Line (\"Deactivating device...\");\n   Deactivate (A);\n\n   Put_Line (\"Activating device...\");\n   Activate (A);\n\n   Put_Line (\"Resetting device...\");\n   Reset (A);\nend Show_Device;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Null_Records.Device",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "devices.ads",
+        "show_device.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_device.adb",
+    "text_hash": "47a4d5b6af02af0470eb0c0bf150a069892bbd4d9c8606814a1ec99ea4076ac825ab01bf3d2da0c1d032e0db4ba9ff0d1cf485d0afc8f188eb6ffe4d8fd35ce8",
+    "text_hash_short": "7d2fce20ac33607f7081381b307a564a"
+}

@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numeric_attributes.rst",
+    "line_start": 27,
+    "line_end": 45,
+    "text": "package Num_Types is\n\n   type Signed_Integer is range 1 .. 1_000_000;\n   type Modular is mod 2**32;\n\nend Num_Types;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Num_Types;   use Num_Types;\n\nprocedure Show_Modular is\n   Modulus_Value : constant := Modular'Modulus;\nbegin\n   Put_Line (Modulus_Value'Image);\nend Show_Modular;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numeric_Attributes.Modular_Types.Modular_1",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "num_types.ads",
+        "show_modular.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_modular.adb",
+    "text_hash": "2304b4a30e7437f95aa86f71fea924ff7636148babb744ef50cfb5ce2083a54d102dc0dcb9ee9f36558741fff3e8a02c0c0f2fc10fbb21c90a13d81feb8ec2ea",
+    "text_hash_short": "93b8743474559f85c79c46bd71da8641"
+}

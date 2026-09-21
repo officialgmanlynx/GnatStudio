@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/modular_prog/packages.rst",
+    "line_start": 1375,
+    "line_end": 1385,
+    "text": "with Points; use Points;\n\nprocedure Show_Point is\n   P : Point;\nbegin\n   P := Init;\n   P := P + 1;\nend Show_Point;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Modular_Prog.Packages.Use_Type_Clause.Use_Type_Clause",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_point.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_point.adb",
+    "text_hash": "7772b532def892849ad76463c02f458c404f5ac39a538b689d47f97f71e6ebcc110980be1dfa659028b5cbd0a6f308ad83d2e9dca6a5979ada619331be4fef42",
+    "text_hash_short": "f5d44dd1fee8cf4d1a7e730f9a7c64cc"
+}

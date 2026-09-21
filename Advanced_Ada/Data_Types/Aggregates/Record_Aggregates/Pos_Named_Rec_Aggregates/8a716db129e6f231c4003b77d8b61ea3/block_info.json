@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/aggregates.rst",
+    "line_start": 325,
+    "line_end": 338,
+    "text": "package Points is\n\n   type Point_3D is record\n      X : Integer := 10;\n      Y : Integer := 20;\n      Z : Integer := 30;\n   end record;\n\n   procedure Display (P : Point_3D);\n\nend Points;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Aggregates.Record_Aggregates.Pos_Named_Rec_Aggregates",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "points.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "99f67d8577e57e8cb0978ebba81f154b860ee165d3aee6834dc9681d30c1c0e86a7fe27b560911594e32689db78ada29af0054f2c096a72610a40053a21d4cab",
+    "text_hash_short": "8a716db129e6f231c4003b77d8b61ea3"
+}

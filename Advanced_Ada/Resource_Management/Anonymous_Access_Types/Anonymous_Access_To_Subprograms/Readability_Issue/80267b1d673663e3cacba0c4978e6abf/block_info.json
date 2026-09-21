@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 3078,
+    "line_end": 3097,
+    "text": "with Readability_Issue;\nuse  Readability_Issue;\n\nprocedure Show_Readability_Issue is\n   F1 : access\n          function (A : Integer)\n                    return access\n                      function (B : Float)\n                                return Integer\n        := F;\n   F2 : access function (B : Float)\n                         return Integer\n        := F1 (2);\n   I  : Integer := F2 (0.1);\nbegin\n   I := F1 (2) (0.1);\nend Show_Readability_Issue;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Anonymous_Access_To_Subprograms.Readability_Issue",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_readability_issue.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_readability_issue.adb",
+    "text_hash": "57ca53109a7c13eb636f52be3d3f9c08a653f75f077774e55ca0a1f5c081692914387e62e4a76136d29ee5e35bba10536f9fa66bf12c77a9dc6287be2255edde",
+    "text_hash_short": "80267b1d673663e3cacba0c4978e6abf"
+}

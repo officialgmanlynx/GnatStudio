@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/02_program_consistency.rst",
+    "line_start": 60,
+    "line_end": 68,
+    "text": "!hello_world.adb\nprocedure Hello_World is\n   with Ada.Text_IO; -- Illegal\nbegin\n   Ada.Text_IO.Put_Line (\"hello, world!\");\nend Hello_World;\n",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Program_Consistency.Hello_World",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-nocheck"
+    ],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": true,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "hello_world.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "6f38d2e1de27d984dc06875ece518f8fbd80506fe878fc8c15260e5b8bc879d25faeedeb1734180a5e6b7a0e29cb9bf91f2bdb6d71231ad014fe0cc7ca120e44",
+    "text_hash_short": "afa19e8e2c114a5832b49e9efcbe675e"
+}

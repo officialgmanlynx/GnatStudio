@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/04_State_Abstraction.rst",
+    "line_start": 754,
+    "line_end": 767,
+    "text": "package Q is\n   External_Variable : Integer := 2;\nend Q;\n\nwith Q;\npackage P with\n  Initializes => (V1, V2 => Q.External_Variable)\nis\n   V1 : Integer := 0;\n   V2 : Integer := Q.External_Variable;\nend P;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.State_Abstraction.Initializes",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow_report_all"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "q.ads",
+        "p.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "2def0f40ef599b2fe6d811773987932ea7cc1df967bcdc3ea0d29d457db7511fba3137286fe86302867e13cb515f60130c92212a5374432df9ca64416f87a2c8",
+    "text_hash_short": "c8aa7f21729f3b926bf3d25a826cccb2"
+}

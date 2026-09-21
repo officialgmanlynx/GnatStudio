@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/exceptions.rst",
+    "line_start": 107,
+    "line_end": 139,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Bounded_Error is\n   subtype Int_1_10 is\n     Integer range 1 .. 10;\n\n   I1         : Int_1_10;\n   I1_Overlay : Integer\n     with Address => I1'Address,\n                     Import,\n                     Volatile;\nbegin\n   I1_Overlay := 0;\n   --  ^^^^^^^^^^^\n   --  We use this overlay to write an invalid\n   --  value to I1.\n\n   Put_Line (\"I1 = \" & I1'Image);\n   --                  ^^^^^^^^\n   --  Bounded error: value in\n   --  I1 is out of range.\n\n   I1 := I1 + 1;\n   --    ^^\n   --  Bounded error: using value\n   --  in operation that is out of\n   --  range.\n\n   Put_Line (\"I1 = \" & I1'Image);\nend Show_Bounded_Error;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Exceptions.Classification_Of_Errors.Data_Validity_Bounded_Error",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_bounded_error.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_bounded_error.adb",
+    "text_hash": "9ebc3c1bfc2b333c3b30577e3937be6dbca25e969ddb4bb2044deb36d34763fffc0d7def06bfff974100dd3e48d1b1a0730697a344e07548a1006dc40a8c3745",
+    "text_hash_short": "770ebb7b6e0015e373e96c0dce250caa"
+}

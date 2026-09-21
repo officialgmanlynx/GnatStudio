@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/05_Proof_Of_Functional_Correctness.rst",
+    "line_start": 1351,
+    "line_end": 1406,
+    "text": "package Ring_Buffer is\n\n   Max_Size : constant := 100;\n   subtype Length_Range is Natural range 0 .. Max_Size;\n   subtype Index_Range  is Natural range 1 .. Max_Size;\n\n   type Nat_Array is array (Positive range <>) of Natural;\n\n   type Model_Type (Length : Length_Range := 0) is record\n      Content : Nat_Array (1 .. Length);\n   end record\n     with Ghost;\n\n   Model : Model_Type with Ghost;\n\n   function Valid_Model return Boolean with Ghost;\n\n   procedure Push_Last (E : Natural) with\n     Pre  => Valid_Model\n       and then Model.Length < Max_Size,\n     Post => Model.Length = Model.Length'Old + 1;\n\nend Ring_Buffer;\n\npackage body Ring_Buffer is\n\n   Content : Nat_Array (1 .. Max_Size) := (others => 0);\n   First   : Index_Range               := 1;\n   Length  : Length_Range              := 0;\n\n   function Valid_Model return Boolean is\n      (Model.Content'Length = Length);\n\n   procedure Push_Last (E : Natural) is\n\n      procedure Update_Model with Ghost is\n         New_Length : constant Length_Range := Model.Length + 1;\n      begin\n         Model := (Length  => New_Length,\n                   Content => Model.Content & E);\n      end Update_Model;\n\n   begin\n      if First + Length <= Max_Size then\n         Content (First + Length) := E;\n      else\n         Content (Length - Max_Size + First) := E;\n      end if;\n      Length := Length + 1;\n      Update_Model;\n   end Push_Last;\n\nend Ring_Buffer;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Proof_of_Functional_Correctness.Example_05",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_report_all"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "ring_buffer.ads",
+        "ring_buffer.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "8cf136dcbfe27206e505d06adec0be792c0d2142634009fb7f241b64fd16fa2c94e6bda05fa2bee0462094dfe43d35af5bb7acb20636da91e1ee9233ddacb1b2",
+    "text_hash_short": "cc97fb35205c9a6de06001cf489f34e9"
+}

@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 199,
+    "line_end": 215,
+    "text": "package Type_Defaults is\n   type Color_Enum is (Red, Blue, Green);\n\n   type T is private;\nprivate\n   type T is\n      record\n         Color     : Color_Enum := Red;\n         Is_Gnarly : Boolean := False;\n         Count     : Natural;\n      end record;\n\n   procedure Do_Something;\nend Type_Defaults;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Default_Initialization.Default_Init",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-syntax-only"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": true,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "type_defaults.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "c52ec2cadb409663ec585fc4d54cd18ffd12f030c07b0a4ce9e943fc77ab3fc2658cc51952e18dd3673b4678c32bb60d2894dd7eea06ecef276008a2dce57ad8",
+    "text_hash_short": "218154278081f89595534bc02e34539b"
+}

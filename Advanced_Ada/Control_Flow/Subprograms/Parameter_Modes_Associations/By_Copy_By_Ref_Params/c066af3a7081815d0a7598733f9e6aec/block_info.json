@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/subprograms.rst",
+    "line_start": 423,
+    "line_end": 458,
+    "text": "with System;\n\npackage Machine_X is\n\n   procedure Update_Value\n     (V  : aliased in out Integer;\n      AV :                System.Address);\n\nend Machine_X;\n\nwith Check_Param_Passing;\n\npackage body Machine_X is\n\n   procedure Update_Value\n     (V  : aliased in out Integer;\n      AV :                System.Address)\n   is\n   begin\n      V := V + 1;\n      Check_Param_Passing (Formal => V'Address,\n                           Actual => AV);\n   end Update_Value;\n\nend Machine_X;\n\nwith Machine_X; use Machine_X;\n\nprocedure Show_By_Copy_By_Ref_Params is\n   A : aliased Integer := 5;\nbegin\n   Update_Value (A, A'Address);\nend Show_By_Copy_By_Ref_Params;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Subprograms.Parameter_Modes_Associations.By_Copy_By_Ref_Params",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "machine_x.ads",
+        "machine_x.adb",
+        "show_by_copy_by_ref_params.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_by_copy_by_ref_params.adb",
+    "text_hash": "03c3a8a4d32cb5980f117445656945b8069bd39666db972746d9d1bbcddfcf265f81434ff7e332b732f1ded8f5316b1b23fd8a51a2e798ffd5ca036a1cf407f3",
+    "text_hash_short": "c066af3a7081815d0a7598733f9e6aec"
+}

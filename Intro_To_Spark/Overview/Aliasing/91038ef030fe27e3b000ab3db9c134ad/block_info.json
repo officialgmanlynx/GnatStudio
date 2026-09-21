@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/01_Overview.rst",
+    "line_start": 290,
+    "line_end": 312,
+    "text": "procedure No_Aliasing is\n\n   Total : Natural := 0;\n\n   procedure Move_To_Total (Source : in out Natural)\n     with Post => Total = Total'Old + Source'Old and Source = 0\n   is\n   begin\n      Total  := Total + Source;\n      Source := 0;\n   end Move_To_Total;\n\n   X : Natural := 3;\n\nbegin\n   Move_To_Total (X);         -- OK\n   pragma Assert (Total = 3); -- OK\n   Move_To_Total (Total);     -- flow analysis error\n   pragma Assert (Total = 6); -- runtime error\nend No_Aliasing;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Overview.Aliasing",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure",
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run",
+        "prove_flow"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": true,
+    "source_files": [
+        "no_aliasing.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": "no_aliasing.adb",
+    "text_hash": "27e2b82120ea7237f1d2f0870a81bae667f9b4dd9ac4ca6517905147b9f56ab54b01bbeb9b10de39ba7c1de81b1629cd71a75b2ae965eb5720d3299a054e19a5",
+    "text_hash_short": "91038ef030fe27e3b000ab3db9c134ad"
+}

@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/interfacing_with_c.rst",
+    "line_start": 442,
+    "line_end": 449,
+    "text": "package Ext_C_Code.test_h is\n\n   --  automatic generated bindings...\n\nend Ext_C_Code.test_h;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Interfacing_With_C.C_Binds_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-syntax-only"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": true,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "ext_c_code-test_h.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "2bd5b9fd546b19971631f0ad4ac292f372e3af82b5761dee77f3c00d859bb7b9435a61efbe745245e3b8ff1ddd796b6ff88bfa4b09f4b4f86069344efa289c5a",
+    "text_hash_short": "3bd4087edff145a70d2a6db8543859ad"
+}

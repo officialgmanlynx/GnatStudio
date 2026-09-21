@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 841,
+    "line_end": 869,
+    "text": "package Devices is\n\n   type Device is private;\n\n   function Create (Active : Boolean)\n                    return Device;\n\n   type Derived_Device is private;\n\nprivate\n\n   type Device is tagged null record;\n\n   function Create (Active : Boolean)\n                    return Device is\n     (null record);\n\n   type Derived_Device is new Device with record\n      Active : Boolean;\n   end record;\n\n   function Create (Active : Boolean)\n                    return Derived_Device is\n     (Active => Active);\n\nend Devices;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Null_Records.Extended_Device",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "devices.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "b8567a373ba751ec7f548ba14b83aaa32912f6f7af850d67c7f786a3007f1be9721ae15a9b8270602fddc6a09c50fc9406c91f397ca19ad2bc337d17125cc8ec",
+    "text_hash_short": "15e06a5115cbcb131477b5224a6594db"
+}

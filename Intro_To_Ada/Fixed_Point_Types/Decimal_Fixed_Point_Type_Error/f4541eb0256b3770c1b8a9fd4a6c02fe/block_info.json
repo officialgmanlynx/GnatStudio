@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/fixed_point_types.rst",
+    "line_start": 191,
+    "line_end": 206,
+    "text": "package Decimal_Fixed_Point_Type_Error is\n\n   type Decimal_Error_1 is\n     delta 2.0 ** (-1) digits 3;\n   --      ^^^^^^^^^^^\n   --  ERROR: not power of ten\n\n   type Decimal_Error_2 is\n     delta 0.125 digits 3;\n   --      ^^^^^\n   --  ERROR: not power of ten\n\nend Decimal_Fixed_Point_Type_Error;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Fixed_Point_Types.Decimal_Fixed_Point_Type_Error",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "decimal_fixed_point_type_error.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "48adeed08613766821b93724608a7364aac2349ab6fb8276bdb6bf647deb371e54ef386855ca2b1b03bb0e2d18a1885315e4414922ab62752fb3f8a86d37027b",
+    "text_hash_short": "f4541eb0256b3770c1b8a9fd4a6c02fe"
+}

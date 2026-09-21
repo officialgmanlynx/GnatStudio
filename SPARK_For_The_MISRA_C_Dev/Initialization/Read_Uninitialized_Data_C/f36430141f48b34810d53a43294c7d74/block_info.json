@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/05_initialization.rst",
+    "line_start": 25,
+    "line_end": 58,
+    "text": "!f.h\n#include <stdint.h>\n\nvoid f ( int b, uint16_t *p );\n\n!f.c\n#include \"f.h\"\n\nvoid f ( int b, uint16_t *p )\n{\n  if ( b )\n  {\n     *p = 3U;\n  }\n}\n\n!g.c\n#include <stdint.h>\n#include \"f.h\"\n\nstatic void g (void)\n{\n   uint16_t u;\n\n   f ( 0, &u );\n\n   if ( u == 3U )\n   {\n      /* Non-compliant use - \"u\" has not been assigned a value. */\n   }\n}\n",
+    "language": "c",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Initialization.Read_Uninitialized_Data_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "f.h",
+        "f.c",
+        "g.c"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "ba736ef41f334ecba0722e4239e1d75cee618418789872f8dbfd2ba638bcd14ae7ba38a3423ce5d927aba3541da82e885deed8cfd123e4d380ce2ae5ac6d2db7",
+    "text_hash_short": "f36430141f48b34810d53a43294c7d74"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 1114,
+    "line_end": 1133,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main is\n\n   type Float_Int_Union (Use_Float : Boolean) is record\n      case Use_Float is\n        when True  => F : Float;\n        when False => I : Integer;\n      end case;\n   end record\n     with Unchecked_Union;\n\n   V : constant Float_Int_Union := (Use_Float => True,  F => 10.0);\n\nbegin\n   Put_Line (\"Integer value: \" & Integer'Image (V.I));\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.Unchecked_Union_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "45c261718af7c5a211bde9e7068e50ae22824f7391335fc9257832911765bc817df38e4d6746456d5c1d4893f4e56dd456ec8a7b2abf505b5ead3187800d544e",
+    "text_hash_short": "f6c5eacbd96c23531d02bb47a9668ac5"
+}

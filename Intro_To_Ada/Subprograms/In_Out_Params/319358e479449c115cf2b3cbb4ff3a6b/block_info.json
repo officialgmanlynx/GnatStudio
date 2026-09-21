@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/subprograms.rst",
+    "line_start": 360,
+    "line_end": 381,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure In_Out_Params is\n   procedure Swap (A, B : in out Integer) is\n      Tmp : Integer;\n   begin\n      Tmp := A;\n      A   := B;\n      B   := Tmp;\n   end Swap;\n\n   A : Integer := 12;\n   B : Integer := 44;\nbegin\n    Swap (A, B);\n\n    --  Prints 44\n    Put_Line (Integer'Image (A));\nend In_Out_Params;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Subprograms.In_Out_Params",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "in_out_params.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "in_out_params.adb",
+    "text_hash": "2ad3c4064ba2c071ec86ce7da0e4bf92cc5a09dfd0a3ba2418d089d7e442bec6b91acf2f0435364e16c3e27731ccb710094a705fc49bc759fd7d63f3a80f2365",
+    "text_hash_short": "319358e479449c115cf2b3cbb4ff3a6b"
+}

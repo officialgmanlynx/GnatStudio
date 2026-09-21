@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/05_SPARK.rst",
+    "line_start": 125,
+    "line_end": 139,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\nwith Arrays;      use Arrays;\n\nprocedure Some_Process is\n   L : constant List (1 .. 100) := (others => 42);\nbegin\n   Put_Line (Integer'Image (Value (L, 1, 10)));\nexception\n   when Constraint_Error =>\n      Put_Line (\"Constraint_Error caught in Some_Process\");\n      Put_Line (\"Some_Process completes normally\");\nend Some_Process;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.SPARK.Exceptions",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "some_process.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "220a8b7963fdac3fe1e3d204ad971a7440d3d47fff2826891344a4c7321dbc45d863fdb21852d3b4dbdc1895f32697a948b5c636c57651e603fee92ddc87041e",
+    "text_hash_short": "7733854601db37eb53f4c4094fe5ca0d"
+}

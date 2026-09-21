@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/strongly_typed_language.rst",
+    "line_start": 111,
+    "line_end": 121,
+    "text": "procedure Main is\n   A : Integer := Integer'Last;\n   B : Integer;\nbegin\n   B := A + 5;\n   --  This operation will overflow, eg. it\n   --  will raise an exception at run time.\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Strongly_Typed_Language.Overflow_Check",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "27d63a48b308d3f69e383faa6e8db0bed8db68d0ccc3c23e9702797a1eb2235fbd5c1de9a6ba8e9a1b96c1b5c09f7b1394b95ebfc79ae4e93a1587ad0919c581",
+    "text_hash_short": "bddd15b394f043442024899d12b982fb"
+}

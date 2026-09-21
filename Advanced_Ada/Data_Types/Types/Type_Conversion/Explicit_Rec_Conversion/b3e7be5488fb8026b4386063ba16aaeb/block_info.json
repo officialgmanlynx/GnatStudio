@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 2993,
+    "line_end": 3085,
+    "text": "package Custom_Defs is\n\n   type T1 is private;\n\n   function Init (X : Float)\n                  return T1;\n\n   procedure Display (Obj : T1);\n\n   type T3 is private;\n\n   function Init (X, Y, Z : Float)\n                  return T3;\n\n   function To_Float (Obj : T3)\n                      return Float;\n\n   function To_T1 (Obj : T3)\n                   return T1;\n\n   procedure Display (Obj : T3);\n\nprivate\n   type T1 is record\n      X : Float;\n   end record;\n\n   function Init (X : Float)\n                  return T1 is\n     (X => X);\n\n   type T3 is record\n      X, Y, Z : Float;\n   end record;\n\n   function Init (X, Y, Z : Float)\n                  return T3 is\n     (X => X, Y => Y, Z => Z);\n\nend Custom_Defs;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Custom_Defs is\n\n   procedure Display (Obj : T1) is\n   begin\n      Put_Line (\"(X => \"\n                & Obj.X'Image & \")\");\n   end Display;\n\n   function To_Float (Obj : T3)\n                      return Float is\n     ((Obj.X + Obj.Y + Obj.Z) / 3.0);\n\n   function To_T1 (Obj : T3)\n                   return T1 is\n     (Init (To_Float (Obj)));\n\n   procedure Display (Obj : T3) is\n   begin\n      Put_Line (\"(X => \"    & Obj.X'Image\n                & \", Y => \" & Obj.Y'Image\n                & \", Z => \" & Obj.Z'Image\n                & \")\");\n   end Display;\n\nend Custom_Defs;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Custom_Defs; use Custom_Defs;\n\nprocedure Show_Conversion is\n   T_3 : constant T3 := Init (0.5, 0.4, 0.6);\n   T_1 :          T1 := Init (0.0);\n   F   : Float;\nbegin\n   --  Explicit conversion from\n   --  T3 to Float type\n   F := To_Float (T_3);\n\n   Put_Line (\"F : \" & F'Image);\n\n   --  Explicit conversion from\n   --  T3 to T1 type\n   T_1 := To_T1 (T_3);\n\n   Put (\"T_1 : \");\n   Display (T_1);\nend Show_Conversion;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Type_Conversion.Explicit_Rec_Conversion",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_defs.ads",
+        "custom_defs.adb",
+        "show_conversion.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_conversion.adb",
+    "text_hash": "e0030ee0f2b0e3a7fb36e0e90804581929e0336244410985a22655c44df014586fa82e5045e3a8f18b9d0f5655c60f8261cb613aa5c9ae07f4fe2c66e0176b33",
+    "text_hash_short": "b3e7be5488fb8026b4386063ba16aaeb"
+}

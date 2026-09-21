@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 759,
+    "line_end": 788,
+    "text": "!main.c\n#include <stdio.h>\n\nint main(int argc, const char * argv[])\n{\n    // try changing the initial value to change the\n    //    output of the program\n    int v = 0;\n\n    switch(v) {\n        case 0:\n            printf(\"Zero\\n\");\n            break;\n        case 1: case 2: case 3: case 4: case 5:\n        case 6: case 7: case 8: case 9:\n            printf(\"Positive\\n\");\n            break;\n        case 10: case 12: case 14: case 16: case 18:\n            printf(\"Even number between 10 and 18\\n\");\n            break;\n        default:\n            printf(\"Something else\\n\");\n            break;\n    }\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Switch_Case_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "306f3dc43f1088e9d648cd683057190e4501c64b1a96bdb7ce6b499522cb107463e858229e1bb378279b13314dfc553c583f051bd36c173421a3ab7d5977cfc6",
+    "text_hash_short": "1bdb3d0c151d71280ef9039841f7ee58"
+}

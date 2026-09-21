@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 2096,
+    "line_end": 2108,
+    "text": "procedure Show_Dangerous_String is\n    Uninitialized_String_Var : String (1 .. 10);\n    --  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    --  no initialization\n\n    Uninitialized_Const_Str : constant String :=\n        Uninitialized_String_Var;\nbegin\n   null;\nend Show_Dangerous_String;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Limited_Types_Aggregates.Dangerous_String",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_dangerous_string.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_dangerous_string.adb",
+    "text_hash": "628eed39e6a4d06d41b357f7a4e63e00648d262e6e3fb689bb935a16654b93f06f088ad6a535141499f8f74d7a933cf5b5dbfee5016e9e749aead4bcab0bf851",
+    "text_hash_short": "6c26e9c8d5d031d4e6eac1ac8458f17e"
+}

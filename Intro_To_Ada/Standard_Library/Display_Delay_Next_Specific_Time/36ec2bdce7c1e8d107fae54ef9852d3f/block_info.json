@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_dates_times.rst",
+    "line_start": 83,
+    "line_end": 118,
+    "text": "with Ada.Text_IO;  use Ada.Text_IO;\nwith Ada.Calendar; use Ada.Calendar;\n\nwith Ada.Calendar.Formatting;\nuse  Ada.Calendar.Formatting;\n\nwith Ada.Calendar.Time_Zones;\nuse  Ada.Calendar.Time_Zones;\n\nprocedure Display_Delay_Next_Specific_Time is\n   TZ   : Time_Offset := UTC_Time_Offset;\n   Next : Time        :=\n     Ada.Calendar.Formatting.Time_Of\n       (Year        => 2018,\n        Month       => 5,\n        Day         => 1,\n        Hour        => 15,\n        Minute      => 0,\n        Second      => 0,\n        Sub_Second  => 0.0,\n        Leap_Second => False,\n        Time_Zone   => TZ);\n\n   --  Next = 2018-05-01 15:00:00.00\n   --         (local time-zone)\nbegin\n   Put_Line (\"Let's wait until...\");\n   Put_Line (Image (Next, True, TZ));\n\n   delay until Next;\n\n   Put_Line (\"Enough waiting!\");\nend Display_Delay_Next_Specific_Time;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Display_Delay_Next_Specific_Time",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "display_delay_next_specific_time.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "display_delay_next_specific_time.adb",
+    "text_hash": "93ad825db6b33e9d1f2b159f2341c7d1d910942c84e05aa25cc6ffa1cf64159d6f1afa383ee8b3c2f68dcebdea00e391844d9d240d473a5274fa322a511764fc",
+    "text_hash_short": "36ec2bdce7c1e8d107fae54ef9852d3f"
+}

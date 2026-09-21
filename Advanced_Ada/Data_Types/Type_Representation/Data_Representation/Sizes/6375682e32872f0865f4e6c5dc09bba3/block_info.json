@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 251,
+    "line_end": 285,
+    "text": "package Custom_Types is\n\n   type UInt_7 is range 0 .. 127;\n\n   type UInt_7_S24 is range 0 .. 127\n     with Size => 24;\n\nend Custom_Types;\n\nwith Ada.Text_IO;  use Ada.Text_IO;\n\nwith Custom_Types; use Custom_Types;\n\nprocedure Show_Sizes is\n   V1 : UInt_7;\n   V2 : UInt_7_S24;\nbegin\n   Put_Line (\"UInt_7'Size:            \"\n             & UInt_7'Size'Image);\n   Put_Line (\"UInt_7'Object_Size:     \"\n             & UInt_7'Object_Size'Image);\n   Put_Line (\"V1'Size:                \"\n             & V1'Size'Image);\n   New_Line;\n\n   Put_Line (\"UInt_7_S24'Size:        \"\n             & UInt_7_S24'Size'Image);\n   Put_Line (\"UInt_7_S24'Object_Size: \"\n             & UInt_7_S24'Object_Size'Image);\n   Put_Line (\"V2'Size:                \"\n             & V2'Size'Image);\nend Show_Sizes;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Data_Representation.Sizes",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_types.ads",
+        "show_sizes.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_sizes.adb",
+    "text_hash": "0ab248737014a6e9513e4e2c2392bb40234f83034d6c2c82f98680f2ab470c3e61b00810dacf2aeed47869336eb3a823229678d077276481e83f65cb103ec184",
+    "text_hash_short": "6375682e32872f0865f4e6c5dc09bba3"
+}

@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 547,
+    "line_end": 604,
+    "text": "package Custom_Recs is\n\n   --  Declaring an access type:\n   type Integer_Access is access Integer;\n\n   --  Declaring a discriminant with this\n   --  access type:\n   type Rec (IA : Integer_Access) is record\n\n      I : Integer := IA.all;\n      --          ^^^^^^^^^\n      --  Setting I's default to use the\n      --  designated value of IA:\n   end record;\n\n   procedure Show (R : Rec);\n\nend Custom_Recs;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Custom_Recs is\n\n   procedure Show (R : Rec) is\n   begin\n      Put_Line (\"R.IA = \"\n                & Integer'Image (R.IA.all));\n      Put_Line (\"R.I  = \"\n                & Integer'Image (R.I));\n   end Show;\n\nend Custom_Recs;\n\nwith Custom_Recs; use Custom_Recs;\n\nprocedure Show_Discriminants_As_Access_Values is\n\n   IA : constant Integer_Access :=\n          new Integer'(10);\n   R  : Rec (IA);\n\nbegin\n   Show (R);\n\n   IA.all := 20;\n   R.I    := 30;\n   Show (R);\n\n   --  As expected, we cannot change the\n   --  discriminant. The following line is\n   --  triggers a compilation error:\n   --\n   --  R.IA := new Integer;\n\nend Show_Discriminants_As_Access_Values;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Discriminants_As_Access_Values.Discriminant_Access_Values",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_recs.ads",
+        "custom_recs.adb",
+        "show_discriminants_as_access_values.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_discriminants_as_access_values.adb",
+    "text_hash": "2d533f1995efb3312f42ed5e3a387be8f83fc470d67e3420826dd582731a7793b334c340b551d56ef92c500be1b8c67bf41639c938a5f04775a136945748ed41",
+    "text_hash_short": "c7850acefd8e5227f4be654faed13055"
+}

@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/subprograms.rst",
+    "line_start": 1327,
+    "line_end": 1339,
+    "text": "procedure Show_Literal_Resolution_Error is\n\n   type Apple_Count is range 0 .. 100;\n   procedure Slice (Count : Apple_Count) is null;\n\n   type Orange_Count is range 0 .. 10_000;\n   procedure Slice (Count : Orange_Count) is null;\nbegin\n   Slice (Count => (10_000));  --  Illegal!\nend Show_Literal_Resolution_Error;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Subprograms.Overloading.Literal_Resolution_Error",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_literal_resolution_error.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_literal_resolution_error.adb",
+    "text_hash": "4e87e3e06c3faee9abda3ff39a7b0adc0580fb063c529fa87073314adef95133e5438e3606301e72e747546b22ce4ba23a7cef59798de7bf63b34ee74c22102c",
+    "text_hash_short": "4789d8eea9b82649ba8e453bb861688a"
+}

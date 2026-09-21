@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/generics.rst",
+    "line_start": 40,
+    "line_end": 53,
+    "text": "generic\n   type T is private;\n   --  T is a formal type that indicates that\n   --  any type can be used, possibly a numeric\n   --  type or possibly even a record type.\nprocedure Set (Dummy : T);\n\nprocedure Set (Dummy : T) is\nbegin\n   null;\nend Set;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Generics.Show_Formal_Type_Declaration",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "set.ads",
+        "set.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "479c3074c3aadc56ed11aa8630255ca4a44a7c3c067ce5ed5a50069378fbfee3e6f4da6d2951ccdec3521849dd21eef83beedc4088416b460595e5aa95ef40d8",
+    "text_hash_short": "668156f66b2479c4932d18b5ad35deba"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 696,
+    "line_end": 719,
+    "text": "!main.c\n#include <stdio.h>\n\nint main(int argc, const char * argv[])\n{\n    // try changing the initial value to change the\n    //    output of the program\n    int v = 0;\n\n    if (v > 0) {\n        printf(\"Positive\\n\");\n    }\n    else if (v < 0) {\n        printf(\"Negative\\n\");\n    }\n    else {\n        printf(\"Zero\\n\");\n    }\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Condition_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "489218338987d056322923536bffbfea38200946a0488cfc30afc84c7271564744179002935d7750ecdae4b197645f796d8766cc599320c2bb3201fdd89811b1",
+    "text_hash_short": "69203e679085e73394d3620a5954262a"
+}

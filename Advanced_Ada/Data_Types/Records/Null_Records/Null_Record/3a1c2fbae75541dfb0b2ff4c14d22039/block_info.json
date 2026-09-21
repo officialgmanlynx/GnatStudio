@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 449,
+    "line_end": 480,
+    "text": "package Null_Recs is\n\n   type Null_Record is null record;\n\n   function \"+\" (A, B : Null_Record)\n                 return Null_Record;\n\nend Null_Recs;\n\npackage body Null_Recs is\n\n   function \"+\" (A, B : Null_Record)\n                 return Null_Record\n   is\n      pragma Unreferenced (A, B);\n   begin\n      return (null record);\n   end \"+\";\n\nend Null_Recs;\n\nwith Null_Recs; use Null_Recs;\n\nprocedure Show_Null_Rec is\n   A, B : Null_Record;\nbegin\n   B := A + A;\n   A := A + B;\nend Show_Null_Rec;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Null_Records.Null_Record",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "null_recs.ads",
+        "null_recs.adb",
+        "show_null_rec.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "3cab1cc00d61169b80d1f6567f00c58b03f54a86a7bff6be58744fcbb47910a05dd7d03819c7c214dd1b8efd39fa72bc3ce25e36480d015f74fe6a3925d17af2",
+    "text_hash_short": "3a1c2fbae75541dfb0b2ff4c14d22039"
+}

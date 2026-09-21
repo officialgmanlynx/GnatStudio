@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 1519,
+    "line_end": 1539,
+    "text": "package Operations is\n\n   procedure Add_One (IA : access Integer)\n     with Import, Convention => C;\n\nend Operations;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Operations;  use Operations;\n\nprocedure Show_Operations is\n   I : aliased Integer := 42;\nbegin\n   Put_Line (I'Image);\n   Add_One (I'Access);\n   Put_Line (I'Image);\nend Show_Operations;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Anonymous_Access_Parameters.C_Interfacing",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "operations.ads",
+        "show_operations.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "438c12e3caec038fab9b0b6de7443063403cc48a4c77f6020e88c15f42db32a944f269282b323b4e226c097a18512005bdecc4751854013665dab99c44df3999",
+    "text_hash_short": "0219acdbd2dad69962875199ffdd930e"
+}

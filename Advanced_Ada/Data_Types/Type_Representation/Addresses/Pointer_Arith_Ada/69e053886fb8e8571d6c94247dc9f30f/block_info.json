@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 2646,
+    "line_end": 2673,
+    "text": "with System;      use System;\n\nwith System.Storage_Elements;\nuse  System.Storage_Elements;\n\nwith System.Address_Image;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Address is\n   I      : Integer;\n   A1, A2 : Address;\n   IA     : Integer_Address;\nbegin\n   A1 := I'Address;\n   IA := To_Integer (A1);\n   A2 := To_Address (IA);\n\n   Put_Line (\"A1 : \"\n              & System.Address_Image (A1));\n   Put_Line (\"IA : \"\n              & Integer_Address'Image (IA));\n   Put_Line (\"A2 : \"\n              & System.Address_Image (A2));\nend Show_Address;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Addresses.Pointer_Arith_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_address.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_address.adb",
+    "text_hash": "d0bc5e5e63c3c8d6dfd90adde554b8983ef3f90b3bc33df9086095927c439baf49a262acde7dfcc99ad0a6102fc3febf229d277433c7bb3685b7ba1c54f5587a",
+    "text_hash_short": "69e053886fb8e8571d6c94247dc9f30f"
+}

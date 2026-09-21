@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 4233,
+    "line_end": 4299,
+    "text": "package Custom_Types is\n\n   type Decimal is\n     delta 10.0 ** (-2) digits 6;\n   --  Decimal type\n\n   type TD18 is\n     digits 18;\n   --  Floating-point type\n\n   type TD18_1000 is\n     digits 18\n       range -1_000.0 .. 1_000.0;\n   --  Range-constrained\n   --  floating-point type\n\nend Custom_Types;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Custom_Types;\nuse  Custom_Types;\n\nprocedure Show_Decimal_Type_Conversions is\n   D6       : Decimal;\n   D18      : TD18;\n   D18_1000 : TD18_1000;\nbegin\n   D6  := Decimal'Last;\n   D18 := TD18 (D6);\n   --     ^^^^^^^^^\n   --  Conversion from\n   --  decimal fixed-point\n\n   Put_Line (\"D6       = \"\n             & D6'Image);\n   Put_Line (\"D18      = \"\n             & D18'Image);\n   Put_Line (\"-----------------------------\");\n\n   D18 := TD18 (Decimal'Last);\n   D6  := Decimal (D18);\n   --     ^^^^^^^^^^\n   --  Conversion to\n   --  decimal fixed-point\n\n   Put_Line (\"D6       = \"\n             & D6'Image);\n   Put_Line (\"D18      = \"\n             & D18'Image);\n   Put_Line (\"-----------------------------\");\n\n   D6       := 800.0;\n   D18_1000 := TD18_1000 (D6);\n   --          ^^^^^^^^^^^^^^\n   --  Conversion from\n   --  decimal fixed-point\n\n   Put_Line (\"D6       = \"\n             & D6'Image);\n   Put_Line (\"D18_1000 = \"\n             & D18_1000'Image);\n\nend Show_Decimal_Type_Conversions;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Fixed_Point_Types.Decimal_Type_Conversions_Other_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_types.ads",
+        "show_decimal_type_conversions.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_decimal_type_conversions.adb",
+    "text_hash": "eb207d35c540703e2cfa5040ace257d9b61c3faadc5799573afc092eb4589fbf57ea820873f7afa7848ba2ac8195ec344fbb9749ac4174458f339214c820b5a0",
+    "text_hash_short": "bb6282b74c0da5ac2a84188ab7bbf5bf"
+}

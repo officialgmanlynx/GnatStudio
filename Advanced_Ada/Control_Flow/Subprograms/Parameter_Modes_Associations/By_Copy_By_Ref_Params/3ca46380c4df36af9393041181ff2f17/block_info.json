@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/subprograms.rst",
+    "line_start": 198,
+    "line_end": 288,
+    "text": "with System;\n\npackage Machine_X is\n\n   type Integer_Array is\n     array (Positive range <>) of Integer;\n\n   type Rec is record\n      A : Integer;\n   end record;\n\n   type Rec_Array is record\n      A   : Integer;\n      Arr : Integer_Array (1 .. 100);\n   end record;\n\n   type Tagged_Rec is tagged record\n      A : Integer;\n   end record;\n\n   procedure Update_Value\n     (R  : in out Rec;\n      AR :        System.Address);\n\n   procedure Update_Value\n     (RA  : in out Rec_Array;\n      ARA :        System.Address);\n\n   procedure Update_Value\n     (R  : in out Tagged_Rec;\n      AR :        System.Address);\n\nend Machine_X;\n\nwith Check_Param_Passing;\n\npackage body Machine_X is\n\n   procedure Update_Value\n     (R  : in out Rec;\n      AR :        System.Address)\n   is\n   begin\n      R.A := R.A + 1;\n      Check_Param_Passing (Formal => R'Address,\n                           Actual => AR);\n   end Update_Value;\n\n   procedure Update_Value\n     (RA  : in out Rec_Array;\n      ARA :        System.Address)\n   is\n   begin\n      RA.A := RA.A + 1;\n      Check_Param_Passing (Formal => RA'Address,\n                           Actual => ARA);\n   end Update_Value;\n\n   procedure Update_Value\n     (R  : in out Tagged_Rec;\n      AR :        System.Address)\n   is\n   begin\n      R.A := R.A + 1;\n      Check_Param_Passing (Formal => R'Address,\n                           Actual => AR);\n   end Update_Value;\n\nend Machine_X;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Machine_X;   use Machine_X;\n\nprocedure Show_By_Copy_By_Ref_Params is\n   TR : Tagged_Rec := (A   => 5);\n   R  : Rec        := (A   => 5);\n   RA : Rec_Array  := (A   => 5,\n                       Arr => (others => 0));\nbegin\n   Put_Line (\"Tagged record\");\n   Update_Value (TR, TR'Address);\n\n   Put_Line (\"Untagged record\");\n   Update_Value (R,  R'Address);\n\n   Put_Line (\"Untagged record with array\");\n   Update_Value (RA, RA'Address);\nend Show_By_Copy_By_Ref_Params;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Subprograms.Parameter_Modes_Associations.By_Copy_By_Ref_Params",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "machine_x.ads",
+        "machine_x.adb",
+        "show_by_copy_by_ref_params.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_by_copy_by_ref_params.adb",
+    "text_hash": "3057643949dd17fb835b40fd7b2021f4fce59de6d20a9de2ce62e066f3c0eeeedcef0eebb733b1202e036d912fbdd99c1fe828f9054e26e3db7e44c60f998047",
+    "text_hash_short": "3ca46380c4df36af9393041181ff2f17"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 80,
+    "line_end": 97,
+    "text": "procedure Show_Simple_Allocation is\n\n   --  Access-to-object type\n   type Integer_Access is access Integer;\n\n   --  Access object\n   I1 : Integer_Access;\n\nbegin\n   I1 := new Integer;\n   --    ^^^^^^^^^^^ allocating an object,\n   --                which becomes the designated\n   --                object for I1\n\nend Show_Simple_Allocation;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Terminology.Simple_Allocation",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_simple_allocation.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "ce792a2d54c11f9022923d32008a08db1ed518e97042e3a343302e8006086dc7320940c04a1b3579e8117fa5056bdde8fc895d6a458b80e43907db488f2ea54e",
+    "text_hash_short": "32ca8cf523e19b25dabb55da6df1f18d"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/strongly_typed_language.rst",
+    "line_start": 411,
+    "line_end": 422,
+    "text": "with Ada.Text_IO;  use Ada.Text_IO;\nwith Ada.Numerics; use Ada.Numerics;\n\nprocedure Custom_Range_Types is\n   type T6_Inv_Trig  is\n     digits 6 range -Pi / 2.0 .. Pi / 2.0;\nbegin\n   null;\nend Custom_Range_Types;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Strongly_Typed_Language.Custom_Range_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_range_types.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "custom_range_types.adb",
+    "text_hash": "e12ebcb2d3b7b8bed9717a22f29109ee8c424ee469a0360cc1a13a7dc4a22a4a075ef7126e03bece14087fa6c0a911129ebff95e346363b9cc541f1c016c05a5",
+    "text_hash_short": "7b62abc869290a30e351163f670059e0"
+}

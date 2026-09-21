@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/arrays.rst",
+    "line_start": 32,
+    "line_end": 54,
+    "text": "package Measurement_Defs is\n\n   type Measurements is\n     array (Positive range <>) of Float;\n   --       ^ Bounds are of type Positive,\n   --         but not known at this point.\n\nend Measurement_Defs;\n\nwith Ada.Text_IO;      use Ada.Text_IO;\n\nwith Measurement_Defs; use Measurement_Defs;\n\nprocedure Show_Measurements is\n   M : Measurements (1 .. 10);\n   --                ^ Providing bounds here!\nbegin\n   Put_Line (\"First index: \" & M'First'Image);\n   Put_Line (\"Last index:  \" & M'Last'Image);\nend Show_Measurements;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Arrays.Array_Constraints.Unconstrained_Array_Type",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "measurement_defs.ads",
+        "show_measurements.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_measurements.adb",
+    "text_hash": "a835c550670cbc73d4ba6b49ebf0c5f3fb5052ba550a02f17c473976a07cd4a43ff1d666b11a8074441ac01fb5a8eb1abf40007a4b1e502299e6a6cfff3182f8",
+    "text_hash_short": "a5cdc74dd61e36476431cf675452d1d5"
+}

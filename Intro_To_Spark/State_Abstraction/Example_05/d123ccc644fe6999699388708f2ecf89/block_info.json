@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/04_State_Abstraction.rst",
+    "line_start": 988,
+    "line_end": 1019,
+    "text": "package Counting with\n  Abstract_State => State\nis\n   procedure Reset_Black_Count with Global => (In_Out => State);\n   procedure Reset_Red_Count   with Global => (In_Out => State);\n   procedure Reset_All         with Global => (Output => State);\nend Counting;\n\npackage body Counting with\n  Refined_State => (State => (Black_Counter, Red_Counter))\nis\n   Black_Counter, Red_Counter : Natural;\n\n   procedure Reset_Black_Count is\n   begin\n      Black_Counter := 0;\n   end Reset_Black_Count;\n\n   procedure Reset_Red_Count is\n   begin\n      Red_Counter := 0;\n   end Reset_Red_Count;\n\n   procedure Reset_All is\n   begin\n      Reset_Black_Count;\n      Reset_Red_Count;\n   end Reset_All;\nend Counting;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.State_Abstraction.Example_05",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow_report_all"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "counting.ads",
+        "counting.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "4ca78820e9a3418c4dea3160a640585e8b3d05f054160729e96b29a4899f680b9b4eb3212954cc7f24b21be187aced7f7992c8f5078f3061bd53cf60702e6010",
+    "text_hash_short": "d123ccc644fe6999699388708f2ecf89"
+}

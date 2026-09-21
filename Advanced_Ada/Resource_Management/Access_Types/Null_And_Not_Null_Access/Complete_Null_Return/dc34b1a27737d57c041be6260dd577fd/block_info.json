@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 4029,
+    "line_end": 4054,
+    "text": "package Example.Processing is\n\n   procedure P (X : not null Ref_Element);\n\n   procedure Q (X : not null Ref_Element);\n\nend Example.Processing;\n\npackage body Example.Processing is\n\n   procedure P (X : not null Ref_Element) is\n   begin\n      X.all.Component := X.all.Component + 1;\n   end P;\n\n   procedure Q (X : not null Ref_Element) is\n   begin\n      for I in 1 .. 1000 loop\n         P (X);\n      end loop;\n   end Q;\n\nend Example.Processing;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Null_And_Not_Null_Access.Complete_Null_Return",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "example-processing.ads",
+        "example-processing.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "cf482a1895e6d69a90c09e76aa72260dfa744f5df796ae6e6b9c7a8fb05c0c05bddb18c625a3d993bf2470fff983aab7adaf61addbf9dfca64cc2aaf3633b67d",
+    "text_hash_short": "dc34b1a27737d57c041be6260dd577fd"
+}

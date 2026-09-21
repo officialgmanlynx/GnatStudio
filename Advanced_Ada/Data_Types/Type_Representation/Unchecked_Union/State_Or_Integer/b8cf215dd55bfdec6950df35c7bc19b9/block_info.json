@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 2185,
+    "line_end": 2195,
+    "text": "with States; use States;\n\nprocedure Show_Variant_Rec_Error is\n   V : State_Or_Integer (Use_Enum => True);\nbegin\n   V.S := On;\n   Display_State_Value (V);\nend Show_Variant_Rec_Error;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Unchecked_Union.State_Or_Integer",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_variant_rec_error.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_variant_rec_error.adb",
+    "text_hash": "133f3173c7bce333c57f03e2778a3680d5ca439e14bddec0cf75596b3030ebe316dcf78cedcb6d49a55eed002f4dce6b094774a2fd617768c07c3c2ba9517f02",
+    "text_hash_short": "b8cf215dd55bfdec6950df35c7bc19b9"
+}

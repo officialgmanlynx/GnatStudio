@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 5624,
+    "line_end": 5672,
+    "text": "with Work_Registry;\n\npackage Integer_Storage_System is\n\n   protected type Integer_Storage is\n\n      procedure Set (V : Integer);\n\n      procedure Show (T : Work_Registry.Work_Id);\n\n   private\n\n      I : Integer := 0;\n\n   end Integer_Storage;\n\n   type Integer_Storage_Access is\n     access Integer_Storage;\n\n   type Integer_Storage_Array is\n     array (Positive range <>) of\n       Integer_Storage_Access;\n\nend Integer_Storage_System;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Integer_Storage_System is\n\n   protected body Integer_Storage is\n\n      procedure Set (V : Integer) is\n      begin\n         I := V;\n      end Set;\n\n      procedure Show (T : Work_Registry.Work_Id)\n      is\n         pragma Unreferenced (T);\n      begin\n         Put_Line (\"Value: \" & Integer'Image (I));\n      end Show;\n\n   end Integer_Storage;\n\nend Integer_Storage_System;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Access_To_Subprograms.Protected_Access_Init_Function",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "integer_storage_system.ads",
+        "integer_storage_system.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "ec7541b1604c9253eca6d567aad21e9f43bf22ab4c95943821eed770fcbd2d4b46da5f27bc564b1f08df4711e7c0109f2b60b2b3b4316c84393a1d3dfb0cf943",
+    "text_hash_short": "a388d792bc85709785d324c914d9d236"
+}

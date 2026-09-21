@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/subprograms.rst",
+    "line_start": 1741,
+    "line_end": 1782,
+    "text": "package Float_Arrays is\n\n   type Float_Array is\n     array (Positive range <>) of Float;\n\n   function Average (Data : Float_Array)\n                     return Float\n     with Inline;\n\nend Float_Arrays;\n\npackage body Float_Arrays is\n\n   function Average (Data : Float_Array)\n                     return Float\n   is\n      Total : Float := 0.0;\n   begin\n      for Value of Data loop\n         Total := Total + Value;\n      end loop;\n      return Total / Float (Data'Length);\n   end Average;\n\nend Float_Arrays;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Float_Arrays; use Float_Arrays;\n\nprocedure Compute_Average is\n   Values        : constant Float_Array :=\n                     (10.0, 11.0, 12.0, 13.0);\n   Average_Value : Float;\nbegin\n   Average_Value := Average (Values);\n   Put_Line (\"Average = \"\n             & Float'Image (Average_Value));\nend Compute_Average;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Subprograms.Inline_Subprograms.Inlining_Float_Arrays",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "float_arrays.ads",
+        "float_arrays.adb",
+        "compute_average.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "compute_average.adb",
+    "text_hash": "a2baca982e1e6a18f2ba6d74d4d3bbfd07bc16f940512b40752eed04f2811f5b64f963dcbc433815325426934bf922ca2276cebf6fca29e7b63901d108b19231",
+    "text_hash_short": "246bc11e8a969d69873f416f583f450e"
+}

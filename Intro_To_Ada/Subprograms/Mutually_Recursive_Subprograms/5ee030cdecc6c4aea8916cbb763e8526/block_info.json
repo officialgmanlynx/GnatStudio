@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/subprograms.rst",
+    "line_start": 468,
+    "line_end": 492,
+    "text": "procedure Mutually_Recursive_Subprograms is\n    procedure Compute_A (V : Natural);\n    --  Forward declaration of Compute_A\n\n    procedure Compute_B (V : Natural) is\n    begin\n       if V > 5 then\n          Compute_A (V - 1);\n          --  Call to Compute_A\n       end if;\n    end Compute_B;\n\n    procedure Compute_A (V : Natural) is\n    begin\n       if V > 2 then\n          Compute_B (V - 1);\n          --  Call to Compute_B\n       end if;\n    end Compute_A;\nbegin\n   Compute_A (15);\nend Mutually_Recursive_Subprograms;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Subprograms.Mutually_Recursive_Subprograms",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "mutually_recursive_subprograms.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "mutually_recursive_subprograms.adb",
+    "text_hash": "77edc53421191c9a6470fde22bbee4edd698fda8ec548cb547b853eb0e773b43d21bf71cd9aaa20a5f4addcb901afd756972da65247ba974c7bce55b7ab6d416",
+    "text_hash_short": "5ee030cdecc6c4aea8916cbb763e8526"
+}

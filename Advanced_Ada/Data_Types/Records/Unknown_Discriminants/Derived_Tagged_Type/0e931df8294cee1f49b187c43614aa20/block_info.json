@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 2816,
+    "line_end": 2843,
+    "text": "package Unknown_Discriminants.Children.Grand is\n\n   type Grand_Rec_Unknown_Discr (<>) is\n     new Derived_Rec_Known_Discr (1)\n       with private;\n\nprivate\n\n   type Grand_Rec_Unknown_Discr is\n     new Derived_Rec_Known_Discr (1)\n       with null record;\n\nend Unknown_Discriminants.Children.Grand;\n\nwith Unknown_Discriminants.Children.Grand;\nuse  Unknown_Discriminants.Children.Grand;\n\nprocedure Show_Object_Declaration is\n   A : Grand_Rec_Unknown_Discr;\n   --  ERROR: unknown discriminants\n   --         because of the type's\n   --         unknown discriminant part\nbegin\n   null;\nend Show_Object_Declaration;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Unknown_Discriminants.Derived_Tagged_Type",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "unknown_discriminants-children-grand.ads",
+        "show_object_declaration.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "c57324b84b7ba3ed13038575e1bdacfee4822eb8cc74a2483af2354f70054f28cabc4c004fc41e9fcbab30ff2fead4da218bf71a00e10d5016e46828e2ccf03e",
+    "text_hash_short": "0e931df8294cee1f49b187c43614aa20"
+}

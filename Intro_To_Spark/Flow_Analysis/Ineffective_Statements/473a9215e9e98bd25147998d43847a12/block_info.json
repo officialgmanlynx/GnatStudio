@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/02_Flow_Analysis.rst",
+    "line_start": 104,
+    "line_end": 135,
+    "text": "package Show_Ineffective_Statements is\n\n   type T is new Integer;\n\n   procedure Swap1 (X, Y : in out T);\n   procedure Swap2 (X, Y : in out T);\n\nend Show_Ineffective_Statements;\n\npackage body Show_Ineffective_Statements is\n\n   procedure Swap1 (X, Y : in out T) is\n      Tmp : T;\n   begin\n      Tmp := X; -- This statement is ineffective\n      X   := Y;\n      Y   := X;\n   end Swap1;\n\n   Tmp : T := 0;\n\n   procedure Swap2 (X, Y : in out T) is\n      Temp : T := X; -- This variable is unused\n   begin\n      X := Y;\n      Y := Tmp;\n   end Swap2;\n\nend Show_Ineffective_Statements;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Flow_Analysis.Ineffective_Statements",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "show_ineffective_statements.ads",
+        "show_ineffective_statements.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "cdedfb90283886d9f572d1d5dfe3000dad18a94599e6ce2b0dd169dd5799e063bf4412d5363734f2d8f311203ae5eb4148561ccc53006fc2fbb0a56c9648124a",
+    "text_hash_short": "473a9215e9e98bd25147998d43847a12"
+}

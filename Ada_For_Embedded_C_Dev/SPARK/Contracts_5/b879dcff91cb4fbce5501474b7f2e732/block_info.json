@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/05_SPARK.rst",
+    "line_start": 980,
+    "line_end": 990,
+    "text": "procedure Increment (Value : in out Integer) with\n  Pre  => Value < Integer'Last,\n  Post => Value = Value'Old + 1;\n\nprocedure Increment (Value : in out Integer) is\nbegin\n   Value := Value + 1;\nend Increment;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.SPARK.Contracts_5",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "increment.ads",
+        "increment.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "7808001d284fc4561c01911be2a01d0a5066a50d33abbed289eb13a85a770e97d87ae2e7db3f82a7daf5f2cfa0b728b4f94634fefcc420003fc7c2f86b3ba869",
+    "text_hash_short": "b879dcff91cb4fbce5501474b7f2e732"
+}

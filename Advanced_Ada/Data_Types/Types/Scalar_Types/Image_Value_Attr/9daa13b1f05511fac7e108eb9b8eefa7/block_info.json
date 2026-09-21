@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 772,
+    "line_end": 781,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Image_Value_Attr is\n   I : constant Integer := Integer'Value (\"42\");\nbegin\n   Put_Line (I'Image);\nend Show_Image_Value_Attr;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Scalar_Types.Image_Value_Attr",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_image_value_attr.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_image_value_attr.adb",
+    "text_hash": "1423232ba6710caecef1c87844d34b1c541e77811ec79f33496c69651f1da0f60b1aa1506885fc812dc4e5c3b339c4c5d5a7efb33374f9bc907a7e388312c134",
+    "text_hash_short": "9daa13b1f05511fac7e108eb9b8eefa7"
+}

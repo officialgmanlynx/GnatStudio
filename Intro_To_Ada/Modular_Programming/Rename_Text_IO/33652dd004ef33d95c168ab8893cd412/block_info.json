@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/modular_programming.rst",
+    "line_start": 555,
+    "line_end": 564,
+    "text": "with Ada.Text_IO;\n\nprocedure Main is\n   package TIO renames Ada.Text_IO;\nbegin\n   TIO.Put_Line (\"Hello\");\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Modular_Programming.Rename_Text_IO",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "5ae121ac714e841112d2e6c39fb3560d6f28710b873b919f50eb3799acc12ecbff0cca6e5fdcd97e46ee3d66f7c1b97af19a475b71058c31155fbf4b71f84c06",
+    "text_hash_short": "33652dd004ef33d95c168ab8893cd412"
+}

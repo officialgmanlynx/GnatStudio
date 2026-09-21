@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/aggregates.rst",
+    "line_start": 1848,
+    "line_end": 1869,
+    "text": "package Points.Extensions is\n\n   type Point_3D_Ext is new\n     Point_3D with null record;\n\nend Points.Extensions;\n\nwith Points;            use Points;\nwith Points.Extensions; use Points.Extensions;\n\nprocedure Show_Points is\n   P_3D     : Point_3D;\n   P_3D_Ext : Point_3D_Ext;\nbegin\n   P_3D := (X => 0.0, Y => 0.5, Z => 0.4);\n\n   P_3D_Ext := (P_3D with null record);\n   Display (P_3D_Ext);\nend Show_Points;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Aggregates.Extension_Aggregates.Extension_Aggregate_Points",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "points-extensions.ads",
+        "show_points.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_points.adb",
+    "text_hash": "7d7ee9d9495af2a4c998c86c5d4d4d62272750c672dca13df1c5d2c560a9c800ef6e4d259eba5c667152e9453eb95d196b828bd302652805d3211d712b8c9491",
+    "text_hash_short": "8ec3ddb3a1f2a6e550ac4d622e97124c"
+}

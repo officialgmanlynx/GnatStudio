@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numeric_attributes.rst",
+    "line_start": 1535,
+    "line_end": 1551,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Decimal_Scale is\n   type TM3_D6 is delta 10.0 **   3  digits 6;\n   type T3_D6  is delta 10.0 ** (-3) digits 6;\n   type T9_D12 is delta 10.0 ** (-9) digits 12;\nbegin\n   Put_Line (\"TM3_D6'Scale: \"\n             & TM3_D6'Scale'Image);\n   Put_Line (\"T3_D6'Scale: \"\n             & T3_D6'Scale'Image);\n   Put_Line (\"T9_D12'Scale: \"\n             & T9_D12'Scale'Image);\nend Show_Decimal_Scale;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numeric_Attributes.Fixed_Point_Types.Decimal_Scale",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_decimal_scale.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_decimal_scale.adb",
+    "text_hash": "f48a837e03c9293095a8bcd2b1356a20c0c59c2f61eaf77b5de989832609e65e607ef22a6e4b698df3acf58218afa7be4e5705c5e81fe6ff45155e8f2260e928",
+    "text_hash_short": "56a99848cf31a9c69fe6d91ead73375a"
+}

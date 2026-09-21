@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/exceptions.rst",
+    "line_start": 568,
+    "line_end": 586,
+    "text": "procedure Show_Discriminant_Check is\n\n   type Rec (Valid : Boolean) is record\n      case Valid is\n         when True =>\n            Counter : Integer;\n         when False =>\n            null;\n      end case;\n   end record;\n\n   R : Rec (Valid => False);\nbegin\n   R := (Valid  => True,\n         Counter => 10);\nend Show_Discriminant_Check;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Exceptions.Checks_And_Exceptions.Discriminant_Check",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_discriminant_check.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_discriminant_check.adb",
+    "text_hash": "2d5406ed9c83ea52cea74972ffbfba7b9b239c7b887099a01387b857efc285a6a7c322d64ddceed423ab91c075fed3553ae9fc5e590b7db0d704f96aa21d06f9",
+    "text_hash_short": "665ab37962f8f9c129acac543b1eb15d"
+}

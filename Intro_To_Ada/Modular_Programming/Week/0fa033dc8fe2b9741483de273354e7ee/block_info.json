@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/modular_programming.rst",
+    "line_start": 24,
+    "line_end": 37,
+    "text": "package Week is\n\n   Mon : constant String := \"Monday\";\n   Tue : constant String := \"Tuesday\";\n   Wed : constant String := \"Wednesday\";\n   Thu : constant String := \"Thursday\";\n   Fri : constant String := \"Friday\";\n   Sat : constant String := \"Saturday\";\n   Sun : constant String := \"Sunday\";\n\nend Week;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Modular_Programming.Week",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "week.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "38d3a0ba3924a9f19f6c3ddd7fe3de875eb83caccef258448de540e6dc8da1747e24f9d4d8ddd83cb2b5cb79a47ad089e465b0223b19fdb33a1b8142db76f1ed",
+    "text_hash_short": "0fa033dc8fe2b9741483de273354e7ee"
+}

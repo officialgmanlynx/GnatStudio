@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 5161,
+    "line_end": 5187,
+    "text": "with Ada.Text_IO;     use Ada.Text_IO;\nwith Data_Processing; use Data_Processing;\n\nprocedure Log_Element_Per_Line\n  (D : Data_Container) is\nbegin\n   Put_Line (\"Elements: \");\n   for V of D loop\n      Put_Line (V'Image);\n   end loop;\n   Put_Line (\"------\");\nend Log_Element_Per_Line;\n\nwith Ada.Text_IO;     use Ada.Text_IO;\nwith Data_Processing; use Data_Processing;\n\nprocedure Log_Csv (D : Data_Container) is\nbegin\n   for I in D'First .. D'Last - 1 loop\n      Put (D (I)'Image & \", \");\n   end loop;\n   Put (D (D'Last)'Image);\n   New_Line;\nend Log_Csv;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Access_To_Subprograms.Log_Procedure",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "log_element_per_line.adb",
+        "log_csv.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "cac4a5ff9e9bfaf0ffd3c3a887033777b4b2cc4bb95d27eff166bc08a63a8e721fb0057c8a643d494d5be5a2136500caa3bd48bc3b7d94b058f5a4017d8c257e",
+    "text_hash_short": "468789f7331ffcd16f754f7116b076d7"
+}

@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 1931,
+    "line_end": 1950,
+    "text": "package Derived_With_Discriminants is\n\n   type T\n     (L : Positive;\n      M : Positive) is\n     null record;\n\n   type T_Derived\n     (X : Positive;\n      Y : Positive;\n      A : Boolean) is\n   --  ^^^^^^^^^^^\n   --  ERROR: cannot extend type with new\n   --         Boolean discriminant A\n     new T (L => X, M => Y);\n\nend Derived_With_Discriminants;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Discriminants.Derived_Types_Extension_Error",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "derived_with_discriminants.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "546fcc5fad232cec17e33026868722101dfbb985d4c7a8cbeb680831206862b3fa8ae4e66e47965bc9a49dfd865512f25e621b82620844ed442aeef3a74e7327",
+    "text_hash_short": "f9ba4ae1c344d63ed706005e30fe60c2"
+}

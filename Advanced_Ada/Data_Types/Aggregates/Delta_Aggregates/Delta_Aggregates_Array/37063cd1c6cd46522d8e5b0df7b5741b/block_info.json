@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/aggregates.rst",
+    "line_start": 2192,
+    "line_end": 2237,
+    "text": "package Float_Arrays is\n\n   type Float_Array is\n     array (Positive range <>) of Float;\n\n   procedure Display (P : Float_Array);\n\nend Float_Arrays;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Float_Arrays is\n\n   procedure Display (P : Float_Array) is\n   begin\n\n      Put (\"(\");\n      for I in P'Range loop\n         Put (I'Image\n              & \" => \"\n              & P (I)'Image);\n      end loop;\n      Put_Line (\")\");\n\n   end Display;\n\nend Float_Arrays;\n\nwith Float_Arrays; use Float_Arrays;\n\nprocedure Show_Multiple_Delta_Slices is\n\n   P1, P2 : Float_Array (1 .. 5);\n\nbegin\n   P1 := [1.0, 2.0, 3.0, 4.0, 5.0];\n   Display (P1);\n\n   P2 := [P1 with delta\n            P2'First + 1 .. P2'Last - 2 => 0.0,\n            P2'Last - 1  .. P2'Last => 0.2];\n   Display (P2);\nend Show_Multiple_Delta_Slices;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Aggregates.Delta_Aggregates.Delta_Aggregates_Array",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "float_arrays.ads",
+        "float_arrays.adb",
+        "show_multiple_delta_slices.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_multiple_delta_slices.adb",
+    "text_hash": "7601f82ef82d4cea5d088a7b1017f5503ddba31be24222e68a433d9011998bf134958010ac4295bd69ae4d7294d88ffede402981bf16619834dc97a5d4a19563",
+    "text_hash_short": "37063cd1c6cd46522d8e5b0df7b5741b"
+}

@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/shared_variable_control.rst",
+    "line_start": 740,
+    "line_end": 759,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Registers;   use Registers;\n\nprocedure Show_Registers is\n   WR : Window_Register :=\n          (Horizontal_Cnt => 800,\n           Vertical_Cnt   => 600,\n           others         => <>);\nbegin\n   --  Delta assignment\n   WR := (WR with delta\n               Vertical_Cnt   => 800,\n               Refresh_Needed => True);\n\n   Show (WR);\nend Show_Registers;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Shared_Variable_Control.Nonatomic_Full_Access_Register",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_registers.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_registers.adb",
+    "text_hash": "2cb6c8f4a06f539c0f51afb5e5caa0907b145c133864433e40cee45990f4961da802dc63f0f7b207dd6adedeed5bdd84b90eca1f2211f9a662963f5dad6ff4ae",
+    "text_hash_short": "29df44d4fb13539cbd6070c37c217f8a"
+}

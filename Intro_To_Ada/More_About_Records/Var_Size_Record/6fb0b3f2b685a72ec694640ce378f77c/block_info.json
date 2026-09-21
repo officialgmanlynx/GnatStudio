@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/more_about_records.rst",
+    "line_start": 22,
+    "line_end": 47,
+    "text": "package Runtime_Length is\n   function Compute_Max_Len return Natural;\nend Runtime_Length;\n\nwith Runtime_Length; use Runtime_Length;\n\npackage Var_Size_Record is\n    Max_Len : constant Natural :=\n                Compute_Max_Len;\n    --          ^ Not known at compile time\n\n    type Items_Array is\n      array (Positive range <>) of Integer;\n\n    type Growable_Stack is record\n       Items : Items_Array (1 .. Max_Len);\n       Len   : Natural;\n    end record;\n    --  Growable_Stack is a definite type, but\n    --  size is not known at compile time.\n\n    G : Growable_Stack;\nend Var_Size_Record;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.More_About_Records.Var_Size_Record",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-syntax-only"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": true,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "runtime_length.ads",
+        "var_size_record.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "129966cb653c6e83f348e548b941c7b247bb5c16eb56c7b254d782f55822ab9375c0f8f15e5ae471a06ae0c0b933021b223501d217b696f2d2b9dc71a52f0b56",
+    "text_hash_short": "6fb0b3f2b685a72ec694640ce378f77c"
+}

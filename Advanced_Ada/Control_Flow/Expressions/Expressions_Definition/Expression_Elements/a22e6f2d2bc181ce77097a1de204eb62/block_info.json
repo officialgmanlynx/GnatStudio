@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/expressions.rst",
+    "line_start": 40,
+    "line_end": 95,
+    "text": "procedure Show_Expression_Elements is\n   type Mode is (Off, A, B, C, D);\n\n   pragma Unreferenced (B, C, D);\n\n   subtype Active_Mode is Mode\n     range Mode'Succ (Off) .. Mode'Last;\n\n   M1, M2 : Mode;\n   Dummy     : Boolean;\nbegin\n   M1 := A;\n\n   Dummy :=\n       M1 in Active_Mode\n                and then M2 in Off | A;\n   --\n   --   ^^^^^^^^^^^^^^^^^ relation\n   --\n   --                     ^^^^^^^^^^^^^^ relation\n   --   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n   --                                  expression\n\n   Dummy :=\n       M1 in Active_Mode;\n   --  ^^ name\n   --  ^^ primary\n   --  ^^ factor\n   --  ^^ term\n   --  ^^ simple expression\n   --\n   --        ^^^^^^^^^^^ membership choice\n   --        ^^^^^^^^^^^ membership choice list\n   --\n   --  ^^^^^^^^^^^^^^^^^ relation\n   --  ^^^^^^^^^^^^^^^^^ expression\n\n   Dummy :=\n       M2 in Off | A;\n   --  ^^ name\n   --  ^^ primary\n   --  ^^ factor\n   --  ^^ term\n   --  ^^ simple expression\n   --\n   --        ^^^ membership choice\n   --              ^ membership choice\n   --        ^^^^^^^ membership choice list\n   --\n   --  ^^^^^^^^^^^^^ relation\n   --  ^^^^^^^^^^^^^ expression\n\nend Show_Expression_Elements;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Expressions.Expressions_Definition.Expression_Elements",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_expression_elements.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_expression_elements.adb",
+    "text_hash": "8daf69bd0c6d2a2ab05c2481e25ce1d04e01404ad031855dc8dc57c3116b6d3b523c3bfedaf52259a8ce6c7b8109fb8d2aad2cfba89e6cb84f8c76971934ee9f",
+    "text_hash_short": "a22e6f2d2bc181ce77097a1de204eb62"
+}

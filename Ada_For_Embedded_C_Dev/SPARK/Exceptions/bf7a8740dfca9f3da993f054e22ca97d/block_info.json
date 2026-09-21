@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/05_SPARK.rst",
+    "line_start": 36,
+    "line_end": 49,
+    "text": "procedure P is\nbegin\n   Statements_That_Might_Raise_Exceptions;\nexception\n   when A =>\n      Handle_A;\n   when B =>\n      Handle_B;\n   when C =>\n      Handle_C;\nend P;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.SPARK.Exceptions",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-nocheck"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": true,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "p.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "9b1c7b6e11d2d0a664aac96f1e6d10bcceab62a5ccf4d66e4f0e77e0fdec966035d124795b07f2e80e730f2f30569e10de2d163ceed440c9905fe66471c9ca3b",
+    "text_hash_short": "bf7a8740dfca9f3da993f054e22ca97d"
+}

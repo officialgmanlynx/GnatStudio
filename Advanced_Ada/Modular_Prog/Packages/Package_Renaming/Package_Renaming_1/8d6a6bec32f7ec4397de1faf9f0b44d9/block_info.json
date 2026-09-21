@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/modular_prog/packages.rst",
+    "line_start": 26,
+    "line_end": 48,
+    "text": "package Driver_M1 is\n\nend Driver_M1;\n\npackage Driver_M2 is\n\nend Driver_M2;\n\npackage Drivers\n  with Pure is\n\nend Drivers;\n\nwith Driver_M1;\n\npackage Drivers.M1 renames Driver_M1;\n\nwith Driver_M2;\n\npackage Drivers.M2 renames Driver_M2;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Modular_Prog.Packages.Package_Renaming.Package_Renaming_1",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "driver_m1.ads",
+        "driver_m2.ads",
+        "drivers.ads",
+        "drivers-m1.ads",
+        "drivers-m2.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "ac2e43e6b58c8932a92e4da748ddf6efc11353e554389ce662fcff47c27981aafb0ba7d45220041fb908eb2cde46e09bd789790a08c53c055185865f33852421",
+    "text_hash_short": "8d6a6bec32f7ec4397de1faf9f0b44d9"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 6189,
+    "line_end": 6240,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\nwith System;      use System;\n\nwith System.Address_To_Access_Conversions;\nwith System.Address_Image;\n\nprocedure Show_Address_Conversion is\n\n   package String_AAC is\n     new System.Address_To_Access_Conversions\n       (Object => String);\n   use String_AAC;\n\n   subtype Integer_Access is\n     String_AAC.Object_Pointer;\n\n   S          : aliased String := \"Hello\";\n   AI_1, AI_2 : Integer_Access;\n   A          : Address;\nbegin\n   AI_1 := S'Access;\n   A    := To_Address (AI_1);\n\n   AI_2 := To_Pointer (A);\n   --      ^^^^^^^^^^^^^^\n   --   WARNING: Result might not have bounds\n\n   Put_Line (\"AI_1.all'Address : \"\n             & System.Address_Image\n                 (AI_1.all'Address));\n   Put_Line (\"AI_2.all'Address : \"\n             & System.Address_Image\n                 (AI_2.all'Address));\n\n   if AI_1 = AI_2 then\n      Put_Line (\"AI_1 = AI_2\");\n   else\n      Put_Line (\"AI_1 /= AI_2\");\n   end if;\n\n   Put_Line (\"AI_1: \" & AI_1.all);\n   Put_Line (\"AI_2: \" & AI_2.all);\n   --                 ^^^^^^^^^^\n   --   WARNING: As AI_2 might not have bounds\n   --            due to the call to To_Pointer\n   --            the behavior of this call to\n   --            the \"&\" operator is\n   --            unpredictable.\nend Show_Address_Conversion;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Access_Address.Address_Conversion",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_address_conversion.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_address_conversion.adb",
+    "text_hash": "3bedebbf5d74cf88f4b0a0a972ef096db5c69a07131f7c71f7329b317a6f0a2f8ca901bb4d6f43fe5b1e54d9b2e80ce9a96a6ff444b2b5d76554dbfb1223f171",
+    "text_hash_short": "b1adcaa1f2cb4dfbd157aebf7893bd72"
+}

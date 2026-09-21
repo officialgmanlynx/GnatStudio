@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 1812,
+    "line_end": 1824,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main is\n   type Unsigned_32 is mod 2**32;\n\n   X : Unsigned_32 := Unsigned_32'Last + 1;\n   --  Now: X = 0\nbegin\n   Put_Line (\"X = \" & Unsigned_32'Image (X));\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Overflow_Wraparound_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "89bb9a9046555ae5722eeb086fa590e78001c911c6e96aa4ebaaaf6b53c8c55b26de4fc5c0dac39d43121b7ede43ba225e094c6098048d81247491bb1e536589",
+    "text_hash_short": "4ed963ab372cafc8e7a19d9c3107276b"
+}

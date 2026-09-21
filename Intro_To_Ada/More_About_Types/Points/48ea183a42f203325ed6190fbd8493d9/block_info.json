@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/more_about_types.rst",
+    "line_start": 51,
+    "line_end": 72,
+    "text": "package Points is\n   type Point is record\n      X, Y : Integer := 0;\n   end record;\n\n   type Point_Array is\n     array (Positive range <>) of Point;\n\n   --  use the default values\n   Origin   : Point := (X | Y => <>);\n\n   --  likewise, use the defaults\n   Origin_2 : Point := (others => <>);\n\n   Points_1 : Point_Array := ((1, 2), (3, 4));\n   Points_2 : Point_Array := (1       => (1, 2),\n                              2       => (3, 4),\n                              3 .. 20 => <>);\nend Points;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.More_About_Types.Points",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "points.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "13de374bd799413caff99b8beef9bb7f7589c8887391a7d7c8a4f42e1e2683c91e1273a252334cf66cf11d1fd968f5f35573b4910016fa746607ecf2fa1b56cc",
+    "text_hash_short": "48ea183a42f203325ed6190fbd8493d9"
+}

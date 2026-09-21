@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/interfacing_with_c.rst",
+    "line_start": 235,
+    "line_end": 248,
+    "text": "!test.c\n#include \"test.h\"\n\nint func_cnt = 0;\n\nint my_func (int a)\n{\n  func_cnt++;\n\n  return a * 2;\n}\n",
+    "language": "c",
+    "project": "Courses.Intro_To_Ada.Interfacing_With_C.Ada_C_Vars",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "test.c"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "115c38842ae5cc3264324b03b07056feabb63325c3ca9d7626734eff6b840332b52ad7328e472790627feb207b5c47b1a63c3cdba0ac6cc90afa123329f60821",
+    "text_hash_short": "23631537cb877a03d1243c94cb7b48e8"
+}

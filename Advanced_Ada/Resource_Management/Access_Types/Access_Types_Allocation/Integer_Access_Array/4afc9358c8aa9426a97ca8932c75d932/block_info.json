@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 421,
+    "line_end": 456,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Access_Array_Allocation is\n\n   type Integer_Access is access Integer;\n\n   type Integer_Access_Array is\n     array (Positive range <>) of Integer_Access;\n\n   --  An array of access objects:\n   Arr : Integer_Access_Array (1 .. 10);\n\nbegin\n   --\n   --  Allocating 10 access objects and\n   --  initializing the corresponding designated\n   --  object with zero:\n   --\n   Arr := (others => new Integer'(0));\n\n   --  Same as:\n   for I in Arr'Range loop\n      Arr (I) := new Integer'(0);\n   end loop;\n\n   Put_Line (\"Arr: \" & Arr'Image);\n\n   Put_Line (\"Arr (designated values): \");\n   for E of Arr loop\n      Put (E.all'Image);\n   end loop;\n\nend Show_Access_Array_Allocation;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Access_Types_Allocation.Integer_Access_Array",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_access_array_allocation.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_access_array_allocation.adb",
+    "text_hash": "1a58ab1e48a25815e94b24b4b791910c9dbbe32c96fb8727baed5563ad12d5bb4d2b6f6626da8155b559d9617343b10ca2bae3b4c49a7236deedb501904bccd1",
+    "text_hash_short": "4afc9358c8aa9426a97ca8932c75d932"
+}

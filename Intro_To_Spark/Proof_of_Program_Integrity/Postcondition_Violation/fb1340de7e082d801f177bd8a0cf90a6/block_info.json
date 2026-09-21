@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/03_Proof_Of_Program_Integrity.rst",
+    "line_start": 306,
+    "line_end": 324,
+    "text": "procedure Show_Postcondition_Violation is\n\n   procedure Absolute (X : in out Integer) with\n     Post => X >= 0 is\n   begin\n      if X > 0 then\n         X := -X;\n      end if;\n   end Absolute;\n\n   X : Integer;\n\nbegin\n   X := 1;\n   Absolute (X);\nend Show_Postcondition_Violation;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Proof_of_Program_Integrity.Postcondition_Violation",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure",
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run",
+        "prove"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": true,
+    "source_files": [
+        "show_postcondition_violation.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": "show_postcondition_violation.adb",
+    "text_hash": "485b64894085243e5f463086e1fd3ce2f7e8a5900ecbf9fe2095ae136422717f6e01c08eed0cbe09b48639e1fa83d391e060fba6b68ca5fe23be78a71130dfd6",
+    "text_hash_short": "fb1340de7e082d801f177bd8a0cf90a6"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 654,
+    "line_end": 665,
+    "text": "!struct_map.c\nint main(int argc, const char * argv[])\n{\n    int value = 0;\n\n    value = (2 << 1) | 1;\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.Rec_Map_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "struct_map.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "struct_map.c",
+    "text_hash": "5367b4ed9a1038ead3fb4e4e742dff36a6fdcba76793a3943766b6504e3087f1f246e4f6144266ebde20dedf8167c3beda25f517b01b804e852264879f33671e",
+    "text_hash_short": "16606f11ab3e9c86d3e1d88ac9c3f37f"
+}

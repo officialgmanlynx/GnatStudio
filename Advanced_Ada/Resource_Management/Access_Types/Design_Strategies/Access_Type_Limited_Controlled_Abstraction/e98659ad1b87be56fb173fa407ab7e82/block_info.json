@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 4292,
+    "line_end": 4514,
+    "text": "with Ada.Finalization;\n\npackage Access_Type_Abstraction is\n\n   type Info is limited private;\n\n   function To_Info (S : String) return Info;\n\n   function To_String (Obj : Info)\n                       return String;\n\n   function Copy (Obj : Info) return Info;\n\n   procedure Copy (To   : in out Info;\n                   From :        Info);\n\n   procedure Append (Obj : in out Info;\n                     S   :        String);\n\n   procedure Reset (Obj : in out Info);\n\nprivate\n\n   type String_Access is access String;\n\n   type Info is new\n     Ada.Finalization.Limited_Controlled with\n      record\n         Str_A : String_Access;\n      end record;\n\n   procedure Initialize (Obj : in out Info);\n   procedure Finalize (Obj : in out Info);\n\nend Access_Type_Abstraction;\n\nwith Ada.Unchecked_Deallocation;\n\npackage body Access_Type_Abstraction is\n\n   --\n   --  STRING_ACCESS SUBPROGRAMS\n   --\n\n   function To_String_Access (S : String)\n                              return String_Access\n   is\n     (new String'(S));\n\n   function To_String (S : String_Access)\n                       return String is\n     (if S /= null then S.all else \"\");\n\n   procedure Free is\n     new Ada.Unchecked_Deallocation\n       (Object => String,\n        Name   => String_Access);\n\n   --\n   --  PRIVATE SUBPROGRAMS\n   --\n\n   procedure Initialize (Obj : in out Info) is\n   begin\n      --  Put_Line (\"Initializing Info\");\n      Obj.Str_A := null;\n      --  ^^^^^^^^^^^^^\n      --  NOTE: This line has just been added to\n      --        illustrate the \"automatic\" call to\n      --        Initialize. Actually, this\n      --        assignment isn't needed, as\n      --        the Str_A component is\n      --        automatically initialized to null\n      --        upon object construction.\n   end Initialize;\n\n   procedure Finalize (Obj : in out Info) is\n   begin\n      --  Put_Line (\"Finalizing Info\");\n      Free (Obj.Str_A);\n   end Finalize;\n\n   --\n   --  PUBLIC SUBPROGRAMS\n   --\n\n   function To_Info (S : String) return Info is\n     (Ada.Finalization.Limited_Controlled\n      with Str_A => To_String_Access (S));\n\n   function To_String (Obj : Info)\n                       return String is\n     (To_String (Obj.Str_A));\n\n   function Copy (Obj : Info) return Info is\n     (To_Info (To_String (Obj.Str_A)));\n\n   procedure Copy (To   : in out Info;\n                   From :        Info) is\n   begin\n      Free (To.Str_A);\n      To.Str_A := To_String_Access\n                    (To_String (From.Str_A));\n   end Copy;\n\n   procedure Append (Obj : in out Info;\n                     S   :        String) is\n      New_Str_A : constant String_Access :=\n                    To_String_Access\n                      (To_String (Obj.Str_A) & S);\n   begin\n      Free (Obj.Str_A);\n      Obj.Str_A := New_Str_A;\n   end Append;\n\n   procedure Reset (Obj : in out Info) is\n   begin\n      Free (Obj.Str_A);\n   end Reset;\n\nend Access_Type_Abstraction;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Access_Type_Abstraction;\nuse  Access_Type_Abstraction;\n\nprocedure Main is\n   Obj_1 : Info := To_Info (\"hello\");\n   Obj_2 : Info := Copy (Obj_1);\nbegin\n   --\n   --  TO_INFO / COPY\n   --\n   Put_Line (\"TO_INFO / COPY\");\n\n   Put_Line (\"Obj_1 : \"\n             & To_String (Obj_1));\n   Put_Line (\"Obj_2 : \"\n             & To_String (Obj_2));\n   Put_Line (\"----------\");\n\n   --\n   --  RESET:  Obj_1\n   --  APPEND: Obj_2\n   --\n   Put_Line (\"RESET / APPEND\");\n\n   Reset (Obj_1);\n   Append (Obj_2, \" world\");\n\n   Put_Line (\"Obj_1 : \"\n             & To_String (Obj_1));\n   Put_Line (\"Obj_2 : \"\n             & To_String (Obj_2));\n   Put_Line (\"----------\");\n\n   --\n   --  COPY: Obj_2 => Obj_1\n   --\n   Put_Line (\"COPY\");\n\n   Copy (From => Obj_2,\n         To   => Obj_1);\n\n   Put_Line (\"Obj_1 : \"\n             & To_String (Obj_1));\n   Put_Line (\"Obj_2 : \"\n             & To_String (Obj_2));\n   Put_Line (\"----------\");\n\n   --\n   --  RESET: Obj_1, Obj_2\n   --\n   Put_Line (\"RESET\");\n\n   Reset (Obj_1);\n   Reset (Obj_2);\n\n   Put_Line (\"Obj_1 : \"\n             & To_String (Obj_1));\n   Put_Line (\"Obj_2 : \"\n             & To_String (Obj_2));\n   Put_Line (\"----------\");\n\n   --\n   --  COPY: Obj_2 => Obj_1\n   --\n   Put_Line (\"COPY\");\n\n   Copy (From => Obj_2,\n         To   => Obj_1);\n\n   Put_Line (\"Obj_1 : \"\n             & To_String (Obj_1));\n   Put_Line (\"Obj_2 : \"\n             & To_String (Obj_2));\n   Put_Line (\"----------\");\n\n   --\n   --  APPEND: Obj_1 with \"hey\"\n   --\n   Put_Line (\"APPEND\");\n\n   Append (Obj_1, \"hey\");\n\n   Put_Line (\"Obj_1 : \"\n             & To_String (Obj_1));\n   Put_Line (\"----------\");\n\n   --\n   --  APPEND: Obj_1 with \"there\"\n   --\n   Put_Line (\"APPEND\");\n\n   Append (Obj_1, \" there\");\n\n   Put_Line (\"Obj_1 : \"\n             & To_String (Obj_1));\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Design_Strategies.Access_Type_Limited_Controlled_Abstraction",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "access_type_abstraction.ads",
+        "access_type_abstraction.adb",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "f6657a94aef0b100f4e6dd62bc47acd2e1c5c4767683045fd36272c8a944ecef464ecf69c2a4fac90e3bf53218d039d4a0dfc06c662885e2fc001ed8f2704cc0",
+    "text_hash_short": "e98659ad1b87be56fb173fa407ab7e82"
+}

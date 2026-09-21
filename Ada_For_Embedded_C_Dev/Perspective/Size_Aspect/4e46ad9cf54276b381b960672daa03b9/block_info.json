@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/04_Embedded.rst",
+    "line_start": 848,
+    "line_end": 860,
+    "text": "with Ada.Text_IO;     use Ada.Text_IO;\n\nwith My_Device_Types; use My_Device_Types;\n\nprocedure Show_Device_Types is\n   UInt10_Obj : constant UInt10 := 0;\nbegin\n   Put_Line (\"Size of UInt10 type:   \" & Positive'Image (UInt10'Size));\n   Put_Line (\"Size of UInt10 object: \" & Positive'Image (UInt10_Obj'Size));\nend Show_Device_Types;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Size_Aspect",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_device_types.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_device_types.adb",
+    "text_hash": "433f4180649f6b1222a5927017bd20011e24572d22660b6b1844d34d8789b4e1e383961c5555af8b02cab3401029a09335b0980e5c540191cb4f8de0ff36dfed",
+    "text_hash_short": "4e46ad9cf54276b381b960672daa03b9"
+}

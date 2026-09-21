@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/expressions.rst",
+    "line_start": 769,
+    "line_end": 820,
+    "text": "package Integer_Arrays is\n\n   type Integer_Array is\n     array (Positive range <>) of Integer;\n\n   function Sum (Arr : Integer_Array)\n                 return Integer;\n\n   --\n   --  Expression function using\n   --  declare expression:\n   --\n   function Avg (Arr : Integer_Array)\n                 return Float is\n     (declare\n         A :          Integer_Array renames Arr;\n         S : constant Float := Float (Sum (A));\n         L : constant Float := Float (A'Length);\n      begin\n         S / L);\n\nend Integer_Arrays;\n\npackage body Integer_Arrays is\n\n   function Sum (Arr : Integer_Array)\n                 return Integer is\n   begin\n      return Acc : Integer := 0 do\n         for V of Arr loop\n            Acc := Acc + V;\n         end loop;\n      end return;\n   end Sum;\n\nend Integer_Arrays;\n\nwith Ada.Text_IO;    use Ada.Text_IO;\n\nwith Integer_Arrays; use Integer_Arrays;\n\nprocedure Show_Integer_Arrays is\n   Arr : constant Integer_Array := [1, 2, 3];\nbegin\n   Put_Line (\"Sum: \"\n             & Sum (Arr)'Image);\n   Put_Line (\"Avg: \"\n             & Avg (Arr)'Image);\nend Show_Integer_Arrays;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Expressions.Declare_Expressions.Integer_Arrays",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "integer_arrays.ads",
+        "integer_arrays.adb",
+        "show_integer_arrays.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_integer_arrays.adb",
+    "text_hash": "d7652d508f37838050fdf2623cdeb6385dfb3446068ef5d2cd8d333eb11ef017644f0966b1fddd5c05ad45b907bef4eb9da790edaf89c9e2fdc0b87baa90fd5a",
+    "text_hash_short": "30a035038508549822c819b60638133d"
+}

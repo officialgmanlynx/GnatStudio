@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 1171,
+    "line_end": 1287,
+    "text": "generic\n   type T is private;\npackage Linked_Lists is\n\n   type List is limited private;\n\n   procedure Append_Front\n      (L : in out List;\n       E :        T);\n\n   procedure Append_Rear\n      (L : in out List;\n       E :        T);\n\n   procedure Show (L : List);\n\nprivate\n\n   type Component is record\n      Next  : access Component;\n      --      ^^^^^^^^^^^^^^^^\n      --       Self-reference\n      --\n      --       (Note that we haven't finished the\n      --       declaration of the \"Component\" type\n      --       yet, but we're already referring to\n      --       it.)\n\n      Value : T;\n   end record;\n\n   type List is access all Component;\n\nend Linked_Lists;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Linked_Lists is\n\n   procedure Append_Front\n      (L : in out List;\n       E :        T)\n   is\n      New_First : constant List := new\n        Component'(Value => E,\n                   Next  => L);\n   begin\n      L := New_First;\n   end Append_Front;\n\n   procedure Append_Rear\n      (L : in out List;\n       E :        T)\n   is\n      New_Last : constant List := new\n        Component'(Value => E,\n                   Next  => null);\n   begin\n      if L = null then\n         L := New_Last;\n      else\n         declare\n            Last : List := L;\n         begin\n            while Last.Next /= null loop\n               Last := List (Last.Next);\n               --      ^^^^\n               --   type conversion:\n               --      \"access Component\" to\n               --      \"List\"\n            end loop;\n            Last.Next := New_Last;\n         end;\n      end if;\n   end Append_Rear;\n\n   procedure Show (L : List) is\n      Curr : List := L;\n   begin\n      if L = null then\n         Put_Line (\"[ ]\");\n      else\n         Put (\"[\");\n         loop\n            Put (Curr.Value'Image);\n            Put (\" \");\n            exit when Curr.Next = null;\n            Curr := Curr.Next;\n         end loop;\n         Put_Line (\"]\");\n      end if;\n   end Show;\n\nend Linked_Lists;\n\nwith Linked_Lists;\n\nprocedure Test_Linked_List is\n    package Integer_Lists is new\n      Linked_Lists (T => Integer);\n    use Integer_Lists;\n\n    L : List;\nbegin\n    Append_Front (L, 3);\n    Append_Rear (L, 4);\n    Append_Rear (L, 5);\n    Append_Front (L, 2);\n    Append_Front (L, 1);\n    Append_Rear (L, 6);\n    Append_Rear (L, 7);\n\n    Show (L);\nend Test_Linked_List;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Self_Reference.Linked_List_Example",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "linked_lists.ads",
+        "linked_lists.adb",
+        "test_linked_list.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "test_linked_list.adb",
+    "text_hash": "98664ba5474ce6f2d0b64e7d35317b8da8ef60a7ea98e1d3d8a9074e84e75f9c6757e6b9d48e542a48aa12c4c518e8a3355eb1b3c3111e3463e5c207b0bf3b40",
+    "text_hash_short": "98b9b2ce6fac3064326e6345520dc650"
+}

@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/01_Overview.rst",
+    "line_start": 237,
+    "line_end": 261,
+    "text": "package Side_Effects is\n\n   function Incr (X : Integer) return Integer;         -- OK?\n\n   function Incr_And_Log (X : Integer) return Integer; -- OK?\n\nend Side_Effects;\n\npackage body Side_Effects is\n\n   function Incr (X : Integer) return Integer\n   is (X + 1); -- OK\n\n   Call_Count : Natural := 0;\n\n   function Incr_And_Log (X : Integer) return Integer is\n   begin\n      Call_Count := Call_Count + 1; -- Illegal\n      return X + 1;\n   end Incr_And_Log;\n\nend Side_Effects;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Overview.Side_Effects",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "side_effects.ads",
+        "side_effects.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "18fcd2b18f50113395f0f41b50279f103af9518901d8d36923f456dd20006ea0adabe7660b261c4e32024c0faef0d153c097bf70d36bd9585b0d4f23bf8f8f4a",
+    "text_hash_short": "1b555e4b7bb519eea4df718a9356a2ed"
+}

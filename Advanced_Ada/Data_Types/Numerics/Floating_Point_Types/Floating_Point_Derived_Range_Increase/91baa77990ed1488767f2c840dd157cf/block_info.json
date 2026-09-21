@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 2820,
+    "line_end": 2836,
+    "text": "package Show_Extended_Range is\n\n   type Float_6_Digits is\n     digits 6;\n\n   type Float_6_Digits_Normalized is new\n     Float_6_Digits\n       range -1.0 .. 1.0;\n\n   type Float_6_Digits_Normalized_Ext is new\n     Float_6_Digits_Normalized\n       range -2.0 .. 2.0;\n\nend Show_Extended_Range;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Floating_Point_Types.Floating_Point_Derived_Range_Increase",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_extended_range.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "914fcc445116a4ffb765cc867632960fd68da3eeeafc6aede81a2b03d4ee725d709c4014529032d8b37c27186309849d2bf688988edbe0c5945f35b980870089",
+    "text_hash_short": "91baa77990ed1488767f2c840dd157cf"
+}

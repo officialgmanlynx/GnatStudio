@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/strongly_typed_language.rst",
+    "line_start": 651,
+    "line_end": 683,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Greet is\n   type Days is (Monday, Tuesday, Wednesday,\n                 Thursday, Friday,\n                 Saturday, Sunday);\n\n   --  Declaration of a subtype\n   subtype Weekend_Days is\n     Days range Saturday .. Sunday;\n   --     ^ Constraint of the subtype\n\n   M : Days := Sunday;\n\n   S : Weekend_Days := M;\n   --  No error here, Days and Weekend_Days\n   --  are of the same type.\nbegin\n   for I in Days loop\n      case I is\n         --  Just like a type, a subtype can\n         --  be used as a range\n         when Weekend_Days =>\n            Put_Line (\"Week end!\");\n         when others =>\n            Put_Line (\"Hello on \"\n                      & Days'Image (I));\n      end case;\n   end loop;\nend Greet;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Strongly_Typed_Language.Days_Subtype",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "greet.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "greet.adb",
+    "text_hash": "70dc6c4a987fd000a598bf4eb3e8eb27ea385f0de2cec9717c489ff37847103a337e9667056fdf046e12387f6468575429285e024ae52474d4dc5af46ee3ff21",
+    "text_hash_short": "8ee7127d152a8b2c9d0ac74d05fc2fc2"
+}

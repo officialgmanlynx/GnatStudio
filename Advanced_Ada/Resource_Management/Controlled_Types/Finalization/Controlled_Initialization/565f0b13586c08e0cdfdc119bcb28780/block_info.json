@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/controlled_types.rst",
+    "line_start": 1622,
+    "line_end": 1665,
+    "text": "with Ada.Finalization;\n\npackage Subs is\n\n   type Sub_1 is tagged private;\n\n   type Sub_2 is tagged private;\n\nprivate\n\n   type Sub_1 is new\n     Ada.Finalization.Controlled\n       with null record;\n\n   overriding\n   procedure Finalize (E : in out Sub_1);\n\n   type Sub_2 is new\n     Ada.Finalization.Controlled\n       with null record;\n\n   overriding\n   procedure Finalize (E : in out Sub_2);\n\nend Subs;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Subs is\n\n   procedure Finalize (E : in out Sub_1) is\n   begin\n      Put_Line (\"Finalize: Sub_1...\");\n   end Finalize;\n\n   procedure Finalize (E : in out Sub_2) is\n   begin\n      Put_Line (\"Finalize: Sub_2...\");\n   end Finalize;\n\nend Subs;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Controlled_Types.Finalization.Controlled_Initialization",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "subs.ads",
+        "subs.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "47f0a0c19d2685677c6179b48a548a5c6c0a0fe1055b7e061e64b4870bf00b7fc2479c0673d63d34fdf2e3c02097ca9cc41668943ee2857663e06e1939e5b998",
+    "text_hash_short": "565f0b13586c08e0cdfdc119bcb28780"
+}

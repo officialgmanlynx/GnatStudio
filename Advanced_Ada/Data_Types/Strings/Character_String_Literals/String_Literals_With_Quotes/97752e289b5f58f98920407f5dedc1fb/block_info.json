@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/strings.rst",
+    "line_start": 70,
+    "line_end": 93,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_String_Literals_With_Quotes is\n   S1 : String := \"Hello\";\n   S2 : String := \"World\";\nbegin\n   Put_Line (\"  \"\" \" & S1\n   --           ^^\n   --       Quotation marks\n             & \" \" & S2 & \" \"\"  \");\n   --                       ^^\n   --       Quotation marks\n\n   Put_Line (\"\"\"Hello World!\"\"\");\n   --         ^^            ^^\n   --          Quotation marks\n\n   Put_Line (\"\"\"\"\"\");\n   --         ^^^^\n   --    Quotation marks\nend Show_String_Literals_With_Quotes;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Strings.Character_String_Literals.String_Literals_With_Quotes",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_string_literals_with_quotes.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_string_literals_with_quotes.adb",
+    "text_hash": "9ba86f80ca1ddb2b861764389e58879d04abc17abfdfe97f6f20dec2627fe853959dde78771b92a3be44d6b707cf2998ff02fd23e7d18837fbc4f7fdc32357ee",
+    "text_hash_short": "97752e289b5f58f98920407f5dedc1fb"
+}

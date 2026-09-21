@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 3681,
+    "line_end": 3693,
+    "text": "with Ada.Text_IO;       use Ada.Text_IO;\nwith Activation_States; use Activation_States;\n\nprocedure Misspelling_Example is\n   S : constant Activation_State :=\n         Offf;\n   --    ^ Error: Off is misspelled.\nbegin\n   Put_Line (Activation_State'Image (S));\nend Misspelling_Example;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.User_Defined_Literals.Activation_States",
+    "main_file": "misspelling_example.adb",
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "misspelling_example.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "misspelling_example.adb",
+    "text_hash": "99a9d163fd6a451edd1ac2962b33a771e88deb85b2a6c427aed7e6a322c10b90db027e1da4a3276a2dea6bd37d9a1a1d7b9889ceaf5dbeb79ab85048577005ae",
+    "text_hash_short": "81a8ff17e0fb8c7dce18780d8c11a6ad"
+}

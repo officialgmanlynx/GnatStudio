@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 738,
+    "line_end": 772,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Class_Alignment is\n\n   type Point_1D is tagged record\n      X : Integer;\n   end record;\n\n   type Point_2D is new Point_1D with record\n      Y : Integer;\n   end record\n     with Alignment => 16;\n\n   type Point_3D is new Point_2D with record\n      Z : Integer;\n   end record;\n\nbegin\n   Put_Line (\"1D_Point'Alignment:       \"\n             & Point_1D'Alignment'Image);\n   Put_Line (\"1D_Point'Class'Alignment: \"\n             & Point_1D'Class'Alignment'Image);\n   Put_Line (\"2D_Point'Alignment:       \"\n             & Point_2D'Alignment'Image);\n   Put_Line (\"2D_Point'Class'Alignment: \"\n             & Point_2D'Class'Alignment'Image);\n   Put_Line (\"3D_Point'Alignment:       \"\n             & Point_3D'Alignment'Image);\n   Put_Line (\"3D_Point'Class'Alignment: \"\n             & Point_3D'Class'Alignment'Image);\nend Show_Class_Alignment;\n\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Data_Representation.Class_Alignment",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_class_alignment.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_class_alignment.adb",
+    "text_hash": "16b56c877cfd2ba1b8fa449660681bc2024c96555684a436acfa96f44fe89d1f725149250f6307d21b5654853304e3a75cf050a0ae262c0169cda0f69bea3e3f",
+    "text_hash_short": "f2a2355df8ab63d946e39feefbe528e2"
+}

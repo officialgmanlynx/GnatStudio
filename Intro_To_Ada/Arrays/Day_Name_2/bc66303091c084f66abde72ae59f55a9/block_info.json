@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/arrays.rst",
+    "line_start": 668,
+    "line_end": 694,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Days is\n   type Days is (Monday, Tuesday, Wednesday,\n                 Thursday, Friday,\n                 Saturday, Sunday);\n\n   subtype Day_Name is String (1 .. 2);\n   --  Subtype of string with known size\n\n   type Days_Name_Type is\n     array (Days) of Day_Name;\n   --       ^ Type of the index\n   --                ^ Type of the element.\n   --                  Must be definite\n\n   Names : constant Days_Name_Type :=\n     (\"Mo\", \"Tu\", \"We\", \"Th\", \"Fr\", \"Sa\", \"Su\");\n   --  Initial value given by aggregate\nbegin\n   for I in Names'Range loop\n      Put_Line (Names (I));\n   end loop;\nend Show_Days;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Arrays.Day_Name_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_days.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_days.adb",
+    "text_hash": "fec792bf1dd245c9252af99f3620fe288de9cafb57b19d666451237e3cd492fbbcb4ccd88d234f086a3e7571ad7448cd203a4443f929e69ed0b11232506401da",
+    "text_hash_short": "bc66303091c084f66abde72ae59f55a9"
+}

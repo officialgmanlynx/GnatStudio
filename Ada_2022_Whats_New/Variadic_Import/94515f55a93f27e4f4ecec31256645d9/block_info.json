@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/whats-new-in-ada-2022/chapters/importing_variadic_functions.rst",
+    "line_start": 105,
+    "line_end": 121,
+    "text": "with Interfaces.C;\n\nprocedure Main is\n\n   procedure printf_int\n     (format : Interfaces.C.char_array;\n      value  : Interfaces.C.int)\n     with Import,\n       Convention    => C_Variadic_1,\n       External_Name => \"printf\";\n\nbegin\n   printf_int (Interfaces.C.To_C (\"d=%d\"), 5);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_2022_Whats_New.Variadic_Import",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "cf16c0e470411e7bf13fed6f707b7030a7a43d3022333cd5fd910d1874c845cbb775bb554f7a4269ce664312be4a43a2d805b7d3541ab5a7d8117a45e046fcf7",
+    "text_hash_short": "94515f55a93f27e4f4ecec31256645d9"
+}

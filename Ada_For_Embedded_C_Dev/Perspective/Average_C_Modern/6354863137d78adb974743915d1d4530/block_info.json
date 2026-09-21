@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 491,
+    "line_end": 517,
+    "text": "!main.c\n// The modern C way\n\n#include <stdio.h>\n\nint average(int* list, int length)\n{\n    int sum = 0;\n\n    for(int i = 0; i < length; ++i) {\n        sum += list[i];\n    }\n\n    return (sum / length);\n}\n\nint main(int argc, const char * argv[])\n{\n    int vals[] = { 2, 2, 4, 4 };\n\n    printf(\"Average: %d\\n\", average(vals, 4));\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Average_C_Modern",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "b1292b6f156812769812b937309d5ae9f767692d14d7c1f59b48178a7f1ecf8c31956e543df46275def4eb2555894f1107c9da7ce7959c947b45820143e28e37",
+    "text_hash_short": "6354863137d78adb974743915d1d4530"
+}

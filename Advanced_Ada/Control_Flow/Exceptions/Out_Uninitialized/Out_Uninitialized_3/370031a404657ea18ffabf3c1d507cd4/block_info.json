@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/exceptions.rst",
+    "line_start": 1826,
+    "line_end": 1852,
+    "text": "with Ada.Text_IO;  use Ada.Text_IO;\n\nprocedure Show_Out_Initialized_Rec is\n\n   type Rec is tagged record\n      Field : Integer;\n   end record;\n\n   procedure Local (A : in out Rec) is\n   begin\n      A.Field := 1;\n      raise Program_Error;\n   end Local;\n\n   V : Rec;\n\nbegin\n   V.Field := 0;\n   Local (V);\nexception\n   when others =>\n      Put_Line (\"Value of Field is\"\n                & V.Field'Img); -- \"1\"\nend Show_Out_Initialized_Rec;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Exceptions.Out_Uninitialized.Out_Uninitialized_3",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_out_initialized_rec.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_out_initialized_rec.adb",
+    "text_hash": "af381e923c972a145fb65e411b5a11cebd15fa4479b71e3238f44f04d9c77b964b1537ca13b66e312894112ee917ff1463f5fc1fa6be5b71b7a47ca16f0c1fc3",
+    "text_hash_short": "370031a404657ea18ffabf3c1d507cd4"
+}

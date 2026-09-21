@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/shared_variable_control.rst",
+    "line_start": 1372,
+    "line_end": 1422,
+    "text": "with System.Atomic_Operations.Exchange;\n\npackage Spinlocks is\n\n   type Lock is new Boolean with Atomic;\n\n   package Lock_Exchange is new\n     System.Atomic_Operations.Exchange (Lock);\n\nend Spinlocks;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Spinlocks;\nuse Spinlocks;\nuse Spinlocks.Lock_Exchange;\n\nprocedure Show_Locks is\n   L          : aliased Lock := False;\n   Task_Count : Integer      := 0;\n\n   task type A_Task;\n\n   task body A_Task is\n      Task_Number : Integer;\n   begin\n      --  Get the lock\n      while Atomic_Exchange (Item  => L,\n                             Value => True) loop\n         null;\n      end loop;\n\n      --  At this point, we got the lock.\n      Task_Count  := Task_Count + 1;\n      Task_Number := Task_Count;\n\n      --  Release the lock.\n      L := False;\n\n      Put_Line (\"Task_Number: \"\n                & Task_Number'Image);\n\n   end A_Task;\n\n   A, B, C, D, E, F : A_Task;\nbegin\n   null;\nend Show_Locks;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Shared_Variable_Control.Atomic_Operations.Exchange",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "spinlocks.ads",
+        "show_locks.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_locks.adb",
+    "text_hash": "54f01a8ef2b34d4e61b003dfdbb0c923603235e8c5ec21090ed8ffb59ee0b311c762ff194010df931eb2fdf5d8bed08d865633cfdb32b7e0be066bbcab54e5da",
+    "text_hash_short": "af7aad741c20be1e8433b04def90dcdb"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 1622,
+    "line_end": 1639,
+    "text": "package Communication is\n\n   type Com_Packet is record\n      Key : Boolean;\n      Id  : Character;\n      Val : Integer range 100 .. 227;\n   end record;\n\n   for Com_Packet use record\n      Key at 0 range 0 .. 0;\n      Id  at 0 range 1 .. 8;\n      Val at 0 range 9 .. 15;\n   end record;\n\nend Communication;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Changing_Data_Representation.Com_Packet",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "communication.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "1063d617b9fff0784a8f626f11b30c10531fad40c6e2d4dbae073f508310a8fe9d94d14a4e414331d3d8ce81c7caae98aa911fac2dad33a7f7de16b8d791847e",
+    "text_hash_short": "cbd7f5547c5b0458853ac21d03aa41f8"
+}

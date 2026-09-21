@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 5452,
+    "line_end": 5500,
+    "text": "package Custom_Decimal_Types is\n\n   type T2_D6 is\n     delta 10.0 ** (-2) digits 6;\n\n   type Small_Money is new\n     T2_D6;\n\n   type Smaller_Money is new\n     T2_D6 digits 2;\n\nend Custom_Decimal_Types;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Custom_Decimal_Types;\nuse  Custom_Decimal_Types;\n\nprocedure Show_Derived_Decimal_Types is\n   D  : T2_D6;\n   SM : Smaller_Money;\nbegin\n   Put_Line (\"T2_D6'Range : \"\n             & T2_D6'First'Image\n             & \" .. \"\n             & T2_D6'Last'Image);\n   Put_Line (\"T2_D6'Delta : \"\n             & T2_D6'Delta'Image);\n   Put_Line (\"--------------------\");\n\n   Put_Line (\"Smaller_Money'Range : \"\n             & Smaller_Money'First'Image\n             & \" .. \"\n             & Smaller_Money'Last'Image);\n   Put_Line (\"Smaller_Money'Delta : \"\n             & Smaller_Money'Delta'Image);\n   Put_Line (\"--------------------\");\n\n   D  := 231.53;\n   Put_Line (\"D  = \"\n             & D'Image);\n\n   SM := Smaller_Money (D);\n   Put_Line (\"SM = \"\n             & SM'Image);\nend Show_Derived_Decimal_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Decimal_Fixed_Point_Types.Derived_Decimal_Fixed_Point_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_decimal_types.ads",
+        "show_derived_decimal_types.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_derived_decimal_types.adb",
+    "text_hash": "4794259e19efbfb587aed017bff3ea8696bb1fecae38761ffed63dff7723a42a6300fe2d9c06a56af2cbad46cfaed34fa0aea371cc2c1399de771f83d4ee0b56",
+    "text_hash_short": "fae3d789703768e2099a3a4606d28ee3"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 1987,
+    "line_end": 1996,
+    "text": "with Private_Integers; use Private_Integers;\n\nprocedure Show_Private_Integers is\n   A, B : Private_Integer;\nbegin\n   A := A + B;\nend Show_Private_Integers;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Type_View.Private_Integer",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_private_integers.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "17ccf554713722f113f0887382be031fb801507bd8dbab159765cf38a67ccdc7e771da3d74209249cef7164e81fd1c745b032e4c0115e5df3a5e0123b0947c1d",
+    "text_hash_short": "5933779ce5f0802b448df96c42e65a8d"
+}

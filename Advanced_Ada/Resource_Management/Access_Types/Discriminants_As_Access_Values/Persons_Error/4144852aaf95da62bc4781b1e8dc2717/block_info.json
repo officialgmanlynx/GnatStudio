@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 731,
+    "line_end": 742,
+    "text": "package Persons is\n\n   --  ERROR: Declaring a discriminant with an\n   --         unconstrained type:\n   type Person (Name : String) is record\n      Age : Integer;\n   end record;\n\nend Persons;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Discriminants_As_Access_Values.Persons_Error",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "persons.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "bd27f85dc46348421e479178e729f2bf09a9e5837ad998dc0cb474024b2982cd4f0ad6fa0bcaed871fe68c6f35b0391e0be4ec543166fc823a64c3ef49eee984",
+    "text_hash_short": "4144852aaf95da62bc4781b1e8dc2717"
+}

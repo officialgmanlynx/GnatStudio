@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/modular_prog/subprograms_modularity.rst",
+    "line_start": 122,
+    "line_end": 157,
+    "text": "private package Private_Data_Processing is\n\n   type Data is private;\n\n   procedure Process (D : in out Data);\n\nprivate\n\n    type Data is record\n       F : Float;\n    end record;\n\nend Private_Data_Processing;\n\npackage body Private_Data_Processing is\n\n   procedure Process (D : in out Data) is\n   begin\n      D.F := 0.0;\n   end Process;\n\nend Private_Data_Processing;\n\nprivate procedure Test_Private_Data_Processing;\n\nwith Private_Data_Processing;\nuse  Private_Data_Processing;\n\nprocedure Test_Private_Data_Processing is\n   D : Data;\nbegin\n   Process (D);\nend Test_Private_Data_Processing;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Modular_Prog.Subprograms_Modularity.Private_Subprograms.Private_Subprogram_Private_Package",
+    "main_file": "test_private_data_processing.adb",
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "private_data_processing.ads",
+        "private_data_processing.adb",
+        "test_private_data_processing.ads",
+        "test_private_data_processing.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "test_private_data_processing.adb",
+    "text_hash": "7864b6217202a407261c6425d5a92be8d8b98c8b05015cb896ed0c834d0c08668d6829f69bc3dca6f64f69af10d4826580ae79f5c45221121299a64255d4eb6f",
+    "text_hash_short": "3527e54f99eb2cb52317c987b499caaf"
+}

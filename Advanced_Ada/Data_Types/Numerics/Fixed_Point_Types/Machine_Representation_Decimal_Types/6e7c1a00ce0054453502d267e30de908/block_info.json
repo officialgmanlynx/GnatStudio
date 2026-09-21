@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 4447,
+    "line_end": 4520,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Custom_Decimal_Types;\nuse  Custom_Decimal_Types;\n\nwith Custom_Decimal_Types.Show_Info_Procs;\nuse  Custom_Decimal_Types.Show_Info_Procs;\n\nprocedure Show_Decimal_Types_Machine_Repr is\n   V_T0_D4   : T0_D4;\n   V_T2_D6   : T2_D6;\n   V_T2_D12  : T2_D12;\nbegin\n   Put_Line (\"=============================\");\n   Put_Line (\"T2_D6 <-- T0_D4\");\n   Put_Line (\"=============================\");\n\n   Put_Line (\"-----------------------------\");\n   Put_Line (\"----- T0_D4 (152.0)\");\n   Put_Line (\"-----------------------------\");\n\n   V_T0_D4 := 152.0;\n   V_T2_D6 := T2_D6 (V_T0_D4);\n\n   Show_Info (V_T0_D4, \"V_T0_D4 \");\n   Show_Info (V_T2_D6, \"V_T2_D6 \");\n\n   Put_Line (\"-----------------------------\");\n   Put_Line (\"----- T0_D4 (1.0)\");\n   Put_Line (\"-----------------------------\");\n   V_T0_D4 := 1.0;\n   V_T2_D6 := T2_D6 (V_T0_D4);\n\n   Show_Info (V_T0_D4, \"V_T0_D4 \");\n   Show_Info (V_T2_D6, \"V_T2_D6 \");\n\n   Put_Line (\"=============================\");\n   Put_Line (\"T0_D4 <-- T2_D6\");\n   Put_Line (\"=============================\");\n\n   Put_Line (\"-----------------------------\");\n   Put_Line (\"----- T2_D6 (225.0)\");\n   Put_Line (\"-----------------------------\");\n   V_T2_D6 := 225.0;\n   V_T0_D4 := T0_D4 (V_T2_D6);\n\n   Show_Info (V_T2_D6, \"V_T2_D6 \");\n   Show_Info (V_T0_D4, \"V_T0_D4 \");\n\n   Put_Line (\"-----------------------------\");\n   Put_Line (\"----- T2_D6 (1.55)\");\n   Put_Line (\"-----------------------------\");\n   V_T2_D6 := 1.55;\n   V_T0_D4 := T0_D4 (V_T2_D6);\n\n   Show_Info (V_T2_D6, \"V_T2_D6 \");\n   Show_Info (V_T0_D4, \"V_T0_D4 \");\n\n   Put_Line (\"=============================\");\n   Put_Line (\"T2_D12 <-- T2_D6\");\n   Put_Line (\"=============================\");\n\n   Put_Line (\"-----------------------------\");\n   Put_Line (\"----- T2_D6 (225.0)\");\n   Put_Line (\"-----------------------------\");\n   V_T2_D6  := 225.0;\n   V_T2_D12 := T2_D12 (V_T2_D6);\n\n   Show_Info (V_T2_D6,  \"V_T2_D6 \");\n   Show_Info (V_T2_D12, \"V_T2_D12 \");\nend Show_Decimal_Types_Machine_Repr;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Fixed_Point_Types.Machine_Representation_Decimal_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_decimal_types_machine_repr.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_decimal_types_machine_repr.adb",
+    "text_hash": "44b170e6c3c100a61d9f6f4795c4583fcbb3a14b8a0974bfd2858a15f66e9c09e2dad930479441d1868c62e0b83a06c20e9e205ffcb9d1fbd6ba8c8bdb2db230",
+    "text_hash_short": "6e7c1a00ce0054453502d267e30de908"
+}

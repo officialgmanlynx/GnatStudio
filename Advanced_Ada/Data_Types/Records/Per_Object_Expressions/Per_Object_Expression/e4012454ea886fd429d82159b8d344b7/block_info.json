@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 3644,
+    "line_end": 3671,
+    "text": "package Rec_Per_Object_Expressions is\n\n   type Stack (S : Positive) is private;\n\nprivate\n\n   type Integer_Array is\n     array (Positive range <>) of Integer;\n\n   type Stack (S : Positive) is record\n      Arr : Integer_Array (1 .. S);\n      --                   ^^^^^^\n      --\n      --                        S\n      --                        ^\n      --    Per-object expression\n      --\n      --                  (1 .. S)\n      --                  ^^^^^^^^\n      --     Per-object constraint\n\n      Top : Natural := 0;\n   end record;\n\nend Rec_Per_Object_Expressions;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Per_Object_Expressions.Per_Object_Expression",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "rec_per_object_expressions.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "d1e86f88842b92b2b9013feb729897878c46bb959c776df73c0766badde7892ed149068adfb305ba92e1adf86327458b39281bd85981763dc3349699924504f0",
+    "text_hash_short": "e4012454ea886fd429d82159b8d344b7"
+}

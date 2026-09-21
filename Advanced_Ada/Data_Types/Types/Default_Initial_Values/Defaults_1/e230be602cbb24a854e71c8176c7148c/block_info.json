@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 3164,
+    "line_end": 3174,
+    "text": "package Defaults is\n\n   type R is record\n     X : Positive := 1;\n     Y : Positive := 10;\n   end record;\n\nend Defaults;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Default_Initial_Values.Defaults_1",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "defaults.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "34f15b0f44e0344a62f161f4cf1ce8a3873823254b74bd3957bec22785fe864cb72b3a05414b4549527a0ad8ae3f6e76de3c9cf63cdb127f4667ec13e6d0d0d8",
+    "text_hash_short": "e230be602cbb24a854e71c8176c7148c"
+}

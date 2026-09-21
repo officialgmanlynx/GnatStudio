@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/strings.rst",
+    "line_start": 1502,
+    "line_end": 1555,
+    "text": "package Simple_Records is\n\n   type Rec is limited private;\n\n   type Rec_Access is access Rec;\n\n   function Init return Rec;\n\n   type Null_Rec is null record;\n\nprivate\n\n   type Rec is limited record\n      F : Float;\n      I : Integer;\n   end record;\n\n   function Init return Rec is\n      ((F => 10.0, I => 4));\n\nend Simple_Records;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Ada.Unchecked_Deallocation;\n\nwith Simple_Records;\nuse  Simple_Records;\n\nprocedure Show_Non_Scalar_Image is\n\n   procedure Free is\n     new Ada.Unchecked_Deallocation\n       (Object => Rec,\n        Name   => Rec_Access);\n\n   R_A : Rec_Access :=\n     new Rec'(Init);\n\n   N_R : Null_Rec :=\n     (null record);\nbegin\n   R_A := new Rec'(Init);\n   N_R := (null record);\n\n   Put_Line (\"R_A:     \" & R_A'Image);\n   Put_Line (\"R_A.all: \" & R_A.all'Image);\n   Put_Line (\"N_R:     \" & N_R'Image);\n\n   Free (R_A);\n   Put_Line (\"R_A:     \" & R_A'Image);\nend Show_Non_Scalar_Image;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Strings.Image_Attribute.Non_Scalar_Image",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple_records.ads",
+        "show_non_scalar_image.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_non_scalar_image.adb",
+    "text_hash": "5f7e1800074d11bf8ad0c314735554e92e2717bf460866a948bf4d6120c936fca27664899f939e44774824d1be9e77e29c49695aa5d81807578f8b1e6942a7e7",
+    "text_hash_short": "eb48f3fbe69b70258bc26f467918717c"
+}

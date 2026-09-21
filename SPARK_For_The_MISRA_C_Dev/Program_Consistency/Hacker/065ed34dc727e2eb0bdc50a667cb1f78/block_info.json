@@ -1,0 +1,48 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/02_program_consistency.rst",
+    "line_start": 376,
+    "line_end": 411,
+    "text": "package Vault is\n   type Data is private;\n   function Get (X : Data) return Integer;\n   procedure Set (X : out Data; Value : Integer);\nprivate\n   type Data is record\n      Val : Integer;\n   end record;\nend Vault;\n\npackage body Vault is\n   function Get (X : Data) return Integer is (X.Val);\n   procedure Set (X : out Data; Value : Integer) is\n   begin\n      X.Val := Value;\n   end Set;\nend Vault;\n\nwith Vault;\n\npackage Information_System is\n   Archive : Vault.Data;\nend Information_System;\n\nwith Information_System;\nwith Vault;\n\nprocedure Hacker is\n   V : Integer := Vault.Get (Information_System.Archive);\nbegin\n   Vault.Set (Information_System.Archive, V + 1);\n   Information_System.Archive.Val := 0;  --  ERROR\nend Hacker;\n",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Program_Consistency.Hacker",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "vault.ads",
+        "vault.adb",
+        "information_system.ads",
+        "hacker.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "hacker.adb",
+    "text_hash": "ccbd4fb7b262873b3c705dcf324c18e79d8e06c5794bb0bc140d4909345adddb7bb6ab9a7ddf7c457d5c3ab35927511539cb3bc5d01a75d77eaf38d837330595",
+    "text_hash_short": "065ed34dc727e2eb0bdc50a667cb1f78"
+}

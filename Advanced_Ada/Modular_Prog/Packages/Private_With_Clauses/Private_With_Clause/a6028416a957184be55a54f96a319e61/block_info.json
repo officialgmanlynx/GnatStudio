@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/modular_prog/packages.rst",
+    "line_start": 639,
+    "line_end": 670,
+    "text": "package P is\n\nend P;\n\nprivate package P.Private_Child is\n\n   type T is null record;\n\nend P.Private_Child;\n\nprivate with P.Private_Child;\n\npackage P.Public_Child is\n\n   type T2 is private;\n\nprivate\n\n   type T2 is new P.Private_Child.T;\n\nend P.Public_Child;\n\nwith P.Public_Child; use P.Public_Child;\n\nprocedure Test_Parent_Child is\n   A : T2;\nbegin\n   null;\nend Test_Parent_Child;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Modular_Prog.Packages.Private_With_Clauses.Private_With_Clause",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "p.ads",
+        "p-private_child.ads",
+        "p-public_child.ads",
+        "test_parent_child.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "test_parent_child.adb",
+    "text_hash": "a6c908ed0a1a3ca6c01b30d7ecd41c2eab21f7577934041d75ef1c76b4e80e254c715c99bb913d9391836bfbd52b1385fa8399510a29c908bf4a105064948e51",
+    "text_hash_short": "a6028416a957184be55a54f96a319e61"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 1833,
+    "line_end": 1869,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Dereferencing is\n\n   type Integer_Array is\n     array (Positive range <>) of Integer;\n\n   type Integer_Array_Access is\n     access Integer_Array;\n\n   Arr : constant Integer_Array_Access :=\n                    new Integer_Array (1 .. 6);\nbegin\n   Put_Line\n     (\"Arr'First: \"\n      & Integer'Image (Arr'First));\n   Put_Line\n     (\"Arr'Last: \"\n      & Integer'Image (Arr'Last));\n\n   Put_Line\n     (\"Arr'Component_Size: \"\n      & Integer'Image (Arr'Component_Size));\n   Put_Line\n     (\"Arr.all'Component_Size: \"\n      & Integer'Image (Arr.all'Component_Size));\n\n   Put_Line\n     (\"Arr'Size: \"\n      & Integer'Image (Arr'Size));\n   Put_Line\n     (\"Arr.all'Size: \"\n      & Integer'Image (Arr.all'Size));\nend Show_Dereferencing;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Dereferencing.Array_Implicit_Dereferencing",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_dereferencing.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_dereferencing.adb",
+    "text_hash": "1a02f041c205269c0c1d7fd62c88088b9a779d702e68ac563ceefd835f469dc0ea283c125ae49867c4ebf650a279c341fc963491d448f8cba363c3028ba55114",
+    "text_hash_short": "5730e18c8d2ed5e26a4d7d325a46a7e9"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_containers.rst",
+    "line_start": 31,
+    "line_end": 46,
+    "text": "with Ada.Containers.Vectors;\n\nprocedure Show_Vector_Inst is\n\n   package Integer_Vectors is new\n     Ada.Containers.Vectors\n       (Index_Type   => Natural,\n        Element_Type => Integer);\n\n   V : Integer_Vectors.Vector;\nbegin\n   null;\nend Show_Vector_Inst;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Vector_Inst",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_vector_inst.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "d1d054b3f144eef4fb87085bb8cc241eceae8a48309a5afe77ddec60c16ff3410b625ad6bd587fad9ce2a9e430c553098ee5859cf3f2db18be4119681f7d67fe",
+    "text_hash_short": "8b737842d2784f25502990f21e1cf6de"
+}

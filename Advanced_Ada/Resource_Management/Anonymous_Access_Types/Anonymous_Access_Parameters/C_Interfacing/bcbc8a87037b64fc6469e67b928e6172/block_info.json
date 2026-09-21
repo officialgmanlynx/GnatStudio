@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 1608,
+    "line_end": 1623,
+    "text": "package Operations is\n\n   function Alloc_Integer return access Integer\n     with Import, Convention => C;\n\n   procedure Dealloc_Integer (IA : access Integer)\n     with Import, Convention => C;\n\n   procedure Add_One\n    (IA : aliased in out Integer)\n       with Import, Convention => C;\n\nend Operations;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Anonymous_Access_Parameters.C_Interfacing",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "operations.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "605fc5a8e2fa0430ed98818b0d8211c40dc613dca2a8b45b6f522eeda42d7cce3688e65979ac85406e3a3061ca73ab2d3556636922da94da56ac4d5ea37d0ea4",
+    "text_hash_short": "bcbc8a87037b64fc6469e67b928e6172"
+}

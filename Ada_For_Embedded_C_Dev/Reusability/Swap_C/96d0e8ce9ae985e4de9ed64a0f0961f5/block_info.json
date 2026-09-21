@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 52,
+    "line_end": 77,
+    "text": "!main.c\n#include <stdio.h>\n#include <stdlib.h>\n\n#define SWAP(t, a, b) ({\\\n                           t tmp = a; \\\n                           a = b; \\\n                           b = tmp; \\\n                        })\n\nint main()\n{\n    int a = 10;\n    int b = 42;\n\n    printf(\"a = %d, b = %d\\n\", a, b);\n\n    SWAP (int, a, b);\n\n    printf(\"a = %d, b = %d\\n\", a, b);\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.Swap_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "4caeb7be0c8c8cea19f18e0a6c90275a3c24854dcb386b4312d0f321b348388f2220ea76cef2e81085499ebe2f0c245d9db412961a3cbd30bfd4435cf4ce7ae6",
+    "text_hash_short": "96d0e8ce9ae985e4de9ed64a0f0961f5"
+}

@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/05_Proof_Of_Functional_Correctness.rst",
+    "line_start": 1094,
+    "line_end": 1149,
+    "text": "package Ring_Buffer is\n\n   Max_Size : constant := 100;\n\n   type Nat_Array is array (Positive range <>) of Natural;\n\n   function Get_Model return Nat_Array with Ghost;\n\n   procedure Push_Last (E : Natural) with\n     Pre  => Get_Model'Length < Max_Size,\n     Post => Get_Model'Length = Get_Model'Old'Length + 1;\n\nend Ring_Buffer;\n\npackage body Ring_Buffer is\n\n   subtype Length_Range is Natural range 0 .. Max_Size;\n   subtype Index_Range  is Natural range 1 .. Max_Size;\n\n   Content : Nat_Array (1 .. Max_Size) := (others => 0);\n   First   : Index_Range               := 1;\n   Length  : Length_Range              := 0;\n\n   function Get_Model return Nat_Array with\n     Refined_Post => Get_Model'Result'Length = Length\n   is\n      Size   : constant Length_Range := Length;\n      Result : Nat_Array (1 .. Size) := (others => 0);\n   begin\n      if First + Length - 1 <= Max_Size then\n         Result := Content (First .. First + Length - 1);\n      else\n         declare\n            Len : constant Length_Range := Max_Size - First + 1;\n         begin\n            Result (1 .. Len) := Content (First .. Max_Size);\n            Result (Len + 1 .. Length) := Content (1 .. Length - Len);\n         end;\n      end if;\n      return Result;\n   end Get_Model;\n\n   procedure Push_Last (E : Natural) is\n   begin\n      if First + Length <= Max_Size then\n         Content (First + Length) := E;\n      else\n         Content (Length - Max_Size + First) := E;\n      end if;\n      Length := Length + 1;\n   end Push_Last;\n\nend Ring_Buffer;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Proof_of_Functional_Correctness.Example_01",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_report_all"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "ring_buffer.ads",
+        "ring_buffer.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "d1b09a7e408c994840e5435b72a8787fe20ccd34c22616b4dd4a75b9520dd6dd3050721e3bb625fbba3f3e9f0080a3ebce48fca96e1f1ba873455578a608323c",
+    "text_hash_short": "3afd7d58f97001618acc05062115f1a3"
+}

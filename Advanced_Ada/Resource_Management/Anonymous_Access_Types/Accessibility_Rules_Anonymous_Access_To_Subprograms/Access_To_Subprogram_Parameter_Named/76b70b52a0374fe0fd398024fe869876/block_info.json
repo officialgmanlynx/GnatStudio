@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 3204,
+    "line_end": 3267,
+    "text": "package Access_To_Subprogram_Types is\n\n   type Integer_Array is\n     array (Positive range <>) of Integer;\n\n   type Process_Procedure is\n     access\n       procedure (Arr : in out Integer_Array);\n\n   procedure Process\n     (Arr : in out Integer_Array;\n      P   :        Process_Procedure);\n\nend Access_To_Subprogram_Types;\n\npackage body Access_To_Subprogram_Types is\n\n   procedure Process\n     (Arr : in out Integer_Array;\n      P   :        Process_Procedure) is\n   begin\n      P (Arr);\n   end Process;\n\nend Access_To_Subprogram_Types;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Access_To_Subprogram_Types;\nuse  Access_To_Subprogram_Types;\n\nprocedure Show_Access_To_Subprogram_Error is\n\n   procedure Add_One\n     (Arr : in out Integer_Array) is\n   begin\n      for E of Arr loop\n         E := E + 1;\n      end loop;\n   end Add_One;\n\n   procedure Display\n     (Arr : in out Integer_Array) is\n   begin\n      for I in Arr'Range loop\n         Put_Line (\"Arr (\" &\n                   Integer'Image (I)\n                   & \"): \"\n                  & Integer'Image (Arr (I)));\n      end loop;\n   end Display;\n\n   Arr : Integer_Array (1 .. 3) := (1, 2, 3);\nbegin\n   Process (Arr, Display'Access);\n\n   Put_Line (\"Add_One...\");\n   Process (Arr, Add_One'Access);\n\n   Process (Arr, Display'Access);\nend Show_Access_To_Subprogram_Error;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Accessibility_Rules_Anonymous_Access_To_Subprograms.Access_To_Subprogram_Parameter_Named",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "access_to_subprogram_types.ads",
+        "access_to_subprogram_types.adb",
+        "show_access_to_subprogram_error.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_access_to_subprogram_error.adb",
+    "text_hash": "ae38e6c9194a56f905e8e6116f32604608e6a3242568e5608a4f07c706bc08352654c51877213a8d9e13b59b0fa31d0517506c7d5875cb274c5fdbffe745bf7e",
+    "text_hash_short": "76b70b52a0374fe0fd398024fe869876"
+}

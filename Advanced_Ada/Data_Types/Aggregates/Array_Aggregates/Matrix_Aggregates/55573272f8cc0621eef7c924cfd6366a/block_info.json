@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/aggregates.rst",
+    "line_start": 1174,
+    "line_end": 1230,
+    "text": "package Matrices is\n\n   type Matrix is array (Positive range <>,\n                         Positive range <>)\n                         of Integer;\n\n   procedure Display (M : Matrix);\n\nend Matrices;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Matrices is\n\n   procedure Display (M : Matrix) is\n\n      procedure Display_Row (M : Matrix;\n                             I : Integer) is\n      begin\n         Put_Line (\"  (\");\n         for J in M'Range (2) loop\n            Put (\"    \"\n                 & J'Image\n                 & \" => \"\n                 & M (I, J)'Image);\n            if J /= M'Last (2) then\n               Put_Line (\",\");\n            else\n               New_Line;\n            end if;\n         end loop;\n         Put (\"  )\");\n      end Display_Row;\n\n   begin\n      Put_Line (\"Length (1) = \"\n                & M'Length (1)'Image);\n      Put_Line (\"Length (2) = \"\n                & M'Length (2)'Image);\n\n      Put_Line (\"(\");\n      for I in M'Range (1) loop\n         Display_Row (M, I);\n         if I /= M'Last (1) then\n            Put_Line (\",\");\n         else\n            New_Line;\n         end if;\n      end loop;\n      Put_Line (\")\");\n\n   end Display;\n\nend Matrices;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Aggregates.Array_Aggregates.Matrix_Aggregates",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "matrices.ads",
+        "matrices.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "4277607d1ff66331a2a36ca4aec754133aa49da325dc382c5fc6f0c655df55c309fde8e3a0ff8aef0cf0db88fb1c101870fa5dab80071579c2c2557f66eebafc",
+    "text_hash_short": "55573272f8cc0621eef7c924cfd6366a"
+}

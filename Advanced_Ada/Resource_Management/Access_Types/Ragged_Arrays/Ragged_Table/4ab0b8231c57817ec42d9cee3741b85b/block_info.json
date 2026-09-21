@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 2162,
+    "line_end": 2188,
+    "text": "\npackage Data_Processing.Operations is\n\n  procedure Process (D : in out Data;\n                     Q :        Quality_Level);\n\nend Data_Processing.Operations;\n\npackage body Data_Processing.Operations is\n\n   procedure Process (D : in out Data;\n                      Q :        Quality_Level) is\n   begin\n      for I in D'Range loop\n         for J in Calc_Table (Q)'Range loop\n           --  ... * Calc_Table (Q).Coef (J)\n           null;\n         end loop;\n         --  D (I) := ...\n         null;\n      end loop;\n   end Process;\n\nend Data_Processing.Operations;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Ragged_Arrays.Ragged_Table",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "data_processing-operations.ads",
+        "data_processing-operations.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "b3b7ab73b3d672bb0bc9806934a027d7e3038957da577b31621b7a91a9003b5ccc8fed086ccaf33f88dd0efa27a92183d79f2700498a091e99edf7c69c320417",
+    "text_hash_short": "4ab0b8231c57817ec42d9cee3741b85b"
+}

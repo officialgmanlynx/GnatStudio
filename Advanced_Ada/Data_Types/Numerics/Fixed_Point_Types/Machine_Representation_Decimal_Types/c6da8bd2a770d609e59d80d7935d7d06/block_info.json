@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 3527,
+    "line_end": 3582,
+    "text": "generic\n   type T_Decimal     is delta <> digits <>;\n   type T_Int_Decimal is range <>;\nprocedure Gen_Show_Info (V     : T_Decimal;\n                         V_Str : String);\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Gen_Show_Info (V     : T_Decimal;\n                         V_Str : String)\nis\n   V_Int_Overlay : T_Int_Decimal\n     with Address => V'Address,\n          Import, Volatile;\n\n   pragma Assert\n     (T_Int_Decimal'Size = T_Decimal'Size);\n   pragma Assert\n     (T_Int_Decimal'Alignment =\n        T_Decimal'Alignment);\n\n   V_Real        : Float;\nbegin\n   V_Real  := Float (V_Int_Overlay) *\n     T_Decimal'Small;\n\n   Put_Line (V_Str\n             & \" (fixed-point) : \"\n             & V'Image);\n   Put_Line (V_Str\n             & \" (integer)     : \"\n             & V_Int_Overlay'Image);\n   Put_Line (V_Str\n             & \" (floating-p.) : \"\n             & V_Real'Image);\n   Put_Line (\"----------\");\nend Gen_Show_Info;\n\nwith Gen_Show_Info;\n\npackage Custom_Decimal_Types.Show_Info_Procs is\n\n   procedure Show_Info is new\n     Gen_Show_Info (T_Decimal     => T0_D4,\n                    T_Int_Decimal => Int_T0_D4);\n   procedure Show_Info is new\n     Gen_Show_Info (T_Decimal     => T2_D6,\n                    T_Int_Decimal => Int_T2_D6);\n   procedure Show_Info is new\n     Gen_Show_Info (T_Decimal     => T2_D12,\n                    T_Int_Decimal => Int_T2_D12);\n\nend Custom_Decimal_Types.Show_Info_Procs;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Fixed_Point_Types.Machine_Representation_Decimal_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "gen_show_info.ads",
+        "gen_show_info.adb",
+        "custom_decimal_types-show_info_procs.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "2f152170fee3b9cb337c6abaab2d559ccb5583ae57af23a003d4e5be7ef981d90438908e7c8a6001219df7bb1833033696e4bb022a4e00268a9b14089a3d371f",
+    "text_hash_short": "c6da8bd2a770d609e59d80d7935d7d06"
+}

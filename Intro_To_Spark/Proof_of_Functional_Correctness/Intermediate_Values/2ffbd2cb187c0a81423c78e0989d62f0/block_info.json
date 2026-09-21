@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/05_Proof_Of_Functional_Correctness.rst",
+    "line_start": 512,
+    "line_end": 528,
+    "text": "package Action_Sequence is\n\n   type T is new Integer;\n\n   V_Interm : T with Ghost;\n\n   function First_Thing_Done (X, Y : T) return Boolean with Ghost;\n   function Second_Thing_Done (X, Y : T) return Boolean with Ghost;\n\n   procedure Do_Two_Things (V : in out T) with\n     Post => First_Thing_Done (V'Old, V_Interm)\n       and then Second_Thing_Done (V_Interm, V);\n\nend Action_Sequence;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Proof_of_Functional_Correctness.Intermediate_Values",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "action_sequence.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "17476f8f6371e53c9a72dbdb8f31489daf923854758d1a901d08b8bae4c695947a2e1b6350d5b7175393ce8a1d66131127e2f77858f9e2f3e6359fefd4e7364c",
+    "text_hash_short": "2ffbd2cb187c0a81423c78e0989d62f0"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 3770,
+    "line_end": 3789,
+    "text": "package Rec_Per_Object_Expressions is\n\n   type T (D : Positive) is private;\n\nprivate\n\n   type T (D : Positive) is record\n      V : Natural := D - 1;\n      --             ^^^^^\n      --    Per-object expression\n\n      S : Natural := D'Size;\n      --             ^^^^^^\n      --    Per-object expression\n   end record;\n\nend Rec_Per_Object_Expressions;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Per_Object_Expressions.Per_Object_Expression_Default_Value",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "rec_per_object_expressions.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "1359a4f445a72b69b493e6cf22ff357fda1f6eb7b31a08c52790775ddc80d5602cd7d0c54acc58e3ca55daf50f48f1827d8ee32b6671af1ca77df269fe433ec2",
+    "text_hash_short": "70454b0b116094a02b897d8d1d0080fb"
+}

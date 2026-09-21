@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 2670,
+    "line_end": 2684,
+    "text": "with Anonymous_Access_To_Subprogram;\nuse  Anonymous_Access_To_Subprogram;\n\nwith Add_Ten;\n\nprocedure Show_Anonymous_Access_To_Subprograms is\nbegin\n   Proc (Add_Ten'Access);\n   --            ^ Getting access to Add_Ten\n   --              procedure and passing it\n   --              to Proc\nend Show_Anonymous_Access_To_Subprograms;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Anonymous_Access_To_Subprograms.Anonymous_Access_To_Subprogram_Example",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_anonymous_access_to_subprograms.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_anonymous_access_to_subprograms.adb",
+    "text_hash": "96966ce0395ee502502722ebc7f64e92aa0ed7972077997875af77dfebba2c6f9c536568b626ce186f31fc099ce192fb28b5ad9eb70520b6e84cfd74f19993e6",
+    "text_hash_short": "13143ccf9620d26031484ba160a58fe1"
+}

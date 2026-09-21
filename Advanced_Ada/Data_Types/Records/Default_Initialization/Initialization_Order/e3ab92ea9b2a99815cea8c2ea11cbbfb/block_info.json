@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 84,
+    "line_end": 120,
+    "text": "package Simple_Recs is\n\n   function Init (S : String;\n                  I : Integer)\n                  return Integer;\n\n   type Rec is record\n      A : Integer := Init (\"A\", 1);\n      B : Integer := Init (\"B\", 2);\n   end record;\n\nend Simple_Recs;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Simple_Recs is\n\n   function Init (S : String;\n                  I : Integer)\n                  return Integer is\n   begin\n      Put_Line (S & \": \" & I'Image);\n      return I;\n   end Init;\n\nend Simple_Recs;\n\nwith Simple_Recs; use Simple_Recs;\n\nprocedure Show_Initialization_Order is\n   R : Rec;\nbegin\n   null;\nend Show_Initialization_Order;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Default_Initialization.Initialization_Order",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple_recs.ads",
+        "simple_recs.adb",
+        "show_initialization_order.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_initialization_order.adb",
+    "text_hash": "29fb580589ba625069aa04d174b67d5b83cd4d8f624cada84d91364cbbb2fe1d0504bcd7ab7227fe0c1ac53b0e05537008e4faa3a4ad0600b85d7190444b1740",
+    "text_hash_short": "e3ab92ea9b2a99815cea8c2ea11cbbfb"
+}

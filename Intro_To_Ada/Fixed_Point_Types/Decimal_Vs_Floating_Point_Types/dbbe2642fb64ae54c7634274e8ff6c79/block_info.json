@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/fixed_point_types.rst",
+    "line_start": 283,
+    "line_end": 318,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Decimal_Vs_Floating_Point_Types is\n   type Decimal is\n     delta 10.0 ** (-2) digits 9;\n\n   type Float_32 is\n     digits 6\n     range -9999999.99 .. 9999999.99;\n\n   D : Decimal  := 0.01;\n   F : Float_32 := 0.01;\nbegin\n   Put_Line (\"D = \" &\n             D'Image);\n   Put_Line (\"F = \" &\n             F'Image);\n\n   D := D / 2.0;\n   --   ^^^^^^^\n   --  Value becomes zero.\n\n   F := F / 2.0;\n   --   ^^^^^^^\n   --  Exponent is used to\n   --  represent smaller\n   --  value.\n\n   Put_Line (\"D = \" &\n             D'Image);\n   Put_Line (\"F = \" &\n             F'Image);\nend Decimal_Vs_Floating_Point_Types;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Fixed_Point_Types.Decimal_Vs_Floating_Point_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "decimal_vs_floating_point_types.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "decimal_vs_floating_point_types.adb",
+    "text_hash": "ad2965ce596878c9696e027ecebd865af4157ddbd23e1cda58ce568a448b88f7cbdd3f447159cf1bbb4740883eab2db0c40f6bb6683f6b48620d11e28db43f5b",
+    "text_hash_short": "dbbe2642fb64ae54c7634274e8ff6c79"
+}

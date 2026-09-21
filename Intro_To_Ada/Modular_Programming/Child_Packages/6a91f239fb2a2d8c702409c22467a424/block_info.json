@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/modular_programming.rst",
+    "line_start": 409,
+    "line_end": 422,
+    "text": "with Ada.Text_IO;  use Ada.Text_IO;\nwith Week.Child;   use Week.Child;\nwith Week.Child_2; use Week.Child_2;\n\nprocedure Main is\nbegin\n   Put_Line (\"First day of the week is \"\n             & Get_First_Of_Week);\n   Put_Line (\"Last day of the week is \"\n             & Get_Last_Of_Week);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Modular_Programming.Child_Packages",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "30deb31fe75fee0fcfe525e0daf7ae3d4a0201d4a17982f75f634b21874c80a51bccf1ea44124b294c76ce527e680ef02871478eb709828edd4f4ede49011eca",
+    "text_hash_short": "6a91f239fb2a2d8c702409c22467a424"
+}

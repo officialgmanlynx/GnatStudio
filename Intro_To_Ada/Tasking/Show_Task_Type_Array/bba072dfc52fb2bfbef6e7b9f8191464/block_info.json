@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/tasking.rst",
+    "line_start": 751,
+    "line_end": 778,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Task_Type_Array is\n   task type TT is\n      entry Start (N : Integer);\n   end TT;\n\n   task body TT is\n      Task_N : Integer;\n   begin\n      accept Start (N : Integer) do\n         Task_N := N;\n      end Start;\n      Put_Line (\"In task T: \"\n                & Integer'Image (Task_N));\n   end TT;\n\n   My_Tasks : array (1 .. 5) of TT;\nbegin\n   Put_Line (\"In main\");\n\n   for I in My_Tasks'Range loop\n      My_Tasks (I).Start (I);\n   end loop;\nend Show_Task_Type_Array;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Tasking.Show_Task_Type_Array",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_task_type_array.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_task_type_array.adb",
+    "text_hash": "4f94fb3f9162c3d5de5aefab2a26bc60b41ed73b00350f62f9ba80bbe769e10e332a2d1435fc88313b967442c0112668fabef956956063030ebda4d8d79e2362",
+    "text_hash_short": "bba072dfc52fb2bfbef6e7b9f8191464"
+}

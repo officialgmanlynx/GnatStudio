@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/exceptions.rst",
+    "line_start": 17,
+    "line_end": 23,
+    "text": "package Exceptions is\n    My_Except : exception;\n    --  Like an object. *NOT* a type !\nend Exceptions;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Exceptions.Show_Exception",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "exceptions.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "2b1f910760c35eba330562417946ae4e3b9fdf5c46de7128afec80502d0745cb18a50c1b8dbfe02fd87d1764c5c7b0a462a36b64d30b2628fdbb0314a77890ea",
+    "text_hash_short": "6201faeca9b029c790023856d2c8c419"
+}

@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/modular_prog/packages.rst",
+    "line_start": 438,
+    "line_end": 465,
+    "text": "package Data_Processing.Calculations.Child is\n\n   procedure Process (D : in out Data);\n\nend Data_Processing.Calculations.Child;\n\npackage body Data_Processing.Calculations.Child is\n\n   procedure Process (D : in out Data) is\n   begin\n      Calculate (D);\n   end Process;\n\nend Data_Processing.Calculations.Child;\n\nwith Data_Processing; use Data_Processing;\n\nwith Data_Processing.Calculations.Child;\nuse  Data_Processing.Calculations.Child;\n\nprocedure Test_Data_Processing is\n   D : Data;\nbegin\n   Calculate (D);\nend Test_Data_Processing;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Modular_Prog.Packages.Private_Packages.Private_Package",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "data_processing-calculations-child.ads",
+        "data_processing-calculations-child.adb",
+        "test_data_processing.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "test_data_processing.adb",
+    "text_hash": "a6adf5c44b6f552dabfc1a57c579d75201033044577d34c2da8bfff73db8ca5b69d1e8b48e79e3fc86d167a1f48e48de9380b6144938e3c9847ccf4eab3ecf75",
+    "text_hash_short": "2eaf23ddbab72578246ac07424008d9d"
+}

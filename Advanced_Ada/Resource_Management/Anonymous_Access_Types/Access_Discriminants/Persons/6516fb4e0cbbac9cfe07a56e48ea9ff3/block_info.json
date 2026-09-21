@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 1093,
+    "line_end": 1125,
+    "text": "package Persons is\n\n   --  Declaring a discriminant with an anonymous\n   --  access type:\n   type Person (Name : access String) is record\n      Age : Integer;\n   end record;\n\n   procedure Show (P : Person);\n\nend Persons;\n\nwith Persons; use Persons;\n\nprocedure Show_Person is\n   S : aliased String := \"John\";\n   P : Person (S'Access);\n   --          ^^^^^^^^ OK\n\n   --  Allocating the string via new and using it\n   --  in P's declaration is OK as well, but we\n   --  should manually deallocate it before S\n   --  gets out of scope:\n   --\n   --  S : access String := new String'(\"John\");\n   --  P : Person (S);\nbegin\n   P.Age := 30;\n   Show (P);\nend Show_Person;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Access_Discriminants.Persons",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "persons.ads",
+        "show_person.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_person.adb",
+    "text_hash": "773ca8b5109afc30d1147947e3958f28acde8c85bfbf67b96a60e4274a99cdf0f3cd316fc4a862813289113055f6b165da9cbfc6c2c4ab307c07ade7bbb35cd7",
+    "text_hash_short": "6516fb4e0cbbac9cfe07a56e48ea9ff3"
+}

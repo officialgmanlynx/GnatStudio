@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 1193,
+    "line_end": 1230,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\nwith My_Integers; use My_Integers;\n\nprocedure Show_Base is\n   C : constant One_To_Ten := One_To_Ten'Last;\nbegin\n   Using_Constrained_Subtype : declare\n      V : One_To_Ten := C;\n   begin\n      Put_Line\n        (\"Increasing value for One_To_Ten...\");\n\n      V := One_To_Ten'Succ (V);\n   exception\n      when others =>\n         Put_Line (\"Exception raised!\");\n   end Using_Constrained_Subtype;\n\n   Using_Base : declare\n      V : One_To_Ten'Base := C;\n   begin\n      Put_Line\n      (\"Increasing value for One_To_Ten'Base...\");\n\n      V := One_To_Ten'Succ (V);\n   exception\n      when others =>\n         Put_Line (\"Exception raised!\");\n   end Using_Base;\n\n   Put_Line (\"One_To_Ten'Last: \"\n             & One_To_Ten'Last'Image);\n   Put_Line (\"One_To_Ten'Base'Last: \"\n             & One_To_Ten'Base'Last'Image);\nend Show_Base;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Base_Type.Base_Attr",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_base.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_base.adb",
+    "text_hash": "ce447cb685614d75c11cf15b1de46842f42a59f2aa2ee2fdcfcfe511eb023906eb9a89b2c8a9a775caec85b433cf92ba08d06c06b97eb2ed80f90bd461087ae8",
+    "text_hash_short": "ce3e9fb3ff1619e835e9108ae0a787e7"
+}

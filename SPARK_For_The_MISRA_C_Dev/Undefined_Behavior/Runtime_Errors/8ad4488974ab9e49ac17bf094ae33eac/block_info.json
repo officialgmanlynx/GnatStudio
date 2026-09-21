@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/07_undefined_behavior.rst",
+    "line_start": 87,
+    "line_end": 106,
+    "text": "package Show_Runtime_Errors is\n\n   type Nat_Array is array (Integer range <>) of Natural;\n   --  The values in subtype Natural are 0 , 1, ... Integer'Last\n\n   procedure Update (A : in out Nat_Array; I, J, P, Q : Integer);\n\nend Show_Runtime_Errors;\n\npackage body Show_Runtime_Errors is\n\n   procedure Update (A : in out Nat_Array; I, J, P, Q : Integer) is\n   begin\n      A (I + J) := P / Q;\n   end Update;\n\nend Show_Runtime_Errors;\n",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Undefined_Behavior.Runtime_Errors",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove",
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": true,
+    "source_files": [
+        "show_runtime_errors.ads",
+        "show_runtime_errors.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "d6b838e2dd912b842ea738f91bf915fb3b6f4e5bcfa96325563d29d9f9900c81d78bb0a861c5ad17f881483881cbb52569d3cca29025484a60230c3c2c1af899",
+    "text_hash_short": "8ad4488974ab9e49ac17bf094ae33eac"
+}

@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 4682,
+    "line_end": 4690,
+    "text": "procedure Add_Twenty (I : in out Integer);\n\nprocedure Add_Twenty (I : in out Integer) is\nbegin\n   I := I + 20;\nend Add_Twenty;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Access_To_Subprograms.Access_To_Subprogram_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "add_twenty.ads",
+        "add_twenty.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "ffa2a1ef77917c5e731837bd045e6f71d1670a4a8958429b8338c275ddb4f79534e9320b3ed3739cc83c15fabb6c6e94e8f7e2010e445a12d3291e02d17febbc",
+    "text_hash_short": "697959b806f6f2bfba248ec15c47883b"
+}

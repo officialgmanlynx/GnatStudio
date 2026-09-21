@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/object_oriented_programming.rst",
+    "line_start": 383,
+    "line_end": 407,
+    "text": "with P; use P;\n\nprocedure Main is\n   O1 : My_Class;\n   --  Declare an object of type My_Class\n\n   O2 : Derived := (A => 12);\n   --  Declare an object of type Derived\n\n   O3 : My_Class'Class := O2;\n\n   O4 : My_Class'Class := O1;\nbegin\n   O1.Foo;\n   --  Non dispatching: Calls My_Class.Foo\n   O2.Foo;\n   --  Non dispatching: Calls Derived.Foo\n   O3.Foo;\n   --  Dispatching: Calls Derived.Foo\n   O4.Foo;\n   --  Dispatching: Calls My_Class.Foo\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Object_Oriented_Programming.Tagged_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "d1ba31bbd89c2cb4be46d1c2261e9d241a0c15b2f0255e455cbf93cf1a45abe4306acbfb732ee0c9d062d237c1d44ac4cf45c1269476e02547114a9de790ab00",
+    "text_hash_short": "9c6ebdfec9ceeb986d92eb90ec9ff59b"
+}

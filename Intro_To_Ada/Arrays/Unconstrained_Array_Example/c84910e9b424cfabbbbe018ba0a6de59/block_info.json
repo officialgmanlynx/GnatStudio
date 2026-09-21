@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/arrays.rst",
+    "line_start": 356,
+    "line_end": 383,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Unconstrained_Array_Example is\n   type Days is (Monday, Tuesday, Wednesday,\n                 Thursday, Friday,\n                 Saturday, Sunday);\n\n   type Workload_Type is\n     array (Days range <>) of Natural;\n   --  Indefinite array type\n   --       ^ Bounds are of type Days,\n   --         but not known\n\n   Workload : constant\n     Workload_Type (Monday .. Friday) :=\n   --               ^ Specify the bounds\n   --                 when declaring\n      (Friday => 7, others => 8);\n   --               ^ Default value\n   --  ^ Specify element by name of index\nbegin\n   for I in Workload'Range loop\n      Put_Line (Integer'Image (Workload (I)));\n   end loop;\nend Unconstrained_Array_Example;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Arrays.Unconstrained_Array_Example",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "unconstrained_array_example.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "unconstrained_array_example.adb",
+    "text_hash": "49f6bc65dcb870ce338777242bc474e8f896481cf0b5d0cc461068405dec557ec11700cb3ace62529e1e22c0d6045db31f424036ffff8e630345ae425cf6ebf0",
+    "text_hash_short": "c84910e9b424cfabbbbe018ba0a6de59"
+}

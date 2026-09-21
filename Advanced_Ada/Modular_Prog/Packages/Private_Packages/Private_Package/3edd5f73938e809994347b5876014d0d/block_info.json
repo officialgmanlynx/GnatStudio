@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/modular_prog/packages.rst",
+    "line_start": 231,
+    "line_end": 280,
+    "text": "package Data_Processing is\n\n   type Data is private;\n\n   procedure Process (D : in out Data);\n\nprivate\n\n   type Data is null record;\n\nend Data_Processing;\n\nprivate package Data_Processing.Calculations is\n\n   procedure Calculate (D : in out Data);\n\nend Data_Processing.Calculations;\n\nwith Data_Processing.Calculations;\nuse  Data_Processing.Calculations;\n\npackage body Data_Processing is\n\n   procedure Process (D : in out Data) is\n   begin\n      Calculate (D);\n   end Process;\n\nend Data_Processing;\n\npackage body Data_Processing.Calculations is\n\n   procedure Calculate (D : in out Data) is\n   begin\n      --  Dummy implementation...\n      null;\n   end Calculate;\n\nend Data_Processing.Calculations;\n\nwith Data_Processing; use Data_Processing;\n\nprocedure Test_Data_Processing is\n   D : Data;\nbegin\n   Process (D);\nend Test_Data_Processing;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Modular_Prog.Packages.Private_Packages.Private_Package",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "data_processing.ads",
+        "data_processing-calculations.ads",
+        "data_processing.adb",
+        "data_processing-calculations.adb",
+        "test_data_processing.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "test_data_processing.adb",
+    "text_hash": "ec4ca34a3e8ad1c60bed6143aef0ac86dad727416adac9ec35441e47be72fa9476f79755bf24248ab08c2af90f82b5ac81bbb4b35308fa7ce4df545f65cfb2e0",
+    "text_hash_short": "3edd5f73938e809994347b5876014d0d"
+}

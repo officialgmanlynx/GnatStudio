@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/shared_variable_control.rst",
+    "line_start": 1666,
+    "line_end": 1703,
+    "text": "with System.Atomic_Operations.Test_And_Set;\nuse  System.Atomic_Operations.Test_And_Set;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Test_And_Set is\n   Lock       : aliased Test_And_Set_Flag;\n   Task_Count : Integer := 0;\n\n   task type A_Task;\n\n   task body A_Task is\n      Task_Number : Integer;\n   begin\n      --  Get the lock\n      while Atomic_Test_And_Set (Lock) loop\n         null;\n      end loop;\n\n      --  At this point, we got the lock.\n      Task_Count  := Task_Count + 1;\n      Task_Number := Task_Count;\n\n      --  Release the lock.\n      Atomic_Clear (Lock);\n\n      Put_Line (\"Task_Number: \"\n                & Task_Number'Image);\n\n   end A_Task;\n\n   A, B, C, D, E, F : A_Task;\nbegin\n   null;\nend Show_Test_And_Set;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Shared_Variable_Control.Atomic_Operations.Test_And_Set",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_test_and_set.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_test_and_set.adb",
+    "text_hash": "57bfa799b75eb4869c6ce80edfff241174116a76f87de36607b9518c3eab6ee94df5b5f8d492bbb4be007d7eb504c7f06b67c70bf526db50eed02ab0f355abe8",
+    "text_hash_short": "45814e2e157d3fd45f876c89914a5cc5"
+}

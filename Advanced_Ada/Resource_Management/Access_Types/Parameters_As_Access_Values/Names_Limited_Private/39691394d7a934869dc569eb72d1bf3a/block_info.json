@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 1239,
+    "line_end": 1290,
+    "text": "package Names is\n\n   type Name is limited private;\n\n   function Init (S : String) return Name;\n\n   function Equal (N1, N2 : Name)\n                   return Boolean;\n\n   procedure Show (N : Name)\n     with Post => Equal (N'Old = N);\n\nprivate\n\n   type Name is access String;\n\n   function Init (S : String) return Name is\n     (new String'(S));\n\n   function Equal (N1, N2 : Name)\n                   return Boolean is\n     (N1.all = N2.all);\n\nend Names;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\n--  with Ada.Characters.Handling;\n--  use  Ada.Characters.Handling;\n\npackage body Names is\n\n   procedure Show (N : Name) is\n   begin\n      --  for I in N'Range loop\n      --     N (I) := To_Lower (N (I));\n      --  end loop;\n      Put_Line (\"Name: \" & N.all);\n   end Show;\n\nend Names;\n\nwith Names; use Names;\n\nprocedure Show_Names is\n   N : Name := Init (\"John\");\nbegin\n   Show (N);\nend Show_Names;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Parameters_As_Access_Values.Names_Limited_Private",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "names.ads",
+        "names.adb",
+        "show_names.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_names.adb",
+    "text_hash": "a1fd9339e5d46c54e8d667ebf5bdaa109155aa57c656d6f5c7b858b199d615a26a7c3b3d4161ce285fd7f51b9dac4b1b14bc97db3aad7f6c25da3df818dfba2a",
+    "text_hash_short": "39691394d7a934869dc569eb72d1bf3a"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/shared_variable_control.rst",
+    "line_start": 402,
+    "line_end": 417,
+    "text": "with System;\n\npackage Shared_Var_Types is\n\n   type Atomic_Integer is new Integer\n     with Atomic;\n\nprivate\n   R : Atomic_Integer\n         with Address =>\n                System'To_Address (16#FFFF00A0#);\n\nend Shared_Var_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Shared_Variable_Control.Atomic.Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "shared_var_types.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "017237fe77bf5182de352a3593c12f953b2d35c1291b59697e05a6fc3eebdb3a942289ba2aed54b7e55d062035e4547d376c6f9e2a8646256f282347402356c6",
+    "text_hash_short": "009632ba0155d70def8281ba590f3d12"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/arrays.rst",
+    "line_start": 449,
+    "line_end": 458,
+    "text": "package String_Literals is\n    --  Those two declarations are equivalent\n    A : String (1 .. 11) := \"Hello World\";\n    B : String (1 .. 11) :=\n        ('H', 'e', 'l', 'l', 'o', ' ',\n         'W', 'o', 'r', 'l', 'd');\nend String_Literals;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Arrays.String_Literals",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "string_literals.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "b9c66b59b2c5a7f59a2e99ff4ad76ae7f9fdf50c34a4e70c88ff4880b7a07769db829fad8d5830522c19217f40de3204033d5aacef2b4fbef9e592c20da815f0",
+    "text_hash_short": "8e5871c8ead4ff8da643539857e23b30"
+}

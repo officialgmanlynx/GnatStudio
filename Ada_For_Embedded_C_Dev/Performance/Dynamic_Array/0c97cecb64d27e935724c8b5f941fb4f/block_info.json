@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/08_Performance.rst",
+    "line_start": 391,
+    "line_end": 413,
+    "text": "package Some_Functions is\n\n   function Some_Function_Call return Integer is (2);\n\n   function Some_Other_Function_Call return Integer is (10);\n\nend Some_Functions;\n\nwith Some_Functions; use Some_Functions;\n\npackage Values is\n   A_Start : Integer := Some_Function_Call;\n   A_End   : Integer := Some_Other_Function_Call;\nend Values;\n\nwith Values; use Values;\n\npackage Arr_Def is\n   type Arr is array (Integer range A_Start .. A_End) of Integer;\nend Arr_Def;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Performance.Dynamic_Array",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "some_functions.ads",
+        "values.ads",
+        "arr_def.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "4d683af88409a0a1506d434d209bb8045f317aa032caf6646941e1b35040ee47b69c6e15a711f0dfde6c35ac37870e310fda219bab363ff538bf56f0d2b2e0e0",
+    "text_hash_short": "0c97cecb64d27e935724c8b5f941fb4f"
+}

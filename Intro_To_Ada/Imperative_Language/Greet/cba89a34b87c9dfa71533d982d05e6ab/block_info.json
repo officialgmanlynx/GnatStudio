@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/imperative_language.rst",
+    "line_start": 26,
+    "line_end": 35,
+    "text": "with Ada.Text_IO;\n\nprocedure Greet is\nbegin\n   --  Print \"Hello, World!\" to the screen\n   Ada.Text_IO.Put_Line (\"Hello, World!\");\nend Greet;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Imperative_Language.Greet",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "greet.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "greet.adb",
+    "text_hash": "874a986c90daadd14d94ee843265bfcb2f05d19a78b58d51c037d310f53f00eb542302bbc26413ba88f4a67d3e79654a14b8b084cb327722e50bc9a76d96ea8e",
+    "text_hash_short": "cba89a34b87c9dfa71533d982d05e6ab"
+}

@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 3915,
+    "line_end": 3926,
+    "text": "package Show_Not_Null_Return is\n   type Ref_Element is access all Element;\n\n   Not_Found : constant Ref_Element := null;\n\n   function Lookup (T : Table)\n                    return not null Ref_Element;\n   --  Possible since Ada 2005.\nend Show_Not_Null_Return;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Null_And_Not_Null_Access.Not_Null_Return",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-syntax-only"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": true,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_not_null_return.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "1cc79ae7b3a7147f7fd6ee7984c865c7917d21856c433a8beaeae3da0af0aac849de123b2e425172bebf0e360a630de5ff0f1468c910d5d9cf7028451ddfcf21",
+    "text_hash_short": "4c0bb95da3b5a7c555a763c4951f7e21"
+}

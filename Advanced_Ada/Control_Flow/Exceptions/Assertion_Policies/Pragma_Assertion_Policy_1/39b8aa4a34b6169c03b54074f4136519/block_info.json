@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/exceptions.rst",
+    "line_start": 300,
+    "line_end": 309,
+    "text": "procedure Show_Pragma_Assertion_Policy is\n   I : constant Integer := 11;\n\n   pragma Assertion_Policy (Assert => Ignore);\nbegin\n   pragma Assert (I = 10);\nend Show_Pragma_Assertion_Policy;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Exceptions.Assertion_Policies.Pragma_Assertion_Policy_1",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_pragma_assertion_policy.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_pragma_assertion_policy.adb",
+    "text_hash": "83fab8ae97f85bf62bf6454218acb27b01ae69349ec792624bfc12d0c1d779910a193c3508a072601495f9095d0294568b52307dfe6469be9e5ba2b95952f4af",
+    "text_hash_short": "39b8aa4a34b6169c03b54074f4136519"
+}

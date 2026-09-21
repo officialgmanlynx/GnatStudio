@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/exceptions.rst",
+    "line_start": 225,
+    "line_end": 234,
+    "text": "procedure Show_Pragma_Assert is\n   I : constant Integer := 10;\n\n   pragma Assert (I = 10);\nbegin\n   null;\nend Show_Pragma_Assert;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Exceptions.Asserts.Pragma_Assert_1",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_pragma_assert.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_pragma_assert.adb",
+    "text_hash": "a703ea6d3f0c1056462d8045a4e01d99c53fff2ed40b7c421b9dbf72983a1ea5b493d3f4159ae4ef8b498dc005ea4096a097bc9ee37f5d8f32b1b625be310dd1",
+    "text_hash_short": "8d40817304515169d0d5670904ca1e01"
+}

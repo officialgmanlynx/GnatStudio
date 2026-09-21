@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 4694,
+    "line_end": 4730,
+    "text": "with Access_To_Subprogram_Types;\nuse  Access_To_Subprogram_Types;\n\nwith Access_To_Subprogram_Params;\nuse  Access_To_Subprogram_Params;\n\nwith Add_Ten;\nwith Add_Twenty;\n\nprocedure Show_Access_To_Subprograms is\n   P        : Access_To_Procedure;\n   Some_Int : Integer := 0;\nbegin\n   P := Add_Ten'Access;\n   --           ^ Getting access to Add_Ten\n   --             procedure and assigning it\n   --             to P\n\n   Proc (P);\n   --    ^ Passing access-to-subprogram as an\n   --      actual parameter\n\n   P (Some_Int);\n   --  ^ Using access-to-subprogram object in a\n   --    subprogram call\n\n   P := Add_Twenty'Access;\n   --              ^ Getting access to Add_Twenty\n   --                procedure and assigning it\n   --                to P\n\n   Proc (P);\n   P (Some_Int);\nend Show_Access_To_Subprograms;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Access_To_Subprograms.Access_To_Subprogram_Types",
+    "main_file": "show_access_to_subprograms.adb",
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_access_to_subprograms.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_access_to_subprograms.adb",
+    "text_hash": "e487dc105652ba1fc5508a4ae6b123c4629e6474a43db94ca42335e75ab39411d762600cf6ccf6c4f65269ce265c62887b63603d4a4a1ae196469919315ee1b2",
+    "text_hash_short": "7b4ea19187806e88ba65847876cafb4f"
+}

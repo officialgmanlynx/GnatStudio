@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/object_oriented_programming.rst",
+    "line_start": 107,
+    "line_end": 144,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Primitives is\n   package Week is\n      type Days is (Monday, Tuesday, Wednesday,\n                    Thursday, Friday,\n                    Saturday, Sunday);\n\n      --  Print_Day is a primitive\n      --  of the type Days\n     procedure Print_Day (D : Days);\n   end Week;\n\n   package body Week is\n      procedure Print_Day (D : Days) is\n      begin\n         Put_Line (Days'Image (D));\n      end Print_Day;\n   end Week;\n\n   use Week;\n   type Weekend_Days is new\n     Days range Saturday .. Sunday;\n\n   --  A procedure Print_Day is automatically\n   --  inherited here. It is as if the procedure\n   --\n   --  procedure Print_Day (D : Weekend_Days);\n   --\n   --  has been declared with the same body\n\n   Sat : Weekend_Days := Saturday;\nbegin\n   Print_Day (Sat);\nend Primitives;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Object_Oriented_Programming.Primitives",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "primitives.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "primitives.adb",
+    "text_hash": "4e2d88e62729e05ef0e940a17855fdd8c36bf4db4247155c13142dc230bd5929ad04021121d18e072df2725919dfbdf2d52ba4161b4f694bc757324b45341637",
+    "text_hash_short": "eb1b0eb66f03a4a17bd9686ec4e12e2e"
+}

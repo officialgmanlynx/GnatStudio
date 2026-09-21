@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 2077,
+    "line_end": 2099,
+    "text": "!main.c\n#include <stdio.h>\n#include <string.h>\n\nint main(int argc, const char * argv[])\n{\n    int A1 [2];\n    int A2 [2];\n\n    A1 [0] = 0;\n    A1 [1] = 1;\n\n    memcpy (A2, A1, sizeof (int) * 2);\n\n    for (int i = 0; i < 2; i++) {\n        printf(\"%d\\n\", A2[i]);\n    }\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Array_Copy_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "f31ad6001bcf2c60375b2c32c80d25901a7c5717036de55617082d6bbf4a0ad81b5868072025e06b9c9208f5ef470c8eb9a936ebeb0f34e64600a060c3af86c2",
+    "text_hash_short": "0dade800452673b7a82afe1c656f07e6"
+}

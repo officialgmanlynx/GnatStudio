@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/04_Embedded.rst",
+    "line_start": 668,
+    "line_end": 685,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Volatile_Array_Components is\n   Arr : array (1 .. 2) of Long_Float with Volatile_Components;\nbegin\n   Arr := (others => 0.0);\n\n   for I in 0 .. 999 loop\n      Arr (1) := Arr (1) +  2.0 * Long_Float (I);\n      Arr (2) := Arr (2) + 10.0 * Long_Float (I);\n   end loop;\n\n   Put_Line (\"Arr (1): \" & Long_Float'Image (Arr (1)));\n   Put_Line (\"Arr (2): \" & Long_Float'Image (Arr (2)));\nend Show_Volatile_Array_Components;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Embedded.Volatile_Array_Components",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_volatile_array_components.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_volatile_array_components.adb",
+    "text_hash": "eabfae33029448e274d84188bf20727224d0a8423ab40b1b0ee647418be916c1903f72532e0705fb95b457514f80b7c1bb9c0f2cd6e246aee4a20c877fed2086",
+    "text_hash_short": "601d61dd01888c60ae1a51ec513138d5"
+}

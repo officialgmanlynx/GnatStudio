@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 481,
+    "line_end": 525,
+    "text": "package Devices is\n\n   type Device_Settings is\n   record\n      Started : Boolean;\n   end record;\n\n   type Device (Id : Positive) is\n     private;\n\n   function Init (Id : Positive)\n                  return Device;\n\nprivate\n\n   type Device (Id : Positive) is\n     null record;\n\n   function Init (Id : Positive)\n                  return Device is\n      (Device'(Id => Id));\n\nend Devices;\n\n\nwith Devices; use Devices;\n\nprocedure Show_Object_View is\n   Dev      : constant Device := Init (5);\n   --  Constant object with\n   --  variable view.\n\n   Default  : constant Device_Settings\n               := (Started => False);\n   --  Constant object with\n   --  constant view.\n\n   Settings : Device_Settings;\n\nbegin\n   Settings := (Started => True);\nend Show_Object_View;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Objects.Object_View",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "devices.ads",
+        "show_object_view.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_object_view.adb",
+    "text_hash": "6263338ac936b0ebdcf8aaa165929009d9d110b7c8f445a362d58b833f9a581d4bf5fc997c5739dd3b8a9a609954dd6273728722a466129e88c5a2bf2209b032",
+    "text_hash_short": "b9a56ee937e71c728bac116f21d98742"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/fixed_point_types.rst",
+    "line_start": 244,
+    "line_end": 264,
+    "text": "with Ada.Text_IO;  use Ada.Text_IO;\nwith Ada.Numerics; use Ada.Numerics;\n\nprocedure Custom_Fixed_Point_Range is\n   type T_Inv_Trig is\n     delta 0.0005\n     range -Pi / 2.0 .. Pi / 2.0;\nbegin\n   Put_Line (\"Delta    value of T_Inv_Trig: \"\n             & T_Inv_Trig'Image\n                 (T_Inv_Trig'Delta));\n   Put_Line (\"Minimum  value of T_Inv_Trig: \"\n             & T_Inv_Trig'Image\n                 (T_Inv_Trig'First));\n   Put_Line (\"Maximum  value of T_Inv_Trig: \"\n             & T_Inv_Trig'Image\n                 (T_Inv_Trig'Last));\nend Custom_Fixed_Point_Range;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Fixed_Point_Types.Custom_Fixed_Point_Range",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_fixed_point_range.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "custom_fixed_point_range.adb",
+    "text_hash": "fab49e505eba8a77be2aef586cba7ee0854f794252b03b50ea7d1c90ad75f896d7cb03bcaee4949adc50f744a976eab70a150031623d1ce240fcd96757505d62",
+    "text_hash_short": "41b251e49ab887496ecd491431b7ffb0"
+}

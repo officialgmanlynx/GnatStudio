@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/05_Proof_Of_Functional_Correctness.rst",
+    "line_start": 189,
+    "line_end": 206,
+    "text": "package Show_Sort is\n\n   type Nat_Array is array (Positive range <>) of Natural;\n\n   function Is_Sorted (A : Nat_Array) return Boolean is\n     (for all I in A'Range =>\n        (if I < A'Last then A (I) <= A (I + 1)));\n   --  Returns True if A is sorted in increasing order.\n\n   subtype Sorted_Nat_Array is Nat_Array with\n     Dynamic_Predicate => Is_Sorted (Sorted_Nat_Array);\n   --  Elements of type Sorted_Nat_Array are all sorted.\n\n   Good_Array : Sorted_Nat_Array := (1, 2, 4, 8, 42);\nend Show_Sort;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Proof_of_Functional_Correctness.Sort",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_report_all"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "show_sort.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "b1620f736da119a42cbf1461d6cabcbc194c498f39d9682a8d1fa354ba7fab780b808218ad8fda76953fcc99340463937eb562ff8900616711143eb0fecf7fd7",
+    "text_hash_short": "d3b3d26d62074d11b19d9282cc548c1b"
+}

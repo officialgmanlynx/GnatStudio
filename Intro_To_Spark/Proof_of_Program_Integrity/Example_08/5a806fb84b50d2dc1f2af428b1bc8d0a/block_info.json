@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/03_Proof_Of_Program_Integrity.rst",
+    "line_start": 1123,
+    "line_end": 1157,
+    "text": "package Memories is\n\n   type Chunk is array (Integer range <>) of Integer\n     with Predicate => Chunk'Length >= 10;\n\n   function Is_Too_Coarse (V : Integer) return Boolean;\n\n   procedure Treat_Value (V : out Integer);\n\nend Memories;\n\nwith Memories; use Memories;\n\nprocedure Read_Record (Memory : Chunk; From : Integer)\n  with SPARK_Mode => On,\n       Pre => From in Memory'First .. Memory'Last - 2\nis\n   function Read_One (First : Integer; Offset : Integer) return Integer is\n      Value : Integer := Memory (First + Offset);\n   begin\n      if Is_Too_Coarse (Value) then\n         Treat_Value (Value);\n      end if;\n      return Value;\n   end Read_One;\n\n   Data1, Data2 : Integer;\n\nbegin\n   Data1 := Read_One (From, 1);\n   Data2 := Read_One (From, 2);\nend Read_Record;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Proof_of_Program_Integrity.Example_08",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_report_all"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "memories.ads",
+        "read_record.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "f761cfb0c27c8071fff5639c3c1ed3578270a05a064f657a6a44086e8359a6ca1d2edd51b99cb94fdab38c2c6b23dfc823297bd455356842acd0b7fe4010330a",
+    "text_hash_short": "5a806fb84b50d2dc1f2af428b1bc8d0a"
+}

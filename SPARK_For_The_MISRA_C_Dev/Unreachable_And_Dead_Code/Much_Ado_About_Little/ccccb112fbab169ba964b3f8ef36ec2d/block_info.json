@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/08_unreachable_and_dead_code.rst",
+    "line_start": 47,
+    "line_end": 90,
+    "text": "procedure Much_Ado_About_Little (X, Y, Z : Integer; Success : out Boolean);\n\nprocedure Much_Ado_About_Little (X, Y, Z : Integer; Success : out Boolean) is\n\n   procedure Ok is\n   begin\n      Success := True;\n   end Ok;\n\n   procedure NOk is\n   begin\n      Success := False;\n   end NOk;\n\nbegin\n   Success := False;\n\n   for K in Y .. Z loop\n      if K < X and not Success then\n         Ok;\n      end if;\n   end loop;\n\n   if X > Y then\n      Ok;\n   else\n      NOk;\n   end if;\n\n   if Z > Y then\n      NOk;\n      return;\n   else\n      Ok;\n      return;\n   end if;\n\n   if Success then\n      Success := not Success;\n   end if;\nend Much_Ado_About_Little;\n",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Unreachable_And_Dead_Code.Much_Ado_About_Little",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow",
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": true,
+    "source_files": [
+        "much_ado_about_little.ads",
+        "much_ado_about_little.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "9a403adef3d55690e4caba7588f5b344af7aee5ec67fee1625bc0d15bd5b065c5935409b49622afb3a290af886e1844106f0126b722132a9089775e6201a138f",
+    "text_hash_short": "ccccb112fbab169ba964b3f8ef36ec2d"
+}

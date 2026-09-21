@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 9257,
+    "line_end": 9333,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Decimal_Precision is\n   Delta_3 : constant := 10.0 ** (-3);\n\n   --  Decimal fixed-point type:\n   --  small = delta = 10^(-3)\n   --  (exact decimal scaling)\n   type T3_D6 is\n     delta Delta_3\n     digits 6;\n\n   --  Ordinary fixed-point type\n   --  (default binary small):\n   --  small = largest power of two <= delta\n   --        = 2^(-10) ~= 9.77e-04\n   --            (< delta = 10^(-3))\n   type T3_Fixed is\n     delta Delta_3\n     range -999.999 .. 999.999;\n\n   --  Ordinary fixed-point type with\n   --  explicit non-binary small:\n   --  small = delta = 10^(-3)\n   --  (forced via Small aspect)\n   type T3_Fake_Dec is\n     delta Delta_3\n     range -999.999 .. 999.999\n     with Small => Delta_3;\nbegin\n   Put_Line (\"The small          of \"\n             & \"T3_D6       is \"\n             & T3_D6'Small'Image);\n   Put_Line (\"The delta    value of \"\n             & \"T3_D6       is \"\n             & T3_D6'Delta'Image);\n   Put_Line (\"The minimum  value of \"\n             & \"T3_D6       is \"\n             & T3_D6'First'Image);\n   Put_Line (\"The maximum  value of \"\n             & \"T3_D6       is \"\n             & T3_D6'Last'Image);\n   New_Line;\n\n   Put_Line (\"------------------------------\");\n\n   Put_Line (\"The small          of \"\n             & \"T3_Fixed    is \"\n             & T3_Fixed'Small'Image);\n   Put_Line (\"The delta    value of \"\n             & \"T3_Fixed    is \"\n             & T3_Fixed'Delta'Image);\n   Put_Line (\"The minimum  value of \"\n             & \"T3_Fixed    is \"\n             & T3_Fixed'First'Image);\n   Put_Line (\"The maximum  value of \"\n             & \"T3_Fixed    is \"\n             & T3_Fixed'Last'Image);\n\n   Put_Line (\"------------------------------\");\n\n   Put_Line (\"The small          of \"\n             & \"T3_Fake_Dec is \"\n             & T3_Fake_Dec'Small'Image);\n   Put_Line (\"The delta    value of \"\n             & \"T3_Fake_Dec is \"\n             & T3_Fake_Dec'Delta'Image);\n   Put_Line (\"The minimum  value of \"\n             & \"T3_Fake_Dec is \"\n             & T3_Fake_Dec'First'Image);\n   Put_Line (\"The maximum  value of \"\n             & \"T3_Fake_Dec is \"\n             & T3_Fake_Dec'Last'Image);\nend Show_Decimal_Precision;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Ordinary_Fixed_Point_Types.Decimal_Precision",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_decimal_precision.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_decimal_precision.adb",
+    "text_hash": "a6e00d50f2ce406d62742ab93f065a86cbc26446c3020b51ffac64c2d5eb0c365ffe7e310f595d3e8516e65dc9ceee76c7f22f3cf6a04b9489ff9714950c78ef",
+    "text_hash_short": "7ac6283c18cba9f7d69a86d3f28bbe6c"
+}

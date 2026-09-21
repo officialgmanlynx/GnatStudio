@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 2388,
+    "line_end": 2442,
+    "text": "package Integer_Access_Types is\n\n   type Integer_Access is\n     access Integer;\n\n   type Integer_Access_All is\n     access all Integer;\n\n   type Integer_Access_Const is\n     access constant Integer;\n\n   procedure Show;\n\nend Integer_Access_Types;\n\nwith Ada.Text_IO;          use Ada.Text_IO;\n\npackage body Integer_Access_Types is\n\n   I_Var : aliased          Integer :=  0;\n   Fact  : aliased constant Integer := 42;\n\n   Dyn_Ptr     : constant Integer_Access\n                   := new Integer'(30);\n   I_Var_Ptr   : constant Integer_Access_All\n                   := I_Var'Access;\n   I_Var_C_Ptr : constant Integer_Access_Const\n                   := I_Var'Access;\n   Fact_Ptr    : constant Integer_Access_Const\n                   := Fact'Access;\n\n   procedure Show is\n   begin\n      Put_Line (\"Dyn_Ptr:     \"\n                & Integer'Image (Dyn_Ptr.all));\n      Put_Line (\"I_Var_Ptr:   \"\n                & Integer'Image (I_Var_Ptr.all));\n      Put_Line (\"I_Var_C_Ptr: \"\n                & Integer'Image\n                    (I_Var_C_Ptr.all));\n      Put_Line (\"Fact_Ptr:    \"\n                & Integer'Image (Fact_Ptr.all));\n   end Show;\n\nend Integer_Access_Types;\n\nwith Integer_Access_Types;\n\nprocedure Show_Access_Modifiers is\nbegin\n   Integer_Access_Types.Show;\nend Show_Access_Modifiers;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Aliasing.Show_Access_Modifiers",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "integer_access_types.ads",
+        "integer_access_types.adb",
+        "show_access_modifiers.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_access_modifiers.adb",
+    "text_hash": "ec290311775e2281424554aefad2699a6e3a567316886b6ca738d13680505e00b2375038989a2f7b9235c9910c4e22553e5afda336c48e62491b674f479bd0e0",
+    "text_hash_short": "c9036f060859207ea14354b26dc8b981"
+}

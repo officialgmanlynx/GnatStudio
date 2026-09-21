@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/modular_prog/packages.rst",
+    "line_start": 101,
+    "line_end": 116,
+    "text": "package Driver_M1.Ext is\n\nend Driver_M1.Ext;\n\n--  A package called Drivers.M1.Ext is\n--  automatically available!\n\nwith Drivers.M1.Ext;\n\nprocedure Dummy is\nbegin\n   null;\nend Dummy;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Modular_Prog.Packages.Package_Renaming.Package_Renaming_1",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "driver_m1-ext.ads",
+        "dummy.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "d4ed7d8705119d3409fced28a8a24c10c75119b4185a46fcc2eac5a5244b07f62c595528cb75e67b41c957bcd6491b79070ba9da58ea9148f770969c01de10fc",
+    "text_hash_short": "e338d668dbd98b1a3917a8d3d948a439"
+}

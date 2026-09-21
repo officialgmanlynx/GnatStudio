@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numeric_attributes.rst",
+    "line_start": 1122,
+    "line_end": 1150,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Model_Attribute is\n   package F_IO is new\n     Ada.Text_IO.Float_IO (Float);\n\n   V : Float;\nbegin\n   F_IO.Default_Fore := 3;\n   F_IO.Default_Aft  := 1;\n   F_IO.Default_Exp  := 0;\n\n   Put_Line\n     (\"Original value: 1_000_000_000_000_000.0\");\n\n   V := 1.0E+15;\n   Put (\"Model value:    \");\n   F_IO.Put (Item => V);\n   New_Line;\n\n   V := 1.0E+15 - Float'Model (1.0E+15);\n   Put (\"Difference:     \");\n   F_IO.Put (Item => V);\n   New_Line;\n\nend Show_Model_Attribute;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numeric_Attributes.Floating_Point_Types.Model_Attribute",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_model_attribute.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_model_attribute.adb",
+    "text_hash": "82db72d1937b8b4d4259e382c3056793035ec76e3a8da3328a485b962af001d8a96cd8d45a0ae8c58329c5500b194aa1cd1eec99b6e879ab310e3c947b68b36c",
+    "text_hash_short": "b9a260e4c55dc970fbb8dccf7d5778ba"
+}

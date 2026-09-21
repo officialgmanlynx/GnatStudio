@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numeric_attributes.rst",
+    "line_start": 883,
+    "line_end": 903,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Float_Value is\n   package F_IO is new\n     Ada.Text_IO.Float_IO (Float);\n\n   V : Float;\nbegin\n   F_IO.Default_Fore := 3;\n   F_IO.Default_Aft  := 1;\n   F_IO.Default_Exp  := 0;\n\n   V := 1.0E+15;\n   Put (\"1.0E+15 = \");\n   F_IO.Put (Item => V);\n   New_Line;\n\nend Show_Float_Value;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numeric_Attributes.Floating_Point_Types.Float_Value",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_float_value.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_float_value.adb",
+    "text_hash": "0435be01cea8bcf0269f6ecc687f0aca9c88394c97cd8a75548523e6fbc2edee3a862b908475be6d3f417e6d4f75d0ead09f7dd004b350089591f708184a5856",
+    "text_hash_short": "a7f80f7584ebaf39f2d5f9564c9c7d64"
+}

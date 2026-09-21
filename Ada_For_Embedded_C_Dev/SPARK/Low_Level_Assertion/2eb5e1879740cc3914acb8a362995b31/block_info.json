@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/05_SPARK.rst",
+    "line_start": 483,
+    "line_end": 495,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main is\n   X : Positive := 10;\nbegin\n   X := X * 5;\n   pragma Assert (X > 99);\n   X := X - 99;\n   Put_Line (Integer'Image (X));\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.SPARK.Low_Level_Assertion",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "9e30fef5bc5a5be7cf968f156f5c06564c6ddbc9dc808d4c94a3667f29c87ec368cf8c135589a88f2e0daaf08bf84db78e47e8c1ac453e61913ea52d7020cac6",
+    "text_hash_short": "2eb5e1879740cc3914acb8a362995b31"
+}

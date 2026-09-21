@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/03_Proof_Of_Program_Integrity.rst",
+    "line_start": 281,
+    "line_end": 297,
+    "text": "procedure Show_Precondition_Violation is\n\n   procedure Increment (X : in out Integer) with\n     Pre => X < Integer'Last  is\n   begin\n      X := X + 1;\n   end Increment;\n\n   X : Integer;\n\nbegin\n   X := Integer'Last;\n   Increment (X);\nend Show_Precondition_Violation;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Proof_of_Program_Integrity.Precondition_Violation",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure",
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run",
+        "prove"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": true,
+    "source_files": [
+        "show_precondition_violation.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": "show_precondition_violation.adb",
+    "text_hash": "012ca5fcca26c5a0010389ace89305b35a0ae61844095ee9bd6c18da7e2112e78c8a7715121a6ac41636d4d091133fb879966b690483026e107d65c3a1c5824a",
+    "text_hash_short": "60cb889128fc6bca10e21b1baf041258"
+}

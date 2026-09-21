@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 3828,
+    "line_end": 3863,
+    "text": "generic\n   type T_Fixed is delta <>;\nprocedure Gen_Show_Type_Info\n  (T_Fixed_Name : String);\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Gen_Show_Type_Info\n  (T_Fixed_Name : String) is\nbegin\n   Put_Line (\"The size           of \"\n             & T_Fixed_Name\n             & \" is \"\n             & T_Fixed'Size'Image\n             & \" bits\");\n   Put_Line (\"The small          of \"\n             & T_Fixed_Name\n             & \" is \"\n             & T_Fixed'Small'Image);\n   Put_Line (\"The delta    value of \"\n             & T_Fixed_Name\n             & \" is \"\n             & T_Fixed'Delta'Image);\n   Put_Line (\"The minimum  value of \"\n             & T_Fixed_Name\n             & \" is \"\n             & T_Fixed'First'Image);\n   Put_Line (\"The maximum  value of \"\n             & T_Fixed_Name\n             & \" is \"\n             & T_Fixed'Last'Image);\n   Put_Line (\"-----------------------------\");\nend Gen_Show_Type_Info;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Fixed_Point_Types.Machine_Representation_Ordinary_Fixed_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "gen_show_type_info.ads",
+        "gen_show_type_info.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "628e24e79f052b1ee7d417c50863f4ba7edfa29d6ae73238158224a70a59d24091fe21920255faaafa14b4374dc91d81db7212a0cfe73d23dd921928e0c10307",
+    "text_hash_short": "d80e4fd43256a3e8ff8575be6fcaa315"
+}

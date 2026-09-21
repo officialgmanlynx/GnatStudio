@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/controlled_types.rst",
+    "line_start": 2371,
+    "line_end": 2618,
+    "text": "with Ada.Finalization;\n\ngeneric\n   Default_Chunk_Size : Positive := 5;\n   type Element is private;\npackage Unbounded_Stacks is\n\n   Stack_Underflow : exception;\n\n   type Unbounded_Stack is private;\n\n   procedure Push (S : in out Unbounded_Stack;\n                   E :        Element);\n\n   function Pop (S : in out Unbounded_Stack)\n                 return Element;\n\n   function Is_Empty (S : Unbounded_Stack)\n                      return Boolean;\n\nprivate\n\n   type Element_Array is\n     array (Positive range <>) of\n       Element;\n\n   type Element_Array_Access is\n     access Element_Array;\n\n   type Unbounded_Stack is new\n     Ada.Finalization.Controlled with\n      record\n         Chunk_Size : Positive\n           := Default_Chunk_Size;\n         Data       : Element_Array_Access;\n         Top        : Natural := 0;\n      end record;\n\n   procedure Initialize\n     (S : in out Unbounded_Stack);\n\n   procedure Adjust\n     (S : in out Unbounded_Stack);\n\n   procedure Finalize\n     (S : in out Unbounded_Stack);\n\nend Unbounded_Stacks;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Ada.Unchecked_Deallocation;\n\npackage body Unbounded_Stacks is\n\n   --\n   --  LOCAL SUBPROGRAMS\n   --\n\n   procedure Free is\n     new Ada.Unchecked_Deallocation\n       (Object => Element_Array,\n        Name   => Element_Array_Access);\n\n   function Is_Full (S : Unbounded_Stack)\n                     return Boolean is\n   begin\n      return S.Top = S.Data'Last;\n   end Is_Full;\n\n   procedure Reallocate_Data\n     (To         : in out Element_Array_Access;\n      From       :        Element_Array_Access;\n      Max_Last   :        Positive;\n      Valid_Last :        Positive) is\n   begin\n      To := new Element_Array (1 .. Max_Last);\n\n      for I in 1 .. Valid_Last loop\n         To (I) := From (I);\n      end loop;\n   end Reallocate_Data;\n\n   procedure Increase_Size\n     (S : in out Unbounded_Stack)\n   is\n      Old_Data : Element_Array_Access := S.Data;\n      Old_Last : constant Positive\n                 := Old_Data'Last;\n      New_Last : constant Positive\n                 := Old_Data'Last + S.Chunk_Size;\n   begin\n      Put_Line (\"Increasing Unbounded_Stack \"\n                & \"(1 .. \"\n                & Old_Last'Image\n                & \") to (1 .. \"\n                & New_Last'Image\n                & \")\");\n\n      Reallocate_Data\n        (To         => S.Data,\n         From       => Old_Data,\n         Max_Last   => New_Last,\n         Valid_Last => S.Top);\n\n      Free (Old_Data);\n   end Increase_Size;\n\n   --\n   --  SUBPROGRAMS\n   --\n\n   procedure Push (S : in out Unbounded_Stack;\n                   E :        Element) is\n   begin\n      if Is_Full (S) then\n         Increase_Size (S);\n      end if;\n\n      S.Top := S.Top + 1;\n      S.Data (S.Top) := E;\n   end Push;\n\n   function Pop (S : in out Unbounded_Stack)\n                 return Element is\n   begin\n      return E : Element do\n         if Is_Empty (S) then\n            raise Stack_Underflow;\n         end if;\n\n         E := S.Data (S.Top);\n         S.Top := S.Top - 1;\n      end return;\n   end Pop;\n\n   function Is_Empty (S : Unbounded_Stack)\n                      return Boolean is\n   begin\n      return S.Top = 0;\n   end Is_Empty;\n\n   --\n   --  PRIVATE SUBPROGRAMS\n   --\n\n   procedure Initialize\n     (S : in out Unbounded_Stack)\n   is\n      Last : constant Positive\n             := S.Chunk_Size;\n   begin\n      Put_Line (\"Initializing Unbounded_Stack \"\n                & \"(1 .. \"\n                & Last'Image\n                & \")\");\n      S.Data := new Element_Array\n                      (1 .. S.Chunk_Size);\n   end Initialize;\n\n   procedure Allocate_Duplicate_Data\n     (S : in out Unbounded_Stack)\n   is\n      Last : constant Positive\n             := S.Data'Last;\n   begin\n      Put_Line (\"Duplicating data for new \"\n                & \"Unbounded_Stack (1 .. \"\n                & Last'Image\n                & \")\");\n\n      Reallocate_Data\n        (To         => S.Data,\n         From       => S.Data,\n         Max_Last   => Last,\n         Valid_Last => S.Top);\n   end Allocate_Duplicate_Data;\n\n   procedure Adjust\n     (S : in out Unbounded_Stack)\n   is\n   begin\n      Put_Line (\"Adjusting Unbounded_Stack...\");\n      Allocate_Duplicate_Data (S);\n   end Adjust;\n\n   procedure Finalize\n     (S : in out Unbounded_Stack)\n   is\n      Last : constant Positive\n             := S.Data'Last;\n   begin\n      Put_Line (\"Finalizing Unbounded_Stack \"\n                & \"(1 .. \"\n                & Last'Image\n                & \")\");\n      if S.Data /= null then\n        Free (S.Data);\n      end if;\n   end Finalize;\n\nend Unbounded_Stacks;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Unbounded_Stacks;\n\nprocedure Show_Unbounded_Stack is\n\n   package Unbounded_Integer_Stacks is new\n     Unbounded_Stacks (Element => Integer);\n   use Unbounded_Integer_Stacks;\n\n   procedure Print_Pop_Stack\n      (S    : in out Unbounded_Stack;\n       Name :        String)\n   is\n      V : Integer;\n   begin\n      Put_Line (\"STACK: \" & Name);\n      Put (\"= \");\n      while not Is_Empty (S) loop\n         V := Pop (S);\n         Put (V'Image & \" \");\n      end loop;\n      New_Line;\n   end Print_Pop_Stack;\n\n   Stack   : Unbounded_Stack;\n   Stack_2 : Unbounded_Stack;\nbegin\n   for I in 1 .. 10 loop\n      Push (Stack, I);\n   end loop;\n\n   Stack_2 := Stack;\n\n   for I in 11 .. 20 loop\n      Push (Stack, I);\n   end loop;\n\n   Print_Pop_Stack (Stack, \"Stack\");\n   Print_Pop_Stack (Stack_2, \"Stack_2\");\n\nend Show_Unbounded_Stack;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Controlled_Types.Applications.Unbounded_Stacks",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "unbounded_stacks.ads",
+        "unbounded_stacks.adb",
+        "show_unbounded_stack.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_unbounded_stack.adb",
+    "text_hash": "f0a828d5e309836910297e90e2af6fb56b96d06554c0ada4c7fe9b6dbc8798b44fe05616f3a98a622711b552560f323c36b6cddb65607985b65b193176832d26",
+    "text_hash_short": "22c795f2dfd2fbdf5468b54722d7126b"
+}

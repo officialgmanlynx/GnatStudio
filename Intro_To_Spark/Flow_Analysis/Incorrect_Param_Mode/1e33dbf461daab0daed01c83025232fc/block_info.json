@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/02_Flow_Analysis.rst",
+    "line_start": 156,
+    "line_end": 176,
+    "text": "package Show_Incorrect_Param_Mode is\n\n   type T is new Integer;\n\n   procedure Swap (X, Y : in out T);\n\nend Show_Incorrect_Param_Mode;\n\npackage body Show_Incorrect_Param_Mode is\n\n   procedure Swap (X, Y : in out T) is\n      Tmp : T := X;\n   begin\n      Y := X;   -- The initial value of Y is not used\n      X := Tmp; -- Y is computed to be an out parameter\n   end Swap;\n\nend Show_Incorrect_Param_Mode;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Flow_Analysis.Incorrect_Param_Mode",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "show_incorrect_param_mode.ads",
+        "show_incorrect_param_mode.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "2127f7f0f8683be9bf424f4b2a54eea7197417e888daec93abf56c795eb4d982c3d8629dd4a08dc96880103d378bdfcef23672cd64687b48371832973f1512a4",
+    "text_hash_short": "1e33dbf461daab0daed01c83025232fc"
+}

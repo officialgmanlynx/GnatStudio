@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_strings.rst",
+    "line_start": 105,
+    "line_end": 145,
+    "text": "with Ada.Strings;       use Ada.Strings;\nwith Ada.Strings.Fixed; use Ada.Strings.Fixed;\nwith Ada.Strings.Maps;  use Ada.Strings.Maps;\nwith Ada.Text_IO;       use Ada.Text_IO;\n\nprocedure Show_Find_Words is\n\n   S   : String := \"Hello\" & 3 * \" World\";\n   F   : Positive;\n   L   : Natural;\n   I   : Natural := 1;\n\n   Whitespace : constant Character_Set :=\n     To_Set (' ');\nbegin\n   Put_Line (\"String: \" & S);\n   Put_Line (\"String length: \"\n             & Integer'Image (S'Length));\n\n   while I in S'Range loop\n      Find_Token\n        (Source  => S,\n         Set     => Whitespace,\n         From    => I,\n         Test    => Outside,\n         First   => F,\n         Last    => L);\n\n      exit when L = 0;\n\n      Put_Line (\"Found word instance at position \"\n                & Natural'Image (F)\n                & \": '\" & S (F .. L) & \"'\");\n      --   & \"-\" & F'Img & \"-\" & L'Img\n\n      I := L + 1;\n   end loop;\nend Show_Find_Words;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Find_Words",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_find_words.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_find_words.adb",
+    "text_hash": "b0528ada4769b6c32911401ac98aa78f2904ed4b3f2f6c4870925375f873c29f81e932f4250ca2e5a57e6aca936ca8e5322b76b7bfcfd7fe458b4e65749e1101",
+    "text_hash_short": "e622f489af5901e5d31f314efc3324d2"
+}

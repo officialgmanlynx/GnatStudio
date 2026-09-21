@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 3198,
+    "line_end": 3240,
+    "text": "package Variant_Records is\n\n   type Simple_Record\n     (Extended   : Boolean := False;\n      Extended_2 : Boolean := False) is\n   record\n      V : Integer;\n      case Extended is\n         when False =>\n            case Extended_2 is\n               when False =>\n                  null;\n               when True  =>\n                  V_Int_2 : Integer;\n                  V_Int_3 : Integer;\n            end case;\n         when True  =>\n            V_Float : Float;\n            case Extended_2 is\n               when False =>\n                  null;\n               when True  =>\n                  V_Float_2 : Float;\n            end case;\n      end case;\n   end record;\n\nend Variant_Records;\n\nwith Ada.Text_IO;     use Ada.Text_IO;\n\nwith Variant_Records; use Variant_Records;\n\nprocedure Show_Variant_Rec_Size is\n   SR : Simple_Record;\nbegin\n   Put_Line (\"SR'Size : \"\n             & SR'Size'Image\n             & \" bits\");\nend Show_Variant_Rec_Size;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Variant_Parts.Size",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "variant_records.ads",
+        "show_variant_rec_size.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_variant_rec_size.adb",
+    "text_hash": "ee2f607091314c74376ab1f98b43df5653a784a3149e889afec8bb21ffbb3f97ae57b9f1e9cbfe27521de2253975e14864031b107c263255ff3c110811226f18",
+    "text_hash_short": "5f0ac936a5fee50cbe88a7b863a1a550"
+}

@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/modular_prog/packages.rst",
+    "line_start": 901,
+    "line_end": 917,
+    "text": "limited private with Info;\n\npackage A is\n\n   type T1 is private;\n\nprivate\n\n   type T1 is record\n      V : Integer := Info.Zero_Const;\n      W : Integer := Info.Zero_Func;\n   end record;\n\nend A;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Modular_Prog.Packages.Limited_Visibility.Limited_Private_Visibility_Other_Elements",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "a.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "474ff023fbdb1a81c5bbd9e72e1f972a5442040983d662d09f8ae0dfb74619f568f15303a9503a875b2a7d1ad565d062a45d4ad1b02808834a182fe462ac9978",
+    "text_hash_short": "61ecb5dc2617eecac62a05d7d2c6c0df"
+}

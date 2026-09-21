@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 1745,
+    "line_end": 1793,
+    "text": "package P is\n\n   type Display_Interface is interface;\n   procedure Display (D : Display_Interface) is abstract;\n\n   type Small_Display_Type is new Display_Interface with null record;\n   procedure Display (D : Small_Display_Type);\n\n   type Big_Display_Type is new Display_Interface with null record;\n   procedure Display (D : Big_Display_Type);\n\nend P;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body P is\n\n   procedure Display (D : Small_Display_Type) is\n      pragma Unreferenced (D);\n   begin\n      Put_Line (\"Using Small_Display_Type\");\n   end Display;\n\n   procedure Display (D : Big_Display_Type) is\n      pragma Unreferenced (D);\n   begin\n      Put_Line (\"Using Big_Display_Type\");\n   end Display;\n\nend P;\n\nwith P; use P;\n\nprocedure Main is\n   D_Small : Small_Display_Type;\n   D_Big   : Big_Display_Type;\n\n   procedure Dispatching_Display (D : Display_Interface'Class) is\n   begin\n      D.Display;\n   end Dispatching_Display;\n\nbegin\n   Dispatching_Display (D_Small);\n   Dispatching_Display (D_Big);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.Interfaces_1",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "p.ads",
+        "p.adb",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "96b0a992c89e68466755894893019c61d0f904affea1e756dd88d08949bba6e34bc0892f6ac393e7afd61724d4cad7d97e1ec0a612e0e5fe4485e26ed20c2659",
+    "text_hash_short": "564eba158b2f8fc3efea9e892a21caa9"
+}

@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/02_Flow_Analysis.rst",
+    "line_start": 1200,
+    "line_end": 1228,
+    "text": "package Show_Swap is\n\n   procedure Swap (X, Y : in out Positive);\n\n   procedure Identity (X, Y : in out Positive) with\n     Depends => (X => X,\n                 Y => Y);\n\nend Show_Swap;\n\npackage body Show_Swap is\n\n   procedure Swap (X, Y : in out Positive) is\n      Tmp : constant Positive := X;\n   begin\n      X := Y;\n      Y := Tmp;\n   end Swap;\n\n   procedure Identity (X, Y : in out Positive) is\n   begin\n      Swap (X, Y);\n      Swap (Y, X);\n   end Identity;\n\nend Show_Swap;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Flow_Analysis.Example_10",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "show_swap.ads",
+        "show_swap.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "5fde37fc0d1fb796cdf86939815b5dc3c5921d16d6e4135a58eb95ad49ff4ce6e60691c17fcc08bdab6c8948fa5d84f10bc61a309fbc516cbf1ff85a477904a7",
+    "text_hash_short": "8567ece1e5bbc190f62dd483785d078a"
+}

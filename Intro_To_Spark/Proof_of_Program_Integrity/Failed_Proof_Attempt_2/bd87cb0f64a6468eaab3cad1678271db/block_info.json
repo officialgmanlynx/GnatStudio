@@ -1,0 +1,49 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/03_Proof_Of_Program_Integrity.rst",
+    "line_start": 520,
+    "line_end": 558,
+    "text": "package Show_Failed_Proof_Attempt is\n\n   Incremented : Boolean := False;\n\n   procedure Incr_Until (X : in out Natural) with\n     Contract_Cases =>\n       (Incremented => X > X'Old,\n        others      => X = X'Old);\n\nend Show_Failed_Proof_Attempt;\n\npackage body Show_Failed_Proof_Attempt is\n\n   procedure Incr_Until (X : in out Natural) is\n   begin\n      if X < 1000 then\n         X := X + 1;\n         Incremented := True;\n      else\n         Incremented := False;\n      end if;\n   end Incr_Until;\n\nend Show_Failed_Proof_Attempt;\n\nwith Show_Failed_Proof_Attempt; use Show_Failed_Proof_Attempt;\n\nprocedure Main is\n   Dummy : Integer;\nbegin\n   Dummy := 0;\n   Incr_Until (Dummy);\n\n   Dummy := 1000;\n   Incr_Until (Dummy);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Proof_of_Program_Integrity.Failed_Proof_Attempt_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure",
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run",
+        "prove"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": true,
+    "source_files": [
+        "show_failed_proof_attempt.ads",
+        "show_failed_proof_attempt.adb",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": "main.adb",
+    "text_hash": "4099bf516ce92285feaa38efbfe6e2cb5fc4f15fa8ab7f12adcf11125d6fb2bcc9ced16f50f153ca711cc069d9d7bfacbe919fa5b7cca3ceba7e7cb4fdd44d8d",
+    "text_hash_short": "bd87cb0f64a6468eaab3cad1678271db"
+}

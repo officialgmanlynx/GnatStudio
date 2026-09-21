@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 10464,
+    "line_end": 10506,
+    "text": "package body Biquads.Fixed_P is\n\n   --  Low-pass biquad (16-bit quantized):\n   --  sample rate = 44,100 Hz, Fc = 500 Hz,\n   --  Q = 0.4\n   A0 : constant PCM_Sample\n          :=  0.00115966796875;\n   A1 : constant PCM_Sample\n          :=  0.0023193359375;\n   A2 : constant PCM_Sample\n          :=  0.00115966796875;\n   B1 : constant PCM_Sample\n          := -1.8319091796875 / 2;\n   B2 : constant PCM_Sample\n          :=  0.836578369140625;\n\n   --  Fixed-point biquad with headroom:\n   --  the signal runs through the filter\n   --  at half level, so the feedback term\n   --  b1 * y stays inside the PCM_Sample\n   --  range for any full-scale input.\n   --\n   --  The original level is restored when\n   --  the result is returned.\n   function Biquad (D    : in out Filter_Delay;\n                    X_In : PCM_Sample)\n                    return PCM_Sample\n   is\n      X, Y : PCM_Sample;\n   begin\n      X    := X_In / 2;\n      Y    := PCM_Sample (X * A0) + D.Z1;\n      D.Z1 := PCM_Sample (X * A1) + D.Z2\n              - PCM_Sample (B1 * Y) * 2;\n      D.Z2 := PCM_Sample (X * A2) -\n              PCM_Sample (B2 * Y);\n      return Y * 2;\n   end Biquad;\n\nend Biquads.Fixed_P;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Ordinary_Fixed_Point_Types.Biquad",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "biquads-fixed_p.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "e29aa3d5a7efabb863ed3deeb56918a28e1ced68df0f4a2357ba988c23beffe8e29bcf3f494d94720a8a521c2740046f5bc3717e19ef351c3069bf5f0c86292d",
+    "text_hash_short": "9d75adf1188f9925f42c8491dc456871"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 2591,
+    "line_end": 2606,
+    "text": "package Some_Tagged_Types is\n\n   type T is tagged record\n      A : Integer;\n   end record;\n\n   type T_Derived is new T with record\n      B : Float;\n   end record;\n\n   Obj : T_Derived;\n\nend Some_Tagged_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Type_Conversion.Tagged_Types_View",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "some_tagged_types.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "0135a46ddd6fd07c581fee87eb90bc225574b33a82aa60ba0a067ec6c5ec557ccb76009a71e5356e4f75d8667802be589034aa387fe9e3a16e844e9e4f9f43f2",
+    "text_hash_short": "2e18ba972682f1ae1d38e38842fde48e"
+}

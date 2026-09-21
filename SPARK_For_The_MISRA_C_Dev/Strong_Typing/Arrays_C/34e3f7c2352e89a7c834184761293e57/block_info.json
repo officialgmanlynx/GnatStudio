@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/04_strong_typing.rst",
+    "line_start": 171,
+    "line_end": 192,
+    "text": "!main.c\n#include <stdio.h>\n\nint count(int *p, int len, int v) {\n   int count = 0;\n   while (len--) {\n      if (*p++ == v) {\n         count++;\n      }\n   }\n   return count;\n}\n\nint main() {\n   int p[5] = {0, 3, 9, 3, 3};\n   int c = count(p, 5, 3);\n   printf(\"value 3 is seen %d times in p\\n\", c);\n   return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Strong_Typing.Arrays_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "d94232f6600c695aa8608d0f8d2a0b0ad25f5b8ca9848fec4b9c74a050b89f83e0e275ac7099b5559395ea95c21612e707b1ec35ab3ff73352dccc2113768f97",
+    "text_hash_short": "34e3f7c2352e89a7c834184761293e57"
+}

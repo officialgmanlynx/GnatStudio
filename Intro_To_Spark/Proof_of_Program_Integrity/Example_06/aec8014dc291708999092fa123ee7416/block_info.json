@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/03_Proof_Of_Program_Integrity.rst",
+    "line_start": 1025,
+    "line_end": 1061,
+    "text": "package Memories is\n\n   type Chunk is array (Integer range <>) of Integer\n     with Predicate => Chunk'Length >= 10;\n\n   function Is_Too_Coarse (V : Integer) return Boolean;\n\n   procedure Treat_Value (V : out Integer);\n\nend Memories;\n\nwith Memories; use Memories;\n\nprocedure Read_Record (Memory : Chunk; From : Integer)\n  with SPARK_Mode => On,\n       Pre => From in Memory'First .. Memory'Last - 2\nis\n   function Read_One (First : Integer; Offset : Integer) return Integer\n     with Pre => First + Offset in Memory'Range\n   is\n      Value : Integer := Memory (First + Offset);\n   begin\n      if Is_Too_Coarse (Value) then\n         Treat_Value (Value);\n      end if;\n      return Value;\n   end Read_One;\n\n   Data1, Data2 : Integer;\n\nbegin\n   Data1 := Read_One (From, 1);\n   Data2 := Read_One (From, 2);\nend Read_Record;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Proof_of_Program_Integrity.Example_06",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "memories.ads",
+        "read_record.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "74d72d41da3a59b9a692167649806111dd863ba3526792cd8d522eb0944a0102f24383266bfad8e9470f5adcc4bd1fcc6226ca3cc6a5a145fb50678595587ae1",
+    "text_hash_short": "aec8014dc291708999092fa123ee7416"
+}

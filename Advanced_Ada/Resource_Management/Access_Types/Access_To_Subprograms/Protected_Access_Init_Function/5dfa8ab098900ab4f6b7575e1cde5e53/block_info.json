@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 5521,
+    "line_end": 5588,
+    "text": "package Work_Registry is\n\n   type Work_Id is tagged limited private;\n\n   type Work_Handler is\n     access protected procedure (T : Work_Id);\n\n   subtype Valid_Work_Handler is\n     not null Work_Handler;\n\n   type Work_Handlers is\n     array (Positive range <>) of Work_Handler;\n\n   protected type Work_Handler_Registry\n     (Last : Positive)\n   is\n\n      procedure Register (T : Valid_Work_Handler);\n\n      procedure Reset;\n\n      procedure Process_All;\n\n   private\n\n      D    : Work_Handlers (1 .. Last);\n      Curr : Natural := 0;\n\n   end Work_Handler_Registry;\n\nprivate\n\n   type Work_Id is tagged limited null record;\n\nend Work_Registry;\n\npackage body Work_Registry is\n\n   protected body Work_Handler_Registry is\n\n      procedure Register (T : Valid_Work_Handler)\n      is\n      begin\n         if Curr < Last then\n            Curr := Curr + 1;\n            D (Curr) := T;\n         end if;\n      end Register;\n\n      procedure Reset is\n      begin\n         Curr := 0;\n      end Reset;\n\n      procedure Process_All is\n         Dummy_ID : Work_Id;\n      begin\n         for I in D'First .. Curr loop\n            D (I).all (Dummy_ID);\n         end loop;\n      end Process_All;\n\n   end Work_Handler_Registry;\n\nend Work_Registry;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Access_To_Subprograms.Protected_Access_Init_Function",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "work_registry.ads",
+        "work_registry.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "689b9dd1ec632225a449114b1c09f8825660dc409fe209892a79c628d98b7027c391b7eb300a7b5573118f79fc6ffdf36076e359829aa66df02d6d5c5beed8c2",
+    "text_hash_short": "5dfa8ab098900ab4f6b7575e1cde5e53"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/generics.rst",
+    "line_start": 334,
+    "line_end": 345,
+    "text": "with Ada.Float_Text_IO;\n\nprocedure Show_Float_Text_IO is\n   X : constant Float := 2.5;\n\n   use Ada.Float_Text_IO;\nbegin\n   Put (X);\nend Show_Float_Text_IO;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Generics.Show_Float_Text_IO",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_float_text_io.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_float_text_io.adb",
+    "text_hash": "eb169bb57f6ca1521500f919cfe153c81abd02040a53e272d23cbc58bced64f0997ec91c8e85fa294dfb8bcc2abd681d5f45715cbf76ca8073a9f820b8b13be0",
+    "text_hash_short": "7cc9b547ef301a2071e9fb65caa4631b"
+}

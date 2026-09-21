@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/02_Flow_Analysis.rst",
+    "line_start": 54,
+    "line_end": 78,
+    "text": "package Show_Uninitialized is\n\n   type Array_Of_Naturals is array (Integer range <>) of Natural;\n\n   function Max_Array (A : Array_Of_Naturals) return Natural;\n\nend Show_Uninitialized;\n\npackage body Show_Uninitialized is\n\n   function Max_Array (A : Array_Of_Naturals) return Natural is\n      Max : Natural;\n   begin\n      for I in A'Range loop\n         if A (I) > Max then -- Here Max may not be initialized\n            Max := A (I);\n         end if;\n      end loop;\n      return Max;\n   end Max_Array;\n\nend Show_Uninitialized;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Flow_Analysis.Uninitialized",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "show_uninitialized.ads",
+        "show_uninitialized.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "2fd4cf5575e0678a6c9fcd0c99ed8f04f2ae88be02db653e70304032a5070ca6f781b58449d7ffa34df0e698caa2071405cf196697ffb7a318bfbbc5bef86d59",
+    "text_hash_short": "82fe32cbe33e25bac5466f86ee2e03c4"
+}

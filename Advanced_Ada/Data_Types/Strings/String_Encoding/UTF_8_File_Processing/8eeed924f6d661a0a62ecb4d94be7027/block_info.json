@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/strings.rst",
+    "line_start": 1275,
+    "line_end": 1368,
+    "text": "with Ada.Wide_Wide_Text_IO;\nuse  Ada.Wide_Wide_Text_IO;\n\nprocedure Put_Line_UTF_8_Characters\n  (WSS : Wide_Wide_String)\nis\n   procedure Put_Complete_UTF_8_String\n     (WSS : Wide_Wide_String)\n   is\n   begin\n      Put_Line (\"STRING: \" & WSS);\n      Put_Line (\"Length: \"\n                & WSS'Length'Wide_Wide_Image\n                & \" characters\");\n      New_Line;\n   end Put_Complete_UTF_8_String;\n\n   procedure Put_UTF_8_Characters\n     (WSS : Wide_Wide_String)\n   is\n   begin\n      for I in WSS'Range loop\n         Put (I'Wide_Wide_Image & \": \");\n         Put (WSS (I));\n         New_Line;\n      end loop;\n   end Put_UTF_8_Characters;\n\nbegin\n    Put_Complete_UTF_8_String (WSS);\n    Put_UTF_8_Characters (WSS);\n    Put_Line (\"--------------------\");\nend Put_Line_UTF_8_Characters;\n\nwith Ada.Wide_Wide_Text_IO;\nuse  Ada.Wide_Wide_Text_IO;\n\nprocedure Generate_UTF_8_File\n  (Output_File_Name : String)\nis\n   F : File_Type;\nbegin\n   Create (F, Out_File, Output_File_Name);\n   Put_Line (F, \"\u2665\u266b\");\n   Put_Line (F, \"\u0645\u0631\u062d\u0628\u0627 \u064a\u0627 \u0639\u0627\u0644\u0645\");\n   Close (F);\nend Generate_UTF_8_File;\n\nwith Ada.Wide_Wide_Text_IO;\nuse  Ada.Wide_Wide_Text_IO;\n\nwith Generate_UTF_8_File;\nwith Put_Line_UTF_8_Characters;\n\nprocedure Show_UTF_8 is\n\n   File_Name_In  : constant String :=\n                     \"utf-8_test.txt\";\n   File_Name_Out : constant String :=\n                     \"utf-8_copy.txt\";\n\n   procedure Read_Write_UTF_8_File\n     (Input_File_Name,\n      Output_File_Name : String)\n   is\n      F_In, F_Out : File_Type;\n   begin\n      Open (F_In, In_File, Input_File_Name);\n      Create (F_Out, Out_File, Output_File_Name);\n\n      while not End_Of_File (F_In) loop\n         declare\n            S : constant Wide_Wide_String :=\n                  Get_Line (F_In);\n         begin\n            Put_Line_UTF_8_Characters (S);\n            Put_Line (F_Out, S);\n         end;\n      end loop;\n\n      Close (F_In);\n      Close (F_Out);\n   end Read_Write_UTF_8_File;\n\nbegin\n   Generate_UTF_8_File (File_Name_In);\n\n   Read_Write_UTF_8_File\n     (Input_File_Name  => File_Name_In,\n      Output_File_Name => File_Name_Out);\nend Show_UTF_8;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Strings.String_Encoding.UTF_8_File_Processing",
+    "main_file": "show_utf_8.adb",
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnatW8",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "put_line_utf_8_characters.adb",
+        "generate_utf_8_file.adb",
+        "show_utf_8.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_utf_8.adb",
+    "text_hash": "cf4ff2db557b76604d4d52932084b66e0cc3ac432d4601ce45af3fe737a64a11214b9cc39a1bff269fac93e305d993db0a9e517003bc0980fdd83a2ac2a8e8d1",
+    "text_hash_short": "8eeed924f6d661a0a62ecb4d94be7027"
+}

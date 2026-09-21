@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/aggregates.rst",
+    "line_start": 18,
+    "line_end": 34,
+    "text": "with Ada.Containers.Vectors;\n\nprocedure Show_Container_Aggregate is\n\n   package Float_Vec is new\n     Ada.Containers.Vectors (Positive, Float);\n\n   V : constant Float_Vec.Vector :=\n         [1.0, 2.0, 3.0];\n\n   pragma Unreferenced (V);\nbegin\n   null;\nend Show_Container_Aggregate;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Aggregates.Container_Aggregates.Simple_Container_Aggregate",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_container_aggregate.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_container_aggregate.adb",
+    "text_hash": "e8334d4091ea4b4a7384a6a2e5d7e5399d512811e47571ce1f371dc4e627fcd99b88c63595968d11c573d890fbb7d639bb1f34230c0a1696f98cc6b0cd2c2538",
+    "text_hash_short": "b54cd5800179d4016bbce5a9b10734f2"
+}

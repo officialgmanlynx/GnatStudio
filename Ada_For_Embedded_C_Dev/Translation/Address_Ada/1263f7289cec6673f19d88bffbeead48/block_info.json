@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 578,
+    "line_end": 587,
+    "text": "with System;\n\nprocedure Test is\n   R : Integer with Address => System'To_Address (16#FFFF00A0#);\nbegin\n   null;\nend Test;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.Address_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "test.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "test.adb",
+    "text_hash": "5e1e59be5c85fa27f868302276148cfb244845a8a44430aadfb0de44c4af1798a1d3c1e2fe86c0b24d88a8bc80cf0087f9b2782d2c56943b22e093bb55252fe1",
+    "text_hash_short": "1263f7289cec6673f19d88bffbeead48"
+}

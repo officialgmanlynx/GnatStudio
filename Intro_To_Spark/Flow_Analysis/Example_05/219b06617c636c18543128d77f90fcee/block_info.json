@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/02_Flow_Analysis.rst",
+    "line_start": 884,
+    "line_end": 929,
+    "text": "package Show_Permutation is\n\n   type Permutation is array (Positive range <>) of Positive;\n\n   procedure Swap (A    : in out Permutation;\n                   I, J : Positive);\n\n   procedure Init (A : out Permutation);\n\n   function Cyclic_Permutation (N : Natural) return Permutation;\n\nend Show_Permutation;\n\npackage body Show_Permutation is\n\n   procedure Swap (A    : in out Permutation;\n                   I, J : Positive)\n   is\n      Tmp : Positive := A (I);\n   begin\n      A (I) := A (J);\n      A (J) := Tmp;\n   end Swap;\n\n   procedure Init (A : out Permutation) is\n   begin\n      A (A'First) := A'First;\n      for I in A'First + 1 .. A'Last loop\n         A (I) := I;\n      end loop;\n   end Init;\n\n   function Cyclic_Permutation (N : Natural) return Permutation is\n      A : Permutation (1 .. N);\n   begin\n      Init (A);\n      for I in A'First .. A'Last - 1 loop\n         Swap (A, I, I + 1);\n      end loop;\n      return A;\n   end Cyclic_Permutation;\n\nend Show_Permutation;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Flow_Analysis.Example_05",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "show_permutation.ads",
+        "show_permutation.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "8e5c63a61829c3123f88d76825950294736c588c5b0ad4ebf108e491c764c34d62bb5b8a48e4ff694f90109f483a8557eba03e23994d79db3db975c0c40aa3e3",
+    "text_hash_short": "219b06617c636c18543128d77f90fcee"
+}

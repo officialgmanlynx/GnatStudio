@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 3157,
+    "line_end": 3177,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Access_To_Subprogram_Error is\n   P : access procedure (I : in out Integer);\n\n   I : Integer := 0;\nbegin\n   declare\n      procedure Add_One (I : in out Integer) is\n      begin\n         I := I + 1;\n      end Add_One;\n   begin\n      P := Add_One'Access;\n      --  RUNTIME ERROR: Add_One is out-of-scope\n      --                 after this line.\n   end;\nend Show_Access_To_Subprogram_Error;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Accessibility_Rules_Anonymous_Access_To_Subprograms.Simple_Example_Anonymous",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_access_to_subprogram_error.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_access_to_subprogram_error.adb",
+    "text_hash": "5d84bb67ecdc6cb25753024e73bcbb96384da7284e667f1aa5facdf4e9ba4ccb8bcd698383e1735f808559cb4033b47efe91ae5a833264c58cffe0873d07a741",
+    "text_hash_short": "a5eeb4a716b4f6a932dd74c580a07b66"
+}

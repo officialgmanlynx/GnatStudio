@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/03_syntactic_guarantees.rst",
+    "line_start": 484,
+    "line_end": 506,
+    "text": "!main.c\n#include <stdio.h>\n\nint absval (int x) {\n   int result = x;\n   if (x >= 0) {\n      if (x == 0) {\n         result = 0;\n      }\n   } else {\n      result = -x;\n   }\n   return result;\n}\n\nint main() {\n   printf(\"absval(5) = %d\\n\", absval(5));\n   printf(\"absval(0) = %d\\n\", absval(0));\n   printf(\"absval(-10) = %d\\n\", absval(-10));\n}\n",
+    "language": "c",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Syntactic_Guarantees.Dangling_Else_MISRA_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "14790d745b47f3b179c9b537e98d617177e0f55c28b3815d830f345a179168c322ccc7f203909a646971765de03c54e8457ce5873b95cfb9a06f481943f7160e",
+    "text_hash_short": "2b76377aca52ff45ed6b19fa1f367473"
+}

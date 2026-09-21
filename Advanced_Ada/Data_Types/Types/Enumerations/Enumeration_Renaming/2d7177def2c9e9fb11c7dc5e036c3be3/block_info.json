@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 950,
+    "line_end": 966,
+    "text": "with Ada.Text_IO;         use Ada.Text_IO;\nwith Enumeration_Example; use Enumeration_Example;\n\nprocedure Show_Renaming is\n   D1 : constant Day := Mon;\n   D2 : constant Day := Monday;\nbegin\n   if D1 = D2 then\n      Put_Line (\"D1 = D2\");\n      Put_Line (Day'Image (D1)\n                & \" =  \"\n                & Day'Image (D2));\n   end if;\nend Show_Renaming;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Enumerations.Enumeration_Renaming",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_renaming.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_renaming.adb",
+    "text_hash": "9e30ba34028d7e5e4e68ba972331452fb08d048f1ebe333e038eb1b8dc24882c4fbca78197c5dd59b6749fdda103b12762de11d7bb594d8a0d6e6d93110bbbfa",
+    "text_hash_short": "2d7177def2c9e9fb11c7dc5e036c3be3"
+}

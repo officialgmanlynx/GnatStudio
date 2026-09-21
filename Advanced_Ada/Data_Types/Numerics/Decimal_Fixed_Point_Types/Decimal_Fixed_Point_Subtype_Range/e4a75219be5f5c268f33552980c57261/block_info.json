@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 6159,
+    "line_end": 6188,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Decimal_Subtype_Range is\n\n   type D6 is\n     delta 1.0 digits 6;\n\n   subtype D6_RD3 is D6\n     range -999.0 .. 999.0;\n\n   subtype D6_R5 is D6\n     range -5.0 .. 5.0;\n\nbegin\n   Put_Line (\"D6'Range     : \"\n             & D6'First'Image\n             & \" .. \"\n             & D6'Last'Image);\n   Put_Line (\"D6_RD3'Range : \"\n             & D6_RD3'First'Image\n             & \" .. \"\n             & D6_RD3'Last'Image);\n   Put_Line (\"D6_R5'Range  : \"\n             & D6_R5'First'Image\n             & \" .. \"\n             & D6_R5'Last'Image);\nend Show_Decimal_Subtype_Range;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Decimal_Fixed_Point_Types.Decimal_Fixed_Point_Subtype_Range",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_decimal_subtype_range.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_decimal_subtype_range.adb",
+    "text_hash": "7d890cbf95a0748eb77801f3fec0e2ee2e0d6e6096400a2c92f7c000441fa6172a8aa909b4a51409ee554c5079258a512ed66e5fb29aaec485218fd33dc727a3",
+    "text_hash_short": "e4a75219be5f5c268f33552980c57261"
+}

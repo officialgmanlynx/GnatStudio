@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/controlled_types.rst",
+    "line_start": 1423,
+    "line_end": 1440,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Simple_Controlled_Types;\nuse  Simple_Controlled_Types;\n\nprocedure Show_Controlled_Types is\n   A, B : T;\nbegin\n   Dummy (A);\n\n   Put_Line (\"----------\");\n   Put_Line (\"A := B\");\n   A := B;\n   Put_Line (\"----------\");\nend Show_Controlled_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Controlled_Types.Adjustment.Controlled_Initialization",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_controlled_types.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_controlled_types.adb",
+    "text_hash": "b3bd1173b5c796624f859c62f54dcb26fc7dbf553fe2c71ff6fba98d55ca8ce50ac23901ef2e4ff97fd64db20038c2c1c5bb7a7df22b7dbb13b8cf79e354fc61",
+    "text_hash_short": "1ceaa50cbb18b9f1f997246a614e3a90"
+}

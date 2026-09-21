@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/arrays.rst",
+    "line_start": 572,
+    "line_end": 595,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Indefinite_Subtypes is\n    function Get_Number return Integer is\n    begin\n        return Integer'Value (Get_Line);\n    end Get_Number;\n\n   A : String := \"Hello\";\n   --  Indefinite subtype\n\n   B : String (1 .. 5) := \"Hello\";\n   --  Definite subtype\n\n   C : String (1 .. Get_Number);\n   --  Indefinite subtype\n   --  (Get_Number's value is computed at\n   --  run-time)\nbegin\n   null;\nend Indefinite_Subtypes;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Arrays.Indefinite_Subtypes",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "indefinite_subtypes.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "00e2e49e48e2f6d0bc39d6acc042d74b14edce67362a0d6fd68301dc14dfbc3dddcae79ef5b03a48a13b38626ef4ed0763aa7a9d4f479d1c4849227a24641b5f",
+    "text_hash_short": "a24235838511a94879f74757421a28f0"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 3431,
+    "line_end": 3446,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Custom_Size_Decimal is\n\n   type Decimal_128_Bits is\n     delta 10.0 ** (-2) digits 6\n       with Size => 128;\n\nbegin\n   Put_Line (\"Decimal_128_Bits'Size      :\"\n             & Decimal_128_Bits'Size'Image\n             & \" bits\");\nend Show_Custom_Size_Decimal;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Fixed_Point_Types.Custom_Size_Decimal_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_custom_size_decimal.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_custom_size_decimal.adb",
+    "text_hash": "2ef666b691952b582e3a31dab1fae090cb75da6ff5a02c4c739b1a84733fd126d65f6b42c731086539a1a98527478c9cb472baaadc2cad917f9ca62a97519534",
+    "text_hash_short": "ccef6e9719bd1eb25b67b880778adc3e"
+}

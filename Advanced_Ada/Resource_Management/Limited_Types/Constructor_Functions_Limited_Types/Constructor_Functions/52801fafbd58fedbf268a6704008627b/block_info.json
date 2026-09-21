@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 2182,
+    "line_end": 2192,
+    "text": "with P; use P;\n\nprocedure Show_Constructor_Function is\n   My_T : T := Make_T\n                 (Name => \"Bartholomew Cubbins\");\nbegin\n   null;\nend Show_Constructor_Function;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Constructor_Functions_Limited_Types.Constructor_Functions",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_constructor_function.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_constructor_function.adb",
+    "text_hash": "e9c09deb7302ed762ca3a169ece62a9cdedb39150f41658c6bbf79ae2d7e36f2ff14966c3c24e529e81c04efa07f6f92a58ccfdf95657631dbc3d3f70e0d24fc",
+    "text_hash_short": "52801fafbd58fedbf268a6704008627b"
+}

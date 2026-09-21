@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 2355,
+    "line_end": 2369,
+    "text": "package Integer_Access_Types is\n\n   type Integer_Access is\n     access Integer;\n\n   type Integer_Access_All is\n     access all Integer;\n\n   type Integer_Access_Const is\n     access constant Integer;\n\nend Integer_Access_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Aliasing.Show_Access_Modifiers",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "integer_access_types.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "88f3a00fbc588652b88f1b89c24d6c7d61c5dcfc3158d038f8c5f0dd2e237cea4711982b74b1b1f1ad8333fc27ebbe26531be7281371451f1d8a11cc43633c9c",
+    "text_hash_short": "98ccaa703194ae88222ccc5a4400e967"
+}

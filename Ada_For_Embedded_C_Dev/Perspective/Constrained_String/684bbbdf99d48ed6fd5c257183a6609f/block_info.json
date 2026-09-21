@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 2034,
+    "line_end": 2043,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main is\n   My_String : String := \"This is a line\" & ASCII.LF;\nbegin\n   Put (My_String);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Constrained_String",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "ff0653a9f8fc2400687e8b7dea2b0ea7991ea924799dd0408968e5234115512a737e877f7494b511f31836a1d4d62ee9bc425dcd61f909ce9f56f78da7d72809",
+    "text_hash_short": "684bbbdf99d48ed6fd5c257183a6609f"
+}

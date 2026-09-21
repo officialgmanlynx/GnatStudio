@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/04_strong_typing.rst",
+    "line_start": 612,
+    "line_end": 618,
+    "text": "package Bad_Hamlet is\n   type Animal is (Ape, Bee, Cat);\n   Answer : Boolean := 2 * Bee or not 2 * Bee; -- Illegal\nend Bad_Hamlet;\n",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Strong_Typing.Boolean_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "bad_hamlet.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "bad_hamlet.ads",
+    "text_hash": "0f1ab70057e8ed49da5fe1e8cdbb5b747b48b2112497d02290841d2a2762550a3d14e5b16f620db050bad9cd3a908b63a47cf1c3baa7ad0759a6954838829df8",
+    "text_hash_short": "9089114f9cc6495dabd6957b54b33bd2"
+}

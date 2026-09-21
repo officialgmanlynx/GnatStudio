@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 2669,
+    "line_end": 2680,
+    "text": "with P;     use P;\nwith P.Aux; use P.Aux;\n\nprocedure Show_Rumplestiltskin_Constructor is\n   Rumplestiltskin_Is_My_Name : constant T :=\n     Make_Rumplestiltskin;\nbegin\n   null;\nend Show_Rumplestiltskin_Constructor;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Building_Objects_From_Constructors.Building_Objs_From_Constructors",
+    "main_file": "show_rumplestiltskin_constructor.adb",
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_rumplestiltskin_constructor.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_rumplestiltskin_constructor.adb",
+    "text_hash": "98cd9d22482c3c1ccedb553e413b37326a2ff17945157140914523b52e0a97d2e1384eb2b296a3cf92ebb8c13b0b01c4f432ab12ce0a553fa58cbae2b6410504",
+    "text_hash_short": "2fe193516df6452eccece8132660f8e5"
+}

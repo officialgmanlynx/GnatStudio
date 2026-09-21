@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/controlled_types.rst",
+    "line_start": 2240,
+    "line_end": 2284,
+    "text": "with Ada.Finalization;\n\npackage CT_Finalize_Exception is\n\n   type T is new\n     Ada.Finalization.Controlled\n   with null record;\n\n   overriding\n   procedure Initialize (E : in out T);\n\n   overriding\n   procedure Adjust (E : in out T);\n\n   overriding\n   procedure Finalize (E : in out T);\n\n   procedure Dummy (E : T);\n\n   procedure Reset_Counter;\n\nend CT_Finalize_Exception;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith CT_Finalize_Exception;\nuse  CT_Finalize_Exception;\n\nprocedure Show_Finalize_Exception is\n   A : T;\nbegin\n   Dummy (A);\n\n   Finalize (A);\n\n   Put_Line (\"After Finalize\");\nexception\n   when Constraint_Error =>\n      Put_Line\n        (\"Constraint_Error is being handled...\");\n      Reset_Counter;\nend Show_Finalize_Exception;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Controlled_Types.Exception_Handling.CT_Finalize_Exception",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "ct_finalize_exception.ads",
+        "show_finalize_exception.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_finalize_exception.adb",
+    "text_hash": "7f13cdcdf721d88f0985866052e749200a95a0d4aac9addb29d18ea6fb92e61ac934bcfb3e938aec3ef23741017af29cbfedd61514114e392186fcb517568b66",
+    "text_hash_short": "f43133c997076c491a20117960be8807"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/modular_programming.rst",
+    "line_start": 575,
+    "line_end": 585,
+    "text": "with Ada.Text_IO;\n\nprocedure Main is\n   procedure Say (Something : String)\n     renames Ada.Text_IO.Put_Line;\nbegin\n   Say (\"Hello\");\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Modular_Programming.Rename_Put_Line",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "260f9e4c7d27a48ab61d08f53af93f85adf9b6cee86be8abdf494e233ea37c3fd2e62617d558073648b92f9f906e1b77ee08d8d926e251db646f6349d303b713",
+    "text_hash_short": "f30174ff29eb01f33bc95f1787f9f1dc"
+}

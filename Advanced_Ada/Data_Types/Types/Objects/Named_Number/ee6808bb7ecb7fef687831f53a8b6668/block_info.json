@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 542,
+    "line_end": 551,
+    "text": "procedure Show_Named_Number is\n\n   Pi : constant := 3.1415926535;\n\nbegin\n   null;\nend Show_Named_Number;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Objects.Named_Number",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_named_number.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_named_number.adb",
+    "text_hash": "23cf3fd5725390c1e3666951c7ea9ce868cfe282b7869da46045400b860ebcffa167376afdb5c4fab37b93e3a18e9fe0e92b70b1bc2b5e7d7d97729e6acb41ed",
+    "text_hash_short": "ee6808bb7ecb7fef687831f53a8b6668"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/subprograms.rst",
+    "line_start": 1845,
+    "line_end": 1853,
+    "text": "with Null_Procs; use Null_Procs;\n\nprocedure Show_Null_Proc is\nbegin\n   Do_Nothing (\"Hello\");\nend Show_Null_Proc;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Subprograms.Null_Procedures.Null_Proc_1",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_null_proc.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_null_proc.adb",
+    "text_hash": "6896d857ae26455b6bb244b17c663610ca59536a7b909f16d4a824b032288bf0b973682da2e815ff618bb89e8fff258381c0d871f39a5106a0ab57dd7ac5fab5",
+    "text_hash_short": "274eed0b0952b9aa7e422933ece42d86"
+}

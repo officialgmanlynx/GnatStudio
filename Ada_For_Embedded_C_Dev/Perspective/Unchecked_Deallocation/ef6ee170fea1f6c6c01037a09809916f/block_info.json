@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 2569,
+    "line_end": 2580,
+    "text": "with Ada.Unchecked_Deallocation;\n\nprocedure Main is\n   type Integer_Access is access all Integer;\n   procedure Free is new Ada.Unchecked_Deallocation (Integer, Integer_Access);\n   My_Pointer : Integer_Access := new Integer;\nbegin\n   Free (My_Pointer);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Unchecked_Deallocation",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "9cf7669259363f62e0d7324e34eefc34722ff1aee18104dec431dea9496162fe1dac577b5696d632ed75c6e25e4f725c9cebf08dcd0a211d256409a812dd2c7f",
+    "text_hash_short": "ef6ee170fea1f6c6c01037a09809916f"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 1848,
+    "line_end": 1866,
+    "text": "with Partial_Full_Views; use Partial_Full_Views;\n\nprocedure Main is\n   --  Partial view of R indicates that\n   --  R exists as a private type, so we\n   --  can declare objects of this type:\n   C : R;\nbegin\n   --  But we cannot directly access any\n   --  information declared in the full\n   --  view of R:\n   --\n   --  C.I := 42;\n   --\n   null;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Type_View.Partial_Full_View",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "a4342acc31aa904fd0d3e084f0abc2fad303e88171a423989c9423090c43381504704b56c55cd96ea40e2b0808d7abc3c9f8b28bcaea633c3e9ed52043b88df7",
+    "text_hash_short": "05bc9a75406d0a46f6d009d97885d010"
+}

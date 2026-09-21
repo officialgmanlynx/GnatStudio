@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/aggregates.rst",
+    "line_start": 1885,
+    "line_end": 1899,
+    "text": "with Points; use Points;\n\nprocedure Show_Points is\n   P_2D : Point_2D;\n   P_3D : Point_3D;\nbegin\n   P_3D := (X => 0.5, Y => 0.7, Z => 0.3);\n   Display (P_3D);\n\n   P_2D := (Point_1D (P_3D) with Y => 0.3);\n   Display (P_2D);\nend Show_Points;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Aggregates.Extension_Aggregates.Extension_Aggregate_Points",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_points.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_points.adb",
+    "text_hash": "008a2103d2804a1fd9a3a49868556f1869f9db3debc452ea5af27f3621b3543252dd7217ffe91ccb9f8fb5ececf1d69563504e0443ee58ff241afb14c72b7058",
+    "text_hash_short": "ae5e88a36c58b1eb495d5ba8752e50e7"
+}

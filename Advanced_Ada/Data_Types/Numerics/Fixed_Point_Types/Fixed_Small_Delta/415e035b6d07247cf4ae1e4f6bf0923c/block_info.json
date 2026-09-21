@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 3168,
+    "line_end": 3186,
+    "text": "with Ada.Text_IO;       use Ada.Text_IO;\n\nprocedure Show_Fixed_Small_Delta is\n\n   type Ordinary_Fixed_Point is\n     delta 0.2\n     range -2.0 .. 2.0;\n\nbegin\n   Put_Line (\"Ordinary_Fixed_Point'Small: \"\n             & Ordinary_Fixed_Point'Small'Image);\n   Put_Line (\"Ordinary_Fixed_Point'Delta: \"\n             & Ordinary_Fixed_Point'Delta'Image);\n   Put_Line (\"Ordinary_Fixed_Point'Size: \"\n             & Ordinary_Fixed_Point'Size'Image);\nend Show_Fixed_Small_Delta;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Fixed_Point_Types.Fixed_Small_Delta",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_fixed_small_delta.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_fixed_small_delta.adb",
+    "text_hash": "9847cd9fdd5eabff4774e9286507400cb8eae0845d587bed15ebda21c10e65f683b40e1872a55cdfaaeab36d7587ac347a9ed3d914ecb7cb00abe39ba5c19bce",
+    "text_hash_short": "415e035b6d07247cf4ae1e4f6bf0923c"
+}

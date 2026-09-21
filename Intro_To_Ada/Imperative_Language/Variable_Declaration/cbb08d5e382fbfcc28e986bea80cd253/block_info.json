@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/imperative_language.rst",
+    "line_start": 560,
+    "line_end": 577,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main is\n   X : Integer;\nbegin\n   X := 0;\n   Put_Line (\"The initial value of X is \"\n             & Integer'Image (X));\n\n   Put_Line (\"Performing operation on X...\");\n   X := X + 1;\n\n   Put_Line (\"The value of X now is \"\n             & Integer'Image (X));\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Imperative_Language.Variable_Declaration",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "234ed60be190b0d460dacf2b78c3f872f986d962dc4d4fff61069280606cbe56d6a56c48e0305dd28e6194bbc3a9e310b1725322cb3b1a7953ea1e5c3beae99a",
+    "text_hash_short": "cbb08d5e382fbfcc28e986bea80cd253"
+}

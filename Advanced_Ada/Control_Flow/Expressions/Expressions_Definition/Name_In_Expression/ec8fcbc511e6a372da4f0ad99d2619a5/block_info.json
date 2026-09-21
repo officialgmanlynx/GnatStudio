@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/expressions.rst",
+    "line_start": 335,
+    "line_end": 352,
+    "text": "procedure Show_Name_In_Expression is\n   type Mode is (Off, A, B, C, D);\n\n   M1 : Mode;\nbegin\n   M1 := A;\n\n   case M1 is\n     when Off | D   =>\n       null;\n     when A | B | C =>\n       M1 := D;\n   end case;\n\nend Show_Name_In_Expression;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Expressions.Expressions_Definition.Name_In_Expression",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_name_in_expression.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_name_in_expression.adb",
+    "text_hash": "70f79a2fe660fc001bce96100ed9dbf889106dc3090caac0f7103ede612b833b5caf78d57372e0384c6c61760b6d5dbc7277894b4d51d14b47d051baac5ecd24",
+    "text_hash_short": "ec8fcbc511e6a372da4f0ad99d2619a5"
+}

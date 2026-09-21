@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 4582,
+    "line_end": 4640,
+    "text": "with Ada.Text_IO;   use Ada.Text_IO;\n\nwith Angles;        use  Angles;\n\nwith Angles.Show_Info_Procs;\nuse  Angles.Show_Info_Procs;\n\nprocedure Show_Ordinary_Fixed_Machine_Repr\nis\n   V_Angle     : Angle;\n   V_Angle_Adj : Angle_Adj;\nbegin\n   Put_Line (\"=============================\");\n   Put_Line (\"Angle_Adj <-- Angle\");\n   Put_Line (\"=============================\");\n\n   Put_Line (\"-----------------------------\");\n   Put_Line (\"----- Angle (90.0)\");\n   Put_Line (\"-----------------------------\");\n   V_Angle     := 90.0;\n   V_Angle_Adj := Angle_Adj (V_Angle);\n\n   Show_Info (V_Angle,     \"V_Angle     \");\n   Show_Info (V_Angle_Adj, \"V_Angle_Adj \");\n\n   Put_Line (\"-----------------------------\");\n   Put_Line (\"----- Angle (0.5)\");\n   Put_Line (\"-----------------------------\");\n   V_Angle     := 0.5;\n   V_Angle_Adj := Angle_Adj (V_Angle);\n\n   Show_Info (V_Angle,     \"V_Angle     \");\n   Show_Info (V_Angle_Adj, \"V_Angle_Adj \");\n\n   Put_Line (\"=============================\");\n   Put_Line (\"Angle <-- Angle_Adj\");\n   Put_Line (\"=============================\");\n\n   Put_Line (\"-----------------------------\");\n   Put_Line (\"----- Angle_Adj (95.0)\");\n   Put_Line (\"-----------------------------\");\n   V_Angle_Adj := 95.0;\n   V_Angle     := Angle (V_Angle_Adj);\n\n   Show_Info (V_Angle_Adj, \"V_Angle_Adj \");\n   Show_Info (V_Angle,     \"V_Angle     \");\n\n   Put_Line (\"-----------------------------\");\n   Put_Line (\"----- Angle_Adj (0.5)\");\n   Put_Line (\"-----------------------------\");\n   V_Angle_Adj := 0.5;\n   V_Angle     := Angle (V_Angle_Adj);\n\n   Show_Info (V_Angle_Adj, \"V_Angle_Adj \");\n   Show_Info (V_Angle,     \"V_Angle     \");\nend Show_Ordinary_Fixed_Machine_Repr;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Fixed_Point_Types.Machine_Representation_Ordinary_Fixed_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_ordinary_fixed_machine_repr.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_ordinary_fixed_machine_repr.adb",
+    "text_hash": "65f1facabd95c226a09469c18bfe11d04428723ac921795a14eafac8ad1f538ef1f0640e0452d2e0e0c5456f7bca533a5104b34c811ea4aa0dca5bf71e345dd0",
+    "text_hash_short": "5a265d69b98571be61a40a1f4c33b908"
+}

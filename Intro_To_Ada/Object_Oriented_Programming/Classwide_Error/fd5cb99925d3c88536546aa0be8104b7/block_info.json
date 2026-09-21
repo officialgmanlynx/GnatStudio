@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/object_oriented_programming.rst",
+    "line_start": 531,
+    "line_end": 560,
+    "text": "package P is\n   type T is tagged null record;\n\n   procedure Show (Dummy : T);\n\n   type T_New is new T with null record;\n\n   procedure Show (Dummy : T_New);\nend P;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body P is\n\n   procedure Show (Dummy : T) is\n   begin\n      Put_Line (\"Using type \"\n                & T'External_Tag);\n   end Show;\n\n   procedure Show (Dummy : T_New) is\n   begin\n      Put_Line (\"Using type \"\n                & T_New'External_Tag);\n   end Show;\n\nend P;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Object_Oriented_Programming.Classwide_Error",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "p.ads",
+        "p.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "db66549ec5b2cb57cf447d662534788af667a731ee2a7c856fb784adb486d6c3e05faf13dc842036eb1883e06cde1c027194407b1da6a80ed9e2fd29f93ae023",
+    "text_hash_short": "fd5cb99925d3c88536546aa0be8104b7"
+}

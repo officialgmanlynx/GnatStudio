@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/subprograms.rst",
+    "line_start": 330,
+    "line_end": 392,
+    "text": "with System;\n\npackage Machine_X is\n\n   type Rec is record\n      A : Integer;\n   end record;\n\n   Global_R : Rec := (A => 0);\n\n   procedure Update_Value\n     (R  : in out Rec;\n      AR :        System.Address);\n\nend Machine_X;\n\nwith Ada.Text_IO;         use Ada.Text_IO;\n\nwith Check_Param_Passing;\n\npackage body Machine_X is\n\n   procedure Update_Value\n     (R  : in out Rec;\n      AR :        System.Address)\n   is\n      procedure Show_Vars is\n      begin\n         Put_Line (\"Global_R.A: \"\n                   & Integer'Image (Global_R.A));\n         Put_Line (\"R.A:        \"\n                   & Integer'Image (R.A));\n      end Show_Vars;\n   begin\n      Check_Param_Passing (Formal => R'Address,\n                           Actual => AR);\n\n      Put_Line (\"Incrementing Global_R.A...\");\n      Global_R.A := Global_R.A + 1;\n      Show_Vars;\n\n      Put_Line (\"Incrementing R.A...\");\n      R.A := R.A + 5;\n      Show_Vars;\n   end Update_Value;\n\nend Machine_X;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Machine_X;   use Machine_X;\n\nprocedure Show_By_Copy_By_Ref_Params is\nbegin\n   Put_Line (\"Calling Update_Value...\");\n   Update_Value (Global_R,  Global_R'Address);\n\n   Put_Line (\"After call to Update_Value...\");\n   Put_Line (\"Global_R.A: \"\n             & Integer'Image (Global_R.A));\nend Show_By_Copy_By_Ref_Params;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Subprograms.Parameter_Modes_Associations.By_Copy_By_Ref_Params",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "machine_x.ads",
+        "machine_x.adb",
+        "show_by_copy_by_ref_params.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_by_copy_by_ref_params.adb",
+    "text_hash": "6a13bc2f0c5bbec198814ba0e7c0881d7d047330ea2a19932ce226ca350fd1c178f66194882b894c0d5433036252fe69b302e93cb045564f941c850fd441b299",
+    "text_hash_short": "96be7054b7ff64a304705edf6b15f031"
+}

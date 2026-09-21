@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 7795,
+    "line_end": 7834,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Fixed_Point_Op is\n\n   Angle_Delta : constant := 1.0 / 3600.0;\n\n   type Angle is\n     delta Angle_Delta\n     range 0.0 .. 360.0 - Angle_Delta;\n\n   type Angle_2 is\n     delta Angle_Delta\n     range 0.0 .. 360.0 - Angle_Delta\n   with Small => Angle_Delta;\n\nbegin\n\n   Put_Line (\"The small    of Angle         is \"\n             & Angle'Small'Image);\n   Put_Line (\"The delta    value of Angle   is \"\n             & Angle'Delta'Image);\n   Put_Line (\"The minimum  value of Angle   is \"\n             & Angle'First'Image);\n   Put_Line (\"The maximum  value of Angle   is \"\n             & Angle'Last'Image);\n\n   Put_Line (\"------------------------------\");\n\n   Put_Line (\"The small    of Angle_2       is \"\n             & Angle_2'Small'Image);\n   Put_Line (\"The delta    value of Angle_2 is \"\n             & Angle_2'Delta'Image);\n   Put_Line (\"The minimum  value of Angle_2 is \"\n             & Angle_2'First'Image);\n   Put_Line (\"The maximum  value of Angle_2 is \"\n             & Angle_2'Last'Image);\nend Fixed_Point_Op;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Ordinary_Fixed_Point_Types.Fixed_Point_Op",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "fixed_point_op.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "fixed_point_op.adb",
+    "text_hash": "657d86ed593eb3323bdab8945e58e2693250ac63ba15eae262bc22175776787c7437a17407b6ebf89be25df185967b94361fc16f94883847571ae65ad009910a",
+    "text_hash_short": "4411f624afa8f45878c0932d85757215"
+}

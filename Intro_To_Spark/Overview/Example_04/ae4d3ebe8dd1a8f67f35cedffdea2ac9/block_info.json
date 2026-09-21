@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/01_Overview.rst",
+    "line_start": 569,
+    "line_end": 599,
+    "text": "package P\n  with SPARK_Mode => On\nis\n   type Rec is record\n      F1 : Positive;\n      F2 : Positive;\n   end record;\n\n   procedure Swap_Fields (R : in out Rec);\n   procedure Swap (X, Y : in out Positive);\nend P;\n\npackage body P\n  with SPARK_Mode => On\nis\n   procedure Swap (X, Y : in out Positive) is\n      Tmp : constant Positive := X;\n   begin\n      X := Y;\n      Y := Tmp;\n   end Swap;\n\n   procedure Swap_Fields (R : in out Rec) is\n   begin\n      Swap (R.F1, R.F2);\n   end Swap_Fields;\n\nend P;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Overview.Example_04",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "p.ads",
+        "p.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "acd66f547e2593aee0e3682773322184054a598dc437a8028c971df6352ca4bac87f98cb345a9d0d830564ff893d7576ad28eea76d219cf66454ed085a5bf519",
+    "text_hash_short": "ae4d3ebe8dd1a8f67f35cedffdea2ac9"
+}

@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 2779,
+    "line_end": 2800,
+    "text": "with Unknown_Discriminants.Children;\nuse  Unknown_Discriminants.Children;\n\nprocedure Show_Object_Declaration is\n   A : Derived_Rec_Unknown_Discr;\n   --  ERROR: unknown discriminants\n   --         because of the type's\n   --         unknown discriminant part\n\n   B : Derived_Rec_Known_Discr (1);\n   --  OK: known discriminants\n\n   C : Derived_Rec_No_Discr;\n   --  ERROR: unknown discriminants\n   --         because of parent type's\n   --         unknown discriminant part\nbegin\n   null;\nend Show_Object_Declaration;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Unknown_Discriminants.Derived_Tagged_Type",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_object_declaration.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "92ef19130bac887cb49ed1d39fc225c5b6b57e569e4fbbbb05f893b26f29b9272b06541702213c1ba83cc134fbddd2d38977c269b6f160423b271e451a91f965",
+    "text_hash_short": "91f6ae2abf88976833d0e4eff02d4c40"
+}

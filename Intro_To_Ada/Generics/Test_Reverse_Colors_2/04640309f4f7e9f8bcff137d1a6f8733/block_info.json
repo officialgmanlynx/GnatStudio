@@ -1,0 +1,48 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/generics.rst",
+    "line_start": 849,
+    "line_end": 941,
+    "text": "generic\n   type T is private;\n   type Index is range <>;\n   type Array_T is\n     array (Index range <>) of T;\nprocedure Generic_Reverse (X : in out Array_T);\n\nprocedure Generic_Reverse (X : in out Array_T) is\nbegin\n   for I in X'First ..\n            (X'Last + X'First) / 2 loop\n      declare\n         Tmp     : T;\n         X_Left  : T\n           renames X (I);\n         X_Right : T\n           renames X (X'Last + X'First - I);\n      begin\n         Tmp     := X_Left;\n         X_Left  := X_Right;\n         X_Right := Tmp;\n      end;\n   end loop;\nend Generic_Reverse;\n\ngeneric\n   type T is private;\n   type Index is range <>;\n   type Array_T is\n     array (Index range <>) of T;\n   S : String;\n   with function Image (E : T)\n                        return String is <>;\n   with procedure Test (X : in out Array_T);\nprocedure Perform_Test (X : in out Array_T);\n\nwith Ada.Text_IO;  use Ada.Text_IO;\n\nprocedure Perform_Test (X : in out Array_T) is\nbegin\n   for C of X loop\n      Put_Line (S & \": \" & Image (C));\n   end loop;\n\n   New_Line;\n   Put_Line (\"Testing \" & S & \"...\");\n   New_Line;\n   Test (X);\n\n   for C of X loop\n      Put_Line (S & \": \" & Image (C));\n   end loop;\nend Perform_Test;\n\nwith Generic_Reverse;\n\npackage Colors is\n\n   type Color is (Black, Red, Green,\n                  Blue, White);\n\n   type Color_Array is\n     array (Integer range <>) of Color;\n\n   procedure Reverse_It is new\n     Generic_Reverse (T       => Color,\n                      Index   => Integer,\n                      Array_T => Color_Array);\n\nend Colors;\n\nwith Colors;       use Colors;\nwith Perform_Test;\n\nprocedure Test_Reverse_Colors is\n\n   procedure Perform_Test_Reverse_It is new\n     Perform_Test (T       => Color,\n                   Index   => Integer,\n                   Array_T => Color_Array,\n                   S       => \"My_Color\",\n                   Image   => Color'Image,\n                   Test    => Reverse_It);\n\n   My_Colors : Color_Array (1 .. 5) :=\n     (Black, Red, Green, Blue, White);\n\nbegin\n   Perform_Test_Reverse_It (My_Colors);\nend Test_Reverse_Colors;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Generics.Test_Reverse_Colors_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "generic_reverse.ads",
+        "generic_reverse.adb",
+        "perform_test.ads",
+        "perform_test.adb",
+        "colors.ads",
+        "test_reverse_colors.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "test_reverse_colors.adb",
+    "text_hash": "bcafc60246bc13b85c62a2b4f37d6cfb7b19acebc749a4d83d10b61ffad53d81f9449a23239613e3bf78537fa0fa2062bec77a3a209d33bb29fc6db3c558aca3",
+    "text_hash_short": "04640309f4f7e9f8bcff137d1a6f8733"
+}

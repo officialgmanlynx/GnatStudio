@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/generics.rst",
+    "line_start": 746,
+    "line_end": 815,
+    "text": "generic\n   type T is private;\n   type Index is range <>;\n   type Array_T is\n     array (Index range <>) of T;\nprocedure Generic_Reverse (X : in out Array_T);\n\nprocedure Generic_Reverse (X : in out Array_T) is\nbegin\n   for I in X'First ..\n            (X'Last + X'First) / 2 loop\n      declare\n         Tmp     : T;\n         X_Left  : T\n           renames X (I);\n         X_Right : T\n           renames X (X'Last + X'First - I);\n      begin\n         Tmp     := X_Left;\n         X_Left  := X_Right;\n         X_Right := Tmp;\n      end;\n   end loop;\nend Generic_Reverse;\n\nwith Generic_Reverse;\n\npackage Colors is\n\n   type Color is (Black, Red, Green,\n                  Blue, White);\n\n   type Color_Array is\n     array (Integer range <>) of Color;\n\n   procedure Reverse_It is new\n     Generic_Reverse (T       => Color,\n                      Index   => Integer,\n                      Array_T => Color_Array);\n\nend Colors;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Colors;      use Colors;\n\nprocedure Test_Reverse_Colors is\n\n   My_Colors : Color_Array (1 .. 5) :=\n     (Black, Red, Green, Blue, White);\n\nbegin\n   for C of My_Colors loop\n      Put_Line (\"My_Color: \"\n                & Color'Image (C));\n   end loop;\n\n   New_Line;\n   Put_Line (\"Reversing My_Color...\");\n   New_Line;\n   Reverse_It (My_Colors);\n\n   for C of My_Colors loop\n      Put_Line (\"My_Color: \"\n                & Color'Image (C));\n   end loop;\n\nend Test_Reverse_Colors;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Generics.Test_Reverse_Colors",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "generic_reverse.ads",
+        "generic_reverse.adb",
+        "colors.ads",
+        "test_reverse_colors.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "test_reverse_colors.adb",
+    "text_hash": "5de9e533627fa4fc3a57b294723e7b7ea13cc80f930a08c2b89ad646b194de7df990066fee171c9c648a525e821d5f367ce3e5cd82e6bd1a82313651369498fb",
+    "text_hash_short": "9ef175c517d7574b4b65b24ba0027f1f"
+}

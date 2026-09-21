@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 1575,
+    "line_end": 1601,
+    "text": "!operations_c.h\nint * alloc_integer();\n\nvoid dealloc_integer(int *p_i);\n\nvoid add_one(int *p_i);\n\n!operations_c.c\n#include <stdlib.h>\n\nint * alloc_integer()\n{\n    return malloc(sizeof(int));\n}\n\nvoid dealloc_integer(int *p_i)\n{\n    free (p_i);\n}\n\nvoid add_one(int *p_i)\n{\n    *p_i = *p_i + 1;\n}\n",
+    "language": "c",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Anonymous_Access_Parameters.C_Interfacing",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "operations_c.h",
+        "operations_c.c"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "e8fc1d10c527fd64dc99cb25b7e4493746c347b2d35613bca714f3e1659639b09cdaaacdacba916db70788e951a2883899c66356eeff982be31f354d049f6063",
+    "text_hash_short": "ec6dea12d0a948489cce21b0cc0a1ad2"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 556,
+    "line_end": 579,
+    "text": "with Ada.Unchecked_Deallocation;\n\nprocedure Show_Dangerous_Deallocation is\n   type Integer_Access is\n      access all Integer;\n\n   procedure Free is\n     new Ada.Unchecked_Deallocation\n       (Object => Integer,\n        Name   => Integer_Access);\n\n   IA : access Integer;\nbegin\n   IA := new Integer;\n   IA.all := 30;\n\n   --  Potentially erroneous deallocation via type\n   --  conversion:\n   Free (Integer_Access (IA));\n\nend Show_Dangerous_Deallocation;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Anonymous_Access_To_Object_Types.Deallocation_Anonymous_Access_To_Object_Erronoeus",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_dangerous_deallocation.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_dangerous_deallocation.adb",
+    "text_hash": "f28aacd1e15b634f560264bc80b8c342c70140742d23c236f3addd65575ee06a0c566b7e53facc3b3570953800f2aff66c4c83d6e3705e90bce1137345f35e30",
+    "text_hash_short": "91e024a4338e2e4f8d5b308d95499c1c"
+}

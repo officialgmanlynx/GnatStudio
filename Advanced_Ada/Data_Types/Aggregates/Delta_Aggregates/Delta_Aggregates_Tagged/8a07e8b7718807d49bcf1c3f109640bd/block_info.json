@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/aggregates.rst",
+    "line_start": 2022,
+    "line_end": 2046,
+    "text": "with Points; use Points;\n\nprocedure Show_Points is\n\n   P_3D : Point_3D;\n\n   procedure Reset\n     (P_2D : in out Point_2D'Class) is\n   begin\n      Point_2D (P_2D) := (others => 0.0);\n   end Reset;\n\nbegin\n   P_3D := (X => 0.1, Y => 0.2, Z => 0.3);\n   Display (P_3D);\n\n   Reset (P_3D);\n   Display (P_3D);\n\nend Show_Points;\n\n\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Aggregates.Delta_Aggregates.Delta_Aggregates_Tagged",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_points.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_points.adb",
+    "text_hash": "d993cbbd43a0696aaf9dd76b30d829602a8ebe04136089bb3360a554020696843f286612ecfe2e6935d9e900dcc2be0d3fae5d5127fce3e3758a118b574850cf",
+    "text_hash_short": "8a07e8b7718807d49bcf1c3f109640bd"
+}

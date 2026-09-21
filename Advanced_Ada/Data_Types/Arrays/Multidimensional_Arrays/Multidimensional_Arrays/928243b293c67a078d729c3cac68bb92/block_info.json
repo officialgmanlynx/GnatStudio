@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/arrays.rst",
+    "line_start": 210,
+    "line_end": 223,
+    "text": "package Multidimensional_Arrays_Decl is\n\n   A1 : array (1 .. 10) of Float;\n   A2 : array (1 .. 5, 1 .. 10) of Float;\n   --          ^ first dimension\n   --                  ^ second dimension\n   A3 : array (1 .. 2, 1 .. 5, 1 .. 10) of Float;\n   --          ^ first dimension\n   --                  ^ second dimension\n   --                          ^ third dimension\nend Multidimensional_Arrays_Decl;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Arrays.Multidimensional_Arrays.Multidimensional_Arrays",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "multidimensional_arrays_decl.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "3baf620ce203373a114c828d1d9dfbf8b36d87f2a02ada5d6236ea75527a19b32b5c48919e557f18a75474ac57d54c13fff4e4b0920cafbd0304b8c10f8168df",
+    "text_hash_short": "928243b293c67a078d729c3cac68bb92"
+}

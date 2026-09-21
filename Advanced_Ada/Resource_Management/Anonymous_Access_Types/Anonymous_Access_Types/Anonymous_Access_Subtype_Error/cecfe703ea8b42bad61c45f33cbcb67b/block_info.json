@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 220,
+    "line_end": 237,
+    "text": "procedure Show_Anonymous_Access_Subtype_Error is\n   subtype Integer_1_10 is Integer range 1 .. 10;\n\n   I_Var : aliased Integer;\n   A     : access Integer := I_Var'Access;\n   B     : access Integer_1_10;\nbegin\n   A := I_Var'Access;\n\n   B := A;\n   --  ^ ERROR: subtype doesn't match!\n\n   B := I_Var'Access;\n   --  ^ ERROR: subtype doesn't match!\nend Show_Anonymous_Access_Subtype_Error;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Anonymous_Access_Types.Anonymous_Access_Subtype_Error",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_anonymous_access_subtype_error.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_anonymous_access_subtype_error.adb",
+    "text_hash": "1e04fed46c7d5e5f5ee4f89650c059fe951b91044f06568747edc70800b1c501ffcaec891079b4b58e11275e21d86147ad7c743530dcf9fa9248354b64eeb9a3",
+    "text_hash_short": "cecfe703ea8b42bad61c45f33cbcb67b"
+}

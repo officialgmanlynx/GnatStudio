@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/controlled_types.rst",
+    "line_start": 98,
+    "line_end": 114,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main is\n   type Int is new Integer\n     with Default_Value => 42;\n\n   I  : Int;\n   AI : access Int;\nbegin\n   Put_Line (\"I : \"\n             & I'Image);\n   Put_Line (\"AI : \"\n             & AI'Image);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Controlled_Types.Overview.Default_Initialization",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "d39477c8f46720c190d8c215292881c84af514963c8a54b0a0cde54b54f622b0ef1cda48bf0b73fe674a0d45344c811669aa3675432f03666af9c1163c33f46a",
+    "text_hash_short": "14a5929f0635f0f7843c883bab9021d8"
+}

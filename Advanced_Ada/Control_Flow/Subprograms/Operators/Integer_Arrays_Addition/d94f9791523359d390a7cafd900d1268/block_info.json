@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/subprograms.rst",
+    "line_start": 761,
+    "line_end": 786,
+    "text": "package Integer_Arrays is\n\n   type Integer_Array is\n     array (Positive range <>) of Integer;\n\nend Integer_Arrays;\n\nwith Ada.Text_IO;    use Ada.Text_IO;\nwith Integer_Arrays; use Integer_Arrays;\n\nprocedure Show_Array_Addition is\n   A, B, R : Integer_Array (1 .. 5);\nbegin\n   A := (1 & 2 & 3 & 4 & 5);\n   B := (6 & 7 & 8 & 9 & 10);\n   R := A + B;\n\n   for E of R loop\n      Put (E'Image & ' ');\n   end loop;\n   New_Line;\n\nend Show_Array_Addition;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Subprograms.Operators.Integer_Arrays_Addition",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "integer_arrays.ads",
+        "show_array_addition.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_array_addition.adb",
+    "text_hash": "557856616b91ae41a37fb3587f2aeab777c4d7ed826bb274acc8f375607e53a8a86d4ef0a3a40676f25a82da93062ca3e226f64ef9c1251359c95e4d3fbd25f9",
+    "text_hash_short": "d94f9791523359d390a7cafd900d1268"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/strings.rst",
+    "line_start": 45,
+    "line_end": 60,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Simple_String_Literals is\n   S1 : String := \"Hello\";\n   --             ^^^^^^^\n   --         String literal\n\n   S2 : String := \"World\";\n   --             ^^^^^^^\n   --           String literal\nbegin\n   Put_Line (S1 & \" \" & S2);\nend Show_Simple_String_Literals;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Strings.Character_String_Literals.Simple_String_Literals",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_simple_string_literals.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_simple_string_literals.adb",
+    "text_hash": "6788eefd9c5ec063fd4ac4f6d7b1c14640c282d27cf6152ef6573734749171cf6b51005fb0760a57648a2d5a04210e85db3703dd7c9cf0ea92a678ab409d5d69",
+    "text_hash_short": "a19bfa1ab6048f8cad9858d57b9f21e1"
+}

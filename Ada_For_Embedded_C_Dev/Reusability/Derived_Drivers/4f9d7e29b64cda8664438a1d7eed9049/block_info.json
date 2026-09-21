@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 230,
+    "line_end": 259,
+    "text": "package Drivers_1 is\n\n   type Device_1 is null record;\n   procedure Startup (Device : Device_1);\n   procedure Send (Device : Device_1; Data : Integer);\n   procedure Send_Fast (Device : Device_1; Data : Integer);\n   procedure Receive (Device : Device_1; Data : out Integer);\n\nend Drivers_1;\n\npackage body Drivers_1 is\n\n   --  NOTE: unimplemented procedures: Startup, Send, Send_Fast\n   --        mock-up implementation: Receive\n\n   procedure Startup (Device : Device_1) is null;\n\n   procedure Send (Device : Device_1; Data : Integer) is null;\n\n   procedure Send_Fast (Device : Device_1; Data : Integer) is null;\n\n   procedure Receive (Device : Device_1; Data : out Integer) is\n   begin\n      Data := 42;\n   end Receive;\n\nend Drivers_1;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.Derived_Drivers",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "drivers_1.ads",
+        "drivers_1.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "0dc219475195e57e92289514cd7e99b320b109c9b33650bca75a641fa68dab36cd7dd15e4a05d1689ccc95c1ac35bf2b9986a981e055eae2710e66fd641dfb5a",
+    "text_hash_short": "4f9d7e29b64cda8664438a1d7eed9049"
+}

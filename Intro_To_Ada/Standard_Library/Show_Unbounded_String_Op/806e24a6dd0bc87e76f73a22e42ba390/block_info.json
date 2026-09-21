@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_strings.rst",
+    "line_start": 497,
+    "line_end": 517,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Ada.Strings.Unbounded;\nuse  Ada.Strings.Unbounded;\n\nprocedure Show_Unbounded_String_Op is\n   S1, S2 : Unbounded_String :=\n              Null_Unbounded_String;\nbegin\n   S1 := S1 & \"Hello\";\n   S2 := S2 & \"Hello!\";\n\n   Append (S1, \" World\");\n   Put_Line (\"String: \" & To_String (S1));\n\n   S1 := S1 & \" \" & S2;\n   Put_Line (\"String: \" & To_String (S1));\nend Show_Unbounded_String_Op;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Unbounded_String_Op",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_unbounded_string_op.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_unbounded_string_op.adb",
+    "text_hash": "96ae0aa5093202147d9744bfdce8a3f5c9554b661fea537431811e4c35e661ce036a4be994726a33089385ac6d0b7c42c74d8ce2cf64f0a9defaee774ea5fa92",
+    "text_hash_short": "806e24a6dd0bc87e76f73a22e42ba390"
+}

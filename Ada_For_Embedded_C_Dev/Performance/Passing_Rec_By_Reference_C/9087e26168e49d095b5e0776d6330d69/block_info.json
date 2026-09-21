@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/08_Performance.rst",
+    "line_start": 494,
+    "line_end": 525,
+    "text": "!main.c\n#include <stdio.h>\n\nstruct Data {\n    int prev, curr;\n};\n\nvoid update(struct Data *d,\n            int          v)\n{\n    d->prev = d->curr;\n    d->curr = v;\n}\n\nvoid display(const struct Data *d)\n{\n    printf(\"Prev : %d\\n\", d->prev);\n    printf(\"Curr : %d\\n\", d->curr);\n}\n\nint main(int argc, const char * argv[])\n{\n    struct Data D1 = { 0, 1 };\n\n    update (&D1, 3);\n    display (&D1);\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Performance.Passing_Rec_By_Reference_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "6e0b356236a1b77e323554d84aa12c9e0de4dd28a5741e91a52a5c830d11d086387a9e95b415c1d25bf18b276811573a9fdd09c4e608cba673a0cd2e2139b2a3",
+    "text_hash_short": "9087e26168e49d095b5e0776d6330d69"
+}

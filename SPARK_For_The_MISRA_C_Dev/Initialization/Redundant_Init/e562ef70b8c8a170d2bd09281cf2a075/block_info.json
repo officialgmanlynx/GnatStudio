@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/05_initialization.rst",
+    "line_start": 284,
+    "line_end": 296,
+    "text": "!main.c\nint main() {\n   typedef struct { int x; int y; int z; } rec;\n   rec a = {0};\n   rec b = {0, 0};\n   rec c = {0, .y = 0};\n   rec d = {0, .y = 0, 0};\n   rec e = {0, .y = 0, 0, .y = 1};\n   return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Initialization.Redundant_Init",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "5ec4d8e85c6cba061a194fbb8deb1538481ee06ae8b2a1f079a599a0f998294f52e6d3ac0427b87b425d1551227ed21ad0fa3defce6f6f22fdc96fcbddd02ab9",
+    "text_hash_short": "e562ef70b8c8a170d2bd09281cf2a075"
+}

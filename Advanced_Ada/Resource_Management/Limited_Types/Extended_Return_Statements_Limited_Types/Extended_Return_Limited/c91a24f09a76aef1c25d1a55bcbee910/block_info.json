@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 2380,
+    "line_end": 2410,
+    "text": "package Task_Construct is\n\n   task type Task_Type (Discriminant : Integer);\n\n   function Make_Task (Val : Integer)\n                       return Task_Type;\n\nend Task_Construct;\n\npackage body Task_Construct is\n\n   task body Task_Type is\n   begin\n      null;\n   end Task_Type;\n\n   function Make_Task (Val : Integer)\n                       return Task_Type is\n   begin\n      return Result : Task_Type\n                        (Discriminant => Val * 3)\n      do\n         --  some statements...\n         null;\n      end return;\n   end Make_Task;\n\nend Task_Construct;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Extended_Return_Statements_Limited_Types.Extended_Return_Limited",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "task_construct.ads",
+        "task_construct.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "637351a365b909ca457676d74e92b9a8f6cf1df35c2aa6921df7f5641d8d42c0e9af78a9ea847a3071ba2f98dbf4821cee513d78db0f471b0ecac4b04dd79bea",
+    "text_hash_short": "c91a24f09a76aef1c25d1a55bcbee910"
+}

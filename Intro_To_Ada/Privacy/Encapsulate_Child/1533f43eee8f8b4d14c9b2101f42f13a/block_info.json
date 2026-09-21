@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/privacy.rst",
+    "line_start": 280,
+    "line_end": 334,
+    "text": "package Encapsulate is\n   procedure Hello;\n\nprivate\n\n   procedure Hello2;\n   --  Not visible from external units\n   --  But visible in child packages\nend Encapsulate;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Encapsulate is\n\n   procedure Hello is\n   begin\n      Put_Line (\"Hello\");\n   end Hello;\n\n   procedure Hello2 is\n   begin\n      Put_Line (\"Hello #2\");\n   end Hello2;\n\nend Encapsulate;\n\npackage Encapsulate.Child is\n\n   procedure Hello3;\n\nend Encapsulate.Child;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Encapsulate.Child is\n\n   procedure Hello3 is\n   begin\n      --  Using private procedure Hello2\n      --  from the parent package\n      Hello2;\n      Put_Line (\"Hello #3\");\n   end Hello3;\n\nend Encapsulate.Child;\n\nwith Encapsulate.Child;\n\nprocedure Main is\nbegin\n   Encapsulate.Child.Hello3;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Privacy.Encapsulate_Child",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "encapsulate.ads",
+        "encapsulate.adb",
+        "encapsulate-child.ads",
+        "encapsulate-child.adb",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "a92e62b94845b0b00b52745a85abf80360fd3eb46ae1aceda5c19714104c822718ed5d3f865a48215ac95dbacb0ec16dfa862690b917e2f65b117813dc35751c",
+    "text_hash_short": "1533f43eee8f8b4d14c9b2101f42f13a"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 3224,
+    "line_end": 3250,
+    "text": "package Defaults is\n\n   type E is (E1, E2, E3)\n     with Default_Value => E1;\n\n   type T is new Integer\n     with Default_Value => -1;\n\n   --  We cannot specify default\n   --  values for subtypes:\n   --\n   --  subtype T is Integer\n   --    with Default_Value => -1;\n\n   type R is record\n     X : Positive := 1;\n     Y : Positive := 10;\n   end record;\n\n   type Arr is\n     array (Positive range <>) of Integer\n       with Default_Component_Value => -1;\n\nend Defaults;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Default_Initial_Values.Defaults",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "defaults.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "11096c9bffaa77ab49260791a7475379f2c5732ccdea235b7c350371d307430e6bdb3b781996cb75695cbc60b0f172b6b9faed837e399d95b371d06386a123ac",
+    "text_hash_short": "e9263ff5b96523c129a3d2d9bbb5a4dd"
+}

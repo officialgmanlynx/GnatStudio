@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/strings.rst",
+    "line_start": 1069,
+    "line_end": 1088,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Ada.Strings.UTF_Encoding;\nuse  Ada.Strings.UTF_Encoding;\n\nprocedure Generate_UTF_8_File\n  (Output_File_Name : String)\nis\n   F : File_Type;\nbegin\n   Create (F, Out_File, Output_File_Name);\n   Put_Line (F, UTF_8_String'(\"\u2665\u266b\"));\n   Put_Line\n     (F,\n      UTF_8_String'(\"\u0645\u0631\u062d\u0628\u0627 \u064a\u0627 \u0639\u0627\u0644\u0645\"));\n   Close (F);\nend Generate_UTF_8_File;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Strings.String_Encoding.UTF_8_File_Processing",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "generate_utf_8_file.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "9ae91bd86d82e972d3238c21e18d3ceca8b4a533d05b79ad55e7f3ab8dcdcfe52f6a52b6612c28e73687ce39ff16d0db547d2501c00ec02e0064b872e02a9269",
+    "text_hash_short": "58c7591796bc1348796afa6db6f64d22"
+}

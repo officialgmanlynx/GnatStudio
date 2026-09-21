@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/strongly_typed_language.rst",
+    "line_start": 257,
+    "line_end": 267,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Floating_Point_Demo is\n   A : constant Float := 2.5;\nbegin\n   Put_Line (\"The value of A is \"\n             & Float'Image (A));\nend Floating_Point_Demo;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Strongly_Typed_Language.Floating_Point_Demo",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "floating_point_demo.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "floating_point_demo.adb",
+    "text_hash": "0f555949d3091b0e66268a9f7637d132ff9ee7775fd22bd532860767b4e0b5bf9d46a086cbaa6b16fb56b690e171ca59ef814ba04c829c7d9a589e93f6ef1fae",
+    "text_hash_short": "06998775497b68b742700138faecbb6a"
+}

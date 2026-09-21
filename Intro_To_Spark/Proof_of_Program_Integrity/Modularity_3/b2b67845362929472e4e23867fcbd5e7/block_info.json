@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/03_Proof_Of_Program_Integrity.rst",
+    "line_start": 240,
+    "line_end": 256,
+    "text": "procedure Show_Modularity is\n\n   function Increment (X : Integer) return Integer is\n     (X + 1)\n     --  info: overflow check proved\n     with Pre => X < Integer'Last;\n\n   X : Integer;\nbegin\n   X := Integer'Last - 2;\n   X := Increment (X);\n   X := X + 1;\n   --  info: overflow check proved\nend Show_Modularity;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Proof_of_Program_Integrity.Modularity_3",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_report_all"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "show_modularity.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "f276ebac57ae8675107779a15bc6347d8993c345f3444f9a0f0c4d66044d59e8b394c75cc86a2805dbf23ccc342c1adc0194573a2829c73c058e63a295374ce2",
+    "text_hash_short": "b2b67845362929472e4e23867fcbd5e7"
+}

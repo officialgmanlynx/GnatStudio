@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 1191,
+    "line_end": 1210,
+    "text": "package Recs is\n\n   type T (L : Positive;\n           M : Positive) is\n     null record;\n\nend Recs;\n\nwith Recs;        use Recs;\n\nprocedure Show_Object_Assignments is\n   A1, A2 : T (5, 6);\n   B      : T (7, 8);\nbegin\n   A1 := A2;    --  OK\n   B  := A1;    --  ERROR!\nend Show_Object_Assignments;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Discriminants.Object_Assignments",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "recs.ads",
+        "show_object_assignments.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_object_assignments.adb",
+    "text_hash": "bca93c885d9e2c2b050fbdc61d1943bee024c423b0e06be3fe55fed851a079fb64fe4459bdd0914a636560c9d04a5026169049f269f57f82be33b0f99006aa70",
+    "text_hash_short": "199247f1c0575c6845d85fd1911e1cf2"
+}

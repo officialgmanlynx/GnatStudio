@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/exceptions.rst",
+    "line_start": 35,
+    "line_end": 47,
+    "text": "with Exceptions; use Exceptions;\n\nprocedure Main is\nbegin\n   raise My_Except;\n   --  Execution of current control flow\n   --  abandoned; an exception of kind\n   --  \"My_Except\" will bubble up until it\n   --  is caught.\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Exceptions.Show_Exception",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "c2ebf3fe9c43b6e4a9f28b8d5a593c3f2bc9e7e920a4163fe5ce714b9ba6c66429487a394daa31fb0f9be5392c3c285b24a68e66b68ca0896727b53ae8297140",
+    "text_hash_short": "24b40ae1509722adf51c3dd0d3ea4fbe"
+}

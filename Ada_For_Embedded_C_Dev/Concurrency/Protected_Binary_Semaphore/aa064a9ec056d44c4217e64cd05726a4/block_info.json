@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/03_Concurrency.rst",
+    "line_start": 500,
+    "line_end": 571,
+    "text": "package Binary_Semaphores is\n\n   protected type Binary_Semaphore is\n      entry Wait;\n      procedure Signal;\n   private\n      Signaled : Boolean := False;\n   end Binary_Semaphore;\n\nend Binary_Semaphores;\n\npackage body Binary_Semaphores is\n\n   protected body Binary_Semaphore is\n      entry Wait when Signaled is\n      begin\n         Signaled := False;\n      end Wait;\n\n      procedure Signal is\n      begin\n         Signaled := True;\n      end Signal;\n   end Binary_Semaphore;\n\nend Binary_Semaphores;\n\nwith Ada.Text_IO;       use Ada.Text_IO;\nwith Binary_Semaphores; use Binary_Semaphores;\n\nprocedure Main is\n   B : Binary_Semaphore;\n\n   task T1;\n   task T2;\n\n   task body T1 is\n   begin\n      Put_Line (\"Task T1 waiting...\");\n      B.Wait;\n\n      Put_Line (\"Task T1.\");\n      delay 1.0;\n\n      Put_Line (\"Task T1 will signal...\");\n      B.Signal;\n\n      Put_Line (\"Task T1 finished.\");\n   end T1;\n\n   task body T2 is\n   begin\n      Put_Line (\"Task T2 waiting...\");\n      B.Wait;\n\n      Put_Line (\"Task T2\");\n      delay 1.0;\n\n      Put_Line (\"Task T2 will signal...\");\n      B.Signal;\n\n      Put_Line (\"Task T2 finished.\");\n   end T2;\n\nbegin\n   Put_Line (\"Main started.\");\n   B.Signal;\n   Put_Line (\"Main finished.\");\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Concurrency.Protected_Binary_Semaphore",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "binary_semaphores.ads",
+        "binary_semaphores.adb",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "d03008044ebbb195fb166f0c945504815337dbd2d1e54c91198ffcb85f35a36f7d75d541cd3ce382a64a22a03278b71668f2f6a00631cc6e83ba93bfb9ae1d82",
+    "text_hash_short": "aa064a9ec056d44c4217e64cd05726a4"
+}

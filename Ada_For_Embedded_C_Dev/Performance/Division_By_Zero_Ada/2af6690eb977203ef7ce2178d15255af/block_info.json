@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/08_Performance.rst",
+    "line_start": 276,
+    "line_end": 289,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Division_By_Zero is\n   A   : Integer := 8;\n   B   : Integer := 0;\n   Res : Integer;\nbegin\n   Res := A / B;\n\n   Put_Line (\"Res = \" & Integer'Image (Res));\nend Show_Division_By_Zero;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Performance.Division_By_Zero_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_division_by_zero.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_division_by_zero.adb",
+    "text_hash": "f0379e80d81cea2adaa7ecdd69df8ce4c5f8750fdbc7e72aa565a90afdf09f98e153276f4a79033eb396bcbb42928fba37e520a903b8984b69af2b4b3e18cf49",
+    "text_hash_short": "2af6690eb977203ef7ce2178d15255af"
+}

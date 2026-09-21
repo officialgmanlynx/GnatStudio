@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 969,
+    "line_end": 1008,
+    "text": "package P is\n\n   type Unsigned_8 is mod 2 ** 8 with Default_Value => 0;\n\n   type Byte_Field is array (Natural range <>) of Unsigned_8;\n\n   procedure Display_Bytes_Increment (V : in out Integer);\nend P;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body P is\n\n   procedure Display_Bytes_Increment (V : in out Integer) is\n      BF  : Byte_Field (1 .. V'Size / 8)\n        with Address => V'Address, Import, Volatile;\n   begin\n      for B of BF loop\n         Put_Line (\"Byte = \" & Unsigned_8'Image (B));\n      end loop;\n      Put_Line (\"Now incrementing...\");\n      V := V + 1;\n   end Display_Bytes_Increment;\n\nend P;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith P; use P;\n\nprocedure Main is\n   V : Integer := 10;\nbegin\n   Put_Line (\"V = \" & Integer'Image (V));\n   Display_Bytes_Increment (V);\n   Put_Line (\"V = \" & Integer'Image (V));\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.Overlay_Default_Init_Import",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "p.ads",
+        "p.adb",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "926ee37a5fc71559dfe4e68cc8ea297f728cde5076ab6791309ee266115ede726ca7f38605ab7f7b764d7fb15e5f1282ba99e50f5a5af293dd6f9f17e63588d1",
+    "text_hash_short": "e269d9d3c06c0f6c69ead16e7d2ba70b"
+}

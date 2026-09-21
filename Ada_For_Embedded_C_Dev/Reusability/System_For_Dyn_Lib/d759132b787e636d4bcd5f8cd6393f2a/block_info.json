@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 2407,
+    "line_end": 2450,
+    "text": "--\n--  File: component_a.ads\n--\npackage Component_A is\n\n   type Float_Array is array (Positive range <>) of Float;\n\n   function Average (Data : Float_Array) return Float;\n\nend Component_A;\n\n--\n--  File: component_a.adb\n--\npackage body Component_A is\n\n   function Average (Data : Float_Array) return Float is\n      Total : Float := 0.0;\n   begin\n      for Value of Data loop\n         Total := Total + Value;\n      end loop;\n      return Total / Float (Data'Length);\n   end Average;\n\nend Component_A;\n\n--\n--  File: main_system.adb\n--\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Component_A; use Component_A;\n\nprocedure Main_System is\n   Values        : constant Float_Array := (10.0, 11.0, 12.0, 13.0);\n   Average_Value : Float;\nbegin\n   Average_Value := Average (Values);\n   Put_Line (\"Average = \" & Float'Image (Average_Value));\nend Main_System;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.System_For_Dyn_Lib",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "component_a.ads",
+        "component_a.adb",
+        "main_system.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main_system.adb",
+    "text_hash": "fa1cc3dd23482904087edff9cf78539a1f95bc2d2d43d6962fcbb870f6d8d4382174911e926c921adfc4d09b8f3523aeda3bfa679c81b9c56805eb805e8bc6ef",
+    "text_hash_short": "d759132b787e636d4bcd5f8cd6393f2a"
+}

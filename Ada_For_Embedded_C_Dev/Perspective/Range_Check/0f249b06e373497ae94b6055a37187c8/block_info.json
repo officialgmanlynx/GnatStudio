@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 1537,
+    "line_end": 1552,
+    "text": "procedure Main is\n   type Grade is range 0 .. 100;\n\n   G1, G2  : Grade;\n   N       : Integer;\nbegin\n   --  ...              --  Initialization of N\n   G1 := 80;            --  OK\n   G1 := N;             --  Illegal (type mismatch)\n   G1 := Grade (N);     --  Legal, run-time range check\n   G2 := G1 + 10;       --  Legal, run-time range check\n   G1 := (G1 + G2) / 2; --  Legal, run-time range check\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Range_Check",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "91ac72ff3ceb3ab9b14b3c06794008d9c4e50d7611eba610c65e68d317bc6a3bf9668ee9dbfbfca2d01c846b973c875a95aa5774e80861593e7956a0b9f83ff1",
+    "text_hash_short": "0f249b06e373497ae94b6055a37187c8"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 1710,
+    "line_end": 1723,
+    "text": "package Incomplete_Type_Example is\n\n   type R;\n   --  Incomplete type declaration!\n\n   type R is record\n      I : Integer;\n   end record;\n   --  type R is now complete!\n\nend Incomplete_Type_Example;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Incomplete_Types.Incomplete_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "incomplete_type_example.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "49ea86fd784a70fabb888f40019acdb7bd31723dbf551b5b72fb929b736501d14a6841b47a10b765d458f285f3780d495f300eea352ec6a0b956b1ec77b611b5",
+    "text_hash_short": "5ca250595f2b0cc101df286ab319982f"
+}

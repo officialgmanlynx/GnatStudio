@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 973,
+    "line_end": 982,
+    "text": "with Simple_Recs; use Simple_Recs;\n\nprocedure Test_Limitedness is\n   Dummy_1, Dummy_2 : Limited_Integer_Array_2;\nbegin\n   Dummy_2 := Dummy_1;\nend Test_Limitedness;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Deriving_From_Limited_Types.Limited_Subtype",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "test_limitedness.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "test_limitedness.adb",
+    "text_hash": "056fcd8f3d1aa7a89e23c89256d30c333517640af6aa520bd199867c01136921e6cdf2f3cbfdd83afffaecfeaffbd2413df44b001371f6f651019bf5d3297da1",
+    "text_hash_short": "c24d07be96f27298a97e18d955cc6161"
+}

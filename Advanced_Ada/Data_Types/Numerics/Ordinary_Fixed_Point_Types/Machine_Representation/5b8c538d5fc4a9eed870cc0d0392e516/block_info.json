@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 8072,
+    "line_end": 8135,
+    "text": "generic\n   type T_Fixed     is delta <>;\n   type T_Int_Fixed is range <>;\nprocedure Gen_Show_Info (V     : T_Fixed;\n                         V_Str : String);\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Gen_Show_Info (V     : T_Fixed;\n                         V_Str : String)\nis\n   V_Local       : T_Fixed;\n   V_Int_Overlay : T_Int_Fixed\n     with Address => V_Local'Address,\n          Import, Volatile;\n   V_Real        : Float;\nbegin\n   V_Local := V;\n   V_Real  := Float (V_Int_Overlay) *\n     T_Fixed'Small;\n\n   Put_Line (V_Str\n             & \" (fixed-point) : \"\n             & Float (V_Local)'Image);\n   Put_Line (V_Str\n             & \" (integer)     : \"\n             & V_Int_Overlay'Image);\n   Put_Line (V_Str\n             & \" (floating-p.) : \"\n             & V_Real'Image);\n   Put_Line (\"----------\");\nend Gen_Show_Info;\n\nwith Ada.Text_IO;   use Ada.Text_IO;\n\nwith Custom_Fixed_Point;\nuse  Custom_Fixed_Point;\n\nwith Gen_Show_Info;\n\nprocedure Show_Machine_Representation\nis\n   procedure Show_Info is new\n     Gen_Show_Info (T_Fixed     => TQ31,\n                    T_Int_Fixed => Int_TQ31);\n   procedure Show_Info is new\n     Gen_Show_Info (T_Fixed     => TQ15,\n                    T_Int_Fixed => Int_TQ15);\nbegin\n   Show_Info (TQ15'First,     \"TQ15'First  \");\n   Show_Info (TQ15'(0.25),    \"0.25        \");\n   Show_Info (TQ15'(0.50),    \"0.50        \");\n   Show_Info (TQ15'Last,      \"TQ15'Last   \");\n   Put_Line (\"-----------------------------\");\n\n   Show_Info (TQ31'First,     \"TQ31'First  \");\n   Show_Info (TQ31'(0.25),    \"0.25        \");\n   Show_Info (TQ31'(0.50),    \"0.50        \");\n   Show_Info (TQ31'Last,      \"TQ31'Last   \");\n   Put_Line (\"-----------------------------\");\nend Show_Machine_Representation;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Ordinary_Fixed_Point_Types.Machine_Representation",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "gen_show_info.ads",
+        "gen_show_info.adb",
+        "show_machine_representation.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_machine_representation.adb",
+    "text_hash": "85e464e9014f35e9e11caa5ed5e0ad2f01e282eb2552a01dd0aca66bccccd35fb85834d7fd0b30bb252ce2ad9c8ddc6037a224b417f3172834b06e4824c463fd",
+    "text_hash_short": "5b8c538d5fc4a9eed870cc0d0392e516"
+}

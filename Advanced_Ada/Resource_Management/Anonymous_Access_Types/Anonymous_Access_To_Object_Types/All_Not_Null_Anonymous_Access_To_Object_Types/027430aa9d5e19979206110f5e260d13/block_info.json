@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 357,
+    "line_end": 409,
+    "text": "package All_Anonymous_Access_To_Object_Types is\n\n   procedure Add_One (A : not null access Integer)\n     is null;\n   --                     ^ Anonymous access type\n\n   I : aliased Integer;\n\n   AI : not null access Integer := I'Access;\n   --   ^ Anonymous access type\n   --                              ^^^^^^^^\n   --              Initialization required!\n\n   type Rec (AI : not null access Integer) is\n      private;\n   --             ^ Anonymous access type\n\n   type Access_Array is\n      array (Positive range <>) of\n        not null access Integer;\n   --   ^ Anonymous access type\n\n   Arr : array (1 .. 5) of\n     not null access Integer :=\n   --  ^ Anonymous access type\n       (others => I'Access);\n   --   ^^^^^^^^^^^^^^^^^^\n   --         Initialization required!\n\n   AI_Renaming : not null access Integer\n     renames AI;\n   --            ^ Anonymous access type\n\n   function Init_Access_Integer\n     return not null access Integer is (I'Access);\n   --       ^ Anonymous access type\n   --                                   ^^^^^^^^\n   --                   Initialization required!\n\nprivate\n\n   type Rec (AI : not null access Integer) is\n   record\n   --             ^ Anonymous access type\n      Internal_AI : not null access Integer;\n   --               ^ Anonymous access type\n\n   end record;\n\nend All_Anonymous_Access_To_Object_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Anonymous_Access_To_Object_Types.All_Not_Null_Anonymous_Access_To_Object_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "all_anonymous_access_to_object_types.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "a7f64290a7088c4926f4bfaa9cae815750da10398b0c5a8f031e02766a4ef643c3ef34d28ffe44a7ff1eddc24c87c5c925451cb3418e3cbc09c8be030dfdf805",
+    "text_hash_short": "027430aa9d5e19979206110f5e260d13"
+}

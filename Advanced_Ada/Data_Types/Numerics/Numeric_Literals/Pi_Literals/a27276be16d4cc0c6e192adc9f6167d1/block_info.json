@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 127,
+    "line_end": 145,
+    "text": " with Ada.Text_IO;\n\n procedure Ada_Numeric_Literals is\n    Pi   : constant :=\n      3.14159_26535_89793_23846_26433_83279_50288;\n\n    Pi2  : constant :=\n      3.14159265358979323846264338327950288;\n\n    Z    : constant := Pi - Pi2;\n    pragma Assert (Z = 0.0);\n\n    use Ada.Text_IO;\n begin\n    Put_Line (\"Z = \" & Float'Image (Z));\n end Ada_Numeric_Literals;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Numeric_Literals.Pi_Literals",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "nosyntax-check"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "ada_numeric_literals.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "ada_numeric_literals.adb",
+    "text_hash": "a35e80469bb16a6d7c9c2303d010cdc166f55750fe1ed7ed57e294ee321b8c80e82a787fe2c1a673145ab88e64a5eb41e3475ab3cea352d556efb5c76b3dfbed",
+    "text_hash_short": "a27276be16d4cc0c6e192adc9f6167d1"
+}

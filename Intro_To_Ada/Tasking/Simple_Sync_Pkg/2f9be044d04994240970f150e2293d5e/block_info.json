@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/tasking.rst",
+    "line_start": 132,
+    "line_end": 137,
+    "text": "package Simple_Sync_Pkg is\n   task T;\nend Simple_Sync_Pkg;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Tasking.Simple_Sync_Pkg",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-syntax-only"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": true,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "simple_sync_pkg.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "28a232c83576b837e901f8bbc3ec068841d74f9b5b909a0a480571746ad6458d04299f67ff8ad896cba449251fcc71b36fdd61ea3eceee0bac445f4e616b0e34",
+    "text_hash_short": "2f9be044d04994240970f150e2293d5e"
+}

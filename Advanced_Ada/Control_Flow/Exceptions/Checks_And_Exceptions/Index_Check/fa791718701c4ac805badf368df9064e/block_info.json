@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/exceptions.rst",
+    "line_start": 665,
+    "line_end": 692,
+    "text": "procedure Show_Index_Check is\n\n   type Integer_Array is\n     array (Positive range <>) of Integer;\n\n   function Value_Of (A : Integer_Array;\n                      I : Integer)\n                      return Integer\n   is\n      type Half_Integer_Array is new\n        Integer_Array (A'First ..\n                       A'First + A'Length / 2);\n\n      A_2 : Half_Integer_Array := (others => 0);\n   begin\n      return A_2 (I);\n   end Value_Of;\n\n   Arr_1 : Integer_Array (1 .. 10) :=\n             (others => 1);\n\nbegin\n   Arr_1 (10) := Value_Of (Arr_1, 10);\n\nend Show_Index_Check;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Exceptions.Checks_And_Exceptions.Index_Check",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_index_check.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_index_check.adb",
+    "text_hash": "68f6652e28bf74931b6cd5ccbc4a8c842b5f7afe3bc01ab11d32d5cdf9721b050987de9a73411093df70596594f0993a4b526ad72e0d596912c9648df3952d6d",
+    "text_hash_short": "fa791718701c4ac805badf368df9064e"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/subprograms.rst",
+    "line_start": 175,
+    "line_end": 203,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\nwith Increment_By;\n\nprocedure Show_Increment is\n   A, B, C : Integer;\n\n   procedure Display_Result is\n   begin\n      Put_Line (\"Increment of \"\n                & Integer'Image (A)\n                & \" with \"\n                & Integer'Image (B)\n                & \" is \"\n                & Integer'Image (C));\n   end Display_Result;\n\nbegin\n   A := 10;\n   B := 3;\n   C := Increment_By (A, B);\n   Display_Result;\n   A := 20;\n   B := 5;\n   C := Increment_By (A, B);\n   Display_Result;\nend Show_Increment;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Subprograms.Increment_By",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_increment.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_increment.adb",
+    "text_hash": "297dc29016ec577a6518d1f996628a47bda9b38caf87ca3aa4ede6d1638145c671e2317d37f46ad3a091011e2e3818fbe9887b374a6a2eba54a733d6f7f90822",
+    "text_hash_short": "23ec8ae3080c042123a9e82ee6b3d9e3"
+}

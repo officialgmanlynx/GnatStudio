@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 1382,
+    "line_end": 1397,
+    "text": "procedure Main is\n   type Distance is new Float;\n   type Area is new Float;\n\n   D1 : Distance := 2.0;\n   D2 : Distance := 3.0;\n   A  : Area;\nbegin\n   D1 := D1 + D2; -- OK\n   D1 := D1 + A;  -- NOT OK: incompatible types for \"+\"\n   A  := D1 * D2; -- NOT OK: incompatible types for \":=\"\n   A  := Area (D1 * D2); -- OK\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Application_Defined_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "1f7898e0a1301c30e0f37e035bb1ecdd1d03962bf77ad370c9375658df694ac6ea24fd80b4e5363005dc3d80d09571ac53c7ab1eac18525e566c0ab6a022b539",
+    "text_hash_short": "6a21d6281cc529bbf8ce2216d7e4a770"
+}

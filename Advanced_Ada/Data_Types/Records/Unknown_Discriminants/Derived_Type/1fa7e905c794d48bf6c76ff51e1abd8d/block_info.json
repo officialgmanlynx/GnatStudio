@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 2691,
+    "line_end": 2699,
+    "text": "package Unknown_Discriminants.Children is\n\n   type Derived_Rec is\n     new Rec;\n\nend Unknown_Discriminants.Children;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Unknown_Discriminants.Derived_Type",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "unknown_discriminants-children.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "52ae440985801347269bafd9a30068bf2edd7c4ae71a828966698eb5f46709c3d7731b572417938d8475ea243de9fc3f9fee92d44c36ed08bdde66c7c5cf91ba",
+    "text_hash_short": "1fa7e905c794d48bf6c76ff51e1abd8d"
+}

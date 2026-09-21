@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 5058,
+    "line_end": 5097,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Custom_Decimal_Types;\nuse  Custom_Decimal_Types;\n\nwith Custom_Decimal_Types.Show_Info_Procs;\nuse  Custom_Decimal_Types.Show_Info_Procs;\n\nprocedure Show_Decimal_Types_Machine_Repr is\n   V_T0_D4   : T0_D4;\n   V_T2_D6   : T2_D6;\n   V_T2_D12  : T2_D12;\nbegin\n   Put_Line (\"-----------------------------\");\n   Put_Line (\"---- 152.0\");\n   Put_Line (\"-----------------------------\");\n\n   V_T0_D4  := 152.0;\n   V_T2_D6  := 152.0;\n   V_T2_D12 := 152.0;\n\n   Show_Info (V_T0_D4,  \"V_T0_D4  \");\n   Show_Info (V_T2_D6,  \"V_T2_D6  \");\n   Show_Info (V_T2_D12, \"V_T2_D12 \");\n\n   Put_Line (\"-----------------------------\");\n   Put_Line (\"---- V := V * 2\");\n   Put_Line (\"-----------------------------\");\n\n   V_T0_D4  := V_T0_D4  * 2;\n   V_T2_D6  := V_T2_D6  * 2;\n   V_T2_D12 := V_T2_D12 * 2;\n\n   Show_Info (V_T0_D4,  \"V_T0_D4  \");\n   Show_Info (V_T2_D6,  \"V_T2_D6  \");\n   Show_Info (V_T2_D12, \"V_T2_D12 \");\nend Show_Decimal_Types_Machine_Repr;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Fixed_Point_Types.Machine_Representation_Decimal_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_decimal_types_machine_repr.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_decimal_types_machine_repr.adb",
+    "text_hash": "4aa83cc8e068ec52bf7031dfd07afa32b7636950e10687b88244eb6abc4d014980a58e47a33a9dafcf41738255dbac3bbe4821f6066e27951cb17340cab99edb",
+    "text_hash_short": "54d101645a66d6b5f6547bb9b7f4cc69"
+}

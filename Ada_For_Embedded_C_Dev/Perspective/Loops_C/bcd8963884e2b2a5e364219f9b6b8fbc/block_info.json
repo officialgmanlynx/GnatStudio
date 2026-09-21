@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 873,
+    "line_end": 927,
+    "text": "!main.c\n#include <stdio.h>\n\nint main(int argc, const char * argv[])\n{\n    int v;\n\n    // this is a while loop\n    v = 1;\n    while(v < 100) {\n        v *= 2;\n    }\n    printf(\"v = %d\\n\", v);\n\n    // this is a do while loop\n    v = 1;\n    do {\n        v *= 2;\n    } while(v < 200);\n    printf(\"v = %d\\n\", v);\n\n    // this is a for loop\n    v = 0;\n    for(int i = 0; i < 5; ++i) {\n        v += (i * i);\n    }\n    printf(\"v = %d\\n\", v);\n\n    // this is a forever loop with a conditional exit\n    v = 0;\n    while(1) {\n        // do stuff here\n        v += 1;\n        if(v == 10)\n            break;\n    }\n    printf(\"v = %d\\n\", v);\n\n    // this is a loop over an array\n    {\n        #define ARR_SIZE (10)\n        const int arr[ARR_SIZE] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };\n        int sum = 0;\n\n        for(int i = 0; i < ARR_SIZE; ++i) {\n            sum += arr[i];\n        }\n        printf(\"sum = %d\\n\", sum);\n    }\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Loops_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "da177ad3055bafe2932c02d05496d3c324d84bd2828d36db07c342f5263e8165a1c4aafc6053fa386ee73978f65d11815562032adbda19e79ea8f21b8e85b816",
+    "text_hash_short": "bcd8963884e2b2a5e364219f9b6b8fbc"
+}

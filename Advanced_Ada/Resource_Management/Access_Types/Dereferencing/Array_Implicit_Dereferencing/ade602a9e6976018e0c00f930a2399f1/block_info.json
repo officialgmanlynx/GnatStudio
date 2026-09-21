@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 1685,
+    "line_end": 1712,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Dereferencing is\n\n   type Integer_Array is\n     array (Positive range <>) of Integer;\n\n   type Integer_Array_Access is\n     access Integer_Array;\n\n   Arr : constant Integer_Array_Access :=\n                    new Integer_Array (1 .. 6);\nbegin\n   Arr.all := (1, 2, 3, 5, 8, 13);\n\n   Arr (1 .. 6) := (1, 2, 3, 5, 8, 13);\n\n   for I in Arr'Range loop\n      Put_Line\n        (\"Arr (: \"\n         & Integer'Image (I) & \"): \"\n         & Integer'Image (Arr (I)));\n      --                     ^ .all is implicit.\n   end loop;\nend Show_Dereferencing;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Dereferencing.Array_Implicit_Dereferencing",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_dereferencing.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_dereferencing.adb",
+    "text_hash": "841d0c2fb10364905bb0e869012d225739689dce465bbae19f848f8cdfd03aefe39ad4662e6579161f7aac2dbeb4b3906658d7b2b3add21861e5d44b2c1f8dea",
+    "text_hash_short": "ade602a9e6976018e0c00f930a2399f1"
+}

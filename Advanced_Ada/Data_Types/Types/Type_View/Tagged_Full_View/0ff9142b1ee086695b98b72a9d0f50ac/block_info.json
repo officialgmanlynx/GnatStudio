@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 1892,
+    "line_end": 1907,
+    "text": "package Tagged_Full_View_Example is\n\n   --  Partial view using non-tagged type:\n   type R is private;\n\nprivate\n\n   --  Full view using tagged type:\n   type R is tagged record\n      I : Integer;\n   end record;\n\nend Tagged_Full_View_Example;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Type_View.Tagged_Full_View",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "tagged_full_view_example.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "660686d5b54713baa1f5246b13bf84f807b68d2d1a1391538834d6018c6cbcec78566879748e2156bf257cfff9a6ef11b5a434b517c962edccf9601078b00de3",
+    "text_hash_short": "0ff9142b1ee086695b98b72a9d0f50ac"
+}

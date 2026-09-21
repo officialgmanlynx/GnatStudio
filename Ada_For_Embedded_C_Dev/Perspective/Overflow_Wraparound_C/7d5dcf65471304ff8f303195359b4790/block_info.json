@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 1771,
+    "line_end": 1786,
+    "text": "!main.c\n#include <stdio.h>\n#include <limits.h>\n\nint main(int argc, const char * argv[])\n{\n    unsigned int x = UINT_MAX + 1;\n    /* Now: x == 0 */\n\n    printf(\"x = %u\\n\", x);\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Overflow_Wraparound_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "6873f90c1e01ababa824d2cafae65e74d5fad90846dde8bfb23e8908041785a10ae210cb4a5ce7b404a81e95eeddb71b302a24248fb3c3e4484b68874dcf6b99",
+    "text_hash_short": "7d5dcf65471304ff8f303195359b4790"
+}

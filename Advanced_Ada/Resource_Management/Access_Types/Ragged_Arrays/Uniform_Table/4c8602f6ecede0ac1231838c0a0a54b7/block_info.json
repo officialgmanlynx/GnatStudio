@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 2008,
+    "line_end": 2035,
+    "text": "package Data_Processing is\n\n   type Quality_Level is\n     (Simplified, Better, Best);\n\n   type Data is\n     array (Positive range <>) of Float;\n\nprivate\n\n   type Table_Coefficient is record\n      Last : Positive;\n      Coef : Data (1 .. 5);\n   end record;\n\n   Calc_Table : constant array\n     (Quality_Level) of Table_Coefficient :=\n       (Simplified =>\n            (1, (0.15, 0.00, 0.00, 0.00, 0.00)),\n        Better     =>\n            (3, (0.02, 0.16, 0.27, 0.00, 0.00)),\n        Best       =>\n            (5, (0.01, 0.08, 0.12, 0.20, 0.34)));\n\nend Data_Processing;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Ragged_Arrays.Uniform_Table",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "data_processing.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "38ae715209cc649ec7b5626c02662e88dfa6a1fffa4b049df0cf416f22e4afb017fab8393034cd7ba81f904e78ef6713ee8e5813dfdb2de64c7edc6466fa95c6",
+    "text_hash_short": "4c8602f6ecede0ac1231838c0a0a54b7"
+}

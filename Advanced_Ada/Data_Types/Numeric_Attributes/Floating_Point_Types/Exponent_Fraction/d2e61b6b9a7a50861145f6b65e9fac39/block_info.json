@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numeric_attributes.rst",
+    "line_start": 545,
+    "line_end": 579,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Exponent_Fraction_Compose is\nbegin\n   Put_Line\n     (\"Float'Fraction (1.0):     \"\n      & Float'Fraction (1.0)'Image);\n   Put_Line\n     (\"Float'Fraction (0.25):    \"\n      & Float'Fraction (0.25)'Image);\n   Put_Line\n     (\"Float'Fraction (1.0e-25): \"\n      & Float'Fraction (1.0e-25)'Image);\n   Put_Line\n     (\"Float'Exponent (1.0):     \"\n      & Float'Exponent (1.0)'Image);\n   Put_Line\n     (\"Float'Exponent (0.25):    \"\n      & Float'Exponent (0.25)'Image);\n   Put_Line\n     (\"Float'Exponent (1.0e-25): \"\n      & Float'Exponent (1.0e-25)'Image);\n   Put_Line\n     (\"Float'Compose (5.00000e-01, 1):   \"\n      & Float'Compose (5.00000e-01, 1)'Image);\n   Put_Line\n     (\"Float'Compose (5.00000e-01, -1):  \"\n      & Float'Compose (5.00000e-01, -1)'Image);\n   Put_Line\n     (\"Float'Compose (9.67141E-01, -83): \"\n      & Float'Compose (9.67141E-01, -83)'Image);\nend Show_Exponent_Fraction_Compose;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numeric_Attributes.Floating_Point_Types.Exponent_Fraction",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_exponent_fraction_compose.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_exponent_fraction_compose.adb",
+    "text_hash": "9cbe1d0068cf374ef0514de7a19beb91829e2320f181a780a703bc3ea11095986e60715c3d5dd94ba816db1f7b4869c6c06da7d9ec987299aac5bbe6f3f92fe9",
+    "text_hash_short": "d2e61b6b9a7a50861145f6b65e9fac39"
+}

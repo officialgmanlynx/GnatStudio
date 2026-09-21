@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_files_streams.rst",
+    "line_start": 317,
+    "line_end": 355,
+    "text": "with Ada.Text_IO;\nwith Ada.Direct_IO;\n\nprocedure Show_Dir_Float_In_Out_File is\n   package Float_IO is new Ada.Direct_IO (Float);\n   use Float_IO;\n\n   F         : Float_IO.File_Type;\n   File_Name : constant String :=\n                 \"float_file.bin\";\nbegin\n   --  Open file for input / output\n   Create (F, Inout_File, File_Name);\n   Write (F,  1.5);\n   Write (F,  2.4);\n   Write (F,  6.7);\n\n   --  Set index to previous position\n   --  and overwrite value\n   Set_Index (F, Index (F) - 1);\n   Write (F,  7.7);\n\n   declare\n      Value : Float;\n   begin\n      --  Set index to start of file\n      Set_Index (F, 1);\n\n      while not End_Of_File (F) loop\n         Read (F, Value);\n         Ada.Text_IO.Put_Line\n           (Float'Image (Value));\n      end loop;\n      Close (F);\n   end;\nend Show_Dir_Float_In_Out_File;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Dir_Float_In_Out_File",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_dir_float_in_out_file.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_dir_float_in_out_file.adb",
+    "text_hash": "ccdee458ae25baa69dace9d949a31bde6902e249e76cd81bacf6e2c1ed38e1043ef8246c728d4d8d7277ad641bb788bfd5233d9a072966299cb8781211b2a695",
+    "text_hash_short": "17b83a16ab8fa30f07cf8a0bd54078a1"
+}

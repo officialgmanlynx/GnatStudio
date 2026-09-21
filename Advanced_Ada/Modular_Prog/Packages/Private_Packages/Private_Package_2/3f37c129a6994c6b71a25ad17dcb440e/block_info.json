@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/modular_prog/packages.rst",
+    "line_start": 380,
+    "line_end": 401,
+    "text": "package Data_Processing.Advanced_Calculations is\n\n   procedure Advanced_Calculate (D : in out Data);\n\nend Data_Processing.Advanced_Calculations;\n\nwith Data_Processing.Calculations;\nuse  Data_Processing.Calculations;\n\npackage body Data_Processing.Advanced_Calculations\nis\n\n   procedure Advanced_Calculate (D : in out Data)\n   is\n   begin\n     Calculate (D);\n   end Advanced_Calculate;\n\nend Data_Processing.Advanced_Calculations;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Modular_Prog.Packages.Private_Packages.Private_Package_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "data_processing-advanced_calculations.ads",
+        "data_processing-advanced_calculations.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "956da0b7a81d8a660b005f8cf538b9681196d40e4f652d84874a698e6ab5ac49a1c3be1d23a48fe742cfa0ffe1f8c5d9c7185f95b316b37fc0057a5cf5c81e1a",
+    "text_hash_short": "3f37c129a6994c6b71a25ad17dcb440e"
+}

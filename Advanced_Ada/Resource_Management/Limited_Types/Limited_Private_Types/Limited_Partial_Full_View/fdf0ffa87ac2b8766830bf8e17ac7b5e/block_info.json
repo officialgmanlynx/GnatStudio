@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 584,
+    "line_end": 595,
+    "text": "package Simple_Recs.Child\nis\n   type Rec_Derived is new Rec;\n   --  As for its parent, the\n   --  partial view of Rec_Derived\n   --  is limited, but the full view\n   --  is nonlimited.\n\nend Simple_Recs.Child;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Limited_Private_Types.Limited_Partial_Full_View",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple_recs-child.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "c5d8f4705be5accee8833302f1675c81bc4d22253f28d64a08591266176b8f670bdf571684f18919e6934353ee063ccd4bc2820c91e1149d68cd09a11b8879f4",
+    "text_hash_short": "fdf0ffa87ac2b8766830bf8e17ac7b5e"
+}

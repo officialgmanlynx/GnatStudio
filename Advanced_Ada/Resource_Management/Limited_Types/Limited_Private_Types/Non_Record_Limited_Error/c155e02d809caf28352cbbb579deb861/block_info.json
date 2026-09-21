@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 498,
+    "line_end": 516,
+    "text": "!non_record_limited_error.ads\npackage Non_Record_Limited_Error is\n\n   type Limited_Enumeration is\n     limited (Off, On);\n\n   type Limited_Integer is new\n     limited Integer;\n\n   type Integer_Array is\n     array (Positive range <>) of Integer;\n\n   type Rec is new\n     limited Integer_Array (1 .. 2);\n\nend Non_Record_Limited_Error;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Limited_Private_Types.Non_Record_Limited_Error",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-nocheck"
+    ],
+    "manual_chop": true,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": true,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "non_record_limited_error.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "e0694f3635229c38e2dd21777ee66ffaab2a142e8276a26052dd1e852b4ca66184d4a31bdbfd485f522bf2868496fcde483a8abcece34f87762e15459ed6a059",
+    "text_hash_short": "c155e02d809caf28352cbbb579deb861"
+}

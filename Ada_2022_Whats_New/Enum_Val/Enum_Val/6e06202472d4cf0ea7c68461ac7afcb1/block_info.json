@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/whats-new-in-ada-2022/chapters/enum_val.rst",
+    "line_start": 80,
+    "line_end": 98,
+    "text": "with Ada.Text_IO;\nwith Ada.Integer_Text_IO;\n\nprocedure Main is\n   type My_Boolean is new Boolean;\n   for My_Boolean use (False => 3, True => 6);\nbegin\n   Ada.Text_IO.Put_Line (My_Boolean'Enum_Val (3)'Image);\n   Ada.Text_IO.Put_Line (My_Boolean'Enum_Val (6)'Image);\n\n   Ada.Text_IO.Put (\"Pos(False) =\");\n   Ada.Integer_Text_IO.Put (My_Boolean'Pos (False));\n   Ada.Text_IO.New_Line;\n   Ada.Text_IO.Put (\"Pos(True)  =\");\n   Ada.Integer_Text_IO.Put (My_Boolean'Pos (True));\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_2022_Whats_New.Enum_Val.Enum_Val",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "c44cc9f6a8088df104787534169a6d1b01b5f5cafc91bc1c40724c74fa1d96bda5038016f49b9d03a97cdde1a995b1507ca854870b9880e4fe5631824312c28a",
+    "text_hash_short": "6e06202472d4cf0ea7c68461ac7afcb1"
+}

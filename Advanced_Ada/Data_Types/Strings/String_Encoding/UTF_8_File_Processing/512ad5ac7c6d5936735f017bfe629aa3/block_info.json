@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/strings.rst",
+    "line_start": 1154,
+    "line_end": 1196,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Ada.Strings.UTF_Encoding;\nuse  Ada.Strings.UTF_Encoding;\n\nwith Ada.Strings.UTF_Encoding.Wide_Wide_Strings;\nuse  Ada.Strings.UTF_Encoding.Wide_Wide_Strings;\n\nwith Generate_UTF_8_File;\nwith Put_Line_UTF_8_Characters;\n\nprocedure Show_UTF_8 is\n\n   File_Name : constant String :=\n                 \"utf-8_test.txt\";\n\n   procedure Read_UTF_8_File\n     (Input_File_Name : String)\n   is\n      F : File_Type;\n   begin\n      Open (F, In_File, Input_File_Name);\n\n      while not End_Of_File (F) loop\n         declare\n            S_UTF8 : constant UTF_8_String\n                       := Get_Line (F);\n            S      : constant Wide_Wide_String\n                       := Decode (S_UTF8);\n         begin\n            Put_Line_UTF_8_Characters (S);\n         end;\n      end loop;\n      Close (F);\n   end Read_UTF_8_File;\n\nbegin\n   Generate_UTF_8_File (File_Name);\n   Read_UTF_8_File (File_Name);\nend Show_UTF_8;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Strings.String_Encoding.UTF_8_File_Processing",
+    "main_file": "show_utf_8.adb",
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_utf_8.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_utf_8.adb",
+    "text_hash": "0d0e4cbe4182c04aa5c05abc2849ee3801c033101c49b48dfd2ca109133b6b1d0daa972d072ce204cd168050e54fb0f6d7f9e4d1d883d9125cbb9f43e8f8079e",
+    "text_hash_short": "512ad5ac7c6d5936735f017bfe629aa3"
+}

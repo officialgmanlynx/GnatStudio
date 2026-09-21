@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/02_Flow_Analysis.rst",
+    "line_start": 1005,
+    "line_end": 1046,
+    "text": "package Show_Increments is\n\n   type Array_Of_Positives is array (Natural range <>) of Positive;\n\n   Increment : constant Natural := 10;\n\n   procedure Incr_Step_Function (A : in out Array_Of_Positives);\n\nend Show_Increments;\n\npackage body Show_Increments is\n\n   procedure Incr_Step_Function (A : in out Array_Of_Positives) is\n\n      Threshold : Positive := Positive'Last;\n\n      procedure Incr_Until_Threshold (I : Integer) with\n        Global => (Input  => Threshold,\n                   In_Out => A);\n\n      procedure Incr_Until_Threshold (I : Integer) is\n      begin\n         if Threshold - Increment <= A (I) then\n            A (I) := Threshold;\n         else\n            A (I) := A (I) + Increment;\n         end if;\n      end Incr_Until_Threshold;\n\n   begin\n      for I in A'Range loop\n         if I > A'First then\n            Threshold := A (I - 1);\n         end if;\n         Incr_Until_Threshold (I);\n      end loop;\n   end Incr_Step_Function;\n\nend Show_Increments;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Flow_Analysis.Example_07",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow_report_all"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "show_increments.ads",
+        "show_increments.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "e31fd31b9f9b8908c1f42c1c9531531d1be837703a96b0207827c47205d3df9335cff7b7a16aff9f7a0aaa0fc0b4b1657f7566c62ec3e1f45c2649f648622d04",
+    "text_hash_short": "8e28a005cd9d78947e4bfc60db708bf5"
+}

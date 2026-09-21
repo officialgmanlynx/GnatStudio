@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 1453,
+    "line_end": 1480,
+    "text": "package Recs is\n\n   type TT (L : Positive := 1;\n            M : Positive := 2) is\n   --       ^^^^^^^^^^^^^^^^^\n   --  ERROR: cannot assign default\n   --         in discriminant of\n   --         nonlimited tagged type.\n     tagged private;\n\n   type LTT (L : Positive := 1;\n             M : Positive := 2) is\n     tagged limited private;\n\nprivate\n\n   type TT (L : Positive := 1;\n            M : Positive := 2) is\n     tagged null record;\n\n   type LTT (L : Positive := 1;\n             M : Positive := 2) is\n     tagged limited null record;\n\nend Recs;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Discriminants.Discriminant_Default_Value_Tagged_TYpe",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "recs.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "50a2481deda96d9c8d3de1409fa32d934d2808815aa442196e8160d8a0e48248918938244fbb2a364c5cc83be38172b1d803c6881602e86e921826e3b0323406",
+    "text_hash_short": "94b78f032efe49de0b8198083a25d79b"
+}

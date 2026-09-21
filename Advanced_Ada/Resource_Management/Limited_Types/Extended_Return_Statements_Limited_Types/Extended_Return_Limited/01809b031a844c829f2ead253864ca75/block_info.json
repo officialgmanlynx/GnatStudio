@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 2413,
+    "line_end": 2422,
+    "text": "with Task_Construct; use Task_Construct;\n\nprocedure Show_Task_Construct is\n   My_Task : Task_Type := Make_Task (Val => 42);\nbegin\n   null;\nend Show_Task_Construct;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Extended_Return_Statements_Limited_Types.Extended_Return_Limited",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_task_construct.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_task_construct.adb",
+    "text_hash": "f823779c9a1f89df7fd2e787c8ea94f23c42118afa72a0780b26ada5adcf8a4e6df6b9e62fdce195cf8ff3cc107530da04d88f4f968cfdbcb2419bd389c6d770",
+    "text_hash_short": "01809b031a844c829f2ead253864ca75"
+}

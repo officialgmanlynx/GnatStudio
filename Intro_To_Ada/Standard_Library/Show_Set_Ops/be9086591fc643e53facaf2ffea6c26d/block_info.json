@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_containers.rst",
+    "line_start": 1056,
+    "line_end": 1138,
+    "text": "with Ada.Containers; use Ada.Containers;\nwith Ada.Containers.Ordered_Sets;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Set_Ops is\n\n   package Integer_Sets is new\n     Ada.Containers.Ordered_Sets\n       (Element_Type => Integer);\n\n   use Integer_Sets;\n\n   procedure Show_Elements (S : Set) is\n   begin\n      Put_Line (\"Elements:\");\n      for E of S loop\n         Put_Line (\"- \" & Integer'Image (E));\n      end loop;\n   end Show_Elements;\n\n   procedure Show_Op (S       : Set;\n                      Op_Name : String) is\n   begin\n      New_Line;\n      Put_Line (Op_Name\n                & \"(set #1, set #2) has \"\n                & Count_Type'Image (S.Length)\n                & \" elements\");\n   end Show_Op;\n\n   S1, S2, S3 : Set;\nbegin\n   S1.Insert (0);\n   S1.Insert (10);\n   S1.Insert (13);\n\n   S2.Insert (0);\n   S2.Insert (10);\n   S2.Insert (14);\n\n   S3.Insert (0);\n   S3.Insert (10);\n\n   New_Line;\n   Put_Line (\"---- Set #1 ----\");\n   Show_Elements (S1);\n\n   New_Line;\n   Put_Line (\"---- Set #2 ----\");\n   Show_Elements (S2);\n\n   New_Line;\n   Put_Line (\"---- Set #3 ----\");\n   Show_Elements (S3);\n\n   New_Line;\n   if S3.Is_Subset (S1) then\n      Put_Line (\"S3 is a subset of S1\");\n   else\n      Put_Line (\"S3 is not a subset of S1\");\n   end if;\n\n   S3 := S1 and S2;\n   Show_Op (S3, \"Intersection\");\n   Show_Elements (S3);\n\n   S3 := S1 or S2;\n   Show_Op (S3, \"Union\");\n   Show_Elements (S3);\n\n   S3 := S1 - S2;\n   Show_Op (S3, \"Difference\");\n   Show_Elements (S3);\n\n   S3 := S1 xor S2;\n   Show_Op (S3, \"Symmetric difference\");\n   Show_Elements (S3);\n\nend Show_Set_Ops;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Set_Ops",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_set_ops.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_set_ops.adb",
+    "text_hash": "464854334af6c950e2e96ce8702e24ab2c07d5062572ad71c7e03495809673d3463097113f83300264ef19e5e19bde3b8467afeb1bfe3caf2967671ec9cb4861",
+    "text_hash_short": "be9086591fc643e53facaf2ffea6c26d"
+}

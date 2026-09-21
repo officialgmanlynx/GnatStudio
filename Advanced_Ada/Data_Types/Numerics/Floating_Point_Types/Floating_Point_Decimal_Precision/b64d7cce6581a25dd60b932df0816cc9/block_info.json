@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 2062,
+    "line_end": 2089,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Decimal_Digits is\n\n   type Float_6_Digits is\n     digits 6;\n\n   type Float_9_Digits is\n     digits 9;\n\n   F6 : Float_6_Digits;\nbegin\n   F6 := 0.123456123;\n\n   Put_Line (\"F6 = \"\n             & F6'Image);\n\n   Put_Line (\"F6 = \"\n             & Float_9_Digits (F6)'Image\n             & \" (9 digits)\");\n\n   Put_Line (\"Float_6_Digits'Size  :\"\n             & Float_6_Digits'Size'Image\n             & \" bits\");\nend Show_Decimal_Digits;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Floating_Point_Types.Floating_Point_Decimal_Precision",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_decimal_digits.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_decimal_digits.adb",
+    "text_hash": "8e2577a9d61672ccbf33d765f7e81d5e6a7432ca4a89ca0f895edaf9259b599cfc672d22602ecf990e99fe64d17f745dc6fd71b6eadde5424d148f5459de1314",
+    "text_hash_short": "b64d7cce6581a25dd60b932df0816cc9"
+}

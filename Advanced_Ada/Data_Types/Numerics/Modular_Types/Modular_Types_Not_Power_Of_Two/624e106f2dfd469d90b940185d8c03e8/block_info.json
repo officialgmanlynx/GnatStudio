@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 1929,
+    "line_end": 1952,
+    "text": "package Modular_Types is\n\n   type Modular_10 is mod 10;\n\nend Modular_Types;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Modular_Types;\nuse  Modular_Types;\n\nprocedure Show_Not_Power_Of_Two_Modular is\nbegin\n   Put_Line (\"Modular_10'Size  :\"\n             & Modular_10'Size'Image\n             & \" bits\");\n   Put_Line (\"Modular_10'First :\"\n             & Modular_10'First'Image);\n   Put_Line (\"Modular_10'Last  :\"\n             & Modular_10'Last'Image);\nend Show_Not_Power_Of_Two_Modular;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Modular_Types.Modular_Types_Not_Power_Of_Two",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "modular_types.ads",
+        "show_not_power_of_two_modular.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_not_power_of_two_modular.adb",
+    "text_hash": "7a7cc3d83d588ed6c25a86fafeaba25f9f18f15d8df71d6072bf7b05e5d647e421935fd9104f4c6b40c237d55daf5becc057edbcfb3f866acab0a9e39891e05e",
+    "text_hash_short": "624e106f2dfd469d90b940185d8c03e8"
+}

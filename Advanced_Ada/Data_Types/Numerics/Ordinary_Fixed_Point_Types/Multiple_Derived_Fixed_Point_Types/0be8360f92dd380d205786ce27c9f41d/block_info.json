@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 8538,
+    "line_end": 8575,
+    "text": "package Custom_Fixed_Point is\n\n   D : constant := 2.0 ** (-15);\n   type TQ15 is\n     delta D\n     range -1.0 .. 1.0 - D;\n\n   type TQ15_Half is new\n     TQ15 range -0.5 .. 0.5 - D;\n\n   type TQ15_Quarter is new\n     TQ15 range -0.25 .. 0.25 - D;\n\nend Custom_Fixed_Point;\n\nwith Ada.Text_IO;   use Ada.Text_IO;\n\nwith Custom_Fixed_Point;\nuse  Custom_Fixed_Point;\n\nprocedure Show_Derived_Fixed_Point_Ranges is\nbegin\n   Put_Line (\"TQ15'Range         : \"\n             & TQ15'First'Image\n             & \" .. \"\n             & TQ15'Last'Image);\n   Put_Line (\"TQ15_Half'Range    : \"\n             & TQ15_Half'First'Image\n             & \" .. \"\n             & TQ15_Half'Last'Image);\n   Put_Line (\"TQ15_Quarter'Range : \"\n             & TQ15_Quarter'First'Image\n             & \" .. \"\n             & TQ15_Quarter'Last'Image);\nend Show_Derived_Fixed_Point_Ranges;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Ordinary_Fixed_Point_Types.Multiple_Derived_Fixed_Point_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_fixed_point.ads",
+        "show_derived_fixed_point_ranges.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_derived_fixed_point_ranges.adb",
+    "text_hash": "1e85f5d62040f0c712cd270d1db31211ac23e8a65043f5a8533a19746761ba2a3b83e2a60f63a7974636a5164fe9ed001a1eae825e341800ca8069def1066d0e",
+    "text_hash_short": "0be8360f92dd380d205786ce27c9f41d"
+}

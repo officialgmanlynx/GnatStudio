@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 4068,
+    "line_end": 4108,
+    "text": "package Custom_Fixed_Point is\n\n   type Decimal is\n     delta 10.0 ** (-9) digits 9;\n\n   D_31 : constant :=  2.0 ** (-31);\n   type Fixed_Point is\n     delta D_31\n     range -1.0 .. 1.0 - D_31;\n\nend Custom_Fixed_Point;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Custom_Fixed_Point;\nuse  Custom_Fixed_Point;\n\nprocedure Show_Fixed_Point_Conversions is\n   FP : Fixed_Point;\n   D  : Decimal;\nbegin\n   FP := 0.5;\n   D  := Decimal (FP);\n\n   Put_Line (\"FP = \"\n             & FP'Image);\n   Put_Line (\"D  = \"\n             & D'Image);\n   Put_Line (\"------------------------------\");\n\n   D  := 0.25;\n   FP := Fixed_Point (D);\n\n   Put_Line (\"FP = \"\n             & FP'Image);\n   Put_Line (\"D  = \"\n             & D'Image);\nend Show_Fixed_Point_Conversions;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Fixed_Point_Types.Fixed_Type_Conversions",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_fixed_point.ads",
+        "show_fixed_point_conversions.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_fixed_point_conversions.adb",
+    "text_hash": "c5975418bdab66b2845e9c56d3f72bb7558c6e7cddb00e9967ca766e64e5ae737945c7cfb10436a755a230fb44595614a702a12a8f306d69bfc18936e93249af",
+    "text_hash_short": "ebcbee4dc4129741ab30599c4ca8ef4d"
+}

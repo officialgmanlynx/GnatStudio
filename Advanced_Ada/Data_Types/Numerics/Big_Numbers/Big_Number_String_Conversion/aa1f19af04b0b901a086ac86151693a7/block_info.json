@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 11250,
+    "line_end": 11278,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Ada.Numerics.Big_Numbers.Big_Integers;\nuse  Ada.Numerics.Big_Numbers.Big_Integers;\n\nwith Ada.Numerics.Big_Numbers.Big_Reals;\nuse  Ada.Numerics.Big_Numbers.Big_Reals;\n\nprocedure Show_Big_Number_String_Conversion\nis\n   BI : Big_Integer;\n   BR : Big_Real;\nbegin\n   BI := From_String (\"12345678901234567890\");\n   BR := From_String (\"12345678901234567890.0\");\n\n   Put_Line (\"BI: \"\n             & To_String (Arg   => BI,\n                          Width => 5,\n                          Base => 2));\n   Put_Line (\"BR: \"\n             & To_String (Arg   => BR,\n                          Fore  => 2,\n                          Aft   => 6,\n                          Exp   => 18));\nend Show_Big_Number_String_Conversion;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Big_Numbers.Big_Number_String_Conversion",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_big_number_string_conversion.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_big_number_string_conversion.adb",
+    "text_hash": "02319a20d93706627a633ca3d21ae70f5dad9076cf798244b383d222fc5ed586d4f225718f494fee06b2c4fd85ea9be1e6c0033650d312682acefdc56686dc6a",
+    "text_hash_short": "aa1f19af04b0b901a086ac86151693a7"
+}

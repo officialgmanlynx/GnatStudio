@@ -1,0 +1,48 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 1984,
+    "line_end": 2096,
+    "text": "package Drivers_Base is\n\n   type Transceiver is interface;\n\n   procedure Send (Device : Transceiver; Data : Integer) is abstract;\n   procedure Receive (Device : Transceiver; Data : out Integer) is abstract;\n   procedure Display (Device : Transceiver) is abstract;\n\nend Drivers_Base;\n\nwith Drivers_Base;\n\npackage Drivers_1 is\n\n   type Transceiver is new Drivers_Base.Transceiver with null record;\n\n   procedure Send (Device : Transceiver; Data : Integer);\n   procedure Receive (Device : Transceiver; Data : out Integer);\n   procedure Display (Device : Transceiver);\n\nend Drivers_1;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Drivers_1 is\n\n   procedure Send (Device : Transceiver; Data : Integer) is null;\n\n   procedure Receive (Device : Transceiver; Data : out Integer) is\n      pragma Unreferenced (Device);\n   begin\n      Data := 42;\n   end Receive;\n\n   procedure Display (Device : Transceiver) is\n      pragma Unreferenced (Device);\n   begin\n      Put_Line (\"Using Drivers_1\");\n   end Display;\n\nend Drivers_1;\n\nwith Drivers_Base;\n\npackage Drivers_2 is\n\n   type Transceiver is new Drivers_Base.Transceiver with null record;\n\n   procedure Send (Device : Transceiver; Data : Integer);\n   procedure Receive (Device : Transceiver; Data : out Integer);\n   procedure Display (Device : Transceiver);\n\nend Drivers_2;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Drivers_2 is\n\n   procedure Send (Device : Transceiver; Data : Integer) is null;\n\n   procedure Receive (Device : Transceiver; Data : out Integer) is\n      pragma Unreferenced (Device);\n   begin\n      Data := 7;\n   end Receive;\n\n   procedure Display (Device : Transceiver) is\n      pragma Unreferenced (Device);\n   begin\n      Put_Line (\"Using Drivers_2\");\n   end Display;\n\nend Drivers_2;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Drivers_Base;\nwith Drivers_1;\nwith Drivers_2;\n\nprocedure Main is\n   D1 : aliased Drivers_1.Transceiver;\n   D2 : aliased Drivers_2.Transceiver;\n   D  : access Drivers_Base.Transceiver'Class;\n\n   I  : Integer;\n\n   type Driver_Number is range 1 .. 2;\n\n   procedure Select_Driver (N : Driver_Number) is\n   begin\n      if N = 1 then\n         D := D1'Access;\n      else\n         D := D2'Access;\n      end if;\n      D.Display;\n   end Select_Driver;\n\nbegin\n   Select_Driver (1);\n   D.Send (999);\n   D.Receive (I);\n   Put_Line (Integer'Image (I));\n\n   Select_Driver (2);\n   D.Send (999);\n   D.Receive (I);\n   Put_Line (Integer'Image (I));\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.Tagged_Drivers",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "drivers_base.ads",
+        "drivers_1.ads",
+        "drivers_1.adb",
+        "drivers_2.ads",
+        "drivers_2.adb",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "c952be3bf5c74e205121f6c7c201a21c62a320d522b77fb40c9aec8ebbb7465fc6ab7013c9e675275f0293706988e3613ab288db653fdf2aeeef7da31306f716",
+    "text_hash_short": "d823b7231f1adf003fb6f545cb482308"
+}

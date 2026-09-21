@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/aggregates.rst",
+    "line_start": 531,
+    "line_end": 586,
+    "text": "package Points is\n\n   type Point_Dimension is (Dim_1, Dim_2, Dim_3);\n\n   type Point (D : Point_Dimension) is record\n      case D is\n      when Dim_1 =>\n         X1         : Integer;\n      when Dim_2 =>\n         X2, Y2     : Integer;\n      when Dim_3 =>\n         X3, Y3, Z3 : Integer;\n      end case;\n   end record;\n\n   procedure Display (P : Point);\n\nend Points;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Points is\n\n   procedure Display (P : Point) is\n   begin\n      Put_Line (Point_Dimension'Image (P.D));\n\n      case P.D is\n      when Dim_1 =>\n         Put_Line (\"  (X => \"\n                   & Integer'Image (P.X1)\n                   & \")\");\n      when Dim_2 =>\n         Put_Line (\"  (X => \"\n                   & Integer'Image (P.X2)\n                   & \",\");\n         Put_Line (\"   Y => \"\n                   & Integer'Image (P.Y2)\n                  & \")\");\n      when Dim_3 =>\n         Put_Line (\"  (X => \"\n                   & Integer'Image (P.X3)\n                   & \",\");\n         Put_Line (\"   Y => \"\n                   & Integer'Image (P.Y3)\n                   & \",\");\n         Put_Line (\"   Z => \"\n                   & Integer'Image (P.Z3)\n                   & \")\");\n      end case;\n   end Display;\n\nend Points;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Aggregates.Record_Aggregates.Rec_Aggregate_Discriminant",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "points.ads",
+        "points.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "a7f8e98a76a4aa0a03b19996fb6985543d3bf354da4eefd50e718302e9d72d4f181e1fec77ad44f025a4996787505a9110090d1b71f15a0307fe503645f31eda",
+    "text_hash_short": "bd71322a65ca50e1eefa0aedd407931a"
+}

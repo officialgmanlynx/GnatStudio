@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/strings.rst",
+    "line_start": 1035,
+    "line_end": 1054,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Ada.Strings.UTF_Encoding;\nuse  Ada.Strings.UTF_Encoding;\n\nprocedure Show_UTF_8 is\n\n   Symbol_UTF_8 : constant\n     UTF_8_String :=\n       Character'Val (16#e2#)\n       & Character'Val (16#98#)\n       & Character'Val (16#85#);\n\nbegin\n   Put_Line (\"UTF-8 String: \"\n             & Symbol_UTF_8);\nend Show_UTF_8;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Strings.String_Encoding.UTF_8",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_utf_8.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_utf_8.adb",
+    "text_hash": "f1461e31759573c00348189a9e07e55283cd96dfd6ffa20ca64c5e875e4653b796f6e5bbb9f4b2a4f05b249d1c949f2c487f942aea34f37e1a8b5f8599a97872",
+    "text_hash_short": "8ff02bc1793c0c5ac1ff24f62941af73"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 1465,
+    "line_end": 1488,
+    "text": "!main.c\n#include <stdio.h>\n\nenum Day {\n    Monday    = 10,\n    Tuesday   = 11,\n    Wednesday = 12,\n    Thursday  = 13,\n    Friday    = 14,\n    Saturday  = 15,\n    Sunday    = 16\n};\n\nint main(int argc, const char * argv[])\n{\n    enum Day d = Monday;\n\n    printf(\"d = %d\\n\", d);\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Enumeration_Values_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "c09657b05ce7605d3d6779675c81940d01dc0610e2f8c572e0075ca08987d27a2953b639ec9a704deac08d16202ec26f3a564100e8f9dac742cbaefb09c2a17b",
+    "text_hash_short": "48ae1c84dafabde7a16de5305e106a80"
+}

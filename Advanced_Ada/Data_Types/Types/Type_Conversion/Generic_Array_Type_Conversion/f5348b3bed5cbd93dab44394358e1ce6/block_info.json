@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 2540,
+    "line_end": 2568,
+    "text": "with Ada.Text_IO;   use Ada.Text_IO;\nwith Custom_Arrays;\n\nprocedure Show_Conversion is\n   package CA_Int_1 is\n     new Custom_Arrays (T => Integer);\n   package CA_Int_2 is\n     new Custom_Arrays (T => Integer);\n\n   subtype Common_Range is Positive range 1 .. 3;\n\n   AI_1 : CA_Int_1.T_Array (Common_Range);\n   AI_2 : CA_Int_2.T_Array (Common_Range);\nbegin\n   AI_2 := [1, 2, 3];\n   AI_1 := CA_Int_1.T_Array (AI_2);\n\n   Put_Line (\"AI_1: \"\n             & AI_1'Image);\n\n   AI_1 := [4, 5, 6];\n   AI_2 := CA_Int_2.T_Array (AI_1);\n\n   Put_Line (\"AI_2: \"\n             & AI_2'Image);\nend Show_Conversion;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Type_Conversion.Generic_Array_Type_Conversion",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_conversion.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_conversion.adb",
+    "text_hash": "e4b36bdef68697e9ef9d68efe2b1fd32b1428f60eef7dc1db295fa3dcd61e0704dd0217c3fa7de6b18a1cb4918f5e6593bd5a3c8a1565bca871956bafd7dc3a8",
+    "text_hash_short": "f5348b3bed5cbd93dab44394358e1ce6"
+}

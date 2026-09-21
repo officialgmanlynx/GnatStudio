@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/exceptions.rst",
+    "line_start": 741,
+    "line_end": 751,
+    "text": "procedure Show_Overflow_Check is\n   A, B : Integer;\nbegin\n   A := Integer'Last;\n   B := 1;\n\n   A := A + B;\nend Show_Overflow_Check;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Exceptions.Checks_And_Exceptions.Overflow_Check",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_overflow_check.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_overflow_check.adb",
+    "text_hash": "091c73f13fdfd0f5fd3dce55ba640d7c7d6bfbeeae676fff3b708fcec769ab46beee00a4750d388f2540e51f8be2125627bfd29a7522f5270796431b5261380d",
+    "text_hash_short": "baa46d9085cbd14863aaa7e24dc7b9cc"
+}

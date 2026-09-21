@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 1735,
+    "line_end": 1778,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Array_Assignments is\n\n   type Integer_Array is\n     array (Positive range <>) of Integer;\n\n   type Integer_Array_Access is\n     access Integer_Array;\n\n   procedure Show_Array\n     (Name : String;\n      Arr  : Integer_Array_Access) is\n   begin\n      Put (Name);\n      for E of Arr.all loop\n         Put (Integer'Image (E));\n      end loop;\n      New_Line;\n   end Show_Array;\n\n   Arr_1 : constant Integer_Array_Access :=\n                      new Integer_Array (1 .. 6);\n   Arr_2 :          Integer_Array_Access :=\n                      new Integer_Array (1 .. 6);\nbegin\n   Arr_1.all := (1,   2,  3,  5,   8,  13);\n   Arr_2.all := (21, 34, 55, 89, 144, 233);\n\n   --  Array assignment\n   Arr_2.all := Arr_1.all;\n\n   Show_Array (\"Arr_2\", Arr_2);\n\n   --  Access value assignment\n   Arr_2 := Arr_1;\n\n   Arr_1.all := (377, 610, 987, 1597, 2584, 4181);\n\n   Show_Array (\"Arr_2\", Arr_2);\nend Show_Array_Assignments;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Dereferencing.Array_Assignments",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_array_assignments.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_array_assignments.adb",
+    "text_hash": "040624810137c82b0e52b1f7b6c03c9709195f3e792ea930ba4ede6b358cfbcfc63f68782581240a6ec947a2882b2af38cfbec5086c0d9c0b53910d3ecd0498d",
+    "text_hash_short": "9b1f99af081000c28a6bf9b033127ea3"
+}

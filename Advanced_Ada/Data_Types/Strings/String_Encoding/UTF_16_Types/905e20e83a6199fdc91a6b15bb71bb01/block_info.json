@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/strings.rst",
+    "line_start": 724,
+    "line_end": 769,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Ada.Strings.UTF_Encoding;\nuse  Ada.Strings.UTF_Encoding;\n\nwith Ada.Strings.UTF_Encoding.Conversions;\nuse  Ada.Strings.UTF_Encoding.Conversions;\n\nprocedure Show_UTF16_Types is\n   Symbols_UTF_8  : constant\n     UTF_8_String := \"\u2665\u266b\";\n\n   Symbols_UTF_16 : constant\n     UTF_16_Wide_String :=\n       Convert (Symbols_UTF_8);\n   --  ^ Calling Convert for UTF_8_String\n   --    to UTF_16_Wide_String conversion.\n\n   Symbols_UTF_16BE : constant\n     UTF_String :=\n       Convert (Item          => Symbols_UTF_8,\n                Input_Scheme  => UTF_8,\n                Output_Scheme => UTF_16BE);\n   --  ^ Calling Convert for UTF_8_String\n   --    to UTF_String conversion in UTF-16BE\n   --    encoding.\nbegin\n   Put_Line (\"UTF_8_String:          \"\n             & Symbols_UTF_8);\n\n   Put_Line (\"UTF_16_Wide_String:    \"\n             & Convert (Symbols_UTF_16));\n   --          ^ Calling Convert for\n   --            the UTF_16_Wide_String to\n   --            UTF_8_String conversion.\n\n   Put_Line\n     (\"UTF_String / UTF_16BE: \"\n      & Convert\n          (Item          => Symbols_UTF_16BE,\n           Input_Scheme  => UTF_16BE,\n           Output_Scheme => UTF_8));\nend Show_UTF16_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Strings.String_Encoding.UTF_16_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_utf16_types.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_utf16_types.adb",
+    "text_hash": "63af46256fa494932e0b4a67ddecb33291c9114e08c35bab3ea7a39a2b43dc57746713bfdcd71dc20179775d71d6cf653ca680fb318cc5fd3b40448e38885d0d",
+    "text_hash_short": "905e20e83a6199fdc91a6b15bb71bb01"
+}

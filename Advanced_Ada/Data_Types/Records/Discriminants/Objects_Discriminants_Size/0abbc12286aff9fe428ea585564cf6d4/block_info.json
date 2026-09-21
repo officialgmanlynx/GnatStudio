@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 1123,
+    "line_end": 1169,
+    "text": "package Recs is\n\n   type Null_Rec (L : Positive;\n                  M : Positive) is\n     private;\n\n   type Rec_Array (L : Positive) is\n     private;\n\nprivate\n\n   type Null_Rec (L : Positive;\n                  M : Positive) is\n     null record;\n\n   type Integer_Array is\n     array (Positive range <>) of Integer;\n\n   type Rec_Array (L : Positive) is\n   record\n      Arr : Integer_Array (1 .. L);\n   end record;\n\nend Recs;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Recs;        use Recs;\n\nprocedure Show_Object_Sizes is\n   Null_Rec_A  : Null_Rec (1, 2);\n   Null_Rec_B  : Null_Rec (5, 6);\n   Rec_Array_A : Rec_Array (10);\n   Rec_Array_B : Rec_Array (20);\nbegin\n   Put_Line (\"Null_Rec_A'Size = \"\n             & Null_Rec_A'Size'Image);\n   Put_Line (\"Null_Rec_B'Size = \"\n             & Null_Rec_B'Size'Image);\n   Put_Line (\"Rec_Array_A'Size = \"\n             & Rec_Array_A'Size'Image);\n   Put_Line (\"Rec_Array_B'Size = \"\n             & Rec_Array_B'Size'Image);\nend Show_Object_Sizes;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Discriminants.Objects_Discriminants_Size",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "recs.ads",
+        "show_object_sizes.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_object_sizes.adb",
+    "text_hash": "b67c4b36d81dc8f60b18b0ee56097146474eb896089256b3a678bcc5cb6e3f9ac313b2290e3bf50f5b620f6c1a8aa060db21352c3e1e171122293b6582d3bcb8",
+    "text_hash_short": "0abbc12286aff9fe428ea585564cf6d4"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 1601,
+    "line_end": 1620,
+    "text": "package Subtypes_With_Discriminants is\n\n   type T\n     (L : Positive;\n      M : Positive) is\n     null record;\n\n   subtype Sub_T is T;\n   --  Discriminants are not specified:\n   --  taking the ones from T.\n\n   subtype Sub_T_2 is T\n    (L => 3, M => 4);\n   --  Discriminants are specified:\n   --  taking the ones from Sub_T_2\n\nend Subtypes_With_Discriminants;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Discriminants.Derived_Subtypes",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "subtypes_with_discriminants.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "447ba96a0237d5ad7ce788e2b8141cacdf350d4941974a1baf4d82d5adc048f37ff556f02b4b45697572c3b540111eb4b538243b74903ea72809fd8668c46416",
+    "text_hash_short": "6f02c295f295c81fd20d06f7c710994c"
+}

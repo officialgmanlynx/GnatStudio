@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 285,
+    "line_end": 323,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Simple_Allocation is\n\n   --  Declaring pool-specific access type:\n   type Integer_Access_1 is access Integer;\n   type Integer_Access_2 is access Integer;\n   type Integer_Access_2B is new Integer_Access_2;\n\n   --  Declaring access object:\n   A1  : Integer_Access_1;\n   A2  : Integer_Access_2;\n   A2B : Integer_Access_2B;\n\nbegin\n   A1 := new Integer;\n   Put_Line (\"A1  : \" & A1'Image);\n   Put_Line (\"Pool: \" & A1'Storage_Pool'Image);\n\n   A2 := new Integer;\n   Put_Line (\"A2:   \" & A2'Image);\n   Put_Line (\"Pool: \" & A2'Storage_Pool'Image);\n\n   --  ERROR: Cannot directly assign access values\n   --         for objects of unrelated access\n   --         types; also, cannot convert between\n   --         these types.\n   --\n   --  A1 := A2;\n   --  A1 := Integer_Access_1 (A2);\n\n   A2B := Integer_Access_2B (A2);\n   Put_Line (\"A2B:  \" & A2B'Image);\n   Put_Line (\"Pool: \" & A2B'Storage_Pool'Image);\n\nend Show_Simple_Allocation;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Access_Types_Allocation.Pool_Specific_Access_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_simple_allocation.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_simple_allocation.adb",
+    "text_hash": "cd804fd3a7d431c661338d57e8e16f4e5cba977f1a58a10db517426e359c186a925e944c63f1bb69c161238be27483831e84d33a03462a668228e3451a3997b0",
+    "text_hash_short": "80d0e9764917fa8352b6616e3a8425de"
+}

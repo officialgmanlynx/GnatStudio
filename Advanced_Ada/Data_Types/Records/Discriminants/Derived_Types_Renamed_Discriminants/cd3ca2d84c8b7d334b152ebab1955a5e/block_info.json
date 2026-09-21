@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 1816,
+    "line_end": 1838,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Derived_With_Discriminants;\nuse  Derived_With_Discriminants;\n\nprocedure Show_Derived_With_Discriminants is\n   A : T (L => 1, M => 2);\n   B : T_Derived (X => 3, Y => 4);\n   --             ^^^^^^^^^^^^^^\n   --  Using correct discriminant names\nbegin\n   Put_Line (\"A.L = \"\n             & A.L'Image);\n   Put_Line (\"A.M = \"\n             & A.M'Image);\n   Put_Line (\"B.X = \"\n             & B.X'Image);\n   Put_Line (\"B.Y = \"\n             & B.Y'Image);\nend Show_Derived_With_Discriminants;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Discriminants.Derived_Types_Renamed_Discriminants",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_derived_with_discriminants.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_derived_with_discriminants.adb",
+    "text_hash": "aacc3e1ac19ef3effb9183d6d576646910d0116120a7eda2c0f337433727508c0bb785be2b33438bde6fb848323514145cd3bf921187f59d6bed1b66d58a5c69",
+    "text_hash_short": "cd3ca2d84c8b7d334b152ebab1955a5e"
+}

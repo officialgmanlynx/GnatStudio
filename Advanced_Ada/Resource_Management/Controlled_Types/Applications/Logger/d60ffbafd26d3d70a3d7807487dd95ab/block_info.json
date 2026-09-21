@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/controlled_types.rst",
+    "line_start": 2773,
+    "line_end": 2848,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\nwith Ada.Finalization;\n\npackage Loggers is\n\n   type Logger (Filename : access String) is\n     limited private;\n\n   procedure Put_Line (L : Logger;\n                       S : String);\n\nprivate\n\n   type Logger (Filename : access String) is new\n     Ada.Finalization.Limited_Controlled with\n      record\n         Logfile : File_Type;\n      end record;\n\n   procedure Initialize\n     (L : in out Logger);\n\n   procedure Finalize\n     (L : in out Logger);\n\nend Loggers;\n\npackage body Loggers is\n\n   --\n   --  SUBPROGRAMS\n   --\n\n   procedure Put_Line (L : Logger;\n                       S : String) is\n   begin\n      Put_Line (\"Logger: Put_Line\");\n      Put_Line (L.Logfile, S);\n   end Put_Line;\n\n   --\n   --  PRIVATE SUBPROGRAMS\n   --\n\n   procedure Initialize\n     (L : in out Logger) is\n   begin\n      Create (L.Logfile,\n              Out_File,\n              L.Filename.all);\n   end Initialize;\n\n   procedure Finalize\n     (L : in out Logger) is\n   begin\n      Put_Line (\"Finalizing Logger...\");\n      if Is_Open (L.Logfile) then\n         Close (L.Logfile);\n      end if;\n   end Finalize;\n\nend Loggers;\n\nwith Loggers;         use Loggers;\nwith Some_Processing;\n\nprocedure Show_Logger is\n   Name : aliased String := \"report.log\";\n   Log : Logger (Name'Access);\nbegin\n   Put_Line (Log, \"Some info...\");\n   Some_Processing (Log);\nend Show_Logger;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Controlled_Types.Applications.Logger",
+    "main_file": "show_logger.adb",
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "loggers.ads",
+        "loggers.adb",
+        "show_logger.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_logger.adb",
+    "text_hash": "c07b9f891b054dcf00580c487001628830542890af7581aab047c7c99cda7a806119bdd4d96c143180d3098a263fae83cb01588829e3a3a0e0b5b101929dc2b9",
+    "text_hash_short": "d60ffbafd26d3d70a3d7807487dd95ab"
+}

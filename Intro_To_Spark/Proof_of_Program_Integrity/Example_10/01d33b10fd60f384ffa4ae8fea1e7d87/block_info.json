@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/03_Proof_Of_Program_Integrity.rst",
+    "line_start": 1208,
+    "line_end": 1229,
+    "text": "procedure Compute (X : in out Integer) with\n  Contract_Cases => ((X in    0 ..  199) => X >= X'Old,\n                     (X in -199 ..   -1) => X <= X'Old,\n                      X >=  200           => X =  200,\n                      X <  -200           => X = -200)\nis\nbegin\n   if X in -100 .. 100 then\n      X := X * 2;\n   elsif X in 0 .. 199 then\n      X := X + 1;\n   elsif X in -199 .. 0 then\n      X := X - 1;\n   elsif X >= 200 then\n      X := 200;\n   else\n      X := -200;\n   end if;\nend Compute;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Proof_of_Program_Integrity.Example_10",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "compute.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "cf6193b9f567f45eaa451e45d6446eb936c409c16895b5b51a01e81be4d37086ec656bbd769f1c6a8d2de8482be8370f7f4c3f708b310ee11ebd33355a87e7b2",
+    "text_hash_short": "01d33b10fd60f384ffa4ae8fea1e7d87"
+}

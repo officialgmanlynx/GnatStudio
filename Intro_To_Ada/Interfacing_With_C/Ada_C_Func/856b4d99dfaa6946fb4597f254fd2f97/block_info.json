@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/interfacing_with_c.rst",
+    "line_start": 138,
+    "line_end": 159,
+    "text": "with Interfaces.C; use Interfaces.C;\nwith Ada.Text_IO;  use Ada.Text_IO;\n\nprocedure Show_C_Func is\n\n   function Get_Value (a : int) return int\n     with\n       Import        => True,\n       Convention    => C,\n       External_Name => \"my_func\";\n\n   --  Imports function 'my_func' from C and\n   --  renames it to 'Get_Value'\n\n   V : int;\nbegin\n   V := Get_Value (2);\n   Put_Line (\"Result is \" & int'Image (V));\nend Show_C_Func;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Interfacing_With_C.Ada_C_Func",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "show_c_func.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "7581df0d5ed708373abc85fd63f49ea73730f791649b555988ee50d18815de6fb03ce56c990fd47b13f9dcceb806e4399891c8472aa4b58a269d491804ea031b",
+    "text_hash_short": "856b4d99dfaa6946fb4597f254fd2f97"
+}

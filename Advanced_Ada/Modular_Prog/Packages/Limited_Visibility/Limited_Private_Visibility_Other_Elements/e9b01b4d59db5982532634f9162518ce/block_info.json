@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/modular_prog/packages.rst",
+    "line_start": 886,
+    "line_end": 895,
+    "text": "package Info is\n\n   function Zero_Func return Integer is (0);\n\n   Zero_Const : constant := 0;\n\nend Info;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Modular_Prog.Packages.Limited_Visibility.Limited_Private_Visibility_Other_Elements",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "info.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "1b246b1ab373f8315b64d506d472382f21ff530f03e6e1f6cf5d389d6ec1411867e5c993e88568edf3c12eb669581d7be9e4b5658b62ff866caa44673ee5f372",
+    "text_hash_short": "e9b01b4d59db5982532634f9162518ce"
+}

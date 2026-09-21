@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/shared_variable_control.rst",
+    "line_start": 554,
+    "line_end": 623,
+    "text": "with System;\n\npackage Registers is\n\n   type Boolean_Bit is new Boolean\n     with Size => 1;\n\n   type UInt1 is mod 2**1\n     with Size => 1;\n\n   type UInt2 is mod 2**2\n     with Size => 2;\n\n   type UInt14 is mod 2**14\n     with Size => 14;\n\n   type Window_Register is record\n      --  horizontal line count\n      Horizontal_Cnt : UInt14 := 16#0#;\n\n      --  unspecified\n      Reserved_14_15 : UInt2  := 16#0#;\n\n      --  vertical line count\n      Vertical_Cnt   : UInt14 := 16#0#;\n\n      --  refresh signalling\n      Refresh_Needed : Boolean_Bit := False;\n\n      --  unspecified\n      Reserved_30    : UInt1  := 16#0#;\n   end record\n     with Size      => 32,\n          Bit_Order => System.Low_Order_First,\n          Volatile,\n          Full_Access_Only;\n\n   for Window_Register use record\n      Horizontal_Cnt at 0 range 0 .. 13;\n      Reserved_14_15 at 0 range 14 .. 15;\n      Vertical_Cnt   at 0 range 16 .. 29;\n      Refresh_Needed at 0 range 30 .. 30;\n      Reserved_30    at 0 range 31 .. 31;\n   end record;\n\n   procedure Show (WR : Window_Register);\n\nend Registers;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Registers is\n\n   procedure Show (WR : Window_Register) is\n   begin\n      Put_Line (\"WR = (Horizontal_Cnt => \"\n                & WR.Horizontal_Cnt'Image\n                & \",\");\n      Put_Line (\"      Vertical_Cnt   => \"\n                & WR.Vertical_Cnt'Image\n                & \",\");\n      Put_Line (\"      Refresh_Needed => \"\n                & WR.Refresh_Needed'Image\n                & \")\");\n   end Show;\n\nend Registers;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Shared_Variable_Control.Nonatomic_Full_Access_Register",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "registers.ads",
+        "registers.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "ee9cea5e469d87cbe8ef86049039815c579f838dfe1f988bdca43647b6e21472e45b58ee54ffa7ca98da6bcd226030046840724fda49b165f9080ce8ca1bbbe4",
+    "text_hash_short": "b825ec2dbbc54201203bf71e4e32fb57"
+}

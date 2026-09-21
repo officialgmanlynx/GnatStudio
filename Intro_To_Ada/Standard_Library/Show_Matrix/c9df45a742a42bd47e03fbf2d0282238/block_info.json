@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_numerics.rst",
+    "line_start": 292,
+    "line_end": 369,
+    "text": "with Ada.Text_IO;  use Ada.Text_IO;\n\nwith Ada.Numerics.Real_Arrays;\nuse  Ada.Numerics.Real_Arrays;\n\nprocedure Show_Matrix is\n\n   procedure Put_Vector (V : Real_Vector) is\n   begin\n      Put (\"    (\");\n      for I in V'Range loop\n         Put (Float'Image (V (I)) & \" \");\n      end loop;\n      Put_Line (\")\");\n   end Put_Vector;\n\n   procedure Put_Matrix (M : Real_Matrix) is\n   begin\n      for I in M'Range (1) loop\n         Put (\"    (\");\n         for J in M'Range (2) loop\n            Put (Float'Image (M (I, J)) & \" \");\n         end loop;\n         Put_Line (\")\");\n      end loop;\n   end Put_Matrix;\n\n   V1       : Real_Vector := (1.0, 3.0);\n   V2       : Real_Vector := (75.0, 11.0);\n\n   M1       : Real_Matrix :=\n                ((1.0, 5.0, 1.0),\n                 (2.0, 2.0, 1.0));\n   M2       : Real_Matrix :=\n                ((31.0, 11.0, 10.0),\n                 (34.0, 16.0, 11.0),\n                 (32.0, 12.0, 10.0),\n                 (31.0, 13.0, 10.0));\n   M3       : Real_Matrix := ((1.0, 2.0),\n                              (2.0, 3.0));\nbegin\n   Put_Line (\"V1\");\n   Put_Vector (V1);\n   Put_Line (\"V2\");\n   Put_Vector (V2);\n   Put_Line (\"V1 * V2 =\");\n   Put_Line (\"    \"\n             & Float'Image (V1 * V2));\n   Put_Line (\"V1 * V2 =\");\n   Put_Matrix (V1 * V2);\n   New_Line;\n\n   Put_Line (\"M1\");\n   Put_Matrix (M1);\n   Put_Line (\"M2\");\n   Put_Matrix (M2);\n   Put_Line (\"M2 * Transpose(M1) =\");\n   Put_Matrix (M2 * Transpose (M1));\n   New_Line;\n\n   Put_Line (\"M3\");\n   Put_Matrix (M3);\n   Put_Line (\"Inverse (M3) =\");\n   Put_Matrix (Inverse (M3));\n   Put_Line (\"abs Inverse (M3) =\");\n   Put_Matrix (abs Inverse (M3));\n   Put_Line (\"Determinant (M3) =\");\n   Put_Line (\"    \"\n             & Float'Image (Determinant (M3)));\n   Put_Line (\"Solve (M3, V1) =\");\n   Put_Vector (Solve (M3, V1));\n   Put_Line (\"Eigenvalues (M3) =\");\n   Put_Vector (Eigenvalues (M3));\n   New_Line;\nend Show_Matrix;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Matrix",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_matrix.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_matrix.adb",
+    "text_hash": "dc95e76636bd2a31dee80340c8d2e268d393be491e1e64f7fa96e164ec27341c7bf30e44462f9b4142e6e87514b42972f1ad30415a822bb87f7d3602761abefe",
+    "text_hash_short": "c9df45a742a42bd47e03fbf2d0282238"
+}

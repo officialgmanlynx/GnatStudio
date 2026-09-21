@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/04_State_Abstraction.rst",
+    "line_start": 1165,
+    "line_end": 1232,
+    "text": "package Stack with\n  Abstract_State => The_Stack\nis\n   pragma Unevaluated_Use_Of_Old (Allow);\n\n   type Stack_Model is private;\n\n   type Element is new Integer;\n   type Element_Array is array (Positive range <>) of Element;\n   Max : constant Natural := 100;\n   subtype Length_Type is Natural range 0 .. Max;\n\n   function Peek      return Element with Pre => not Is_Empty;\n   function Is_Full   return Boolean;\n   function Is_Empty  return Boolean;\n   function Get_Stack return Stack_Model;\n\n   procedure Push (E : Element) with\n     Post => not Is_Empty and\n       (if Is_Full'Old then Get_Stack = Get_Stack'Old else Peek = E);\n\nprivate\n\n   Top     : Length_Type              := 0 with Part_Of => The_Stack;\n   Content : Element_Array (1 .. Max) := (others => 0) with\n     Part_Of => The_Stack;\n\n   type Stack_Model is record\n      Top     : Length_Type := 0;\n      Content : Element_Array (1 .. Max) := (others => 0);\n   end record;\n\n   function Peek      return Element     is (Content (Top));\n   function Is_Full   return Boolean     is (Top >= Max);\n   function Is_Empty  return Boolean     is (Top = 0);\n\n   function Get_Stack return Stack_Model is (Stack_Model'(Top, Content));\n\nend Stack;\n\npackage body Stack with\n  Refined_State => (The_Stack => (Top, Content))\nis\n\n   procedure Push (E : Element) is\n   begin\n      if Top >= Max then\n         return;\n      end if;\n      Top             := Top + 1;\n      Content (Top) := E;\n   end Push;\n\nend Stack;\n\nwith Stack; use Stack;\n\nprocedure Use_Stack (E : Element) with\n  Pre => not Is_Empty\nis\n   F : Element := Peek;\nbegin\n   Push (E);\n   pragma Assert (Peek = E or Peek = F);\nend Use_Stack;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.State_Abstraction.Example_08",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_report_all"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "stack.ads",
+        "stack.adb",
+        "use_stack.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "37394b6cf639475be5dbf7cfbcceb2c4cb493428ac0b755b904e6fb7a6a631c99b836a11d49f4aa89c1f2b077cf93e295813e0ea62f7d31d106227a214551b35",
+    "text_hash_short": "7e5204d3f69e71c212e7263906a89da4"
+}

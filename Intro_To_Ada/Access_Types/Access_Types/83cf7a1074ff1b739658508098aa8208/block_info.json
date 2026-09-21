@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/access_types.rst",
+    "line_start": 138,
+    "line_end": 153,
+    "text": "with Dates; use Dates;\n\npackage Access_Types is\n   type String_Acc is access String;\n   --                        ^\n   --  Access to unconstrained array type\n   Msg : String_Acc;\n   --    ^ Default value is null\n\n   Buffer : String_Acc :=\n     new String (1 .. 10);\n   --            ^ Constraint required\nend Access_Types;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Access_Types.Access_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "access_types.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "20692f87101c0e38b01acab41b4aea9637baff7039779e16397f2e65efe13abdcd0ad212170ba385466dc1f66400231695776918cb0715360958b13f1e9a497f",
+    "text_hash_short": "83cf7a1074ff1b739658508098aa8208"
+}

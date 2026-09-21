@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 2778,
+    "line_end": 2792,
+    "text": "with P;     use P;\nwith P.Aux; use P.Aux;\n\nprocedure Show_Illegal_Constructor is\n   Rumplestiltskin_Is_My_Name : constant T :=\n     Make_T (Name => \"\");\n   Other : T :=\n     Rumplestiltskin_Is_My_Name; -- Illegal!\nbegin\n   null;\nend Show_Illegal_Constructor;\n\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Building_Objects_From_Constructors.Building_Objs_From_Constructors",
+    "main_file": "show_illegal_constructor.adb",
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_illegal_constructor.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_illegal_constructor.adb",
+    "text_hash": "d97667182f5510a1754b0204484be009b26290f5283dc33f7d6e727e2047000263b791eb1125a0891443add5dca76b5a888ff323ca3562798c9b099aae279fde",
+    "text_hash_short": "37e108cdc7cd690360f698008dd3a752"
+}

@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 2337,
+    "line_end": 2407,
+    "text": "package Library_Level is\n\n   L0_AO  : access Integer;\n\n   L0_Var : aliased Integer;\n\nend Library_Level;\n\nwith Library_Level; use Library_Level;\n\nprocedure Show_Library_Level is\n   L1_Var : aliased Integer;\n\n   L1_AO  : access Integer;\n\n   procedure Test is\n      L2_AO  : access Integer;\n\n      L2_Var : aliased Integer;\n   begin\n      L1_AO := L2_Var'Access;\n      --       ^^^^^^\n      --       ILLEGAL: L2 object to\n      --                L1 access object\n\n      L2_AO := L2_Var'Access;\n      --       ^^^^^^\n      --       LEGAL: L2 object to\n      --              L2 access object\n   end Test;\n\nbegin\n   L0_AO := new Integer'(22);\n   --       ^^^^^^^^^^^\n   --       LEGAL: L0 object to\n   --              L0 access object\n\n   L0_AO := L1_Var'Access;\n   --       ^^^^^^\n   --       ILLEGAL: L1 object to\n   --                L0 access object\n\n   L1_AO := L0_Var'Access;\n   --       ^^^^^^\n   --       LEGAL: L0 object to\n   --              L1 access object\n\n   L1_AO := L1_Var'Access;\n   --       ^^^^^^\n   --       LEGAL: L1 object to\n   --              L1 access object\n\n   L0_AO := L1_AO;  -- legal!!\n   --       ^^^^^\n   --       LEGAL:   L1 access object to\n   --                L0 access object\n   --\n   --       ILLEGAL: L1 object\n   --                (L1_AO = L1_Var'Access)\n   --                to\n   --                L0 access object\n   --\n   --       This is actually OK at compile time,\n   --       but the accessibility check fails at\n   --       runtime.\n\n   Test;\nend Show_Library_Level;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Accessibility_Levels_Rules_Introduction.Accessibility_Library_Level",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "library_level.ads",
+        "show_library_level.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_library_level.adb",
+    "text_hash": "0053abb458ce8578e1e2c2d3fc335617ef67b0349c572c0cb6d238d9c5eb59e9cb2f03a5d87454e7676f1c7aa8b897d09ed2eb617c43dc40017122c9cf202077",
+    "text_hash_short": "255bdecebdaa735408db082edd583a0c"
+}

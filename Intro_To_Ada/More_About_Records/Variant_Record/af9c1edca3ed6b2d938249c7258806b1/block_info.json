@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/more_about_records.rst",
+    "line_start": 188,
+    "line_end": 216,
+    "text": "package Variant_Record is\n   --  Forward declaration of Expr\n   type Expr;\n\n   --  Access to a Expr\n   type Expr_Access is access Expr;\n\n   type Expr_Kind_Type is (Bin_Op_Plus,\n                           Bin_Op_Minus,\n                           Num);\n   --  A regular enumeration type\n\n   type Expr (Kind : Expr_Kind_Type) is record\n      --      ^ The discriminant is an\n      --        enumeration value\n      case Kind is\n         when Bin_Op_Plus | Bin_Op_Minus =>\n            Left, Right : Expr_Access;\n         when Num =>\n            Val : Integer;\n      end case;\n      --  Variant part. Only one, at the end of\n      --  the record definition, but can be\n      --  nested\n   end record;\nend Variant_Record;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.More_About_Records.Variant_Record",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "variant_record.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "cac6b98294fa876cd3b64103eeb5a9c274545f3199f7d3016c68f4642b038cf4978037b773e46f40f461dfd647dcd56fe4f06260fd36eefcb351e9bf939dc086",
+    "text_hash_short": "af9c1edca3ed6b2d938249c7258806b1"
+}

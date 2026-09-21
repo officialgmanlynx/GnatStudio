@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/01_Overview.rst",
+    "line_start": 695,
+    "line_end": 720,
+    "text": "with Ada.Finalization;\n\npackage P\n  with SPARK_Mode => On\nis\n   subtype Letter is Character range 'a' .. 'z';\n   type String_Access is private;\n   type Dictionary is array (Letter) of String_Access;\n\n   function New_String_Access (W : String) return String_Access;\n\n   procedure Store (D : in out Dictionary; W : String);\n\nprivate\n   pragma SPARK_Mode (Off);\n\n   type String_Access is new Ada.Finalization.Controlled with record\n      Ptr : access String;\n   end record;\n\n   function New_String_Access (W : String) return String_Access is\n     (Ada.Finalization.Controlled with Ptr => new String'(W));\nend P;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Overview.Example_07",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "p.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "bc0012f18e574d7e994febf211eea5dd67fc34e1e1fcfe314969f80c63679cb8fe662ad363c35d8a1b0d3381cf4eacd07c47d0ee5f7e105e036cf3e05e8df586",
+    "text_hash_short": "cb04206c9734eb95f6444757d005dae2"
+}

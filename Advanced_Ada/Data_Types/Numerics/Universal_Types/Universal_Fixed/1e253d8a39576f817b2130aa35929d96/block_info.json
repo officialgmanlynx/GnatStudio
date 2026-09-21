@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 899,
+    "line_end": 955,
+    "text": "package Custom_Decimal_Types is\n\n  type T3_D3 is delta 10.0 ** (-3) digits 3;\n  type T3_D6 is delta 10.0 ** (-3) digits 6;\n  type T6_D6 is delta 10.0 ** (-6) digits 6;\n\nend Custom_Decimal_Types;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Custom_Decimal_Types;\nuse  Custom_Decimal_Types;\n\nprocedure Show_Universal_Fixed is\n  Val_T3_D3 : T3_D3;\n  Val_T3_D6 : T3_D6;\n  Val_T6_D6 : T6_D6;\nbegin\n   Val_T3_D3 := 0.65;\n\n   Val_T3_D6 := T3_D6 (Val_T3_D3);\n   --           ^^^^^^^^^^^^^^^^^\n   --      type conversion using\n   --       universal fixed type\n\n   Val_T6_D6 := T6_D6 (Val_T3_D6);\n   --           ^^^^^^^^^^^^^^^^^\n   --      type conversion using\n   --       universal fixed type\n\n   Put_Line (\"Val_T3_D3 = \"\n             & Val_T3_D3'Image);\n   Put_Line (\"Val_T3_D6 = \"\n             & Val_T3_D6'Image);\n   Put_Line (\"Val_T6_D6 = \"\n             & Val_T3_D6'Image);\n   Put_Line (\"-----------------\");\n\n   Val_T3_D6 := Val_T6_D6 * 2.0;\n   --           ^^^^^^^^^^^^^^^^\n   --    using universal fixed type for\n   --      the multiplication operation\n   Put_Line (\"Val_T3_D6 = \"\n             & Val_T3_D6'Image);\n\n   Val_T3_D6 := Val_T6_D6 / Val_T3_D3;\n   --           ^^^^^^^^^^^^^^^^^^^^^\n   --      different fixed-point types:\n   --    using universal fixed type for\n   --           the division operation\n   Put_Line (\"Val_T3_D6 = \"\n             & Val_T3_D6'Image);\n\nend Show_Universal_Fixed;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Universal_Types.Universal_Fixed",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_decimal_types.ads",
+        "show_universal_fixed.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_universal_fixed.adb",
+    "text_hash": "15e3b30c476be5c30d5067da1767412957837c711664d165856fcdb8774d60a473db088fda9df004d5d5837bd7333fd34121aca3ec60472bea00250b9c033c6b",
+    "text_hash_short": "1e253d8a39576f817b2130aa35929d96"
+}

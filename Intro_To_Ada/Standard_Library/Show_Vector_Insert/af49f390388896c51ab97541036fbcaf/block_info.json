@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_containers.rst",
+    "line_start": 548,
+    "line_end": 600,
+    "text": "with Ada.Containers; use Ada.Containers;\nwith Ada.Containers.Vectors;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Vector_Insert is\n\n   package Integer_Vectors is new\n     Ada.Containers.Vectors\n       (Index_Type   => Natural,\n        Element_Type => Integer);\n\n   use Integer_Vectors;\n\n   procedure Show_Elements (V : Vector) is\n   begin\n      New_Line;\n      Put_Line (\"Vector has \"\n                & Count_Type'Image (V.Length)\n                & \" elements\");\n\n      if not V.Is_Empty then\n         Put_Line (\"Vector elements are: \");\n         for E of V loop\n            Put_Line (\"- \" & Integer'Image (E));\n         end loop;\n      end if;\n   end Show_Elements;\n\n   V : Vector := 20 & 10 & 12;\n   C : Cursor;\nbegin\n   Show_Elements (V);\n\n   New_Line;\n   Put_Line (\"Adding element with value 9\");\n   Put_Line (\"  (before 10)...\");\n\n   --\n   --  Using V.Insert to insert the element\n   --  into the vector\n   --\n   C := V.Find (10);\n   if C /= No_Element then\n      V.Insert (C, 9);\n   end if;\n\n   Show_Elements (V);\n\nend Show_Vector_Insert;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Vector_Insert",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_vector_insert.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_vector_insert.adb",
+    "text_hash": "36fde415dc9436d0cd7ffa70bfde068d751fa5e8fa25440cfc5875c68b0a8fc0b02d71b812253fe208478de13c86e60617148db12e94998b134691c00be381b8",
+    "text_hash_short": "af49f390388896c51ab97541036fbcaf"
+}

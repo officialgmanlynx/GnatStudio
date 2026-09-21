@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 1737,
+    "line_end": 1752,
+    "text": "package Enumeration_Representation is\n\n   type Status_In is (Off, On, Unknown);\n   type Status_Out is new Status_In;\n\n   for Status_In use (Off     => 2#001#,\n                      On      => 2#010#,\n                      Unknown => 2#100#);\n   for Status_Out use (Off     => 103,\n                       On      => 1045,\n                       Unknown => 7700);\n\nend Enumeration_Representation;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Changing_Data_Representation.Enum_Rep",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "enumeration_representation.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "0a1679cc532a5b12470d0daeb83579bf8df0193792771721d4a05712224ee8f1744c8bf3afcc9e83be61a35ccf23e6726e33b010582c0539e1cdcc21204ea56d",
+    "text_hash_short": "f78c3718280f9265ff54270c5834b458"
+}

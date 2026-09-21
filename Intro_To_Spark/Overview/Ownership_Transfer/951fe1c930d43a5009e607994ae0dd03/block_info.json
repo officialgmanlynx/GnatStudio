@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/01_Overview.rst",
+    "line_start": 343,
+    "line_end": 359,
+    "text": "procedure Ownership_Transfer is\n   type Int_Ptr is access Integer;\n   X     : Int_Ptr;\n   Y     : Int_Ptr;\n   Dummy : Integer;\nbegin\n   X     := new Integer'(1);\n   X.all := X.all + 1;\n   Y     := X;\n   Y.all := Y.all + 1;\n   X.all := X.all + 1;  --  illegal\n   X.all := 1;          --  illegal\n   Dummy := X.all;      --  illegal\nend Ownership_Transfer;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Overview.Ownership_Transfer",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run",
+        "prove_flow"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": true,
+    "source_files": [
+        "ownership_transfer.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": "ownership_transfer.adb",
+    "text_hash": "8545d85fb8a9c9df157921c637ec87a6b07d54d644730fae7ea0311e1169fc1564ff197020e8677938f8ef2667920d8f90857baa758e5b7825464e0135d35e75",
+    "text_hash_short": "951fe1c930d43a5009e607994ae0dd03"
+}

@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/modular_prog/packages.rst",
+    "line_start": 61,
+    "line_end": 78,
+    "text": "package Driver_M1 is\n\n   Counter_2 : Integer := Drivers.Counter;\n\nend Driver_M1;\n\npackage Drivers is\n\n   Counter : Integer := 0;\n\nend Drivers;\n\nwith Driver_M1;\n\npackage Drivers.M1 renames Driver_M1;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Modular_Prog.Packages.Package_Renaming.Package_Renaming_1_Refer_To_Parent",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "driver_m1.ads",
+        "drivers.ads",
+        "drivers-m1.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "17d80e1a1a972c188f62956f52eebbe5971555ee6753ebbb0463901641013a4742458126daa6e5cd8be2074dbf7ee190e1049f972040ff6a33d9b428b40ee6f2",
+    "text_hash_short": "d174746d8151d9a2cd048ad44e853850"
+}

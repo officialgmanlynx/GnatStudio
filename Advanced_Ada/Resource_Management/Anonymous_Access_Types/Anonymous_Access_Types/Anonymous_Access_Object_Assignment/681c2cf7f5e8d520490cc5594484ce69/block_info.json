@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 150,
+    "line_end": 194,
+    "text": "package Aux is\n\n   type Integer_Access is access all Integer;\n\n   procedure Show (Name : String;\n                   V    : Integer_Access);\n\nend Aux;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Aux is\n\n   procedure Show (Name : String;\n                   V    : Integer_Access) is\n   begin\n      Put_Line (Name & \".all: \"\n                & Integer'Image (V.all));\n   end Show;\n\nend Aux;\n\nwith Aux; use Aux;\n\nprocedure Show_Anonymous_Access_Types is\n   --  I_Var : aliased Integer;\n\n   A : Integer_Access;\n   B : Integer_Access;\nbegin\n   --  A := I_Var'Access;\n   --       ^ ERROR: non-local pointer cannot\n   --                point to local object.\n\n   A := new Integer;\n   B := A;\n\n   A.all := 22;\n\n   Show (\"A\", A);\n   Show (\"B\", B);\nend Show_Anonymous_Access_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Anonymous_Access_Types.Anonymous_Access_Object_Assignment",
+    "main_file": "show_anonymous_access_types.adb",
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "aux.ads",
+        "aux.adb",
+        "show_anonymous_access_types.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_anonymous_access_types.adb",
+    "text_hash": "f901e7722600444c72b10aae61a137360eda80367373cb6b14fbbbc54993e53d00dfeb3ddefbe1944d6eb01e9c9e340b36a60d9c4a10ef5980bd878bcacbd65e",
+    "text_hash_short": "681c2cf7f5e8d520490cc5594484ce69"
+}

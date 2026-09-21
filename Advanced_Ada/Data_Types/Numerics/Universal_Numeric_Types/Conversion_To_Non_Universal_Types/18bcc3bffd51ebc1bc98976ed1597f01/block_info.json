@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 713,
+    "line_end": 725,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Static_Expressions;\nuse  Static_Expressions;\n\nprocedure Show_Static_Expressions is\nbegin\n   Put_Line (Long_Long_Float (Pi)'Image);\n   Put_Line (Long_Long_Float'(Pi)'Image);\nend Show_Static_Expressions;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Universal_Numeric_Types.Conversion_To_Non_Universal_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_static_expressions.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_static_expressions.adb",
+    "text_hash": "577d49bb0d1e3e75edb994ba4e8f6b86a46a8d62ca9cca5566edc14b1c302e275293c833a300cbd3b2f33f4aa82aba6575708e0988e622d1f11cc7dd0e285932",
+    "text_hash_short": "18bcc3bffd51ebc1bc98976ed1597f01"
+}

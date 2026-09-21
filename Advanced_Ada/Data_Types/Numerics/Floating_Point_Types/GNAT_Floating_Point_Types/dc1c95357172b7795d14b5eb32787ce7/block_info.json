@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 2192,
+    "line_end": 2216,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_GNAT_Float_Types is\nbegin\n\n   Put_Line (\"Short_Float'Size:          \"\n             & Short_Float'Size'Image\n             & \" bits\");\n\n   Put_Line (\"Float'Size:                \"\n             & Float'Size'Image\n             & \" bits\");\n\n   Put_Line (\"Long_Float'Size:           \"\n             & Long_Float'Size'Image\n             & \" bits\");\n\n   Put_Line (\"Long_Long_Float'Size:      \"\n             & Long_Long_Float'Size'Image\n             & \" bits\");\n\nend Show_GNAT_Float_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Floating_Point_Types.GNAT_Floating_Point_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_gnat_float_types.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_gnat_float_types.adb",
+    "text_hash": "637cda6942752ed9de37a868700f20408e148820696c1531c85bd407c0a846b5415e6569ff67723339d7d560a3e1ce9bd2a30d76cd74ca6aee3effac62f49ed8",
+    "text_hash_short": "dc1c95357172b7795d14b5eb32787ce7"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 45,
+    "line_end": 63,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Anonymous_Access_Types is\n   I_Var : aliased Integer;\n\n   A     : access Integer;\n   --      ^ Anonymous access type\nbegin\n   A := I_Var'Access;\n   --   ^ Assignment to object of\n   --     anonymous access type.\n\n   A.all := 22;\n\n   Put_Line (\"A.all: \" & Integer'Image (A.all));\nend Show_Anonymous_Access_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Anonymous_Access_Types.Simple_Anonymous_Access_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_anonymous_access_types.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_anonymous_access_types.adb",
+    "text_hash": "d93060ba0701567f20ee513f67f32470dddf2a86d4de1784b3eb19e073ae536ddb5529917d46784398f9ce3a3a0f6b6e1c70dc35af8e9ac99ea94ce70366d911",
+    "text_hash_short": "f0c92c76d970089c1d503c599d6869dd"
+}

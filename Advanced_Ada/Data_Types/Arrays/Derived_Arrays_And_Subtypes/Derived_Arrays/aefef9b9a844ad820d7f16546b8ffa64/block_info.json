@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/arrays.rst",
+    "line_start": 612,
+    "line_end": 640,
+    "text": "package Measurement_Defs is\n\n   type Measurements is\n     array (Positive range <>) of Float;\n\n   --\n   --  New array type:\n   --\n   type Measurements_Derived is\n     new Measurements;\n\n   --\n   --  New array type with\n   --  default component value:\n   --\n   type Measurements_Def30 is\n     new Measurements\n       with Default_Component_Value => 30.0;\n\n   --\n   --  New array type with constraints:\n   --\n   type Measurements_10 is\n     new Measurements (1 .. 10);\n\nend Measurement_Defs;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Arrays.Derived_Arrays_And_Subtypes.Derived_Arrays",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "measurement_defs.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "0423d37acf2b93937426bb075ea0509cfa18ccda703bde2cd03e3296ee4b32040bcf2754f87892dfcb8e8dfb5c38a62594ab8f4975921b764f55f668ca431861",
+    "text_hash_short": "aefef9b9a844ad820d7f16546b8ffa64"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 3254,
+    "line_end": 3280,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\nwith Defaults; use Defaults;\n\nprocedure Use_Defaults is\n   E1 : E;\n   T1 : T;\n   R1 : R;\n   A1 : Arr (1 .. 5);\nbegin\n   Put_Line (\"Enumeration:  \"\n             & E'Image (E1));\n   Put_Line (\"Integer type: \"\n             & T'Image (T1));\n   Put_Line (\"Record type:  \"\n             & Positive'Image (R1.X)\n             & \", \"\n             & Positive'Image (R1.Y));\n\n   Put (\"Array type:   \");\n   for V of A1 loop\n      Put (Integer'Image (V) & \" \");\n   end loop;\n   New_Line;\nend Use_Defaults;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Default_Initial_Values.Defaults",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "use_defaults.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "use_defaults.adb",
+    "text_hash": "6f05e1a199b9f0ef3aa19a891e6d40c4ada56d39faedba7f6ec3e397ac1af8b2c072a735b65d74ee19f5fd46be0d1665102a5835e0076354c3b089578d2d5fb0",
+    "text_hash_short": "f8e55d31cbda2447fe14eb07eaad1975"
+}

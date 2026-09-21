@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/arrays.rst",
+    "line_start": 409,
+    "line_end": 421,
+    "text": "package Multidimensional_Arrays_Decl is\n\n   type F1 is array (Positive range <>) of Float;\n   type F2 is array (Positive range <>,\n                     Positive range <>) of Float;\n   type F3 is array (Positive range <>,\n                     Positive range <>,\n                     Positive range <>) of Float;\n\nend Multidimensional_Arrays_Decl;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Arrays.Multidimensional_Arrays.Unconstrained_Multidimensional_Arrays",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "multidimensional_arrays_decl.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "f96c2ee75df7f020fa8665cbec9243fa5e0f80889248bb5064061d7a3c8129039765895dcbdefdfbd7c90164babb02f5167061a9b9de336cbab55f8e6fa78f45",
+    "text_hash_short": "8637e93db355fddafa3ffa5ce453a0e1"
+}

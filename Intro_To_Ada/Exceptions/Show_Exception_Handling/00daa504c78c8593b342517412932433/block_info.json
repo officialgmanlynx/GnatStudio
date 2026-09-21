@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/exceptions.rst",
+    "line_start": 77,
+    "line_end": 97,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\nwith Ada.Exceptions;  use Ada.Exceptions;\n\nprocedure Open_File is\n   File : File_Type;\nbegin\n   --  Block (sequence of statements)\n   begin\n      Open (File, In_File, \"input.txt\");\n   exception\n      when E : Name_Error =>\n      --       ^ Exception to be handled\n         Put (\"Cannot open input file : \");\n         Put_Line (Exception_Message (E));\n         raise;\n         --  Reraise current occurrence\n   end;\nend Open_File;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Exceptions.Show_Exception_Handling",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "open_file.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "open_file.adb",
+    "text_hash": "add990782626f7ea514248c2121aa59ac7453e44fcd6d78e6293941560b7b2f96aecd7c11d5eef9f91dd24571eb457db819eac4c37a9cd3daa8dc05800938760",
+    "text_hash_short": "00daa504c78c8593b342517412932433"
+}

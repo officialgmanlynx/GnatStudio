@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/strings.rst",
+    "line_start": 360,
+    "line_end": 409,
+    "text": "with Ada.Strings; use Ada.Strings;\n\nwith Ada.Strings.Wide_Wide_Fixed;\nuse  Ada.Strings.Wide_Wide_Fixed;\n\nwith Ada.Strings.Wide_Wide_Maps;\nuse  Ada.Strings.Wide_Wide_Maps;\n\nwith Ada.Wide_Wide_Text_IO;\nuse  Ada.Wide_Wide_Text_IO;\n\nprocedure Show_Find_Words is\n\n   S   : constant Wide_Wide_String :=\n           \"Hello\" & 3 * \" World\";\n   F   : Positive;\n   L   : Natural;\n   I   : Natural := 1;\n\n   Whitespace : constant\n     Wide_Wide_Character_Set :=\n       To_Set (' ');\nbegin\n   Put_Line (\"String: \" & S);\n   Put_Line (\"String length: \"\n             & Integer'Wide_Wide_Image\n                 (S'Length));\n\n   while I in S'Range loop\n      Find_Token\n        (Source  => S,\n         Set     => Whitespace,\n         From    => I,\n         Test    => Outside,\n         First   => F,\n         Last    => L);\n\n      exit when L = 0;\n\n      Put_Line (\"Found word instance at position \"\n                & F'Wide_Wide_Image\n                & \": '\" & S (F .. L) & \"'\");\n\n      I := L + 1;\n   end loop;\n\nend Show_Find_Words;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Strings.Wide_Wide-Wide_Strings.Wide_Wide_String_Handling",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_find_words.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_find_words.adb",
+    "text_hash": "4c29bbf9383d3bcf17e94550647f13752495e4a50f35828024c618960aebb906a7ade4b236afdeba0b79e206c8d58c14e44a2dbcd8bf45f607cdac2d9bfba2b3",
+    "text_hash_short": "3b5a4d61e6dc5bd16e85f85580ad82ae"
+}

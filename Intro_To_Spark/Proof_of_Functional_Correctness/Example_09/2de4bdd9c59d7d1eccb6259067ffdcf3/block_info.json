@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/05_Proof_Of_Functional_Correctness.rst",
+    "line_start": 1578,
+    "line_end": 1608,
+    "text": "package Array_Util is\n\n   type Nat_Array is array (Positive range <>) of Natural;\n\n   procedure Max_Array (A : in out Nat_Array; B : Nat_Array) with\n     Pre  => A'First = B'First and A'Last = B'Last,\n     Post => (for all K in A'Range =>\n                A (K) = Natural'Max (A'Old (K), B (K)));\n\nend Array_Util;\n\npackage body Array_Util is\n\n   procedure Max_Array (A : in out Nat_Array; B : Nat_Array) is\n   begin\n      for I in A'Range loop\n         pragma Loop_Invariant\n           (for all K in A'First .. I - 1 =>\n              A (K) = Natural'Max (A'Loop_Entry (K), B (K)));\n         pragma Loop_Invariant\n           (for all K in I .. A'Last => A (K) = A'Loop_Entry (K));\n         if A (I) <= B (I) then\n            A (I) := B (I);\n         end if;\n      end loop;\n   end Max_Array;\n\nend Array_Util;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Proof_of_Functional_Correctness.Example_09",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_report_all"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "array_util.ads",
+        "array_util.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "b213e7122a160095d3f35c751b37066c1af8e1bcb4d8dbecdb1aad751562a366e5a0b6113459832062b0e99e7c44f8019e9ed4c1a83eb92617bed5ee700583ef",
+    "text_hash_short": "2de4bdd9c59d7d1eccb6259067ffdcf3"
+}

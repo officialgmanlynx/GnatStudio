@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 167,
+    "line_end": 185,
+    "text": "package Custom_Types is\n\n   type My_Int is range 0 .. 127;\n\nend Custom_Types;\n\nwith Ada.Text_IO;  use Ada.Text_IO;\n\nwith Custom_Types; use Custom_Types;\n\nprocedure Show_Sizes is\nbegin\n   Put_Line (\"Size of My_Int: \"\n             & My_Int'Size'Image\n             & \" bits\");\nend Show_Sizes;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Data_Representation.Size_Aspect",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_types.ads",
+        "show_sizes.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_sizes.adb",
+    "text_hash": "73a5c7c997b11200c1c0c93fb87c737d84b7374a620a64b20ddee11af9f0d0bb6c91d8d361c46004abd2e90009bb901587abcaccf36b2cc3a1fa3ca6d564ec99",
+    "text_hash_short": "ddd2556d3c928bfaa29c7e3d2724a3ce"
+}

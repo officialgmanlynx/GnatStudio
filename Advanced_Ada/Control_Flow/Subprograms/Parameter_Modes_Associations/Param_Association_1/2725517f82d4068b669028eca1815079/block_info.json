@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/subprograms.rst",
+    "line_start": 572,
+    "line_end": 607,
+    "text": "package Operations is\n\n   procedure Add (Left  : in out Integer);\n\n   procedure Add (Left  : in out Integer;\n                  Right :        Float := 1.0);\n\nend Operations;\n\npackage body Operations is\n\n   procedure Add (Left  : in out Integer) is\n   begin\n      Left := Left + 1;\n   end Add;\n\n   procedure Add (Left  : in out Integer;\n                  Right :        Float := 1.0) is\n   begin\n      Left := Left + Integer (Right);\n   end Add;\n\nend Operations;\n\nwith Operations; use Operations;\n\nprocedure Show_Param_Association is\n   A : Integer := 5;\nbegin\n   Add (A);\n   --  ERROR: cannot decide which\n   --         procedure to take\nend Show_Param_Association;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Subprograms.Parameter_Modes_Associations.Param_Association_1",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "operations.ads",
+        "operations.adb",
+        "show_param_association.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_param_association.adb",
+    "text_hash": "a0cf8535c381e0d6e57cc4051836582d03d033f2d0fdbcdeab9392c9a61345d6cc3ce442e07435708a120cc414633b58d284792108f1cc9ac0e57449f8936cc9",
+    "text_hash_short": "2725517f82d4068b669028eca1815079"
+}

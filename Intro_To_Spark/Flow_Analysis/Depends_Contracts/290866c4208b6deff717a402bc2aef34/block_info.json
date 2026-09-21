@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/02_Flow_Analysis.rst",
+    "line_start": 321,
+    "line_end": 356,
+    "text": "package Show_Depends_Contracts is\n\n   type T is new Integer;\n\n   X, Y, Z : T := 0;\n\n   procedure Swap (X, Y : in out T) with\n     Depends => (X => Y,\n                 --  X depends on the initial value of Y\n                 Y => X);\n                 --  Y depends on the initial value of X\n\n   function Get_Value_Of_X return T with\n     Depends => (Get_Value_Of_X'Result => X);\n                 --  result depends on the initial value of X\n\n   procedure Set_X_To_Y_Plus_Z with\n     Depends => (X => (Y, Z));\n                 --  X depends on the initial values of Y and Z\n\n   procedure Set_X_To_X_Plus_Y with\n     Depends => (X =>+ Y);\n             --  X depends on Y and X's initial value\n\n   procedure Do_Nothing (X : T) with\n     Depends => (null => X);\n                 --  no output is affected by X\n\n   procedure Set_X_To_Zero with\n     Depends => (X => null);\n                 --  X depends on no input\n\nend Show_Depends_Contracts;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Flow_Analysis.Depends_Contracts",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "show_depends_contracts.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "3a8193b513cbf9a6a0fa0389b0d5d2825d1193c592cfe7cea9a802c50cb62fb54d945d03c6d35329c73367f32085b42722de74bc1c05c58ba2a0c3aaebe305ef",
+    "text_hash_short": "290866c4208b6deff717a402bc2aef34"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 3497,
+    "line_end": 3522,
+    "text": "package Custom_Decimal_Types is\n\n   type T0_D4 is\n     delta 10.0 ** (-0) digits 4;\n   type T2_D6 is\n     delta 10.0 ** (-2) digits 6;\n   type T2_D12 is\n     delta 10.0 ** (-2) digits 12;\n\n   type Int_T0_D4 is\n     range -2 ** (T0_D4'Size - 1) ..\n            2 ** (T0_D4'Size - 1) - 1\n     with Size => T0_D4'Size;\n   type Int_T2_D6 is\n     range -2 ** (T2_D6'Size - 1) ..\n            2 ** (T2_D6'Size - 1) - 1\n     with Size => T2_D6'Size;\n   type Int_T2_D12 is\n     range -2 ** (T2_D12'Size - 1) ..\n            2 ** (T2_D12'Size - 1) - 1\n     with Size => T2_D12'Size;\n\nend Custom_Decimal_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Fixed_Point_Types.Machine_Representation_Decimal_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_decimal_types.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "3d7d12202d99e0631ba35a18ae450c283c6abb8705cbb2fb6cf5936e5561214ea0ca405e83b280575cc21af854c002057e1135092717b2c3bc92a48d811b9526",
+    "text_hash_short": "1c22dea70fc59319136a00d3cfb40d52"
+}

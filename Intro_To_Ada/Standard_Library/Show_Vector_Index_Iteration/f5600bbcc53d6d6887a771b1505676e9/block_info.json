@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_containers.rst",
+    "line_start": 298,
+    "line_end": 337,
+    "text": "with Ada.Containers.Vectors;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Vector_Index_Iteration is\n\n   package Integer_Vectors is new\n     Ada.Containers.Vectors\n       (Index_Type   => Natural,\n        Element_Type => Integer);\n\n   use Integer_Vectors;\n\n   V : Vector := 20 & 10 & 0 & 13;\nbegin\n   Put_Line (\"Vector elements are: \");\n\n   --\n   --  Using indices in a \"for I in ...\" loop\n   --  to iterate:\n   --\n   for I in V.First_Index .. V.Last_Index loop\n      --  Displaying current index I\n      Put (\"- [\"\n           & Extended_Index'Image (I)\n           & \"] \");\n\n      Put (Integer'Image (V (I)));\n\n      --  We could also use the V.Element (I)\n      --  function to retrieve the element at\n      --  the current index I\n\n      New_Line;\n   end loop;\n\nend Show_Vector_Index_Iteration;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Vector_Index_Iteration",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_vector_index_iteration.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_vector_index_iteration.adb",
+    "text_hash": "af611867ccdb989f0cac8a7e5582f241008a54c72fe667c8bef337f9c193ce002be38e6ab905de18669d57addabffc44d7e213dbbe2b5258efe2f3dd4edfcafa",
+    "text_hash_short": "f5600bbcc53d6d6887a771b1505676e9"
+}

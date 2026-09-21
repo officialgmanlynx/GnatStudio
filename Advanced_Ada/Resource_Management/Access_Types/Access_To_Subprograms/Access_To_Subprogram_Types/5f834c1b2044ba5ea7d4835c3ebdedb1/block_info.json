@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 4587,
+    "line_end": 4598,
+    "text": "package Access_To_Subprogram_Types is\n\n   type Access_To_Procedure is\n     access procedure (I : in out Integer);\n\n   type Access_To_Function is\n     access function (I : Integer) return Integer;\n\nend Access_To_Subprogram_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Access_To_Subprograms.Access_To_Subprogram_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "access_to_subprogram_types.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "3fe3376ce68ef78252d0e1b3332fb3cc78a4bc24002c4cb66d01d823b94e4fabc0d7c7238c2caab5a8f78edc6cf741b94eb08d85b9d7c702f40f0d5d12f8b797",
+    "text_hash_short": "5f834c1b2044ba5ea7d4835c3ebdedb1"
+}

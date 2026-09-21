@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/exceptions.rst",
+    "line_start": 1865,
+    "line_end": 1903,
+    "text": "package Exported_Procedures is\n\n  procedure Local (A     : in out Integer;\n                   Error : Boolean);\n  pragma Export_Procedure\n    (Local,\n    Mechanism => (A => Reference));\n\nend Exported_Procedures;\n\npackage body Exported_Procedures is\n\n   procedure Local (A     : in out Integer;\n                    Error : Boolean) is\n   begin A := 1;\n      if Error then\n         raise Program_Error;\n      end if;\n   end Local;\n\nend Exported_Procedures;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Exported_Procedures;\nuse  Exported_Procedures;\n\nprocedure Show_Out_Reference is\n   B : Integer := 0;\nbegin\n   Local (B, Error => True);\nexception\n   when Program_Error =>\n      Put_Line (\"Value for B is\"\n                & Integer'Image (B)); -- \"1\"\nend Show_Out_Reference;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Exceptions.Out_Uninitialized.Out_Uninitialized_4",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "exported_procedures.ads",
+        "exported_procedures.adb",
+        "show_out_reference.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_out_reference.adb",
+    "text_hash": "32af8bb8989d4c660edfcbd740ea51efbe25e0cd750d31112602957ca2f8823c807dd048fc581ee4ad94e3f490b0ec4dabb13fbe7d15239de0a0a58276939fa1",
+    "text_hash_short": "aed2788be2b3ceeec19b28421c53fc66"
+}

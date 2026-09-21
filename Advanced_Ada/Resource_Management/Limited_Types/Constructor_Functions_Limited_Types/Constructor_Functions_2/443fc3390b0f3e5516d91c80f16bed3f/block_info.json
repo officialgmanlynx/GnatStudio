@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 2281,
+    "line_end": 2303,
+    "text": "with Ada.Containers.Ordered_Sets;\nwith Aux;\n\nprocedure Show_Set_Decl is\n\n   package Integer_Sets is new\n     Ada.Containers.Ordered_Sets\n       (Element_Type => Integer);\n   use Integer_Sets;\n\n   function Singleton_Set is new\n     Aux.Gen_Singleton_Set\n       (OS => Integer_Sets);\n\n   This_Set : Set := Empty_Set;\n   That_Set : Set := Singleton_Set\n                       (Element => 42);\nbegin\n   null;\nend Show_Set_Decl;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Constructor_Functions_Limited_Types.Constructor_Functions_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_set_decl.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_set_decl.adb",
+    "text_hash": "3dfd8282b6110fdeea9d1deb686ab1cd15e113e1b949eb3a375f493db4f26893485b24b65257b085ff221a689c8679a7c98cd2c074e09039ea4c1355a25491a1",
+    "text_hash_short": "443fc3390b0f3e5516d91c80f16bed3f"
+}

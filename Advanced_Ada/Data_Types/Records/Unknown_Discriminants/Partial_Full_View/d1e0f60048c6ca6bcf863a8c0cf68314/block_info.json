@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 2648,
+    "line_end": 2661,
+    "text": "package Unknown_Discriminants is\n\n   type Arr (<>) is private;\n\nprivate\n\n   type Arr is\n     array (Positive range <>)\n       of Integer;\n\nend Unknown_Discriminants;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Unknown_Discriminants.Partial_Full_View",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "unknown_discriminants.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "314ce382ca17a1b0141b8a7a75695ac5da90c505a7aa78926d68f8603d837134ea8b4d13d2ca642d37700fd7383a8909ba887bd5db0cd175a87241bd2e2c40a6",
+    "text_hash_short": "d1e0f60048c6ca6bcf863a8c0cf68314"
+}

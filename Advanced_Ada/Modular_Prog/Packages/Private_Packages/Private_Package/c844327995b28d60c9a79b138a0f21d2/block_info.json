@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/modular_prog/packages.rst",
+    "line_start": 415,
+    "line_end": 427,
+    "text": "with Data_Processing; use Data_Processing;\n\nwith Data_Processing.Calculations;\nuse  Data_Processing.Calculations;\n\nprocedure Test_Data_Processing is\n   D : Data;\nbegin\n   Calculate (D);\nend Test_Data_Processing;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Modular_Prog.Packages.Private_Packages.Private_Package",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "test_data_processing.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "test_data_processing.adb",
+    "text_hash": "8ed5c0df439c9e58eb42e5ebef30c81d1487d428b5996b4136e403a5b3795ec6fa42a13e684a8d83c0b4f2700b1ac6770acdb68972d60bb5ec4a7021c4aa2127",
+    "text_hash_short": "c844327995b28d60c9a79b138a0f21d2"
+}

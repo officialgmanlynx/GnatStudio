@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 2091,
+    "line_end": 2117,
+    "text": "package Data_Processing is\n\n   type Integer_Array is\n     array (Positive range <>) of Integer;\n\nprivate\n\n   type Integer_Array_Access is\n     access constant Integer_Array;\n\n   Table : constant array (1 .. 3) of\n             Integer_Array_Access :=\n     (1 => new Integer_Array'(1 => 15),\n      2 => new Integer_Array'(1 => 12,\n                              2 => 15,\n                              3 => 20),\n      3 => new Integer_Array'(1 => 12,\n                              2 => 15,\n                              3 => 20,\n                              4 => 20,\n                              5 => 25,\n                              6 => 30));\n\nend Data_Processing;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Ragged_Arrays.Simple_Ragged_Array",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "data_processing.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "9776b471bcc0160da5775a671077b2ae36166465c408495d87286d0452d2a61d8faf9525dad45daea9861b5084795b904212206a8583b3ba71e3cb048fb20bfb",
+    "text_hash_short": "28e044a43bf45585a0268c60d63c629e"
+}

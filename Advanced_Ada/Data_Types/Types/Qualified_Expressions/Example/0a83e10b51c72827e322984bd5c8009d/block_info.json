@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 3103,
+    "line_end": 3122,
+    "text": "package Simple_Integers is\n\n   type Int is new Integer;\n\n   subtype Int_Not_Zero is Int\n     with Dynamic_Predicate => Int_Not_Zero /= 0;\n\nend Simple_Integers;\n\nwith Simple_Integers; use Simple_Integers;\n\nprocedure Show_Qualified_Expressions is\n   I : Int;\nbegin\n   --  Using qualified expression Int'(N)\n   I := Int'(0);\nend Show_Qualified_Expressions;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Qualified_Expressions.Example",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple_integers.ads",
+        "show_qualified_expressions.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_qualified_expressions.adb",
+    "text_hash": "3b4f9bf3fe175bd8a5f286a3555f5f21ccc0f26a658a4dad977c5eecd3df777de27b0280701874c53d40e4a8f4df02aad24b0b10b1bbf2484def9bbd043e8dca",
+    "text_hash_short": "0a83e10b51c72827e322984bd5c8009d"
+}

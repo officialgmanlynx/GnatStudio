@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/04_State_Abstraction.rst",
+    "line_start": 568,
+    "line_end": 611,
+    "text": "package Stack is\n   type Element is new Integer;\n\n   function Is_Empty return Boolean;\n   function Is_Full  return Boolean;\n\n   procedure Pop (E : out Element) with\n     Pre  => not Is_Empty,\n     Post => not Is_Full;\n\n   procedure Push (E : Element) with\n     Pre  => not Is_Full,\n     Post => not Is_Empty;\n\nend Stack;\n\npackage body Stack is\n\n   Max : constant := 100;\n\n   type Element_Array is array (1 .. Max) of Element;\n\n   Content : Element_Array := (others => 0);\n   Top     : Natural range 0 .. Max := 0;\n\n   function Is_Empty return Boolean is (Top = 0);\n   function Is_Full  return Boolean is (Top = Max);\n\n   procedure Pop (E : out Element) is\n   begin\n      E   := Content (Top);\n      Top := Top - 1;\n   end Pop;\n\n   procedure Push (E : Element) is\n   begin\n      Top           := Top + 1;\n      Content (Top) := E;\n   end Push;\n\nend Stack;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.State_Abstraction.Pre_Postconditions_1",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_report_all"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "stack.ads",
+        "stack.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "7d91b663918c1b5b5f28c9a4174a3e690c32ddf2bf04e53f3830b5dd7ce7c2aac60f27dd29a284ea1214e0c1784186fa334bb33ee41589793305651807d4e651",
+    "text_hash_short": "fe9d4b65ba1beeabc7cf0feda29b8b3c"
+}

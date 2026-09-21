@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/01_Overview.rst",
+    "line_start": 474,
+    "line_end": 502,
+    "text": "package Global_Stack\n  with SPARK_Mode => On\nis\n   type Element is new Integer;\n\n   function Pop return Element;\n\nend Global_Stack;\n\npackage body Global_Stack\n  with SPARK_Mode => On\nis\n   Max : constant Natural := 100;\n   type Element_Array is array (1 .. Max) of Element;\n\n   Content : Element_Array;\n   Top     : Natural;\n\n   function Pop return Element is\n      E : constant Element := Content (Top);\n   begin\n      Top := Top - 1;\n      return E;\n   end Pop;\n\nend Global_Stack;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Overview.Example_02",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "global_stack.ads",
+        "global_stack.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "101d37cc2c2c8b8c1880b1107efaecb2af0f0424f7036b8e822784631c60cf89452122557b12b8bafdc09769b121de6e7e1ad8eb415c8963b684ed259d8f303c",
+    "text_hash_short": "8c4eb564643eef48264b5e43a6f580b9"
+}

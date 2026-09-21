@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/controlled_types.rst",
+    "line_start": 2033,
+    "line_end": 2092,
+    "text": "with Ada.Finalization;\n\npackage CT_Initialize_Exception is\n\n   type T is tagged private;\n\n   procedure Dummy (E : T);\n\nprivate\n\n   type T is new\n     Ada.Finalization.Controlled\n       with null record;\n\n   overriding\n   procedure Initialize (E : in out T);\n\n   overriding\n   procedure Finalize (E : in out T);\n\nend CT_Initialize_Exception;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body CT_Initialize_Exception is\n\n   function Int_Last return Integer is\n     (Integer'Last);\n\n   Cnt : Positive := Int_Last;\n\n   procedure Dummy (E : T) is\n   begin\n      Put_Line (\"(Dummy...)\");\n   end Dummy;\n\n   procedure Initialize (E : in out T) is\n   begin\n      Put_Line (\"Initialize...\");\n      Cnt := Cnt + 1;\n   end Initialize;\n\n   procedure Finalize (E : in out T) is\n   begin\n      Put_Line (\"Finalize...\");\n   end Finalize;\n\nend CT_Initialize_Exception;\n\nwith CT_Initialize_Exception;\nuse  CT_Initialize_Exception;\n\nprocedure Show_Initialize_Exception is\n   A : T;\nbegin\n   Dummy (A);\nend Show_Initialize_Exception;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Controlled_Types.Exception_Handling.CT_Initialize_Exception",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "ct_initialize_exception.ads",
+        "ct_initialize_exception.adb",
+        "show_initialize_exception.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_initialize_exception.adb",
+    "text_hash": "a9b367512cc36ba84c53321eb8fe4674bbeb85cfcda6b9af516dc0fcfd3d8fec3211ba994dbcaadcfa65deda81c52e3a135b01cc58a7fc3f4789ee30091baf64",
+    "text_hash_short": "189a5fafafb01eba31a73c9237fa7aff"
+}

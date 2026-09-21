@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 11424,
+    "line_end": 11439,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Ada.Numerics.Big_Numbers.Big_Integers;\nuse  Ada.Numerics.Big_Numbers.Big_Integers;\n\nprocedure Show_Big_Integer_Greatest_Common_Divisor\nis\n   BI : Big_Integer;\nbegin\n   BI := Greatest_Common_Divisor (145, 25);\n   Put_Line (\"BI: \" & BI'Image);\n\nend Show_Big_Integer_Greatest_Common_Divisor;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Big_Numbers.Big_Integer_Greatest_Common_Divisor",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_big_integer_greatest_common_divisor.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_big_integer_greatest_common_divisor.adb",
+    "text_hash": "d6293f2990a12163a98f8314b8ba176db674c3d6be9868a7a7cbe804548c45590a07b4995b131542727d282b01a0ee6abd4e2b4bb468a82a5bfe49ba14e90fe1",
+    "text_hash_short": "27e2f7b4cbe20ec979b672f3e7edfdb7"
+}

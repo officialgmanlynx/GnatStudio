@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 3289,
+    "line_end": 3350,
+    "text": "package Devices is\n\n   type Device_State is\n     (Off, On);\n\n   type Device\n     (State : Device_State := Off) is\n       private;\n\n   procedure Turn_Off (D : in out Device);\n\n   procedure Turn_On (D : in out Device);\n\n   type Device_Info is\n   record\n      V : Float;\n   end record;\n\n   function Current_Info (D : Device)\n                          return Device_Info;\n\nprivate\n\n   type Device (State : Device_State := Off) is\n   record\n      case State is\n         when Off =>\n            null;\n         when On =>\n            Info : Device_Info;\n      end case;\n   end record;\n\n   Device_Off : constant Device :=\n                  (State => Off);\n\n   Device_On  : constant Device :=\n                  (State => On,\n                   others => <>);\n\nend Devices;\n\npackage body Devices is\n\n   procedure Turn_Off (D : in out Device) is\n   begin\n      D := Device_Off;\n   end Turn_Off;\n\n   procedure Turn_On (D : in out Device) is\n   begin\n      D := Device_On;\n   end Turn_On;\n\n   function Current_Info (D : Device)\n                          return Device_Info is\n     (D.Info);\n\nend Devices;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Variant_Parts.Device",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "devices.ads",
+        "devices.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "443dabd1971ddb0d8387b8e219beb2ebcb9ef4045b3f9d613d2aef12fb7dd62b547a6392d4676fe455ecf12784eb31582952fcb6ace140e6612aaf981a89b94d",
+    "text_hash_short": "e03db406de3550865dd99986d2c71145"
+}

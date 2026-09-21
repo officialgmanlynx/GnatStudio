@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 1332,
+    "line_end": 1347,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Universal_Access is\n   I : aliased Integer;\n   A : access Integer := I'Access;\n   B : access Integer := I'Access;\nbegin\n   if A = B then\n      Put_Line (\"A = B\");\n   else\n      Put_Line (\"A /= B\");\n   end if;\nend Show_Universal_Access;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Universal_And_Root_Types.Universal_Access",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_universal_access.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_universal_access.adb",
+    "text_hash": "e15d038e4243a1f7dacf5edea95bda7bce7e9ae67f262c53ea69f07a277f3843e6ebee8b693f8e71b5c2544cf29bed5d72a0c0cff387d07754ae168174515d53",
+    "text_hash_short": "e6a37de980cc3b2c19e36baa3a51c329"
+}

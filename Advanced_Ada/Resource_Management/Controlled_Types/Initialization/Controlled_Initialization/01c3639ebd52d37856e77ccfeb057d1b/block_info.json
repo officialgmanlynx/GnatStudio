@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/controlled_types.rst",
+    "line_start": 811,
+    "line_end": 864,
+    "text": "with Ada.Finalization;\n\npackage Selections is\n\n   type Selection is private;\n\n   type Selection_1 (S : access Selection) is\n     tagged private;\n\n   type Selection_2 (S : access Selection) is\n     tagged private;\n\nprivate\n\n   type Selection is null record;\n\n   type Selection_1 (S : access Selection) is new\n     Ada.Finalization.Controlled\n       with null record;\n\n   overriding\n   procedure Initialize\n     (E : in out Selection_1);\n\n   type Selection_2 (S : access Selection) is new\n     Ada.Finalization.Controlled\n       with null record;\n\n   overriding\n   procedure Initialize\n     (E : in out Selection_2);\n\nend Selections;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Selections is\n\n   procedure Initialize\n     (E : in out Selection_1) is\n   begin\n      Put_Line (\"Initialize: Selection_1...\");\n   end Initialize;\n\n   procedure Initialize\n     (E : in out Selection_2) is\n   begin\n      Put_Line (\"Initialize: Selection_2...\");\n   end Initialize;\n\nend Selections;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Controlled_Types.Initialization.Controlled_Initialization",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "selections.ads",
+        "selections.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "9ac02789bbf3ecb2bb04ba2a6c3d6b7178e27e3f47c99d56af8d41626db72485a38566bdf87def519d7ad1f8b646bfc5d0b46199c25f2fbfdfdbf45bea9a3b26",
+    "text_hash_short": "01c3639ebd52d37856e77ccfeb057d1b"
+}

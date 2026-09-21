@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 1502,
+    "line_end": 1530,
+    "text": "package Mutability is\n\n   type T_Non_Mutable\n     (L : Positive;\n      M : Positive) is\n     null record;\n\n   type T_Mutable\n     (L : Positive := 1;\n      M : Positive := 2) is\n     null record;\n\nend Mutability;\n\nwith Mutability; use Mutability;\n\nprocedure Show_Mutable_Subtype_Assignment is\n   NM_1 : T_Non_Mutable (5, 6);\n   NM_2 : T_Non_Mutable (7, 8);\n\n   M_1  : T_Mutable (7, 8);\n   M_2  : T_Mutable;\nbegin\n   NM_2 := NM_1;  --  ERROR!\n   M_2  := M_1;   --  OK\nend Show_Mutable_Subtype_Assignment;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Discriminants.Mutable_Subtype",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "mutability.ads",
+        "show_mutable_subtype_assignment.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_mutable_subtype_assignment.adb",
+    "text_hash": "7a93cbc52d64b390fa0d836f4345f5ca6ca0ca2088201de357f002568bd882ef3f28b9064a0e16f8a6f0a0c6efddfb3e72260294f11ba75b96ed4961f7130b12",
+    "text_hash_short": "ace4470544bdc6efb0dca7039ca33cbc"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_containers.rst",
+    "line_start": 612,
+    "line_end": 651,
+    "text": "with Ada.Containers.Vectors;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Remove_Vector_Element is\n   package Integer_Vectors is new\n     Ada.Containers.Vectors\n       (Index_Type   => Natural,\n        Element_Type => Integer);\n\n   use Integer_Vectors;\n\n   V : Vector := 20 & 10 & 0 & 13 & 10 & 13;\n   Idx : Extended_Index;\n   C   : Cursor;\nbegin\n   --  Use Find_Index to retrieve index of\n   --  the element with value 10\n   Idx := V.Find_Index (10);\n\n   --  Checking whether index is valid\n   if Idx /= No_Index then\n      --  Removing element using V.Delete\n      V.Delete (Idx);\n   end if;\n\n   --  Use Find to retrieve cursor for\n   --  the element with value 13\n   C := V.Find (13);\n\n   --  Check whether index is valid\n   if C /= No_Element then\n      --  Remove element using V.Delete\n      V.Delete (C);\n   end if;\n\nend Show_Remove_Vector_Element;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Remove_Vector_Element",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_remove_vector_element.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_remove_vector_element.adb",
+    "text_hash": "73a889a40cd099d9033a2551585dd77ef8072b0f94fa3518229ab21c95154cf78c71422ab214e122e87cd91ff0d32a9dc106b0246f3bfc40abdca787f3802df7",
+    "text_hash_short": "540d0dc5715e58926e9dc4600bd6ad5d"
+}

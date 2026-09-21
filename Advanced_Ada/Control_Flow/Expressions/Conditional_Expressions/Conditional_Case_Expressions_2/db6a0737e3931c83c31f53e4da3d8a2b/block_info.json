@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/expressions.rst",
+    "line_start": 497,
+    "line_end": 519,
+    "text": "package Expr_Func is\n\n   type State is (Off, On, Waiting, Invalid);\n\n   function Toggled (S : State) return State;\n\nend Expr_Func;\n\npackage body Expr_Func is\n\n   function Toggled (S : State) return State is\n   begin\n      case S is\n         when Off    => return On;\n         when On     => return Off;\n         when others => return S;\n      end case;\n   end Toggled;\n\nend Expr_Func;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Expressions.Conditional_Expressions.Conditional_Case_Expressions_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "expr_func.ads",
+        "expr_func.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "bc7b1e22751c064e579934dd3cc4046658a1d2b50b5a8b070d5d4263939ad0a6f199576a837caedd73ad394f43792d953d10be3ea35af2516354c7372d5b69f8",
+    "text_hash_short": "db6a0737e3931c83c31f53e4da3d8a2b"
+}

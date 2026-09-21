@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/strings.rst",
+    "line_start": 2188,
+    "line_end": 2252,
+    "text": "with Ada.Strings.Text_Buffers;\n\npackage Custom_Numerics is\n\n   type Float_Integer is record\n     F : Float;\n     I : Integer;\n   end record\n     with Dynamic_Predicate =>\n            Integer (Float_Integer.F) =\n              Float_Integer.I,\n          Put_Image         => Put_Float_Integer;\n   --     ^ Custom version of Put_Image\n\n   use Ada.Strings.Text_Buffers;\n\n   procedure Put_Float_Integer\n     (Buffer : in out Root_Buffer_Type'Class;\n      Arg    :        Float_Integer);\n\nend Custom_Numerics;\n\npackage body Custom_Numerics is\n\n   procedure Put_Float_Integer\n     (Buffer : in out Root_Buffer_Type'Class;\n      Arg    :        Float_Integer) is\n   begin\n      Buffer.Wide_Wide_Put (\"(\");\n      Buffer.New_Line;\n\n      Buffer.Increase_Indent;\n\n      Buffer.Wide_Wide_Put\n        (\"F : \"\n         & Arg.F'Wide_Wide_Image);\n      Buffer.New_Line;\n\n      Buffer.Wide_Wide_Put\n        (\"I : \"\n        & Arg.I'Wide_Wide_Image);\n\n      Buffer.Decrease_Indent;\n      Buffer.New_Line;\n\n      Buffer.Wide_Wide_Put (\")\");\n   end Put_Float_Integer;\n\nend Custom_Numerics;\n\nwith Ada.Text_IO;     use Ada.Text_IO;\n\nwith Custom_Numerics; use Custom_Numerics;\n\nprocedure Show_Put_Image is\n   V : Float_Integer;\nbegin\n   V := (F => 100.2,\n         I => 100);\n   Put_Line (\"V = \"\n             & V'Image);\nend Show_Put_Image;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Strings.Universal_Text_Buffer.Put_Image_Custom_Numerics",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_numerics.ads",
+        "custom_numerics.adb",
+        "show_put_image.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_put_image.adb",
+    "text_hash": "73ce0db7af583db0366ea2ee8c4edc048dfccbf8f539e57456a0846b54804d3b1256e86878987ec6db509becbca71e6302b6b30d19868707e4bebd836a0005c5",
+    "text_hash_short": "e976a2ade2ad4a10033924e19bc84159"
+}

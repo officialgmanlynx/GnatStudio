@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/more_about_records.rst",
+    "line_start": 239,
+    "line_end": 264,
+    "text": "with Ada.Text_IO;    use Ada.Text_IO;\n\nwith Variant_Record; use Variant_Record;\n\nprocedure Main is\n   function Eval_Expr (E : Expr) return Integer is\n     (case E.Kind is\n      when Bin_Op_Plus  =>\n             Eval_Expr (E.Left.all)\n             + Eval_Expr (E.Right.all),\n      when Bin_Op_Minus =>\n             Eval_Expr (E.Left.all)\n             - Eval_Expr (E.Right.all),\n      when Num => E.Val);\n\n   E : Expr := (Bin_Op_Plus,\n                new Expr'(Bin_Op_Minus,\n                          new Expr'(Num, 12),\n                          new Expr'(Num, 15)),\n                new Expr'(Num, 3));\nbegin\n   Put_Line (Integer'Image (Eval_Expr (E)));\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.More_About_Records.Variant_Record",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "1cdf66ed41dca49c093209647e1451dde426f1c65e07b5c7b713c4ca25e7fe15b7cacf675c9bffd6c366aa71acea84bcd51bfc6b26054b4280b4d6caf42333cb",
+    "text_hash_short": "807dbb921b44b3eaeaf1baf6ffe1afaa"
+}

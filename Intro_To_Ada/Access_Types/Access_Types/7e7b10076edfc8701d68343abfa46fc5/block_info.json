@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/access_types.rst",
+    "line_start": 158,
+    "line_end": 171,
+    "text": "with Dates; use Dates;\n\npackage Access_Types is\n   type Date_Acc is access Date;\n   type String_Acc is access String;\n\n   D   : Date_Acc   :=\n           new Date'(30, November, 2011);\n   Msg : String_Acc := new String'(\"Hello\");\nend Access_Types;\n\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Access_Types.Access_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "access_types.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "2faa35a22d648d936b116b38e952d2a6702e9b5bd1c23b6207bd5af9256e45ca7602615fa7f723ecb64fe43ec31c670008e604eb51154e2644f2b56b27445763",
+    "text_hash_short": "7e7b10076edfc8701d68343abfa46fc5"
+}

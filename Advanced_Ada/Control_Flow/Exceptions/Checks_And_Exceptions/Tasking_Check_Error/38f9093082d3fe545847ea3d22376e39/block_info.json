@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/exceptions.rst",
+    "line_start": 1180,
+    "line_end": 1213,
+    "text": "package Workers is\n\n    task type Worker  is\n        entry Start;\n    end Worker;\n\nend Workers;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Workers is\n\n    task body Worker  is\n    begin\n       Put_Line (\"Task has started.\");\n       delay 1.0;\n       Put_Line (\"Task has finished.\");\n    end Worker;\n\nend Workers;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Workers;     use Workers;\n\nprocedure Show_Tasking_Check_Error is\n    W : Worker;\nbegin\n    Put_Line (\"W.Start...\");\n    W.Start;\n    Put_Line (\"Finished\");\nend Show_Tasking_Check_Error;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Exceptions.Checks_And_Exceptions.Tasking_Check_Error",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "workers.ads",
+        "workers.adb",
+        "show_tasking_check_error.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_tasking_check_error.adb",
+    "text_hash": "1b59cd849254f22cc2d9fa799f847591bf6ecb24b64ff89ecb20f3e50f2476cfe8a3d45e53d86b8f27c59c7ff3ff21e6b69253020f1945e728ef4122da31f25c",
+    "text_hash_short": "38f9093082d3fe545847ea3d22376e39"
+}

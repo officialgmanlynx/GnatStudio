@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/modular_programming.rst",
+    "line_start": 434,
+    "line_end": 454,
+    "text": "package Book is\n\n   Title : constant String :=\n     \"Visible for my children\";\n\n   function Get_Title return String;\n\n   function Get_Author return String;\n\nend Book;\n\npackage Book.Additional_Operations is\n\n   function Get_Extended_Title return String;\n\n   function Get_Extended_Author return String;\n\nend Book.Additional_Operations;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Modular_Programming.Visibility",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-syntax-only"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": true,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "book.ads",
+        "book-additional_operations.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "c270e63d2015a469b554ee3ec42c2bae6e27a8c57f17a600857baffe90647c03d4f461abb258d2cb6ba318ca4e74df6881e35281e9c50b77a9b0c5f99b1a29cc",
+    "text_hash_short": "a0d67cff9aeff288709391d16306df00"
+}

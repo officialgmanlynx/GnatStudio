@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 1367,
+    "line_end": 1384,
+    "text": "package Unconstrained_Types is\n\n   type Integer_Array is\n     array (Positive range <>) of Integer;\n\n   type Integer_Array_Access is\n     access Integer_Array;\n\n   type Simple_Record\n     (Arr : Integer_Array_Access) is\n   record\n      L : Natural := Arr'Length;\n   end record;\n\nend Unconstrained_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Definite_Indefinite_Subtypes.Indefinite_Types_Error",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "unconstrained_types.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "ac0741eab14dadcf1a39e5043552c2b03d3d9015ea1d9106c2e1f3eae4f407bde918f438a0ed77c98e5e046e2542386e81a03e790b05876f3fa7f4456d5de465",
+    "text_hash_short": "dc8193e3684b172e8503e1c5427cf93d"
+}

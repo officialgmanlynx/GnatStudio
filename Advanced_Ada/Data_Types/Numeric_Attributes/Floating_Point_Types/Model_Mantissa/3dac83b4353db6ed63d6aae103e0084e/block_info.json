@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numeric_attributes.rst",
+    "line_start": 1032,
+    "line_end": 1058,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Model_Mantissa_Emin is\nbegin\n   Put_Line\n     (\"Float'Model_Mantissa:           \"\n      & Float'Model_Mantissa'Image);\n   Put_Line\n     (\"Long_Float'Model_Mantissa:      \"\n      & Long_Float'Model_Mantissa'Image);\n   Put_Line\n     (\"Long_Long_Float'Model_Mantissa: \"\n      & Long_Long_Float'Model_Mantissa'Image);\n   Put_Line\n     (\"Float'Model_Emin:               \"\n      & Float'Model_Emin'Image);\n   Put_Line\n     (\"Long_Float'Model_Emin:          \"\n      & Long_Float'Model_Emin'Image);\n   Put_Line\n     (\"Long_Long_Float'Model_Emin:     \"\n      & Long_Long_Float'Model_Emin'Image);\nend Show_Model_Mantissa_Emin;\n\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numeric_Attributes.Floating_Point_Types.Model_Mantissa",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_model_mantissa_emin.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_model_mantissa_emin.adb",
+    "text_hash": "836034914c8c8734a65749da368788995b1e69d4f8c0f2087ca259e6a6b6dfcc58eda7b7df3545c2395d96844189675eca98005151719da3c7eb90219ed4112e",
+    "text_hash_short": "3dac83b4353db6ed63d6aae103e0084e"
+}

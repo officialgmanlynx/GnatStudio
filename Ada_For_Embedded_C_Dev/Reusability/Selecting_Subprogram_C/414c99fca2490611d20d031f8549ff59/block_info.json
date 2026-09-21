@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 2131,
+    "line_end": 2170,
+    "text": "!main.c\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid show_msg_v1 (char *msg)\n{\n    printf(\"Using version #1: %s\\n\", msg);\n}\n\nvoid show_msg_v2 (char *msg)\n{\n    printf(\"Using version #2:\\n %s\\n\", msg);\n}\n\nint main()\n{\n    int selection = 1;\n    void (*current_show_msg) (char *);\n\n    switch (selection)\n    {\n        case 1:  current_show_msg = &show_msg_v1;    break;\n        case 2:  current_show_msg = &show_msg_v2;    break;\n        default: current_show_msg = NULL;            break;\n    }\n\n    if (current_show_msg != NULL)\n    {\n        current_show_msg (\"Hello there!\");\n    }\n    else\n    {\n        printf(\"ERROR: no version of show_msg() selected!\\n\");\n    }\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.Selecting_Subprogram_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "48f7edb8c906b25cd571302e9ef36afed812dac2c88a7dd17813ef67d1260442c892e9d89238dec923514b191dcf27e9400316aae2963fe126bd5c15dfdb9589",
+    "text_hash_short": "414c99fca2490611d20d031f8549ff59"
+}

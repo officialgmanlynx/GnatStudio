@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 3523,
+    "line_end": 3539,
+    "text": "package body Activation_States is\n\n   function Integer_To_Activation_State\n     (S : String)\n      return Activation_State is\n   begin\n      case Integer'Value (S) is\n         when 0      => return Off;\n         when 1      => return On;\n         when others => return Unknown;\n      end case;\n   end Integer_To_Activation_State;\n\nend Activation_States;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.User_Defined_Literals.User_Defined_Literals",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "activation_states.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "4c6f2db977d2a82c87836848debc1bce0cdfe04ee522441ad1314e33ce5f8582c3dd6b4176482a90d92cef7575df2c6d981546d294986c731344512fc0569659",
+    "text_hash_short": "c130c42ee2b91e4306c0b49bd6d5d322"
+}

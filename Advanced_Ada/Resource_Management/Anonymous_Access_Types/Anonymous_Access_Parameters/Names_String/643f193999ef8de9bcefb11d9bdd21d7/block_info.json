@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 1427,
+    "line_end": 1462,
+    "text": "package Names is\n\n   function Init (S1, S2 : String)\n                  return String;\n\n   procedure Show (N : String);\n\nprivate\n\n   function Init (S1, S2 : String)\n                  return String is\n     (S1 & \"-\" & S2);\n\nend Names;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Names is\n\n   procedure Show (N : String) is\n   begin\n      Put_Line (\"Name: \" & N);\n   end Show;\n\nend Names;\n\nwith Names; use Names;\n\nprocedure Show_Names is\n   N : String := Init (\"Lily\", \"Ann\");\nbegin\n   Show (N);\nend Show_Names;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Anonymous_Access_Parameters.Names_String",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "names.ads",
+        "names.adb",
+        "show_names.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_names.adb",
+    "text_hash": "ff3a70d4cdd519695ea389f25e738d9b9095ca64758d2be8b98c32e19c73e1b5e269fb8f4d5516f66d185e76aa0e83df2da8852888aa03a0deba8dad409cdca1",
+    "text_hash_short": "643f193999ef8de9bcefb11d9bdd21d7"
+}

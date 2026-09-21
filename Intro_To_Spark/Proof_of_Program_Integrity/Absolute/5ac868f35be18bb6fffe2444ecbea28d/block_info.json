@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/03_Proof_Of_Program_Integrity.rst",
+    "line_start": 432,
+    "line_end": 444,
+    "text": "procedure Absolute (X : in out Integer) with\n  Pre            =>  X > Integer'First,\n  Contract_Cases => (X <  0 => X = -X'Old,\n                     X >= 0 => X =  X'Old)\nis\nbegin\n   if X < 0 then\n      X := -X;\n   end if;\nend Absolute;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Proof_of_Program_Integrity.Absolute",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_report_all"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "absolute.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "bb690c91038ec376dcee60162db53f7bb3464d9486a36c3a6171bec950423788a49e1983f958101354943a8c3b7f20a7bce65a9792aafd81abacb9d3d2f2a477",
+    "text_hash_short": "5ac868f35be18bb6fffe2444ecbea28d"
+}

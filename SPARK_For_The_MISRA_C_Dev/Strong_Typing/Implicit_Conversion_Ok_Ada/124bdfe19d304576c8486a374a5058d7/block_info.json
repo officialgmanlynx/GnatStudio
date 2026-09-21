@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/04_strong_typing.rst",
+    "line_start": 839,
+    "line_end": 859,
+    "text": "procedure Ok_Conversions is\n   pragma Warnings (Off);\n   F : Float := 0.0;\n   I : Integer := 0;\n   type Animal is (Ape, Bee, Cat);\n   type My_Animal is new Animal;\n   A : Animal := Cat;\n   M : My_Animal := Bee;\n   B : Boolean := True;\n   C : Character := 'a';\nbegin\n   F := Float (I);\n   I := Animal'Pos (A);\n   I := My_Animal'Pos (M);\n   I := Boolean'Pos (B);\n   I := Character'Pos (C);\n   I := Integer (F);\n   A := Animal'Val (2);\nend Ok_Conversions;",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Strong_Typing.Implicit_Conversion_Ok_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "ok_conversions.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "ok_conversions.adb",
+    "text_hash": "7d4766e8ed8bdc883824be86c920a055e37f83a5ae1f3b7fe8c963b2d98b6f64724352f0f90d6d33b49f9893e3954738a93fd139b1a7d4672efe20c464d152c5",
+    "text_hash_short": "124bdfe19d304576c8486a374a5058d7"
+}

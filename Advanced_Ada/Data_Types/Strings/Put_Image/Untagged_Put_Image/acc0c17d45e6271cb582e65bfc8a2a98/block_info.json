@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/strings.rst",
+    "line_start": 1934,
+    "line_end": 1997,
+    "text": "with Ada.Strings.Text_Buffers;\n\npackage Untagged_Put_Image is\n\n   use Ada.Strings.Text_Buffers;\n\n   type T is null record\n     with Put_Image => Put_Image_T;\n\n   procedure Put_Image_T\n     (Buffer : in out Root_Buffer_Type'Class;\n      Arg    :        T);\n\n   type T_Derived_1 is new T;\n\n   type T_Derived_2 is new T\n     with Put_Image => Put_Image_T_Derived_2;\n\n   procedure Put_Image_T_Derived_2\n     (Buffer : in out Root_Buffer_Type'Class;\n      Arg    :        T_Derived_2);\n\nend Untagged_Put_Image;\n\npackage body Untagged_Put_Image is\n\n   procedure Put_Image_T\n     (Buffer : in out Root_Buffer_Type'Class;\n      Arg    :        T) is\n      pragma Unreferenced (Arg);\n   begin\n      Buffer.Wide_Wide_Put (\"Put_Image_T\");\n   end Put_Image_T;\n\n   procedure Put_Image_T_Derived_2\n     (Buffer : in out Root_Buffer_Type'Class;\n      Arg    :        T_Derived_2) is\n      pragma Unreferenced (Arg);\n   begin\n      Buffer.Wide_Wide_Put\n        (\"Put_Image_T_Derived_2\");\n   end Put_Image_T_Derived_2;\n\nend Untagged_Put_Image;\n\nwith Ada.Text_IO;        use Ada.Text_IO;\n\nwith Untagged_Put_Image; use Untagged_Put_Image;\n\nprocedure Show_Untagged_Put_Image is\n   Obj_T           : T;\n   Obj_T_Derived_1 : T_Derived_1;\n   Obj_T_Derived_2 : T_Derived_2;\nbegin\n   Put_Line (\"T'Image :           \"\n             & Obj_T'Image);\n   Put_Line (\"T_Derived_1'Image : \"\n             & Obj_T_Derived_1'Image);\n   Put_Line (\"T_Derived_2'Image : \"\n             & Obj_T_Derived_2'Image);\nend Show_Untagged_Put_Image;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Strings.Put_Image.Untagged_Put_Image",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "untagged_put_image.ads",
+        "untagged_put_image.adb",
+        "show_untagged_put_image.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_untagged_put_image.adb",
+    "text_hash": "92a0053210e22e0ca0a92062a375a024fb5f5fc13d6f076e9ebff0b68f91d9eabb3f2db356d8cb6b6a1ec7dc927ef25279c652c784c8a625c2c3f0728af67802",
+    "text_hash_short": "acc0c17d45e6271cb582e65bfc8a2a98"
+}

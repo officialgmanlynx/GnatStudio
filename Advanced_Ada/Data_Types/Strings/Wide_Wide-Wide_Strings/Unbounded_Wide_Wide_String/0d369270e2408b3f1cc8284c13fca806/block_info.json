@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/strings.rst",
+    "line_start": 468,
+    "line_end": 483,
+    "text": "with Ada.Strings.Wide_Wide_Unbounded;\nuse  Ada.Strings.Wide_Wide_Unbounded;\n\nwith Ada.Wide_Wide_Text_IO.Wide_Wide_Unbounded_IO;\nuse  Ada.Wide_Wide_Text_IO.Wide_Wide_Unbounded_IO;\n\nprocedure Show_Unbounded_Wide_Wide_String is\n   S : Unbounded_Wide_Wide_String\n     := To_Unbounded_Wide_Wide_String (\"Hello\");\nbegin\n   S := S & Wide_Wide_String'(\" hello\");\n   Put_Line (\"Unbounded wide-wide string: \" & S);\nend Show_Unbounded_Wide_Wide_String;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Strings.Wide_Wide-Wide_Strings.Unbounded_Wide_Wide_String",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_unbounded_wide_wide_string.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_unbounded_wide_wide_string.adb",
+    "text_hash": "7e7d53b5ed3e21414408b68696e6f878c2eaf3d002dcdbcf9b2249ada0d091afc7127dbcf161db8bc7069d9e92c14932d3ec83fdf5814798b12a975bd1a563b2",
+    "text_hash_short": "0d369270e2408b3f1cc8284c13fca806"
+}

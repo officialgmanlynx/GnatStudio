@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/04_strong_typing.rst",
+    "line_start": 279,
+    "line_end": 302,
+    "text": "package Types is\n   type Int_Array is array (Positive range <>) of Integer;\nend Types;\n\nwith Types; use Types;\n\nfunction Count (P : Int_Array; V : Integer) return Natural with\n  Post => Count'Result <= P'Length;\n\nfunction Count (P : Int_Array; V : Integer) return Natural\nis\n   Count : Natural := 0;\nbegin\n   for I in P'Range loop\n      pragma Loop_Invariant (Count <= I - P'First);\n      if P (I) = V then\n         Count := Count + 1;\n      end if;\n   end loop;\n   return Count;\nend Count;\n",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Strong_Typing.Arrays_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_report_all",
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": true,
+    "source_files": [
+        "types.ads",
+        "count.ads",
+        "count.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "0f45d417a100e814d23a91d24586b947cd47d6daf115fb984742b1fe9febd58733c9af56b9dd03eb6c872baa36d4eab7b9dbf5bdf5e91d415b8a34cdcaa323b1",
+    "text_hash_short": "4c9a34614d53c4d268cbff787c9b73e6"
+}

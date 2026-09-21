@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/04_Embedded.rst",
+    "line_start": 450,
+    "line_end": 467,
+    "text": "with Ada.Text_IO;  use Ada.Text_IO;\nwith Ada.Numerics; use Ada.Numerics;\n\nprocedure Custom_Fixed_Point_Range is\n   type Inv_Trig is delta 2.0 ** (-15) * Pi range -Pi / 2.0 .. Pi / 2.0;\nbegin\n   Put_Line (\"Inv_Trig requires \" & Integer'Image (Inv_Trig'Size)\n             & \" bits\");\n   Put_Line (\"The delta    value of Inv_Trig is \"\n             & Inv_Trig'Image (Inv_Trig'Delta));\n   Put_Line (\"The minimum  value of Inv_Trig is \"\n             & Inv_Trig'Image (Inv_Trig'First));\n   Put_Line (\"The maximum  value of Inv_Trig is \"\n             & Inv_Trig'Image (Inv_Trig'Last));\nend Custom_Fixed_Point_Range;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Embedded.Custom_Fixed_Point_Range",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_fixed_point_range.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "custom_fixed_point_range.adb",
+    "text_hash": "e1173d8f4ca2f45d4470f1a2516b7447bdbd066747ab25ebb450fc74547c05313d266cff655ddfc61f884555c215cc2c065824c0d5f4eecf52483291f1da5bf9",
+    "text_hash_short": "0d9a4bc96191d1341bbb1c081555b613"
+}

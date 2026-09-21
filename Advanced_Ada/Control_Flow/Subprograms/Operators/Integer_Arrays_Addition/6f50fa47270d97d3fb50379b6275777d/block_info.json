@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/subprograms.rst",
+    "line_start": 814,
+    "line_end": 861,
+    "text": "package Integer_Arrays is\n\n   type Integer_Array is\n     array (Positive range <>) of Integer;\n\n   function \"+\" (Left, Right : Integer_Array)\n                 return Integer_Array\n     with Post =>\n       (for all I in \"+\"'Result'Range =>\n          \"+\"'Result (I) = Left (I) + Right (I));\n\nend Integer_Arrays;\n\npackage body Integer_Arrays is\n\n   function \"+\" (Left, Right : Integer_Array)\n                 return Integer_Array\n   is\n      R : Integer_Array (Left'Range);\n   begin\n      for I in Left'Range loop\n         R (I) := Left (I) + Right (I);\n      end loop;\n\n      return R;\n   end \"+\";\n\nend Integer_Arrays;\n\nwith Ada.Text_IO;    use Ada.Text_IO;\nwith Integer_Arrays; use Integer_Arrays;\n\nprocedure Show_Array_Addition is\n   A, B, R : Integer_Array (1 .. 5);\nbegin\n   A := (1 & 2 & 3 & 4 & 5);\n   B := (6 & 7 & 8 & 9 & 10);\n   R := A + B;\n\n   for E of R loop\n      Put (E'Image & ' ');\n   end loop;\n   New_Line;\n\nend Show_Array_Addition;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Subprograms.Operators.Integer_Arrays_Addition",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "integer_arrays.ads",
+        "integer_arrays.adb",
+        "show_array_addition.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_array_addition.adb",
+    "text_hash": "fb7a2f5d43d6ee533d63ccf099d26ce8cd2ca162eb09c07cc032fd744c1b795fc13a89202161c3e7ed8cd69944827b346be98584430480b7fcea001f50207720",
+    "text_hash_short": "6f50fa47270d97d3fb50379b6275777d"
+}

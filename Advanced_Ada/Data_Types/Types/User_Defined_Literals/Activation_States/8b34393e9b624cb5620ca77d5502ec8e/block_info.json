@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 3542,
+    "line_end": 3631,
+    "text": "package Activation_States is\n\n   type Activation_State is (Unknown, Off, On)\n     with String_Literal  =>\n            To_Activation_State,\n          Integer_Literal =>\n            Integer_To_Activation_State,\n          Real_Literal    =>\n            Real_To_Activation_State;\n\n   function To_Activation_State\n     (S : Wide_Wide_String)\n      return Activation_State;\n\n   function Integer_To_Activation_State\n     (S : String)\n      return Activation_State;\n\n   function Real_To_Activation_State\n     (S : String)\n      return Activation_State;\n\nend Activation_States;\n\npackage body Activation_States is\n\n   function To_Activation_State\n     (S : Wide_Wide_String)\n      return Activation_State\n   is\n   begin\n      if S = \"Off\" then\n         return Off;\n      elsif S = \"On\" then\n         return On;\n      else\n         return Unknown;\n      end if;\n   end To_Activation_State;\n\n   function Integer_To_Activation_State\n     (S : String)\n      return Activation_State\n   is\n   begin\n      case Integer'Value (S) is\n         when 0      => return Off;\n         when 1      => return On;\n         when others => return Unknown;\n      end case;\n   end Integer_To_Activation_State;\n\n   function Real_To_Activation_State\n     (S : String)\n      return Activation_State\n   is\n      V : constant Float := Float'Value (S);\n   begin\n      if V < 0.0 then\n         return Unknown;\n      elsif V < 1.0 then\n         return Off;\n      else\n         return On;\n      end if;\n   end Real_To_Activation_State;\n\nend Activation_States;\n\nwith Ada.Text_IO;       use Ada.Text_IO;\nwith Activation_States; use Activation_States;\n\nprocedure Activation_Examples is\n   S : Activation_State;\nbegin\n   S := \"Off\";\n   Put_Line (\"String: Off  => \"\n             & Activation_State'Image (S));\n\n   S := 1;\n   Put_Line (\"Integer: 1   => \"\n             & Activation_State'Image (S));\n\n   S := 1.5;\n   Put_Line (\"Real:    1.5 => \"\n             & Activation_State'Image (S));\nend Activation_Examples;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.User_Defined_Literals.Activation_States",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "activation_states.ads",
+        "activation_states.adb",
+        "activation_examples.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "activation_examples.adb",
+    "text_hash": "974ce20f436681e0be659487ce4ab71c0654d3c800dcc2a30b9cb246e06751cd281a797c7764ef6e657ba6ef120491e2ed5361cc16c3dc193457d7de1bac8afb",
+    "text_hash_short": "8b34393e9b624cb5620ca77d5502ec8e"
+}

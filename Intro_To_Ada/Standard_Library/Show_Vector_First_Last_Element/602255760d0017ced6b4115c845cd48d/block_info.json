@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_containers.rst",
+    "line_start": 163,
+    "line_end": 200,
+    "text": "with Ada.Containers; use Ada.Containers;\nwith Ada.Containers.Vectors;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Vector_First_Last_Element is\n\n   package Integer_Vectors is new\n     Ada.Containers.Vectors\n       (Index_Type   => Natural,\n        Element_Type => Integer);\n\n   use Integer_Vectors;\n\n   function Img (I : Integer)    return String\n     renames Integer'Image;\n   function Img (I : Count_Type) return String\n     renames Count_Type'Image;\n\n   V : Vector := 20 & 10 & 0 & 13;\nbegin\n   Put_Line (\"Vector has \"\n             & Img (V.Length)\n             & \" elements\");\n\n   --  Using V.First_Element to\n   --  retrieve first element\n   Put_Line (\"First element is \"\n             & Img (V.First_Element));\n\n   --  Using V.Last_Element to\n   --  retrieve last element\n   Put_Line (\"Last element is \"\n             & Img (V.Last_Element));\nend Show_Vector_First_Last_Element;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Vector_First_Last_Element",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_vector_first_last_element.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_vector_first_last_element.adb",
+    "text_hash": "a3c0f45f34697816f8eac957df2df4e5b0b848f319af8699addc10818da820cf1b6ffc316a19fcc26eedca0a642f0e2695599e61ff7f50742f13e53b94f0eb28",
+    "text_hash_short": "602255760d0017ced6b4115c845cd48d"
+}

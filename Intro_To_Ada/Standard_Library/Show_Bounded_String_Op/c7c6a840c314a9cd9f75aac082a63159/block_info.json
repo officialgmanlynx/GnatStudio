@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_strings.rst",
+    "line_start": 398,
+    "line_end": 427,
+    "text": "with Ada.Strings;         use Ada.Strings;\nwith Ada.Strings.Bounded;\nwith Ada.Text_IO;         use Ada.Text_IO;\n\nprocedure Show_Bounded_String_Op is\n   package B_Str is new\n     Ada.Strings.Bounded.Generic_Bounded_Length\n       (Max => 30);\n   use B_Str;\n\n   S1, S2 : Bounded_String;\nbegin\n   S1 := To_Bounded_String (\"Hello\");\n   --  Alternatively:\n   --\n   --  A := Null_Bounded_String & \"Hello\";\n\n   Append (S1, \" World\");\n   --  Alternatively:\n   --    Append (A, \" World\", Right);\n\n   Put_Line (\"String: \" & To_String (S1));\n\n   S2 := To_Bounded_String (\"Hello!\");\n   S1 := S1 & \" \" & S2;\n   Put_Line (\"String: \" & To_String (S1));\nend Show_Bounded_String_Op;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Bounded_String_Op",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_bounded_string_op.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_bounded_string_op.adb",
+    "text_hash": "4b5b9753f08264280b22aeb698ba574b576cedbaa7ff7bda109863dba0f9609d610a5bb7b6c96549a51b10409559ea6310d2b7823dda0b9d47760287b21e0759",
+    "text_hash_short": "c7c6a840c314a9cd9f75aac082a63159"
+}

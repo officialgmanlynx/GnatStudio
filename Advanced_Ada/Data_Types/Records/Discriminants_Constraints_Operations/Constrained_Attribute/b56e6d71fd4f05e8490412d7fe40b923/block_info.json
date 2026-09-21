@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 2264,
+    "line_end": 2313,
+    "text": "package Unconstrained_Types is\n\n   type Simple_Record\n     (Extended : Boolean := False) is\n   record\n      V : Integer;\n      case Extended is\n         when False =>\n            null;\n         when True  =>\n            V_Float : Float;\n      end case;\n   end record;\n\n   procedure Reset (R : in out Simple_Record);\n\nend Unconstrained_Types;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Unconstrained_Types is\n\n   procedure Reset (R : in out Simple_Record) is\n      Zero_Not_Extended : constant\n        Simple_Record := (Extended => False,\n                          V        => 0);\n\n      Zero_Extended : constant\n        Simple_Record := (Extended => True,\n                          V        => 0,\n                          V_Float  => 0.0);\n   begin\n      Put_Line (\"---- Reset: R'Constrained => \"\n                & R'Constrained'Image);\n\n      if not R'Constrained then\n         R := Zero_Extended;\n      else\n         if R.Extended then\n            R := Zero_Extended;\n         else\n            R := Zero_Not_Extended;\n         end if;\n      end if;\n   end Reset;\n\nend Unconstrained_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Discriminants_Constraints_Operations.Constrained_Attribute",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "unconstrained_types.ads",
+        "unconstrained_types.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "54614a7a49b29eb8c990faaf0d67db1d8a33be81548dc4b64eb6f308d00989b0dcf1c45ecd53cae010eedb21f17518480c75771c7691976425b504890896cf2a",
+    "text_hash_short": "b56e6d71fd4f05e8490412d7fe40b923"
+}

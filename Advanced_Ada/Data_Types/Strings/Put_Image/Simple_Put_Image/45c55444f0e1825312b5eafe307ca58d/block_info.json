@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/strings.rst",
+    "line_start": 1754,
+    "line_end": 1785,
+    "text": "with Ada.Strings.Text_Buffers;\n\npackage Show_Put_Image is\n\n   type T is null record\n     with Put_Image => Put_Image_T;\n   --     ^ Custom version of Put_Image\n\n   use Ada.Strings.Text_Buffers;\n\n   procedure Put_Image_T\n     (Buffer : in out Root_Buffer_Type'Class;\n      Arg    :        T);\n\nend Show_Put_Image;\n\npackage body Show_Put_Image is\n\n   procedure Put_Image_T\n     (Buffer : in out Root_Buffer_Type'Class;\n      Arg    :        T) is\n      pragma Unreferenced (Arg);\n   begin\n      --  Call Put with customized\n      --  information\n      Buffer.Put (\"<custom info>\");\n   end Put_Image_T;\n\nend Show_Put_Image;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Strings.Put_Image.Simple_Put_Image",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_put_image.ads",
+        "show_put_image.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "cdc5bb9c11851a2d5530d1cdf44e2e1ae2f14d83cbdaa557873b48c345301c86d3795578f19507008568133197c3e9cca71e234134e94457037d1a58bb969af4",
+    "text_hash_short": "45c55444f0e1825312b5eafe307ca58d"
+}

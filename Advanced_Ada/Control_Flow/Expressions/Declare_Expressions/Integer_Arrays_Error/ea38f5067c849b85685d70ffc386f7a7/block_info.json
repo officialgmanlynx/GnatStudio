@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/expressions.rst",
+    "line_start": 854,
+    "line_end": 926,
+    "text": "package Integer_Arrays is\n\n   type Integer_Array is\n     array (Positive range <>) of Integer;\n\n   type Integer_Sum is limited private;\n\n   type Const_Integer_Access is\n     access constant Integer;\n\n   function Sum (Arr : Integer_Array)\n                 return Integer;\n\n   function Sum (Arr : Integer_Array)\n                 return Integer_Sum;\n\n   --\n   --  Expression function using\n   --  declare expression:\n   --\n   function Avg (Arr : Integer_Array)\n                 return Float is\n     (declare\n         A  : Integer_Array renames Arr;\n\n         S1 : aliased constant Integer := Sum (A);\n         --  ERROR: aliased constant\n\n         S : Float := Float (S1);\n         L : Float := Float (A'Length);\n         --  ERROR: declaring variables\n\n         S2 : constant Integer_Sum := Sum (A);\n         --  ERROR: declaring constant of\n         --         limited type\n\n         A1 : Const_Integer_Access :=\n                S1'Unchecked_Access;\n         --  ERROR: using 'Unchecked_Access\n         --         attribute\n\n         A2 : access Integer := null;\n         --  ERROR: declaring object of\n         --         anonymous access type\n      begin\n         S / L);\n\nprivate\n\n   type Integer_Sum is new Integer;\n\nend Integer_Arrays;\n\npackage body Integer_Arrays is\n\n   function Sum (Arr : Integer_Array)\n                 return Integer is\n   begin\n      return Acc : Integer := 0 do\n         for V of Arr loop\n            Acc := Acc + V;\n         end loop;\n      end return;\n   end Sum;\n\n   function Sum (Arr : Integer_Array)\n                 return Integer_Sum is\n     (Integer_Sum (Integer'(Sum (Arr))));\n\nend Integer_Arrays;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Expressions.Declare_Expressions.Integer_Arrays_Error",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "integer_arrays.ads",
+        "integer_arrays.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "4c2b648546e4cd5977c0fcbb0e46eec31ecdc85de36857f6d8d340a3edf5cc0a55cee49722cb38decb48f6dbf1d8fa00abb1d9fd0ea7140def57979538ecb397",
+    "text_hash_short": "ea38f5067c849b85685d70ffc386f7a7"
+}

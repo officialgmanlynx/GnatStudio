@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 1268,
+    "line_end": 1281,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Strong_Typing is\n   Alpha  : constant Integer := 1;\n   Beta   : constant Integer := 10;\n   Result : Float;\nbegin\n   Result := Float (Alpha) / Float (Beta);\n\n   Put_Line (Float'Image (Result));\nend Strong_Typing;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Strong_Typing_Ada_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "strong_typing.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "strong_typing.adb",
+    "text_hash": "a0ca17bbb978bc5f0c7f602e7f4e4cc20a75287d1f22461423966c226beeb4130a628fdaab6d3d283cf6c9d5612da5b9b45588fd785107ab1ac9614393a06825",
+    "text_hash_short": "bf91f01b499bcd7da1df751a9f91a767"
+}

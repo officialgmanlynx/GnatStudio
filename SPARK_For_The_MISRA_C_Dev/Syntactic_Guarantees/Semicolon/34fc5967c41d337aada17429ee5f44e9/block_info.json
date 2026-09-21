@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/03_syntactic_guarantees.rst",
+    "line_start": 247,
+    "line_end": 261,
+    "text": "function Func return Integer;\n\nfunction Func return Integer is\nbegin\n   if False then\n      return 1;\n   end if;\n   while True loop\n      return 0;\n   end loop;\n   return 0;\nend Func;\n",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Syntactic_Guarantees.Semicolon",
+    "main_file": null,
+    "gnat_version": [
+        "selected",
+        "12.2.0-1"
+    ],
+    "gnatprove_version": [
+        "selected",
+        "12.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-compile",
+        "ada-prove-flow-report-all"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": true,
+    "source_files": [
+        "func.ads",
+        "func.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "f86018de005e5886927d0d8f0aeca9d9abbadefcc2b52e8b4dff1c0c65f23f6a32bd93a875b2e443d16c50012fb7f63efdbf483c6d80b3669228c272ef9ee2dc",
+    "text_hash_short": "34fc5967c41d337aada17429ee5f44e9"
+}

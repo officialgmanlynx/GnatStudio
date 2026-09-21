@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/05_SPARK.rst",
+    "line_start": 104,
+    "line_end": 113,
+    "text": "package Arrays is\n\n   type List is array (Natural range <>) of Integer;\n\n   function Value (A : List; X, Y : Integer) return Integer;\n\nend Arrays;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.SPARK.Exceptions",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "arrays.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "0cea3b33d0bd1b5ff02fcb5356a5e74ef84089a05ca5b261e80d84df5489a3023551139f7b5a5dc7b93eed31f0c94eb7155f774657304262284f31afa1ca7683",
+    "text_hash_short": "a2dfa05b56144e21d5796d39c88ceac2"
+}

@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 3507,
+    "line_end": 3558,
+    "text": "with Ada.Unchecked_Deallocation;\n\npackage Integer_Types is\n\n   type Integer_Access is access Integer;\n\n   procedure Free is\n     new Ada.Unchecked_Deallocation\n       (Object => Integer,\n        Name   => Integer_Access);\n\n   procedure Show_Is_Null (I : Integer_Access);\n\nend Integer_Types;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Integer_Types is\n\n   procedure Show_Is_Null (I : Integer_Access) is\n   begin\n      if I = null then\n         Put_Line (\"access value is null.\");\n      else\n         Put_Line (\"access value is NOT null.\");\n      end if;\n   end Show_Is_Null;\n\nend Integer_Types;\n\nwith Ada.Text_IO;   use Ada.Text_IO;\nwith Integer_Types; use Integer_Types;\n\nprocedure Show_Unchecked_Deallocation is\n\n   I : Integer_Access;\n\nbegin\n   Put (\"We haven't called new yet... \");\n   Show_Is_Null (I);\n\n   Put (\"Calling new... \");\n   I := new Integer;\n   Show_Is_Null (I);\n\n   Put (\"Calling Free... \");\n   Free (I);\n   Show_Is_Null (I);\nend Show_Unchecked_Deallocation;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Unchecked_Deallocation.Unchecked_Deallocation",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "integer_types.ads",
+        "integer_types.adb",
+        "show_unchecked_deallocation.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_unchecked_deallocation.adb",
+    "text_hash": "f52e09ff70b5d5e6781e2c73e63ed0bbc8d1e7788546e06ba5c4fcf49340e158da4273894fd97eb67e6f740abb80cbb5b35b8c46df38de778a5fe163ae25f20a",
+    "text_hash_short": "a9f2df04e2fe0d5ee8c17249b4ae315a"
+}

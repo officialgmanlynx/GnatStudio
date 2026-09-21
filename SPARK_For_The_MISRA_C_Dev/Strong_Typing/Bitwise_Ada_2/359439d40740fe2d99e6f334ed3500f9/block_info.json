@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/04_strong_typing.rst",
+    "line_start": 672,
+    "line_end": 683,
+    "text": "with Interfaces; use Interfaces;\npackage Unethical_Genetics is\n   type Animal is (Ape, Bee, Cat, Dog);\n   A      : constant array (Animal) of Unsigned_8 :=\n              (Animal'Pos (Ape), Animal'Pos (Bee),\n               Animal'Pos (Cat), Animal'Pos (Dog));\n   Mutant : Animal := Animal'Val (A (Bee) xor A (Dog));\n   pragma Assert (Mutant = Cat);\nend Unethical_Genetics;\n",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Strong_Typing.Bitwise_Ada_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow_report_all",
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": true,
+    "source_files": [
+        "unethical_genetics.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "0f83dcef41716936fadb598756bb475ae007c24030b7363341f5ab7f6e33e3b2bc68b9e9b601d51a52052270c243a434ad64772ad5d2755e226f7e8f014fd935",
+    "text_hash_short": "359439d40740fe2d99e6f334ed3500f9"
+}

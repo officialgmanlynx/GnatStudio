@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/imperative_language.rst",
+    "line_start": 462,
+    "line_end": 507,
+    "text": "with Ada.Text_IO;         use Ada.Text_IO;\nwith Ada.Integer_Text_IO; use Ada.Integer_Text_IO;\n\nprocedure Check_Direction is\n   N : Integer;\nbegin\n   loop\n      Put (\"Enter an integer value: \");\n      Get (N);\n      Put (N);\n\n      case N is\n         when 0 | 360 =>\n            Put_Line\n              (\" is due north\");\n         when 1 .. 89 =>\n            Put_Line\n              (\" is in the northeast quadrant\");\n         when 90 =>\n            Put_Line\n              (\" is due east\");\n         when 91 .. 179 =>\n            Put_Line\n              (\" is in the southeast quadrant\");\n         when 180 =>\n            Put_Line\n              (\" is due south\");\n         when 181 .. 269 =>\n            Put_Line\n              (\" is in the southwest quadrant\");\n         when 270 =>\n            Put_Line\n              (\" is due west\");\n         when 271 .. 359 =>\n            Put_Line\n              (\" is in the northwest quadrant\");\n         when others =>\n            Put_Line\n              (\" Au revoir\");\n            exit;\n      end case;\n   end loop;\nend Check_Direction;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Imperative_Language.Check_Direction_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "check_direction.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "ab842e8e7ae6bed04e5cba9688042b8f017a0276c2c2fbad700a3ff06e6961a195694460b3809e26f302e4cc95a43eca996ce251f9537c054a0dd2611c630424",
+    "text_hash_short": "1c758b76a2c3991cb4e2a0cf5e172ac3"
+}

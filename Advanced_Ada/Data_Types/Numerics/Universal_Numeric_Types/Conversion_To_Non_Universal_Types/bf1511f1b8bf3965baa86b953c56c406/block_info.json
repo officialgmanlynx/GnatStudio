@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 793,
+    "line_end": 810,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Ada.Numerics.Big_Numbers.Big_Integers;\nuse  Ada.Numerics.Big_Numbers.Big_Integers;\n\nwith Static_Expressions;\nuse  Static_Expressions;\n\nprocedure Show_Static_Expressions is\n   Initial_Seed : constant\n     Big_Integer :=\n       Super_Seed;\nbegin\n   Put_Line (Initial_Seed'Image);\nend Show_Static_Expressions;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Universal_Numeric_Types.Conversion_To_Non_Universal_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_static_expressions.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_static_expressions.adb",
+    "text_hash": "b49f1462aed4f6c8097e5e7e397ab63673b573c2a86de591353a7581b6c6c891d8316bf55ae47506a742a55f72f37a9030b9421e036b442a5e50e673826073b8",
+    "text_hash_short": "bf1511f1b8bf3965baa86b953c56c406"
+}

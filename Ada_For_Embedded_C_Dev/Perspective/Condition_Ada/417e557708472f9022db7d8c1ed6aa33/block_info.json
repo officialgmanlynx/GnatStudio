@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 722,
+    "line_end": 740,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main\nis\n   --  try changing the initial value to change the\n   --    output of the program\n   V : constant Integer := 0;\nbegin\n   if V > 0 then\n      Put_Line (\"Positive\");\n   elsif V < 0 then\n      Put_Line (\"Negative\");\n   else\n      Put_Line (\"Zero\");\n   end if;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Condition_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "ccd52a3707e062f3bb8ef26fa0be4a42b8856f42615559ecfa5547ca2e8f424238927395092dc856f554eee78958dd560a6a0c6dcd5c5b9b3a3699ff8b9882f7",
+    "text_hash_short": "417e557708472f9022db7d8c1ed6aa33"
+}

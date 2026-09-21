@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/object_oriented_programming.rst",
+    "line_start": 473,
+    "line_end": 512,
+    "text": "package P is\n   type T is tagged limited private;\n\n   procedure Init (A : in out T);\nprivate\n   type T is tagged limited record\n      E : Integer;\n   end record;\nend P;\n\npackage body P is\n\n   procedure Init (A : in out T) is\n   begin\n      A.E := 0;\n   end Init;\n\nend P;\n\nwith P; use P;\n\nprocedure Main is\n   T1, T2 : T;\nbegin\n   T1.Init;\n   T2.Init;\n\n   --  The following line doesn't work\n   --  because type T is private:\n   --\n   --  T1.E := 0;\n\n   --  The following line doesn't work\n   --  because type T is limited:\n   --\n   --  T2 := T1;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Object_Oriented_Programming.Tagged_Limited_Private_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "p.ads",
+        "p.adb",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "d114c32e0e2a0e1616c94fe9cc8882016d66ac237c28079dd42b7cba2e169ab2e452f36deb74e571afde773f257bfa186567980c9440e935335609000465dd64",
+    "text_hash_short": "68240374505bcaf7aad4ebaed3b9127b"
+}

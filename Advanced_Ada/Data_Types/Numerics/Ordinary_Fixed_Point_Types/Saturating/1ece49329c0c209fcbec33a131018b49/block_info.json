@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 9881,
+    "line_end": 9938,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Saturating is\n\n   D : constant := 2.0 ** (-15);\n\n   --  Q15: normalized range,\n   --  -1.0 .. 1.0 - small\n   type Sample is\n     delta D\n     range -1.0 .. 1.0 - D;\n\n   function Sat_Add (A, B : Sample)\n                     return Sample is\n   begin\n      return A + B;\n   exception\n      when Constraint_Error =>\n         return (if A >= 0.0\n                 then Sample'Last\n                 else Sample'First);\n   end Sat_Add;\n\n   function Sat_Sub (A, B : Sample)\n                     return Sample is\n   begin\n      return A - B;\n   exception\n      when Constraint_Error =>\n         return (if A >= 0.0\n                 then Sample'Last\n                 else Sample'First);\n   end Sat_Sub;\n\n   function Sat_Mul (A, B : Sample)\n                     return Sample is\n   begin\n      return Sample (A * B);\n   exception\n      when Constraint_Error =>\n         return (if (A >= 0.0) = (B >= 0.0)\n                 then Sample'Last\n                 else Sample'First);\n   end Sat_Mul;\n\nbegin\n   Put_Line (\"0.5 + 0.75    = \"\n             & Sat_Add (0.5, 0.75)'Image);\n   Put_Line (\"(-1.0)*(-1.0) = \"\n             & Sat_Mul (-1.0, -1.0)'Image);\n   Put_Line (\"0.5 + 0.25    = \"\n             & Sat_Add (0.5, 0.25)'Image);\n   Put_Line (\"-0.5 - 0.75   = \"\n             & Sat_Sub (-0.5, 0.75)'Image);\nend Show_Saturating;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Ordinary_Fixed_Point_Types.Saturating",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_saturating.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_saturating.adb",
+    "text_hash": "89c1bc5a834c724304ac247e1cd4ba30d6b79ffcfbc5f5f44f94e8f9c38add22215d46de9cc9aab1a1022be463901e42c6c3acc4fa091bd2de6ec70bb0902d0d",
+    "text_hash_short": "1ece49329c0c209fcbec33a131018b49"
+}

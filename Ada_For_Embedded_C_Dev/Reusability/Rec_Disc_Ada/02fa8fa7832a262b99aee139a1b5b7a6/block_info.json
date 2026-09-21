@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 835,
+    "line_end": 848,
+    "text": "procedure Main is\n   type Arr is array (Integer range <>) of Integer;\n\n   type S (Last : Positive) is record\n      A : Arr (0 .. Last);\n   end record;\n\n   V : S (9);\nbegin\n   null;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.Rec_Disc_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "0c7cfe5a4770f21c32af2a4f9dba6a66bcb21dc4a566a92c69e838ad685512186e02a127f6a0a54e8b21f7489acbe3e722345789e590b1170057cc518c84bf07",
+    "text_hash_short": "02fa8fa7832a262b99aee139a1b5b7a6"
+}

@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/object_oriented_programming.rst",
+    "line_start": 627,
+    "line_end": 689,
+    "text": "package P is\n   type T is tagged record\n      E : Integer;\n   end record;\n\n   type T_Class is access T'Class;\n\n   procedure Init (A : in out T);\n\n   procedure Show (Dummy : T);\n\n   type T_New is new T with null record;\n\n   procedure Show (Dummy : T_New);\n\nend P;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body P is\n\n   procedure Init (A : in out T) is\n   begin\n      Put_Line (\"Initializing type T...\");\n      A.E := 0;\n   end Init;\n\n   procedure Show (Dummy : T) is\n   begin\n      Put_Line (\"Using type \"\n                & T'External_Tag);\n   end Show;\n\n   procedure Show (Dummy : T_New) is\n   begin\n      Put_Line (\"Using type \"\n                & T_New'External_Tag);\n   end Show;\n\nend P;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith P;           use P;\n\nprocedure Main is\n   T_Arr  : array (1 .. 2) of T_Class;\nbegin\n   T_Arr (1) := new T;\n   T_Arr (2) := new T_New;\n\n   for I in T_Arr'Range loop\n      Put_Line (\"Element # \"\n                & Integer'Image (I));\n\n      T_Arr (I).Init;\n      T_Arr (I).Show;\n\n      Put_Line (\"-----------\");\n   end loop;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Object_Oriented_Programming.Classwide_Access",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "p.ads",
+        "p.adb",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "17724f2f5ae14b33e403b30ffa0443539d962c31a3ea92e26a35ed7c67b7660764f4d29c47b91875d7cd70ce61f351ba795de2e8dfe1aad0721770e034cfeb75",
+    "text_hash_short": "97c05a8f911d0a0e39c0cc90fae184a7"
+}

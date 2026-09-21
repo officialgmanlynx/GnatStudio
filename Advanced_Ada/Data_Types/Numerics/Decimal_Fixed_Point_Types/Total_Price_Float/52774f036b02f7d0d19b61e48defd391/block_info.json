@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 7240,
+    "line_end": 7290,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Custom_Float_Types;\nuse  Custom_Float_Types;\n\nprocedure Total_Price is\n   type Quantities_Array is\n     array (Positive range <>) of\n       Natural;\n\n   Prices         : constant Price_Array :=\n                      (8.40, 5.04, 1.68);\n   Quantities     : constant Quantities_Array :=\n                      (1, 8, 9);\n   Adjusted_Price : Price_Accum;\n   Total_Item     : Price_Accum;\n   Total_Sum      : Price_Accum;\n   Tax_Rate       : constant Rate := 1.19;\nbegin\n   Total_Sum := 0.0;\n\n   Put_Line (\"Sum Per Item\");\n   Put_Line (\"Item #    Price Quant     Total\");\n   for I in Prices'Range loop\n      Adjusted_Price := Price_Accum (Prices (I)) *\n                        Price_Accum (Tax_Rate);\n      Total_Item := Adjusted_Price *\n                    Price_Accum (Quantities (I));\n      Total_Sum  := Total_Sum + Total_Item;\n      Put_Line (\"    \" & I'Image\n                & \"    \"\n                & Price (Adjusted_Price)'Image\n                & \"    \" & Quantities (I)'Image\n                & \"    \"\n                & Price (Total_Item)'Image);\n   end loop;\n\n   Put_Line (\"TOTAL WITH TAX:        \"\n             & Price (Total_Sum)'Image);\n   Put_Line (\"TAX RATE (%):            \"\n             & Rate'Image (\n                 (Tax_Rate - 1.0) * 100.0));\n\n   Total_Sum := Total_Sum /\n                Price_Accum (Tax_Rate);\n   Put_Line (\"VALUE BEFORE TAX       \"\n             & Price (Total_Sum)'Image);\nend Total_Price;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Decimal_Fixed_Point_Types.Total_Price_Float",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "total_price.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "total_price.adb",
+    "text_hash": "65dbaa1081d62a7f5d45a69d70c7bb79699640648c15c7f6aad0d0009c6bb8c38f8a8611f1e5f12b2dc831154223bc42677aa2a7603ea6206c112de89e992fe1",
+    "text_hash_short": "52774f036b02f7d0d19b61e48defd391"
+}

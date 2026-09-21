@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 2487,
+    "line_end": 2495,
+    "text": "procedure Main is\n   type A_Int is access Integer;\n   Var : A_Int := new Integer;\nbegin\n   Var.all := 0;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Access_To_Scalars",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "e4d65aab7fb5d251e087b1613c85e0ed71a1f0407cb379eb85b880b269a93634755b913ee2893412d49b1e67e775648d7c752f9d2385467950f0d188b6c7f9b5",
+    "text_hash_short": "2e2bf53a9b5dc1098921d811be73a7f0"
+}

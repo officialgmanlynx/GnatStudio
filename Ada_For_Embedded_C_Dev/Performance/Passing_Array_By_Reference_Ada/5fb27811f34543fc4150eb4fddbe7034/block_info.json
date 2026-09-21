@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/08_Performance.rst",
+    "line_start": 571,
+    "line_end": 599,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Update_Array is\n\n   type Data_State is (Prev, Curr);\n   type Data is array (Data_State) of Integer;\n\n   procedure Update (D : in out Data;\n                     V :        Integer) is\n   begin\n      D (Prev) := D (Curr);\n      D (Curr) := V;\n   end Update;\n\n   procedure Display (D : Data) is\n   begin\n      Put_Line (\"Prev: \" & Integer'Image (D (Prev)));\n      Put_Line (\"Curr: \" & Integer'Image (D (Curr)));\n   end Display;\n\n   D1 : Data := (0, 1);\n\nbegin\n   Update (D1, 3);\n   Display (D1);\nend Update_Array;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Performance.Passing_Array_By_Reference_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "update_array.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "update_array.adb",
+    "text_hash": "246725f516c5e3297413c29ea3796247aac7c033df3d9870b61bb1aaa182d4d8885d3b71ec41e945535358d764631f116bac73e85f09d490bcce613e70ca65b3",
+    "text_hash_short": "5fb27811f34543fc4150eb4fddbe7034"
+}

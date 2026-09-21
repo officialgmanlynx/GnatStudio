@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_dates_times.rst",
+    "line_start": 216,
+    "line_end": 231,
+    "text": "with Ada.Text_IO;   use Ada.Text_IO;\nwith Ada.Real_Time; use Ada.Real_Time;\n\nprocedure Display_Delay_Next_Real_Time is\n   D     : Time_Span := Seconds (5);\n   Next  : Time      := Clock + D;\nbegin\n   Put_Line (\"Let's wait \"\n             & Duration'Image (To_Duration (D))\n             & \" seconds...\");\n   delay until Next;\n   Put_Line (\"Enough waiting!\");\nend Display_Delay_Next_Real_Time;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Display_Delay_Next_Real_Time",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "display_delay_next_real_time.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "display_delay_next_real_time.adb",
+    "text_hash": "e8c241d09be1bebf80c9edbec4a774cd4bc05e7712d565a063bc9ba840485c305a0a8227ed26c97fd4a29d4b3f7e65856586267639c2a64d50b52a5ce1f86855",
+    "text_hash_short": "a80e96c4ac7bd3ba7813f983b10cb038"
+}

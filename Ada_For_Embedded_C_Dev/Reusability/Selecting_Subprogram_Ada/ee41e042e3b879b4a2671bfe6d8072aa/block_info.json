@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 2184,
+    "line_end": 2222,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Subprogram_Selection is\n\n   procedure Show_Msg_V1 (Msg : String) is\n   begin\n      Put_Line (\"Using version #1: \" & Msg);\n   end Show_Msg_V1;\n\n   procedure Show_Msg_V2 (Msg : String) is\n   begin\n      Put_Line (\"Using version #2: \");\n      Put_Line (Msg);\n   end Show_Msg_V2;\n\n   type Show_Msg_Proc is access procedure (Msg : String);\n\n   Current_Show_Msg : Show_Msg_Proc;\n   Selection        : Natural;\n\nbegin\n   Selection := 1;\n\n   case Selection is\n      when 1      => Current_Show_Msg := Show_Msg_V1'Access;\n      when 2      => Current_Show_Msg := Show_Msg_V2'Access;\n      when others => Current_Show_Msg := null;\n   end case;\n\n   if Current_Show_Msg /= null then\n      Current_Show_Msg (\"Hello there!\");\n   else\n      Put_Line (\"ERROR: no version of Show_Msg selected!\");\n   end if;\n\nend Show_Subprogram_Selection;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.Selecting_Subprogram_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_subprogram_selection.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_subprogram_selection.adb",
+    "text_hash": "968cb12522bc3d4a0ad82315632e36f3ad99b47d22ff812b0962ca44d3fa65aa3fd50b566413c69c95cbb9856db1177d28a3682a6fa65505db365feb827c6d67",
+    "text_hash_short": "ee41e042e3b879b4a2671bfe6d8072aa"
+}

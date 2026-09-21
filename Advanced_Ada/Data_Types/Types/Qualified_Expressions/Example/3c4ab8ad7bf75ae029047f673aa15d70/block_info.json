@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 3141,
+    "line_end": 3150,
+    "text": "with Simple_Integers; use Simple_Integers;\n\nprocedure Show_Qualified_Expressions is\n   I : Int;\nbegin\n   I := Int_Not_Zero'(0);\nend Show_Qualified_Expressions;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Qualified_Expressions.Example",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_qualified_expressions.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_qualified_expressions.adb",
+    "text_hash": "593fb76c394757e48322ac15e4ada6f99e34655875170c9df9861e90de1d79fb9c865e0d993265067319f5c9b8b5999f195d5274f65357498b47e8b2c3aa1060",
+    "text_hash_short": "3c4ab8ad7bf75ae029047f673aa15d70"
+}

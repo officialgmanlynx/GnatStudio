@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 1879,
+    "line_end": 1900,
+    "text": "package Simple_Recs is\n\n   type Int_Rec is limited record\n      V : Integer;\n   end record;\n\n   type Rec is record\n      IR : Int_Rec;\n   end record;\n\nend Simple_Recs;\n\nwith Simple_Recs; use Simple_Recs;\n\nprocedure Show_Implicitly_Limited is\n   A, B : Rec;\nbegin\n   B := A;\nend Show_Implicitly_Limited;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Record_Components_Limited_Type.Record_Components_Limited_Type",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple_recs.ads",
+        "show_implicitly_limited.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "1e48c3fdfbfee6f8189018337ac5be69d08e1d39ec3e9b9b5eae150de5d83da824cd4c0b67818ae52e0f0f567028598fc09d1659fd6f1ff997af06380b2de734",
+    "text_hash_short": "39770daecfc4579407a799e14f9feff9"
+}

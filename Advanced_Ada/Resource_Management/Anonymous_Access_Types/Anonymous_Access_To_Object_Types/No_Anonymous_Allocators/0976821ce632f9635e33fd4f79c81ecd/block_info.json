@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 598,
+    "line_end": 608,
+    "text": "pragma Restrictions (No_Anonymous_Allocators);\n\nprocedure Show_Dangerous_Allocation is\n   IA : access Integer;\nbegin\n   IA := new Integer;\n   IA.all := 30;\nend Show_Dangerous_Allocation;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Anonymous_Access_To_Object_Types.No_Anonymous_Allocators",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_dangerous_allocation.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_dangerous_allocation.adb",
+    "text_hash": "8ec4fe6e4689337d0d97a3a2fcb8388c4f51f1925715959e3d6603b5dfbb63735aa502408c82446ad4b1b780c1ef86c4af7a6088e95af03c33407189b606c7a6",
+    "text_hash_short": "0976821ce632f9635e33fd4f79c81ecd"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 177,
+    "line_end": 185,
+    "text": "generic\n   type Component is private;\n   type Index is (<>);\n   with function \"<\" (Left, Right : Component) return Boolean;\n   type Array_Type is array (Index range <>) of Component;\nprocedure Sort (A : in out Array_Type);\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.Gen_Pkg_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "sort.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "3feb4a9fbeb470ac0c27e8a43afd628ef64a99c62a6a5223bc3f6e3dad200c959ed8ec1df1dab1df84f732836a0144a5a1cd1655bd760930487fcb97cac8c90f",
+    "text_hash_short": "5781f53f4fd4453ecc1313d05ab76f81"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 240,
+    "line_end": 252,
+    "text": "package Literal_Binaries is\n   Kilobyte  : constant := 2#1#e+10;\n   Megabyte  : constant := 2#1#e+20;\n   Gigabyte  : constant := 2#1#e+30;\n   Terabyte  : constant := 2#1#e+40;\n   Petabyte  : constant := 2#1#e+50;\n   Exabyte   : constant := 2#1#e+60;\n   Zettabyte : constant := 2#1#e+70;\n   Yottabyte : constant := 2#1#e+80;\nend Literal_Binaries;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Numeric_Literals.Literal_Binary",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "literal_binaries.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "29694517f8066846f8b696ee46dd787c92bc9903345086101d95125fc4f40fa7dbaa9051c29503735efcdec6589fbe9add8db77eb794305a15dd8507f42be7da",
+    "text_hash_short": "98d971e0f170db570069f8868e442d6d"
+}

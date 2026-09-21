@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/whats-new-in-ada-2022/chapters/enum_val.rst",
+    "line_start": 115,
+    "line_end": 147,
+    "text": "with Ada.Text_IO;\nwith Ada.Integer_Text_IO;\nwith Ada.Unchecked_Conversion;\n\nprocedure Main is\n\n   type My_Boolean is new Boolean;\n   for My_Boolean use (False => 3, True => 6);\n   type My_Boolean_Int is range 3 .. 6;\n   for My_Boolean_Int'Size use My_Boolean'Size;\n\n   function To_Int is new Ada.Unchecked_Conversion\n     (My_Boolean, My_Boolean_Int);\n\n   function From_Int is new Ada.Unchecked_Conversion\n     (My_Boolean_Int, My_Boolean);\n\nbegin\n   Ada.Text_IO.Put (\"To_Int(False) =\");\n   Ada.Integer_Text_IO.Put (Integer (To_Int (False)));\n   Ada.Text_IO.New_Line;\n   Ada.Text_IO.Put (\"To_Int(True)  =\");\n   Ada.Integer_Text_IO.Put (Integer (To_Int (True)));\n   Ada.Text_IO.New_Line;\n   Ada.Text_IO.Put (\"From_Int (3)  =\");\n   Ada.Text_IO.Put_Line (From_Int (3)'Image);\n   Ada.Text_IO.New_Line;\n   Ada.Text_IO.Put (\"From_Int (6)  =\");\n   Ada.Text_IO.Put_Line (From_Int (6)'Image);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_2022_Whats_New.Enum_Val.Conv",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "bf6ae8113774b76363dd63952365c4745ed06a1cffb146d4c87ddbefa522bf048ad5c8f302e03dde187296a6d66843a478609b72568fe902847db71e4a8592f9",
+    "text_hash_short": "7c7624ed024b26036389f77dbd6cb109"
+}

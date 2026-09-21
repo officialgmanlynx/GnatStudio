@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/03_Proof_Of_Program_Integrity.rst",
+    "line_start": 359,
+    "line_end": 371,
+    "text": "procedure Show_Executable_Semantics\n  with SPARK_Mode => On\nis\n   function Add (X, Y : Integer) return Integer is (X + Y)\n     with Pre => X + Y in Integer;\n\n   X : Integer;\nbegin\n   X := Add (Integer'Last, 1);\nend Show_Executable_Semantics;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Proof_of_Program_Integrity.Executable_Semantics",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure",
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run",
+        "prove"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": true,
+    "source_files": [
+        "show_executable_semantics.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": "show_executable_semantics.adb",
+    "text_hash": "1db47bcab3c3420f29716ac2534051eb0e198c1efe80a9a0b18de51bd07e5b1518a05cb6f2a5aa292ce3321fb44134640d9e3ee2dfd47ba5d1ef2cf141a9423f",
+    "text_hash_short": "d85fa0507d7c35fb98ade7815020117e"
+}

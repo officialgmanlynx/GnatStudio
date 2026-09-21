@@ -1,0 +1,1 @@
+procedure Double (X : in out Float);

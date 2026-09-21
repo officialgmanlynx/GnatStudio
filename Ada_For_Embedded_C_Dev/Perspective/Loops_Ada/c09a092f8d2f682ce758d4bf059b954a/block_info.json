@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 930,
+    "line_end": 982,
+    "text": "with Ada.Text_IO;\n\nprocedure Main is\n   V : Integer;\nbegin\n   --  this is a while loop\n   V := 1;\n   while V < 100 loop\n      V := V * 2;\n   end loop;\n   Ada.Text_IO.Put_Line (\"V = \" & Integer'Image (V));\n\n   --  Ada doesn't have an explicit do while loop\n   --  instead you can use the loop and exit keywords\n   V := 1;\n   loop\n      V := V * 2;\n      exit when V >= 200;\n   end loop;\n   Ada.Text_IO.Put_Line (\"V = \" & Integer'Image (V));\n\n   --  this is a for loop\n   V := 0;\n   for I in 0 .. 4 loop\n      V := V + (I * I);\n   end loop;\n   Ada.Text_IO.Put_Line (\"V = \" & Integer'Image (V));\n\n   --  this is a forever loop with a conditional exit\n   V := 0;\n   loop\n      --  do stuff here\n      V := V + 1;\n      exit when V = 10;\n   end loop;\n   Ada.Text_IO.Put_Line (\"V = \" & Integer'Image (V));\n\n   --  this is a loop over an array\n   declare\n      type Int_Array is array (Natural range 1 .. 10) of Integer;\n\n      Arr : constant Int_Array := (1, 2, 3, 4, 5, 6, 7, 8, 9, 10);\n      Sum : Integer := 0;\n   begin\n      for I in Arr'Range loop\n         Sum := Sum + Arr (I);\n      end loop;\n      Ada.Text_IO.Put_Line (\"Sum = \" & Integer'Image (Sum));\n   end;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Loops_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "ecdf77c6829f4b4553caec2453a48f186fc8bfc18acd22c938a79e8b1b90daabf36dd63f66981ab4d92f87825aa2b3b87b6c20851dc89a724230ebd307d16416",
+    "text_hash_short": "c09a092f8d2f682ce758d4bf059b954a"
+}

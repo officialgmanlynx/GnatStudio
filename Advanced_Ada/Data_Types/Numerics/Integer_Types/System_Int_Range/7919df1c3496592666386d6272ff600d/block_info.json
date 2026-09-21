@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 1798,
+    "line_end": 1810,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\nwith System;\n\nprocedure Show_System_Int_Range is\nbegin\n   Put_Line (\"System.Min_Int :\"\n             & System.Min_Int'Image);\n   Put_Line (\"System.Max_Int :\"\n             & System.Max_Int'Image);\nend Show_System_Int_Range;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Integer_Types.System_Int_Range",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_system_int_range.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_system_int_range.adb",
+    "text_hash": "b9be561fabed6813e5958c00c48ef58fb23ec2ac845be4bebe10d4c87137c5e0dca1a29ec450a637c42a45e8177aa5971fa05154e480f428a97d2bed082a6ade",
+    "text_hash_short": "7919df1c3496592666386d6272ff600d"
+}

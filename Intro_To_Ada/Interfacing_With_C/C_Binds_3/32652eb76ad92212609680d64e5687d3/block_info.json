@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/interfacing_with_c.rst",
+    "line_start": 486,
+    "line_end": 553,
+    "text": "!test.c\n#include <stdlib.h>\n#include <string.h>\n#include <stdio.h>\n\n#include \"test.h\"\n\nstruct test {\n  char name[80];\n  char address[120];\n};\n\nstatic size_t\nstrlcpy_stat(char       *dst,\n             const char *src,\n             size_t      dstsize)\n{\n  size_t len = strlen(src);\n  if (dstsize) {\n    size_t bl = (len < dstsize-1 ?\n                   len : dstsize-1);\n    ((char*)memcpy(dst, src, bl))[bl] = 0;\n  }\n  return len;\n}\n\nstruct test * test_create(void)\n{\n  return malloc (sizeof (struct test));\n}\n\nvoid test_destroy(struct test *t)\n{\n  if (t != NULL) {\n    free(t);\n  }\n}\n\nvoid test_reset(struct test *t)\n{\n  t->name[0]    = '\\0';\n  t->address[0] = '\\0';\n}\n\nvoid test_set_name(struct test *t,\n                   char        *name)\n{\n  strlcpy_stat(t->name,\n               name,\n               sizeof(t->name));\n}\n\nvoid test_set_address(struct test *t,\n                      char        *address)\n{\n  strlcpy_stat(t->address,\n               address,\n               sizeof(t->address));\n}\n\nvoid test_display(const struct test *t)\n{\n  printf(\"Name:    %s\\n\", t->name);\n  printf(\"Address: %s\\n\", t->address);\n}\n",
+    "language": "c",
+    "project": "Courses.Intro_To_Ada.Interfacing_With_C.C_Binds_3",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "test.c"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "598547abd566a347a859bf93b40753c173bfce1fd3ed28b20d535641613f83c970ee7abe48b1f4cdb4d45f5c236ccb1fd8a487fad05b30f1aa7c1ec51a2d6aef",
+    "text_hash_short": "32652eb76ad92212609680d64e5687d3"
+}

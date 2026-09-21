@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 2095,
+    "line_end": 2111,
+    "text": "!derived_with_discriminants.ads\npackage Derived_With_Discriminants is\n\n   type T\n     (L : Positive := 1;\n      M : Positive := 2) is\n     null record;\n\n   type T_Derived_Constraint is new T\n     (L => <>, M => 3);\n   --   ^^^^^^^\n   --  ERROR: cannot use default values\n   --         via box notation\nend Derived_With_Discriminants;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Discriminants.Derived_Types_Defaults_Constraints_Box_Notation",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error",
+        "nosyntax-check"
+    ],
+    "manual_chop": true,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "derived_with_discriminants.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "9411173341e79804ad78036c1c37722f875e9cfdd33d79624ec321f0209fd195ccfbc680614dfc57d27dbd3a5684e36ffeb3b1f91531c8da266133608dc0a890",
+    "text_hash_short": "18d755ec4de45164a47009ab25368452"
+}

@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 3016,
+    "line_end": 3026,
+    "text": "with System;\n\npackage Show_Max_Floating_Point is\n\n   type Max_Float is\n     digits System.Max_Digits + 1;\n\nend Show_Max_Floating_Point;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Floating_Point_Types.Max_Float_Illegal",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_max_floating_point.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "b48830a06f1a1725f34c738173e07e65b06dbce332a8d4891b37c0bbc9434784a4160d5c8979323fa735fd6e9a72a0e00f0d825084642715c46c09e416c1bb19",
+    "text_hash_short": "a1645bc2d42f50c06a1aac1be15c966c"
+}

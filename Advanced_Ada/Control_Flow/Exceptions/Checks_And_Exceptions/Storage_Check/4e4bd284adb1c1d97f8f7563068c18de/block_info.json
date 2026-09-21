@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/exceptions.rst",
+    "line_start": 1125,
+    "line_end": 1153,
+    "text": "package Custom_Types is\n\n   type UInt_7 is range 0 .. 127;\n\n   type UInt_7_Reserved_Access is access UInt_7\n     with Storage_Size => 8;\n\nend Custom_Types;\n\nwith Ada.Text_IO;  use Ada.Text_IO;\n\nwith Custom_Types; use Custom_Types;\n\nprocedure Show_Storage_Check is\n\n   RAV1, RAV2 : UInt_7_Reserved_Access;\n\nbegin\n   Put_Line (\"Allocating RAV1...\");\n   RAV1 := new UInt_7;\n\n   Put_Line (\"Allocating RAV2...\");\n   RAV2 := new UInt_7;\n\n   New_Line;\nend Show_Storage_Check;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Exceptions.Checks_And_Exceptions.Storage_Check",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_types.ads",
+        "show_storage_check.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_storage_check.adb",
+    "text_hash": "a37a33ddd65732bf8126864fa4452e00ddabc3ec651baf9f12a52566fa196e3f5e5d84a06906077dc69712de045e0359c0529fbb09a210d0f780706487f9eec6",
+    "text_hash_short": "4e4bd284adb1c1d97f8f7563068c18de"
+}

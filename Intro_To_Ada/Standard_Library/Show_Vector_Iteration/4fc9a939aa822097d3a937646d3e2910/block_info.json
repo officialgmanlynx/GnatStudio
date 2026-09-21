@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_containers.rst",
+    "line_start": 249,
+    "line_end": 279,
+    "text": "with Ada.Containers.Vectors;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Vector_Iteration is\n\n   package Integer_Vectors is new\n     Ada.Containers.Vectors\n       (Index_Type   => Natural,\n        Element_Type => Integer);\n\n   use Integer_Vectors;\n\n   function Img (I : Integer) return String\n     renames Integer'Image;\n\n   V : Vector := 20 & 10 & 0 & 13;\nbegin\n   Put_Line (\"Vector elements are: \");\n\n   --\n   --  Using for ... of loop to iterate:\n   --\n   for E of V loop\n      Put_Line (\"- \" & Img (E));\n   end loop;\n\nend Show_Vector_Iteration;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Vector_Iteration",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_vector_iteration.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_vector_iteration.adb",
+    "text_hash": "13a75d5b3fc24d8aa683d6592162b547f17f3523fbc1258c86d768580a7fd46957d50e1ebbdebd2deae1c51fd68733882d0391f85f41bcc687b5c40636e82af4",
+    "text_hash_short": "4fc9a939aa822097d3a937646d3e2910"
+}

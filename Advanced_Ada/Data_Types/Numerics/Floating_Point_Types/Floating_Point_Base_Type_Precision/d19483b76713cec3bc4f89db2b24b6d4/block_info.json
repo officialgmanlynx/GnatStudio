@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 2434,
+    "line_end": 2454,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Base_Type_Precision is\n\n   type Float_3_Digits is\n     digits 3;\n\nbegin\n   Put_Line\n     (\"Float_3_Digits'Digits       :\"\n      & Float_3_Digits'Digits'Image\n      & \" digits\");\n\n   Put_Line\n     (\"Float_3_Digits'Base'Digits  :\"\n      & Float_3_Digits'Base'Digits'Image\n      & \" digits\");\nend Show_Base_Type_Precision;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Floating_Point_Types.Floating_Point_Base_Type_Precision",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_base_type_precision.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_base_type_precision.adb",
+    "text_hash": "da912cdd4215296ad2c23b42856efcfd018d05a73cc46f0fede7a2d71b6bebfa2da7988be70ddd26deab0de4ee62eacd05df372d7de340e55455cb3a3fbc170a",
+    "text_hash_short": "d19483b76713cec3bc4f89db2b24b6d4"
+}

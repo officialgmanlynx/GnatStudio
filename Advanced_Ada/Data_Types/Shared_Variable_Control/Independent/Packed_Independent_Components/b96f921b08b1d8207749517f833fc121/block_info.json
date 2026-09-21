@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/shared_variable_control.rst",
+    "line_start": 300,
+    "line_end": 327,
+    "text": "package Shared_Var_Types is\n\n   type Flags is\n     array (Positive range <>) of Boolean\n       with Independent_Components, Pack;\n\nend Shared_Var_Types;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith System;\n\nwith Shared_Var_Types; use Shared_Var_Types;\n\nprocedure Show_Flags_Size is\n   F : Flags (1 .. 8);\nbegin\n   Put_Line (\"Flags'Size:      \"\n             & F'Size'Image & \" bits\");\n   Put_Line (\"Flags (1)'Size:  \"\n             & F (1)'Size'Image & \" bits\");\n   Put_Line (\"# storage units: \"\n             & Integer'Image\n                 (F'Size /\n                  System.Storage_Unit));\nend Show_Flags_Size;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Shared_Variable_Control.Independent.Packed_Independent_Components",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "shared_var_types.ads",
+        "show_flags_size.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_flags_size.adb",
+    "text_hash": "994c11f8cf9b2ad083caae34e70664a0e912e71217f1c72451fa1c462dfdc8b4a0b9aa201d00b8ef220b7957d2e7f5870238033526c7cfd8b8f4c2d65a6f085a",
+    "text_hash_short": "b96f921b08b1d8207749517f833fc121"
+}

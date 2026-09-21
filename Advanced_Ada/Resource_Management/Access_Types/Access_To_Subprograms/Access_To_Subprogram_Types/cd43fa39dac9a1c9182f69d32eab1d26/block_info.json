@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 4929,
+    "line_end": 4937,
+    "text": "procedure Mult_Two (I : in out Integer);\n\nprocedure Mult_Two (I : in out Integer) is\nbegin\n   I := I * 2;\nend Mult_Two;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Access_To_Subprograms.Access_To_Subprogram_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "mult_two.ads",
+        "mult_two.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "aea409cfee7790955622671e39165f0c011f2b2de6823767444a02dbd74c5ac4dc86e55774450fd138c91626ba69217c0a264dc1abab9f3d102d5fe2ebfcee95",
+    "text_hash_short": "cd43fa39dac9a1c9182f69d32eab1d26"
+}

@@ -1,0 +1,48 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/04_Embedded.rst",
+    "line_start": 1154,
+    "line_end": 1330,
+    "text": "with System;\n\npackage Registers is\n\n   type Bit is mod 2 ** 1\n     with Size => 1;\n   type UInt5 is mod 2 ** 5\n     with Size => 5;\n   type UInt10 is mod 2 ** 10\n     with Size => 10;\n\n   subtype USB_Clock_Enable is Bit;\n\n   --  System Clock Register\n   type PMC_SCER_Register is record\n      --  Reserved bits\n      Reserved_0_4   : UInt5 := 16#0#;\n      --  Write-only. Enable USB FS Clock\n      USBCLK         : USB_Clock_Enable := 16#0#;\n      --  Reserved bits\n      Reserved_6_15  : UInt10 := 16#0#;\n   end record\n     with\n       Volatile,\n       Size      => 16,\n       Bit_Order => System.Low_Order_First;\n\n   for PMC_SCER_Register use record\n      Reserved_0_4   at 0 range 0 .. 4;\n      USBCLK         at 0 range 5 .. 5;\n      Reserved_6_15  at 0 range 6 .. 15;\n   end record;\n\n   --  Power Management Controller\n   type PMC_Peripheral is record\n      --  System Clock Enable Register\n      PMC_SCER       : aliased PMC_SCER_Register;\n      --  System Clock Disable Register\n      PMC_SCDR       : aliased PMC_SCER_Register;\n   end record\n     with Volatile;\n\n   for PMC_Peripheral use record\n      --  16-bit register at byte 0\n      PMC_SCER       at 16#0# range 0 .. 15;\n      --  16-bit register at byte 2\n      PMC_SCDR       at 16#2# range 0 .. 15;\n   end record;\n\n   --  Power Management Controller\n   PMC_Periph : aliased PMC_Peripheral;\n--     with Import, Address => System'To_Address (16#400E0600#);\n\nend Registers;\n\npackage Serial_Ports is\n\n   type UByte is new Natural range 0 .. 255\n     with Size => 8;\n\n   type UByte_Array is array (Positive range <>) of UByte;\n\n   type Serial_Port is null record;\n\n   procedure Read (Port : in out Serial_Port;\n                   Data :    out UByte_Array);\n\n   procedure Write (Port : in out Serial_Port;\n                    Data :        UByte_Array);\n\nend Serial_Ports;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Serial_Ports is\n\n   procedure Display (Data : UByte_Array) is\n   begin\n      Put_Line (\"---- Data ----\");\n      for E of Data loop\n         Put_Line (UByte'Image (E));\n      end loop;\n      Put_Line (\"--------------\");\n   end Display;\n\n   procedure Read (Port : in out Serial_Port;\n                   Data :    out UByte_Array) is\n      pragma Unreferenced (Port);\n   begin\n      Put_Line (\"Reading data...\");\n      Data := (0, 0, 32, 0);\n   end Read;\n\n   procedure Write (Port : in out Serial_Port;\n                    Data :        UByte_Array) is\n      pragma Unreferenced (Port);\n   begin\n      Put_Line (\"Writing data...\");\n      Display (Data);\n   end Write;\n\nend Serial_Ports;\n\nwith Serial_Ports; use Serial_Ports;\nwith Registers;    use Registers;\n\npackage Data_Stream is\n\n   procedure Send (Port : in out Serial_Port;\n                   PMC  :        PMC_Peripheral);\n\n   procedure Receive (Port : in out Serial_Port;\n                      PMC  :    out PMC_Peripheral);\n\nend Data_Stream;\n\npackage body Data_Stream is\n\n   procedure Send (Port : in out Serial_Port;\n                   PMC  :        PMC_Peripheral)\n   is\n      Raw_TX : UByte_Array (1 .. PMC'Size / 8)\n        with Address => PMC'Address;\n   begin\n      Write (Port => Port,\n             Data => Raw_TX);\n   end Send;\n\n   procedure Receive (Port : in out Serial_Port;\n                      PMC  :    out PMC_Peripheral)\n   is\n      Raw_TX : UByte_Array (1 .. PMC'Size / 8)\n        with Address => PMC'Address;\n   begin\n      Read (Port => Port,\n            Data => Raw_TX);\n   end Receive;\n\nend Data_Stream;\n\nwith Ada.Text_IO;\n\nwith Registers;\nwith Data_Stream;\nwith Serial_Ports;\n\nprocedure Test_Data_Stream is\n\n   procedure Display_Registers is\n      use Ada.Text_IO;\n   begin\n      Put_Line (\"---- Registers ----\");\n      Put_Line (\"PMC_SCER.USBCLK: \"\n                & Registers.PMC_Periph.PMC_SCER.USBCLK'Image);\n      Put_Line (\"PMC_SCDR.USBCLK: \"\n                & Registers.PMC_Periph.PMC_SCDR.USBCLK'Image);\n      Put_Line (\"-------------- ----\");\n   end Display_Registers;\n\n   Port : Serial_Ports.Serial_Port;\nbegin\n   Registers.PMC_Periph.PMC_SCER.USBCLK := 1;\n   Registers.PMC_Periph.PMC_SCDR.USBCLK := 1;\n\n   Display_Registers;\n\n   Data_Stream.Send (Port => Port,\n                     PMC  => Registers.PMC_Periph);\n\n   Data_Stream.Receive (Port => Port,\n                        PMC  => Registers.PMC_Periph);\n\n   Display_Registers;\nend Test_Data_Stream;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Embedded.Data_Stream",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "registers.ads",
+        "serial_ports.ads",
+        "serial_ports.adb",
+        "data_stream.ads",
+        "data_stream.adb",
+        "test_data_stream.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "test_data_stream.adb",
+    "text_hash": "ca0b791737e4db5875d5e0ed1445fc5e06fa38af4db45fbdbcce9ce8cd80d39de589f8e7419484c67480130ffdbaf8cb8a014f50ada9b431ae9d036beb498125",
+    "text_hash_short": "3f4e1a184e52a83b1b9de9e3d5cb43bf"
+}

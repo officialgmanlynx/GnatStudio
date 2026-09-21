@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/02_Flow_Analysis.rst",
+    "line_start": 1065,
+    "line_end": 1116,
+    "text": "package Show_Biggest_Increasing_Sequence is\n\n   type Array_Of_Positives is array (Integer range <>) of Positive;\n\n   function Size_Of_Biggest_Increasing_Sequence (A : Array_Of_Positives)\n      return Natural;\n\nend Show_Biggest_Increasing_Sequence;\n\npackage body Show_Biggest_Increasing_Sequence is\n\n   function Size_Of_Biggest_Increasing_Sequence (A : Array_Of_Positives)\n      return Natural\n   is\n      Max         : Natural := 0;\n      End_Of_Seq  : Boolean;\n      Size_Of_Seq : Natural := 0;\n      Beginning   : Integer := A'First - 1;\n\n      procedure Test_Index (Current_Index : Integer) with\n        Global => (In_Out => (Beginning, Max, Size_Of_Seq),\n                   Output => End_Of_Seq,\n                   Input  => Current_Index)\n      is\n      begin\n         if A (Current_Index) >= Max then\n            Max := A (Current_Index);\n            End_Of_Seq := False;\n         else\n            Max         := 0;\n            End_Of_Seq  := True;\n            Size_Of_Seq := Current_Index - Beginning;\n            Beginning   := Current_Index;\n         end if;\n      end Test_Index;\n\n      Biggest_Seq : Natural := 0;\n\n   begin\n      for I in A'Range loop\n         Test_Index (I);\n         if End_Of_Seq then\n            Biggest_Seq := Natural'Max (Size_Of_Seq, Biggest_Seq);\n         end if;\n      end loop;\n      return Biggest_Seq;\n   end Size_Of_Biggest_Increasing_Sequence;\n\nend Show_Biggest_Increasing_Sequence;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Flow_Analysis.Example_08",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "show_biggest_increasing_sequence.ads",
+        "show_biggest_increasing_sequence.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "5182993de98c5868a8e043f596abc6b4a7c3a02cc47f225468008e2c3437dac91d488c9e5ab69bc7bff22cee7209493f1526449a4115f7ac49018c05f264fecc",
+    "text_hash_short": "86fb934c32a38f6841ef736780b2e3b2"
+}

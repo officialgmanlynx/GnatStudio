@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/arrays.rst",
+    "line_start": 243,
+    "line_end": 263,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Simple_Array_Bounds is\n   type My_Int is range 0 .. 1000;\n\n   type My_Int_Array is\n     array (1 .. 5) of My_Int;\n   --       ^ Subtype of Integer\n\n   Tab : constant My_Int_Array :=\n           (2, 3, 5, 7, 11);\nbegin\n   for I in 1 .. 5 loop\n   --       ^ Subtype of Integer\n      Put (My_Int'Image (Tab (I)));\n   end loop;\n   New_Line;\nend Simple_Array_Bounds;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Arrays.Simple_Array_Bounds",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple_array_bounds.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "simple_array_bounds.adb",
+    "text_hash": "ce6328e560be77524edb7c53edcdc144c6030c1d77c294b6a0d18b827050f9bb3505e0d6ad3c60629a73e0fa22b151bc467f6d17f63bba4b5e2b0686f4e96272",
+    "text_hash_short": "c337a7fe0dacccc5f60f7b234aa96d39"
+}

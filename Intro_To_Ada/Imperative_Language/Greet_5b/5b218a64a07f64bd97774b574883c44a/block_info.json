@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/imperative_language.rst",
+    "line_start": 368,
+    "line_end": 392,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Greet_5b is\n   --  Variable declaration:\n   I : Integer := 1;\n   --  ^ Type\n   --             ^ Initial value\nbegin\n   loop\n      Put_Line (\"Hello, World!\"\n                & Integer'Image (I));\n\n      --  Exit statement:\n      exit when I = 5;\n      --        ^ Boolean condition\n\n      --  Assignment:\n      I := I + 1;\n      --  There is no I++ short form to\n      --  increment a variable\n   end loop;\nend Greet_5b;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Imperative_Language.Greet_5b",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "greet_5b.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "greet_5b.adb",
+    "text_hash": "7702ec234c790f271f7eef8b4dbef094807da16cf6b60a6449eeaa6d0a37e8051f4407b6448a7ae7c76af39a854c4955223c1d8509f95f582aeb7e91c47c5178",
+    "text_hash_short": "5b218a64a07f64bd97774b574883c44a"
+}

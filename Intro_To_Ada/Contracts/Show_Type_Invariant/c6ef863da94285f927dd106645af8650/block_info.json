@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/contracts.rst",
+    "line_start": 458,
+    "line_end": 550,
+    "text": "with Ada.Text_IO;  use Ada.Text_IO;\nwith Ada.Calendar; use Ada.Calendar;\n\nwith Ada.Containers.Vectors;\n\nwith Ada.Strings.Unbounded;\nuse  Ada.Strings.Unbounded;\n\nprocedure Show_Type_Invariant is\n\n   package Courses is\n      type Course is private\n        with Type_Invariant => Check (Course);\n\n      type Course_Container is private;\n\n      procedure Add (CC : in out Course_Container;\n                     C  :        Course);\n\n      function Init\n        (Name                 : String;\n         Start_Date, End_Date : Time)\n         return Course;\n\n      function Check (C : Course)\n                      return Boolean;\n\n   private\n      type Course is record\n         Name       : Unbounded_String;\n         Start_Date : Time;\n         End_Date   : Time;\n      end record;\n\n      function Check (C : Course)\n                      return Boolean is\n        (C.Start_Date <= C.End_Date);\n\n      package Course_Vectors is new\n        Ada.Containers.Vectors\n          (Index_Type   => Natural,\n           Element_Type => Course);\n\n      type Course_Container is record\n         V : Course_Vectors.Vector;\n      end record;\n   end Courses;\n\n   package body Courses is\n      procedure Add (CC : in out Course_Container;\n                     C  :        Course) is\n      begin\n         CC.V.Append (C);\n      end Add;\n\n      function Init\n        (Name                 : String;\n         Start_Date, End_Date : Time)\n         return Course is\n      begin\n         return\n           Course'(Name       =>\n                     To_Unbounded_String (Name),\n                   Start_Date => Start_Date,\n                   End_Date   => End_Date);\n      end Init;\n   end Courses;\n\n   use Courses;\n\n   CC : Course_Container;\nbegin\n   Add (CC,\n        Init (Name       =>\n                \"Intro to Photography\",\n              Start_Date =>\n                Time_Of (2018, 5, 1),\n              End_Date   =>\n                Time_Of (2018, 5, 10)));\n\n   --  This should trigger an error in the\n   --  type-invariant check\n   Add (CC,\n        Init (Name       =>\n                \"Intro to Video Recording\",\n              Start_Date =>\n                Time_Of (2019, 5, 1),\n              End_Date   =>\n                Time_Of (2018, 5, 10)));\nend Show_Type_Invariant;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Contracts.Show_Type_Invariant",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_type_invariant.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_type_invariant.adb",
+    "text_hash": "ec07b197834c342fc415ff612eb5d5a624321f8cba240bc00f38fdaa8920e06f8168c0af8c213208ba19627a14d761cdbe887cb5a28904c8bc301b8651f715b2",
+    "text_hash_short": "c6ef863da94285f927dd106645af8650"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 29,
+    "line_end": 45,
+    "text": "package Show_Access_Type_Declaration is\n\n   --\n   --  Declaring access types:\n   --\n\n   --  Access-to-object type\n   type Integer_Access is access Integer;\n\n   --  Access-to-subprogram type\n   type Init_Integer_Access is access\n     function return Integer;\n\nend Show_Access_Type_Declaration;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Terminology.Access_Type_Declaration",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_access_type_declaration.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "7dbd96e4aabe28c5ccc797b85dc13f2e5709a812fc8f2a0f1d035783cf637ccd91169a312000e1159bed833bd1c8b42a84a7f8515a2ba5812c8c5a8d777810c4",
+    "text_hash_short": "64e4e0847a73a9ed23e29e09798934de"
+}

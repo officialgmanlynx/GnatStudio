@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 241,
+    "line_end": 290,
+    "text": "package Limited_Types is\n\n   type Integer_Access is access Integer;\n\n   type Simple_Rec is limited private;\n\n   function Init (I : Integer) return Simple_Rec;\n\n   procedure Copy (From :        Simple_Rec;\n                   To   : in out Simple_Rec);\n\nprivate\n\n   type Simple_Rec is limited record\n      V : Integer_Access;\n   end record;\n\nend Limited_Types;\n\npackage body Limited_Types is\n\n   function Init (I : Integer) return Simple_Rec\n   is\n   begin\n      return E : Simple_Rec do\n         E.V := new Integer'(I);\n      end return;\n   end Init;\n\n   procedure Copy (From :        Simple_Rec;\n                   To   : in out Simple_Rec)\n   is\n   begin\n      --  Copying record components\n      To.V.all := From.V.all;\n   end Copy;\n\nend Limited_Types;\n\n\nwith Limited_Types; use Limited_Types;\n\nprocedure Show_Limited_Assignment is\n   A, B : Simple_Rec := Init (0);\nbegin\n   Copy (From => A, To => B);\nend Show_Limited_Assignment;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Assignment_Equality.Assignment",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "limited_types.ads",
+        "limited_types.adb",
+        "show_limited_assignment.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_limited_assignment.adb",
+    "text_hash": "bfe6559954b72577410427ab8143a5e688c78f480cab2a8a1c5393d51d08b19ef73b09c9ba4b3ac29d3f913dd5b1d3ae96882938c90a0629ca85505364d1adbd",
+    "text_hash_short": "2c017c3592c93be8c19fe247e9241fcb"
+}

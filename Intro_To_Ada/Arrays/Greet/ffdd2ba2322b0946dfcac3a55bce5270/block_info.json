@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/arrays.rst",
+    "line_start": 16,
+    "line_end": 41,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Greet is\n   type My_Int is range 0 .. 1000;\n   type Index is range 1 .. 5;\n\n   type My_Int_Array is\n     array (Index) of My_Int;\n   --                 ^ Type of elements\n   --       ^ Bounds of the array\n   Arr : My_Int_Array := (2, 3, 5, 7, 11);\n   --                    ^ Array literal\n   --                      (aggregate)\n\n   V : My_Int;\nbegin\n   for I in Index loop\n      V := Arr (I);\n      --        ^ Take the Ith element\n      Put (My_Int'Image (V));\n   end loop;\n   New_Line;\nend Greet;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Arrays.Greet",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "greet.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "greet.adb",
+    "text_hash": "f46512f7e57da4e86c38fae16c3048c544119ba3ddcd344f20578eead414fcec853a67ad78df421486fcbbe50da55ea1c1feb7674a4d95d3c7cae0a80ad4d571",
+    "text_hash_short": "ffdd2ba2322b0946dfcac3a55bce5270"
+}

@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/whats-new-in-ada-2022/chapters/container_aggregates.rst",
+    "line_start": 21,
+    "line_end": 42,
+    "text": "with Ada.Text_IO;\nwith Ada.Containers.Vectors;\nwith Ada.Containers.Ordered_Maps;\n\nprocedure Main is\n\n   package Int_Vectors is new Ada.Containers.Vectors\n     (Positive, Integer);\n\n   X : constant Int_Vectors.Vector := [1, 2, 3];\n\n   package Float_Maps is new Ada.Containers.Ordered_Maps\n     (Integer, Float);\n\n   Y : constant Float_Maps.Map := [-10 => 1.0, 0 => 2.5, 10 => 5.51];\nbegin\n   Ada.Text_IO.Put_Line (X'Image);\n   Ada.Text_IO.Put_Line (Y'Image);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_2022_Whats_New.Container_Aggregates_1",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "90196367a6e45562d9a48c6524f0d188567b6f85acbc0caa89e2e314905b495ece59bbf5952c899b28ddf3d292c542d4486467a08d205265b716231c5eace5e1",
+    "text_hash_short": "317c252582f75f248a154bd843388aaa"
+}

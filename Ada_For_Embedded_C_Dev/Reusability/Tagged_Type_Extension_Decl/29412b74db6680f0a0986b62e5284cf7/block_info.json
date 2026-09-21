@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 1482,
+    "line_end": 1623,
+    "text": "package P is\n\n   type Rec is record\n      V : Integer;\n   end record;\n\n   procedure Display (R : Rec);\n   procedure Reset (R : out Rec);\n\n   type New_Rec is new Rec;\n\n   overriding procedure Display (R : New_Rec);\n   not overriding procedure New_Op (R : in out New_Rec);\n\n   type Tagged_Rec is tagged record\n      V : Integer;\n   end record;\n\n   procedure Display (R : Tagged_Rec);\n   procedure Reset (R : out Tagged_Rec);\n\n   type Ext_Tagged_Rec is new Tagged_Rec with record\n      V2 : Integer;\n   end record;\n\n   overriding procedure Display (R : Ext_Tagged_Rec);\n   overriding procedure Reset (R : out Ext_Tagged_Rec);\n   not overriding procedure New_Op (R : in out Ext_Tagged_Rec);\n\nend P;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body P is\n\n   procedure Display (R : Rec) is\n   begin\n      Put_Line (\"TYPE: REC\");\n      Put_Line (\"Rec.V = \" & Integer'Image (R.V));\n      New_Line;\n   end Display;\n\n   procedure Reset (R : out Rec) is\n   begin\n      R.V := 0;\n   end Reset;\n\n   procedure Display (R : New_Rec) is\n   begin\n      Put_Line (\"TYPE: NEW_REC\");\n      Put_Line (\"New_Rec.V = \" & Integer'Image (R.V));\n      New_Line;\n   end Display;\n\n   procedure New_Op (R : in out New_Rec) is\n   begin\n      R.V := R.V + 1;\n   end New_Op;\n\n   procedure Display (R : Tagged_Rec) is\n   begin\n      --  Using External_Tag attribute to retrieve the tag as a string\n      Put_Line (\"TYPE: \" & Tagged_Rec'External_Tag);\n      Put_Line (\"Tagged_Rec.V = \" & Integer'Image (R.V));\n      New_Line;\n   end Display;\n\n   procedure Reset (R : out Tagged_Rec) is\n   begin\n      R.V := 0;\n   end Reset;\n\n   procedure Display (R : Ext_Tagged_Rec) is\n   begin\n      --  Using External_Tag attribute to retrieve the tag as a string\n      Put_Line (\"TYPE: \" & Ext_Tagged_Rec'External_Tag);\n      Put_Line (\"Ext_Tagged_Rec.V  = \" & Integer'Image (R.V));\n      Put_Line (\"Ext_Tagged_Rec.V2 = \" & Integer'Image (R.V2));\n      New_Line;\n   end Display;\n\n   procedure Reset (R : out Ext_Tagged_Rec) is\n   begin\n      Tagged_Rec (R).Reset;\n      R.V2 := 0;\n   end Reset;\n\n   procedure New_Op (R : in out Ext_Tagged_Rec) is\n   begin\n      R.V := R.V + 1;\n   end New_Op;\n\nend P;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith P;           use P;\n\nprocedure Main is\n   X_Rec              : Rec;\n   X_New_Rec          : New_Rec;\n\n   X_Tagged_Rec       : aliased Tagged_Rec;\n   X_Ext_Tagged_Rec   : aliased Ext_Tagged_Rec;\n\n   X_Tagged_Rec_Array : constant array (1 .. 2) of access Tagged_Rec'Class\n                         := (X_Tagged_Rec'Access, X_Ext_Tagged_Rec'Access);\nbegin\n   --\n   --  Reset all objects\n   --\n   Reset (X_Rec);\n   Reset (X_New_Rec);\n   X_Tagged_Rec.Reset;    --  we could write \"Reset (X_Tagged_Rec)\" as well\n   X_Ext_Tagged_Rec.Reset;\n\n   --\n   --  Use new operations when available\n   --\n   New_Op (X_New_Rec);\n   X_Ext_Tagged_Rec.New_Op;\n\n   --\n   --  Display all objects\n   --\n   Display (X_Rec);\n   Display (X_New_Rec);\n   X_Tagged_Rec.Display;  --  we could write \"Display (X_Tagged_Rec)\" as well\n   X_Ext_Tagged_Rec.Display;\n\n   --\n   --  Resetting and display objects of Tagged_Rec'Class\n   --\n   Put_Line (\"Operations on Tagged_Rec'Class\");\n   Put_Line (\"------------------------------\");\n   for E of X_Tagged_Rec_Array loop\n      E.Reset;\n      E.Display;\n   end loop;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.Tagged_Type_Extension_Decl",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "p.ads",
+        "p.adb",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "be72fc3e05d11aea52a4411e6cc0430c586c2e41ee985af17909c5ce6273f4834f6cd8b1386f41e87c29a28234002d11e5cd6a129ca7b1c7dfd794c9eb52e085",
+    "text_hash_short": "29412b74db6680f0a0986b62e5284cf7"
+}

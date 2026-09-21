@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 364,
+    "line_end": 380,
+    "text": "with Interfaces.C;\n\nprocedure Main is\n   type my_struct is record\n      A : Interfaces.C.int;\n      B : Interfaces.C.int;\n   end record\n     with Convention => C_Pass_By_Copy;\n\n   procedure Call (V : my_struct);\n   pragma Import (C, Call, \"call\");\nbegin\n   null;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.Param_By_Value_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "85e17c542ee31d1bab528b913770e777fad6d152c075bca6792808f1af97fcd2dc9274e621ecd108940e4cd72a1dd57d75af29e33e25542326ca1a9ced88e125",
+    "text_hash_short": "16e97033bdffb2bacc0cf3322c019a94"
+}

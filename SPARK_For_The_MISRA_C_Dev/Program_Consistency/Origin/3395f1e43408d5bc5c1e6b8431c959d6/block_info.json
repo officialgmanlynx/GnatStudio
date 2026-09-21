@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/02_program_consistency.rst",
+    "line_start": 195,
+    "line_end": 207,
+    "text": "!origin.c\n#include <stdio.h>\n\nint var = 0;\nint fun() {\n   return 1;\n}\nvoid print() {\n   printf(\"var = %d\\n\", var);\n}\n",
+    "language": "c",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Program_Consistency.Origin",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "origin.c"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "2287da05083f458b05925904c6da443144a7d6ba4c5c89981e9c5be4e14e1886d5d05ad4071ade60c24c86508aa8e354f3a7849c2995af213b6b78aa836c3b2d",
+    "text_hash_short": "3395f1e43408d5bc5c1e6b8431c959d6"
+}

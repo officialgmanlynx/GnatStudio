@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 1137,
+    "line_end": 1187,
+    "text": "package Simple_Recs.Ext\n  with Elaborate_Body is\n\n  --  Rec_Derived is derived from Rec, which is a\n  --  limited private type that is nonlimited in\n  --  its full view.\n  --\n  --  Rec_Derived isn't explicitly limited.\n  --  Therefore, it's nonlimited in the private\n  --  part of Simple_Recs.Ext and its package\n  --  body.\n  --\n  type Rec_Derived is new Rec;\n\nend Simple_Recs.Ext;\n\npackage body Simple_Recs.Ext is\n\n   procedure Test_Child_Limitedness is\n      Dummy_1, Dummy_2 : Rec_Derived;\n   begin\n      --  Here, Rec_Derived is a nonlimited\n      --  type because Rec is nonlimited in\n      --  its full view.\n\n      Dummy_2 := Dummy_1;\n   end Test_Child_Limitedness;\n\nend Simple_Recs.Ext;\n\n--  We copied the code to the\n--  Test_Child_Limitedness procedure (in the\n--  body of the Simple_Recs.Ext package) and\n--  commented it out here.\n--\n--  You may uncomment the code to verify\n--  that Rec_Derived is limited in this\n--  procedure.\n--\n\n--  with Simple_Recs.Ext; use Simple_Recs.Ext;\n\nprocedure Test_Limitedness is\n   --  Dummy_1, Dummy_2 : Rec_Derived;\nbegin\n   --  Dummy_2 := Dummy_1;\n   null;\nend Test_Limitedness;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Deriving_From_Limited_Types.Derived_Limited_Private_Type",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple_recs-ext.ads",
+        "simple_recs-ext.adb",
+        "test_limitedness.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "test_limitedness.adb",
+    "text_hash": "68062f0c3347a6aa7bf06c14696ea8a172931ef0018cf0fe0d146315cf9aa5eba47b625d0ffe25dcdd7fbcd3eba6a84052cccccaa1e20e85d213d78bb2cdf46b",
+    "text_hash_short": "f480cd05afff622e451684a0293cb982"
+}

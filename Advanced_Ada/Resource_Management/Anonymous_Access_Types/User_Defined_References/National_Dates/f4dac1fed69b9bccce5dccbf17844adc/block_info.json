@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 2187,
+    "line_end": 2227,
+    "text": "with Generic_Containers;\nwith National_Date_Info; use National_Date_Info;\n\nprocedure Show_National_Dates is\n\n   function Matches_Country\n     (E    : National_Date_Access;\n      Elem : Country_Code)\n      return Boolean is\n        (E.Country = Elem);\n\n   package National_Date_Containers is new\n     Generic_Containers\n       (T        => National_Date,\n        T_Access => National_Date_Access,\n        T_Cmp    => Country_Code,\n        Matches  => Matches_Country);\n\n   use National_Date_Containers;\n\n   subtype National_Dates is Container;\n\n   Nat_Dates : constant\n                 National_Dates (1 .. 5) :=\n     (new National_Date'(\"USA\",\n                         Time'(1776,  7,  4)),\n      new National_Date'(\"FRA\",\n                         Time'(1789,  7, 14)),\n      new National_Date'(\"DEU\",\n                         Time'(1990, 10,  3)),\n      new National_Date'(\"SPA\",\n                         Time'(1492, 10, 12)),\n      new National_Date'(\"BRA\",\n                         Time'(1822,  9,  7)));\n\nbegin\n   Find (Nat_Dates, \"FRA\").Show;\nend Show_National_Dates;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.User_Defined_References.National_Dates",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_national_dates.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_national_dates.adb",
+    "text_hash": "40d78b95931b6eaa1affc66ae1dc09980cb2250e49467ae9bbd6e776f435bf0a153a224c913d5a3a161d180191f82e9745d1edb11855c68d627b152e4231971d",
+    "text_hash_short": "f4dac1fed69b9bccce5dccbf17844adc"
+}

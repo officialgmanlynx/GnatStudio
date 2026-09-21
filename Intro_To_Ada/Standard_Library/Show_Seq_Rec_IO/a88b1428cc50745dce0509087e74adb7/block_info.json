@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_files_streams.rst",
+    "line_start": 210,
+    "line_end": 258,
+    "text": "with Ada.Text_IO;\nwith Ada.Sequential_IO;\n\nprocedure Show_Seq_Rec_IO is\n   type Num_Info is record\n      Valid : Boolean := False;\n      Value : Float;\n   end record;\n\n   procedure Put_Line (N : Num_Info) is\n   begin\n      if N.Valid then\n         Ada.Text_IO.Put_Line\n           (\"(ok,     \"\n            & Float'Image (N.Value) & \")\");\n      else\n         Ada.Text_IO.Put_Line\n           (\"(not ok,  -----------)\");\n      end if;\n   end Put_Line;\n\n   package Num_Info_IO is new\n     Ada.Sequential_IO (Num_Info);\n   use Num_Info_IO;\n\n   F         : Num_Info_IO.File_Type;\n   File_Name : constant String :=\n                 \"float_file.bin\";\nbegin\n   Create (F, Out_File, File_Name);\n   Write (F,  (True,  1.5));\n   Write (F,  (False, 2.4));\n   Write (F,  (True,  6.7));\n   Close (F);\n\n   declare\n      Value : Num_Info;\n   begin\n      Open (F, In_File, File_Name);\n      while not End_Of_File (F) loop\n         Read (F, Value);\n         Put_Line (Value);\n      end loop;\n      Close (F);\n   end;\nend Show_Seq_Rec_IO;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Seq_Rec_IO",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_seq_rec_io.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_seq_rec_io.adb",
+    "text_hash": "7b9a082300d10d2f0cfefdb97333e5c521df74e9414037da6c232ed0febdbc4173f28daa7fdb584b4e04fefcc2d52b9ba8ab1b163e4a7768671dc6620bb44c4f",
+    "text_hash_short": "a88b1428cc50745dce0509087e74adb7"
+}

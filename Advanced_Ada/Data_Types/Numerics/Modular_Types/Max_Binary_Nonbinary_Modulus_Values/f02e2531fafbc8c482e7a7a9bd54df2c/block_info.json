@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 1975,
+    "line_end": 1991,
+    "text": "with System;\nwith Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Max_Binary_Nonbinary_Modulus is\n   type Modular_Max is\n     mod System.Max_Binary_Modulus;\nbegin\n   Put_Line\n     (\"System.Max_Binary_Modulus - 1 :\"\n      & Modular_Max'Last'Image);\n   Put_Line\n     (\"System.Max_Nonbinary_Modulus  :\"\n      & System.Max_Nonbinary_Modulus'Image);\nend Show_Max_Binary_Nonbinary_Modulus;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Modular_Types.Max_Binary_Nonbinary_Modulus_Values",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_max_binary_nonbinary_modulus.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_max_binary_nonbinary_modulus.adb",
+    "text_hash": "458ad958d895aafa1cf02a70594c282f13fa983c7b4e6607f92ea60e74dbab3f8ae853dffa37e04ed499ead4afb663fdd6f1306267bc05354f71f280b894f83d",
+    "text_hash_short": "f02e2531fafbc8c482e7a7a9bd54df2c"
+}

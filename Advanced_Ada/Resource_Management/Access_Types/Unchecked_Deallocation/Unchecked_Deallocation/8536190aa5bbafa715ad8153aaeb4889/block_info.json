@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 3726,
+    "line_end": 3757,
+    "text": "with Ada.Text_IO;   use Ada.Text_IO;\nwith Integer_Types; use Integer_Types;\n\nprocedure Show_Unchecked_Deallocation is\n\n   I_1, I_2 : Integer_Access;\n\nbegin\n   I_1 := new Integer'(42);\n   I_2 := I_1;\n\n   Put_Line (\"I_1.all = \"\n             & Integer'Image (I_1.all));\n   Put_Line (\"I_2.all = \"\n             & Integer'Image (I_2.all));\n\n   Put_Line (\"Freeing I_1\");\n   Free (I_1);\n\n   if I_1 /= null then\n      Put_Line (\"I_1.all = \"\n                & Integer'Image (I_1.all));\n   end if;\n\n   if I_2 /= null then\n      Put_Line (\"I_2.all = \"\n                & Integer'Image (I_2.all));\n   end if;\nend Show_Unchecked_Deallocation;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Unchecked_Deallocation.Unchecked_Deallocation",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_unchecked_deallocation.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_unchecked_deallocation.adb",
+    "text_hash": "055e1861eb0c17412348dbb2da8023ec8c86d65ab1e350904427a3e8c321286dfd1f5867d206aa55a7e19ba2b764c64234f8c0bfae88fb51ebb4eaeebbed683e",
+    "text_hash_short": "8536190aa5bbafa715ad8153aaeb4889"
+}

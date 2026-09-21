@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/strongly_typed_language.rst",
+    "line_start": 211,
+    "line_end": 234,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Enumeration_Example is\n   type Days is (Monday, Tuesday, Wednesday,\n                 Thursday, Friday,\n                 Saturday, Sunday);\n   --  An enumeration type\nbegin\n   for I in Days loop\n      case I is\n         when Saturday .. Sunday =>\n            Put_Line (\"Week end!\");\n\n         when Monday .. Friday =>\n            Put_Line (\"Hello on \"\n                      & Days'Image (I));\n            --  'Image attribute, works on\n            --  enums too\n      end case;\n   end loop;\nend Enumeration_Example;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Strongly_Typed_Language.Enumeration_Example",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "enumeration_example.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "enumeration_example.adb",
+    "text_hash": "f7ed60e427e0de511b70fc87df0141942f643564b6f8c107211b566ef66d19c5f54994e3fa7d4beb4227f63f99387ac05132db12f6500b1de0a738e041cb1811",
+    "text_hash_short": "45d6c83992af4fb6d5015d5f22cb7113"
+}

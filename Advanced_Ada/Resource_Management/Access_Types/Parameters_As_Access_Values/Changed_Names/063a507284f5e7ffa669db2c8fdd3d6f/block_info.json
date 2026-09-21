@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 967,
+    "line_end": 1001,
+    "text": "package Names is\n\n   type Name is access String;\n\n   procedure Lower_And_Show (N : Name);\n\nend Names;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Ada.Characters.Handling;\nuse  Ada.Characters.Handling;\n\npackage body Names is\n\n   procedure Lower_And_Show (N : Name) is\n   begin\n      for I in N'Range loop\n         N (I) := To_Lower (N (I));\n      end loop;\n      Put_Line (\"Name: \" & N.all);\n   end Lower_And_Show;\n\nend Names;\n\nwith Names; use Names;\n\nprocedure Show_Changed_Names is\n   N : Name := new String'(\"John\");\nbegin\n   Lower_And_Show (N);\nend Show_Changed_Names;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Parameters_As_Access_Values.Changed_Names",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "names.ads",
+        "names.adb",
+        "show_changed_names.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_changed_names.adb",
+    "text_hash": "5da65879982015bb73637e9ee0cd0e42f02ba605697aa480bb2a8300cd11979a3e6373487e0280054685c4bbd7458b01e8182d15747a5e39bfc94ed2eeb7cac5",
+    "text_hash_short": "063a507284f5e7ffa669db2c8fdd3d6f"
+}

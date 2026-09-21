@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/exceptions.rst",
+    "line_start": 901,
+    "line_end": 947,
+    "text": "with Ada.Finalization;\nwith Ada.Unchecked_Deallocation;\n\npackage P is\n   type T1 is new\n     Ada.Finalization.Controlled with null record;\n   procedure Finalize (X : in out T1);\n\n   type T2 is new\n     Ada.Finalization.Controlled with null record;\n   procedure Finalize (X : in out T2);\n\n   X1 : T1;\n\n   type T2_Ref is access T2;\n   procedure Free is new\n     Ada.Unchecked_Deallocation (T2, T2_Ref);\nend P;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body P is\n\n   procedure Finalize (X : in out T1) is\n      X2 : T2_Ref := new T2;\n   begin\n      Put_Line (\"Finalizing T1...\");\n      Free (X2);\n   end Finalize;\n\n   procedure Finalize (X : in out T2) is\n   begin\n      Put_Line (\"Finalizing T2...\");\n   end Finalize;\n\nend P;\n\nwith P; use P;\n\nprocedure Show_Allocation_Check is\n   X2 : T2_Ref := new T2;\nbegin\n   Free (X2);\nend Show_Allocation_Check;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Exceptions.Checks_And_Exceptions.Allocation_Check",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "p.ads",
+        "p.adb",
+        "show_allocation_check.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_allocation_check.adb",
+    "text_hash": "987ac26f573471ddc72a37f33a7affa2c110b37b2bf40fa97fc50a00380e7da074d0692409b17a3d68de1ea65c0ff200e4d7a2bb72ab5156c5fb5df753464d6e",
+    "text_hash_short": "915e8ab21e550c981503c014bcceade1"
+}

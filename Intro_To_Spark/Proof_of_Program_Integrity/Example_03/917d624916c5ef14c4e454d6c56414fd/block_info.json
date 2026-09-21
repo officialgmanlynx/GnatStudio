@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/03_Proof_Of_Program_Integrity.rst",
+    "line_start": 863,
+    "line_end": 902,
+    "text": "package Stacks with SPARK_Mode is\n\n   type Stack is private;\n\n   function  Peek (S : Stack) return Natural;\n   procedure Push (S : in out Stack; E : Natural) with\n     Post => Peek (S) = E;\n\nprivate\n\n   Max : constant := 10;\n\n   type Stack_Array is array (1 .. Max) of Natural;\n\n   type Stack is record\n      Top     : Positive;\n      Content : Stack_Array;\n   end record;\n\n   function Peek (S : Stack) return Natural is\n     (if S.Top in S.Content'Range then S.Content (S.Top) else 0);\n\nend Stacks;\n\npackage body Stacks with SPARK_Mode is\n\n   procedure Push (S : in out Stack; E : Natural) is\n   begin\n      if S.Top >= Max then\n         return;\n      end if;\n\n      S.Top := S.Top + 1;\n      S.Content (S.Top) := E;\n   end Push;\n\nend Stacks;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Proof_of_Program_Integrity.Example_03",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "stacks.ads",
+        "stacks.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "1956d7ae77645a8e9784e28a8febc665c01f5ad8e8ce13862cf91fdac6762b3c268bc63f714e19c0ac4a23a9589b67045ebd1b0633142451b30e64ffb4e00f9b",
+    "text_hash_short": "917d624916c5ef14c4e454d6c56414fd"
+}

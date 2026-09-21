@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 22,
+    "line_end": 35,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Real_Integer_Literals is\n   Integer_Literal : constant := 365;\n   Real_Literal    : constant := 365.2564;\nbegin\n   Put_Line (\"Integer Literal: \"\n             & Integer_Literal'Image);\n   Put_Line (\"Real Literal:    \"\n             & Real_Literal'Image);\nend Real_Integer_Literals;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Numeric_Literals.Real_Integer_Literals",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "real_integer_literals.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "real_integer_literals.adb",
+    "text_hash": "79f2f21070f26412737793a8bde10bba545d93bc64825090a8ca715cebb6fdfb3c1f94b2f37fbdcea966fde04c5b20b140593791498084058a78af071c828aba",
+    "text_hash_short": "ba1cc348cad054f3ab86c05e051b40fa"
+}

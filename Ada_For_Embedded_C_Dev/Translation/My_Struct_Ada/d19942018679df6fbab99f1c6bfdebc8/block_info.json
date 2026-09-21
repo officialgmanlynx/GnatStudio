@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 71,
+    "line_end": 91,
+    "text": "with Ada.Text_IO;  use Ada.Text_IO;\nwith Interfaces.C;\n\nprocedure Use_My_Struct is\n\n   type my_struct is record\n     A : Interfaces.C.int;\n     B : Interfaces.C.int;\n   end record;\n   pragma Convention (C, my_struct);\n\n   V : my_struct := (A => 1, B => 2);\nbegin\n   Put_Line (\"V = (\"\n             & Interfaces.C.int'Image (V.A)\n             & Interfaces.C.int'Image (V.B)\n             & \")\");\nend Use_My_Struct;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.My_Struct_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "use_my_struct.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "use_my_struct.adb",
+    "text_hash": "922f4bb73f4db66a2ead360df5be5cfa6e000d0a7392d8ee49f15d13464be0ba8db73c0d49fd70029012792862c239eaa08160fed99b34d46c0beace77b922cd",
+    "text_hash_short": "d19942018679df6fbab99f1c6bfdebc8"
+}

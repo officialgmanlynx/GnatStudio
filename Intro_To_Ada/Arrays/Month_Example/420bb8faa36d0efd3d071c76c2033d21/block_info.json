@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/arrays.rst",
+    "line_start": 127,
+    "line_end": 161,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Month_Example is\n   type Month_Duration is range 1 .. 31;\n   type Month is (Jan, Feb, Mar, Apr,\n                  May, Jun, Jul, Aug,\n                  Sep, Oct, Nov, Dec);\n\n   type My_Int_Array is\n     array (Month) of Month_Duration;\n   --       ^ Can use an enumeration type\n   --         as the index\n\n   Tab : constant My_Int_Array :=\n   --    ^ constant is like a variable but\n   --      cannot be modified\n     (31, 28, 31, 30, 31, 30,\n      31, 31, 30, 31, 30, 31);\n   --  Maps months to number of days\n   --  (ignoring leap years)\n\n   Feb_Days : Month_Duration := Tab (Feb);\n   --  Number of days in February\nbegin\n   for M in Month loop\n      Put_Line\n        (Month'Image (M) & \" has \"\n         & Month_Duration'Image (Tab (M))\n         & \" days.\");\n   --    ^ Concatenation operator\n   end loop;\nend Month_Example;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Arrays.Month_Example",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "month_example.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "month_example.adb",
+    "text_hash": "b6af43f3ae73b41ce6b532e2c0427bf7b405b099603578c910eff04044d835593f115515fbecdfcef2ca7fe2fa8e10bc6a2aa0fad2903312b5b35f478aecee87",
+    "text_hash_short": "420bb8faa36d0efd3d071c76c2033d21"
+}

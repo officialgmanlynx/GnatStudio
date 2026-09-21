@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 5191,
+    "line_end": 5211,
+    "text": "with Ada.Text_IO;     use Ada.Text_IO;\nwith Data_Processing; use Data_Processing;\n\nwith Log_Element_Per_Line;\nwith Log_Csv;\n\nprocedure Show_Access_To_Subprograms is\n   D : Data_Container (1 .. 5) := (others => 1.0);\nbegin\n   Put_Line (\"==== Log_Element_Per_Line ====\");\n   Process (D, Log_Element_Per_Line'Access);\n\n   Put_Line (\"==== Log_Csv ====\");\n   Process (D, Log_Csv'Access);\n\n   Put_Line (\"==== None ====\");\n   Process (D);\nend Show_Access_To_Subprograms;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Access_To_Subprograms.Log_Procedure",
+    "main_file": "show_access_to_subprograms.adb",
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_access_to_subprograms.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_access_to_subprograms.adb",
+    "text_hash": "1d2eae11f4e6899c0ee89a31e935a1bfef563de0101e6d838b7f385ab6cbb1540b8cdf44861c0e651a9432ce6d487c504223cef036023e37851495582eda9a6f",
+    "text_hash_short": "134aa682cea1999efa0ea97052f315c8"
+}

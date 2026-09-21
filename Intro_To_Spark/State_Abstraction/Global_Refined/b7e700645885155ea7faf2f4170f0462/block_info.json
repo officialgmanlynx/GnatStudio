@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/04_State_Abstraction.rst",
+    "line_start": 505,
+    "line_end": 553,
+    "text": "package Stack with\n  Abstract_State => The_Stack\nis\n   type Element is new Integer;\n\n   procedure Pop  (E : out Element) with\n     Global  => (In_Out => The_Stack),\n     Depends => ((The_Stack, E) => The_Stack);\n\n   procedure Push (E : Element) with\n     Global  => (In_Out    => The_Stack),\n     Depends => (The_Stack => (The_Stack, E));\n\nend Stack;\n\npackage body Stack with\n  Refined_State => (The_Stack => (Content, Top))\nis\n   Max : constant := 100;\n\n   type Element_Array is array (1 .. Max) of Element;\n\n   Content : Element_Array := (others => 0);\n   Top     : Natural range 0 .. Max := 0;\n\n   procedure Pop (E : out Element) with\n     Refined_Global  => (Input  => Content,\n                         In_Out => Top),\n     Refined_Depends => (Top => Top,\n                         E   => (Content, Top))\n   is\n   begin\n      E   := Content (Top);\n      Top := Top - 1;\n   end Pop;\n\n   procedure Push (E : Element) with\n     Refined_Global  => (In_Out => (Content, Top)),\n     Refined_Depends => (Content =>+ (Content, Top, E),\n                         Top     => Top) is\n   begin\n     Top := Top + 1;\n     Content (Top) := E;\n   end Push;\n\nend Stack;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.State_Abstraction.Global_Refined",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "stack.ads",
+        "stack.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "f22e1d3c8e7b9ceb97fbc32ed3f29a8428da810140750b83aa41f99e4625054533051ea8943160381947c4a706fe0203191709dae43d4bd6b38fed1be37124f4",
+    "text_hash_short": "b7e700645885155ea7faf2f4170f0462"
+}

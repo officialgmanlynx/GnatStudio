@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 6678,
+    "line_end": 6690,
+    "text": "package Illegal_Decimal_Types is\n\n   type T0_D4 is\n     delta 10.0 ** (-0) digits 4\n       range -10_000.0 .. 10_000.0;\n       --    ^^^^^^^^^^^^^^^^^^^^^\n       --  ERROR: outside the maximum range\n       --         9_999.0 .. 9_999.0\n\nend Illegal_Decimal_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Decimal_Fixed_Point_Types.Illegal_Decimal_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "illegal_decimal_types.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "illegal_decimal_types.ads",
+    "text_hash": "7adf37c803539076f64444bde6828b80f5f90021a6da09349b7b466c28a6c229abec4f2936641d878e65e38dedeea095dd73cacba991b5eb6a0a2780275b2fe9",
+    "text_hash_short": "6ee596054ad61e18e3929d395bd373a8"
+}

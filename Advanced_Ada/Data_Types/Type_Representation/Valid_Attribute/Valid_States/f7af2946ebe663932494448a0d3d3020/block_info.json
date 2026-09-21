@@ -1,0 +1,49 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 1975,
+    "line_end": 2063,
+    "text": "procedure Create_Test_File (File_Name : String);\n\nwith Ada.Sequential_IO;\n\nprocedure Create_Test_File (File_Name : String)\nis\n   package Integer_Sequential_IO is new\n     Ada.Sequential_IO (Integer);\n   use Integer_Sequential_IO;\n\n   F : File_Type;\nbegin\n   Create (F, Out_File, File_Name);\n   Write (F,  1);\n   Write (F,  2);\n   Write (F,  4);\n   Write (F,  3);\n   Write (F,  2);\n   Write (F,  10);\n   Close (F);\nend Create_Test_File;\n\nwith Ada.Sequential_IO;\n\npackage States is\n\n   type State is (Off, On, Waiting)\n     with Size => Integer'Size;\n\n   for State use (Off     => 1,\n                  On      => 2,\n                  Waiting => 4);\n\n   package State_Sequential_IO is new\n     Ada.Sequential_IO (State);\n\n   procedure Read_Display_States\n     (File_Name : String);\n\nend States;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body States is\n\n   procedure Read_Display_States\n     (File_Name : String)\n   is\n      use State_Sequential_IO;\n\n      F : State_Sequential_IO.File_Type;\n      S : State;\n\n      procedure Display_State (S : State) is\n      begin\n         --  Before displaying the value,\n         --  check whether it's valid or not.\n         if S'Valid then\n            Put_Line (S'Image);\n         else\n            Put_Line (\"Invalid value detected!\");\n         end if;\n      end Display_State;\n\n   begin\n      Open (F, In_File, File_Name);\n\n      while not End_Of_File (F) loop\n         Read (F, S);\n         Display_State (S);\n      end loop;\n\n      Close (F);\n   end Read_Display_States;\n\nend States;\n\nwith States;           use States;\nwith Create_Test_File;\n\nprocedure Show_States_From_File is\n   File_Name : constant String := \"data.bin\";\nbegin\n   Create_Test_File (File_Name);\n   Read_Display_States (File_Name);\nend Show_States_From_File;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Valid_Attribute.Valid_States",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "create_test_file.ads",
+        "create_test_file.adb",
+        "states.ads",
+        "states.adb",
+        "show_states_from_file.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_states_from_file.adb",
+    "text_hash": "f82a6071cc934908b7f7e6b88b7573c32e06e1cadd084da0580939a8251220e7a4818dc93123ae648ac43bb78c4baef7a5c05511410ea0f818c2b0ff8b818c46",
+    "text_hash_short": "f7af2946ebe663932494448a0d3d3020"
+}

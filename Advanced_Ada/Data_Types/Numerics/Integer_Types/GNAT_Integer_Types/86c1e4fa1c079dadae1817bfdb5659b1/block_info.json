@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 1590,
+    "line_end": 1622,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_GNAT_Integer_Types is\nbegin\n\n   Put_Line (\"Short_Short_Integer'Size:    \"\n             & Short_Short_Integer'Size'Image\n             & \" bits\");\n\n   Put_Line (\"Short_Integer'Size:          \"\n             & Short_Integer'Size'Image\n             & \" bits\");\n\n   Put_Line (\"Integer'Size:                \"\n             & Integer'Size'Image\n             & \" bits\");\n\n   Put_Line (\"Long_Integer'Size:           \"\n             & Long_Integer'Size'Image\n             & \" bits\");\n\n   Put_Line (\"Long_Long_Integer'Size:      \"\n             & Long_Long_Integer'Size'Image\n             & \" bits\");\n\n   Put_Line (\"Long_Long_Long_Integer'Size: \"\n             & Long_Long_Long_Integer'Size'Image\n             & \" bits\");\n\nend Show_GNAT_Integer_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Integer_Types.GNAT_Integer_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_gnat_integer_types.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_gnat_integer_types.adb",
+    "text_hash": "d6515fc6564c0ea35001d9406372c57f60fe4b28ca3835f745c1ca21ce65a05c9cee7cd52cd3f9c5175aa9a04ec6c37e41358b3638f6f25cfd44f86584ed0f54",
+    "text_hash_short": "86c1e4fa1c079dadae1817bfdb5659b1"
+}

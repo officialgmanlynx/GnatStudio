@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 275,
+    "line_end": 286,
+    "text": "package body Type_Defaults is\n\n   procedure Do_Something is\n      Object_100 : T;\n   begin\n      Object_100.Count := 100;\n   end Do_Something;\n\nend Type_Defaults;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Default_Initialization.Default_Init",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "type_defaults.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "b5aea1285dda86a61ae8a7d1bde87e206e13491f822ab5ed1e341788f16bef69b675dbb4915d8e0eb9dd95415d54e5ba161c244a28664b2eae0e77e22c3a58ad",
+    "text_hash_short": "6d328318e2695516794df33466fa5283"
+}

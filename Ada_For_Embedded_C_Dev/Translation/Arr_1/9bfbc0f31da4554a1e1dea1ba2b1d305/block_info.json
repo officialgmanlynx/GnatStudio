@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 230,
+    "line_end": 242,
+    "text": "procedure Main is\n   type Arr is array (Integer range <>) of Integer;\n\n   procedure P (V : Arr; Length : Integer);\n   pragma Import (C, P);\n\n   X : Arr (5 .. 15);\nbegin\n   P (X, X'Length);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.Arr_1",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "c8dd03814491f5e1334074f5005f8aaee3a1d37bba244b418319fe74dc41e4431bccfac8cf963b4eed17c419925a7049bd3d85843011c4fe944c6daac537e3a8",
+    "text_hash_short": "9bfbc0f31da4554a1e1dea1ba2b1d305"
+}

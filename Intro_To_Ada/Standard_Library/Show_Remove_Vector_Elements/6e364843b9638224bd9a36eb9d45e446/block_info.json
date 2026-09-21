@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_containers.rst",
+    "line_start": 656,
+    "line_end": 729,
+    "text": "with Ada.Containers; use Ada.Containers;\nwith Ada.Containers.Vectors;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Remove_Vector_Elements is\n\n   package Integer_Vectors is new\n     Ada.Containers.Vectors\n       (Index_Type   => Natural,\n        Element_Type => Integer);\n\n   use Integer_Vectors;\n\n   procedure Show_Elements (V : Vector) is\n   begin\n      New_Line;\n      Put_Line (\"Vector has \"\n                & Count_Type'Image (V.Length)\n                & \" elements\");\n\n      if not V.Is_Empty then\n         Put_Line (\"Vector elements are: \");\n         for E of V loop\n            Put_Line (\"- \" & Integer'Image (E));\n         end loop;\n      end if;\n   end Show_Elements;\n\n   V : Vector := 20 & 10 & 0 & 13 & 10 & 14 & 13;\nbegin\n   Show_Elements (V);\n\n   --\n   --  Remove elements using an index\n   --\n   declare\n      E : constant Integer := 10;\n      I : Extended_Index;\n   begin\n      New_Line;\n      Put_Line\n        (\"Removing all elements with value of \"\n         & Integer'Image (E) & \"...\");\n      loop\n         I := V.Find_Index (E);\n         exit when I = No_Index;\n         V.Delete (I);\n      end loop;\n   end;\n\n   --\n   --  Remove elements using a cursor\n   --\n   declare\n      E : constant Integer := 13;\n      C : Cursor;\n   begin\n      New_Line;\n      Put_Line\n        (\"Removing all elements with value of \"\n         & Integer'Image (E) & \"...\");\n      loop\n         C := V.Find (E);\n         exit when C = No_Element;\n         V.Delete (C);\n      end loop;\n   end;\n\n   Show_Elements (V);\nend Show_Remove_Vector_Elements;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Remove_Vector_Elements",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_remove_vector_elements.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_remove_vector_elements.adb",
+    "text_hash": "5f5716c0e48c883a0a56eb61d87a246e0fe2124fdfc8c913fd46392d376fb7f5622fff525162c4eb50bf5890ae4a76aa02ab0c6200cc35aa5c2aa2b86e8b41df",
+    "text_hash_short": "6e364843b9638224bd9a36eb9d45e446"
+}

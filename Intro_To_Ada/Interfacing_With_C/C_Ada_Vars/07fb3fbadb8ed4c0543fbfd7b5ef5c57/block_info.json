@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/interfacing_with_c.rst",
+    "line_start": 337,
+    "line_end": 361,
+    "text": "!main.c\n#include <stdio.h>\n\nextern int my_func (int a);\n\nextern int func_cnt;\n\nint main (int argc, char **argv) {\n\n  int v;\n\n  v = my_func(1);\n  v = my_func(2);\n  v = my_func(3);\n\n  printf(\"Result is %d\\n\", v);\n\n  printf(\"Function was called %d times\\n\",\n         func_cnt);\n\n  return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Intro_To_Ada.Interfacing_With_C.C_Ada_Vars",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "04259e475e380366bfa85d76a574c87c4c0968ecf26f5c289e55cc8e0f648f1984593f0ee832c019cc2df57bea957a03ff8d7f3d363b5a757cbe9561104f8b01",
+    "text_hash_short": "07fb3fbadb8ed4c0543fbfd7b5ef5c57"
+}

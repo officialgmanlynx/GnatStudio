@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numeric_attributes.rst",
+    "line_start": 144,
+    "line_end": 163,
+    "text": "generic\n   type Formal_Modular is mod <>;\npackage Mod_Attribute is\n   function F return Formal_Modular;\nend Mod_Attribute;\n\npackage body Mod_Attribute is\n\n   A_Signed_Integer : Integer := -1;\n\n   function F return Formal_Modular is\n   begin\n      return Formal_Modular'Mod\n               (A_Signed_Integer);\n   end F;\n\nend Mod_Attribute;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numeric_Attributes.Modular_Types.Mod_Attribute",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "mod_attribute.ads",
+        "mod_attribute.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "5f432f7a90ade013a3bec20922d23415f8a8d25c80d307418da675ed90043fc6a6d115cdd042c5906e5e9973e320dc10cb0968dd4e3815976861e17bf9e7a047",
+    "text_hash_short": "b2f227b8d4f14cd36508bf33c403f751"
+}

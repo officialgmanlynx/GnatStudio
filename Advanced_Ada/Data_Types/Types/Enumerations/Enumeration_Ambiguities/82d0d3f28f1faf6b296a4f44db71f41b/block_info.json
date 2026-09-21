@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 1114,
+    "line_end": 1149,
+    "text": "package Colors is\n\n   type Color is\n     (Salmon,\n      Firebrick,\n      Red,\n      Darkred,\n      Lime,\n      Forestgreen,\n      Green,\n      Darkgreen,\n      Blue,\n      Mediumblue,\n      Darkblue);\n\n   type Primary_Color is\n     (Red,\n      Green,\n      Blue);\n\nend Colors;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Colors;      use Colors;\n\nprocedure Color_Loop is\nbegin\n   for C in Red .. Blue loop\n   --       ^^^^^^^^^^^\n   --  ERROR: range is ambiguous!\n      Put_Line (Color'Image (C));\n   end loop;\nend Color_Loop;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Enumerations.Enumeration_Ambiguities",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "colors.ads",
+        "color_loop.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "color_loop.adb",
+    "text_hash": "7ef5cb161f6f09db08ee716b85528c78592e4ffbc3c7c827c30f5812ec1b1f27ff885632710a418bcc6c553cf91018c883c3a5b6643677f873d614f54befcb3a",
+    "text_hash_short": "82d0d3f28f1faf6b296a4f44db71f41b"
+}

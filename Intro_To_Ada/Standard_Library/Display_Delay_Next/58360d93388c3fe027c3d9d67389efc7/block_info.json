@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_dates_times.rst",
+    "line_start": 175,
+    "line_end": 195,
+    "text": "with Ada.Calendar; use Ada.Calendar;\nwith Ada.Text_IO;  use Ada.Text_IO;\n\nprocedure Display_Delay_Next is\n   D    : Duration := 5.0;\n   --                 ^ seconds\n   Now  : Time     := Clock;\n   Next : Time     := Now + D;\n   --                       ^ use duration to\n   --                         specify next\n   --                         point in time\nbegin\n   Put_Line (\"Let's wait \"\n             & Duration'Image (D)\n             & \" seconds...\");\n   delay until Next;\n   Put_Line (\"Enough waiting!\");\nend Display_Delay_Next;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Display_Delay_Next",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "display_delay_next.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "display_delay_next.adb",
+    "text_hash": "c2fe14b2f14538a9e5c9e3c840f4681d5a66bf63b39aa3432793984fe5178ad800b5edbe8db6b04e748d98114315708653bc907b5e0475fb440e1187226aaeda",
+    "text_hash_short": "58360d93388c3fe027c3d9d67389efc7"
+}

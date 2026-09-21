@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/04_strong_typing.rst",
+    "line_start": 471,
+    "line_end": 491,
+    "text": "!main.c\n#include <stdbool.h>\n#include <stdio.h>\n\nint main() {\n   bool b1 = true;\n   bool b2 = false;\n   bool b3 = b1 + b2;\n\n   typedef enum {Apple, Orange} fruit;\n   fruit f1 = Apple;\n   fruit f2 = Orange;\n   fruit f3 = f1 + f2;\n\n   printf(\"b3 = %d; f3 = %d\\n\", b3, f3);\n\n   return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Strong_Typing.Pointer_Arith_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "77cabad00c3e0ff54b51ffe9e571b3abdccf67583e2e10aa883b0c5c22a5d46ab17735736c334a14950f61ad357bf79eb1cedd439262f05f6a2cd633b705165c",
+    "text_hash_short": "30e28b34f616f8e6d35233a4ce698c23"
+}

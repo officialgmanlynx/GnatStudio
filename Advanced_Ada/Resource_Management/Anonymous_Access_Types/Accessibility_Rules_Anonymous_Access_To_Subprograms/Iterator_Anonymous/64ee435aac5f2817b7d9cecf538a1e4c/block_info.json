@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 3554,
+    "line_end": 3581,
+    "text": "with Data_Processing;\n\npackage Float_Data_Processing is\n  new Data_Processing (Element => Float);\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Float_Data_Processing;\nuse  Float_Data_Processing;\n\nprocedure Show_Access_To_Subprograms is\n\n   procedure Display (F : Float) is\n   begin\n      Put_Line (\"F :\" & Float'Image (F));\n   end Display;\n\n   D : Data_Container (5);\nbegin\n    Append (D, 1.0);\n    Append (D, 2.0);\n    Append (D, 3.0);\n\n    Iterate (D, Display'Access);\nend Show_Access_To_Subprograms;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Accessibility_Rules_Anonymous_Access_To_Subprograms.Iterator_Anonymous",
+    "main_file": "show_access_to_subprograms.adb",
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "float_data_processing.ads",
+        "show_access_to_subprograms.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_access_to_subprograms.adb",
+    "text_hash": "c20e28201402f84218000d1232482e7cefbc63f85c52580c85ce758179495263edb6f525c9a033643ff169588d5eef7bf4e5bf3b406e3b9f5daf8c200cabf03b",
+    "text_hash_short": "64ee435aac5f2817b7d9cecf538a1e4c"
+}

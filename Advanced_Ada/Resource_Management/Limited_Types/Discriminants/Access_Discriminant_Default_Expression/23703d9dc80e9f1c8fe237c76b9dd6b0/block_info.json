@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 1630,
+    "line_end": 1643,
+    "text": "package Custom_Recs is\n\n   --  Specifying a default expression for\n   --  an access discriminant:\n   type Rec (IA : access Integer :=\n                    new Integer'(0)) is limited\n   record\n      I : Integer := IA.all;\n   end record;\n\nend Custom_Recs;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Discriminants.Access_Discriminant_Default_Expression",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_recs.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "6d0ce78a506f6ee1ad2d5d5562fb0a9e6f9935b311075844e03e77e87d2b14473032ed80247ad6cd706d26056e1c6ad6ee5c9a36bfa925d459820bd2a476a885",
+    "text_hash_short": "23703d9dc80e9f1c8fe237c76b9dd6b0"
+}

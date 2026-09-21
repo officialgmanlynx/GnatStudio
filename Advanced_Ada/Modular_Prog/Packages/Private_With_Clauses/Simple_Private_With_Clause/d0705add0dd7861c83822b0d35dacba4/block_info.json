@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/modular_prog/packages.rst",
+    "line_start": 531,
+    "line_end": 560,
+    "text": "package P is\n\n   type T is null record;\n\nend P;\n\nprivate with P;\n\npackage Data is\n\n   type T2 is private;\n\nprivate\n\n   --  Information from P is\n   --  visible here\n   type T2 is new P.T;\n\nend Data;\n\nwith Data; use Data;\n\nprocedure Main is\n   A : T2;\nbegin\n   null;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Modular_Prog.Packages.Private_With_Clauses.Simple_Private_With_Clause",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "p.ads",
+        "data.ads",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "561ddf09c33b0ba599ec6567226467e06c5ceaa1a206a48e3c19ec217e6854a762b59c450bab12771dc5331889cd627fdbca717df8d9ded577df428001db280c",
+    "text_hash_short": "d0705add0dd7861c83822b0d35dacba4"
+}

@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/exceptions.rst",
+    "line_start": 965,
+    "line_end": 993,
+    "text": "function P return Integer;\n\nfunction P return Integer is\nbegin\n   return 1;\nend P;\n\nwith P;\n\nprocedure Show_Elaboration_Check is\n\n   function F return Integer;\n\n   type Pointer_To_Func is\n     access function return Integer;\n\n   X : constant Pointer_To_Func := P'Access;\n\n   Y : constant Integer := F;\n   Z : constant Pointer_To_Func := X;\n\n   --  Renaming-as-body\n   function F return Integer renames Z.all;\nbegin\n   null;\nend Show_Elaboration_Check;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Exceptions.Checks_And_Exceptions.Elaboration_Check",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "p.ads",
+        "p.adb",
+        "show_elaboration_check.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_elaboration_check.adb",
+    "text_hash": "f05b206466ed2d1be711df5b7167ced7841ce36137da35d99dce8ea02512c740abb78abf8ed1a803a6e80dc99e455e57a76600d5444d4a35a13b1ec654869bcb",
+    "text_hash_short": "80a39df912aae8788296f81ee9d4a79e"
+}

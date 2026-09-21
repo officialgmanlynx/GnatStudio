@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/whats-new-in-ada-2022/chapters/enum_val.rst",
+    "line_start": 40,
+    "line_end": 49,
+    "text": "with Ada.Text_IO;\n\nprocedure Main is\nbegin\n   Ada.Text_IO.Put_Line (Boolean'Val (0)'Image);\n   Ada.Text_IO.Put_Line (Boolean'Val (1)'Image);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_2022_Whats_New.Enum_Val.Val",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "43ebd7b20a73d0131c318b56040dad555b6152e1c1c70c403f63b67cf2ff243b6909bf555da1e16bbca9ac3edca485d4e067faa0bff465e944942bfbbcfd9203",
+    "text_hash_short": "43f712d25552970bccc4c0c84089d927"
+}

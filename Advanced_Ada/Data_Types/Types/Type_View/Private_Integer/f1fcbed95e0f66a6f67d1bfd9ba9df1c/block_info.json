@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 1930,
+    "line_end": 1943,
+    "text": "package Private_Integers is\n\n   --  Partial view of private Integer type:\n   type Private_Integer is private;\n\nprivate\n\n   --  Full view of private Integer type:\n   type Private_Integer is new Integer;\n\nend Private_Integers;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Type_View.Private_Integer",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "private_integers.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "f59f081e373aa02cf4f0a49ad7ac74aa611db0c5817fa9358cc197a6bc6d1b46b59405f5f927873f8b0aa400aa4e12a9a6a90a4a21858f47572f655f6013f292",
+    "text_hash_short": "f1fcbed95e0f66a6f67d1bfd9ba9df1c"
+}

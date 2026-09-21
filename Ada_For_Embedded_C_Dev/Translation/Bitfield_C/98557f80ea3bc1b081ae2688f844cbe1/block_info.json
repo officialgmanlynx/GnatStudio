@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 832,
+    "line_end": 847,
+    "text": "!bitfield.c\n#include <stdio.h>\n\nint main(int argc, const char * argv[])\n{\n    int v = 0;\n\n    v = v | (1 << 2);\n\n    printf(\"v = %d\\n\", v);\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.Bitfield_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "bitfield.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "bitfield.c",
+    "text_hash": "2af54aa617acf67d6f589b0c80ec2231b61ae03e4ea04754b92a015f109b987b134c1e3850a0af9e641f18a518d02fead9cf31e5c46317657037f2551d079b02",
+    "text_hash_short": "98557f80ea3bc1b081ae2688f844cbe1"
+}

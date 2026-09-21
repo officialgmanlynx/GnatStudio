@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/whats-new-in-ada-2022/chapters/container_aggregates.rst",
+    "line_start": 138,
+    "line_end": 213,
+    "text": "procedure Main is\n\n   package JSON is\n      type JSON_Value is private\n        with Integer_Literal => To_Value, String_Literal => To_Value;\n\n      function To_Value (Text : String) return JSON_Value;\n      function To_Value (Text : Wide_Wide_String) return JSON_Value;\n\n      type JSON_Object is private\n        with Aggregate => (Empty     => New_JSON_Object,\n                           Add_Named => Insert);\n\n      function New_JSON_Object return JSON_Object;\n\n      procedure Insert\n        (Self  : in out JSON_Object;\n         Key   : Wide_Wide_String;\n         Value : JSON_Value) is null;\n\n      function From_Object (Self : JSON_Object) return JSON_Value;\n\n      type JSON_Array is private\n        with Aggregate => (Empty       => New_JSON_Array,\n                           Add_Unnamed => Append);\n\n      function New_JSON_Array return JSON_Array;\n\n      procedure Append\n        (Self  : in out JSON_Array;\n         Value : JSON_Value) is null;\n\n      function From_Array (Self : JSON_Array) return JSON_Value;\n\n   private\n      type JSON_Value is null record;\n      type JSON_Object is null record;\n      type JSON_Array is null record;\n\n      function To_Value (Text : String) return JSON_Value is\n        (null record);\n      function To_Value (Text : Wide_Wide_String) return JSON_Value is\n        (null record);\n      function New_JSON_Object return JSON_Object is\n        (null record);\n      function New_JSON_Array return JSON_Array is\n        (null record);\n      function From_Object (Self : JSON_Object) return JSON_Value is\n        (null record);\n      function From_Array (Self : JSON_Array) return JSON_Value is\n        (null record);\n   end JSON;\n\n   function \"+\" (X : JSON.JSON_Object) return JSON.JSON_Value\n     renames JSON.From_Object;\n   function \"-\" (X : JSON.JSON_Array) return JSON.JSON_Value\n     renames JSON.From_Array;\n\n   Offices : JSON.JSON_Array :=\n     [+[\"name\"   => \"North American Office\",\n        \"phones\" => -[1_877_787_4628,\n                      1_866_787_4232,\n                      1_212_620_7300],\n        \"email\"  => \"info@adacore.com\"],\n      +[\"name\"   => \"European Office\",\n        \"phones\" => -[33_1_49_70_67_16,\n                      33_1_49_70_05_52],\n        \"email\"  => \"info@adacore.com\"]];\n   -----------------------------------------------------------------\nbegin\n   --  Equivalent old initialization code is too long to print it here\n   null;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_2022_Whats_New.Container_Aggregates_4",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "3de1dd24ab83e1966138f5e2a4cff01dddc477f314163e1e738d752959dd9f36b56715420e81d16d9ec2991030bb672c7fea105ff5bbda5aa21ff8c3556a0f24",
+    "text_hash_short": "a2770961eab00ee297fffa280cd9a481"
+}

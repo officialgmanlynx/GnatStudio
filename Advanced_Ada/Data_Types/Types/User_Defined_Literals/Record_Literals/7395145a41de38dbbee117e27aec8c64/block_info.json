@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 3733,
+    "line_end": 3771,
+    "text": "package Silly_Records is\n\n   type Silly is record\n      X : Integer;\n      Y : Float;\n   end record\n     with String_Literal => To_Silly;\n\n   function To_Silly (S : Wide_Wide_String)\n                      return Silly;\nend Silly_Records;\n\npackage body Silly_Records is\n\n   function To_Silly (S : Wide_Wide_String)\n                      return Silly\n   is\n   begin\n      if S = \"Magic\" then\n         return (X => 42, Y => 42.0);\n      else\n         return (X => 0, Y => 0.0);\n      end if;\n   end To_Silly;\n\nend Silly_Records;\n\nwith Ada.Text_IO;   use Ada.Text_IO;\nwith Silly_Records; use Silly_Records;\n\nprocedure Silly_Magic is\n   R1 : Silly;\nbegin\n   R1 := \"Magic\";\n   Put_Line (R1.X'Image & \", \" & R1.Y'Image);\nend Silly_Magic;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.User_Defined_Literals.Record_Literals",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "silly_records.ads",
+        "silly_records.adb",
+        "silly_magic.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "silly_magic.adb",
+    "text_hash": "dc90ce70dc727578b85c8bcc568f434fb1cab5d35c789584a04386d36d92f2f9112091722f1ab72f597a4ed20d3e4c4dd1a4e646d45c4dd3b6893087aab88577",
+    "text_hash_short": "7395145a41de38dbbee117e27aec8c64"
+}

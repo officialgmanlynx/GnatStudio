@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/subprograms.rst",
+    "line_start": 1489,
+    "line_end": 1550,
+    "text": "package Fixed_Point is\n\n   D : constant := 2.0 ** (-31);\n   type TQ31 is delta D range -1.0 .. 1.0 - D;\n\n   function \"+\" (Left, Right : TQ31)\n                 return TQ31;\n\nend Fixed_Point;\n\npackage body Fixed_Point is\n\n   function \"+\" (Left, Right : TQ31)\n                 return TQ31\n   is\n      type TQ31_2 is\n        delta TQ31'Delta\n        range TQ31'First * 2.0 .. TQ31'Last * 2.0;\n\n      L   : constant TQ31_2 := TQ31_2 (Left);\n      R   : constant TQ31_2 := TQ31_2 (Right);\n      Res : TQ31_2;\n   begin\n      Res := L + R;\n\n      if Res > TQ31_2 (TQ31'Last) then\n         return TQ31'Last;\n      elsif Res < TQ31_2 (TQ31'First) then\n         return TQ31'First;\n      else\n         return TQ31 (Res);\n      end if;\n   end \"+\";\n\nend Fixed_Point;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Fixed_Point; use Fixed_Point;\n\nprocedure Show_Sat_Op is\n   A, B, C : TQ31;\nbegin\n   A := TQ31'Last;\n   B := TQ31'Last;\n   C := A + B;\n\n   Put_Line (A'Image   & \" + \"\n             & B'Image & \" = \"\n             & C'Image);\n\n   A := TQ31'First;\n   B := TQ31'First;\n   C := A + B;\n\n   Put_Line (A'Image   & \" + \"\n             & B'Image & \" = \"\n             & C'Image);\n\nend Show_Sat_Op;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Subprograms.Operator_Overriding.Fixed_Point_Operator_Overloading",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "fixed_point.ads",
+        "fixed_point.adb",
+        "show_sat_op.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_sat_op.adb",
+    "text_hash": "405320120ec91d0677fc0cb7eacad364e225889a8d68c9adcc9f5d9a2ebb38c45b705bbbed1776fad35634ceef2deb564914db5166dbcf0a0445455e63fec31b",
+    "text_hash_short": "6317bcf9c278c01f86dbdcb761d86240"
+}

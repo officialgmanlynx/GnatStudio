@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/imperative_language.rst",
+    "line_start": 419,
+    "line_end": 436,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Greet_5c is\n   I : Integer := 1;\nbegin\n   --  Condition must be a Boolean value\n   --  (no Integers).\n   --  Operator \"<=\" returns a Boolean\n   while I <= 5 loop\n      Put_Line (\"Hello, World!\"\n                & Integer'Image (I));\n\n      I := I + 1;\n   end loop;\nend Greet_5c;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Imperative_Language.Greet_5c",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "greet_5c.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "greet_5c.adb",
+    "text_hash": "7edcdb90eeba7fb85aaa911ac78f67cd4f3445aeece6aa627d83a86382dfcd72085d17e70b76e51f5e384bc8e29130004851604f1ab67e3bdaacef203898a3ef",
+    "text_hash_short": "5d1d099477795b226db43736c2810274"
+}

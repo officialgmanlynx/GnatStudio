@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 1201,
+    "line_end": 1219,
+    "text": "package P is\n\n   type R is record\n      A : Integer;\n      B : Integer;\n   end record;\n\n   --  Representation clause for record R:\n   for R use record\n      A at 0 range 0 .. 31;\n      --   ^ starting memory position\n      B at 4 range 0 .. 31;\n      --           ^ first bit .. last bit\n   end record;\n\nend P;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Record_Representation_Storage_Clauses.Rep_Clauses_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "p.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "8575e97dcdf5ceb9de74931e471dca31849926d8f0d127b57f6a795057dacf0b86bfbf457a2f19112ade4ce5935582bab880cb61eb706731a8f6b42e14ec1ef9",
+    "text_hash_short": "b6be86ae7e1a5c2e7d981fe37bad49ed"
+}

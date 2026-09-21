@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 2855,
+    "line_end": 2881,
+    "text": "package Custom_Rec is\n\n   type Rec is record\n      X : Integer;\n   end record;\n\n   function To_Integer (R : Rec)\n                        return Integer is\n     (R.X);\n\nend Custom_Rec;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Custom_Rec;  use Custom_Rec;\n\nprocedure Show_Conversion is\n   R : Rec;\n   I : Integer;\nbegin\n   R := (X => 2);\n   I := To_Integer (R);\n\n   Put_Line (\"I : \" & I'Image);\nend Show_Conversion;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Type_Conversion.Other_Type_Conversions",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_rec.ads",
+        "show_conversion.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_conversion.adb",
+    "text_hash": "8a577c7922f4639e55c3a01b5e41bf7eb7140ea0c2c481c2bca21836d775257f34e2558f165577eecf21adac5bfd03cac4fb450fa8a62b7e3c4c3fa4ebd7e732",
+    "text_hash_short": "d52a4fde48243a7dd6942f0b2b91ce62"
+}

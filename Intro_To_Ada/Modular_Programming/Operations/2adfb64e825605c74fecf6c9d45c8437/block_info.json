@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/modular_programming.rst",
+    "line_start": 159,
+    "line_end": 193,
+    "text": "package Operations is\n\n   --  Declaration\n   function Increment_By\n     (I    : Integer;\n      Incr : Integer := 0) return Integer;\n\n   function Get_Increment_Value return Integer;\n\nend Operations;\n\npackage body Operations is\n\n   Last_Increment : Integer := 1;\n\n   function Increment_By\n     (I    : Integer;\n      Incr : Integer := 0) return Integer is\n   begin\n      if Incr /= 0 then\n         Last_Increment := Incr;\n      end if;\n\n      return I + Last_Increment;\n   end Increment_By;\n\n   function Get_Increment_Value return Integer is\n   begin\n      return Last_Increment;\n   end Get_Increment_Value;\n\nend Operations;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Modular_Programming.Operations",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "operations.ads",
+        "operations.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "2ed17231e719204571d25dbce95212937863a5543e63ad5b8c41892a07efb7bd9ce9250c00c95000f6710318f3f0b4dab8521286695f9e5e9b0a41ed26c9efd1",
+    "text_hash_short": "2adfb64e825605c74fecf6c9d45c8437"
+}

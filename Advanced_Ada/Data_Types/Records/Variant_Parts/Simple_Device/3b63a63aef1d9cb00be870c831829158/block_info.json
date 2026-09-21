@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 2943,
+    "line_end": 2966,
+    "text": "package Devices is\n\n   type Device_State is\n     (Off, On);\n\n   type Device_Info is\n   record\n      V : Float;\n   end record;\n\n   type Device (State : Device_State := Off) is\n   record\n      case State is\n         when Off =>\n            null;\n         when On =>\n            Info : Device_Info;\n      end case;\n   end record;\n\nend Devices;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Variant_Parts.Simple_Device",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "devices.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "e0cc0ebf498919e40454756e94ea4cf589038522f6f556ea5d74c56ad377cde0d00f92d6b688554c84f5c0c0fac2b49447b41cd48daf38942539322922535992",
+    "text_hash_short": "3b63a63aef1d9cb00be870c831829158"
+}

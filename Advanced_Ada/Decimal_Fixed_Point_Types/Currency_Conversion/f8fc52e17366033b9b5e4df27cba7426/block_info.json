@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 5235,
+    "line_end": 5279,
+    "text": "package Currencies is\n\n   type EUR is\n     delta 0.01 digits 12;\n\n   type Yen is\n     delta 1.0 digits 12;\n\n   --  Exchange rates as of\n   --  2025-12-26:\n   EUR_Per_Yen : constant := 184.365_5;\n   Yen_Per_EUR : constant := 0.005_42;\n\n   function To_EUR (Y : Yen)\n                   return EUR is\n     (Y * Yen_Per_EUR);\n\n   function To_Yen (E : EUR)\n                   return Yen is\n     (E * EUR_Per_Yen);\n\nend Currencies;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Currencies;  use Currencies;\n\nprocedure Show_Currency_Conversion is\n   E : EUR;\n   Y : Yen;\nbegin\n   Y := 1000.0;\n   Put_Line (Y'Image\n             & \" JPY = \"\n             & To_EUR (Y)'Image\n             & \" EUR\");\n\n   E := 10.0;\n   Put_Line (E'Image\n             & \" EUR = \"\n             & To_Yen (E)'Image\n             & \" JPY\");\nend Show_Currency_Conversion;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Decimal_Fixed_Point_Types.Currency_Conversion",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "currencies.ads",
+        "show_currency_conversion.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_currency_conversion.adb",
+    "text_hash": "b293e048a6752aa1a7afa50158c504e79ea618b99944e4614716b733b0fe430d35eabc184a28e5c5e222b061837b20a43b2c760ed301b25955c5e93408978566",
+    "text_hash_short": "f8fc52e17366033b9b5e4df27cba7426"
+}

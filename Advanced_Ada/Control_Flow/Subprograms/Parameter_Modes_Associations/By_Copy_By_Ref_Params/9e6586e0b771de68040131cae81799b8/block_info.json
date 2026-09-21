@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/subprograms.rst",
+    "line_start": 465,
+    "line_end": 474,
+    "text": "with Machine_X; use Machine_X;\n\nprocedure Show_By_Copy_By_Ref_Params is\n   A : Integer := 5;\nbegin\n   Update_Value (A, A'Address);\nend Show_By_Copy_By_Ref_Params;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Subprograms.Parameter_Modes_Associations.By_Copy_By_Ref_Params",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_by_copy_by_ref_params.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_by_copy_by_ref_params.adb",
+    "text_hash": "6ac694a323eb903f9e1e7d6e87aaecf8333eac431c6b6a9f704c6bc7616cb3c91e5983189613eb902cd70c3e1cac718ec25f884e29e5b7bd53dae223f2630277",
+    "text_hash_short": "9e6586e0b771de68040131cae81799b8"
+}

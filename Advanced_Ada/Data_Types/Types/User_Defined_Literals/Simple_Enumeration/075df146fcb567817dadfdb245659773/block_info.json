@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 3451,
+    "line_end": 3463,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Simple_Enumeration is\n   type Activation_State is (Unknown, Off, On);\n\n   S : Activation_State;\nbegin\n   S := On;\n   Put_Line (Activation_State'Image (S));\nend Simple_Enumeration;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.User_Defined_Literals.Simple_Enumeration",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple_enumeration.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "simple_enumeration.adb",
+    "text_hash": "b5eff5418a3a0d02e7e0797048710c53eb1d777306a817195fa174591b65016163efcd4f494bd3fe1f3f5013b1b244607e95f2ab7485fc5b096341ba17810f36",
+    "text_hash_short": "075df146fcb567817dadfdb245659773"
+}

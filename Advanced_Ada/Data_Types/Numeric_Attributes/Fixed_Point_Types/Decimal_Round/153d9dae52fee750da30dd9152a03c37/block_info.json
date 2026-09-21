@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numeric_attributes.rst",
+    "line_start": 1579,
+    "line_end": 1591,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Decimal_Round is\n   type T3_D3 is delta 10.0 ** (-3) digits 3;\nbegin\n   Put_Line (\"T3_D3'Round (0.2774): \"\n             & T3_D3'Round (0.2774)'Image);\n   Put_Line (\"T3_D3'Round (0.2777): \"\n             & T3_D3'Round (0.2777)'Image);\nend Show_Decimal_Round;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numeric_Attributes.Fixed_Point_Types.Decimal_Round",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_decimal_round.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_decimal_round.adb",
+    "text_hash": "800c22e3cbd812c6f022e79e64babc770f4012ea5d20eddaa0e083a852c3814cefde8efafe3aeda62825b0d24d308dd13b7b62a51213838ceb7c4f8513dbcbff",
+    "text_hash_short": "153d9dae52fee750da30dd9152a03c37"
+}

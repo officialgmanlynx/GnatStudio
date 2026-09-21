@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 1003,
+    "line_end": 1013,
+    "text": "package Constant_Properties is\n\n   type Rec (C : Integer) is\n   record\n      V :          Integer;\n   end record;\n\nend Constant_Properties;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Discriminants.Constant_Properties",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "constant_properties.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "8a2fce2d705083c7c266c387149279d6352feca1717e430e141c36907b1c4b74ec282d8efb337963ec7edba5304ea61ce8469f43f741f3ad5605f438b3ea6a74",
+    "text_hash_short": "b638c2fd78761def2b60e9ae7dceb765"
+}

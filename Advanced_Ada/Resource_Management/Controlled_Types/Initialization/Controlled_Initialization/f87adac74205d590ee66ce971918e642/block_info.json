@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/controlled_types.rst",
+    "line_start": 1034,
+    "line_end": 1112,
+    "text": "with Ada.Finalization;\n\nwith Subs;       use Subs;\nwith Selections; use Selections;\nwith Workers;    use Workers;\n\npackage Simple_Controlled_Types is\n\n   type T (S : access Selection) is\n     tagged limited private;\n\n   procedure Start_Work (E : T);\n   procedure Stop_Work (E : T);\n\nprivate\n\n   function Default_Init return Integer;\n\n   type T (S : access Selection) is new\n     Ada.Finalization.Limited_Controlled with\n   record\n      W     : Worker;\n      Sel_1 : Selection_1 (S);\n      S1    : Sub_1;\n      I     : Integer := Default_Init;\n   end record;\n\n   overriding\n   procedure Initialize (E : in out T);\n\nend Simple_Controlled_Types;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Simple_Controlled_Types is\n\n   function Default_Init return Integer is\n   begin\n      Put_Line (\"Default_Init: Integer...\");\n      return 42;\n   end Default_Init;\n\n   procedure Start_Work (E : T) is\n   begin\n      --  Starting Worker task:\n      E.W.Start;\n\n   end Start_Work;\n\n   procedure Stop_Work (E : T) is\n   begin\n      --  Stopping Worker task:\n      E.W.Stop;\n   end Stop_Work;\n\n   procedure Initialize (E : in out T) is\n   begin\n      Put_Line (\"Initialize: T...\");\n   end Initialize;\n\nend Simple_Controlled_Types;\n\nwith Simple_Controlled_Types;\nuse  Simple_Controlled_Types;\n\nwith Selections; use Selections;\n\nprocedure Show_Controlled_Types is\n   type T_Access is access T;\n\n   S : aliased Selection;\n   A : constant T_Access := new T (S'Access);\nbegin\n   Start_Work (A.all);\n   Stop_Work (A.all);\nend Show_Controlled_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Controlled_Types.Initialization.Controlled_Initialization",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple_controlled_types.ads",
+        "simple_controlled_types.adb",
+        "show_controlled_types.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_controlled_types.adb",
+    "text_hash": "fb58bb07943229c1581e8e8144335a6f3150b7c9bf492757a474e19ae5ca6795a00658b2aebdf91a135e7dd3d12fb502a42be7323f7da90395b020b51a2a91c7",
+    "text_hash_short": "f87adac74205d590ee66ce971918e642"
+}

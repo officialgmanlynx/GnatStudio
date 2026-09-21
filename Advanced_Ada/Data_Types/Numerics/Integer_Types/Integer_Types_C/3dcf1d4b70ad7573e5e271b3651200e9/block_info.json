@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 1555,
+    "line_end": 1574,
+    "text": "!main.c\n#include <stdio.h>\n\nint main(int argc, const char * argv[])\n{\n    printf(\"signed char:   %zu bytes\\n\",\n           sizeof(signed char) * 8);\n    printf(\"short int:     %zu bytes\\n\",\n           sizeof(short int) * 8);\n    printf(\"int:           %zu bytes\\n\",\n           sizeof(int) * 8);\n    printf(\"long int:      %zu bytes\\n\",\n           sizeof(long int) * 8);\n    printf(\"long long int: %zu bytes\\n\",\n           sizeof(long long int) * 8);\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Integer_Types.Integer_Types_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "83e72bd637d6b311e77c9324763f317c192f0daf9fd8e40513dade58a1df5b31f0af05fd4aafc0501cd77c39193fcc7faa703bac9119051f6eb559c0b31c4f1e",
+    "text_hash_short": "3dcf1d4b70ad7573e5e271b3651200e9"
+}

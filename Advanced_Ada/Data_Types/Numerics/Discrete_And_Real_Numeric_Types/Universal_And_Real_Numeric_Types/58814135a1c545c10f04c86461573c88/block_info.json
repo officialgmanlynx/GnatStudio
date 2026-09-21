@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 1384,
+    "line_end": 1393,
+    "text": "procedure Show_Real_Numeric_Object is\n    V : Float;\nbegin\n   V := 2.3333333333;\n   --   ^^^^^^^^^^^^\n   --  real numeric literal\nend Show_Real_Numeric_Object;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Discrete_And_Real_Numeric_Types.Universal_And_Real_Numeric_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_real_numeric_object.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_real_numeric_object.adb",
+    "text_hash": "6ee8dc63b31e1e4b3755758a4889cbfaf3acb391a1f44ee720805f86286f7d560d2195932dd698670cfa4824f26b5ac214f66c8dc823db0a536aba4f2f5a1e56",
+    "text_hash_short": "58814135a1c545c10f04c86461573c88"
+}

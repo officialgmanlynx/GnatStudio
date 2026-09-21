@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 2341,
+    "line_end": 2368,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main is\n   type R is record\n      A, B : Integer;\n   end record;\n\n   procedure Put_R (V : R; Name : String) is\n   begin\n      Put_Line (Name & \" = (\"\n                & Integer'Image (V.A) & \", \"\n                & Integer'Image (V.B) & \")\");\n   end Put_R;\n\n   V1, V2 : R;\n\nbegin\n   V1.A := 0;\n   V1.B := 0;\n   V2 := V1;\n   V2.A := 1;\n\n   Put_R (V1, \"V1\");\n   Put_R (V2, \"V2\");\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Pointers_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "38b3afcf489bc8be41bc7fb2f4b015ffb708883b81ac2cd142b17f93ff6abc7b1f84cc487a9e9261b62cc56852269315f8a66c075914225a9ed0a5ff07df8bb0",
+    "text_hash_short": "0a4ade5aa12de5b0760d149c8e319d5f"
+}

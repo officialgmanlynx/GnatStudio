@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 8336,
+    "line_end": 8360,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_String_Representation is\n   D : constant := 2.0 ** (-15);\n\n   type TQ15 is\n     delta D\n     range -1.0 .. 1.0 - D;\n\n   procedure Show (V : TQ15) is\n   begin\n      Put_Line (\"TQ15'Image  : \"\n                & V'Image);\n      Put_Line (\"Float'Image : \"\n                & Float (V)'Image);\n      Put_Line (\"----------\");\n   end Show;\nbegin\n   Show (0.25);\n   Show (TQ15'Last);\n   Show (0.1);\nend Show_String_Representation;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Ordinary_Fixed_Point_Types.String_Representation",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_string_representation.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_string_representation.adb",
+    "text_hash": "3c6740d91fb2eee69e170f673db7760a221818a9ed5ad383335a2cb796385b8dbc761ca1467be2b46f017f77096dd984363c78830ce9a99c526230e95631048a",
+    "text_hash_short": "e0074dd4c23c2a79c09e611dfd2fe188"
+}

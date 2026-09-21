@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/03_Concurrency.rst",
+    "line_start": 399,
+    "line_end": 433,
+    "text": "package Counters is\n\n   protected Counter is\n      function Get return Integer;\n      procedure Increment;\n      procedure Decrement;\n   private\n      Value : Integer := 0;\n   end Counter;\n\nend Counters;\n\npackage body Counters is\n\n   protected body Counter is\n      function Get return Integer is\n      begin\n         return Value;\n      end Get;\n\n      procedure Increment is\n      begin\n         Value := Value + 1;\n      end Increment;\n\n      procedure Decrement is\n      begin\n         Value := Value - 1;\n      end Decrement;\n   end Counter;\n\nend Counters;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Concurrency.Protected_Counter",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "counters.ads",
+        "counters.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "4e72a9e944b3970a9a0d0b3a54b558d868d4f818c1208eb1de31f36ee2b5c3333e22f7efd00877c7dbef9cb113f0985d750148cbbcd877e79673b103bd43ac32",
+    "text_hash_short": "f29f21621dfcf092580f6a130101788e"
+}

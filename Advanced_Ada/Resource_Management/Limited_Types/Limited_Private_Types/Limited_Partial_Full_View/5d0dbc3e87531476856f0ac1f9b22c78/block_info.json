@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 564,
+    "line_end": 579,
+    "text": "package Simple_Recs is\n\n   type Rec is limited private;\n   --  Partial view of Rec is limited\n\nprivate\n\n   type Rec is record\n   --  Full view of Rec is nonlimited\n      I : Integer;\n   end record;\n\nend Simple_Recs;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Limited_Private_Types.Limited_Partial_Full_View",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple_recs.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "626c82192df5324e1042bb39cfd066156182b6aa46c7501706175e375cd35e04b35ce0934ada42c40ec43d7ea4d3f687518b3cb29859d7de7cf1677565c7d339",
+    "text_hash_short": "5d0dbc3e87531476856f0ac1f9b22c78"
+}

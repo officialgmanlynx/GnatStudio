@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 1066,
+    "line_end": 1092,
+    "text": "!main.c\n#include <stdio.h>\n\n#define LIST_LENGTH (100)\n\nint main(int argc, const char * argv[])\n{\n    int list[LIST_LENGTH];\n\n    for(int i = LIST_LENGTH; i > 0; --i) {\n        list[i] = LIST_LENGTH - i;\n    }\n\n    for (int i = 0; i < LIST_LENGTH; ++i)\n    {\n        printf(\"%d \", list[i]);\n\n        if (i % 10 == 0) {\n            printf(\"\\n\");\n        }\n    }\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Loop_Reverse_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "eaa797d258789e1ae7254bb7cddda28c9a77fecc0c5cb7d32d447276148d54c6431629829c2ede099f90637a0ee850f4235fc4037ce5722e016dc4d76990f5ca",
+    "text_hash_short": "710ce30066551d1aada8d4e98a6004b1"
+}

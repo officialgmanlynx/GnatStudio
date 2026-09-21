@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 3030,
+    "line_end": 3072,
+    "text": "package Readability_Issue is\n\n   function F\n     return access\n       function (A : Integer)\n                 return access\n                   function (B : Float)\n                             return Integer;\n\nend Readability_Issue;\n\npackage Readability_Issue.Functions is\n\n   function To_Integer (V : Float)\n                        return Integer is\n     (Integer (V));\n\n   function Select_Conversion\n     (A : Integer)\n      return access\n        function (B : Float)\n                  return Integer is\n     (To_Integer'Access);\n\nend Readability_Issue.Functions;\n\nwith Readability_Issue.Functions;\nuse  Readability_Issue.Functions;\n\npackage body Readability_Issue is\n\n   function F\n     return access\n       function (A : Integer)\n                 return access\n                   function (B : Float)\n                       return Integer is\n     (Select_Conversion'Access);\n\nend Readability_Issue;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Anonymous_Access_To_Subprograms.Readability_Issue",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "readability_issue.ads",
+        "readability_issue-functions.ads",
+        "readability_issue.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "970de5aeadc66e30d8fcfece9a6b1c35ed81121c870c90afafd5ccc01cc18d5f5e7503e67706460056bd7453ddca76dfbcb48fe962e9da638acf376929d6b5ed",
+    "text_hash_short": "9e2ac58942c97b44c0d847c28e39bd11"
+}

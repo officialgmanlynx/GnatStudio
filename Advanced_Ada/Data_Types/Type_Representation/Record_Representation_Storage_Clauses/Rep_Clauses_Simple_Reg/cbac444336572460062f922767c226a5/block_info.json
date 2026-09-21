@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 1531,
+    "line_end": 1565,
+    "text": "package P is\n\n  type Status is (Ready, Waiting,\n                  Processing, Done);\n  type UInt_3 is range 0 .. 2 ** 3 - 1;\n\n   type Simple_Reg is record\n      S     : Status;\n      Error : Boolean;\n      V1    : UInt_3;\n   end record;\n\n   for Simple_Reg use record\n      S     at 0 range 0 .. 1;\n      --  Bit #2 and 3: reserved!\n      Error at 0 range 4 .. 4;\n      V1    at 0 range 5 .. 7;\n   end record;\n\nend P;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith P;           use P;\n\nprocedure Show_Simple_Reg is\nbegin\n   Put_Line (\"Simple_Reg'Size:        \"\n             & Simple_Reg'Size'Image);\n   Put_Line (\"Simple_Reg'Object_Size: \"\n             & Simple_Reg'Object_Size'Image);\nend Show_Simple_Reg;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Record_Representation_Storage_Clauses.Rep_Clauses_Simple_Reg",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "p.ads",
+        "show_simple_reg.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_simple_reg.adb",
+    "text_hash": "4fcf441aa5602de02d1654cc0821d8303adfa93203612536de21d747a8167101faaed5ed7555dee3be2765069ae89b282f3c0a0b51f939b08851de4c3a5a623f",
+    "text_hash_short": "cbac444336572460062f922767c226a5"
+}

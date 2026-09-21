@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 50,
+    "line_end": 62,
+    "text": "!call.c\n#include <stdio.h>\n\nstruct my_struct {\n    int A, B;\n};\n\nvoid call (struct my_struct *p) {\n    printf (\"%d\", p->A);\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.My_Struct_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "call.c"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "ad9d93743689d7288462391634ca7c94285e9065ee4aa643d2addaa2c96e636eb525dcde8a447cfde41cf1a8db553bcfddea8d34144dcc0d7cd61c264bf35903",
+    "text_hash_short": "67053ec329fa4dfcbd8d6125589b9fcb"
+}

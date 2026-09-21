@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/01_Introduction.rst",
+    "line_start": 27,
+    "line_end": 60,
+    "text": "!main.c\n#include <stdio.h>\n#include <stdlib.h>\n\n#define DEGREES_MAX           (360)\ntypedef unsigned int degrees;\n\n#define MOD_DEGREES(x)   (x % DEGREES_MAX)\n\ndegrees add_angles(degrees* list, int length)\n{\n  degrees sum = 0;\n  for(int i = 0; i < length; ++i) {\n    sum += list[i];\n  }\n\n  return sum;\n}\n\nint main(int argc, char** argv)\n{\n  degrees list[argc - 1];\n\n  for(int i = 1; i < argc; ++i) {\n    list[i - 1] = MOD_DEGREES(atoi(argv[i]));\n  }\n\n  printf(\"Sum: %d\\n\", add_angles(list, argc - 1));\n\n  return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Introduction.Add_Angles_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "a3d735bdba9777f6168b48d005c74b2a4b07ca5c205fb6c55517e4e324664510850657e6a986ebdeb81ca6d06919fa6a92461c590e002011ccc9bd0318533f6a",
+    "text_hash_short": "a6d184caaec372c538634c578b5e144b"
+}

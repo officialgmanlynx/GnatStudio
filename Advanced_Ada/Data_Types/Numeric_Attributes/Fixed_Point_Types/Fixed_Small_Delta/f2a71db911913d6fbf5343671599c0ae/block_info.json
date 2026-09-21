@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numeric_attributes.rst",
+    "line_start": 1390,
+    "line_end": 1407,
+    "text": "with Ada.Text_IO;       use Ada.Text_IO;\n\nwith Fixed_Small_Delta; use Fixed_Small_Delta;\n\nprocedure Show_Fixed_Small_Delta is\n   V : TQ15;\nbegin\n   Put_Line (\"V'Size: \" & V'Size'Image);\n\n   V := TQ15'Small;\n   Put_Line (\"V: \" & V'Image);\n\n   V := TQ15'Delta;\n   Put_Line (\"V: \" & V'Image);\nend Show_Fixed_Small_Delta;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numeric_Attributes.Fixed_Point_Types.Fixed_Small_Delta",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_fixed_small_delta.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_fixed_small_delta.adb",
+    "text_hash": "0448fba1c0048d1ed9e11c693f05d66aa4517834af1faf846d388ad0592eb735f90953443efc7d846554b5e13bb615c78e0df02a6097cd6d34e4ba1162589ef1",
+    "text_hash_short": "f2a71db911913d6fbf5343671599c0ae"
+}

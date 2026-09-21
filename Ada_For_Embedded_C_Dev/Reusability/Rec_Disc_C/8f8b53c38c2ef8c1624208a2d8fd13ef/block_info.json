@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 859,
+    "line_end": 882,
+    "text": "!main.c\n#include <stdio.h>\n#include <stdlib.h>\n\ntypedef struct {\n    int       * a;\n    const int   last;\n} S;\n\nS init_s (int last)\n{\n    S v = { malloc (sizeof(int) * last + 1), last };\n    return v;\n}\n\nint main(int argc, const char * argv[])\n{\n    S v = init_s (9);\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.Rec_Disc_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "a7f1f5681b61952277369c2b2e77e49996ebf19bbd5a639d29c85ed1e73608eb84d825dbdc6e3263533690873b73e76e85c289b1445d17dbfb15a228401f7be5",
+    "text_hash_short": "8f8b53c38c2ef8c1624208a2d8fd13ef"
+}

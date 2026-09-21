@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 587,
+    "line_end": 611,
+    "text": "!main.c\n#include <stdio.h>\n#include <stdlib.h>\n\nint func(int x)\n{\n    return x % 4;\n}\n\nint main()\n{\n    int a, b;\n\n    a = 10;\n    b = func(a);\n\n#ifdef DEBUG\n    printf(\"func(%d) => %d\\n\", a, b);\n#endif\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.Debug_Code_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "2d8f976ae285fe165217ff0c372d54d7bb902ac6307007c193cf8ddf1a959c57266878155f6c1f1e15e864ad1b4c4149079702e87703b87a0a1bdf10e8845e8f",
+    "text_hash_short": "4daa8123f7112e7487ab54f16f80d34b"
+}

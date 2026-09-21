@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 2891,
+    "line_end": 2931,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Floating_Point_Base_Range is\n\n   type Float_6D is\n     digits 6;\n\n   type Float_6D_Norm is\n     digits 6\n       range -1.0 .. 1.0;\n\nbegin\n\n   Put_Line\n     (\"Float_6D'First           = \"\n      & Float_6D'First'Image);\n   Put_Line\n     (\"Float_6D'Last            = \"\n      & Float_6D'Last'Image);\n\n   Put_Line\n     (\"--------------------------\");\n\n   Put_Line\n     (\"Float_6D_Norm'First      = \"\n      & Float_6D_Norm'First'Image);\n   Put_Line\n     (\"Float_6D_Norm'Last       = \"\n      & Float_6D_Norm'Last'Image);\n\n   Put_Line\n     (\"Float_6D_Norm'Base'First = \"\n      & Float_6D_Norm'Base'First'Image);\n   Put_Line\n     (\"Float_6D_Norm'Base'Last  = \"\n      & Float_6D_Norm'Base'Last'Image);\n\nend Show_Floating_Point_Base_Range;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Floating_Point_Types.Floating_Point_Base_Range",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_floating_point_base_range.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_floating_point_base_range.adb",
+    "text_hash": "b869c827aea6e58c84036dbf1d47ae10fbae720e2332ff8052d59ed1b328d5c57958ddef29923e65ac69840b76bb6c3c4b20227958c3b12601b2c769c453ba80",
+    "text_hash_short": "490dc81e47ced1b74dce80cbc2125213"
+}

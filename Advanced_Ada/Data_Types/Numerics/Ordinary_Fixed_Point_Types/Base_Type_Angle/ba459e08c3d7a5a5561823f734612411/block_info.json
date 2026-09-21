@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 7885,
+    "line_end": 7917,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Fixed_Point_Base_Type is\n\n   Angle_Delta : constant := 1.0 / 3600.0;\n\n   type Angle is\n     delta Angle_Delta\n     range 0.0 .. 360.0 - Angle_Delta;\n\nbegin\n   Put_Line (\"The small          of \"\n             & \"Angle      is \"\n             & Angle'Small'Image);\n   Put_Line (\"The delta    value of \"\n             & \"Angle      is \"\n             & Angle'Delta'Image);\n\n   Put_Line (\"------------------------------\");\n\n   Put_Line (\"The small          of \"\n             & \"Angle'Base is \"\n             & Angle'Base'Small'Image);\n   Put_Line (\"The delta    value of \"\n             & \"Angle'Base is \"\n             & Angle'Base'Delta'Image);\n\n   Put_Line (\"------------------------------\");\n\nend Show_Fixed_Point_Base_Type;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Ordinary_Fixed_Point_Types.Base_Type_Angle",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_fixed_point_base_type.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_fixed_point_base_type.adb",
+    "text_hash": "e78af0f8b6c2b7f8dce86921637cc88f0097b41671aa210a90afb3def16c13127212cbcc9e9825b75a012f3bd1b395693e214117f394220ba48160c3681a3fc0",
+    "text_hash_short": "ba459e08c3d7a5a5561823f734612411"
+}

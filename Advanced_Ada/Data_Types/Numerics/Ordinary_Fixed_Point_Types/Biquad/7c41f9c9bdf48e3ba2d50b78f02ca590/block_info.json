@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 10509,
+    "line_end": 10537,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Biquads.Fixed_P;\nwith Biquads.Float_P;\n\nprocedure Show_Biquad is\n   FD : Biquads.Float_P.Filter_Delay;\n   QD : Biquads.Fixed_P.Filter_Delay;\n   FY : Float;\n   QY : Biquads.Fixed_P.PCM_Sample;\nbegin\n   Put_Line (\" n |    float    |   fixed\");\n   for N in 0 .. 2000 loop\n      --  7/8-scale step: above the ~0.55\n      --  limit, so the unscaled filter\n      --  would overflow here.\n      FY := Biquads.Float_P.Biquad (FD, 0.875);\n      QY := Biquads.Fixed_P.Biquad (QD, 0.875);\n\n      if N <= 4 or else N mod 400 = 0 then\n         Put_Line (N'Image\n                   & \" | \" & FY'Image\n                   & \" | \" & QY'Image);\n      end if;\n   end loop;\nend Show_Biquad;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Ordinary_Fixed_Point_Types.Biquad",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_biquad.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_biquad.adb",
+    "text_hash": "4ce0ba01b00e583b86286bff149ce9403c309aa4d02d96b81c47450a7b7628f2e0a52c5dd044e7bdc40663fa8ecd731f0af5a260b300b2e7b8b7ec0bfb7e7c60",
+    "text_hash_short": "7c41f9c9bdf48e3ba2d50b78f02ca590"
+}

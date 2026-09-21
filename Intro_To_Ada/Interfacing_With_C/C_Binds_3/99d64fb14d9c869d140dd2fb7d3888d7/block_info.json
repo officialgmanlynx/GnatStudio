@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/interfacing_with_c.rst",
+    "line_start": 602,
+    "line_end": 633,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Interfaces.C;\nuse  Interfaces.C;\n\nwith Interfaces.C.Strings;\nuse  Interfaces.C.Strings;\n\nwith test_h; use test_h;\n\nwith System;\n\nprocedure Show_Automatic_C_Struct_Bindings is\n\n   Name    : constant chars_ptr :=\n     New_String (\"John Doe\");\n   Address : constant chars_ptr :=\n     New_String (\"Small Town\");\n\n   T : System.Address := test_create;\n\nbegin\n   test_reset (T);\n   test_set_name (T, Name);\n   test_set_address (T, Address);\n\n   test_display (T);\n   test_destroy (T);\nend Show_Automatic_C_Struct_Bindings;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Interfacing_With_C.C_Binds_3",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "show_automatic_c_struct_bindings.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "33733b54959caec87047954b3f769bab01e37c68636253d6000f2daf58d83363de743021ce8aaf35ca14a34eda3dd2333b56461e04ccd9b5c85e8bed1ba7414c",
+    "text_hash_short": "99d64fb14d9c869d140dd2fb7d3888d7"
+}

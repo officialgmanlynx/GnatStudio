@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/subprograms.rst",
+    "line_start": 1183,
+    "line_end": 1203,
+    "text": "procedure Show_Overloading is\n\n   package Types is\n      type Sequence is null record;\n      type Set is null record;\n\n      procedure Print (S : Sequence) is null;\n      procedure Print (S : Set) is null;\n   end Types;\n\n   use Types;\n\n   X : Sequence;\nbegin\n\n   --  Compiler selects Print (S : Sequence)\n   Print (X);\nend Show_Overloading;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Subprograms.Overloading.Overloading",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_overloading.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_overloading.adb",
+    "text_hash": "b2977d7287b9b3af5677b72b4a82f2adeb71b52a52576e2a803d26ba5bd95d43192252bb56f92fbd45875d2950352802a96f68f951088515ad55d841a135812a",
+    "text_hash_short": "020c4f04285c80c1050d8edbaf2dbcae"
+}

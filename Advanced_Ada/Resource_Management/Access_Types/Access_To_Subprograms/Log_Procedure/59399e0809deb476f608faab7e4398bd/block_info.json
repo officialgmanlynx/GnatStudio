@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 5123,
+    "line_end": 5153,
+    "text": "package Data_Processing is\n\n   type Data_Container is\n     array (Positive range <>) of Float;\n\n   type Log_Procedure is\n     access procedure (D : Data_Container);\n\n   procedure Process\n     (D        : in out Data_Container;\n      Log_Proc :        Log_Procedure := null);\n\nend Data_Processing;\n\npackage body Data_Processing is\n\n   procedure Process\n     (D        : in out Data_Container;\n      Log_Proc :        Log_Procedure := null) is\n   begin\n      --  missing processing part...\n\n      if Log_Proc /= null then\n         Log_Proc (D);\n      end if;\n   end Process;\n\nend Data_Processing;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Access_To_Subprograms.Log_Procedure",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "data_processing.ads",
+        "data_processing.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "23dca1ad41f7f277f4d091dcc2d1dea98a4aae270e71002f54ac31d422a588c1c4529efe17fe34f7fc0ae2a4352dea55a8373448e6f0af0e24594942bb20c76d",
+    "text_hash_short": "59399e0809deb476f608faab7e4398bd"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/01_Introduction.rst",
+    "line_start": 63,
+    "line_end": 94,
+    "text": "with Ada.Command_Line; use Ada.Command_Line;\nwith Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Sum_Angles is\n\n   DEGREES_MAX : constant := 360;\n   type Degrees is mod DEGREES_MAX;\n\n   type Degrees_List is array (Natural range <>) of Degrees;\n\n   function Add_Angles (List : Degrees_List) return Degrees\n   is\n      Sum : Degrees := 0;\n   begin\n      for I in List'Range loop\n         Sum := Sum + List (I);\n      end loop;\n\n      return Sum;\n   end Add_Angles;\n\n   List : Degrees_List (1 .. Argument_Count);\nbegin\n   for I in List'Range loop\n      List (I) := Degrees (Integer'Value (Argument (I)));\n   end loop;\n\n   Put_Line (\"Sum:\" & Add_Angles (List)'Img);\nend Sum_Angles;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Introduction.Add_Angles_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "sum_angles.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "sum_angles.adb",
+    "text_hash": "b0f3379d0b428d1d8b8c0fb404b404f525862357966c8020c009b7f1175eebbe9d7872355448a4fca2135c01f639482af6c3023c1d511d2b98ad9d7252657679",
+    "text_hash_short": "b5a446e5c27aa18c917ae8c2cc6c1605"
+}

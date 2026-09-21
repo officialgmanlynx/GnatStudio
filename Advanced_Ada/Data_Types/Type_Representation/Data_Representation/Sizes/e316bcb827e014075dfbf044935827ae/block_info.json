@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 330,
+    "line_end": 388,
+    "text": "package Custom_Types is\n\n   type UInt_7 is range 0 .. 127;\n\n   type UInt_7_Array is\n     array (Positive range <>) of UInt_7;\n\n   type UInt_7_Array_Comp_32 is\n     array (Positive range <>) of UInt_7\n       with Component_Size => 32;\n\nend Custom_Types;\n\nwith Ada.Text_IO;  use Ada.Text_IO;\n\nwith Custom_Types; use Custom_Types;\n\nprocedure Show_Sizes is\n   Arr_1 : UInt_7_Array (1 .. 20);\n   Arr_2 : UInt_7_Array_Comp_32 (1 .. 20);\nbegin\n   Put_Line\n     (\"UInt_7_Array'Size:                   \"\n      & UInt_7_Array'Size'Image);\n   Put_Line\n     (\"UInt_7_Array'Object_Size:            \"\n      & UInt_7_Array'Object_Size'Image);\n   Put_Line\n     (\"UInt_7_Array'Component_Size:         \"\n      & UInt_7_Array'Component_Size'Image);\n   Put_Line\n     (\"Arr_1'Component_Size:                \"\n      & Arr_1'Component_Size'Image);\n   Put_Line\n     (\"Arr_1'Size:                          \"\n      & Arr_1'Size'Image);\n   New_Line;\n\n   Put_Line\n     (\"UInt_7_Array_Comp_32'Object_Size:    \"\n      & UInt_7_Array_Comp_32'Size'Image);\n   Put_Line\n     (\"UInt_7_Array_Comp_32'Object_Size:    \"\n      & UInt_7_Array_Comp_32'Object_Size'Image);\n   Put_Line\n     (\"UInt_7_Array_Comp_32'Component_Size: \"\n      &\n      UInt_7_Array_Comp_32'Component_Size'Image);\n   Put_Line\n     (\"Arr_2'Component_Size:                \"\n      & Arr_2'Component_Size'Image);\n   Put_Line\n     (\"Arr_2'Size:                          \"\n      & Arr_2'Size'Image);\n   New_Line;\nend Show_Sizes;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Data_Representation.Sizes",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_types.ads",
+        "show_sizes.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_sizes.adb",
+    "text_hash": "8b4878597f5dabfae5fc09fc88378304dd3ddbaf55116ec1055530f14e72de88983cc9370eaa52886b6e68f09a4dba02a0dd9e6c34021b45bf4c23899430f913",
+    "text_hash_short": "e316bcb827e014075dfbf044935827ae"
+}

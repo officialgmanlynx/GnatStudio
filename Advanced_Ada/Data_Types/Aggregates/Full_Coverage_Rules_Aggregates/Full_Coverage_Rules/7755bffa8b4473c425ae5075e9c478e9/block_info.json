@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/aggregates.rst",
+    "line_start": 644,
+    "line_end": 657,
+    "text": "with Ada.Strings.Unbounded;\nuse  Ada.Strings.Unbounded;\n\npackage Persons is\n   type Years is new Natural;\n\n   type Person is record\n      Name : Unbounded_String;\n      Age  : Years;\n   end record;\nend Persons;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Aggregates.Full_Coverage_Rules_Aggregates.Full_Coverage_Rules",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "persons.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "9dfa6b5a7010c8375d77adaa49db710665bdca824a5c1ba06dd59ad17fdf5af45454b4c95798053c284bd3ebdd7e63ce8db83c8db5d7999092aa02464ec5c09c",
+    "text_hash_short": "7755bffa8b4473c425ae5075e9c478e9"
+}

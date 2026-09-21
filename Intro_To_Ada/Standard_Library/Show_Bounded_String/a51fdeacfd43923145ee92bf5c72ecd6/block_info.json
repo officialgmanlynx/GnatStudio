@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_strings.rst",
+    "line_start": 335,
+    "line_end": 379,
+    "text": "with Ada.Strings;         use Ada.Strings;\nwith Ada.Strings.Bounded;\nwith Ada.Text_IO;         use Ada.Text_IO;\n\nprocedure Show_Bounded_String is\n   package B_Str is new\n     Ada.Strings.Bounded.Generic_Bounded_Length\n       (Max => 15);\n   use B_Str;\n\n   S1, S2 : Bounded_String;\n\n   procedure Display_String_Info\n     (S : Bounded_String)\n   is\n   begin\n      Put_Line (\"String: \" & To_String (S));\n      Put_Line (\"String Length: \"\n                & Integer'Image (Length (S)));\n      --  String:\n      --          S'Length => ok\n      --  Bounded_String:\n      --          S'Length => compilation error:\n      --                      bounded strings are\n      --                      not arrays!\n\n      Put_Line (\"Max.   Length: \"\n                & Integer'Image (Max_Length));\n   end Display_String_Info;\n\nbegin\n   S1 := To_Bounded_String (\"Hello\");\n   Display_String_Info (S1);\n\n   S2 := To_Bounded_String (\"Hello World\");\n   Display_String_Info (S2);\n\n   S1 := To_Bounded_String\n     (\"Something longer to say here...\",\n      Right);\n   Display_String_Info (S1);\nend Show_Bounded_String;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Bounded_String",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_bounded_string.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_bounded_string.adb",
+    "text_hash": "b9b60e51eb53f2107998a81d4c611a574df5b96a38a9bedfaf9b2674cf402200f723afbea5fe2c184cc56905bb5b0fe107dc242b62c40f77731bb3f04fabb3ef",
+    "text_hash_short": "a51fdeacfd43923145ee92bf5c72ecd6"
+}

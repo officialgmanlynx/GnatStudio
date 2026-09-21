@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/more_about_types.rst",
+    "line_start": 98,
+    "line_end": 119,
+    "text": "package Pkg is\n   type SSID is new Integer;\n\n   function Convert (Self : SSID)\n                     return Integer;\n   function Convert (Self : SSID)\n                     return String;\nend Pkg;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Pkg;         use Pkg;\n\nprocedure Main is\n   S : String := Convert (123_145_299);\n   --            ^ Valid, will choose the\n   --              proper Convert\nbegin\n   Put_Line (S);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.More_About_Types.Overloading",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-syntax-only"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": true,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "pkg.ads",
+        "main.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "bc1d75f4a2263b5c65a207cfb7a21deced3b1a7bff34fd0a55e74749fa5fdb8bdd40d7a1487caa346108d81d92288b6575afbf30df189d088e7c69126bac3405",
+    "text_hash_short": "aa556b55ee89f9c5f8f7e138d84c27b8"
+}

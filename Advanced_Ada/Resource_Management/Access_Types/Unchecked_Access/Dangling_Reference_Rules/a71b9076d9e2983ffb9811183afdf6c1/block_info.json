@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 3378,
+    "line_end": 3400,
+    "text": "package Integers is\n\n   type Integer_Access is access all Integer;\n\nend Integers;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Integers; use Integers;\n\nprocedure Show_Access_Issue is\n   I_Var : aliased Integer := 42;\n\n   A     : Integer_Access;\nbegin\n   A := I_Var'Unchecked_Access;\n   --   OK: assignment is now accepted.\n\n   Put_Line (\"A.all: \" & Integer'Image (A.all));\nend Show_Access_Issue;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Unchecked_Access.Dangling_Reference_Rules",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "integers.ads",
+        "show_access_issue.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_access_issue.adb",
+    "text_hash": "678d5f7c9eece9cc963c358821442468b155e82b9c71faff3c2dc2a22a9ca2723d89374a9f196fd2cd49f7d748f63e7d2bc0680f5e773ae5a72caaa2948c8adf",
+    "text_hash_short": "a71b9076d9e2983ffb9811183afdf6c1"
+}

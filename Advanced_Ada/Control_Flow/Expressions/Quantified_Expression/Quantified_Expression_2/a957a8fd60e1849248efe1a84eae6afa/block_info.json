@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/expressions.rst",
+    "line_start": 624,
+    "line_end": 703,
+    "text": "package Int_Arrays is\n\n   type Integer_Arr is\n     array (Positive range <>) of Integer;\n\n   function Is_Zero (A : Integer_Arr)\n                     return Boolean;\n\n   function Has_Zero (A : Integer_Arr)\n                      return Boolean;\n\n   procedure Display_Array (A    : Integer_Arr;\n                            Name : String);\n\nend Int_Arrays;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Int_Arrays is\n\n   function Is_Zero (A : Integer_Arr)\n                     return Boolean is\n   begin\n      for I in A'Range loop\n         if A (I) /= 0 then\n            return False;\n         end if;\n      end loop;\n\n      return True;\n   end Is_Zero;\n\n   function Has_Zero (A : Integer_Arr)\n                      return Boolean is\n   begin\n      for I in A'Range loop\n        if A (I) = 0 then\n           return True;\n        end if;\n      end loop;\n\n      return False;\n   end Has_Zero;\n\n   procedure Display_Array (A    : Integer_Arr;\n                            Name : String) is\n   begin\n      Put (Name & \": \");\n      for E of A loop\n         Put (E'Image & \" \");\n      end loop;\n      New_Line;\n   end Display_Array;\n\nend Int_Arrays;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Int_Arrays;  use Int_Arrays;\n\nprocedure Test_Int_Arrays is\n   A : Integer_Arr := (0, 0, 1);\nbegin\n   Display_Array (A, \"A\");\n   Put_Line (\"Is_Zero: \"\n             & Boolean'Image (Is_Zero (A)));\n   Put_Line (\"Has_Zero: \"\n             & Boolean'Image (Has_Zero (A)));\n\n   A := (0, 0, 0);\n\n   Display_Array (A, \"A\");\n   Put_Line (\"Is_Zero: \"\n             & Boolean'Image (Is_Zero (A)));\n   Put_Line (\"Has_Zero: \"\n             & Boolean'Image (Has_Zero (A)));\nend Test_Int_Arrays;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Expressions.Quantified_Expression.Quantified_Expression_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "int_arrays.ads",
+        "int_arrays.adb",
+        "test_int_arrays.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "test_int_arrays.adb",
+    "text_hash": "b47b72746bf1e6002888740a2f2d60446a3db3e710a8690c63f7a39a7e8126ba4f8091a8c6bd4d300ef6c991f534d6e6cd6ab64321481d4e18d52efedb4ff5ce",
+    "text_hash_short": "a957a8fd60e1849248efe1a84eae6afa"
+}

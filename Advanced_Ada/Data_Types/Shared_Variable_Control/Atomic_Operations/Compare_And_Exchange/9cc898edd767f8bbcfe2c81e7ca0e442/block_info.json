@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/shared_variable_control.rst",
+    "line_start": 1516,
+    "line_end": 1598,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\nwith Ada.Numerics.Discrete_Random;\n\nwith Lazy_Initialization;\nuse Lazy_Initialization;\nuse Lazy_Initialization.Value_Exchange;\n\nprocedure Show_Lazy_Initialization is\n  subtype A_Task_Number is Natural;\n\n   Value             : aliased Lazy_Value;\n   Value_Modified_By : A_Task_Number := 0;\n\n   task type A_Task is\n      entry Start (This : A_Task_Number);\n      entry Stop;\n   end A_Task;\n\n   task body A_Task is\n      Task_Number : A_Task_Number;\n   begin\n      accept Start (This : A_Task_Number) do\n         Task_Number := This;\n      end Start;\n\n      Sleep_Some_Time : declare\n         subtype Sleep_Range is\n           Integer range 1 .. 3;\n\n         package Random_Sleep is new\n           Ada.Numerics.Discrete_Random\n             (Sleep_Range);\n         use Random_Sleep;\n\n         G : Generator;\n      begin\n         Reset (G);\n         delay Duration (Random (G));\n      end Sleep_Some_Time;\n\n      Generate_Value : declare\n         use Lazy_Value_Random;\n\n         G             :         Generator;\n         Initial_Value :         Lazy_Value_Range;\n         Prior         : aliased Lazy_Value;\n      begin\n         Reset (G);\n         Initial_Value := Random (G);\n\n         if Atomic_Compare_And_Exchange\n           (Item    => Value,\n            Prior   => Prior,\n            Desired => Lazy_Value (Initial_Value))\n         then\n            Value_Modified_By := Task_Number;\n         end if;\n\n      end Generate_Value;\n\n      accept Stop do\n         Put_Line (\"Current task number:     \"\n                   & Task_Number'Image);\n         Put_Line (\"Value:               \"\n                   & Value'Image);\n         Put_Line (\"Modified by task number: \"\n                   & Value_Modified_By'Image);\n         Put_Line (\"---------------------\");\n      end Stop;\n   end A_Task;\n\n   Some_Tasks : array (1 .. 5) of A_Task;\nbegin\n   for I in Some_Tasks'Range loop\n      Some_Tasks (I).Start (I);\n   end loop;\n   for I in Some_Tasks'Range loop\n      Some_Tasks (I).Stop;\n   end loop;\nend Show_Lazy_Initialization;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Shared_Variable_Control.Atomic_Operations.Compare_And_Exchange",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_lazy_initialization.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_lazy_initialization.adb",
+    "text_hash": "dad3bfee59766f749f426ecb017446807e05091421219def77ea7e423f22deb84802c0fe25a7a27ea14e77d9b2f814ceab4eb4a20e18995ed1c4433993af1a3d",
+    "text_hash_short": "9cc898edd767f8bbcfe2c81e7ca0e442"
+}

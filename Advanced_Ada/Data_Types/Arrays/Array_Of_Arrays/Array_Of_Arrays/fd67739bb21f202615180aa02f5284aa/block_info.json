@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/arrays.rst",
+    "line_start": 463,
+    "line_end": 476,
+    "text": "package Array_Of_Arrays_Decl is\n\n   type T1 is\n     array (Positive range <>) of Float;\n\n   type T2 is\n     array (Positive range <>) of T1 (1 .. 10);\n   --                                 ^^^^^^^\n   --                          bounds must be set!\n\nend Array_Of_Arrays_Decl;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Arrays.Array_Of_Arrays.Array_Of_Arrays",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "array_of_arrays_decl.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "f5f05d21aed821e791ee4b19ff75b84741fb2bd03afee2ac45ec6dc5d891084ee89a7d9147af20648725c9398e53d8cb3c5f5b4bf95b9d0035432b7d2af0662b",
+    "text_hash_short": "fd67739bb21f202615180aa02f5284aa"
+}

@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/04_Embedded.rst",
+    "line_start": 233,
+    "line_end": 286,
+    "text": "with System.OS_Interface;\n\npackage Signal_Handlers is\n\n   protected type Quit_Handler is\n      function Requested return Boolean;\n   private\n      Quit_Request : Boolean := False;\n\n      --\n      --  Declaration of an interrupt handler for the \"quit\" interrupt:\n      --\n      procedure Handle_Quit_Signal\n        with Attach_Handler => System.OS_Interface.SIGQUIT;\n   end Quit_Handler;\n\nend Signal_Handlers;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Signal_Handlers is\n\n   protected body Quit_Handler is\n\n      function Requested return Boolean is\n        (Quit_Request);\n\n      procedure Handle_Quit_Signal is\n      begin\n         Put_Line (\"Quit request detected!\");\n         Quit_Request := True;\n      end Handle_Quit_Signal;\n\n   end Quit_Handler;\n\nend Signal_Handlers;\n\nwith Ada.Text_IO;     use Ada.Text_IO;\nwith Signal_Handlers;\n\nprocedure Test_Quit_Handler is\n   Quit : Signal_Handlers.Quit_Handler;\n\nbegin\n   while True loop\n      delay 1.0;\n      exit when Quit.Requested;\n   end loop;\n\n   Put_Line (\"Exiting application...\");\nend Test_Quit_Handler;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Embedded.Quit_Handler",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-norun"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "signal_handlers.ads",
+        "signal_handlers.adb",
+        "test_quit_handler.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "4677f2318968a185d35d29a1058f8b11e4eb6eddb55f8ec05b628f069fc240138bd9ccf30f5aae6582fa456ce11549618694529f13c0fb032969a6b2793fb5e9",
+    "text_hash_short": "d272c5bc59576444e09007a04a615ccf"
+}

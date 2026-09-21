@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 929,
+    "line_end": 946,
+    "text": "package Enumeration_Example is\n\n   type Day is (Mon, Tue, Wed,\n                Thu, Fri,\n                Sat, Sun);\n\n   function Monday    return Day renames Mon;\n   function Tuesday   return Day renames Tue;\n   function Wednesday return Day renames Wed;\n   function Thursday  return Day renames Thu;\n   function Friday    return Day renames Fri;\n   function Saturday  return Day renames Sat;\n   function Sunday    return Day renames Sun;\n\nend Enumeration_Example;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Enumerations.Enumeration_Renaming",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "enumeration_example.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "84085add444c908d46a6e5b0dd5df9273c19c514f737bdb63f1f7bc5bcac096752e548c535ae071b385561c501397937a60e817611e09c44e5bcd4cbfc673b09",
+    "text_hash_short": "e2e12bb3bfcb0b6e94769ced9a4b80f9"
+}

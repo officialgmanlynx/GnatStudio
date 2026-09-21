@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/aggregates.rst",
+    "line_start": 601,
+    "line_end": 624,
+    "text": "with Points; use Points;\n\nprocedure Show_Rec_Aggregate_Discriminant is\n   --  Positional component association\n   P1 : constant Point := (Dim_1, 0);\n\n   --  Named component association\n   P2 : constant Point := (D  => Dim_2,\n                           X2 => 3,\n                           Y2 => 4);\n\n   --  Positional / named component association\n   P3 : constant Point := (Dim_3,\n                           X3 => 3,\n                           Y3 => 4,\n                           Z3 => 5);\nbegin\n   Display (P1);\n   Display (P2);\n   Display (P3);\nend Show_Rec_Aggregate_Discriminant;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Aggregates.Record_Aggregates.Rec_Aggregate_Discriminant",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_rec_aggregate_discriminant.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_rec_aggregate_discriminant.adb",
+    "text_hash": "09ca4d6abb5e965c1c643ac663aa711cbb9f2b6767e9f68132de80a1e6481c7c66fc71b63a8d7377e6602754b6bccb4950d2f5decdadb4396f8dcdf594b4d4c7",
+    "text_hash_short": "d487e0c68ea69c3e0f2adb8ac958e31d"
+}

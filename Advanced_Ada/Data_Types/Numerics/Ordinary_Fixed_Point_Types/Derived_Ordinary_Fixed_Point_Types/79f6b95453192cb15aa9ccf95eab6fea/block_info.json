@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 7651,
+    "line_end": 7685,
+    "text": "package Custom_Fixed_Point is\n\n   D15 : constant := 2.0 ** (-15);\n   D7  : constant := 2.0 ** (-7);\n\n   type TQ15 is\n     delta D15\n     range -1.0 .. 1.0 - D15;\n\n   type TQ15_New is new\n     TQ15\n     delta D7;\n\nend Custom_Fixed_Point;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Custom_Fixed_Point;\nuse  Custom_Fixed_Point;\n\nprocedure Show_Fixed_Point_Subtypes is\n   Q15     : TQ15;\n   Q15_New : TQ15_New;\nbegin\n   Q15  := 0.25;\n   Put_Line (\"Q15     = \"\n             & Q15'Image);\n\n   Q15_New := TQ15_New (Q15);\n   Put_Line (\"Q15_New = \"\n             & Q15_New'Image);\nend Show_Fixed_Point_Subtypes;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Ordinary_Fixed_Point_Types.Derived_Ordinary_Fixed_Point_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_fixed_point.ads",
+        "show_fixed_point_subtypes.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_fixed_point_subtypes.adb",
+    "text_hash": "c5bd0e05cbb17dcd05d468e3b51526e69472e552ae44397a520345162e155bf8022082f044dc20f82f0b2ddff8b7f2c2ffc16a4330aca0cedab95a465aca54da",
+    "text_hash_short": "79f6b95453192cb15aa9ccf95eab6fea"
+}

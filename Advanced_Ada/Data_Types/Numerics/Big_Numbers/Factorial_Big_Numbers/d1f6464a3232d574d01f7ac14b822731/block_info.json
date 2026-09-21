@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 10924,
+    "line_end": 10954,
+    "text": "with Ada.Numerics.Big_Numbers.Big_Integers;\nuse  Ada.Numerics.Big_Numbers.Big_Integers;\n\nfunction Factorial (N : Integer)\n                    return Big_Integer;\n\nfunction Factorial (N : Integer)\n                    return Big_Integer is\n   Fact : Big_Integer := 1;\nbegin\n   for I in 2 .. N loop\n      Fact := Fact * To_Big_Integer (I);\n   end loop;\n\n   return Fact;\nend Factorial;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Factorial;\n\nprocedure Show_Big_Number_Factorial is\nbegin\n   for I in 1 .. 50 loop\n      Put_Line (I'Image & \"! = \"\n                & Factorial (I)'Image);\n   end loop;\nend Show_Big_Number_Factorial;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Big_Numbers.Factorial_Big_Numbers",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "factorial.ads",
+        "factorial.adb",
+        "show_big_number_factorial.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_big_number_factorial.adb",
+    "text_hash": "176a5448609d8ba00b80863cbdafe707ffc10d5ff53aa50795009e8e40f65e15b0ed9eecfe64983fd90f24bf4ef301111a4b25733975a26bdbd34b501a7f6af6",
+    "text_hash_short": "d1f6464a3232d574d01f7ac14b822731"
+}

@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/04_State_Abstraction.rst",
+    "line_start": 298,
+    "line_end": 340,
+    "text": "package P with\n   Abstract_State => State\nis\n   package Visible_Nested with\n      Abstract_State => Visible_State\n   is\n      procedure Get (E : out Integer);\n   end Visible_Nested;\nend P;\n\npackage body P with\n   Refined_State => (State => Hidden_Nested.Hidden_State)\nis\n   package Hidden_Nested with\n      Abstract_State => Hidden_State,\n      Initializes    => Hidden_State\n   is\n      function Get return Integer;\n   end Hidden_Nested;\n\n   package body Hidden_Nested with\n      Refined_State => (Hidden_State => Cnt)\n   is\n      Cnt : Integer := 0;\n\n      function Get return Integer is (Cnt);\n   end Hidden_Nested;\n\n   package body Visible_Nested with\n      Refined_State => (Visible_State => Checked)\n   is\n      Checked : Boolean := False;\n\n      procedure Get (E : out Integer) is\n      begin\n         Checked := True;\n         E := Hidden_Nested.Get;\n      end Get;\n   end Visible_Nested;\nend P;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.State_Abstraction.Nested_Packages",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow_report_all"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "p.ads",
+        "p.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "8675cd571cdc6118fc75884cb17157e2d16b9eeb26228f183884e6196c11538430905c001e43dda501de6f8d3ad15cc13069dad7d9d926c84f6debdfac90f696",
+    "text_hash_short": "8260089cbd651de296dd790506c76fd8"
+}

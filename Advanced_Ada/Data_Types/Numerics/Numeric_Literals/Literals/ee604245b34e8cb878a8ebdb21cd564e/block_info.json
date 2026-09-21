@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 307,
+    "line_end": 331,
+    "text": "with Ada.Text_IO;\n\nprocedure Ada_Numeric_Literals is\n   One_Third : constant := 3#1.0#e-1;\n   --  same as 1.0/3.0\n\n   Zero      : constant := 1.0 - 3.0 * One_Third;\n   pragma Assert (Zero = 0.0);\n\n   One_Third_Approx : constant :=\n     0.33333333333333333333333333333;\n   Zero_Approx      : constant :=\n     1.0 - 3.0 * One_Third_Approx;\n\n   use Ada.Text_IO;\n\nbegin\n   Put_Line (\"Zero        = \"\n             & Float'Image (Zero));\n   Put_Line (\"Zero_Approx = \"\n             & Float'Image (Zero_Approx));\nend Ada_Numeric_Literals;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Numeric_Literals.Literals",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "ada_numeric_literals.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "ada_numeric_literals.adb",
+    "text_hash": "b7b4c7ff4513c22acd19814b0de8e8e6027248a9a66200ca11df1024831de19d55529ea2ac526f88e21bf8917a16dfbacb10bc5f6cfe830c8ffa71ef852c15f4",
+    "text_hash_short": "ee604245b34e8cb878a8ebdb21cd564e"
+}

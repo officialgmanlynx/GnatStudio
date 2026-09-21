@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/aggregates.rst",
+    "line_start": 881,
+    "line_end": 917,
+    "text": "package Integer_Arrays is\n\n   type Integer_Array is\n     array (Positive range <>) of Integer;\n\n   procedure Display (A : Integer_Array);\n\nend Integer_Arrays;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Integer_Arrays is\n\n   procedure Display (A : Integer_Array) is\n   begin\n      Put_Line (\"Length = \"\n                & A'Length'Image);\n\n      Put_Line (\"(\");\n      for I in A'Range loop\n         Put (\"  \"\n              & I'Image\n              & \" => \"\n              & A (I)'Image);\n         if I /= A'Last then\n            Put_Line (\",\");\n         else\n            New_Line;\n         end if;\n      end loop;\n      Put_Line (\")\");\n   end Display;\n\nend Integer_Arrays;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Aggregates.Array_Aggregates.Array_Aggregates_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "integer_arrays.ads",
+        "integer_arrays.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "48630ab5276e8d383ba11bd4a3427caca522869d331c8da609702594b12aada451124a984b704a14e76fdcb1bfca6fdb426563b61a33f88daeb0573bbe4d6dfa",
+    "text_hash_short": "8e6e4951c14dcc6e8dea9b6a76064930"
+}

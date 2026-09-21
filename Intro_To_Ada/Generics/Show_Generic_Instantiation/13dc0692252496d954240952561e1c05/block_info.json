@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/generics.rst",
+    "line_start": 120,
+    "line_end": 159,
+    "text": "generic\n   type T is private;\n   X : in out T;\n   --  X can be used in the Set procedure\nprocedure Set (E : T);\n\nprocedure Set (E : T) is\nbegin\n   X := E;\nend Set;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Set;\n\nprocedure Show_Generic_Instantiation is\n\n   Main    : Integer := 0;\n   Current : Integer;\n\n   procedure Set_Main is new Set (T => Integer,\n                                  X => Main);\n   --  Here, we map the formal parameters to\n   --  actual types and objects.\n   --\n   --  The same approach can be used to\n   --  instantiate functions or packages, e.g.:\n   --\n   --  function Get_Main is new ...\n   --  package Integer_Queue is new ...\n\nbegin\n   Current := 10;\n\n   Set_Main (Current);\n   Put_Line (\"Value of Main is \"\n             & Integer'Image (Main));\nend Show_Generic_Instantiation;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Generics.Show_Generic_Instantiation",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "set.ads",
+        "set.adb",
+        "show_generic_instantiation.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_generic_instantiation.adb",
+    "text_hash": "7806a0f0f34fb4271912f459c765af5aa21a69e4f9fac462f0e19226a46c575b55f49b376ff8d28426c2d1697bb4d5e22b78e0b523b3d7533d353a1980cabfae",
+    "text_hash_short": "13dc0692252496d954240952561e1c05"
+}

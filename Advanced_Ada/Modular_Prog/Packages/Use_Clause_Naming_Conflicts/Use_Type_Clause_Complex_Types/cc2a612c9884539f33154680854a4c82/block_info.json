@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/modular_prog/packages.rst",
+    "line_start": 1511,
+    "line_end": 1538,
+    "text": "with Ada.Numerics; use Ada.Numerics;\n\nwith Ada.Numerics.Generic_Complex_Types;\n\nwith Show_Any_Complex;\n\nprocedure Show_Use is\n   package Complex_Float_Types is new\n     Ada.Numerics.Generic_Complex_Types\n       (Real => Float);\n   use Complex_Float_Types;\n\n   procedure Show_Complex_Float is new\n     Show_Any_Complex (Complex_Float_Types);\n\n   C, D, X : Complex;\nbegin\n   C := Compose_From_Polar (3.0, Pi / 2.0);\n   D := Compose_From_Polar (5.0, Pi / 2.0);\n   X := C + D;\n\n   Show_Complex_Float (\"C:\", C);\n   Show_Complex_Float (\"D:\", D);\n   Show_Complex_Float (\"X:\", X);\nend Show_Use;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Modular_Prog.Packages.Use_Clause_Naming_Conflicts.Use_Type_Clause_Complex_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_use.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_use.adb",
+    "text_hash": "9ea3370f4a078419c5ea00496710052eca36da90880cc0a91aea5115fba353c96dd549f948171d0e9d1bde65344d3ad5908cd4002ebf93efa33f33091f653d61",
+    "text_hash_short": "cc2a612c9884539f33154680854a4c82"
+}

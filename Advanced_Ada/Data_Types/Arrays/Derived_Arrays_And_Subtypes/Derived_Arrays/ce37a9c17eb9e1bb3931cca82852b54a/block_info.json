@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/arrays.rst",
+    "line_start": 652,
+    "line_end": 682,
+    "text": "with Measurement_Defs; use Measurement_Defs;\n\nprocedure Show_Measurements is\n   M1, M2  : Measurements (1 .. 10)\n               := (others => 0.0);\n\n   MD      : Measurements_Derived (1 .. 10);\n   MD2     : Measurements_Derived (1 .. 40);\n   MD10    : Measurements_10;\nbegin\n   M1   := M2;\n   --  ^^^^^^\n   --  Assignment of arrays of\n   --  same type.\n\n   MD   := Measurements_Derived (M1);\n   --      ^^^^^^^^^^^^^^^^^^^^^^^^^\n   --  Conversion to derived type for\n   --  the assignment.\n\n   MD10 := Measurements_10 (M1);\n   --      ^^^^^^^^^^^^^^^^^^^^\n   --  Conversion to derived type for\n   --  the assignment.\n\n   MD10 := Measurements_10 (MD);\n   MD10 := Measurements_10 (MD2 (1 .. 10));\nend Show_Measurements;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Arrays.Derived_Arrays_And_Subtypes.Derived_Arrays",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_measurements.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_measurements.adb",
+    "text_hash": "090600c3732819b0e8fc2b3f35368e641ea4a2014d39b7630f9a0aa61f8af01eff0694000608e89d27c7b6408e9d194ed342fcce2759f3d7af3b0c0a80b3adb2",
+    "text_hash_short": "ce37a9c17eb9e1bb3931cca82852b54a"
+}

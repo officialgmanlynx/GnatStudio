@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/05_Proof_Of_Functional_Correctness.rst",
+    "line_start": 599,
+    "line_end": 630,
+    "text": "package Show_Local_Ghost is\n\n   type T is new Natural;\n\n   function F (X, Y : T) return Boolean is (X > Y) with Ghost;\n\n   function Condition (X : T) return Boolean is (X mod 2 = 0);\n\n   procedure P (X : in out T) with\n     Pre  => X < 1_000_000,\n     Post => F (X, X'Old);\n\nend Show_Local_Ghost;\n\npackage body Show_Local_Ghost is\n\n   procedure P (X : in out T) is\n      X_Init : constant T := X with Ghost;\n   begin\n      if Condition (X) then\n         X := X + 1;\n         pragma Assert (F (X, X_Init));\n      else\n         X := X * 2;\n         pragma Assert (F (X, X_Init));\n      end if;\n   end P;\n\nend Show_Local_Ghost;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Proof_of_Functional_Correctness.Local_Ghost",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_report_all"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "show_local_ghost.ads",
+        "show_local_ghost.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "400719db27bf88f87284fd5d6c1bc536741847cf0e61af854157ebc2d70d177a8cddb3d23c8183fbfc60425ccd9105c96a0580f82ee537ce4c8b6efe1e643595",
+    "text_hash_short": "071ee53a06a6b5880eee6e9ea06dbcf3"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/exceptions.rst",
+    "line_start": 170,
+    "line_end": 197,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\nwith Ada.Unchecked_Conversion;\n\nprocedure Show_Erroneous_Execution is\n   subtype Int_1_10 is\n     Integer range 1 .. 10;\n\n   function To_Int_1_10 is new\n     Ada.Unchecked_Conversion\n       (Source => Integer,\n        Target => Int_1_10);\n\n   I1 : Int_1_10 := To_Int_1_10 (0);\n   --               ^^^^^^^^^^^^^^^\n   --  Bounded error\nbegin\n   Put_Line (\"I1 = \" & I1'Image);\n\n   I1 := I1 + 1;\n   --    ^^^^^^\n   --  Erroneous execution: using value\n   --  in operation that is out of range.\n\n   Put_Line (\"I1 = \" & I1'Image);\nend Show_Erroneous_Execution;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Exceptions.Classification_Of_Errors.Data_Validity_Erroneous_Execution",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_erroneous_execution.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_erroneous_execution.adb",
+    "text_hash": "fc04cff6b4a47519c35ef637fb5eabc8d6a5f69f132315cea59b1c5c451620271551e75edd0b7beb57b97df485af5bc64353723875d5f5f045cd1c61c230a0ce",
+    "text_hash_short": "19218e9bb2e153366dea9114a5e59314"
+}

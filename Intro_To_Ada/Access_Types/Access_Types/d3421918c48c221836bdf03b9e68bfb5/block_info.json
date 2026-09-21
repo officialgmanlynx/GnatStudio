@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/access_types.rst",
+    "line_start": 37,
+    "line_end": 67,
+    "text": "package Dates is\n   type Months is\n     (January, February, March, April,\n      May, June, July, August, September,\n      October, November, December);\n\n   type Date is record\n      Day   : Integer range 1 .. 31;\n      Month : Months;\n      Year  : Integer;\n   end record;\nend Dates;\n\nwith Dates; use Dates;\n\npackage Access_Types is\n    --  Declare an access type\n    type Date_Acc is access Date;\n    --                      ^ \"Designated type\"\n    --                      ^ Date_Acc values\n    --                        point to Date\n    --                        objects\n\n    D : Date_Acc := null;\n    --              ^ Literal for\n    --                \"access to nothing\"\n    --  ^ Access to date\nend Access_Types;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Access_Types.Access_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "dates.ads",
+        "access_types.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "963f6ad4d0e6e6f021bd6215eb330fd94e6ec9969248bbbf9c5de53b40a65949b2a5341401eaaa3a085d802543ab2a16a1d2c18ce8bb22cbf0c410fbe8d3dee4",
+    "text_hash_short": "d3421918c48c221836bdf03b9e68bfb5"
+}

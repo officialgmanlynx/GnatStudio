@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/strings.rst",
+    "line_start": 23,
+    "line_end": 34,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Character_Literals is\n   C   : Character := 'a';\n   --                 ^^^\n   --           Character literal\nbegin\n   Put_Line (\"Character : \" & C);\nend Show_Character_Literals;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Strings.Character_String_Literals.Character_Literals",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_character_literals.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_character_literals.adb",
+    "text_hash": "bab50ce990e45634fbf2a412ca524cb41d6642630477e619a9a15b665f754c699c0046fee09c6ac178e089ca73b923800aea82ef59e44bbbc5cb5d2a51a20174",
+    "text_hash_short": "e9bf0dee97b4c6d52937316e7f285f48"
+}

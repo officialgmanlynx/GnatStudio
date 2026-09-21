@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/privacy.rst",
+    "line_start": 27,
+    "line_end": 62,
+    "text": "package Encapsulate is\n   procedure Hello;\n\nprivate\n\n   procedure Hello2;\n   --  Not visible from external units\nend Encapsulate;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Encapsulate is\n\n   procedure Hello is\n   begin\n      Put_Line (\"Hello\");\n   end Hello;\n\n   procedure Hello2 is\n   begin\n      Put_Line (\"Hello #2\");\n   end Hello2;\n\nend Encapsulate;\n\nwith Encapsulate;\n\nprocedure Main is\nbegin\n   Encapsulate.Hello;\n   Encapsulate.Hello2;\n   --  Invalid: Hello2 is not visible\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Privacy.Encapsulate",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "encapsulate.ads",
+        "encapsulate.adb",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "7ee24d5b3a7c906a22875f03612613a8d799faa1cc86b9e175006ea3d581f14dde51a91b0942c3bfe1d75a397ba93e9e1ccfa07d6aa43f14f53e83b3c8f03d6e",
+    "text_hash_short": "cf56ee89481962d1e0a6d1e9ad888362"
+}

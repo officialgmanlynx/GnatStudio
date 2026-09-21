@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 2773,
+    "line_end": 2809,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Range is\n\n   type Float_6_Digits is\n     digits 6;\n\n   type Float_6_Digits_Normalized is new\n     Float_6_Digits\n       range -1.0 .. 1.0;\n\n   type Float_6_Digits_Normalized_Positive is new\n     Float_6_Digits_Normalized\n       range 0.0 .. 1.0;\n\n   F6_N  : Float_6_Digits_Normalized;\n   F6_NP : Float_6_Digits_Normalized_Positive;\nbegin\n   F6_N := 0.123456123;\n\n   Put_Line (\"F6_N  = \"\n             & F6_N'Image);\n\n   F6_NP :=\n     Float_6_Digits_Normalized_Positive (F6_N);\n\n   Put_Line (\"F6_NP = \"\n             & F6_NP'Image);\n\n   Put_Line\n     (\"Float_6_Digits_Normalized'Size  :\"\n      & Float_6_Digits_Normalized'Size'Image\n      & \" bits\");\nend Show_Range;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Floating_Point_Types.Floating_Point_Derived_Range",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_range.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_range.adb",
+    "text_hash": "d781d350117fda6d7c2442276690ae71ce4dc5a980f7ce6949c3fa45d7a34410d43569be0d0501e8c6d1de345b91a3c5ad82b96bff66cfe1634b6176dcd17d7f",
+    "text_hash_short": "684bcfcbadda9d04ef93260fa8745f99"
+}

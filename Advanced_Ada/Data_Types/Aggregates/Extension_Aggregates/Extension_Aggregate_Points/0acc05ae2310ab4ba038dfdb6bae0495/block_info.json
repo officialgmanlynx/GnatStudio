@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/aggregates.rst",
+    "line_start": 1617,
+    "line_end": 1664,
+    "text": "package Points is\n\n   type Point_1D is tagged record\n      X : Float;\n   end record;\n\n   procedure Display (P : Point_1D);\n\n   type Point_2D is new Point_1D with record\n      Y : Float;\n   end record;\n\n   procedure Display (P : Point_2D);\n\n   type Point_3D is new Point_2D with record\n      Z : Float;\n   end record;\n\n   procedure Display (P : Point_3D);\n\nend Points;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Points is\n\n   procedure Display (P : Point_1D) is\n   begin\n      Put_Line (\"(X => \" & P.X'Image & \")\");\n   end Display;\n\n   procedure Display (P : Point_2D) is\n   begin\n      Put_Line (\"(X => \" & P.X'Image\n                & \", Y => \" & P.Y'Image & \")\");\n   end Display;\n\n   procedure Display (P : Point_3D) is\n   begin\n      Put_Line (\"(X => \" & P.X'Image\n                & \", Y => \" & P.Y'Image\n                & \", Z => \" & P.Z'Image & \")\");\n   end Display;\n\nend Points;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Aggregates.Extension_Aggregates.Extension_Aggregate_Points",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "points.ads",
+        "points.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "609ba87dfb290806e3c134789d2d4e353f04d3d068de6fbd1555ce917f54236f8e15a3a8ae23475a8bf4fd93130244a59c02ad7bbf53c0005021bedceda09147",
+    "text_hash_short": "0acc05ae2310ab4ba038dfdb6bae0495"
+}

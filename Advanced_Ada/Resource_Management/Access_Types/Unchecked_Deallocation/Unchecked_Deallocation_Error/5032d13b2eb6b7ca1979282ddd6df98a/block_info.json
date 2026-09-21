@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 3818,
+    "line_end": 3853,
+    "text": "with Ada.Unchecked_Deallocation;\n\nprocedure Show_Unchecked_Deallocation_Errors is\n\n   type Integer_Access_Zero is access Integer\n     with Storage_Size => 0;\n\n   procedure Free is\n     new Ada.Unchecked_Deallocation\n       (Object => Integer,\n        Name   => Integer_Access_Zero);\n\n   type Constant_Integer_Access is\n     access constant Integer;\n\n   --  ERROR: Cannot use access-to-constant type\n   --         for Name\n   procedure Free is\n     new Ada.Unchecked_Deallocation\n       (Object => Integer,\n        Name   => Constant_Integer_Access);\n\n   I : Integer_Access_Zero;\n\nbegin\n   --  ERROR: Cannot allocate objects from\n   --         empty storage pool\n   I := new Integer;\n\n   --  ERROR: Cannot deallocate objects from\n   --         empty storage pool\n   Free (I);\nend Show_Unchecked_Deallocation_Errors;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Unchecked_Deallocation.Unchecked_Deallocation_Error",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_unchecked_deallocation_errors.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_unchecked_deallocation_errors.adb",
+    "text_hash": "25ee9c96cf9cfd9fa0aeb0d876814f837a825f9ad1400cffa205bd5fcb14696f627cffe6ad68b8b8322128d26c7081de819140f13020478826c131146ffec243",
+    "text_hash_short": "5032d13b2eb6b7ca1979282ddd6df98a"
+}

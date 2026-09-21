@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 1779,
+    "line_end": 1793,
+    "text": "package Limited_Private_Unknown_Discriminants is\n\n   type Rec (<>) is limited private;\n\nprivate\n\n   type Rec is limited\n   record\n      I : Integer;\n   end record;\n\nend Limited_Private_Unknown_Discriminants;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Discriminants.Limited_Private_Unknown_Discriminants",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "limited_private_unknown_discriminants.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "9aae9f94196154dbcf8cff814a25759cffc5a37af805695997bab95ff0b805be2d4b7bc2eecb8f680722b69d8649866723992cffa5dbfb9f79a80f4cb6996f05",
+    "text_hash_short": "74184919132a084da76bd3e1445c22e5"
+}

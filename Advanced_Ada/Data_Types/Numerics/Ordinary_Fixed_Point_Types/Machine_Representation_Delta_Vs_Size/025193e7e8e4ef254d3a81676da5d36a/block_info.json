@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 8215,
+    "line_end": 8291,
+    "text": "generic\n   type T_Fixed     is delta <>;\n   type T_Int_Fixed is range <>;\nprocedure Gen_Show_Info (V     : T_Fixed;\n                         V_Str : String);\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Gen_Show_Info (V     : T_Fixed;\n                         V_Str : String)\nis\n   V_Local       : T_Fixed;\n   V_Int_Overlay : T_Int_Fixed\n     with Address => V_Local'Address,\n          Import, Volatile;\n   V_Real        : Float;\nbegin\n   V_Local := V;\n   V_Real  := Float (V_Int_Overlay) *\n     T_Fixed'Small;\n\n   Put_Line (V_Str\n             & \" (fixed-point) : \"\n             & Float (V_Local)'Image);\n   Put_Line (V_Str\n             & \" (integer)     : \"\n             & V_Int_Overlay'Image);\n   Put_Line (V_Str\n             & \" (floating-p.) : \"\n             & V_Real'Image);\n   Put_Line (\"----------\");\nend Gen_Show_Info;\n\nwith Ada.Text_IO;   use Ada.Text_IO;\n\nwith Custom_Fixed_Point;\nuse  Custom_Fixed_Point;\n\nwith Gen_Show_Info;\n\nprocedure Show_Machine_Repr_Delta_Vs_Size\nis\n   procedure Show_Info is new\n     Gen_Show_Info (T_Fixed     => TQ31,\n                    T_Int_Fixed => Int_TQ31);\n   procedure Show_Info is new\n     Gen_Show_Info (T_Fixed     => TQ7_24,\n                    T_Int_Fixed => Int_TQ7_24);\nbegin\n   Show_Info (TQ31'First,\n              \"TQ31'First    \");\n   Show_Info (TQ31'(0.25),\n              \"0.25          \");\n   Show_Info (TQ31'(0.50),\n              \"0.50          \");\n   Show_Info (TQ31'Last,\n              \"TQ31'Last     \");\n   Put_Line\n      (\"-----------------------------\");\n\n   Show_Info (TQ7_24'First,\n              \"TQ7_24'First \");\n   Show_Info (TQ7_24'(-1.0),\n              \"-1.0         \");\n   Show_Info (TQ7_24'(0.25),\n              \"0.25         \");\n   Show_Info (TQ7_24'(0.50),\n              \"0.50         \");\n   Show_Info (TQ7_24'Last,\n              \"TQ7_24'Last  \");\n   Put_Line\n      (\"-----------------------------\");\n\nend Show_Machine_Repr_Delta_Vs_Size;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Ordinary_Fixed_Point_Types.Machine_Representation_Delta_Vs_Size",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "gen_show_info.ads",
+        "gen_show_info.adb",
+        "show_machine_repr_delta_vs_size.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_machine_repr_delta_vs_size.adb",
+    "text_hash": "68f2ada0425296ab2c3b1237280ad1cd1f4c500e842aeee838bbe99d3c03641f0a3cb290757096d3474cc07faec5b69867dd04113ee336c8d21d7a661d6876a2",
+    "text_hash_short": "025193e7e8e4ef254d3a81676da5d36a"
+}

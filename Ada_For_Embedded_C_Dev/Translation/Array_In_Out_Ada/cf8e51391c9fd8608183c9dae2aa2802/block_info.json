@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 552,
+    "line_end": 559,
+    "text": "package Array_Types is\n   type Arr is array (Integer range <>) of Integer;\n\n   procedure P (A : in out Integer; B : in out Arr);\nend Array_Types;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.Array_In_Out_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "array_types.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "e1ec86c819746f21adbc6a0c33f2ed7aa99639a03179e460eca3624f52c220277afd9cf102327dc28a1960d4643b0d08b764f2d2101cd3698decdc0304ec5d7a",
+    "text_hash_short": "cf8e51391c9fd8608183c9dae2aa2802"
+}

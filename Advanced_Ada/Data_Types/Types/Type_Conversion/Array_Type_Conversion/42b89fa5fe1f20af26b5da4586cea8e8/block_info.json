@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 2441,
+    "line_end": 2507,
+    "text": "package Custom_Arrays_1 is\n\n   type Integer_Array_1 is\n     array (Positive range <>) of Integer;\n\n   type Float_Array_1 is\n     array (Positive range <>) of Float;\n\nend Custom_Arrays_1;\n\npackage Custom_Arrays_2 is\n\n   type Integer_Array_2 is\n     array (Positive range <>) of Integer;\n\n   type Float_Array_2 is\n     array (Positive range <>) of Float;\n\nend Custom_Arrays_2;\n\nwith Ada.Text_IO;     use Ada.Text_IO;\nwith Custom_Arrays_1; use Custom_Arrays_1;\nwith Custom_Arrays_2; use Custom_Arrays_2;\n\nprocedure Show_Conversion is\n   subtype Common_Range is Positive range 1 .. 3;\n\n   AI_1 : Integer_Array_1 (Common_Range);\n   AI_2 : Integer_Array_2 (Common_Range);\n   AF_1 : Float_Array_1 (Common_Range);\n   AF_2 : Float_Array_2 (Common_Range);\nbegin\n   AI_2 := [1, 2, 3];\n   AI_1 := Integer_Array_1 (AI_2);\n\n   Put_Line (\"AI_1: \"\n             & AI_1'Image);\n\n   AI_1 := [4, 5, 6];\n   AI_2 := Integer_Array_2 (AI_1);\n\n   Put_Line (\"AI_2: \"\n             & AI_2'Image);\n\n   --  ERROR: Cannot convert arrays whose\n   --         components have different types:\n   --\n   --  AF_1 := Float_Array_1 (AI_1);\n   --\n   --  Instead, use array aggregate where each\n   --  component is converted from integer to\n   --  float:\n   --\n   AF_1 := [for I in AF_1'Range =>\n              Float (AI_1 (I))];\n\n   Put_Line (\"AF_1: \"\n             & AF_1'Image);\n\n   AF_2 := Float_Array_2 (AF_1);\n\n   Put_Line (\"AF_2: \"\n             & AF_2'Image);\nend Show_Conversion;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Type_Conversion.Array_Type_Conversion",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_arrays_1.ads",
+        "custom_arrays_2.ads",
+        "show_conversion.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_conversion.adb",
+    "text_hash": "578b9a2407d300a7449727605963c265b1cdb507032125fb7d31b2ebf4473d758b7ab4622db3487381d89318b48df13836ad14a99e4f97afdf93d0c31f46ebf0",
+    "text_hash_short": "42b89fa5fe1f20af26b5da4586cea8e8"
+}

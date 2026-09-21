@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/arrays.rst",
+    "line_start": 81,
+    "line_end": 103,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Array_Bounds_Example is\n   type My_Int is range 0 .. 1000;\n\n   type Index is range 11 .. 15;\n   --                  ^ Low bound can\n   --                    be any value\n\n   type My_Int_Array is\n     array (Index) of My_Int;\n\n   Tab : constant My_Int_Array :=\n           (2, 3, 5, 7, 11);\nbegin\n   for I in Index loop\n      Put (My_Int'Image (Tab (I)));\n   end loop;\n   New_Line;\nend Array_Bounds_Example;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Arrays.Array_Bounds_Example",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "array_bounds_example.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "array_bounds_example.adb",
+    "text_hash": "6d733ac638925a7fd9041b2e0b517476d4969a01557ef5bd1132e2a0359c156b6d641a2f65ab5ac8fbbd32e417a3cc43f06d0eb31542f6bd25935501172f2995",
+    "text_hash_short": "e5fe9e7b83055f3ae23dd890e29c22de"
+}

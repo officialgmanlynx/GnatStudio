@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/03_syntactic_guarantees.rst",
+    "line_start": 405,
+    "line_end": 420,
+    "text": "procedure Well_Formed_Loop (C : Boolean) is\n   Flag : Boolean := False;\nbegin\n   for I in 0 .. 4 loop\n      exit when not Flag;\n\n      if C then\n         Flag := True;\n      end if;\n\n      I := I + 3;  --  ERROR\n   end loop;\nend Well_Formed_Loop;\n",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Syntactic_Guarantees.Well_Formed_Loop",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "well_formed_loop.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "well_formed_loop.adb",
+    "text_hash": "9e8bc2c890c3e2e75af4000baa9b5ba01db32e673ee12121d9d0f9ea4cf94ddfa834bd742a79ce1b6586a8dcf0fb8b81f5db02742032e360d8ca7bfe1398d764",
+    "text_hash_short": "842564c961aa018e03e03f81439995ec"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 454,
+    "line_end": 473,
+    "text": "package Static_Expressions is\n\n   Pi     : constant := 3.1415926535;\n   --                   ^^^^^^^^^^^^\n   --               universal real type\n\n   Two_Pi : constant := 2 * Pi;\n   --                   ^\n   --              universal integer type\n   --\n   --                       Pi\n   --                       ^^\n   --                 universal real type\n   --\n   --      => result: universal real type\n\nend Static_Expressions;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Universal_Numeric_Types.Static_Expressions",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "static_expressions.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "8b4077434884e9cd7e50f0c35432c01e286a03c87268962f6b9484ba138b7970616aba2ebce62a3d5c1c6976c1c7d6bcae06500cec38b5887cfb24b5ebbf4c7e",
+    "text_hash_short": "3de80a66631da876d877e7e3bbe73277"
+}

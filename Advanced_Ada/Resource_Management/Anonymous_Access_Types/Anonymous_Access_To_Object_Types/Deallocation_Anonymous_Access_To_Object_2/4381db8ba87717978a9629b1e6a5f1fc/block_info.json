@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 778,
+    "line_end": 796,
+    "text": "procedure Show_Automatic_Deallocation is\n   I  : aliased Integer;\n   --   ^ Allocating object on the stack\n\n   IA : access Integer;\nbegin\n   IA := I'Access;\n   --  Indirect allocation:\n   --  object creation on the stack.\n\n   IA.all := 30;\n\n   --  Automatic deallocation at the end of the\n   --  procedure because the integer variable is\n   --  on the stack.\nend Show_Automatic_Deallocation;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Anonymous_Access_To_Object_Types.Deallocation_Anonymous_Access_To_Object_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_automatic_deallocation.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_automatic_deallocation.adb",
+    "text_hash": "5e4d16b393d8ff3ef7020a42da8067a89eec78cffc58c347923f2bf29e359634f4f7ed8183bcfd46e2f54125a2addd2ed7ed43243a557e006560100458832a0c",
+    "text_hash_short": "4381db8ba87717978a9629b1e6a5f1fc"
+}

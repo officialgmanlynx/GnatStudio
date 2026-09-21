@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 1874,
+    "line_end": 1908,
+    "text": " with Transceivers; use Transceivers;\n\n package Abstract_Transceivers is\n\n    type Abstract_Transceiver is abstract new Send_Interface and\n      Receive_Interface with null record;\n\n    procedure Send (D : in out Abstract_Transceiver);\n    --  We don't implement Receive for Abstract_Transceiver!\n\n end Abstract_Transceivers;\n\n with Ada.Text_IO; use Ada.Text_IO;\n\n package body Abstract_Transceivers is\n\n    procedure Send (D : in out Abstract_Transceiver) is\n       pragma Unreferenced (D);\n    begin\n       Put_Line (\"Sending data...\");\n    end Send;\n\n end Abstract_Transceivers;\n\n with Abstract_Transceivers; use Abstract_Transceivers;\n\n procedure Main is\n    D : Abstract_Transceiver;\n begin\n    D.Send;\n    D.Receive;\n end Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.Multiple_Interfaces",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "abstract_transceivers.ads",
+        "abstract_transceivers.adb",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "e7d0d639c7e19abdfa7c07f951679fbd36d8f45c5c9923e5f8b69cd0b719366c376e240e8694ae0ccac4a337151cfd49939d3ab4e8850de1221e23a19ba6e3f1",
+    "text_hash_short": "c2b0b3aab1ffc9c3b9a0749bf6721088"
+}

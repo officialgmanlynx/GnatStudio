@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/04_Embedded.rst",
+    "line_start": 763,
+    "line_end": 776,
+    "text": "with System;\n\nprocedure Show_Shared_HW_Register is\n   type Atomic_Integer is new Integer with Atomic;\n\n   R : Atomic_Integer with Address => System'To_Address (16#FFFF00A0#);\n\n   Arr : array (1 .. 2) of Integer with Atomic_Components;\nbegin\n   null;\nend Show_Shared_HW_Register;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Embedded.Atomic_Types_Arrays",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "show_shared_hw_register.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "85222a8eee16c952d1f3edbb3edb3cbf6dadb12e2ca807ff5383f2adad628f9ecb5dadaff1acbe464bc35fa15d33a6b7af6d3c1b5ffb00ff8c038f97112b5fd1",
+    "text_hash_short": "11475b5152087eff7f36abfe2c5ae9a1"
+}

@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 11171,
+    "line_end": 11198,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Ada.Numerics.Big_Numbers.Big_Reals;\nuse  Ada.Numerics.Big_Numbers.Big_Reals;\n\nprocedure Show_Big_Real_Fixed_Point_Conversion\nis\n   D : constant := 2.0 ** (-31);\n   type TQ31 is delta D range -1.0 .. 1.0 - D;\n\n   package TQ31_Conversions is new\n     Fixed_Conversions (TQ31);\n   use TQ31_Conversions;\n\n   BR   : Big_Real;\n   FQ31 : TQ31 := 0.25;\n\nbegin\n   BR := To_Big_Real (FQ31);\n   Put_Line (\"BR:   \" & BR'Image);\n\n   FQ31 := From_Big_Real (BR * 2.0);\n   Put_Line (\"FQ31: \" & FQ31'Image);\n\nend Show_Big_Real_Fixed_Point_Conversion;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Big_Numbers.Big_Real_Fixed_Point_Conversion",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_big_real_fixed_point_conversion.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_big_real_fixed_point_conversion.adb",
+    "text_hash": "6f076de55962aa715f5b2f0ed83441aad65d5a137ada4f95c84590aae2375f8b3975f17571c3850b23f6449670716a4eb9dd02a2dac5b5d347b68f4d07e7a2c2",
+    "text_hash_short": "49f03e130ec34842cbac7a728a280821"
+}

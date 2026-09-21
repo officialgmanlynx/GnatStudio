@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 6001,
+    "line_end": 6040,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Decimal_Range is\n\n   type D1 is\n     delta 1.0 digits 1;\n   type D2 is\n     delta 1.0 digits 2;\n   type D3 is\n     delta 1.0 digits 3;\n   type D6 is\n     delta 1.0 digits 6;\n   type D38 is\n     delta 1.0 digits 38;\n\nbegin\n   Put_Line (\"D1'Range : \"\n             & D1'First'Image\n             & \" .. \"\n             & D1'Last'Image);\n   Put_Line (\"D2'Range : \"\n             & D2'First'Image\n             & \" .. \"\n             & D2'Last'Image);\n   Put_Line (\"D3'Range : \"\n             & D3'First'Image\n             & \" .. \"\n             & D3'Last'Image);\n   Put_Line (\"D6'Range : \"\n             & D6'First'Image\n             & \" .. \"\n             & D6'Last'Image);\n   Put_Line (\"D38'Range : \"\n             & D38'First'Image\n             & \" .. \"\n             & D38'Last'Image);\nend Show_Decimal_Range;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Decimal_Fixed_Point_Types.Decimal_Fixed_Point_Range",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_decimal_range.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_decimal_range.adb",
+    "text_hash": "f333fc2dd2e63471e2a8bc3d481515ef619f316829962a40c1e18de62f13f47cf8579e281eb4be583715895ba317d755591594f99c8ffaf88d72a34da0edcbd6",
+    "text_hash_short": "dd3dbc2525fbc7befe95246e29af1c6b"
+}

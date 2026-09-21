@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/exceptions.rst",
+    "line_start": 128,
+    "line_end": 150,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\nwith Ada.Exceptions;  use Ada.Exceptions;\n\nprocedure Be_Careful is\n   function Dangerous return Integer is\n   begin\n      raise Constraint_Error;\n      return 42;\n   end Dangerous;\n\nbegin\n   declare\n      A : Integer := Dangerous;\n   begin\n      Put_Line (Integer'Image (A));\n   exception\n      when Constraint_Error =>\n         Put_Line (\"error!\");\n   end;\nend Be_Careful;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Exceptions.Be_Careful",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "be_careful.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "be_careful.adb",
+    "text_hash": "a2cc8f6ad1adb2bdeff3472cc251fb8f8c511d78eb78641be2ad8458a4e4585d0c5276d9199ebc3bb82ce58213323e165f9bc0b15b6ea2393a02f13a873bdcd8",
+    "text_hash_short": "6ea8a214bbbaca09d7444136d069e782"
+}

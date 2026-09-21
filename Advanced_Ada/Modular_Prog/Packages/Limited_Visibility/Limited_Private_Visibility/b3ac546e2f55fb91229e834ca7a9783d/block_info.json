@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/modular_prog/packages.rst",
+    "line_start": 835,
+    "line_end": 872,
+    "text": "limited private with B;\n\npackage A is\n\n   type T1 is private;\n\nprivate\n\n   --  Here, we have limited visibility\n   --  of package B\n\n   type T1 is record\n      Ref : access B.T2;\n   end record;\n\nend A;\n\nprivate with A;\n\npackage B is\n\n   type T2 is private;\n\nprivate\n\n   use A;\n\n   --  Here, we have full visibility\n   --  of package A\n\n   type T2 is record\n      Value : T1;\n   end record;\n\nend B;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Modular_Prog.Packages.Limited_Visibility.Limited_Private_Visibility",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "a.ads",
+        "b.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "75cd4f828686fbb206aa4ce0c3ae6364ffce378dda684c4c328f1de9b8f27297aed4052eef9130dd02ad356a14291fa9ea1918c5128757c2b24f12a20bce447f",
+    "text_hash_short": "b3ac546e2f55fb91229e834ca7a9783d"
+}

@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 669,
+    "line_end": 710,
+    "text": "generic\n   type T is private;\npackage Hidden_Anonymous_Allocation is\n\n   function New_T\n     return not null access T;\n\n   procedure Free (Obj : access T);\n\nend Hidden_Anonymous_Allocation;\n\nwith Ada.Unchecked_Deallocation;\n\npackage body Hidden_Anonymous_Allocation is\n\n   type T_Access is access all T;\n\n   procedure T_Access_Free is\n     new Ada.Unchecked_Deallocation\n       (Object => T,\n        Name   => T_Access);\n\n   function New_T\n     return not null access T is\n   begin\n      return T_Access'(new T);\n      --  Using allocation of the T_Access type:\n      --  object is allocated from T_Access's pool\n   end New_T;\n\n   procedure Free (Obj : access T) is\n      Tmp : T_Access := T_Access (Obj);\n   begin\n      T_Access_Free (Tmp);\n      --  Using deallocation procedure of the\n      --  T_Access type\n   end Free;\n\nend Hidden_Anonymous_Allocation;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Anonymous_Access_To_Object_Types.Hidden_Alloc_Dealloc_Anonymous_Access_To_Object",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "hidden_anonymous_allocation.ads",
+        "hidden_anonymous_allocation.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "d1595b6bfd98f7d51fa5cbfe6b8bf9ee763616ccb1f8041a81de03e85785995f3ce1616d9d73630f8f701a262d29510e2938f257e22f5abb128c91b001c69e00",
+    "text_hash_short": "bd3831829f34f06a1d3c25a975c850a3"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 1026,
+    "line_end": 1043,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Int_Array_Bitfield is\n   type Bit_Field is array (Natural range <>) of Boolean with Pack;\n\n   A : array (1 .. 2) of Integer := (others => 0);\n   B : Bit_Field (0 .. A'Size - 1)\n     with Address => A'Address, Import, Volatile;\nbegin\n   B (2) := True;\n   for I in A'Range loop\n      Put_Line (\"A (\" & Integer'Image (I)\n                & \")= \" & Integer'Image (A (I)));\n   end loop;\nend Int_Array_Bitfield;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.Bitfield_Int_Array_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "int_array_bitfield.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "int_array_bitfield.adb",
+    "text_hash": "932771fcd614c7e7e849f30c12ed931e68ae0873752aaf0915fa6c43900cf737f25c4c2a02ed498d01e428c985e3a9bf68b00301630cc5eebe5b63b068bd04ab",
+    "text_hash_short": "478ba4ce4f5886566556bddb58245eb9"
+}

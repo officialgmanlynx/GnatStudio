@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 3139,
+    "line_end": 3178,
+    "text": "package Variant_Records is\n\n   type Simple_Record\n     (Extended : Boolean := False) is\n   record\n      V : Integer;\n      case Extended is\n         when False =>\n            null;\n         when True  =>\n            V_Float : Float;\n      end case;\n   end record;\n\nend Variant_Records;\n\nwith Ada.Text_IO;     use Ada.Text_IO;\n\nwith Variant_Records; use Variant_Records;\n\nprocedure Show_Variant_Rec_Size is\n   SR_No_Ext : Simple_Record\n                 (Extended => False);\n   SR_Ext    : Simple_Record\n                 (Extended => True);\n   SR        : Simple_Record;\nbegin\n   Put_Line (\"SR_No_Ext'Size : \"\n             & SR_No_Ext'Size'Image\n             & \" bits\");\n   Put_Line (\"SR_Ext'Size : \"\n             & SR_Ext'Size'Image\n             & \" bits\");\n   Put_Line (\"SR'Size : \"\n             & SR'Size'Image\n             & \" bits\");\nend Show_Variant_Rec_Size;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Variant_Parts.Size",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "variant_records.ads",
+        "show_variant_rec_size.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_variant_rec_size.adb",
+    "text_hash": "76154ae08fd6f337e74edd16de3f684f6484a97dc909233fda149bf9f376f6d8e567ed74586545030c2387af499038d6764536f7894f14063143bf93896325c6",
+    "text_hash_short": "4aaf10924e7469d000cefeb70a69a2fa"
+}

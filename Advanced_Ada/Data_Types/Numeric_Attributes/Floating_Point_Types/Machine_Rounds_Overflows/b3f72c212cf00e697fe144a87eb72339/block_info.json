@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numeric_attributes.rst",
+    "line_start": 466,
+    "line_end": 509,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Boolean_Attributes is\nbegin\n   Put_Line\n     (\"Float'Denorm:           \"\n      & Float'Denorm'Image);\n   Put_Line\n     (\"Long_Float'Denorm:      \"\n      & Long_Float'Denorm'Image);\n   Put_Line\n     (\"Long_Long_Float'Denorm: \"\n      & Long_Long_Float'Denorm'Image);\n   Put_Line\n     (\"Float'Signed_Zeros:           \"\n      & Float'Signed_Zeros'Image);\n   Put_Line\n     (\"Long_Float'Signed_Zeros:      \"\n      & Long_Float'Signed_Zeros'Image);\n   Put_Line\n     (\"Long_Long_Float'Signed_Zeros: \"\n      & Long_Long_Float'Signed_Zeros'Image);\n   Put_Line\n     (\"Float'Machine_Rounds:           \"\n      & Float'Machine_Rounds'Image);\n   Put_Line\n     (\"Long_Float'Machine_Rounds:      \"\n      & Long_Float'Machine_Rounds'Image);\n   Put_Line\n     (\"Long_Long_Float'Machine_Rounds: \"\n      & Long_Long_Float'Machine_Rounds'Image);\n   Put_Line\n     (\"Float'Machine_Overflows:           \"\n      & Float'Machine_Overflows'Image);\n   Put_Line\n     (\"Long_Float'Machine_Overflows:      \"\n      & Long_Float'Machine_Overflows'Image);\n   Put_Line\n     (\"Long_Long_Float'Machine_Overflows: \"\n      & Long_Long_Float'Machine_Overflows'Image);\nend Show_Boolean_Attributes;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numeric_Attributes.Floating_Point_Types.Machine_Rounds_Overflows",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_boolean_attributes.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_boolean_attributes.adb",
+    "text_hash": "07e8c746643351d3363a515f686f79bf0060ccb1a810b5ba511c046edef7f65ea77e3076664398b0b28e15156da483e503762a3e282b7423288131b530e5a712",
+    "text_hash_short": "b3f72c212cf00e697fe144a87eb72339"
+}

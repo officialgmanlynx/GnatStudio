@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 922,
+    "line_end": 944,
+    "text": "package Array_Definition is\n   type Arr is array (Integer range <>) of Integer;\n\n   type S (Last : Integer) is private;\n\nprivate\n   type S (Last : Integer) is record\n      A : Arr (0 .. Last);\n   end record;\n\nend Array_Definition;\n\nwith Ada.Text_IO;      use Ada.Text_IO;\nwith Array_Definition; use Array_Definition;\n\nprocedure Main is\n   V : S (9);\nbegin\n   Put_Line (\"Last : \" & Integer'Image (V.Last));\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.Rec_Disc_Ada_Private",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "array_definition.ads",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "54cd6257922b765e47e3dbf747cb8df687aa1bb577ac69bcc46b4cb65a10407e4027d94b1062cfaf99020e6ddffb89e094e9fe2f543432e9122cdc08be35f150",
+    "text_hash_short": "fa0158c3c61dd9ec7e4000416672f9e9"
+}

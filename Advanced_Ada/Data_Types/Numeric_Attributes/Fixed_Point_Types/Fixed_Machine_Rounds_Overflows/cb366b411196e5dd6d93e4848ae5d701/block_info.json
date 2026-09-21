@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numeric_attributes.rst",
+    "line_start": 1269,
+    "line_end": 1289,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Boolean_Attributes is\n   type T3_D3 is delta 10.0 ** (-3) digits 3;\n\n   D : constant := 2.0 ** (-31);\n   type TQ31 is delta D range -1.0 .. 1.0 - D;\nbegin\n   Put_Line (\"T3_D3'Machine_Rounds:    \"\n             & T3_D3'Machine_Rounds'Image);\n   Put_Line (\"TQ31'Machine_Rounds:     \"\n             & TQ31'Machine_Rounds'Image);\n   Put_Line (\"T3_D3'Machine_Overflows: \"\n             & T3_D3'Machine_Overflows'Image);\n   Put_Line (\"TQ31'Machine_Overflows:  \"\n             & TQ31'Machine_Overflows'Image);\nend Show_Boolean_Attributes;\n\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numeric_Attributes.Fixed_Point_Types.Fixed_Machine_Rounds_Overflows",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_boolean_attributes.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_boolean_attributes.adb",
+    "text_hash": "46657aa92d2e01718c604ba5aefebc6755e4b6599b13ef2b8b7658cb04bdba27f1d2a21982e45b28374bb07c80db8b23b330ae22d0970f327af694b27c5dc06b",
+    "text_hash_short": "cb366b411196e5dd6d93e4848ae5d701"
+}

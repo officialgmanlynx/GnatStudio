@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/generics.rst",
+    "line_start": 18,
+    "line_end": 31,
+    "text": "generic\n   type T is private;\n   --  Declaration of formal types and objects\n--  Below, we could use one of the following:\n--  <procedure | function | package>\nprocedure Operator (Dummy : in out T);\n\nprocedure Operator (Dummy : in out T) is\nbegin\n   null;\nend Operator;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Generics.Show_Simple_Generic",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "operator.ads",
+        "operator.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "94020e9935bd1afc02793fb6d8e51dce530b63457077d0d868cfa2682390072219614a2b25059d59ddb3f06b698551a2897c139737994a5e6a6412d379cb36c0",
+    "text_hash_short": "1321d437043dafdb725fad416e654318"
+}

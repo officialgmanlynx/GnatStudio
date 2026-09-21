@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/03_Proof_Of_Program_Integrity.rst",
+    "line_start": 756,
+    "line_end": 799,
+    "text": "package Lists with SPARK_Mode is\n\n   type Index is new Integer;\n\n   function Goes_To (I, J : Index) return Boolean;\n\n   procedure Link (I, J : Index) with Post => Goes_To (I, J);\n\nprivate\n\n   type Cell (Is_Set : Boolean := True) is record\n      case Is_Set is\n         when True =>\n            Next : Index;\n         when False =>\n            null;\n      end case;\n   end record;\n\n   type Cell_Array is array (Index) of Cell;\n\n   Memory : Cell_Array;\n\nend Lists;\n\npackage body Lists with SPARK_Mode is\n\n   function Goes_To (I, J : Index) return Boolean is\n   begin\n      if Memory (I).Is_Set then\n         return Memory (I).Next = J;\n      end if;\n      return False;\n   end Goes_To;\n\n   procedure Link (I, J : Index) is\n   begin\n      Memory (I) := (Is_Set => True, Next => J);\n   end Link;\n\nend Lists;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Proof_of_Program_Integrity.Example_01",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "lists.ads",
+        "lists.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "116ab54d371ca9b831fc378690ad6deeae70935ca35d0f9c37aa912181cc9961b17819d52317bf010ae515ed0b45af154b24c7c45f2d12ab88d6e390e27861af",
+    "text_hash_short": "c2246948c584304d5694b49b4d1fd0fc"
+}

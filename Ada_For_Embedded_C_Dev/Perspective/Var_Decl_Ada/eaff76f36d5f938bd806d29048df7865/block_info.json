@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 421,
+    "line_end": 441,
+    "text": "with Ada.Text_IO;\n\nprocedure Main\nis\n   --  variable declaration\n   A, B : Integer := 0;\n   C    : Integer := 100;\n   D    : Integer;\nbegin\n   --  Ada does not have a shortcut format for increment like in C\n   A := A + 1;\n\n   --  regular addition\n   D := A + B + C;\n\n   --  printing the result\n   Ada.Text_IO.Put_Line (\"D =\" & D'Img);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Var_Decl_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "b1d6be1d69046c1d8f015bf7fc822072872487cd030dadd05b29741b2b0180d9d7b36a22bf2978c0761e744f13fa52173f17a11a59c7f69876ab8d5b5013166c",
+    "text_hash_short": "eaff76f36d5f938bd806d29048df7865"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/statements.rst",
+    "line_start": 311,
+    "line_end": 328,
+    "text": "procedure Show_Inner_Loop_Exit is\n   pragma Warnings (Off);\n\n   Cond : Boolean := True;\nbegin\n\n   Outer_Processing : loop\n\n      Inner_Processing : loop\n         exit Outer_Processing when Cond;\n      end loop Inner_Processing;\n\n   end loop Outer_Processing;\n\nend Show_Inner_Loop_Exit;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Statements.Exit_Loop_Statement.Inner_Loop_Exit",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_inner_loop_exit.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_inner_loop_exit.adb",
+    "text_hash": "4423bbe0c8b085ec50e886e10064db2000439dec0f8ce52005074555c390a471629ac9bbfa7bda5e7ea1f1e3efec483ed62acbae700332ddd8f1d682e79d4ae3",
+    "text_hash_short": "b5c7434f1bf23c2cb8f81e4c13a31386"
+}

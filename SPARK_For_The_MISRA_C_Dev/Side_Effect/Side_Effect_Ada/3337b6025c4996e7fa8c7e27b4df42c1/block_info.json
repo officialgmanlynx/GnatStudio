@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/06_side_effects.rst",
+    "line_start": 191,
+    "line_end": 212,
+    "text": "package Bad_Functions is\n   function Set (V : Integer) return Integer;\n   function Get return Integer;\nend Bad_Functions;\n\npackage body Bad_Functions is\n\n   Value : Integer := 0;\n\n   function Set (V : Integer) return Integer is\n      Previous : constant Integer := Value;\n   begin\n      Value := V;  --  ERROR\n      return Previous;\n   end Set;\n\n   function Get return Integer is (Value);\n\nend Bad_Functions;\n",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Side_Effect.Side_Effect_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow",
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": true,
+    "source_files": [
+        "bad_functions.ads",
+        "bad_functions.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "594f37b93fbb6a9950634c748f4e1658f9e83d63e0a639d7caf29527b0fbd9d2349756e265814473920c99143a885a4dc8dd9cac5beae0e9de2aeccd782059f3",
+    "text_hash_short": "3337b6025c4996e7fa8c7e27b4df42c1"
+}

@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/object_oriented_programming.rst",
+    "line_start": 597,
+    "line_end": 610,
+    "text": "with P; use P;\n\nprocedure Classwide_Compilation_Error is\n   T_Arr  : array (1 .. 2) of T'Class;\n   --                         ^\n   --               Compilation Error!\nbegin\n   for I in T_Arr'Range loop\n      T_Arr (I).Show;\n   end loop;\nend Classwide_Compilation_Error;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Object_Oriented_Programming.Classwide_Error",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "classwide_compilation_error.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "9b2476c8d91bb9d9679bdb76b8e93411e0e1f14a0ab6878aa74a7053743b585031b75d07c2ce3787d32cdc0df6d647b5bc0c99ccb6b6d88203b18477504da939",
+    "text_hash_short": "e86f6c6ee35dced8f330bf6177d178fd"
+}

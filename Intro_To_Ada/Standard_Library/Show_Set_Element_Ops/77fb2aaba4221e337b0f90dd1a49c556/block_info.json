@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_containers.rst",
+    "line_start": 956,
+    "line_end": 1011,
+    "text": "with Ada.Containers; use Ada.Containers;\nwith Ada.Containers.Ordered_Sets;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Set_Element_Ops is\n\n   package Integer_Sets is new\n     Ada.Containers.Ordered_Sets\n       (Element_Type => Integer);\n\n   use Integer_Sets;\n\n   procedure Show_Elements (S : Set) is\n   begin\n      New_Line;\n      Put_Line (\"Set has \"\n                & Count_Type'Image (S.Length)\n                & \" elements\");\n      Put_Line (\"Elements:\");\n      for E of S loop\n         Put_Line (\"- \" & Integer'Image (E));\n      end loop;\n   end Show_Elements;\n\n   S : Set;\nbegin\n   S.Insert (20);\n   S.Insert (10);\n   S.Insert (0);\n   S.Insert (13);\n\n   S.Delete (13);\n\n   --  Calling S.Delete (13) again raises\n   --  Constraint_Error because the element\n   --  is no longer present in the set, so\n   --  it can't be deleted. We can call\n   --  V.Exclude instead:\n   S.Exclude (13);\n\n   if S.Contains (20) then\n      Put_Line (\"Found element 20 in set\");\n   end if;\n\n   --  Alternatively, we could use S.Find\n   --  instead of S.Contains\n   if S.Find (0) /= No_Element then\n      Put_Line (\"Found element 0 in set\");\n   end if;\n\n   Show_Elements (S);\nend Show_Set_Element_Ops;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Set_Element_Ops",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_set_element_ops.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_set_element_ops.adb",
+    "text_hash": "3752e190216bf1e6feb1338c78dfb9835ecef574408d6e5928c5b05a28a5ca44287b6b95ea9bbc2ddf3c290077b9cb8e4914e184127fe2e00ab1a13d0dfc96d8",
+    "text_hash_short": "77fb2aaba4221e337b0f90dd1a49c556"
+}

@@ -1,0 +1,48 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/statements.rst",
+    "line_start": 411,
+    "line_end": 468,
+    "text": "package Scales is\n\n   type Satisfaction_Scale is (Very_Dissatisfied,\n                               Dissatisfied,\n                               OK,\n                               Satisfied,\n                               Very_Satisfied);\n\n   type Scale is range 0 .. 10;\n\n   function To_Satisfaction_Scale\n     (S : Scale)\n      return Satisfaction_Scale;\n\nend Scales;\n\npackage body Scales is\n\n   function To_Satisfaction_Scale\n     (S : Scale)\n      return Satisfaction_Scale\n   is\n      Satisfaction : Satisfaction_Scale;\n   begin\n      case (S) is\n         when 0 .. 2  =>\n            Satisfaction := Very_Dissatisfied;\n         when 3 .. 4  =>\n            Satisfaction := Dissatisfied;\n         when 5 .. 6  =>\n            Satisfaction := OK;\n         when 7 .. 8  =>\n            Satisfaction := Satisfied;\n         when 9 .. 10 =>\n            Satisfaction := Very_Satisfied;\n      end case;\n\n      return Satisfaction;\n   end To_Satisfaction_Scale;\n\nend Scales;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Scales;      use Scales;\n\nprocedure Show_Case_Statement_Expression is\n   Score : constant Scale := 0;\nbegin\n   Put_Line (\"Score: \"\n             & Scale'Image (Score)\n             & Satisfaction_Scale'Image (\n                 To_Satisfaction_Scale (Score)));\n\nend Show_Case_Statement_Expression;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Statements.If_Case_Loop_Statements.Case_Statement_Expression",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "nosyntax-check",
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "scales.ads",
+        "scales.adb",
+        "show_case_statement_expression.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_case_statement_expression.adb",
+    "text_hash": "671705d64fc85ea3e5f38d82249356fdbe751a7ed516098df839947e1bf7ca7ff0fcc88f6266390d31867a16ebc284db16b83d125223375f2c667a9b6bf4ee9d",
+    "text_hash_short": "353ff771291e0c994ec052e818f9720c"
+}

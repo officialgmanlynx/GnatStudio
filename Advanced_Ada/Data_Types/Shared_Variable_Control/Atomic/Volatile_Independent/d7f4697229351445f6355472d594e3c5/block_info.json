@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/shared_variable_control.rst",
+    "line_start": 460,
+    "line_end": 475,
+    "text": "package Shared_Var_Types is\n\n   Arr_1 : array (1 .. 2) of Integer\n             with Atomic_Components;\n\n   Arr_2 : array (1 .. 2) of Integer\n             with Atomic_Components,\n                  Volatile,\n                  Volatile_Components,\n                  Independent_Components;\n\nend Shared_Var_Types;\n\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Shared_Variable_Control.Atomic.Volatile_Independent",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "shared_var_types.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "34f0625c47fb2cb9be3cecd5fa1cbe3632c3ef0a59c6dd546b56ea349829809f767a72d7d29cecb64c7f4ae685a53f16bdabb2e312613975db9e34fa0b454607",
+    "text_hash_short": "d7f4697229351445f6355472d594e3c5"
+}

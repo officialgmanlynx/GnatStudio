@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/statements.rst",
+    "line_start": 346,
+    "line_end": 384,
+    "text": "procedure Show_If_Case_Loop_Statements is\n   pragma Warnings (Off);\n\n   Reset     : Boolean := False;\n   Increment : Boolean := True;\n   Val       : Integer := 0;\nbegin\n   --\n   --  If statement\n   --\n   if Reset then\n      Val := 0;\n   elsif Increment then\n      Val := Val + 1;\n   else\n      Val := Val - 1;\n   end if;\n\n   --\n   --  Loop statement\n   --\n   for I in 1 .. 5 loop\n      Val := Val * 2 - I;\n   end loop;\n\n   --\n   --  Case statement\n   --\n   case Val is\n      when 0 .. 5 =>\n         null;\n      when others =>\n         Val := 5;\n   end case;\n\nend Show_If_Case_Loop_Statements;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Statements.If_Case_Loop_Statements.Example",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_if_case_loop_statements.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_if_case_loop_statements.adb",
+    "text_hash": "e4c89e391b57f47dc56cd92ef4836e6d8b1b0d9267ce67c8ae331bf7a6084cc4ac08652832f0aa747531e1a613b2d339804edcc026368ec2f6fd4812a6576b4b",
+    "text_hash_short": "4fdc7f00e5218ed59d9eb050339567f1"
+}

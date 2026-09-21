@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 386,
+    "line_end": 399,
+    "text": "package Show_Universal_Real_Integer is\n\n   Pi : constant := 3.1415926535;\n   --               ^^^^^^^^^^^^\n   --            universal real type\n\n   N  : constant := 10;\n   --               ^^\n   --        universal integer type\n\nend Show_Universal_Real_Integer;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Universal_Numeric_Types.Universal_Real_Integer",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_universal_real_integer.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "be8091c49abf23c029039fcf338faa066439edf591b9f8dad98ca177fcd3bbf270cb5b20d1b1a168d8ddf1b53eb7c47f41de5fd1dea0112148568693023e7fd3",
+    "text_hash_short": "3cfa52af66185c693ede07f3b0e689e6"
+}

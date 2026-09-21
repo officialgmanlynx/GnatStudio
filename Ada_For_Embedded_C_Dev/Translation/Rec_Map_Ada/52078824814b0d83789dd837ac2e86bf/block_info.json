@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 668,
+    "line_end": 685,
+    "text": "procedure Main is\n   type Value_Rec is record\n     V1 : Boolean;\n     V2 : Integer range 0 .. 3;\n   end record;\n\n   for Value_Rec use record\n      V1 at 0 range 0 .. 0;\n      V2 at 0 range 1 .. 2;\n   end record;\n\n   Value : Value_Rec := (V1 => True, V2 => 2);\nbegin\n   null;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.Rec_Map_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "41c49f6c379eb68ae60f2a631a99ea0c62ac1192469574ba59afd1cda7f63c7653b8c3ac810c7b8360daf3e816c83bd58fb55a3e4e4fdeb7e42129bae432457a",
+    "text_hash_short": "52078824814b0d83789dd837ac2e86bf"
+}

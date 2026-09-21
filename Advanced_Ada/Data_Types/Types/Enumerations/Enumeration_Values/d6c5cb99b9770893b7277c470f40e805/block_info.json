@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 1223,
+    "line_end": 1248,
+    "text": "package Days is\n\n   type Day is (Mon, Tue, Wed,\n                Thu, Fri,\n                Sat, Sun);\n\nend Days;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Days;        use Days;\n\nprocedure Show_Days is\nbegin\n   for D in Day loop\n      Put_Line (Day'Image (D)\n                & \" position      = \"\n                & Integer'Image (Day'Pos (D)));\n      Put_Line (Day'Image (D)\n                & \" internal code = \"\n                & Integer'Image\n                    (Day'Enum_Rep (D)));\n   end loop;\nend Show_Days;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Enumerations.Enumeration_Values",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "days.ads",
+        "show_days.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_days.adb",
+    "text_hash": "0b63ed2dce7ff2092881f875f89c81dc0736328bc95751385b04623b02b49c65758366b61eb2353baf38a7ed8b2231a0429264f49b9710ba693b965f64824cea",
+    "text_hash_short": "d6c5cb99b9770893b7277c470f40e805"
+}

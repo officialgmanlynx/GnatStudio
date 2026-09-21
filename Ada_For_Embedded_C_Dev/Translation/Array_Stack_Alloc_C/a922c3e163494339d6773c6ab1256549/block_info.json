@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 474,
+    "line_end": 484,
+    "text": "!array_decl.c\n#include <stdlib.h>\n\nint main() {\n    int *a = malloc(sizeof(int) * 10);\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.Array_Stack_Alloc_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "array_decl.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "array_decl.c",
+    "text_hash": "82f45945cf38101f303ce3800d386bf7d417a5cb70e2e0f9c55792b6a8285a8a1c15ae251201055c6c1262d1ed55605ace3841ac8f4e5b3c970704311e56c080",
+    "text_hash_short": "a922c3e163494339d6773c6ab1256549"
+}

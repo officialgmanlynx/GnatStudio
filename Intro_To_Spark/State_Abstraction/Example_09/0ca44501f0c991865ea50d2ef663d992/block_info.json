@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/04_State_Abstraction.rst",
+    "line_start": 1245,
+    "line_end": 1292,
+    "text": "package External_Interface with\n  Abstract_State => File_System,\n  Initializes    => File_System\nis\n   type Data_Type_1 is new Integer;\n   type Data_Type_2 is new Integer;\n   type Data_Type_3 is new Integer;\n\n   type Data_Record is record\n      Field_1 : Data_Type_1;\n      Field_2 : Data_Type_2;\n      Field_3 : Data_Type_3;\n   end record;\n\n   procedure Read_Data (File_Name : String; Data : out Data_Record)\n     with Global => File_System;\nend External_Interface;\n\nwith External_Interface; use External_Interface;\n\npackage Data with\n  Initializes => (Data_1, Data_2, Data_3)\nis\n   pragma Elaborate_Body;\n\n   Data_1 : Data_Type_1;\n   Data_2 : Data_Type_2;\n   Data_3 : Data_Type_3;\n\nend Data;\n\nwith External_Interface;\npragma Elaborate_All (External_Interface);\n\npackage body Data is\nbegin\n   declare\n      Data_Read : Data_Record;\n   begin\n      Read_Data (\"data_file_name\", Data_Read);\n      Data_1 := Data_Read.Field_1;\n      Data_2 := Data_Read.Field_2;\n      Data_3 := Data_Read.Field_3;\n   end;\nend Data;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.State_Abstraction.Example_09",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "external_interface.ads",
+        "data.ads",
+        "data.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "92bfc17938e952cd2b173cf06f6ceb97d4a5976701e4688a11ce5afe3485ae684c9c9429ac937c09373cf423aa039e15ca5eebe179f7aa9d48f173ae56d1c359",
+    "text_hash_short": "0ca44501f0c991865ea50d2ef663d992"
+}

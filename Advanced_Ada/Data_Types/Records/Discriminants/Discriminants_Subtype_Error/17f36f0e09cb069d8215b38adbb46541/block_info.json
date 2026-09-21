@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 1305,
+    "line_end": 1328,
+    "text": "package Recs is\n\n   type Priv_Info is private;\n\n   type Priv_Rec (Info : Priv_Info) is\n     private;\n   --             ^^^^^^^^^^^^^^^^\n   --  ERROR: cannot use private type\n   --         in discriminant.\n\nprivate\n\n   type Priv_Info is record\n     A : Positive;\n     B : Positive;\n   end record;\n\n   type Priv_Rec (Info  : Priv_Info) is\n     null record;\n\nend Recs;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Discriminants.Discriminants_Subtype_Error",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "recs.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "17c0b8468a1a2c265d0f2cb4d724f14e7220c9b5bcf489750c335563058a72f33a4de4857faf0be9ade6c30b4f9d3f58435b76d22750b88408d36c3959af7672",
+    "text_hash_short": "17f36f0e09cb069d8215b38adbb46541"
+}

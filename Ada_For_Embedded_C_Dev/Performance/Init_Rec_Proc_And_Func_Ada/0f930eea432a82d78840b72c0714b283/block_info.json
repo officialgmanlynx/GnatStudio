@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/08_Performance.rst",
+    "line_start": 665,
+    "line_end": 693,
+    "text": "procedure Init_Record is\n\n   type Data is record\n      Prev : Integer;\n      Curr : Integer;\n   end record;\n\n   procedure Init (D : out Data) is\n   begin\n      D := (Prev => 0, Curr => 1);\n   end Init;\n\n   function Init return Data is\n      D : constant Data := (Prev => 0, Curr => 1);\n   begin\n      return D;\n   end Init;\n\n   D1 : Data;\n\n   pragma Unreferenced (D1);\nbegin\n   D1 := Init;\n\n   Init (D1);\nend Init_Record;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Performance.Init_Rec_Proc_And_Func_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "init_record.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "init_record.adb",
+    "text_hash": "cd0cfeb08310446ff4139ea33bfb2cc0932f6605c855718125445cbd9a65798356a0b264b1db1f0c6d6602adf8e772726489edb864b9081364325f83e9770c14",
+    "text_hash_short": "0f930eea432a82d78840b72c0714b283"
+}

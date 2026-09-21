@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/interfacing_with_c.rst",
+    "line_start": 392,
+    "line_end": 408,
+    "text": "pragma Ada_2005;\npragma Style_Checks (Off);\n\nwith Interfaces.C; use Interfaces.C;\n\npackage test_h is\n\n   func_cnt : aliased int;  -- ./test.h:3\n   pragma Import (C, func_cnt, \"func_cnt\");\n\n   function my_func (arg1 : int) return int;  -- ./test.h:5\n   pragma Import (C, my_func, \"my_func\");\n\nend test_h;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Interfacing_With_C.C_Binds",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "nosyntax-check"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "test_h.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "0f38e987f711abb7471e249bb53d1e1a0621bc4f28ff050a8b9955150b1925778e3d135ca48f5aaff912a46a57746e31654df7ecc2ee6bacaef85f9fc2bd1001",
+    "text_hash_short": "8d18aeae72dba3a9ab4f9f3943fab839"
+}

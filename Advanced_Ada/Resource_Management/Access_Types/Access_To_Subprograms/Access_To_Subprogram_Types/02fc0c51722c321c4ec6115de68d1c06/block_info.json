@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 4866,
+    "line_end": 4920,
+    "text": "package Custom_Processing is\n\n   --  Declaring an access type:\n   type Integer_Processing is\n     access procedure (I : in out Integer);\n\n   --  Declaring a discriminant with this\n   --  access type:\n   type Rec (IP : Integer_Processing) is\n     private;\n\n   procedure Init (R     : in out Rec;\n                   Value :        Integer);\n\n   procedure Process (R : in out Rec);\n\n   procedure Show (R : Rec);\n\nprivate\n\n   type Rec (IP : Integer_Processing) is\n   record\n      I : Integer := 0;\n   end record;\n\nend Custom_Processing;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Custom_Processing is\n\n   procedure Init (R     : in out Rec;\n                   Value :        Integer) is\n   begin\n      R.I := Value;\n   end Init;\n\n   procedure Process (R : in out Rec) is\n   begin\n      R.IP (R.I);\n      --  ^^^^^^\n      --  Calling procedure that we specified as\n      --  the record's discriminant\n   end Process;\n\n   procedure Show (R : Rec) is\n   begin\n      Put_Line (\"R.I = \"\n                & Integer'Image (R.I));\n   end Show;\n\nend Custom_Processing;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Access_To_Subprograms.Access_To_Subprogram_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_processing.ads",
+        "custom_processing.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "009decad1ad5d5c2e22b708db0e42234aaa9c534ddf6c9f5a032e9a0d7bd414030b8d29aa56acd249aa4cf90029fa94dc3b17104308797877dacadea8dd7a3b2",
+    "text_hash_short": "02fc0c51722c321c4ec6115de68d1c06"
+}

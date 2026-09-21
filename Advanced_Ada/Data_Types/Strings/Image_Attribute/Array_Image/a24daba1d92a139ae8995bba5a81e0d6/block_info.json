@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/strings.rst",
+    "line_start": 1575,
+    "line_end": 1594,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Array_Image is\n\n   type Float_Array is\n     array (Positive range <>) of Float;\n\n   FA_3C   : Float_Array (1 .. 3);\n   FA_Null : Float_Array (1 .. 0);\n\nbegin\n   FA_3C   := [1.0, 3.0, 2.0];\n   FA_Null := [];\n\n   Put_Line (\"FA_3C:   \" & FA_3C'Image);\n   Put_Line (\"FA_Null: \" & FA_Null'Image);\nend Show_Array_Image;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Strings.Image_Attribute.Array_Image",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_array_image.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_array_image.adb",
+    "text_hash": "ab25b1a0b742d756ccb813a23f6342b863e7bf029998087898a730a1d4fad380e05173b31b6fae574cf3c725e1574f90c59569482667b9acb800b139d4fdde7d",
+    "text_hash_short": "a24daba1d92a139ae8995bba5a81e0d6"
+}

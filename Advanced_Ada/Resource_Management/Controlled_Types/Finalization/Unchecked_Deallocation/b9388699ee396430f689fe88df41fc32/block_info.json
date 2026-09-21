@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/controlled_types.rst",
+    "line_start": 1507,
+    "line_end": 1574,
+    "text": "with Ada.Finalization;\nwith Ada.Unchecked_Deallocation;\n\npackage Simple_Controlled_Types is\n\n   type T is tagged private;\n\n   procedure Dummy (E : T);\n\n   type T_Access is access T;\n\n   procedure Free (A : in out T_Access);\n\nprivate\n\n   type T is new\n     Ada.Finalization.Controlled\n       with null record;\n\n   overriding\n   procedure Finalize (E : in out T);\n\n   procedure Free_T_Access is\n     new Ada.Unchecked_Deallocation\n       (Object => T,\n        Name   => T_Access);\n\n   procedure Free (A : in out T_Access)\n     renames Free_T_Access;\n\nend Simple_Controlled_Types;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Simple_Controlled_Types is\n\n   procedure Dummy (E : T) is\n   begin\n      Put_Line (\"(Dummy T...)\");\n   end Dummy;\n\n   procedure Finalize (E : in out T) is\n   begin\n      Put_Line (\"Finalize T...\");\n   end Finalize;\n\nend Simple_Controlled_Types;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Simple_Controlled_Types;\nuse  Simple_Controlled_Types;\n\nprocedure Show_Controlled_Types is\n   A : T_Access := new T;\nbegin\n   Dummy (A.all);\n\n   Free (A);\n   --  At this point, Finalize (A.all)\n   --  will be called before the actual\n   --  deallocation.\n\n   Put_Line (\"We've just freed A.\");\nend Show_Controlled_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Controlled_Types.Finalization.Unchecked_Deallocation",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple_controlled_types.ads",
+        "simple_controlled_types.adb",
+        "show_controlled_types.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_controlled_types.adb",
+    "text_hash": "e954ed6002fedf01a6d2b83de63b1a4a5f28082efd7a4c5ee028be91ca634286a87891baf49192c6e928ddfc1a2292fca097fab3497382dc939e88084a9df043",
+    "text_hash_short": "b9388699ee396430f689fe88df41fc32"
+}

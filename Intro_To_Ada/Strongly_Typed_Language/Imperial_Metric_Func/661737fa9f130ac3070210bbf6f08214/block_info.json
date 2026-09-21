@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/strongly_typed_language.rst",
+    "line_start": 484,
+    "line_end": 506,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Conv is\n   type Meters is new Float;\n   type Miles  is new Float;\n\n   --  Function declaration, like procedure\n   --  but returns a value.\n   function To_Miles (M : Meters) return Miles is\n   --                             ^ Return type\n   begin\n      return Miles (M) * 621.371e-6;\n   end To_Miles;\n\n   Dist_Imperial : Miles;\n   Dist_Metric   : constant Meters := 1000.0;\nbegin\n   Dist_Imperial := To_Miles (Dist_Metric);\n   Put_Line (Miles'Image (Dist_Imperial));\nend Conv;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Strongly_Typed_Language.Imperial_Metric_Func",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "conv.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "conv.adb",
+    "text_hash": "cd701dbdda939edf469a603a0a4ffca1ee9f404031aa836482ec3f457c8925eb517b2a893258fb915da2a4745fcdac4dbf9b958df18e9080f188f20880b682ac",
+    "text_hash_short": "661737fa9f130ac3070210bbf6f08214"
+}

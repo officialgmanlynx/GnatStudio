@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 2022,
+    "line_end": 2076,
+    "text": "with National_Date_Info; use National_Date_Info;\n\npackage National_Date_Containers is\n\n   --  Reference type:\n   type National_Date_Reference\n     (Ref : access National_Date) is\n       tagged limited null record\n         with Implicit_Dereference => Ref;\n\n   --  Container (as an array):\n   type National_Dates is\n     array (Positive range <>) of\n       National_Date_Access;\n\n   --  The Find function scans the container to\n   --  find a specific country, which is returned\n   --  as a reference object.\n   function Find (Nat_Dates : National_Dates;\n                  Country   : Country_Code)\n                  return National_Date_Reference;\n\nend National_Date_Containers;\n\npackage body National_Date_Containers is\n\n   function Find (Nat_Dates : National_Dates;\n                  Country   : Country_Code)\n                  return National_Date_Reference\n   is\n   begin\n      for I in Nat_Dates'Range loop\n         if Nat_Dates (I).Country = Country then\n            return National_Date_Reference'(\n                     Ref => Nat_Dates (I));\n            --     ^^^^^^^^^^^^^^^^^^^^^^^^^\n            --   Returning reference object with a\n            --   reference to the national day we\n            --   found.\n         end if;\n      end loop;\n\n      return\n        National_Date_Reference'(Ref => null);\n      --  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n      --   Returning reference object with a null\n      --   reference in case the country wasn't\n      --   found. This will trigger an exception\n      --   if we try to dereference it.\n   end Find;\n\nend National_Date_Containers;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.User_Defined_References.National_Dates",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "national_date_containers.ads",
+        "national_date_containers.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "d5c56d86209c18f5c8642dbb3d59d88de24c05d10415c300fe7d90ce2e7c1d95458d7edf334a8b7c34e8e8b5af307001e2fa6f57fbb2122aa5e2ce320fa8d927",
+    "text_hash_short": "ec37ae93a7052c4bc731b2a7be0763ab"
+}

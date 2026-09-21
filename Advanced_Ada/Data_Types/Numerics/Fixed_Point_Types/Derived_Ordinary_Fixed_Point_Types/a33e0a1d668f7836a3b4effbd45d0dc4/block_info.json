@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 3289,
+    "line_end": 3320,
+    "text": "package Custom_Fixed_Point is\n\n   D : constant := 2.0 ** (-15);\n   type Short_Fixed is\n     delta D\n     range -1.0 .. 1.0 - D;\n\n   type Coefficient is new\n     Short_Fixed;\n\nend Custom_Fixed_Point;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Custom_Fixed_Point;\nuse  Custom_Fixed_Point;\n\nprocedure Show_Derived_Fixed_Point_Types is\n   SF : Short_Fixed;\n   C  : Coefficient;\nbegin\n   SF  := 0.25;\n   Put_Line (\"SF = \"\n             & SF'Image);\n\n   C := Coefficient (SF);\n   Put_Line (\"C  = \"\n             & C'Image);\nend Show_Derived_Fixed_Point_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Fixed_Point_Types.Derived_Ordinary_Fixed_Point_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_fixed_point.ads",
+        "show_derived_fixed_point_types.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_derived_fixed_point_types.adb",
+    "text_hash": "d3d74197a96b99aadd2d9224393c6fd0332e7751d3c271fbb21c7bf7d437c53eadd4d7b46d63d610a3a5a7d9ab5d4ae8463f866dd7c60c610f0f5fa56b5c12d0",
+    "text_hash_short": "a33e0a1d668f7836a3b4effbd45d0dc4"
+}

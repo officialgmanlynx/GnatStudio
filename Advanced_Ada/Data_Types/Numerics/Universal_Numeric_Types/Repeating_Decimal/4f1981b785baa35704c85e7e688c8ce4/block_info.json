@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 605,
+    "line_end": 631,
+    "text": "package Repeating_Decimals is\n\n   One_Over_Three : constant :=\n      1.0 / 3.0;\n\nend Repeating_Decimals;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Ada.Numerics.Big_Numbers.Big_Reals;\nuse  Ada.Numerics.Big_Numbers.Big_Reals;\n\nwith Repeating_Decimals;\nuse  Repeating_Decimals;\n\nprocedure Show_Repeating_Decimals is\n   BR_1_3 : constant Big_Real := One_Over_Three;\nbegin\n   Put_Line (\"BR: \"\n             & To_String (Arg   => BR_1_3,\n                          Fore  => 2,\n                          Aft   => 31,\n                          Exp   => 0));\nend Show_Repeating_Decimals;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Universal_Numeric_Types.Repeating_Decimal",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "repeating_decimals.ads",
+        "show_repeating_decimals.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_repeating_decimals.adb",
+    "text_hash": "c49fdc4460b32a2c5287a7d76bc2df1dabccf803e70018288b9f7c1803c63b4580a711e375e93ba3493bef23eb9e0fa10e081b66a2f2374756f8d64203363465",
+    "text_hash_short": "4f1981b785baa35704c85e7e688c8ce4"
+}

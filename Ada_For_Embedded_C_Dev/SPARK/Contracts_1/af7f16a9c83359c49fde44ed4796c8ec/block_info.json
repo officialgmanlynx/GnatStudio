@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/05_SPARK.rst",
+    "line_start": 663,
+    "line_end": 680,
+    "text": "with Ada.Numerics.Elementary_Functions;  use Ada.Numerics.Elementary_Functions;\n\nprocedure Compute_Offset (K : Float; Z : out Integer; Flag : out Boolean) is\n   X : constant Float := Sin (K);\nbegin\n   if X < 0.0 then\n      Z := 0;\n      Flag := True;\n   elsif X > 0.0 then\n      Z := 1;\n      Flag := True;\n   else\n      Flag := False;\n   end if;\nend Compute_Offset;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.SPARK.Contracts_1",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "compute_offset.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "237fd526f6a3749c1421c1614ab488a61a8ca7d02e5eeb97ebc46ee44173c382640d377d03de0e90661d59aab4d02babb9a1e6feaa5909fc9c559b3ea7151f91",
+    "text_hash_short": "af7f16a9c83359c49fde44ed4796c8ec"
+}

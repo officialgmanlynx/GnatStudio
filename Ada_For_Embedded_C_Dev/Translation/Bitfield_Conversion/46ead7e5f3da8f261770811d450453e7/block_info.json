@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 1580,
+    "line_end": 1610,
+    "text": "with Ada.Text_IO;              use Ada.Text_IO;\nwith Ada.Unchecked_Conversion;\n\nprocedure Simple_Bitfield_Conversion is\n   type Bit_Field is array (Natural range <>) of Boolean with Pack;\n\n   V : Integer := 4;\n\n   --  Declaring subtype that takes the size of V into account.\n   --\n   subtype Integer_Bit_Field is Bit_Field (0 .. V'Size - 1);\n\n   --  NOTE: we could also use the Integer type in the declaration:\n   --\n   --    subtype Integer_Bit_Field is Bit_Field (0 .. Integer'Size - 1);\n   --\n\n   --  Using the Integer_Bit_Field subtype as the target\n   function As_Bit_Field is new\n     Ada.Unchecked_Conversion (Source => Integer,\n                               Target => Integer_Bit_Field);\n\n   B : Integer_Bit_Field;\nbegin\n   B := As_Bit_Field (V);\n\n   Put_Line (\"V = \" & Integer'Image (V));\nend Simple_Bitfield_Conversion;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.Bitfield_Conversion",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple_bitfield_conversion.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "simple_bitfield_conversion.adb",
+    "text_hash": "ac041df3df08b43cf3ac3bbbbb04a129a8a3228bb4ac5776e1718c44e22f83764813d256c9f67ee769a5f71cb509d58495656ca5818d78f5752dd0e89f99d909",
+    "text_hash_short": "46ead7e5f3da8f261770811d450453e7"
+}

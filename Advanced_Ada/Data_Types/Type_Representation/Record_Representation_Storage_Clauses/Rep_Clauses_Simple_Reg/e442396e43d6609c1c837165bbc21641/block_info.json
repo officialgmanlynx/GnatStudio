@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 1571,
+    "line_end": 1591,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith P;           use P;\n\nprocedure Show_Simple_Reg is\n   Default : constant Simple_Reg :=\n               (S     => Ready,\n                Error => False,\n                V1    => 0);\n\n   R : Simple_Reg := Default;\nbegin\n   Put_Line (\"R.S:  \" & R.S'Image);\n\n   R.V1 := 4;\n\n   Put_Line (\"R.V1: \" & R.V1'Image);\nend Show_Simple_Reg;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Record_Representation_Storage_Clauses.Rep_Clauses_Simple_Reg",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_simple_reg.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_simple_reg.adb",
+    "text_hash": "ae356d961bc5789722aa5c5899fa8263987331f32b75ce6341f6f4d88b666305aa6f97175529dd28472732889c93ea7689d2e9f562ecc061d8756acd43bcb28b",
+    "text_hash_short": "e442396e43d6609c1c837165bbc21641"
+}

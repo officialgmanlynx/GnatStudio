@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_files_streams.rst",
+    "line_start": 129,
+    "line_end": 151,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Text_File_Input_Except is\n   F         : File_Type;\n   File_Name : constant String := \"simple.txt\";\nbegin\n   --  Open output file and delete it\n   Create (F, Out_File, File_Name);\n   Delete (F);\n\n   --  Try to open deleted file\n   Open (F, In_File, File_Name);\n   Close (F);\nexception\n   when Name_Error =>\n      Put_Line (\"File does not exist\");\n   when others =>\n      Put_Line\n        (\"Error while processing input file\");\nend Show_Text_File_Input_Except;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Text_File_Input_Except",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_text_file_input_except.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_text_file_input_except.adb",
+    "text_hash": "4114a7828142361484db18cc7b28478cd8b07452bf243db26df9f647814805284916306c4dbe410d103e17b30d4f874c8149675c419c6ae585ff79836bd13968",
+    "text_hash_short": "c8d257091831c48d10b6e70e34b4261b"
+}

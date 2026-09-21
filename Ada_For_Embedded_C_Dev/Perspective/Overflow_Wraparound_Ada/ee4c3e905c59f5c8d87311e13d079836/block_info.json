@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 1792,
+    "line_end": 1804,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main is\n   type Unsigned_Int_32 is range 0 .. 2 ** 32 - 1;\n\n   X : Unsigned_Int_32 := Unsigned_Int_32'Last + 1;\n   --  Overflow: exception is raised!\nbegin\n   Put_Line (\"X = \" & Unsigned_Int_32'Image (X));\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Overflow_Wraparound_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "6df4322d326125b3b8a339db14d5c20de8f3e86f56e151953fb0ab375e51af650d4065ea9781fc9883722e69ef765e7e36cda09b3e6deb7fd52b6cacb08220d8",
+    "text_hash_short": "ee4c3e905c59f5c8d87311e13d079836"
+}

@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 1914,
+    "line_end": 1936,
+    "text": "package Info is\n   type Id_Number (Id : Positive) is\n     tagged private;\n\n   procedure Show (R : Id_Number);\nprivate\n   type Id_Number (Id : Positive) is\n     tagged null record;\nend Info;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Info is\n\n   procedure Show (R : Id_Number) is\n   begin\n      Put_Line (\"ID: \" & Positive'Image (R.Id));\n   end Show;\n\nend Info;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.User_Defined_References.Dereferencing_Tagged_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "info.ads",
+        "info.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "5ca7af085f8aa39e17ad1af6335c31cf5e00d553916563cb20ae0b7ee25efbf9e97a762787d10e647f5da1973c6fdfe464587926fd09a099d9bf06e4cd5e23aa",
+    "text_hash_short": "4de65094963450dc3a7505dbf93c2551"
+}

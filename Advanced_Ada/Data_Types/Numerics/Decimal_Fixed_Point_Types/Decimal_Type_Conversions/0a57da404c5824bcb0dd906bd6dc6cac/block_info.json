@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 6240,
+    "line_end": 6269,
+    "text": "package Custom_Decimal_Types is\n\n   type T2_D6 is\n     delta 10.0 ** (-2) digits 6;\n\n   type T2_D38 is\n     delta 10.0 ** (-2) digits 38;\n\nend Custom_Decimal_Types;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Custom_Decimal_Types;\nuse  Custom_Decimal_Types;\n\nprocedure Show_Decimal_Type_Conversions is\n   D6  : T2_D6;\n   D38 : T2_D38;\nbegin\n   D6  := T2_D6'Last;\n   D38 := T2_D38 (D6);\n\n   Put_Line (\"D6  = \"\n             & D6'Image);\n   Put_Line (\"D38 = \"\n             & D38'Image);\nend Show_Decimal_Type_Conversions;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Decimal_Fixed_Point_Types.Decimal_Type_Conversions",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_decimal_types.ads",
+        "show_decimal_type_conversions.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_decimal_type_conversions.adb",
+    "text_hash": "8285acc9bee0c9e2e5869c58583c4d1b4c0375e52dd63bff048bd716f31d69a85f08ad0e9810b279e8056648b3a42d0f9ca43124aa4a7c335884ae06d3a38bff",
+    "text_hash_short": "0a57da404c5824bcb0dd906bd6dc6cac"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 10005,
+    "line_end": 10086,
+    "text": "private package Fixed_Types.Wide is\n\n   --  Wide range: \"+\" and \"-\" have\n   --  different worst cases, and each\n   --  contributes one of Wide_Sample's\n   --  two bounds. Since Sample'Last\n   --  always equals -Sample'First -\n   --  Sample'Small, \"-\"'s extremes\n   --  always beat \"+\"'s by exactly one\n   --  Sample'Small.\n\n   --  The smallest possible result is\n   --  the smallest sum; the smallest\n   --  difference doesn't reach as far.\n   Wide_First : constant :=\n     Sample'First + Sample'First;\n\n   --  The largest possible result is\n   --  the largest difference; the\n   --  largest sum doesn't reach as far.\n   Wide_Last : constant :=\n     Sample'Last - Sample'First;\n\n   type Wide_Sample is\n     delta Sample'Small\n     range Wide_First .. Wide_Last;\n\n   --  Wide precision: Wide_Product has\n   --  two jobs, so it needs two\n   --  lower-bound values to compare.\n   --\n   --  Job 1: hold a raw Sample operand\n   --  before multiplying.\n   --  (Sample'First is that bound.)\n   --\n   --  Job 2: hold the product\n   --  afterward. Min_Product is the\n   --  most negative product two Sample\n   --  values can give.\n   Min_Product : constant :=\n     Sample'First * Sample'Last;\n\n   --  Most positive product.\n   Max_Product : constant :=\n     Sample'First * Sample'First;\n\n   --  Wide_Product's resolution: double\n   --  the fractional bits, so the\n   --  product is held exactly, with no\n   --  rounding.\n   Wide_Delta : constant :=\n     Sample'Small * Sample'Small;\n\n   --  The true lower bound is the\n   --  smaller of the two values. Which\n   --  of the two is smaller depends on\n   --  Sample's own bounds, so we derive\n   --  it instead of assuming it:\n   --\n   --  - for a normalized type such as\n   --    this one, Sample'First is\n   --    always the smaller value;\n   --\n   --  - for a type with a wider integer\n   --    part, such as a Q7.8 type\n   --    ranging over -128.0 .. 128.0 -\n   --    small, Min_Product is far\n   --    smaller instead.\n   Wide_Product_First : constant :=\n     (if Sample'First < Min_Product\n      then Sample'First\n      else Min_Product);\n\n   type Wide_Product is\n     delta Wide_Delta\n     range Wide_Product_First ..\n           Max_Product;\n\nend Fixed_Types.Wide;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Ordinary_Fixed_Point_Types.Saturating_Operators",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "fixed_types-wide.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "7725e7dffe8142828b7a628864ab4f0e3e932c4fe364ccfd0010132df10e1661376a71ba53ef5e1eb100a424feb27193ba57f63700e4ac62663ad926c4c7f232",
+    "text_hash_short": "346e612a01846bd93b1a60aeda59d880"
+}

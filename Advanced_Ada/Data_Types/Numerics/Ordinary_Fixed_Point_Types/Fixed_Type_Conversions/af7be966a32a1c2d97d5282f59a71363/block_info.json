@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 9388,
+    "line_end": 9433,
+    "text": "package Custom_Fixed_Point is\n   D_31 : constant := 2.0 ** (-31);\n   D_48 : constant := 2.0 ** (-48);\n\n   type TQ31 is\n     delta D_31\n     range -1.0 .. 1.0 - D_31;\n\n   type TQ15_48 is\n     delta  D_48\n     range -2.0 ** 15 ..\n            2.0 ** 15 - D_48;\n\nend Custom_Fixed_Point;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Custom_Fixed_Point;\nuse  Custom_Fixed_Point;\n\nprocedure Show_Fixed_Point_Conversions is\n   In_Data : constant array (1 .. 5)\n               of TQ31 :=\n                 (0.5, 0.75, 0.5, 0.25, 0.125);\n   Res     : TQ31;\n   Acc     : TQ15_48;\nbegin\n   Acc := 0.0;\n   for I in In_Data'Range loop\n      Acc := Acc + TQ15_48 (In_Data (I));\n   end loop;\n\n   --  ERROR: Acc might be out-of-range\n   --         when converted to TQ31\n   Res := TQ31 (Acc) / In_Data'Length;\n\n   --  CORRECT: put Acc in the expected range\n   --           before converting to TQ31\n   Res := TQ31 (Acc / In_Data'Length);\n\n   Put_Line (\"Res = \"\n             & Res'Image);\nend Show_Fixed_Point_Conversions;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Ordinary_Fixed_Point_Types.Fixed_Type_Conversions",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_fixed_point.ads",
+        "show_fixed_point_conversions.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_fixed_point_conversions.adb",
+    "text_hash": "a4ce35916a449470dbb97d1f7fb687c1de4207d2238e5458ed93e835c1ee441a9a2eb476b4d1fdfda405263d9a1dae334eda16372412bf58a506d6dc9c7a6bf3",
+    "text_hash_short": "af7be966a32a1c2d97d5282f59a71363"
+}

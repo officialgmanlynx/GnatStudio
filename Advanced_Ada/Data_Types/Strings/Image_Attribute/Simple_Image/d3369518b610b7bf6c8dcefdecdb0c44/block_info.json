@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/strings.rst",
+    "line_start": 1403,
+    "line_end": 1419,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Simple_Image is\n   type Status is (Unknown, Off, On);\n\n   V : Float;\n   S : Status;\nbegin\n   V := 10.0;\n   S := Unknown;\n\n   Put_Line (\"V: \" & Float'Image (V));\n   Put_Line (\"S: \" & Status'Image (S));\nend Show_Simple_Image;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Strings.Image_Attribute.Simple_Image",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_simple_image.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_simple_image.adb",
+    "text_hash": "8779b9f623e7d0790c244bc1ab6a0c6bfb1db91a48a24e72e4c934fe87a18429dc777ea0dceb8e4d72ee803ac971c5332af1a264dd41493216b4d2380995d589",
+    "text_hash_short": "d3369518b610b7bf6c8dcefdecdb0c44"
+}

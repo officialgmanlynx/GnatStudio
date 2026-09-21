@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 2726,
+    "line_end": 2756,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Range is\n\n   type Float_6_Digits_Normalized is\n     digits 6\n       range -1.0 .. 1.0;\n\n   F6_N : Float_6_Digits_Normalized;\nbegin\n   F6_N := 0.123456123;\n\n   Put_Line (\"F6_N = \"\n             & F6_N'Image);\n\n   F6_N := F6_N * 10.0 - 0.5;\n\n   Put_Line (\"F6_N = \"\n             & F6_N'Image);\n\n   F6_N := F6_N + 1.0;\n   --  ERROR:  result of this operation\n   --          is outside of the interval\n   --          [-1.0, 1.0].\n\n   Put_Line (\"F6_N = \"\n             & F6_N'Image);\nend Show_Range;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Floating_Point_Types.Floating_Point_Range",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_range.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_range.adb",
+    "text_hash": "09867b02171b66051dad55571de310064e95e2e5c7943b16c19daf0674f3d73cf04067e6a5b455fc10ffbbbb5745c894a757f51a7fc970264d2977c1f74b2707",
+    "text_hash_short": "2bfbfc0ed5d485db478ff046a228448a"
+}

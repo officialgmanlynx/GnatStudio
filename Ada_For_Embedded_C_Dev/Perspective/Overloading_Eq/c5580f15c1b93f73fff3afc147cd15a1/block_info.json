@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 2842,
+    "line_end": 2887,
+    "text": "package Machine_2 is\n   type Status is (Off, Waiting, On);\n   type Input is new Float range 0.0 .. 10.0;\n\n   function Get (I : Input) return Status;\n\n   function \"=\" (Left : Input; Right : Status) return Boolean;\n\nend Machine_2;\n\npackage body Machine_2 is\n\n   function Get (I : Input) return Status is\n   begin\n      if I >= 0.0 and I < 3.0 then\n         return Off;\n      elsif I >= 3.0 and I < 6.5 then\n         return Waiting;\n      else\n         return On;\n      end if;\n   end Get;\n\n   function \"=\" (Left : Input; Right : Status) return Boolean is\n   begin\n      return Get (Left) = Right;\n   end \"=\";\n\nend Machine_2;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Machine_2;   use Machine_2;\n\nprocedure Main is\n   I : Input;\nbegin\n   I := 3.0;\n   if I = Off then\n      Put_Line (\"Machine is off.\");\n   else\n      Put_Line (\"Machine is not off.\");\n   end if;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Overloading_Eq",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "machine_2.ads",
+        "machine_2.adb",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "e0ef5c7e169cff465518a3bdaa20622b63532cec9f4d3c77af1c921756c49032d2adc0ac71fb279bb96cad62d576ba0bcfdfe4b7951bfb62f3e0092cfebd7eda",
+    "text_hash_short": "c5580f15c1b93f73fff3afc147cd15a1"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_containers.rst",
+    "line_start": 438,
+    "line_end": 468,
+    "text": "with Ada.Containers.Vectors;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Vector_Update is\n\n   package Integer_Vectors is new\n     Ada.Containers.Vectors\n       (Index_Type   => Natural,\n        Element_Type => Integer);\n\n   use Integer_Vectors;\n\n   procedure Add_One (I : in out Integer) is\n   begin\n      I := I + 1;\n   end Add_One;\n\n   V : Vector := 20 & 10 & 12;\nbegin\n   --\n   --  Use V.Update_Element to process elements\n   --\n   for C in V.Iterate loop\n      V.Update_Element (C, Add_One'Access);\n   end loop;\n\nend Show_Vector_Update;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Vector_Update",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_vector_update.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_vector_update.adb",
+    "text_hash": "59481d9bf4fd76432e2fe97552fa09bdc7e130ae49445978b877581c81d99fe3e6c8565289fbafec51512bfdc237c02663629703be9f50da2a5361ae30e3321a",
+    "text_hash_short": "5dcc3dd8020632a8ea2ce975ecd8f4da"
+}

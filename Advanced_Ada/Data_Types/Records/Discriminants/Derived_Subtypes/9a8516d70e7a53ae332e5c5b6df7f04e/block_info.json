@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 1629,
+    "line_end": 1679,
+    "text": "package Subtypes_With_Discriminants is\n\n   type T\n     (L : Positive;\n      M : Positive) is\n     null record;\n\n   subtype Sub_T is T;\n   --  Discriminants are not specified:\n   --  taking the ones from T.\n\n   subtype Sub_T_2 is T\n    (L => 3, M => 4);\n   --  Discriminants are specified:\n   --  taking the ones from Sub_T_2\n\nend Subtypes_With_Discriminants;\n\nwith Subtypes_With_Discriminants;\nuse  Subtypes_With_Discriminants;\n\nprocedure Show_Subtypes_With_Discriminants is\n   A1 : T (1, 2);\n   A2 : T (3, 4);\n   B1 : Sub_T (1, 2);\n   B2 : Sub_T (3, 4);\n   C2 : Sub_T_2;\n\n   --  C1 : Sub_T_2 (1, 2);\n   --                ^^^^\n   --  ERROR: discriminants already\n   --         constrained\nbegin\n   B1 := A1;\n   --  OK: discriminants match\n\n   B2 := A1;\n   --  CONSTRAINT_ERROR!\n\n   B2 := A2;\n   --  OK: discriminants match\n\n   C2 := A1;\n   --  CONSTRAINT_ERROR!\n\n   C2 := A2;\n   --  OK: discriminants match\nend Show_Subtypes_With_Discriminants;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Discriminants.Derived_Subtypes",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "subtypes_with_discriminants.ads",
+        "show_subtypes_with_discriminants.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_subtypes_with_discriminants.adb",
+    "text_hash": "aa326e973c05a82d5bb2884b89aeb6e5e09213a6ab2265d31eea6f8fab4674122e5e6c9f90300964646a28bcea2ca3423c7c5b06cec0b9c32234a9c37cbf3e41",
+    "text_hash_short": "9a8516d70e7a53ae332e5c5b6df7f04e"
+}

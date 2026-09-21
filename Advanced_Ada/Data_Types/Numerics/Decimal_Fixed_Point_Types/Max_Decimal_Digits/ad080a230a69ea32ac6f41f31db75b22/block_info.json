@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 6430,
+    "line_end": 6440,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\nwith Ada.Decimal; use Ada.Decimal;\n\nprocedure Show_Max_Decimal_Digits is\nbegin\n   Put_Line (\"Max_Decimal_Digits : \"\n             & Max_Decimal_Digits'Image);\nend Show_Max_Decimal_Digits;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Decimal_Fixed_Point_Types.Max_Decimal_Digits",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_max_decimal_digits.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_max_decimal_digits.adb",
+    "text_hash": "b86d4f0b3cb524ad0fa1424fe962694210006a6d7d8d3d5ed5d0d87cda8a3e368d30c1f3f2704f8b1a2f74ccd7d39fdebb95b61bb09c41c8f5164d516b696e47",
+    "text_hash_short": "ad080a230a69ea32ac6f41f31db75b22"
+}

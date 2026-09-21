@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/04_Embedded.rst",
+    "line_start": 415,
+    "line_end": 428,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Normalized_Fixed_Point_Type is\n   D : constant := 2.0 ** (-31);\n   type TQ31 is delta D range -1.0 .. 1.0 - D;\nbegin\n   Put_Line (\"TQ31 requires \" & Integer'Image (TQ31'Size) & \" bits\");\n   Put_Line (\"The delta    value of TQ31 is \" & TQ31'Image (TQ31'Delta));\n   Put_Line (\"The minimum  value of TQ31 is \" & TQ31'Image (TQ31'First));\n   Put_Line (\"The maximum  value of TQ31 is \" & TQ31'Image (TQ31'Last));\nend Normalized_Fixed_Point_Type;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Embedded.Normalized_Fixed_Point_Type",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "normalized_fixed_point_type.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "normalized_fixed_point_type.adb",
+    "text_hash": "1aa82c15e384c8511809a825edef06a071296ec82036b9c23ad320cfd896bcfa8462c96116538b08cf19d13e4bddae534509c41d7ccdc785f3d54fe98851ba2f",
+    "text_hash_short": "2fe6e9f9bd20d2cfab959d1c0273280b"
+}

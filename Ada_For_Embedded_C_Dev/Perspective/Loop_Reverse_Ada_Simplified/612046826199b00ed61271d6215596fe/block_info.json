@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 1149,
+    "line_end": 1173,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main\nis\n   type Int_Array is array (Natural range 1 .. 100) of Integer;\n\n   List : Int_Array;\nbegin\n\n   for I in reverse List'Range loop\n      List (I) := List'Last - I;\n   end loop;\n\n   for I of List loop\n      Put (I'Img & \" \");\n\n      if I mod 10 = 0 then\n         New_Line;\n      end if;\n   end loop;\n\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Loop_Reverse_Ada_Simplified",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "329c36278361e4f7960a0ab1a76db904441b2649c02b10f0f0f5d25fb4111297d82ec045389d4be50f6bc3b448fb272cbc1b04f991131b787f1ef8d89dfb03d5",
+    "text_hash_short": "612046826199b00ed61271d6215596fe"
+}

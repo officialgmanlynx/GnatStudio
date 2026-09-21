@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numeric_attributes.rst",
+    "line_start": 184,
+    "line_end": 270,
+    "text": "package Crc_Defs is\n\n    type Byte is mod 2 ** 8;\n    type Crc  is mod 2 ** 16;\n\n    type Byte_Array is\n      array (Positive range <>) of Byte;\n\n    function Crc_CCITT (A : Byte_Array)\n                        return Crc;\n\n    procedure Display (Crc_A : Crc);\n\n    procedure Display (A : Byte_Array);\n\nend Crc_Defs;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Crc_Defs is\n\n    package Byte_IO is new Modular_IO (Byte);\n    package Crc_IO  is new Modular_IO (Crc);\n\n    function Crc_CCITT (A : Byte_Array)\n                        return Crc\n    is\n       X     : Byte;\n       Crc_A : Crc := 16#1d0f#;\n    begin\n       for I in A'Range loop\n          X := Byte (Crc_A / 2 ** 8) xor A (I);\n          X := X xor (X / 2 ** 4);\n          declare\n             Crc_X : constant Crc := Crc (X);\n          begin\n             Crc_A := Crc_A * 2 ** 8  xor\n                      Crc_X * 2 ** 12 xor\n                      Crc_X * 2 ** 5  xor\n                      Crc_X;\n          end;\n       end loop;\n\n       return Crc_A;\n    end Crc_CCITT;\n\n    procedure Display (Crc_A : Crc) is\n    begin\n       Crc_IO.Put (Crc_A);\n       New_Line;\n    end Display;\n\n    procedure Display (A : Byte_Array) is\n    begin\n       for E of A loop\n          Byte_IO.Put (E);\n          Put (\", \");\n       end loop;\n       New_Line;\n    end Display;\n\nbegin\n   Byte_IO.Default_Width := 1;\n   Byte_IO.Default_Base  := 16;\n   Crc_IO.Default_Width  := 1;\n   Crc_IO.Default_Base   := 16;\nend Crc_Defs;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Crc_Defs;    use Crc_Defs;\n\nprocedure Show_Crc is\n   AA    : constant Byte_Array :=\n             (16#0#, 16#20#, 16#30#);\n   Crc_A : Crc;\nbegin\n   Crc_A := Crc_CCITT (AA);\n\n   Put (\"Input array: \");\n   Display (AA);\n\n   Put (\"CRC-CCITT: \");\n   Display (Crc_A);\nend Show_Crc;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numeric_Attributes.Modular_Types.Mod_Crc_CCITT_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "crc_defs.ads",
+        "crc_defs.adb",
+        "show_crc.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_crc.adb",
+    "text_hash": "7e6cc845429704408b466611b14f82e5d98ca3657f546447f86d1f4aaa7a624206628c5e51bf27456cb6ef8f81aa26f9f0827abc39172a639407607c8aae2a9a",
+    "text_hash_short": "9c66abfadcce92231295cbccad087912"
+}

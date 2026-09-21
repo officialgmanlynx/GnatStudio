@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/strings.rst",
+    "line_start": 982,
+    "line_end": 1003,
+    "text": "with Ada.Text_IO;\nwith Ada.Wide_Wide_Text_IO;\n\nprocedure Show_WWS_Strings is\n\n   package TIO   renames Ada.Text_IO;\n   package WWTIO renames Ada.Wide_Wide_Text_IO;\n\n   Symbols_WWS : constant\n     Wide_Wide_String := \"\u2665\u266b\";\n\nbegin\n   WWTIO.Put_Line (\"Wide_Wide_String: \"\n                   & Symbols_WWS);\n\n   TIO.Put_Line (\"Length:           \"\n                 & Symbols_WWS'Length'Image);\n\nend Show_WWS_Strings;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Strings.String_Encoding.WWS_Strings_No_W8",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_wws_strings.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_wws_strings.adb",
+    "text_hash": "ed29a1c48ae1b73abd6ed663879e2967f020ec6d82c948aa0f70c0e562f4795d2536ac19f0d53ea6d3dd54415196fdcff08aefcc16d94a1127b46fa04c30ce84",
+    "text_hash_short": "1e5e38e62b412de48d3fa4271bb48bf1"
+}

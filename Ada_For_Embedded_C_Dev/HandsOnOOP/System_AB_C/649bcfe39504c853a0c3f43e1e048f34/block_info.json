@@ -1,0 +1,49 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/Appendix_A_OOP.rst",
+    "line_start": 86,
+    "line_end": 256,
+    "text": "!system_a.h\ntypedef struct {\n    float val[2];\n    int   active;\n} A;\n\nvoid A_activate (A *a);\n\nint A_is_active (A *a);\n\nfloat A_value (A *a);\n\nvoid A_deactivate (A *a);\n\n!system_a.c\n#include \"system_a.h\"\n\nvoid A_activate (A *a)\n{\n    int i;\n\n    for (i = 0; i < 2; i++)\n    {\n        a->val[i] = 0.0;\n    }\n    a->active = 1;\n}\n\nint A_is_active (A *a)\n{\n    return a->active == 1;\n}\n\nfloat A_value (A *a)\n{\n    return (a->val[0] + a->val[1]) / 2.0;\n}\n\nvoid A_deactivate (A *a)\n{\n    a->active = 0;\n}\n\n!system_b.h\ntypedef struct {\n    float val;\n    int   active;\n} B;\n\nvoid B_activate (B *b);\n\nint B_is_active (B *b);\n\nfloat B_value (B *b);\n\nvoid B_deactivate (B *b);\n\n!system_b.c\n#include \"system_b.h\"\n\nvoid B_activate (B *b)\n{\n    b->val    = 0.0;\n    b->active = 1;\n}\n\nint B_is_active (B *b)\n{\n    return b->active == 1;\n}\n\nfloat B_value (B *b)\n{\n    return b->val;\n}\n\nvoid B_deactivate (B *b)\n{\n    b->active = 0;\n}\n\n!system_ab.h\n#include \"system_a.h\"\n#include \"system_b.h\"\n\ntypedef struct {\n    A a;\n    B b;\n} AB;\n\nvoid AB_activate (AB *ab);\n\nint AB_is_active (AB *ab);\n\nfloat AB_value (AB *ab);\n\nint AB_check (AB *ab);\n\nvoid AB_deactivate (AB *ab);\n\n!system_ab.c\n#include <math.h>\n#include \"system_ab.h\"\n\nvoid AB_activate (AB *ab)\n{\n    A_activate (&ab->a);\n    B_activate (&ab->b);\n}\n\nint AB_is_active (AB *ab)\n{\n    return A_is_active(&ab->a) && B_is_active(&ab->b);\n}\n\nfloat AB_value (AB *ab)\n{\n    return (A_value (&ab->a) + B_value (&ab->b)) / 2;\n}\n\nint AB_check (AB *ab)\n{\n    const float threshold = 0.1;\n\n    return fabs (A_value (&ab->a) - B_value (&ab->b)) < threshold;\n}\n\nvoid AB_deactivate (AB *ab)\n{\n    A_deactivate (&ab->a);\n    B_deactivate (&ab->b);\n}\n\n!main.c\n#include <stdio.h>\n#include \"system_ab.h\"\n\nvoid display_active (AB *ab)\n{\n    if (AB_is_active (ab))\n        printf (\"System AB is active.\\n\");\n    else\n        printf (\"System AB is not active.\\n\");\n}\n\nvoid display_check (AB *ab)\n{\n    if (AB_check (ab))\n        printf (\"System AB check: PASSED.\\n\");\n    else\n        printf (\"System AB check: FAILED.\\n\");\n}\n\nint main()\n{\n    AB s;\n\n    printf (\"Activating system AB...\\n\");\n    AB_activate (&s);\n\n    display_active (&s);\n    display_check (&s);\n\n    printf (\"Deactivating system AB...\\n\");\n    AB_deactivate (&s);\n\n    display_active (&s);\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.HandsOnOOP.System_AB_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "system_a.h",
+        "system_a.c",
+        "system_b.h",
+        "system_b.c",
+        "system_ab.h",
+        "system_ab.c",
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "df03f27f95100c379a438bb2d37d3fcb38b464867dd5c478c3cb9d586af36f5c1f51d7602e313cb7c76b2a7f197b2f485d831fb83e1e4c9b601f820cfaa339d2",
+    "text_hash_short": "649bcfe39504c853a0c3f43e1e048f34"
+}

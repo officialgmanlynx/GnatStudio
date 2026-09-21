@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 2948,
+    "line_end": 2962,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\nwith System;\n\nprocedure Show_System_Max_Digits is\nbegin\n   Put_Line (\"System.Max_Digits      :\"\n             & System.Max_Digits'Image\n             & \" digits\");\n   Put_Line (\"System.Max_Base_Digits :\"\n             & System.Max_Base_Digits'Image\n             & \" digits\");\nend Show_System_Max_Digits;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Floating_Point_Types.System_Max_Digits",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_system_max_digits.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_system_max_digits.adb",
+    "text_hash": "7577e7bdea02d47be7957573c688f34e7bcff14cef5864877952ed75f8ed1abcf7ba75ba62b631a7274c9a85c8b5f78611c76114916c74b8afbfa8a0d4520d23",
+    "text_hash_short": "0c52be59b42a31428db0b0549fbfffd5"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 110,
+    "line_end": 129,
+    "text": "with Interfaces.C;\n\nprocedure Use_My_Struct is\n\n   type my_struct is record\n     A : Interfaces.C.int;\n     B : Interfaces.C.int;\n   end record;\n   pragma Convention (C, my_struct);\n\n   procedure Call (V : my_struct);\n   pragma Import (C, Call, \"call\"); -- Third argument optional\n\n   V : my_struct := (A => 1, B => 2);\nbegin\n   Call (V);\nend Use_My_Struct;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.My_Struct",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "use_my_struct.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "fd6fcc4e05449cea541ae8b6f92d592f7fe138919018aff1f80994789b888726ad3faf36d919ba0c07fda9dc39750fcbeefb44dc1134d0f6a2e0626f23e20508",
+    "text_hash_short": "9b54edadd406c7f5a2b9f8b8f82a4a88"
+}

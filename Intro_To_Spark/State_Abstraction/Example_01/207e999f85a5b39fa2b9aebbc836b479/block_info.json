@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/04_State_Abstraction.rst",
+    "line_start": 800,
+    "line_end": 836,
+    "text": "package Configuration is\n\n   External_Variable : Natural := 1;\n\nend Configuration;\n\nwith Configuration;\n\npackage Communication with\n  Abstract_State => State,\n  Initializes    => (State => Configuration.External_Variable)\nis\n   function Get_Capacity return Natural;\n\nprivate\n\n   package Ring_Buffer with\n     Initializes => (Capacity => Configuration.External_Variable)\n   is\n      Capacity : constant Natural := Configuration.External_Variable;\n   end Ring_Buffer;\n\nend Communication;\n\npackage body Communication with\n  Refined_State => (State => Ring_Buffer.Capacity)\nis\n\n   function Get_Capacity return Natural is\n   begin\n      return Ring_Buffer.Capacity;\n   end Get_Capacity;\n\nend Communication;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.State_Abstraction.Example_01",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "configuration.ads",
+        "communication.ads",
+        "communication.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "0c023cd88c5e4f9ac2aa8dce50c482e28162bfea0bc63dc40a684dd5adc71c5079fd3ce41b12d85f629fddd8be65e9e8827cde2d6c6075d55e7cc51c924c2d55",
+    "text_hash_short": "207e999f85a5b39fa2b9aebbc836b479"
+}

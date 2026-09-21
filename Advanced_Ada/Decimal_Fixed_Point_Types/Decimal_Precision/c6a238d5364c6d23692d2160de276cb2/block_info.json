@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 5310,
+    "line_end": 5333,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Decimal_Precision is\n   type T3_D3 is delta 10.0 ** (-3) digits 3;\n   type T6_D3 is delta 10.0 ** (-3) digits 6;\nbegin\n   Put_Line (\"The delta    value of T3_D3 is \"\n             & T3_D3'Image (T3_D3'Delta));\n   Put_Line (\"The minimum  value of T3_D3 is \"\n             & T3_D3'Image (T3_D3'First));\n   Put_Line (\"The maximum  value of T3_D3 is \"\n             & T3_D3'Image (T3_D3'Last));\n   New_Line;\n\n   Put_Line (\"The delta    value of T6_D3 is \"\n             & T6_D3'Image (T6_D3'Delta));\n   Put_Line (\"The minimum  value of T6_D3 is \"\n             & T6_D3'Image (T6_D3'First));\n   Put_Line (\"The maximum  value of T6_D3 is \"\n             & T6_D3'Image (T6_D3'Last));\nend Show_Decimal_Precision;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Decimal_Fixed_Point_Types.Decimal_Precision",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_decimal_precision.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_decimal_precision.adb",
+    "text_hash": "301a11f6f5c2c01a582fb8ac343f6287cbe564de9feea40dca30e26f178bd7a3d58dcaf473fdc1ae986894f10c5ba4a0727662e133e0f06213a0eab6ae715a74",
+    "text_hash_short": "c6a238d5364c6d23692d2160de276cb2"
+}

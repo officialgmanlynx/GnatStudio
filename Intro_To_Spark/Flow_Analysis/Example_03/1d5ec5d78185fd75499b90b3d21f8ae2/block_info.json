@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/02_Flow_Analysis.rst",
+    "line_start": 746,
+    "line_end": 786,
+    "text": "package Show_Search_Array is\n\n   type Array_Of_Positives is array (Natural range <>) of Positive;\n\n   type Search_Result (Found : Boolean := False) is record\n      case Found is\n         when True =>\n            Content : Integer;\n         when False => null;\n      end case;\n   end record;\n\n   procedure Search_Array\n     (A      :     Array_Of_Positives;\n      E      :     Positive;\n      Result : out Search_Result)\n   with Pre => not Result'Constrained;\n\nend Show_Search_Array;\n\npackage body Show_Search_Array is\n\n   procedure Search_Array\n     (A      :     Array_Of_Positives;\n      E      :     Positive;\n      Result : out Search_Result) is\n   begin\n      for I in A'Range loop\n         if A (I) = E then\n            Result := (Found   => True,\n                       Content => I);\n            return;\n         end if;\n      end loop;\n      Result := (Found => False);\n   end Search_Array;\n\nend Show_Search_Array;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Flow_Analysis.Example_03",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_report_all"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "show_search_array.ads",
+        "show_search_array.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "1bb090d70e9290c526c8ecde7ca99c9440269f848ac1d5d6480937b1316c7557931c2cff63a97572352f7672b43cda0bad509242f126c6e8b9bed0d6dbf8b81f",
+    "text_hash_short": "1d5ec5d78185fd75499b90b3d21f8ae2"
+}

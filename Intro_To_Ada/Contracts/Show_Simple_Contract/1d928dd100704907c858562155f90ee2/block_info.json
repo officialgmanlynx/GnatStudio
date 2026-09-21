@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/contracts.rst",
+    "line_start": 158,
+    "line_end": 188,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Simple_Contract is\n\n   type Int_8 is range -2 ** 7 .. 2 ** 7 - 1;\n\n   function Square (A : Int_8) return Int_8 is\n     (A * A)\n       with\n         Pre  => (Integer'Size >= Int_8'Size * 2\n                  and Integer (A) *\n                        Integer (A) <=\n                      Integer (Int_8'Last)),\n         Post => (if abs A in 0 | 1\n                  then Square'Result = abs A\n                  else Square'Result > A);\n\n   V : Int_8;\nbegin\n   V := Square (11);\n   Put_Line (\"Square of 11 is \"\n             & Int_8'Image (V));\n\n   --  Precondition will fail...\n   V := Square (12);\n   Put_Line (\"Square of 12 is \"\n             & Int_8'Image (V));\nend Show_Simple_Contract;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Contracts.Show_Simple_Contract",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_simple_contract.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_simple_contract.adb",
+    "text_hash": "7e6181281ad038163e1fa156f1e8d5506141de310baa80cbe556c8afd21f343e5edd04be77c8db5e2f2f766f5128601d39371e28ed0722435de64a95a144ccca",
+    "text_hash_short": "1d928dd100704907c858562155f90ee2"
+}

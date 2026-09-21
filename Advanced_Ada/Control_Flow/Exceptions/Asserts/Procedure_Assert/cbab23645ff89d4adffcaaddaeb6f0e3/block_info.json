@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/exceptions.rst",
+    "line_start": 253,
+    "line_end": 263,
+    "text": "with Ada.Assertions; use Ada.Assertions;\n\nprocedure Show_Procedure_Assert is\n   I : constant Integer := 11;\n\nbegin\n   Assert (I = 10, \"I is not 10\");\nend Show_Procedure_Assert;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Exceptions.Asserts.Procedure_Assert",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_procedure_assert.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_procedure_assert.adb",
+    "text_hash": "1aca7c97942a12eda266ab3444f1d4775bc2fd80ff5aee797efc6d08272470e85605fa2994cf6ff043bb067eca3b00b619a57829e4af6aa0d32225a61c9522bf",
+    "text_hash_short": "cbab23645ff89d4adffcaaddaeb6f0e3"
+}

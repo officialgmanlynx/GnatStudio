@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 1340,
+    "line_end": 1399,
+    "text": "!my_recs.h\ntypedef struct {\n    int v;\n    char s[3];\n} rec;\n\nvoid to_r (void *bits, int len, rec *r);\n\nvoid display_r (rec *r);\n\n!my_recs.c\n#include \"my_recs.h\"\n\n#include <stdio.h>\n#include <assert.h>\n\nvoid to_r (void *bits, int len, rec *r)\n{\n    int i;\n    char *c1 = (char *)bits;\n    char *c2 = (char *)r;\n\n    assert(len == sizeof(rec) * 8);\n\n    for (i = 0; i < len / (sizeof(char) * 8); i++)\n    {\n        c2[i] = c1[i];\n    }\n}\n\nvoid display_r (rec *r)\n{\n    printf(\"{%d, %c%c%c}\", r->v, r->s[0], r->s[1], r->s[2]);\n}\n\n!bitfield_serialization.c\n#include <stdio.h>\n#include \"my_recs.h\"\n\nint main(int argc, const char * argv[])\n{\n    rec r1 = {5, \"abc\"};\n    rec r2 = {0, \"zzz\"};\n\n    printf(\"r2 = \");\n    display_r (&r2);\n    printf(\"\\n\");\n\n    to_r(&r1, sizeof(r1) * 8, &r2);\n\n    printf(\"New bitstream received!\\n\");\n    printf(\"r2 = \");\n    display_r (&r2);\n    printf(\"\\n\");\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.Bitfield_Deserialization_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "my_recs.h",
+        "my_recs.c",
+        "bitfield_serialization.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "bitfield_serialization.c",
+    "text_hash": "d51b26f61f2ac605196940b374524d16866f82d055d8ee09514421585215d7b38c666e33ced3346edd89db007abf929bcaa60d3800c1a3ffd441281532f693ba",
+    "text_hash_short": "1c0fda773b0b681d0a4e9a57cf67d997"
+}

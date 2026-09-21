@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 2839,
+    "line_end": 2977,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Add_Ten;\nwith Add_Twenty;\n\nwith All_Anonymous_Access_To_Subprogram;\nuse  All_Anonymous_Access_To_Subprogram;\n\nprocedure Show_Anonymous_Access_To_Subprograms is\n   --\n   --  Anonymous access-to-subprogram as\n   --  an object:\n   --\n   P   : access procedure (I : in out Integer);\n\n   --\n   --  Array of anonymous access-to-subprogram\n   --  components\n   --\n   PA  : constant\n          Access_To_Procedure_Array (1 .. 2) :=\n            (Add_Ten'Access,\n             Add_Twenty'Access);\n\n   --\n   --  Anonymous array of anonymous\n   --  access-to-subprogram components:\n   --\n   PAA : constant\n          array (1 .. 2) of access\n            procedure (I : in out Integer) :=\n              (Add_Ten'Access,\n               Add_Twenty'Access);\n\n   --\n   --  Record with anonymous\n   --  access-to-subprogram components:\n   --\n   RA : constant Rec_Access_To_Procedure :=\n          (AP => Add_Ten'Access);\n\n   --\n   --  Record with anonymous\n   --  access-to-subprogram discriminant:\n   --\n   RD : Rec_Access_To_Procedure_Discriminant\n          (AP => Add_Twenty'Access) :=\n            (AP => Add_Twenty'Access, I => 0);\n\n   --\n   --  Generic procedure with formal anonymous\n   --  access-to-subprogram:\n   --\n   procedure Process_Integer is new\n     Gen_Process (T      => Integer,\n                  Proc_T => Add_Twenty'Access);\n\n   --\n   --  Object (APP) of anonymous\n   --  access-to-protected-subprogram:\n   --\n   PI  : Protected_Integer;\n   APP : constant access protected procedure :=\n           PI.Mult_Ten'Access;\n\n   Some_Int : Integer := 0;\nbegin\n   Put_Line (\"Some_Int: \" & Some_Int'Image);\n\n   --\n   --  Using object of\n   --  anonymous access-to-subprogram type:\n   --\n   P := Add_Ten'Access;\n   Proc (P);\n   P (Some_Int);\n\n   P := Add_Twenty'Access;\n   Proc (P);\n   P (Some_Int);\n\n   Put_Line (\"Some_Int: \" & Some_Int'Image);\n\n   --\n   --  Using array with component of\n   --  anonymous access-to-subprogram type:\n   --\n    Put_Line\n      (\"Calling procedure from PA array...\");\n\n   for I in PA'Range loop\n      PA (I) (Some_Int);\n      Put_Line (\"Some_Int: \" & Some_Int'Image);\n   end loop;\n\n   Put_Line (\"Finished.\");\n\n   Put_Line\n     (\"Calling procedure from PAA array...\");\n\n   for I in PA'Range loop\n      PAA (I) (Some_Int);\n      Put_Line (\"Some_Int: \" & Some_Int'Image);\n   end loop;\n\n   Put_Line (\"Finished.\");\n\n   Put_Line (\"Some_Int: \" & Some_Int'Image);\n\n   --\n   --  Using record with component of\n   --  anonymous access-to-subprogram type:\n   --\n   RA.AP (Some_Int);\n   Put_Line (\"Some_Int: \" & Some_Int'Image);\n\n   --\n   --  Using record with discriminant of\n   --  anonymous access-to-subprogram type:\n   --\n   Process (RD);\n   Put_Line (\"RD.I: \" & RD.I'Image);\n\n   --\n   --  Using procedure instantiated with\n   --  formal anonymous access-to-subprogram:\n   --\n   Process_Integer (Some_Int);\n   Put_Line (\"Some_Int: \" & Some_Int'Image);\n\n   --\n   --  Using object of anonymous\n   --  access-to-protected-subprogram type:\n   --\n   APP.all;\nend Show_Anonymous_Access_To_Subprograms;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Anonymous_Access_To_Subprograms.Anonymous_Access_To_Subprogram_Example",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_anonymous_access_to_subprograms.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_anonymous_access_to_subprograms.adb",
+    "text_hash": "af244161e3e56189d663bd62680991ada49d8c1a283632c7d12e69b0faba8ea9fed12f21f2c70821335a322f3af7c8971015e987ce66ddb35cbad780692b5dc1",
+    "text_hash_short": "ec770c17e880a98fd2e9ab0110d4a858"
+}

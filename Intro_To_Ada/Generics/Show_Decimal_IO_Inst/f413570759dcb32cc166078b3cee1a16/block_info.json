@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/generics.rst",
+    "line_start": 406,
+    "line_end": 429,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Decimal_IO_Inst is\n\n   type Price is delta 10.0 ** (-2) digits 12;\n\n   package Price_IO is new\n     Ada.Text_IO.Decimal_IO (Price);\n\n   P : Price;\nbegin\n   Price_IO.Default_Exp  := 0;\n\n   P := 2.5;\n   Price_IO.Put (P);\n   New_Line;\n\n   P := 5.75;\n   Price_IO.Put (P);\n   New_Line;\nend Show_Decimal_IO_Inst;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Generics.Show_Decimal_IO_Inst",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_decimal_io_inst.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_decimal_io_inst.adb",
+    "text_hash": "6c8a153513975373d316f06da94ebb84e03b793b68019fee4d4ce1a4fcd43b9257a38a6a2ac303e82893b07bad25a91fd934db5df4b6abedafc467255af2a104",
+    "text_hash_short": "f413570759dcb32cc166078b3cee1a16"
+}

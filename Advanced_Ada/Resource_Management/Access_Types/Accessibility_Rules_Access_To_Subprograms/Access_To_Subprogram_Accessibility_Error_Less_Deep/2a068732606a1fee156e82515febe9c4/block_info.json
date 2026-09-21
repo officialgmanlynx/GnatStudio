@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 5843,
+    "line_end": 5880,
+    "text": "package Access_To_Subprogram_Types is\n\n   type Access_To_Procedure is\n     access procedure (I : in out Integer);\n\n   type Access_To_Function is\n     access function (I : Integer) return Integer;\n\nend Access_To_Subprogram_Types;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Access_To_Subprogram_Types;\nuse  Access_To_Subprogram_Types;\n\nprocedure Show_Access_To_Subprogram_Error is\n   Func : Access_To_Function;\n\n   Value : Integer := 0;\nbegin\n   declare\n      function Add_One (I : Integer)\n                        return Integer is\n        (I + 1);\n   begin\n      Func := Add_One'Access;\n      --  This assignment is illegal because the\n      --  Access_To_Function type is less deep\n      --  than Add_One.\n   end;\n\n   Put_Line (\"Value: \" & Value'Image);\n   Value := Func (Value);\n   Put_Line (\"Value: \" & Value'Image);\nend Show_Access_To_Subprogram_Error;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Accessibility_Rules_Access_To_Subprograms.Access_To_Subprogram_Accessibility_Error_Less_Deep",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "access_to_subprogram_types.ads",
+        "show_access_to_subprogram_error.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_access_to_subprogram_error.adb",
+    "text_hash": "8dc21cb9034478a7c44c39bceb635ab077120688bc8530f99727f49948854da14c82cbe74d7053eaebadd6778f9c68bc9150c218d7a8d5b4189016fddbaf1409",
+    "text_hash_short": "2a068732606a1fee156e82515febe9c4"
+}

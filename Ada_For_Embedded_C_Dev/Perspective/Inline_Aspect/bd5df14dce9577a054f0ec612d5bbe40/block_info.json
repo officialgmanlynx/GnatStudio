@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 2933,
+    "line_end": 2944,
+    "text": "package Float_Arrays is\n\n   type Float_Array is array (Positive range <>) of Float;\n\n   function Average (Data : Float_Array) return Float;\n\n   pragma Inline (Average);\n\nend Float_Arrays;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Inline_Aspect",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "float_arrays.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "5ca977fe50b5e998fb33242fdbf4989be6c88ce18a5f5cb2b41ddfe1709437973a2665c82fe656e3aa9d1761609d34f261c0dbd57fc4c5db3411aac289c96f72",
+    "text_hash_short": "bd5df14dce9577a054f0ec612d5bbe40"
+}

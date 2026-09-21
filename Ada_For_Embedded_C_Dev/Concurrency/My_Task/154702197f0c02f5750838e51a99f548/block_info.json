@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/03_Concurrency.rst",
+    "line_start": 64,
+    "line_end": 86,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main is -- implicitly called by the environment task\n   subtype A_To_Z is Character range 'A' .. 'Z';\n\n   task My_Task;\n\n   task body My_Task is\n   begin\n      for I in A_To_Z'Range loop\n         Put (I);\n      end loop;\n      New_Line;\n   end My_Task;\nbegin\n   for I in A_To_Z'Range loop\n      Put (I);\n   end loop;\n   New_Line;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Concurrency.My_Task",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "7656f3235196445232f7266abf911546313844570af45ceadb29991503a9b48536e53cb9d19f6548dde5280876834ace8eed925ab89fc640a5befe1670b31658",
+    "text_hash_short": "154702197f0c02f5750838e51a99f548"
+}

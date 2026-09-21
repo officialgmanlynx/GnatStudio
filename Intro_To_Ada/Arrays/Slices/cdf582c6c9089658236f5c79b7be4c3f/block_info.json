@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/arrays.rst",
+    "line_start": 702,
+    "line_end": 722,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main is\n    Buf : String := \"Hello ...\";\n\n    Full_Name : String := \"John Smith\";\nbegin\n    Buf (7 .. 9) := \"Bob\";\n    --  Careful! This works because the string\n    --  on the right side is the same length as\n    --  the replaced slice!\n\n    --  Prints \"Hello Bob\"\n    Put_Line (Buf);\n\n     --  Prints \"Hi John\"\n    Put_Line (\"Hi \" & Full_Name (1 .. 4));\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Arrays.Slices",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "f7488812a9bf654cbd3ae3d4e97f48c4b63ad8b3bf549dd73b7c2408dc254e3504beb19b8cd50233d2fcdf0824fdad46338c7a80e595179cd86bd89589477dca",
+    "text_hash_short": "cdf582c6c9089658236f5c79b7be4c3f"
+}

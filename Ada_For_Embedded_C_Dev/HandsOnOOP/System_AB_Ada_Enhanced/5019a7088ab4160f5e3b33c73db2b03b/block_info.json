@@ -1,0 +1,50 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/Appendix_A_OOP.rst",
+    "line_start": 490,
+    "line_end": 678,
+    "text": "package Simple\n  with Pure\nis\nend Simple;\n\npackage Simple.System_A is\n\n   type A is private;\n\n   procedure Activate (E : in out A);\n\n   function Is_Active (E : A) return Boolean;\n\n   function Value (E : A) return Float;\n\n   procedure Finalize (E : in out A);\n\nprivate\n\n   type Val_Array is array (Positive range <>) of Float;\n\n   type A is record\n      Val    : Val_Array (1 .. 2);\n      Active : Boolean;\n   end record;\n\nend Simple.System_A;\n\npackage body Simple.System_A is\n\n   procedure Activate (E : in out A) is\n   begin\n      E.Val    := (others => 0.0);\n      E.Active := True;\n   end Activate;\n\n   function Is_Active (E : A) return Boolean is\n      (E.Active);\n\n   function Value (E : A) return Float is\n   begin\n      return (E.Val (1) + E.Val (2)) / 2.0;\n   end Value;\n\n   procedure Finalize (E : in out A) is\n   begin\n      E.Active := False;\n   end Finalize;\n\nend Simple.System_A;\n\npackage Simple.System_B is\n\n   type B is private;\n\n   procedure Activate (E : in out B);\n\n   function Is_Active (E : B) return Boolean;\n\n   function Value (E : B) return Float;\n\n   procedure Finalize (E : in out B);\n\nprivate\n\n   type B is record\n      Val    : Float;\n      Active : Boolean;\n   end record;\n\nend Simple.System_B;\n\npackage body Simple.System_B is\n\n   procedure Activate (E : in out B) is\n   begin\n      E.Val    := 0.0;\n      E.Active := True;\n   end Activate;\n\n   function Is_Active (E : B) return Boolean is\n   begin\n      return E.Active;\n   end Is_Active;\n\n   function Value (E : B) return Float is\n     (E.Val);\n\n   procedure Finalize (E : in out B) is\n   begin\n      E.Active := False;\n   end Finalize;\n\nend Simple.System_B;\n\nwith Simple.System_A; use Simple.System_A;\nwith Simple.System_B; use Simple.System_B;\n\npackage Simple.System_AB is\n\n   type AB is private;\n\n   procedure Activate (E : in out AB);\n\n   function Is_Active (E : AB) return Boolean;\n\n   function Value (E : AB) return Float;\n\n   function Check (E : AB) return Boolean;\n\n   procedure Finalize (E : in out AB);\n\nprivate\n\n   type AB is record\n      SA : A;\n      SB : B;\n   end record;\n\nend Simple.System_AB;\n\npackage body Simple.System_AB is\n\n   procedure Activate (E : in out AB) is\n   begin\n      Activate (E.SA);\n      Activate (E.SB);\n   end Activate;\n\n   function Is_Active (E : AB) return Boolean is\n      (Is_Active (E.SA) and Is_Active (E.SB));\n\n   function Value (E : AB) return Float is\n      ((Value (E.SA) + Value (E.SB)) / 2.0);\n\n   function Check (E : AB) return Boolean is\n      Threshold : constant := 0.1;\n   begin\n      return abs (Value (E.SA) - Value (E.SB)) < Threshold;\n   end Check;\n\n   procedure Finalize (E : in out AB) is\n   begin\n      Finalize (E.SA);\n      Finalize (E.SB);\n   end Finalize;\n\nend Simple.System_AB;\n\nwith Ada.Text_IO;      use Ada.Text_IO;\n\nwith Simple.System_AB; use Simple.System_AB;\n\nprocedure Main is\n\n   procedure Display_Active (E : AB) is\n   begin\n      if Is_Active (E) then\n         Put_Line (\"System AB is active\");\n      else\n         Put_Line (\"System AB is not active\");\n      end if;\n   end Display_Active;\n\n   procedure Display_Check (E : AB) is\n   begin\n      if Check (E) then\n         Put_Line (\"System AB check: PASSED\");\n      else\n         Put_Line (\"System AB check: FAILED\");\n      end if;\n   end Display_Check;\n\n   S : AB;\nbegin\n   Put_Line (\"Activating system AB...\");\n   Activate (S);\n\n   Display_Active (S);\n   Display_Check (S);\n\n   Put_Line (\"Deactivating system AB...\");\n   Finalize (S);\n\n   Display_Active (S);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.HandsOnOOP.System_AB_Ada_Enhanced",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple.ads",
+        "simple-system_a.ads",
+        "simple-system_a.adb",
+        "simple-system_b.ads",
+        "simple-system_b.adb",
+        "simple-system_ab.ads",
+        "simple-system_ab.adb",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "6e7bdf49283df5f2d71fafc5b3aad32c5a8c2f48d79c7da7bc2b9949343c6b838972f0c3e5b622d45af567f68b90f4d56f46bd760189f9c6d203dfa36eea6910",
+    "text_hash_short": "5019a7088ab4160f5e3b33c73db2b03b"
+}

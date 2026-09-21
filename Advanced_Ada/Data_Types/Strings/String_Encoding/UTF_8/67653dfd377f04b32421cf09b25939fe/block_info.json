@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/strings.rst",
+    "line_start": 655,
+    "line_end": 684,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Ada.Strings.UTF_Encoding;\nuse  Ada.Strings.UTF_Encoding;\n\nwith Ada.Strings.UTF_Encoding.Wide_Wide_Strings;\nuse  Ada.Strings.UTF_Encoding.Wide_Wide_Strings;\n\nprocedure Show_UTF_8 is\n\n   Symbol_UTF_8 : constant UTF_8_String := \"\ud835\udea1\";\n   Symbol_WWS   : constant Wide_Wide_String :=\n                    Decode (Symbol_UTF_8);\n\nbegin\n   Put_Line (\"Wide_Wide_String Length: \"\n             & Symbol_WWS'Length'Image);\n   Put_Line (\"Wide_Wide_String Size:   \"\n             & Symbol_WWS'Size'Image);\n   Put_Line (\"UTF-8 String Length:     \"\n             & Symbol_UTF_8'Length'Image);\n   Put_Line (\"UTF-8 String Size:       \"\n             & Symbol_UTF_8'Size'Image);\n   New_Line;\n   Put_Line (\"UTF-8 String:            \"\n             & Symbol_UTF_8);\nend Show_UTF_8;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Strings.String_Encoding.UTF_8",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_utf_8.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_utf_8.adb",
+    "text_hash": "720f3a2289a8673b746ea8bae49324712f947a2930905aa964d343634fbe15a6129227299223fa12f77fabca7df4e2cce28d68a931358aa558649d72f0ff833f",
+    "text_hash_short": "67653dfd377f04b32421cf09b25939fe"
+}

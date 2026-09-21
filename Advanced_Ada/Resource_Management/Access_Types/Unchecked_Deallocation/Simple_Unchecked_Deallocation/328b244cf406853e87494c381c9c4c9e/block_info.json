@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 3435,
+    "line_end": 3452,
+    "text": "with Ada.Unchecked_Deallocation;\n\npackage Integer_Types is\n\n   type Integer_Access is access Integer;\n\n   --\n   --  Instantiation of Ada.Unchecked_Deallocation\n   --  for the Integer_Access type:\n   --\n   procedure Free is\n     new Ada.Unchecked_Deallocation\n       (Object => Integer,\n        Name   => Integer_Access);\nend Integer_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Unchecked_Deallocation.Simple_Unchecked_Deallocation",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "integer_types.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "a48bebc806c8e79fd4a008d212e9ce68b076f7a3cc9616752110a3d69e7b740426e25b694e38162e7beffe0e16fb17206ed210b1b01537688a3c333bf7098795",
+    "text_hash_short": "328b244cf406853e87494c381c9c4c9e"
+}

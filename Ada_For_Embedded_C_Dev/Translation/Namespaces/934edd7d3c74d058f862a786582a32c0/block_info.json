@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 418,
+    "line_end": 434,
+    "text": "package Register_Interface is\n   procedure Initialize (Size : Integer)\n     with Import     => True,\n          Convention => C,\n          External_Name => \"registerInterface_Initialize\";\n\nend Register_Interface;\n\nwith Register_Interface;\n\nprocedure Main is\nbegin\n   Register_Interface.Initialize (15);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.Namespaces",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "register_interface.ads",
+        "main.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "efe416243ea17c9ddf4c4375eddeab8bb4357a6a3896a16e5b7baed84101e5d5f7f395245ac264d2fcd6087b4f7458fe6ea6b82ef799b781a9fea586cd322a82",
+    "text_hash_short": "934edd7d3c74d058f862a786582a32c0"
+}

@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/05_SPARK.rst",
+    "line_start": 903,
+    "line_end": 926,
+    "text": "package P is\n\n   type List is array (Integer range <>) of Character;\n\n   Data : List (1 .. 100);\n   Index : Integer := 1;\n\n   procedure Read (V : out Character)\n     with Pre => Index in Data'Range;\n\nend P;\n\npackage body P is\n\n   procedure Read (V : out Character) is\n   begin\n      V := Data (Index);\n      Index := Index + 1;\n   end Read;\n\nend P;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.SPARK.Defensive",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "p.ads",
+        "p.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "ad49e1c836a76051c3d6f3943cdd8dc0f5864e851b3e66cfcd6cb3700017beb7534b8c63f2319d3f82566ef89dd47b68d31b1f7b6231d559b2a58975b265e542",
+    "text_hash_short": "9646614c34d191be51b4522c972538aa"
+}

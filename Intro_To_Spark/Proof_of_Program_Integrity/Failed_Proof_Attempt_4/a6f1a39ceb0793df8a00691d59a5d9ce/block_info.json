@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/03_Proof_Of_Program_Integrity.rst",
+    "line_start": 653,
+    "line_end": 678,
+    "text": "package Show_Failed_Proof_Attempt is\n\n   function GCD (A, B : Positive) return Positive with\n     Post =>\n       A mod GCD'Result = 0\n       and B mod GCD'Result = 0;\n\nend Show_Failed_Proof_Attempt;\n\npackage body Show_Failed_Proof_Attempt is\n\n   function GCD (A, B : Positive) return Positive is\n   begin\n      if A > B then\n         return GCD (A - B, B);\n      elsif B > A then\n         return GCD (A, B - A);\n      else\n         return A;\n      end if;\n   end GCD;\n\nend Show_Failed_Proof_Attempt;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Proof_of_Program_Integrity.Failed_Proof_Attempt_4",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "show_failed_proof_attempt.ads",
+        "show_failed_proof_attempt.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "841f891a14850fd1d4c02514e564491bfe340310dd479ba27447e7efb2e914b05c2244f00931df024a83c11af36bdf63e6dbda90d5338e88829d6c418e997ea1",
+    "text_hash_short": "a6f1a39ceb0793df8a00691d59a5d9ce"
+}

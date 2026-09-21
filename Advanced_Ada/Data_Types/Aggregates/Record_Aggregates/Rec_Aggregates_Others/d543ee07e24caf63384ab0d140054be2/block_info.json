@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/aggregates.rst",
+    "line_start": 476,
+    "line_end": 488,
+    "text": "with Custom_Records; use Custom_Records;\n\nprocedure Show_Record_Aggregates_Others is\n   Dummy : Integer_Float;\nbegin\n   --  ERROR: components selected by\n   --         others must be of same\n   --         type.\n   Dummy := (others => 256);\nend Show_Record_Aggregates_Others;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Aggregates.Record_Aggregates.Rec_Aggregates_Others",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_record_aggregates_others.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_record_aggregates_others.adb",
+    "text_hash": "137a0eec8e5a40737e020205a599ca7c7c3524f87af2da2ad9b38cbe3e4902e051120341d0c9aa1a8cd61220a57a510be5b8b526bae1ca673c0d614b51539917",
+    "text_hash_short": "d543ee07e24caf63384ab0d140054be2"
+}

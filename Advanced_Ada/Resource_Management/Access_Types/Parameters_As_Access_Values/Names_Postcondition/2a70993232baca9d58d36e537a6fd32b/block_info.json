@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 1183,
+    "line_end": 1221,
+    "text": "package Names is\n\n   type Name is access String;\n\n   procedure Show (N : Name)\n     with Post => N.all'Old = N.all;\n   --             ^^^^^^^^^^^^^^^^^\n   --     we promise that we won't change\n   --     the object\n\nend Names;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\n--  with Ada.Characters.Handling;\n--  use  Ada.Characters.Handling;\n\npackage body Names is\n\n   procedure Show (N : Name) is\n   begin\n      --  for I in N'Range loop\n      --     N (I) := To_Lower (N (I));\n      --  end loop;\n      Put_Line (\"Name: \" & N.all);\n   end Show;\n\nend Names;\n\nwith Names; use Names;\n\nprocedure Show_Names is\n   N : Name := new String'(\"John\");\nbegin\n   Show (N);\nend Show_Names;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Parameters_As_Access_Values.Names_Postcondition",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "names.ads",
+        "names.adb",
+        "show_names.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_names.adb",
+    "text_hash": "a5c75c537834962693b5b49fa772e6f23bd5832e35aa1be139ba281858fc83e739c72340a4709ab97d96bd24a87e2867f7584283bee839b984a68ee8b3fdcaf8",
+    "text_hash_short": "2a70993232baca9d58d36e537a6fd32b"
+}

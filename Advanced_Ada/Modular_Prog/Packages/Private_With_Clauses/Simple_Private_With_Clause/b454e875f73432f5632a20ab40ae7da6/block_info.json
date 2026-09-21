@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/modular_prog/packages.rst",
+    "line_start": 567,
+    "line_end": 579,
+    "text": "private with P;\n\npackage Data is\n\n   --  ERROR: information from P\n   --  isn't visible here\n\n   type T2 is new P.T;\n\nend Data;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Modular_Prog.Packages.Private_With_Clauses.Simple_Private_With_Clause",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "data.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "4f4cfa7f7b35d4cfa182b2177a4bab458de25a50ab5f7bfbf51a699e0f0e7c69311e24f9a2aea2fe7de625d2406f52a53454499fcd5dd95d85828fd052c5420e",
+    "text_hash_short": "b454e875f73432f5632a20ab40ae7da6"
+}

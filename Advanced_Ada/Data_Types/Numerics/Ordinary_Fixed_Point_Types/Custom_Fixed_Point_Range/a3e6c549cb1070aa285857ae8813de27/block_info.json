@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 8464,
+    "line_end": 8487,
+    "text": "with Ada.Text_IO;  use Ada.Text_IO;\nwith Ada.Numerics; use Ada.Numerics;\n\nprocedure Custom_Fixed_Point_Range is\n   type T_Inv_Trig is\n     delta 2.0 ** (-15) * Pi\n     range -Pi / 2.0 .. Pi / 2.0;\nbegin\n   Put_Line (\"T_Inv_Trig requires \"\n             & Integer'Image (T_Inv_Trig'Size)\n             & \" bits\");\n   Put_Line (\"Delta    value of T_Inv_Trig: \"\n             & T_Inv_Trig'Image\n                 (T_Inv_Trig'Delta));\n   Put_Line (\"Minimum  value of T_Inv_Trig: \"\n             & T_Inv_Trig'Image\n                 (T_Inv_Trig'First));\n   Put_Line (\"Maximum  value of T_Inv_Trig: \"\n             & T_Inv_Trig'Image\n                 (T_Inv_Trig'Last));\nend Custom_Fixed_Point_Range;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Ordinary_Fixed_Point_Types.Custom_Fixed_Point_Range",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_fixed_point_range.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "custom_fixed_point_range.adb",
+    "text_hash": "c50b75a199ec507f1fd3faa97f83681fd283ad8364f11a7ea94692c4eb35d95aa52a6dd89322d182faec22a1330a11d97f62d297b9a898840daa04d9d697d683",
+    "text_hash_short": "a3e6c549cb1070aa285857ae8813de27"
+}

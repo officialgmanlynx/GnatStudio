@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 2307,
+    "line_end": 2322,
+    "text": "with Ada.Containers.Ordered_Sets;\n\nprocedure Show_Set_Decl is\n\n   package Integer_Sets is new\n     Ada.Containers.Ordered_Sets\n       (Element_Type => Integer);\n   use Integer_Sets;\n\n   This_Set : Set;\nbegin\n   null;\nend Show_Set_Decl;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Constructor_Functions_Limited_Types.Constructor_Functions_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_set_decl.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_set_decl.adb",
+    "text_hash": "68289c98a62f8a3bddc50880f1a41b82c91c19d5ddd2e6a203ee5db4c9878631d59ec6cd40fb6b86dcfb7218f8166cd4b717affff3ee9e7207d78e3ac3411860",
+    "text_hash_short": "e5b6c0e148cfdb1987ab3002ec1f53bd"
+}

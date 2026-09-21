@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/expressions.rst",
+    "line_start": 1169,
+    "line_end": 1212,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Reduction_Expression is\n   type Integer_Array is\n     array (Positive range <>) of Integer;\n\n   A : Integer_Array (1 .. 3);\n\n   type Integer_Accumulator is record\n      Value : Long_Integer;\n      Count : Integer;\n   end record;\n\n   function Accumulate\n     (Accumulator : Integer_Accumulator;\n      Value       : Integer)\n      return Integer_Accumulator is\n   begin\n      return (Value => Accumulator.Value\n                       + Long_Integer (Value),\n              Count => Accumulator.Count + 1);\n   end Accumulate;\n\n   function Zero return Integer_Accumulator is\n     (Value => 0, Count => 0);\n\n   function Average (Acc : Integer_Accumulator)\n                     return Float is\n     (Float (Acc.Value) / Float (Acc.Count));\n\n   Acc : Integer_Accumulator;\n\nbegin\n   A := [2, 3, 4];\n\n   Acc := A'Reduce (Accumulate, Zero);\n   Put_Line (\"Acc = \"\n             & Acc'Image);\n   Put_Line (\"Avg = \"\n             & Average (Acc)'Image);\nend Show_Reduction_Expression;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Expressions.Reduction_Expressions.Reducer_Integer_Accumulator",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnatX",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_reduction_expression.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_reduction_expression.adb",
+    "text_hash": "78a1be5206cd54940385690ce60983ee5f2d70195767847207b4acf5702eb833c565b19fcf839c0d189f405a2443c1eafc0672ef770930011f599e290e6a906c",
+    "text_hash_short": "95d61e18e7b719d0a25dc35cdbff6af2"
+}

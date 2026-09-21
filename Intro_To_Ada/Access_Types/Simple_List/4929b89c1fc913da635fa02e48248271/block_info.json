@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/access_types.rst",
+    "line_start": 255,
+    "line_end": 270,
+    "text": "package Simple_List is\n   type Node;\n   --  This is an incomplete type declaration,\n   --  which is completed in the same\n   --  declarative region.\n\n   type Node_Acc is access Node;\n\n   type Node is record\n      Content    : Natural;\n      Prev, Next : Node_Acc;\n   end record;\nend Simple_List;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Access_Types.Simple_List",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple_list.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "ec2e8f5bbe4fd437f91a9370d82db6558a213786a8062532e7a5c4a761aa5bb70db661d1a75bd582052fdcb30979a1359e368f28efa1063cb1fd501290ae0ec2",
+    "text_hash_short": "4929b89c1fc913da635fa02e48248271"
+}

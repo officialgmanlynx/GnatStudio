@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/06_side_effects.rst",
+    "line_start": 217,
+    "line_end": 237,
+    "text": "package Ok_Subprograms is\n   procedure Set (V : Integer; Prev : out Integer);\n   function Get return Integer;\nend Ok_Subprograms;\n\npackage body Ok_Subprograms is\n\n   Value : Integer := 0;\n\n   procedure Set (V : Integer; Prev : out Integer) is\n   begin\n      Prev := Value;\n      Value := V;\n   end Set;\n\n   function Get return Integer is (Value);\n\nend Ok_Subprograms;\n",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Side_Effect.No_Side_Effect_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow_report_all",
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": true,
+    "source_files": [
+        "ok_subprograms.ads",
+        "ok_subprograms.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "51e1f29986e4a883e9207cc3a1f62ab727ee10c5a4dfed14dc01636211b79482b170fab1ce30264c21bca72cba2ac77a08d5bd790844e786bf28d8b5c05807c0",
+    "text_hash_short": "04e2235b8b6a01706434d35f6636674c"
+}

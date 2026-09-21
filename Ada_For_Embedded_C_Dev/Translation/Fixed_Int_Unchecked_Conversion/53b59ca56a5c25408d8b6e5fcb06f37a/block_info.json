@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 1469,
+    "line_end": 1497,
+    "text": "with Ada.Text_IO;              use Ada.Text_IO;\nwith Ada.Unchecked_Conversion;\n\nprocedure Fixed_Int_Unchecked_Conversion is\n   Delta_16 : constant := 1.0 / 2.0 ** (16 - 1);\n   Max_16   : constant := 2 ** 15;\n\n   type Fixed_16 is delta Delta_16 range -1.0 .. 1.0 - Delta_16\n     with Size => 16;\n   type Int_16   is range -Max_16 .. Max_16 - 1\n     with Size => 16;\n\n   function As_Int_16 is new Ada.Unchecked_Conversion (Source => Fixed_16,\n                                                       Target => Int_16);\n   function As_Fixed_16 is new Ada.Unchecked_Conversion (Source => Int_16,\n                                                         Target => Fixed_16);\n\n   I : Int_16   := 0;\n   F : Fixed_16 := 0.0;\nbegin\n   F := Fixed_16'Last;\n   I := As_Int_16 (F);\n\n   Put_Line (\"F = \" & Fixed_16'Image (F));\n   Put_Line (\"I = \" & Int_16'Image (I));\nend Fixed_Int_Unchecked_Conversion;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.Fixed_Int_Unchecked_Conversion",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "fixed_int_unchecked_conversion.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "fixed_int_unchecked_conversion.adb",
+    "text_hash": "00a300d959a3cd0a03558a3e8d07bf62a48fcd48a068e55bd6a637e6902d7136802600d34c4748f1b37d1e3a2dbcf630353299adafb9832e4115aaf986fe719a",
+    "text_hash_short": "53b59ca56a5c25408d8b6e5fcb06f37a"
+}

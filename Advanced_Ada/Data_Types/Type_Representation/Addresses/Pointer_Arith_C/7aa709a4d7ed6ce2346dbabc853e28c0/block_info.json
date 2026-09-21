@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 2770,
+    "line_end": 2796,
+    "text": "!main.c\n#include <stdio.h>\n\nint main(int argc, const char * argv[])\n{\n    int i;\n    int arr[10];\n\n    int *a = arr;\n    /* int *a = &arr[0]; */\n\n    for (i = 0; i < 10; i++)\n    {\n        *a++ = i;\n        printf(\"curr address: %p\\n\", a);\n    }\n\n    for (i = 0; i < 10; i++)\n    {\n        printf(\"arr[%d]: %d\\n\", i, arr[i]);\n    }\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Addresses.Pointer_Arith_C",
+    "main_file": "main.c",
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "ba77ca45c596b0194fd72f63f0545d86bb714692b8c40043bbf061eaec42d8ec20ba6465b031f1c4110329049c2e70baa4724ad7d4063132ae96bd9b87b0bb3e",
+    "text_hash_short": "7aa709a4d7ed6ce2346dbabc853e28c0"
+}

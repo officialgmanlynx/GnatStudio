@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/02_Flow_Analysis.rst",
+    "line_start": 497,
+    "line_end": 520,
+    "text": "package Show_Record_Flow_Analysis is\n\n   type Rec is record\n      F1 : Natural;\n      F2 : Natural;\n   end record;\n\n   procedure Init (R : out Rec);\n\nend Show_Record_Flow_Analysis;\n\npackage body Show_Record_Flow_Analysis is\n\n   procedure Init (R : out Rec) is\n   begin\n      R.F1 := 0;\n      R.F2 := 0;\n      --  R is initialized\n   end Init;\n\nend Show_Record_Flow_Analysis;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Flow_Analysis.Record_Flow_Analysis_1",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow_report_all"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "show_record_flow_analysis.ads",
+        "show_record_flow_analysis.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "6424440210ac9ae87481cc46094da69f737cc07d691d677b41b48fb6cc62932ea8e854f32d08f59d72cf047e889676929d30c8f2abd878de1d084713fbf661f8",
+    "text_hash_short": "24cd553b87b737536912b1bb780f6402"
+}

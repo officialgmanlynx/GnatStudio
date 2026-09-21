@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 1502,
+    "line_end": 1516,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Check_Integer_Type_Range is\nbegin\n   Put_Line (\"Integer'Size  :\"\n             & Integer'Size'Image\n             & \" bits\");\n   Put_Line (\"Integer'First :\"\n             & Integer'First'Image);\n   Put_Line (\"Integer'Last  :\"\n             & Integer'Last'Image);\nend Check_Integer_Type_Range;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Integer_Types.Check_Integer_Type_Range",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "check_integer_type_range.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "check_integer_type_range.adb",
+    "text_hash": "c2e7c2bfc19e2e593ec56f571de4c785eabc0b4213bec7665d8ad450207d2ae08135d59157c030a9fb7600f2976d9dbf8ad36d1933b72cc12165bc3d1fc32ef9",
+    "text_hash_short": "a883bbe5aca86a924aa1300736232284"
+}

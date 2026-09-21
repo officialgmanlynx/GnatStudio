@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 4548,
+    "line_end": 4564,
+    "text": "procedure P (I : in out Integer);\n\nprocedure P (I : in out Integer) is\nbegin\n   null;\nend P;\n\nwith P;\n\nprocedure Proc is\n   I : Integer := 0;\nbegin\n   P (I);\nend Proc;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Access_To_Subprograms.Subprogram_Call",
+    "main_file": "proc.adb",
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "p.ads",
+        "p.adb",
+        "proc.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "0b4fa2d72d31ba7e6f2ea69a313bd43feb6375b6377274d4b52cfcecf3855a21f1cf401efddbcec6cda06181f4851babf0e73f34cf79cfbd5f6e60041da69232",
+    "text_hash_short": "0e9547e53d0d02d39920f4d1d6787af6"
+}

@@ -1,0 +1,49 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/04_State_Abstraction.rst",
+    "line_start": 1032,
+    "line_end": 1071,
+    "text": "package Stack with\n  Abstract_State => The_Stack\nis\n   pragma Unevaluated_Use_Of_Old (Allow);\n\n   type Element is new Integer;\n\n   type Element_Array is array (Positive range <>) of Element;\n   Max : constant Natural := 100;\n   subtype Length_Type is Natural range 0 .. Max;\n\n   procedure Push (E : Element) with\n     Post =>\n       not Is_Empty and\n       (if Is_Full'Old then The_Stack = The_Stack'Old else Peek = E);\n\n   function Peek     return Element with Pre => not Is_Empty;\n   function Is_Full  return Boolean;\n   function Is_Empty return Boolean;\nend Stack;\n\npackage body Stack with\n  Refined_State => (The_Stack => (Top, Content))\nis\n   Top     : Length_Type := 0;\n   Content : Element_Array (1 .. Max) := (others => 0);\n\n   procedure Push (E : Element) is\n   begin\n      Top           := Top + 1;\n      Content (Top) := E;\n   end Push;\n\n   function  Peek     return Element is (Content (Top));\n   function  Is_Full  return Boolean is (Top >= Max);\n   function  Is_Empty return Boolean is (Top = 0);\nend Stack;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.State_Abstraction.Example_06",
+    "main_file": null,
+    "gnat_version": [
+        "selected",
+        "12.2.0-1"
+    ],
+    "gnatprove_version": [
+        "selected",
+        "12.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-compile",
+        "ada-prove-flow",
+        "ada-expect-compile-error",
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": true,
+    "source_files": [
+        "stack.ads",
+        "stack.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "f87d33764212ddad70e90ffc95640675cd5823b6d1b6613e9a8d10d49366a7012b44a9028196362c85673436dc84d8ec15723e56f45e3763ee74833c97ecd7f1",
+    "text_hash_short": "9da2b74da203a639dc66b2d33cbd500d"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numeric_attributes.rst",
+    "line_start": 115,
+    "line_end": 128,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Num_Types;   use Num_Types;\n\nprocedure Show_Modular is\n   I : constant Integer := -1;\n   X : Modular := 1;\nbegin\n   X := Modular'Mod (I);\n   Put_Line (X'Image);\nend Show_Modular;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numeric_Attributes.Modular_Types.Modular_1",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_modular.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_modular.adb",
+    "text_hash": "c2a117419792a8a559bc771db00a069482bb26c95017cbc554b8b3b62242f61f88bb4b39445824f7993e07e494552e37ea66ca8285d8c966c4df4c01ab26cf10",
+    "text_hash_short": "572a753de946b7578c5f1b6a795ede98"
+}

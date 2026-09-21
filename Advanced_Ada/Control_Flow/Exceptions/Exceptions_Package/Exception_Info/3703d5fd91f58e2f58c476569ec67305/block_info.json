@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/exceptions.rst",
+    "line_start": 1301,
+    "line_end": 1329,
+    "text": "with Ada.Text_IO;    use Ada.Text_IO;\nwith Ada.Exceptions; use Ada.Exceptions;\n\nprocedure Show_Exception_Info is\n\n   Custom_Exception : exception;\n\n   procedure Nested is\n   begin\n      raise Custom_Exception\n        with \"We got a problem\";\n   end Nested;\n\nbegin\n   Nested;\n\nexception\n   when E : others =>\n      Put_Line (\"Exception info: \"\n                & Exception_Information (E));\n      Put_Line (\"Exception name: \"\n                & Exception_Name (E));\n      Put_Line (\"Exception msg:  \"\n                & Exception_Message (E));\nend Show_Exception_Info;\n\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Exceptions.Exceptions_Package.Exception_Info",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-g",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_exception_info.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_exception_info.adb",
+    "text_hash": "4f4ca507755392b9cd629dd1d32bfc6a1834477511388b582f7465719bccbb87125e447373f6e26b5ceab02e381f4098afe00941e3655f9e74b32790a22150a5",
+    "text_hash_short": "3703d5fd91f58e2f58c476569ec67305"
+}

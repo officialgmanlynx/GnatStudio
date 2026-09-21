@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/strongly_typed_language.rst",
+    "line_start": 550,
+    "line_end": 559,
+    "text": "procedure Main is\n   A : Integer := 3;\n   B : Integer := 2;\n   F : Float;\nbegin\n   F := A / B;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Strongly_Typed_Language.Implicit_Cast",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "246e4e5d07449d2d80a0040ac181e6059fb7d8e89a036551ce96be2fd39cb61af7b091b260abdcc0e86a660df6dc30c84ed2f43ec6f1a08d1341d452ea7c2c1b",
+    "text_hash_short": "38a8fcc6608c22e22940052ab8dd62f4"
+}

@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 367,
+    "line_end": 383,
+    "text": "--  pck.ads\n\npackage Pck is\n   My_Glob : Integer;\nend Pck;\n\n--  main.adb\n\nwith Pck;\n\nprocedure Main is\nbegin\n   Pck.My_Glob := 0;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Using_Pkg_Entities",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "pck.ads",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "6806cf7733baa9ee9fe56733af1b57fa73fc2370e195a1f0fb5cf52b1bd65403036524b9afdbe4b8223ab6b3cf46b4b8b839c426c4182018c568a19cf73634a0",
+    "text_hash_short": "4215ba710eb54478538dc001bb74ce09"
+}

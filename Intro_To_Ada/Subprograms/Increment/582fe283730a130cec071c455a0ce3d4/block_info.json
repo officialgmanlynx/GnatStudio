@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/subprograms.rst",
+    "line_start": 20,
+    "line_end": 31,
+    "text": "function Increment (I : Integer) return Integer;\n--  We declare (but don't define) a function with\n--  one parameter, returning an integer value\n\nfunction Increment (I : Integer) return Integer is\n   --  We define the Increment function\nbegin\n    return I + 1;\nend Increment;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Subprograms.Increment",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "increment.ads",
+        "increment.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "53309dcdf3e41cbc33fe7f975bf26c1c2fe547892cc3522bc8eb7fe97d60fa234030ec0811aeff084fb335eb9318324b133ae0bd534dd8bc9b1ec6bf02c6be6f",
+    "text_hash_short": "582fe283730a130cec071c455a0ce3d4"
+}

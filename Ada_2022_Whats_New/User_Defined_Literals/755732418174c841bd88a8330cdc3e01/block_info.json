@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/whats-new-in-ada-2022/chapters/user_defined_literals.rst",
+    "line_start": 26,
+    "line_end": 60,
+    "text": "with Ada.Wide_Wide_Text_IO;\nwith Ada.Characters.Conversions;\n\nprocedure Main is\n\n   type My_Type (Length : Natural) is record\n      Value : Wide_Wide_String (1 .. Length);\n   end record\n     with String_Literal => From_String,\n       Real_Literal      => From_Real,\n       Integer_Literal   => From_Integer;\n\n   function From_String (Value : Wide_Wide_String) return My_Type is\n      ((Length => Value'Length, Value => Value));\n\n   function From_Real (Value : String) return My_Type is\n      ((Length => Value'Length,\n        Value  => Ada.Characters.Conversions.To_Wide_Wide_String (Value)));\n\n   function From_Integer (Value : String) return My_Type renames From_Real;\n\n   procedure Print (Self : My_Type) is\n   begin\n      Ada.Wide_Wide_Text_IO.Put_Line (Self.Value);\n   end Print;\n\nbegin\n   Print (\"Test \"\"string\"\"\");\n   Print (123);\n   Print (16#DEAD_BEEF#);\n   Print (2.99_792_458e+8);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_2022_Whats_New.User_Defined_Literals",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "681770c28e37d980759ac66b1b21fd07a5cd9e36c899192c00b6bb9258e2bff462e3beef44bf8dd2d6007144794f4c6cfcf3e0f66a78daa817453de49ac67f68",
+    "text_hash_short": "755732418174c841bd88a8330cdc3e01"
+}

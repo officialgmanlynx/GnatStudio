@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/04_Embedded.rst",
+    "line_start": 172,
+    "line_end": 193,
+    "text": "with System.Machine_Code; use System.Machine_Code;\nwith Interfaces;          use Interfaces;\n\nfunction Get_Processor_Cycles return Unsigned_64 is\n   Low, High : Unsigned_32;\n   Counter   : Unsigned_64;\nbegin\n   Asm (\"rdtsc\",\n        Outputs =>\n          (Unsigned_32'Asm_Output (\"=a\", Low),\n           Unsigned_32'Asm_Output (\"=d\", High)),\n        Volatile => True);\n\n   Counter :=\n     Unsigned_64 (High) * 2 ** 32 +\n     Unsigned_64 (Low);\n\n   return Counter;\nend Get_Processor_Cycles;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Embedded.Assembly_Code",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "get_processor_cycles.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "da7df3a3afbb1d91e2b9d3c15ef0a132242c4ae42178224e1241a9401c39398738d77e917ef81dd93f6f8f5adf7c501b8832f3a4b327fdb83ebc2a6959b708a1",
+    "text_hash_short": "022b8c8179b8fa08df1d0a069642bf49"
+}

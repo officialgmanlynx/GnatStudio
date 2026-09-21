@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/arrays.rst",
+    "line_start": 484,
+    "line_end": 580,
+    "text": "package Measurement_Defs is\n\n   type Days is\n     (Mon, Tue, Wed, Thu, Fri, Sat, Sun);\n\n   type Hours is range 0 .. 11;\n\n   subtype Measurement is Float;\n\n   type Hourly_Measurements is\n     array (Hours) of Measurement;\n\n   type Measurements is\n     array (Days) of Hourly_Measurements;\n\n   procedure Show_Indices (M : Measurements);\n\n   procedure Show_Values (M : Measurements);\n\n   procedure Reset (M : out Measurements);\n\nend Measurement_Defs;\n\nwith Ada.Text_IO;      use Ada.Text_IO;\n\npackage body Measurement_Defs is\n\n   procedure Show_Indices (M : Measurements) is\n   begin\n      Put_Line (\"---- Indices ----\");\n\n      for D in M'Range loop\n         Put (D'Image & \" \");\n\n         for H in M (D)'First ..\n                  M (D)'Last - 1\n         loop\n            Put (H'Image & \" \");\n         end loop;\n         Put_Line (M (D)'Last'Image);\n      end loop;\n   end Show_Indices;\n\n   procedure Show_Values (M : Measurements) is\n      package H_IO is\n        new Ada.Text_IO.Integer_IO (Hours);\n      package M_IO is\n        new Ada.Text_IO.Float_IO (Measurement);\n\n        procedure Set_IO_Defaults is\n        begin\n           H_IO.Default_Width := 5;\n\n           M_IO.Default_Fore  := 1;\n           M_IO.Default_Aft   := 2;\n           M_IO.Default_Exp   := 0;\n        end Set_IO_Defaults;\n   begin\n      Set_IO_Defaults;\n\n      Put_Line (\"---- Values ----\");\n      Put (\"   \");\n      for H in M (M'First)'Range loop\n         H_IO.Put (H);\n      end loop;\n      New_Line;\n\n      for D in M'Range loop\n         Put (D'Image & \" \");\n\n         for H in M (D)'Range loop\n            M_IO.Put (M (D) (H));\n            Put (\" \");\n         end loop;\n         New_Line;\n      end loop;\n   end Show_Values;\n\n   procedure Reset (M : out Measurements) is\n   begin\n      M := (others => (others => 0.0));\n   end Reset;\n\nend Measurement_Defs;\n\nwith Measurement_Defs; use Measurement_Defs;\n\nprocedure Show_Measurements is\n   M : Measurements;\nbegin\n   Reset (M);\n   Show_Indices (M);\n   Show_Values (M);\nend Show_Measurements;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Arrays.Array_Of_Arrays.Multidimensional_Measurements",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "measurement_defs.ads",
+        "measurement_defs.adb",
+        "show_measurements.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_measurements.adb",
+    "text_hash": "4f4232ace0029e60599cf3ede3b8394cdeaa338fd3f1d9dc9001a608b0f1e9ff8cff62a003178c7482414102e30e8a99d57f0c10ec9e125eed96e8c8078d5aaa",
+    "text_hash_short": "5cb66bbb1890787b7c023406b2cafb4d"
+}

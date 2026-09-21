@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numeric_attributes.rst",
+    "line_start": 1318,
+    "line_end": 1373,
+    "text": "package Fixed_Small_Delta is\n   D3 : constant := 10.0 ** (-3);\n\n   type T3_D3 is delta D3 digits 3;\n\n   type TD3   is delta D3 range -1.0 .. 1.0 - D3;\n\n   D31 : constant := 2.0 ** (-31);\n   D15 : constant := 2.0 ** (-15);\n\n   type TQ31 is delta D31 range -1.0 .. 1.0 - D31;\n\n   type TQ15 is delta D15 range -1.0 .. 1.0 - D15\n     with Small => D31;\nend Fixed_Small_Delta;\n\nwith Ada.Text_IO;       use Ada.Text_IO;\n\nwith Fixed_Small_Delta; use Fixed_Small_Delta;\n\nprocedure Show_Fixed_Small_Delta is\nbegin\n   Put_Line (\"T3_D3'Small: \"\n             & T3_D3'Small'Image);\n   Put_Line (\"T3_D3'Delta: \"\n             & T3_D3'Delta'Image);\n   Put_Line (\"T3_D3'Size: \"\n             & T3_D3'Size'Image);\n   Put_Line (\"--------------------\");\n\n   Put_Line (\"TD3'Small: \"\n             & TD3'Small'Image);\n   Put_Line (\"TD3'Delta: \"\n             & TD3'Delta'Image);\n   Put_Line (\"TD3'Size: \"\n             & TD3'Size'Image);\n   Put_Line (\"--------------------\");\n\n   Put_Line (\"TQ31'Small: \"\n             & TQ31'Small'Image);\n   Put_Line (\"TQ31'Delta: \"\n             & TQ31'Delta'Image);\n   Put_Line (\"TQ32'Size: \"\n             & TQ31'Size'Image);\n   Put_Line (\"--------------------\");\n\n   Put_Line (\"TQ15'Small: \"\n             & TQ15'Small'Image);\n   Put_Line (\"TQ15'Delta: \"\n             & TQ15'Delta'Image);\n   Put_Line (\"TQ15'Size: \"\n             & TQ15'Size'Image);\nend Show_Fixed_Small_Delta;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numeric_Attributes.Fixed_Point_Types.Fixed_Small_Delta",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "fixed_small_delta.ads",
+        "show_fixed_small_delta.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_fixed_small_delta.adb",
+    "text_hash": "14eadd4dce110781ee88aadfa8f501fd501d8d6b2d8b678ed729dcb6b344446aa90c6c6db8cf36e2636f968979405617510e1e761eb59df41e7d9ee654ec6d96",
+    "text_hash_short": "0e811c7c0b92f05483b0ac7c3489dc3d"
+}

@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 2652,
+    "line_end": 2667,
+    "text": "procedure Add_Ten (I : in out Integer);\n\nprocedure Add_Ten (I : in out Integer) is\nbegin\n   I := I + 10;\nend Add_Ten;\n\nprocedure Add_Twenty (I : in out Integer);\n\nprocedure Add_Twenty (I : in out Integer) is\nbegin\n   I := I + 20;\nend Add_Twenty;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Anonymous_Access_To_Subprograms.Anonymous_Access_To_Subprogram_Example",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "add_ten.ads",
+        "add_ten.adb",
+        "add_twenty.ads",
+        "add_twenty.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "fb1b8455f6475b1c49dff4e0aecf69f1dbf6123112a67c19f88dc9352187b7ec64a0e935107b3b10546d0923df6e3c40435c1d67fa31724dc0793acbd1eac422",
+    "text_hash_short": "50eaeaf27caaa9618b35ecdf8acc11fe"
+}

@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 1137,
+    "line_end": 1155,
+    "text": "with Persons; use Persons;\n\nprocedure Show_Person is\n\n   function Local_Init return Person is\n      S : aliased String := \"John\";\n   begin\n      return (Name => S'Access, Age => 30);\n      --      ^^^^^^^^^^^^^^^^\n      --      ERROR: dangling reference!\n   end Local_Init;\n\n   P : Person := Local_Init;\nbegin\n   Show (P);\nend Show_Person;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Access_Discriminants.Persons",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_person.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_person.adb",
+    "text_hash": "0cc96e2e6ae215617e409a44358d648e0b4e7928195aaccd1a3085683240382bc92e6c438213b090b768cf03304044941bcfc39e819e3e739b8c516f96ea186a",
+    "text_hash_short": "9c8d2aebf60b8bb19e455cb6bc5730eb"
+}

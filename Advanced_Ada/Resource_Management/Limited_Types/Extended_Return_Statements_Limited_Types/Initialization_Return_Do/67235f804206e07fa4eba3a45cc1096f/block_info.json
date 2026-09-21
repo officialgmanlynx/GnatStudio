@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 2446,
+    "line_end": 2509,
+    "text": "package Limited_Types is\n\n   type Integer_Access is access Integer;\n\n   type Simple_Rec is limited private;\n\n   function Init (I : Integer) return Simple_Rec;\n\nprivate\n\n   type Simple_Rec is limited record\n      V : Integer_Access;\n   end record;\n\nend Limited_Types;\n\nwith Ada.Text_IO;           use Ada.Text_IO;\nwith System;\nwith System.Address_Image;\n\npackage body Limited_Types is\n\n   function Init (I : Integer) return Simple_Rec\n   is\n   begin\n      return E : Simple_Rec do\n         E.V := new Integer'(I);\n\n         Put_Line (\"E'Address (Init):  \"\n                   & System.Address_Image\n                       (E'Address));\n      end return;\n   end Init;\n\nend Limited_Types;\n\nwith Ada.Text_IO;           use Ada.Text_IO;\nwith System;\nwith System.Address_Image;\n\nwith Limited_Types;         use Limited_Types;\n\nprocedure Show_Limited_Init is\nbegin\n   declare\n      A : Simple_Rec := Init (0);\n   begin\n      Put_Line (\"A'Address (local): \"\n                & System.Address_Image\n                    (A'Address));\n   end;\n   Put_Line (\"----\");\n\n   declare\n      B : Simple_Rec := Init (0);\n   begin\n      Put_Line (\"B'Address (local): \"\n                & System.Address_Image\n                    (B'Address));\n   end;\nend Show_Limited_Init;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Extended_Return_Statements_Limited_Types.Initialization_Return_Do",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "limited_types.ads",
+        "limited_types.adb",
+        "show_limited_init.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_limited_init.adb",
+    "text_hash": "928ce8b88c30740a11f1eaf31ca39bee5380b863aad1bed37eb24e7a58201c2031f8f10a8f36962816dc3cd4e359de4bd15e04434865bac8883605d0272ab98b",
+    "text_hash_short": "67235f804206e07fa4eba3a45cc1096f"
+}

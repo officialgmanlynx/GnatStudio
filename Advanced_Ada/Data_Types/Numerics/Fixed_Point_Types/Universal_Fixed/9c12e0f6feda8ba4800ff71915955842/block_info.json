@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 4951,
+    "line_end": 4975,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Custom_Fixed_Point;\nuse  Custom_Fixed_Point;\n\nprocedure Show_Universal_Fixed is\n   Acc : TQ7_24;\n   A   : TQ31;\nbegin\n   Acc := 1.0;\n   A   := 0.75;\n   Put_Line (\"A    = \" & A'Image);\n   Put_Line (\"Acc  = \" & Acc'Image);\n   Put_Line (\"--------------\");\n\n   Put_Line (\"Acc := Acc / A\");\n   Acc := Acc / A;\n   --     ^^^^^^^\n   --  Using universal fixed point\n\n   Put_Line (\"Acc  = \" & Acc'Image);\nend Show_Universal_Fixed;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Fixed_Point_Types.Universal_Fixed",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_universal_fixed.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_universal_fixed.adb",
+    "text_hash": "321d4daae0d4a5d39fe2fe7f94f4e51205d3a400932b8b7bc88276e324ec088fbddef6fc8ad8c7681670e20f26849e8d71f36dba72884b75ad4a5537760844f9",
+    "text_hash_short": "9c12e0f6feda8ba4800ff71915955842"
+}

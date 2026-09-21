@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/privacy.rst",
+    "line_start": 70,
+    "line_end": 113,
+    "text": "package Stacks is\n   type Stack is private;\n   --  Declare a private type: You cannot depend\n   --  on its implementation. You can only assign\n   --  and test for equality.\n\n   procedure Push (S   : in out Stack;\n                   Val :        Integer);\n   procedure Pop (S   : in out Stack;\n                  Val :    out Integer);\nprivate\n\n   subtype Stack_Index is\n     Natural range 1 .. 10;\n\n   type Content_Type is\n     array (Stack_Index) of Natural;\n\n   type Stack is record\n      Top     : Stack_Index;\n      Content : Content_Type;\n   end record;\nend Stacks;\n\npackage body Stacks is\n\n   procedure Push (S   : in out Stack;\n                   Val :        Integer) is\n   begin\n      --  Missing implementation!\n      null;\n   end Push;\n\n   procedure Pop (S   : in out Stack;\n                  Val :    out Integer) is\n   begin\n      --  Dummy implementation!\n      Val := 0;\n   end Pop;\n\nend Stacks;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Privacy.Stacks",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-syntax-only"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": true,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "stacks.ads",
+        "stacks.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "7e444b4ac22fcacad7d9775a5329d7f277d9072a99b36ae097596f8a0f4484947ba16bf796cf985fcf63920d6f46616a1814bb31dbe5c80d8c7aad14cfc62319",
+    "text_hash_short": "364df7c6806af4a1bc957c2c2d53b2cc"
+}

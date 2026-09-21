@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/arrays.rst",
+    "line_start": 138,
+    "line_end": 177,
+    "text": "with Ada.Containers; use Ada.Containers;\nwith Ada.Containers.Vectors;\n\npackage Measurement_Defs is\n\n   package Vectors is new Ada.Containers.Vectors\n     (Index_Type   => Positive,\n      Element_Type => Float);\n\n   subtype Measurements is Vectors.Vector;\n\nend Measurement_Defs;\n\nwith Ada.Text_IO;      use Ada.Text_IO;\n\nwith Measurement_Defs; use Measurement_Defs;\n\nprocedure Show_Measurements is\n   use Measurement_Defs.Vectors;\n\n   M : Measurements := To_Vector (10);\n   --                  ^ Creating 10-element\n   --                    vector.\nbegin\n   Put_Line (\"First index: \"\n             & M.First_Index'Image);\n   Put_Line (\"Last index:  \"\n             & M.Last_Index'Image);\n\n   Put_Line (\"Adding element...\");\n   M.Append (1.0);\n\n   Put_Line (\"First index: \"\n             & M.First_Index'Image);\n   Put_Line (\"Last index:  \"\n             & M.Last_Index'Image);\nend Show_Measurements;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Arrays.Array_Constraints.Unconstrained_Array_Type_Vs_Vector",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "measurement_defs.ads",
+        "show_measurements.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_measurements.adb",
+    "text_hash": "6951c180a331b346374299208e0444e4001ffd90a9c6966f62a5ad2340bc10f7dbd62a4fe04a33030de2751a52ba63cadfa3849eac6ed50af06e4aeff05d0285",
+    "text_hash_short": "afec7a4b898392be4dd1f60e1519da88"
+}

@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 980,
+    "line_end": 1057,
+    "text": "package Normalized_Fixed_Point_Types is\n\n   type TQ63 is\n     delta 2.0 ** (-63)\n     range -1.0 .. 1.0 - 2.0 ** (-63);\n\n   type TQ31 is\n     delta 2.0 ** (-31)\n     range -1.0 .. 1.0 - 2.0 ** (-31);\n\n   overriding\n   --  ^^^^^^\n   --  \"+\" operator is overriding!\n   function \"+\" (L, R : TQ31)\n                 return TQ31;\n\n   not overriding\n   --  ^^^^^^^^^^\n   --  \"*\" operator is NOT overriding!\n   function \"*\" (L, R : TQ31)\n                 return TQ31;\n\n   type TQ15 is\n     delta 2.0 ** (-15)\n     range -1.0 .. 1.0 - 2.0 ** (-15);\n\nend Normalized_Fixed_Point_Types;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Normalized_Fixed_Point_Types is\n\n   function \"+\" (L, R : TQ31)\n                 return TQ31 is\n   begin\n      Put_Line\n        (\"=> Overriding '+'\");\n      return TQ31 (TQ63 (L) + TQ63 (R));\n   end \"+\";\n\n   function \"*\" (L, R : TQ31)\n                 return TQ31 is\n   begin\n      Put_Line\n        (\"=> Custom \"\n         & \"non-overriding '*'\");\n      return TQ31 (TQ63 (L) * TQ63 (R));\n   end \"*\";\n\nend Normalized_Fixed_Point_Types;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Normalized_Fixed_Point_Types;\nuse  Normalized_Fixed_Point_Types;\n\nprocedure Show_Fixed_Multiplication is\n   Q31_A : TQ31 := 0.25;\n   Q31_B : TQ31 := 0.50;\n   Q15_A : TQ15 := 0.25;\n   Q15_B : TQ15 := 0.50;\nbegin\n   Q31_A := Q31_A * Q31_B;\n   Put_Line (\"Q31_A = \" & Q31_A'Image);\n\n   Q15_A := Q15_A * Q15_B;\n   Put_Line (\"Q15_A = \" & Q31_A'Image);\n\n   Q15_A := TQ15 (Q31_A) * Q15_B;\n   --       ^^^^^^^^^^^^\n   --  A conversion is required because of\n   --  the multiplication operator of\n   --  TQ15.\n   Put_Line (\"Q31_A = \" & Q31_A'Image);\nend Show_Fixed_Multiplication;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Universal_Types.Fixed_Point_Custom_Multiplication",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "normalized_fixed_point_types.ads",
+        "normalized_fixed_point_types.adb",
+        "show_fixed_multiplication.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_fixed_multiplication.adb",
+    "text_hash": "292ee5d443cc5d17a78ef34d96d8db51b536ffdfc66beb5a3c328f517bfaaa9702f33c7b0555e42bb6de7252f43c19cde93d8aff31157248d4acfab6b16c665b",
+    "text_hash_short": "954ada297ac676ab1f11447083d87882"
+}

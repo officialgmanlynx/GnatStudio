@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_files_streams.rst",
+    "line_start": 70,
+    "line_end": 90,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Simple_Text_File_IO is\n   F         : File_Type;\n   File_Name : constant String := \"simple.txt\";\nbegin\n   Create (F, Out_File, File_Name);\n   Put_Line (F, \"Hello World #1\");\n   Put_Line (F, \"Hello World #2\");\n   Put_Line (F, \"Hello World #3\");\n   Close (F);\n\n   Open (F, In_File, File_Name);\n   while not End_Of_File (F) loop\n      Put_Line (Get_Line (F));\n   end loop;\n   Close (F);\nend Show_Simple_Text_File_IO;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Simple_Text_File_IO",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_simple_text_file_io.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_simple_text_file_io.adb",
+    "text_hash": "38fb86f38ebee245049e9bb639f4314c4daa7e8f389c9d7235710b4930296992ba97a92064da830e3f45ba86703eb779114fcd8209bf676d9b8f748b0232e288",
+    "text_hash_short": "7461e946eef18c93219fa4ce3afbb1ea"
+}

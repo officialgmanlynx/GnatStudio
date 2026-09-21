@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 332,
+    "line_end": 345,
+    "text": "package Mutually_Dependent is\n\n   type T1 is record\n      B : T2;\n   end record;\n\n   type T2 is record\n      A : T1;\n   end record;\n\nend Mutually_Dependent;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Mutually_Dependent_Types.Mutually_Dependent",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "mutually_dependent.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "233c45be0875a9b48953f2550acaf27dc5d5d18b91beef7c2511ba65f7cb1c02d60cb653131f74db002309fcfef851732f24570776e9ab406f3a1350e8898963",
+    "text_hash_short": "ffa8d6ab83a1172dcbae0978952dacb2"
+}

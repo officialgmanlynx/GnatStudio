@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 5287,
+    "line_end": 5325,
+    "text": "with Ada.Text_IO;     use Ada.Text_IO;\nwith Data_Processing; use Data_Processing;\n\nprocedure Log_Element_Per_Line\n  (D : Data_Container) is\nbegin\n   Put_Line (\"Elements: \");\n   for V of D loop\n      Put_Line (V'Image);\n   end loop;\n   Put_Line (\"------\");\nend Log_Element_Per_Line;\n\nwith Ada.Text_IO;     use Ada.Text_IO;\nwith Data_Processing; use Data_Processing;\n\nwith Init_Zero;\nwith Init_One;\n\nwith Log_Element_Per_Line;\n\nprocedure Show_Access_To_Subprograms is\n   D : Data_Container (1 .. 5) := (others => 1.0);\nbegin\n   Put_Line (\"==== Init_Zero ====\");\n   Process (D, Init_Zero'Access);\n   Log_Element_Per_Line (D);\n\n   Put_Line (\"==== Init_One ====\");\n   Process (D, Init_One'Access);\n   Log_Element_Per_Line (D);\n\n   --  Put_Line (\"==== None ====\");\n   --  Process (D, null);\n   --  Log_Element_Per_Line (D);\nend Show_Access_To_Subprograms;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Access_To_Subprograms.Access_Init_Function",
+    "main_file": "show_access_to_subprograms.adb",
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "log_element_per_line.adb",
+        "show_access_to_subprograms.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_access_to_subprograms.adb",
+    "text_hash": "e06ee35395224755f807c92e2a077fa38f4eda54f221c6d5f97ec8fe5d4f662cb23bece3706cdde90dc68d31e4eeaf50e8c52de7bf5fbba3bb491546496b9421",
+    "text_hash_short": "ae0e3fd58e9bb83061248967c709190a"
+}

@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/03_Concurrency.rst",
+    "line_start": 268,
+    "line_end": 338,
+    "text": "package Counters is\n\n   task Counter is\n      entry Get (Result : out Integer);\n      entry Increment;\n      entry Decrement;\n   end Counter;\n\nend Counters;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Counters is\n\n   task body Counter is\n      Value : Integer := 0;\n   begin\n      loop\n         select\n            accept Increment do\n               Value := Value + 1;\n            end Increment;\n         or\n            accept Decrement do\n               Value := Value - 1;\n            end Decrement;\n         or\n            accept Get (Result : out Integer) do\n               Result := Value;\n            end Get;\n         or\n            delay 5.0;\n            Put_Line (\"Exiting Counter task...\");\n            exit;\n         end select;\n      end loop;\n   end Counter;\n\nend Counters;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Counters;    use Counters;\n\nprocedure Main is\n   V : Integer;\nbegin\n   Put_Line (\"Main started.\");\n\n   Counter.Get (V);\n   Put_Line (\"Got value. Value = \" & Integer'Image (V));\n\n   Counter.Increment;\n   Put_Line (\"Incremented value.\");\n\n   Counter.Increment;\n   Put_Line (\"Incremented value.\");\n\n   Counter.Get (V);\n   Put_Line (\"Got value. Value = \" & Integer'Image (V));\n\n   Counter.Decrement;\n   Put_Line (\"Decremented value.\");\n\n   Counter.Get (V);\n   Put_Line (\"Got value. Value = \" & Integer'Image (V));\n\n   Put_Line (\"Main finished.\");\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Concurrency.Selective_Rendezvous",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "counters.ads",
+        "counters.adb",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "c1802d1d05f741218d7ff448438a14cc6b5b128a6957a487db6d5f69f567be117274a39e843c711c6818af9268c0a4291ee03f7bac87fe874f30631f2604bc31",
+    "text_hash_short": "619d009bcfcd8053bc132b2e32a29249"
+}

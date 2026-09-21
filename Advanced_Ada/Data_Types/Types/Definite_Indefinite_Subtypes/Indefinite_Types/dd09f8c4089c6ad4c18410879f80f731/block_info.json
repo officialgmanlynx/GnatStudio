@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 1585,
+    "line_end": 1620,
+    "text": "with Unconstrained_Types; use Unconstrained_Types;\n\nprocedure Show_Integer_Array_Header\n  (AA : Integer_Array;\n   HH : String);\n\nwith Ada.Text_IO;         use Ada.Text_IO;\nwith Show_Integer_Array;\n\nprocedure Show_Integer_Array_Header\n  (AA : Integer_Array;\n   HH : String)\nis\nbegin\n   Put_Line (HH);\n   Show_Integer_Array (AA);\nend Show_Integer_Array_Header;\n\nwith Unconstrained_Types; use Unconstrained_Types;\n\nwith Show_Integer_Array_Header;\n\nprocedure Using_Unconstrained_Type is\n   A_5  : constant Integer_Array (1 .. 5)  :=\n            (1, 2, 3, 4, 5);\n   A_10 : constant Integer_Array (1 .. 10) :=\n            (1, 2, 3, 4, 5, others => 99);\nbegin\n   Show_Integer_Array_Header (A_5,\n                              \"First example\");\n   Show_Integer_Array_Header (A_10,\n                              \"Second example\");\nend Using_Unconstrained_Type;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Definite_Indefinite_Subtypes.Indefinite_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_integer_array_header.ads",
+        "show_integer_array_header.adb",
+        "using_unconstrained_type.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "using_unconstrained_type.adb",
+    "text_hash": "719e6ded3a31e98fdd389d7062fdc513383c5a363410ea4f6472ded8d2da4a67c007f1b05b0db80bb9106f6045918a47c4a85094b17ff1c3e2f8c0369dcf3a74",
+    "text_hash_short": "dd09f8c4089c6ad4c18410879f80f731"
+}

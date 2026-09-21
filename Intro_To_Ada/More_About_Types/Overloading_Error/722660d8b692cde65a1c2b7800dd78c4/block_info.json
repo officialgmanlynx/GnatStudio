@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/more_about_types.rst",
+    "line_start": 133,
+    "line_end": 167,
+    "text": "package Pkg is\n   type SSID is new Integer;\n\n   function Convert (Self : SSID)\n                     return Integer;\n   function Convert (Self : SSID)\n                     return String;\n   function Convert (Self : Integer)\n                     return String;\nend Pkg;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Pkg;         use Pkg;\n\nprocedure Main is\n   S : String := Convert (123_145_299);\n   --            ^ Invalid, which convert\n   --              should we call?\n\n   S2 : String := Convert (SSID'(123_145_299));\n   --                     ^ We specify that the\n   --                       type of the\n   --                       expression is SSID.\n\n   --  We could also have declared a temporary\n\n   I : SSID := 123_145_299;\n\n   S3 : String := Convert (I);\nbegin\n   Put_Line (S);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.More_About_Types.Overloading_Error",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-syntax-only",
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": true,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "pkg.ads",
+        "main.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "42a815d59011074534486e4158d8c7751f7daf01e26466a06d7248c9151debcecebcc94b5e66dbef183d6384886ab17be40e98be64040a10e00bbf9f30b24f75",
+    "text_hash_short": "722660d8b692cde65a1c2b7800dd78c4"
+}

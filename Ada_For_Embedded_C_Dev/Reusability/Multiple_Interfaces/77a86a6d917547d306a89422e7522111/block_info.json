@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 1926,
+    "line_end": 1957,
+    "text": "with Abstract_Transceivers; use Abstract_Transceivers;\n\npackage Full_Transceivers is\n\n   type Full_Transceiver is new Abstract_Transceiver with null record;\n   procedure Receive (D : in out Full_Transceiver);\n\nend Full_Transceivers;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Full_Transceivers is\n\n   procedure Receive (D : in out Full_Transceiver) is\n      pragma Unreferenced (D);\n   begin\n      Put_Line (\"Receiving data...\");\n   end Receive;\n\nend Full_Transceivers;\n\nwith Full_Transceivers; use Full_Transceivers;\n\nprocedure Main is\n   D : Full_Transceiver;\nbegin\n   D.Send;\n   D.Receive;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.Multiple_Interfaces",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "full_transceivers.ads",
+        "full_transceivers.adb",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "75eb0156d3509575364180cf485121d7f9211c9da051358f5b753de255db445e7c60787bacbaa9627d8ec7a1fb269604e6e4c7af06ad85f31a5998391665aa42",
+    "text_hash_short": "77a86a6d917547d306a89422e7522111"
+}

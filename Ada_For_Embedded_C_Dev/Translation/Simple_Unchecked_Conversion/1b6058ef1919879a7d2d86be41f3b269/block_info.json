@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 1415,
+    "line_end": 1434,
+    "text": "with Ada.Text_IO;              use Ada.Text_IO;\nwith Ada.Unchecked_Conversion;\n\nprocedure Simple_Unchecked_Conversion is\n   type State is (Off, State_1, State_2)\n     with Size => Integer'Size;\n\n   for State use (Off => 0, State_1 => 32, State_2 => 64);\n\n   function As_Integer is new Ada.Unchecked_Conversion (Source => State,\n                                                        Target => Integer);\n\n   I : Integer;\nbegin\n   I := As_Integer (State_2);\n   Put_Line (\"I = \" & Integer'Image (I));\nend Simple_Unchecked_Conversion;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.Simple_Unchecked_Conversion",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple_unchecked_conversion.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "simple_unchecked_conversion.adb",
+    "text_hash": "274be9a55d2118a3582e56e46aaf1d5b7323f6f2003ca14a5758415c329888601a44b2546c06dfca3556e23d6783e044bf7e55162cce5de1c73f1313e06ddbf8",
+    "text_hash_short": "1b6058ef1919879a7d2d86be41f3b269"
+}

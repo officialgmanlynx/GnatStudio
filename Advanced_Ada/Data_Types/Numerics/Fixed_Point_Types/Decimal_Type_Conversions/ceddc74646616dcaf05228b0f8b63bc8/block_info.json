@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 3967,
+    "line_end": 3999,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Decimal_Type_Conversions is\n\n   type Decimal is\n     delta 10.0 ** (-2) digits 9;\n\n   type Long_Long_Decimal is\n     delta 10.0 ** (-2) digits 38;\n\n   D   : Decimal;\n   Acc : Long_Long_Decimal;\nbegin\n   D   := 2.0;\n   Acc := Long_Long_Decimal (D);\n\n   Put_Line (\"D   = \"\n             & D'Image);\n   Put_Line (\"Acc = \"\n             & Acc'Image);\n   Put_Line (\"--------------\");\n\n   Acc := 10.0;\n   D   := Decimal (Acc);\n\n   Put_Line (\"D   = \"\n             & D'Image);\n   Put_Line (\"Acc = \"\n             & Acc'Image);\nend Show_Decimal_Type_Conversions;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Fixed_Point_Types.Decimal_Type_Conversions",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_decimal_type_conversions.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_decimal_type_conversions.adb",
+    "text_hash": "05d26cef6fb0154bdc57b5f34a92130ded63834a44865746ba9a77638336ef4a2517caf20aa9d74afe7d55c3925449fcc1d83ba481312748d1207077c8c4f1ad",
+    "text_hash_short": "ceddc74646616dcaf05228b0f8b63bc8"
+}

@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 2201,
+    "line_end": 2212,
+    "text": "with States; use States;\n\nprocedure Show_Variant_Rec_Error is\n   V : State_Or_Integer (Use_Enum => True);\nbegin\n   V.I := 4;\n   --  Error: V.I cannot be accessed because\n   --         Use_Enum is set to True.\nend Show_Variant_Rec_Error;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Unchecked_Union.State_Or_Integer",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_variant_rec_error.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_variant_rec_error.adb",
+    "text_hash": "02174d252f1ec84ef97ecdadd8284254f66e5bd22343bfa6f97e0437aff6d0c5f5f4339a48b2cffc28f19de117b8e03c8a1ddaf3a946c63f3b32e2ede83263aa",
+    "text_hash_short": "985a84faccc3d590ac767e914bea0c1d"
+}

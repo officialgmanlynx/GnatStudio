@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 1712,
+    "line_end": 1725,
+    "text": "!main.c\n#include <stdio.h>\n#include <limits.h>\n\nint main(int argc, const char * argv[])\n{\n    unsigned int x = 42;\n    printf(\"x = %u\\n\", x);\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Unsigned_32_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "1c00c46dfacc71d4315586dfdb8d677278ebcc87aab3eff7fea6206f0fd05e1cc140658263e70df886938b729fe044467b0d6b9ada91c3026482a74bd5d5a729",
+    "text_hash_short": "546068de216de96282490e81a0f7df26"
+}

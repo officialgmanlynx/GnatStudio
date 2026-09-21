@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 1239,
+    "line_end": 1274,
+    "text": "package Recs is\n\n   type Usage_Mode is (Off,\n                       Simple_Usage,\n                       Advanced_Usage);\n\n   type Priv_Info is private;\n\n   type Priv_Info_Access is access Priv_Info;\n\n   type Proc_Access is\n     access procedure (P : in out Priv_Info);\n\n   type Priv_Rec (Last  : Positive;\n                  Usage : Usage_Mode;\n                  Info  : Priv_Info_Access;\n                  Proc  : Proc_Access) is\n     private;\n\nprivate\n\n   type Priv_Info is record\n     A : Positive;\n     B : Positive;\n   end record;\n\n   type Priv_Rec (Last  : Positive;\n                  Usage : Usage_Mode;\n                  Info  : Priv_Info_Access;\n                  Proc  : Proc_Access) is\n     null record;\n\nend Recs;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Discriminants.Discriminants_Subtype",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "recs.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "4791ff5744e4080d13e49ee59b02bf504c88c387005e1261394b22c669a5d9af503dd4bf69feaf381d39f0044f5b3536cfdd8686914a3b6faa4f7026770f4957",
+    "text_hash_short": "4ddbc703d8ffcd6dc31e3715df62931a"
+}

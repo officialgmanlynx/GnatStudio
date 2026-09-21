@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 1188,
+    "line_end": 1201,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\nwith Colors;      use Colors;\n\nprocedure Color_Loop is\n   subtype Red_To_Blue is Color range Red .. Blue;\nbegin\n   for C in Red_To_Blue loop\n      Put_Line (Color'Image (C));\n   end loop;\nend Color_Loop;\n\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Enumerations.Enumeration_Ambiguities",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "color_loop.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "color_loop.adb",
+    "text_hash": "391f27b88ba8a16e8bc3c6cce3d847dacaca3088c23a293e9d56b02e68fcf1379421443769f4fdb9d3bcb52954bc07d16536c935f96ced2375e5b24ce18c718e",
+    "text_hash_short": "0eee4cbac15c212272563930f1a57641"
+}

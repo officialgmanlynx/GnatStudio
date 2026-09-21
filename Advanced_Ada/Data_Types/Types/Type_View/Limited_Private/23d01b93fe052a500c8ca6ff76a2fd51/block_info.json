@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 1871,
+    "line_end": 1886,
+    "text": "package Limited_Private_Example is\n\n   --  Partial view must be limited,\n   --  since the full view is limited.\n   type R is limited private;\n\nprivate\n\n   type R is limited record\n      I : Integer;\n   end record;\n\nend Limited_Private_Example;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Type_View.Limited_Private",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "limited_private_example.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "533103658e873460b961d7a229cb9905eb18803a129b2826b80d5d2b942c12b3a6ce848e40b7b9fd338f4dc91ea8955ff5604f52f7d1180f99d77b02f46c8592",
+    "text_hash_short": "23d01b93fe052a500c8ca6ff76a2fd51"
+}

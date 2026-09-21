@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 5197,
+    "line_end": 5214,
+    "text": "package Decimal_Vs_Float_Type_Decl is\n\n    --\n    --  Decimal type declaration\n    --\n    type Decimal_D3 is\n      delta 0.1 digits 3;\n\n    --\n    --  Floating-point type declaration\n    --\n    type Float_D3 is\n      digits 3;\n\nend Decimal_Vs_Float_Type_Decl;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Decimal_Fixed_Point_Types.Decimal_Vs_Floating_Point_Type_Declarations",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "decimal_vs_float_type_decl.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "6a039a57981cf496635bc3a9f7ff77f1eabb84da14d798ffc43e6412870e548e2cf4864e9f9b2f8ba7eb5b52d7d4d5b7d09dc03cec8db17b2c3536dc820ca3fc",
+    "text_hash_short": "69776fec6e02fa65d0403c34c658fc5b"
+}

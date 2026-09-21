@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 1711,
+    "line_end": 1754,
+    "text": "package Recs is\n\n   type LTT (L : Positive := 1;\n             M : Positive := 2) is\n     limited null record;\n\n   function Init (L : Positive;\n                  M : Positive)\n                  return LTT is\n     ((L => L, M => M));\n\n   procedure Copy (From :        LTT;\n                   To   : in out LTT);\n\nend Recs;\n\npackage body Recs is\n\n   procedure Copy (From :        LTT;\n                   To   : in out LTT) is\n   begin\n      To := Init (L => From.L,\n                  M => From.M);\n      --  ERROR: cannot assign to object of\n      --         limited type\n\n      To.L := From.L;\n      To.M := From.M;\n      --  ERROR: cannot change discriminants\n   end Copy;\n\nend Recs;\n\nwith Recs; use Recs;\n\nprocedure Show is\n   A : LTT;\n   B : LTT := Init (10, 12);\nbegin\n   Copy (From => B, To => A);\nend Show;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Discriminants.Discriminant_Default_Value_Tagged_TYpe",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "recs.ads",
+        "recs.adb",
+        "show.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show.adb",
+    "text_hash": "53640bffc0a854f9e4227969d7ecdecb39dd42ca5093c8721159235b4d70158a26bd9bc90ddaab3157a03f2f44ed19971c774d45173641f91b1a5069be5fd9f9",
+    "text_hash_short": "e8dfb1e99e33923aa4023428ecb17372"
+}

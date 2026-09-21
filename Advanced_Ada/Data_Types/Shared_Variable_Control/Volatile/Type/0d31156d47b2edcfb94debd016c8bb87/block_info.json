@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/shared_variable_control.rst",
+    "line_start": 58,
+    "line_end": 81,
+    "text": "package Shared_Var_Types is\n\n   type Volatile_Long_Float is new\n     Long_Float with Volatile;\n\nend Shared_Var_Types;\n\nwith Ada.Text_IO;      use Ada.Text_IO;\nwith Shared_Var_Types; use Shared_Var_Types;\n\nprocedure Show_Volatile_Type is\n   Val : Volatile_Long_Float;\nbegin\n   Val := 0.0;\n   for I in 0 .. 999 loop\n      Val := Val + 2.0 * Volatile_Long_Float (I);\n   end loop;\n\n   Put_Line (\"Val: \"\n             & Volatile_Long_Float'Image (Val));\nend Show_Volatile_Type;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Shared_Variable_Control.Volatile.Type",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "shared_var_types.ads",
+        "show_volatile_type.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_volatile_type.adb",
+    "text_hash": "d59d8ddc7277fd678677e2870edb3594bd5841838e49f7cdb6409ed25f5b5bb1c0efd9d3d94e65400f566646e5a13717b27f19bea4d97a50210b02757c6e612a",
+    "text_hash_short": "0d31156d47b2edcfb94debd016c8bb87"
+}

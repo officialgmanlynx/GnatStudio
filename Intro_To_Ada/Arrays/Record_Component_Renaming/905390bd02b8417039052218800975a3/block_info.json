@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/records.rst",
+    "line_start": 171,
+    "line_end": 249,
+    "text": "package Dates is\n\n   type Months is\n     (January, February, March, April,\n      May, June, July, August, September,\n      October, November, December);\n\n   type Date is record\n      Day   : Integer range 1 .. 31;\n      Month : Months;\n      Year  : Integer range 1 .. 3000 := 2032;\n   end record;\n\n   procedure Increase_Month\n    (Some_Day : in out Date);\n\n   procedure Display_Month\n     (Some_Day : Date);\n\nend Dates;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Dates is\n\n   procedure Increase_Month\n     (Some_Day : in out Date)\n   is\n      --  Renaming components from\n      --  the Date record\n      M : Months  renames Some_Day.Month;\n      Y : Integer renames Some_Day.Year;\n\n      --  Renaming function (for Months\n      --  enumeration)\n      function Next (M : Months)\n                     return Months\n        renames Months'Succ;\n   begin\n      if M = December then\n         M := January;\n         Y := Y + 1;\n      else\n         M := Next (M);\n      end if;\n   end Increase_Month;\n\n   procedure Display_Month\n     (Some_Day : Date)\n   is\n      --  Renaming components from\n      --  the Date record\n      M : Months  renames Some_Day.Month;\n      Y : Integer renames Some_Day.Year;\n   begin\n      Put_Line (\"Month: \"\n                & Months'Image (M)\n                & \", Year:\"\n                & Integer'Image (Y));\n   end Display_Month;\n\nend Dates;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Dates;       use Dates;\n\nprocedure Main is\n   D : Date := (1, January, 2000);\nbegin\n   Display_Month (D);\n\n   Put_Line (\"Increasing month...\");\n   Increase_Month (D);\n\n   Display_Month (D);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Arrays.Record_Component_Renaming",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "dates.ads",
+        "dates.adb",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "d9e9399ab03d5a88b8e089a3ec665b04bd89fd6393094ea848f68534118dbd693c752a365fcefc6745632d288402282fb0f2fcceb9f520ff46677d05dd7ee165",
+    "text_hash_short": "905390bd02b8417039052218800975a3"
+}

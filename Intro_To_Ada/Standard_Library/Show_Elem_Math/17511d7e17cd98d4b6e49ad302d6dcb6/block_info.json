@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_numerics.rst",
+    "line_start": 17,
+    "line_end": 64,
+    "text": "with Ada.Text_IO;  use Ada.Text_IO;\nwith Ada.Numerics; use Ada.Numerics;\n\nwith Ada.Numerics.Elementary_Functions;\nuse  Ada.Numerics.Elementary_Functions;\n\nprocedure Show_Elem_Math is\n   X : Float;\nbegin\n   X := 2.0;\n   Put_Line (\"Square root of \"\n             & Float'Image (X)\n             & \" is \"\n             & Float'Image (Sqrt (X)));\n\n   X := e;\n   Put_Line (\"Natural log of \"\n             & Float'Image (X)\n             & \" is \"\n             & Float'Image (Log (X)));\n\n   X := 10.0 ** 6.0;\n   Put_Line (\"Log_10      of \"\n             & Float'Image (X)\n             & \" is \"\n             & Float'Image (Log (X, 10.0)));\n\n   X := 2.0 ** 8.0;\n   Put_Line (\"Log_2       of \"\n             & Float'Image (X)\n             & \" is \"\n             & Float'Image (Log (X, 2.0)));\n\n   X := Pi;\n   Put_Line (\"Cos         of \"\n             & Float'Image (X)\n             & \" is \"\n             & Float'Image (Cos (X)));\n\n   X := -1.0;\n   Put_Line (\"Arccos      of \"\n             & Float'Image (X)\n             & \" is \"\n             & Float'Image (Arccos (X)));\nend Show_Elem_Math;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Elem_Math",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_elem_math.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_elem_math.adb",
+    "text_hash": "62c879a471da1b6b3d8e7f5ca02550360942f7e6b093b9fc4c7cc9053b51593f806508aa95b2b063f04bf710eb0ebef52948970c337e91a24633fc04d5707522",
+    "text_hash_short": "17511d7e17cd98d4b6e49ad302d6dcb6"
+}

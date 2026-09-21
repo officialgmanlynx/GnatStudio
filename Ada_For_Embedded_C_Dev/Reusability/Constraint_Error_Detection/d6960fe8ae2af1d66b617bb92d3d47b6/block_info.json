@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 507,
+    "line_end": 529,
+    "text": "package P is\n   function Add_Max (A : Integer) return Integer;\nend P;\n\npackage body P is\n   function Add_Max (A : Integer) return Integer is\n   begin\n      return A + Integer'Last;\n   end Add_Max;\nend P;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith P;           use P;\n\nprocedure Main is\n   I : Integer := Integer'Last;\nbegin\n   I := Add_Max (I);\n   Put_Line (\"I = \" & Integer'Image (I));\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.Constraint_Error_Detection",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "p.ads",
+        "p.adb",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "06696b87e39fbe41c6903f1b96435c01b302b0cf0401ad158401ae740047c9a5eb88fefce7e2a5eaa397a6843a2ab1f8acb21202982f70d25c9f9e7b92f98606",
+    "text_hash_short": "d6960fe8ae2af1d66b617bb92d3d47b6"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/04_Embedded.rst",
+    "line_start": 498,
+    "line_end": 544,
+    "text": "!main.c\n#include <stdio.h>\n#include <math.h>\n\n#define SHIFT_FACTOR  32\n\n#define TO_FIXED(x)     ((int)   ((x) * pow (2.0, SHIFT_FACTOR - 1)))\n#define TO_FLOAT(x)     ((float) ((double)(x) * (double)pow (2.0, -(SHIFT_FACTOR - 1))))\n\ntypedef int fixed;\n\nfixed add (fixed a, fixed b)\n{\n    return a + b;\n}\n\nfixed mult (fixed a, fixed b)\n{\n    return (fixed)(((long)a * (long)b) >> (SHIFT_FACTOR - 1));\n}\n\nvoid display_fixed (fixed x)\n{\n    printf(\"value (integer) = %d\\n\",    x);\n    printf(\"value (float)   = %3.5f\\n\\n\", TO_FLOAT (x));\n}\n\nint main(int argc, const char * argv[])\n{\n    int fixed_value = TO_FIXED(0.25);\n\n    printf(\"Original value\\n\");\n    display_fixed(fixed_value);\n\n    printf(\"... + 0.25\\n\");\n    fixed_value = add(fixed_value, TO_FIXED(0.25));\n    display_fixed(fixed_value);\n\n    printf(\"... * 0.5\\n\");\n    fixed_value = mult(fixed_value, TO_FIXED(0.5));\n    display_fixed(fixed_value);\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Embedded.Fixed_Point_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "5d2316887c4d29d77e025ff24c2f3127cdd68cdff394022d509b3d9ed137ac5efb20a491f965c24a4ef3b81c04a59b85f2dec758b31cf3a18202df3a04e3332a",
+    "text_hash_short": "61016e8fc0dbc4d0eefd2c86915489e5"
+}

@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 1729,
+    "line_end": 1758,
+    "text": "with Derived_With_Discriminants;\nuse  Derived_With_Discriminants;\n\nprocedure Show_Derived_With_Discriminants is\n   A1 : T (1, 2);\n   A2 : T (3, 4);\n   B1 : T_Derived (1, 2);\n   B2 : T_Derived (3, 4);\n   C2 : T_Derived_2;\n\n   --  C1 : Sub_T_2 (1, 2);\n   --                ^^^^\n   --  ERROR: discriminants already\n   --         constrained\nbegin\n   B1 := T_Derived (A1);\n   --  OK: discriminants match\n\n   B2 := T_Derived (A1);\n   --  ERROR!\n\n   C2 := T_Derived_2 (A1);\n   --  CONSTRAINT_ERROR!\n\n   C2 := T_Derived_2 (A2);\n   --  OK: discriminants match\nend Show_Derived_With_Discriminants;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Discriminants.Derived_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_derived_with_discriminants.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_derived_with_discriminants.adb",
+    "text_hash": "40b0bb3913a8ca745b3c256d343c606a7d2c836e76e88eb987237348054aac5813045befa0e8d97657d74a53b38c78bb4cda9982bd9aeca58655d70c0c1165fc",
+    "text_hash_short": "1b32807fcd3b343fbf8ab0d0287ca5bb"
+}

@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/02_Flow_Analysis.rst",
+    "line_start": 810,
+    "line_end": 857,
+    "text": "package Show_Biggest_Increasing_Sequence is\n\n   type Array_Of_Positives is array (Integer range <>) of Positive;\n\n   function Size_Of_Biggest_Increasing_Sequence (A : Array_Of_Positives)\n      return Natural;\n\nend Show_Biggest_Increasing_Sequence;\n\npackage body Show_Biggest_Increasing_Sequence is\n\n   function Size_Of_Biggest_Increasing_Sequence (A : Array_Of_Positives)\n      return Natural\n   is\n      Max         : Natural;\n      End_Of_Seq  : Boolean;\n      Size_Of_Seq : Natural;\n      Beginning   : Integer;\n\n      procedure Test_Index (Current_Index : Integer) is\n      begin\n         if A (Current_Index) >= Max then\n            Max := A (Current_Index);\n            End_Of_Seq := False;\n         else\n            Max         := 0;\n            End_Of_Seq  := True;\n            Size_Of_Seq := Current_Index - Beginning;\n            Beginning   := Current_Index;\n         end if;\n      end Test_Index;\n\n      Biggest_Seq : Natural := 0;\n\n   begin\n      for I in A'Range loop\n         Test_Index (I);\n         if End_Of_Seq then\n            Biggest_Seq := Natural'Max (Size_Of_Seq, Biggest_Seq);\n         end if;\n      end loop;\n      return Biggest_Seq;\n   end Size_Of_Biggest_Increasing_Sequence;\n\nend Show_Biggest_Increasing_Sequence;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Flow_Analysis.Example_04",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "show_biggest_increasing_sequence.ads",
+        "show_biggest_increasing_sequence.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "77cdf33f0978d8ff55d2588b4c3a00ed40600efa5ddf2a529436da5b54e3728e0b90f32a2e2f0002633a5e7077adf59d5fb995c89510dd95eb972e0be029d9de",
+    "text_hash_short": "e6083665827d9dee4e00bdce4c1e962f"
+}

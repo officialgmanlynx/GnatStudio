@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 3252,
+    "line_end": 3281,
+    "text": "package Custom_Decimal_Types is\n\n   type Decimal is\n     delta 10.0 ** (-2) digits 6;\n\n   type Small_Money is new\n     Decimal;\n\nend Custom_Decimal_Types;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Custom_Decimal_Types;\nuse  Custom_Decimal_Types;\n\nprocedure Show_Derived_Decimal_Types is\n   D  : Decimal;\n   SM : Small_Money;\nbegin\n   D  := 231.53;\n   Put_Line (\"D  = \"\n             & D'Image);\n\n   SM := Small_Money (D);\n   Put_Line (\"SM = \"\n             & SM'Image);\nend Show_Derived_Decimal_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Fixed_Point_Types.Derived_Decimal_Fixed_Point_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_decimal_types.ads",
+        "show_derived_decimal_types.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_derived_decimal_types.adb",
+    "text_hash": "8702de4d0967bfb0ea6fce9c4514fba3b296a62028382913800a016e4365e52e53c480bba936454701be543435849d0ee4f79e8ee16e973354aed58610613b0f",
+    "text_hash_short": "1e0649e318dcbee773b18f5b7eaa612c"
+}

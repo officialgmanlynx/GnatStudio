@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 6941,
+    "line_end": 6972,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Custom_Float_Types;\nuse  Custom_Float_Types;\n\nprocedure Price_After_Tax is\n\n   Prices        : Price_Array :=\n                     (8.40, 5.03, 1.67);\n   P_After_Tax : Price;\n   Tax_Rate      : Rate;\n\n   procedure Show_Prices (Before,\n                          After : Price) is\n   begin\n      Put_Line (Before'Image\n                & \" => \"\n                & After'Image);\n   end Show_Prices;\nbegin\n   Tax_Rate := 1.19;\n\n   Put_Line (\"Price BEFORE => AFTER Tax\");\n   for P of Prices loop\n      P_After_Tax :=\n        Price (Rate (P) * Tax_Rate);\n      Show_Prices (P, P_After_Tax);\n   end loop;\nend Price_After_Tax;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Decimal_Fixed_Point_Types.Price_After_Tax_Float",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "price_after_tax.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "price_after_tax.adb",
+    "text_hash": "ce500fecc1b9ef67ba700d9868de9e49b248ffe5d044a9d9462a1f02b30fe5396dee453093404359e7193a20b789c07c0b8a4a8ff00845c1af0f04d9131f9110",
+    "text_hash_short": "b91f083151543348abd5b55b0059a028"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 1002,
+    "line_end": 1018,
+    "text": "with Custom_Recs; use Custom_Recs;\n\nprocedure Show_Access_Discriminants is\n   R : Rec;\n   --  ^^^\n   --  This triggers \"new Integer'(0)\", so an\n   --  integer object is allocated and stored in\n   --  the R.IA discriminant.\nbegin\n   Show (R);\n\n   --  R gets out of scope here, and the object\n   --  allocated via new hasn't been deallocated.\nend Show_Access_Discriminants;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Access_Discriminants.Default_Expression_Limited_Type",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_access_discriminants.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_access_discriminants.adb",
+    "text_hash": "e90349ec72f832dff3f0566455cb9692df476e777190411da166c99c76975bdaf4f1e46940b685e311c18f82c330e675178b254e91b31c7ca258403c9d957fa8",
+    "text_hash_short": "f5d9dee26044ccab2193ab419638de79"
+}

@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/04_strong_typing.rst",
+    "line_start": 504,
+    "line_end": 518,
+    "text": "package Bad_Arith is\n\n   B1 : constant Boolean := True;\n   B2 : constant Boolean := False;\n   B3 : constant Boolean := B1 + B2;\n\n   type Fruit is (Apple, Orange);\n   F1 : constant Fruit := Apple;\n   F2 : constant Fruit := Orange;\n   F3 : constant Fruit := F1 + F2;\n\nend Bad_Arith;\n",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Strong_Typing.Pointer_Arith_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "bad_arith.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "bad_arith.ads",
+    "text_hash": "2775f2755dcd3e11073f273a0f8fa4e7fca7b5d41605491a2ff33a2f887a89d0eed2d8aba8cc417d6e67632bf42d9c5e662f222df3545aba06493f07fe4247db",
+    "text_hash_short": "984381fdcf1a682e1998f7881c0532f9"
+}

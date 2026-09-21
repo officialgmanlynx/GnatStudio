@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 628,
+    "line_end": 658,
+    "text": "package Config is\n\n   Debug : constant Boolean := False;\n\nend Config;\n\nfunction Func (X : Integer) return Integer;\n\nfunction Func (X : Integer) return Integer is\nbegin\n    return X mod 4;\nend Func;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Config;\nwith Func;\n\nprocedure Main is\n   A, B : Integer;\nbegin\n   A := 10;\n   B := Func (A);\n\n   if Config.Debug then\n      Put_Line (\"Func(\" & Integer'Image (A) & \") => \"\n                & Integer'Image (B));\n   end if;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.Debug_Code_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "config.ads",
+        "func.ads",
+        "func.adb",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "4ff321a8b1099740e6249c262e87c98dee391bfe8effa1401fa96b0efa79288a3e6d446e3f4d89c12dff954c374b9406d849da9288bfd5e438ab2b3aaa972bd9",
+    "text_hash_short": "b643b683098fa7ad5568a69c9f2c000f"
+}

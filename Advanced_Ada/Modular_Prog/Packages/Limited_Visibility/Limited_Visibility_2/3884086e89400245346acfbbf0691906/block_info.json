@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/modular_prog/packages.rst",
+    "line_start": 796,
+    "line_end": 817,
+    "text": "limited with B;\n\npackage A is\n\n   type T1 is record\n      Ref : access B.T2;\n   end record;\n\nend A;\n\nlimited with A;\n\npackage B is\n\n   type T2 is record\n      Ref : access A.T1;\n   end record;\n\nend B;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Modular_Prog.Packages.Limited_Visibility.Limited_Visibility_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "a.ads",
+        "b.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "b4227f62278e5c133901f903c7656ae9d343020ded5437d8c8cad8cca4960e0956f988adc81c5f4ea19540af8f1638cbc011cc0ce8e0fb61f7df695b4b82ad86",
+    "text_hash_short": "3884086e89400245346acfbbf0691906"
+}

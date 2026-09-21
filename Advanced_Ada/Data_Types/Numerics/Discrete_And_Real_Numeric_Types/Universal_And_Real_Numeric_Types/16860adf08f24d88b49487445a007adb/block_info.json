@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 1399,
+    "line_end": 1414,
+    "text": "package Universal_And_Real_Numeric_Types is\n\n   Pi : constant := 3.1415926535;\n   --               ^^^^^^^^^^^^\n   --            universal real type\n\n   V : Float     := Pi;\n   --  ^^^^^\n   --  real type\n   --  (floating-point type)\n   --\n\nend Universal_And_Real_Numeric_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Discrete_And_Real_Numeric_Types.Universal_And_Real_Numeric_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "universal_and_real_numeric_types.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "49211cedbbc78d5fa0641cde6c067685341a6c5bf28e93395296f01d74e146102f2754276bc39375f8b1105c624d914e3d54496879908e6e5a185c6dfa1312dd",
+    "text_hash_short": "16860adf08f24d88b49487445a007adb"
+}

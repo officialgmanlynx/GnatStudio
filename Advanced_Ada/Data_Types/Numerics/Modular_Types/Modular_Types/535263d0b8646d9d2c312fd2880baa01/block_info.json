@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 1900,
+    "line_end": 1923,
+    "text": "package Modular_Types is\n\n   type Modular is mod 2**32;\n\nend Modular_Types;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Modular_Types;\nuse  Modular_Types;\n\nprocedure Show_Modular_Types is\nbegin\n   Put_Line (\"Modular'Size  :\"\n             & Modular'Size'Image\n             & \" bits\");\n   Put_Line (\"Modular'First :\"\n             & Modular'First'Image);\n   Put_Line (\"Modular'Last  :\"\n             & Modular'Last'Image);\nend Show_Modular_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Modular_Types.Modular_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "modular_types.ads",
+        "show_modular_types.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_modular_types.adb",
+    "text_hash": "41086554b762c0bb84d67f4a8054e046b7d4f405385a0e031576ec4c29e12403487b45c382dc1458d1db7e31549e61deed817194ad1d4d2d5585515b9735f709",
+    "text_hash_short": "535263d0b8646d9d2c312fd2880baa01"
+}

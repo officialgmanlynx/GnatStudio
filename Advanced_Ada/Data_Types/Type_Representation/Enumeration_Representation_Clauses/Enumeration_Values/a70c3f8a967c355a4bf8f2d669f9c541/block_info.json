@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 28,
+    "line_end": 61,
+    "text": "package Days is\n\n   type Day is (Mon, Tue, Wed,\n                Thu, Fri,\n                Sat, Sun);\n\n   for Day use (Mon => 2#00000001#,\n                Tue => 2#00000010#,\n                Wed => 2#00000100#,\n                Thu => 2#00001000#,\n                Fri => 2#00010000#,\n                Sat => 2#00100000#,\n                Sun => 2#01000000#);\n\nend Days;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Days;        use Days;\n\nprocedure Show_Days is\nbegin\n   for D in Day loop\n      Put_Line (Day'Image (D)\n                & \" position      = \"\n                & Integer'Image (Day'Pos (D)));\n      Put_Line (Day'Image (D)\n                & \" internal code = \"\n                & Integer'Image\n                    (Day'Enum_Rep (D)));\n   end loop;\nend Show_Days;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Enumeration_Representation_Clauses.Enumeration_Values",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "days.ads",
+        "show_days.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_days.adb",
+    "text_hash": "3a13265d46fa5f11033ae13d34534287a50466e8e1f8ccd05caebbb3954fbdb47626b4bfb7c99dd748c2d5c3f189f37de2321fd5827907cfa89de1afccf40836",
+    "text_hash_short": "a70c3f8a967c355a4bf8f2d669f9c541"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/tasking.rst",
+    "line_start": 615,
+    "line_end": 678,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Protected_Objects_Entries is\n\n   protected Obj is\n      procedure Set (V : Integer);\n      entry Get (V : out Integer);\n   private\n      Local  : Integer;\n      Is_Set : Boolean := False;\n   end Obj;\n\n   protected body Obj is\n      procedure Set (V : Integer) is\n      begin\n         Local := V;\n         Is_Set := True;\n      end Set;\n\n      entry Get (V : out Integer)\n        when Is_Set is\n         --  Entry is blocked until the\n         --  condition is true. The barrier\n         --  is evaluated at call of entries\n         --  and at exits of procedures and\n         --  entries. The calling task sleeps\n         --  until the barrier is released.\n      begin\n         V := Local;\n         Is_Set := False;\n      end Get;\n   end Obj;\n\n   N : Integer := 0;\n\n   task T;\n\n   task body T is\n   begin\n      Put_Line\n        (\"Task T will delay for 4 seconds...\");\n      delay 4.0;\n\n      Put_Line\n        (\"Task T will set Obj...\");\n      Obj.Set (5);\n\n      Put_Line\n        (\"Task T has just set Obj...\");\n   end T;\nbegin\n   Put_Line\n     (\"Main application will get Obj...\");\n   Obj.Get (N);\n\n   Put_Line\n     (\"Main application has retrieved Obj...\");\n   Put_Line\n     (\"Number is: \" & Integer'Image (N));\n\nend Show_Protected_Objects_Entries;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Tasking.Show_Protected_Objects_Entries",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_protected_objects_entries.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_protected_objects_entries.adb",
+    "text_hash": "4db1f7c4a7d24ace83924c0167cfc0283b8430fb4985cb06c12f4a9df2390d55fb6305963ae9d41818595083b969902d1dc760d91cdb77ff82d2630f086d23a7",
+    "text_hash_short": "c1134445a96700b871fb76c4d6342359"
+}

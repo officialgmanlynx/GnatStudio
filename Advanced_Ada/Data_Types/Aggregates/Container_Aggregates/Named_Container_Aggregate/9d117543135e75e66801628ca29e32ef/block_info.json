@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/aggregates.rst",
+    "line_start": 95,
+    "line_end": 133,
+    "text": "with Ada.Containers.Vectors;\nwith Ada.Containers.Indefinite_Hashed_Maps;\nwith Ada.Strings.Hash;\n\nprocedure Show_Named_Container_Aggregate is\n\n   package Float_Vec is new\n     Ada.Containers.Vectors (Positive, Float);\n\n   package Float_Hashed_Maps is new\n     Ada.Containers.Indefinite_Hashed_Maps\n       (Key_Type        => String,\n        Element_Type    => Float,\n        Hash            => Ada.Strings.Hash,\n        Equivalent_Keys => \"=\");\n\n   --  Named container aggregate\n   --  using an index\n   Indexed_Named_V : constant Float_Vec.Vector :=\n                       [1 => 1.0,\n                        2 => 2.0,\n                        3 => 3.0];\n\n   --  Named container aggregate\n   --  using a key\n   Keyed_Named_V : constant\n     Float_Hashed_Maps.Map :=\n       [\"Key_1\" => 1.0,\n        \"Key_2\" => 2.0,\n        \"Key_3\" => 3.0];\n\n   pragma Unreferenced (Indexed_Named_V,\n                        Keyed_Named_V);\nbegin\n   null;\nend Show_Named_Container_Aggregate;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Aggregates.Container_Aggregates.Named_Container_Aggregate",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_named_container_aggregate.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_named_container_aggregate.adb",
+    "text_hash": "3e2c4dd5a81e4b3be1ed93eb62b9dada308a57317fac70999d59ade04ffa4ff54d126ad60ed36b1ab34bf6eb3f31347effcc0e4d1291f2ee94341e4bd26930c8",
+    "text_hash_short": "9d117543135e75e66801628ca29e32ef"
+}

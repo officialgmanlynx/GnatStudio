@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/subprograms.rst",
+    "line_start": 1579,
+    "line_end": 1609,
+    "text": "package Servers is\n\n   procedure Run_Server\n     with No_Return;\n\nend Servers;\n\npackage body Servers is\n\n   procedure Run_Server is\n   begin\n      pragma Warnings\n        (Off,\n         \"implied return after this statement\");\n      while True loop\n         --  Processing happens here...\n         null;\n      end loop;\n   end Run_Server;\n\nend Servers;\n\nwith Servers; use Servers;\n\nprocedure Show_Endless_Loop is\nbegin\n   Run_Server;\nend Show_Endless_Loop;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Subprograms.Nonreturning_Procedures.Server_Proc",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-norun"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "servers.ads",
+        "servers.adb",
+        "show_endless_loop.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "a9e567aa97774d4b434e7a05e8815edc512135d31f527f8c94248509bcd7281b60b6b721be044b48da3ac25fe6f32acd45d0e193f40bcf63be817f74db755a89",
+    "text_hash_short": "3f859b6e2aca8e31367658632e84126c"
+}

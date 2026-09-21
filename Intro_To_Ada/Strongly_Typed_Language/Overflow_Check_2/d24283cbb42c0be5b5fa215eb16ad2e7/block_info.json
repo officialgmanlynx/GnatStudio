@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/strongly_typed_language.rst",
+    "line_start": 135,
+    "line_end": 152,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main is\n   type My_Int is range 1 .. 20;\n   A : My_Int := 12;\n   B : My_Int := 15;\n   M : My_Int := (A + B) / 2;\n   --  No overflow here, overflow checks\n   --  are done at specific boundaries.\nbegin\n   for I in 1 .. M loop\n      Put_Line (\"Hello, World!\");\n   end loop;\n   --  Loop body executed 13 times\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Strongly_Typed_Language.Overflow_Check_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "abe083f1f58a59c35b56d09a9936e21f8d9e7bca023c687dddc5bb8ed2c8b5b02b6b688360330fafcdb72ab69d6bfeb648f5691e53119cdd665244f3f429da23",
+    "text_hash_short": "d24283cbb42c0be5b5fa215eb16ad2e7"
+}

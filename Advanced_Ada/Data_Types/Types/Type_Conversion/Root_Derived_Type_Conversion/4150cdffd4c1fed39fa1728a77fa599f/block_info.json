@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 2225,
+    "line_end": 2240,
+    "text": "with Ada.Text_IO;     use Ada.Text_IO;\nwith Custom_Integers; use Custom_Integers;\n\nprocedure Show_Conversion is\n   Int_Var     : Int;\n   Integer_Var : Integer;\nbegin\n   Integer_Var := 0;\n   Int_Var     := Int (Integer_Var);\n\n   Put_Line (\"Int_Var : \"\n             & Int_Var'Image);\nend Show_Conversion;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Type_Conversion.Root_Derived_Type_Conversion",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_conversion.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_conversion.adb",
+    "text_hash": "7a147fe18116c363c2af8dc59a8e0fced9bf60c248551480e2ab4750d78eb088482abd4a1c2422d6c320cabcf3cff6a9988da12c2c43d719f463dd501dd7294b",
+    "text_hash_short": "4150cdffd4c1fed39fa1728a77fa599f"
+}

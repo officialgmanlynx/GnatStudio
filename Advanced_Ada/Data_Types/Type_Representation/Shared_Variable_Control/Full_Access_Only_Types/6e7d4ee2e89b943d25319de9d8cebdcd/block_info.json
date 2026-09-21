@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/shared_variable_control.rst",
+    "line_start": 502,
+    "line_end": 515,
+    "text": "package Show_Full_Access_Only_Types is\n\n   type Nonatomic_Full_Access_Type is\n     new Long_Float\n       with Volatile, Full_Access_Only;\n\n   type Atomic_Full_Access_Type is\n     new Long_Float\n       with Atomic, Full_Access_Only;\n\nend Show_Full_Access_Only_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Shared_Variable_Control.Full_Access_Only_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_full_access_only_types.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "eb454e62a5ad7c7ac566729a75f105b48ac9322b3506f74c3daa9b82cda08fe8df246ad6c09496f2169e2ef09ea28a5edb360ac10716521c3d1e7a72ffdb2239",
+    "text_hash_short": "6e7d4ee2e89b943d25319de9d8cebdcd"
+}

@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/whats-new-in-ada-2022/chapters/array_aggregates.rst",
+    "line_start": 22,
+    "line_end": 35,
+    "text": "package Show_Square_Brackets is\n\n   type Integer_Array is array (Positive range <>) of Integer;\n\n   Old_Style_Empty : Integer_Array := (1 .. 0 => <>);\n   New_Style_Empty : Integer_Array := [];\n\n   Old_Style_One_Item : Integer_Array := (1 => 5);\n   New_Style_One_Item : Integer_Array := [5];\n\nend Show_Square_Brackets;\n",
+    "language": "ada",
+    "project": "Courses.Ada_2022_Whats_New.Square_Brackets",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnatX",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_square_brackets.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "1dfd860d87a8f809f2078c963913ef61d77f069696f2554c4c9a52060671e9a3acbfff2f7f40fae3d49c68be34cb0b9628a64ef2aaa45df772b94b2d0ea27699",
+    "text_hash_short": "2914b9435684a1eecd2567548969a3ed"
+}

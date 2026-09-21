@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/generics.rst",
+    "line_start": 270,
+    "line_end": 316,
+    "text": "generic\n   Description : String;\n   type T is private;\n   with function Comparison (X, Y : T)\n                             return Boolean;\nprocedure Check (X, Y : T);\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Check (X, Y : T) is\n   Result : Boolean;\nbegin\n   Result := Comparison (X, Y);\n   if Result then\n      Put_Line\n        (\"Comparison (\"\n         & Description\n         & \") between arguments is OK!\");\n   else\n      Put_Line\n        (\"Comparison (\"\n         & Description\n         & \") between arguments is not OK!\");\n   end if;\nend Check;\n\nwith Check;\n\nprocedure Show_Formal_Subprogram is\n\n   A, B : Integer;\n\n   procedure Check_Is_Equal is new\n     Check (Description => \"equality\",\n            T           => Integer,\n            Comparison  => Standard.\"=\");\n   --  Here, we are mapping the standard\n   --  equality operator for Integer types to\n   --  the Comparison formal function\nbegin\n   A := 0;\n   B := 1;\n   Check_Is_Equal (A, B);\nend Show_Formal_Subprogram;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Generics.Show_Formal_Subprogram",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "check.ads",
+        "check.adb",
+        "show_formal_subprogram.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_formal_subprogram.adb",
+    "text_hash": "b7b7ca8426d2644c24e69d324611d67e13c2787429da6b39aaef6215c6e41f357d0d7b015841af25b13083d8765078a6e4f388e50b73a325f563a171a80a11ff",
+    "text_hash_short": "1c463a47e9ce56b5afbca1da6acd116d"
+}

@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 1376,
+    "line_end": 1403,
+    "text": "package P is\n\n   type R is record\n      A : Integer;\n      B : Integer;\n   end record;\n\n   for R use record\n      A at 0 range 0 .. 31;\n      B at 5 range 0 .. 31;\n   end record;\n\nend P;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith P;           use P;\n\nprocedure Show_Empty_Byte is\nbegin\n   Put_Line (\"R'Size:        \"\n             & R'Size'Image);\n   Put_Line (\"R'Object_Size: \"\n             & R'Object_Size'Image);\nend Show_Empty_Byte;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Record_Representation_Storage_Clauses.Rep_Clauses_Empty_Byte",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "p.ads",
+        "show_empty_byte.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_empty_byte.adb",
+    "text_hash": "3cbcee6d45b2e6bb38e5ab2d50e67ead8b8ee4aad4649f9ed08d19ea1ba3caf5c1badcbbb0ddd6762e8363254e82bd5fd11fb80eec7f4501d78c51f04859f71f",
+    "text_hash_short": "c616e534e95a06f2e8b3052a3e8a9aab"
+}

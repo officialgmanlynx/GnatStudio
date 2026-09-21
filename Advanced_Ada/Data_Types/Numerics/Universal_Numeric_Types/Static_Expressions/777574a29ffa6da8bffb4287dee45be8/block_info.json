@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 510,
+    "line_end": 524,
+    "text": "package Static_Expressions is\n\n   Pi : constant :=\n      3.14159_26535_89793_23846_26433_83279_50288;\n\n   Seed : constant :=\n      143_574_786_272_784_656_928_283_872_972_764;\n\n   Super_Seed : constant :=\n      Seed * Seed * Seed * Seed * Seed * Seed;\n\nend Static_Expressions;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Universal_Numeric_Types.Static_Expressions",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "static_expressions.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "ce69b26af0bf2df9ed432fad6f8b480a780b131ec684dccd239f2b542ffc9b69a4a614559df1af464a4a657b9426afcd5a88513790941ee129a4a69b4c0e635d",
+    "text_hash_short": "777574a29ffa6da8bffb4287dee45be8"
+}

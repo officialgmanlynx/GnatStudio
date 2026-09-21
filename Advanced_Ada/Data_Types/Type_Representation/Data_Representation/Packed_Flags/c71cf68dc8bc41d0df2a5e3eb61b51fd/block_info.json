@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 991,
+    "line_end": 1024,
+    "text": "package Flag_Definitions is\n\n   type Flags is\n     array (Positive range <>) of Boolean;\n\n   type Packed_Flags is\n     array (Positive range <>) of Boolean\n       with Pack;\n\nend Flag_Definitions;\n\nwith Ada.Text_IO;      use Ada.Text_IO;\nwith Flag_Definitions; use Flag_Definitions;\n\nprocedure Show_Packed_Flags is\n   Flags_1 : Flags (1 .. 8);\n   Flags_2 : Packed_Flags (1 .. 8);\nbegin\n   Put_Line (\"Boolean'Size:           \"\n             & Boolean'Size'Image);\n   Put_Line (\"Boolean'Object_Size:    \"\n             & Boolean'Object_Size'Image);\n   Put_Line (\"Flags_1'Size:           \"\n             & Flags_1'Size'Image);\n   Put_Line (\"Flags_1'Component_Size: \"\n             & Flags_1'Component_Size'Image);\n   Put_Line (\"Flags_2'Size:           \"\n             & Flags_2'Size'Image);\n   Put_Line (\"Flags_2'Component_Size: \"\n             & Flags_2'Component_Size'Image);\nend Show_Packed_Flags;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Data_Representation.Packed_Flags",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "flag_definitions.ads",
+        "show_packed_flags.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_packed_flags.adb",
+    "text_hash": "093547686fa0cfbee6750de7a8258b9f8d0ddfa1af1da55bbe00a4c63becd971c3039ed9dbd2c675c6e83b37704f56e98f76082d36de5ea3a5cc66c5bb772b3c",
+    "text_hash_short": "c71cf68dc8bc41d0df2a5e3eb61b51fd"
+}

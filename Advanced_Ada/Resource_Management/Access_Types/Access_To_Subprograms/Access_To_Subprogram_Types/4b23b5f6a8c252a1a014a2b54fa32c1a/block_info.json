@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 4824,
+    "line_end": 4848,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Access_To_Subprogram_Types;\nuse  Access_To_Subprogram_Types;\n\nwith Add_Ten;\nwith Add_Twenty;\n\nprocedure Show_Access_To_Subprograms is\n   RA       : Rec_Access_To_Procedure;\n   Some_Int : Integer := 0;\nbegin\n   Put_Line (\"Some_Int: \" & Some_Int'Image);\n\n   RA := (AP => Add_Ten'Access);\n   RA.AP (Some_Int);\n   Put_Line (\"Some_Int: \" & Some_Int'Image);\n\n   RA := (AP => Add_Twenty'Access);\n   RA.AP (Some_Int);\n   Put_Line (\"Some_Int: \" & Some_Int'Image);\nend Show_Access_To_Subprograms;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Access_To_Subprograms.Access_To_Subprogram_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_access_to_subprograms.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_access_to_subprograms.adb",
+    "text_hash": "1fc55e173625e9082fefd6004bc374599d13e3a923d718ccde48acab4dba5174c78f417f702714d87547ed0697b4fb3baabba5691e08110f53a2ff93ad0e96af",
+    "text_hash_short": "4b23b5f6a8c252a1a014a2b54fa32c1a"
+}

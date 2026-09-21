@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 304,
+    "line_end": 320,
+    "text": "package Types is\n   type Type_1 is private;\n   type Type_2 is private;\n   type Type_3 is private;\n   procedure P (X : Type_1);\n   --  ...\nprivate\n   procedure Q (Y : Type_1);\n   type Type_1 is new Integer range 1 .. 1000;\n   type Type_2 is array (Integer range 1 .. 1000) of Integer;\n   type Type_3 is record\n      A, B : Integer;\n   end record;\nend Types;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Private_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "types.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "bceed89e63de6e8b819f6e4969f07b8fcbd74ea72125d15cde5b2d4a6aa0792bdcd4d368e5ba25e1b000a12ec0200901f75196ac87ffd00f4b9287c790d3071a",
+    "text_hash_short": "ae4a9e4d10b55e7efd92d7952ba22f4f"
+}

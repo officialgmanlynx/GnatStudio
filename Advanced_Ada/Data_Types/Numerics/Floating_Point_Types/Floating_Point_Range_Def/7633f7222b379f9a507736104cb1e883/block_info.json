@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 2645,
+    "line_end": 2654,
+    "text": "package Show_Range_Definition is\n\n   type Float_6_Digits_Normalized is\n     digits 6\n       range -1.0 .. 1.0;\n\nend Show_Range_Definition;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Floating_Point_Types.Floating_Point_Range_Def",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_range_definition.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "9a6fa96cdb59bdd431037e569982ddfeb4acb706502613167b8e94fb1d7daa61ac97d958998ad8570e8f827c6b6b00c34fbb38e8ebaa056154a6db467daefdb7",
+    "text_hash_short": "7633f7222b379f9a507736104cb1e883"
+}

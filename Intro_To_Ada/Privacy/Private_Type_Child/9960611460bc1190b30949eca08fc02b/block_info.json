@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/privacy.rst",
+    "line_start": 340,
+    "line_end": 390,
+    "text": "package My_Types is\n\n   type Priv_Rec is private;\n\nprivate\n\n   type Priv_Rec is record\n      Number : Integer := 42;\n   end record;\n\nend My_Types;\n\npackage My_Types.Ops is\n\n   procedure Display (E : Priv_Rec);\n\nend My_Types.Ops;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body My_Types.Ops is\n\n   procedure Display (E : Priv_Rec) is\n   begin\n      Put_Line (\"Priv_Rec.Number: \"\n                & Integer'Image (E.Number));\n   end Display;\n\nend My_Types.Ops;\n\nwith Ada.Text_IO;  use Ada.Text_IO;\n\nwith My_Types;     use My_Types;\nwith My_Types.Ops; use My_Types.Ops;\n\nprocedure Main is\n   E : Priv_Rec;\nbegin\n   Put_Line (\"Presenting information:\");\n\n   --  The following code would trigger a\n   --  compilation error here:\n   --\n   --  Put_Line (\"Priv_Rec.Number: \"\n   --            & Integer'Image (E.Number));\n\n   Display (E);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Privacy.Private_Type_Child",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "my_types.ads",
+        "my_types-ops.ads",
+        "my_types-ops.adb",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "b28173fb27f885021fdaff78bfd200bb5b0e4f0f405c5285ae5a79b8fc8511925429a27d796d1069b91d1eedbcb45dd19f356b30295ad7e02ecbe8953d8b211d",
+    "text_hash_short": "9960611460bc1190b30949eca08fc02b"
+}

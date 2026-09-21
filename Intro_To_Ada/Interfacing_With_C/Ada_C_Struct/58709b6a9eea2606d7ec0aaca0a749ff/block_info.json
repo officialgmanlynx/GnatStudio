@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/interfacing_with_c.rst",
+    "line_start": 75,
+    "line_end": 85,
+    "text": "!c_struct.h\nstruct c_struct\n{\n    int         a;\n    long        b;\n    unsigned    c;\n    double      d;\n};\n",
+    "language": "c",
+    "project": "Courses.Intro_To_Ada.Interfacing_With_C.Ada_C_Struct",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "c_struct.h"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "2414a9d5e9cb4f9893dde1a676c65fa50f2d7615dd8bf3cc6ce2b083672b2088fabeeb2147be2f69b721a481262316b65ff85dc804e8da4bc053f50dc29ccb89",
+    "text_hash_short": "58709b6a9eea2606d7ec0aaca0a749ff"
+}

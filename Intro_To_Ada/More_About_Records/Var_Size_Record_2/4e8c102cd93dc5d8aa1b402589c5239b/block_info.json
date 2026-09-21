@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/more_about_records.rst",
+    "line_start": 145,
+    "line_end": 169,
+    "text": "with Ada.Text_IO;       use Ada.Text_IO;\n\nwith Var_Size_Record_2; use Var_Size_Record_2;\n\nprocedure Main is\n   procedure Print_Stack (G : Growable_Stack) is\n   begin\n      Put (\"<Stack, items: [\");\n      for I in G.Items'Range loop\n         exit when I > G.Len;\n         Put (\" \" & Integer'Image (G.Items (I)));\n      end loop;\n      Put_Line (\"]>\");\n   end Print_Stack;\n\n   S : Growable_Stack :=\n     (Max_Len => 128,\n      Items   => (1, 2, 3, 4, others => <>),\n      Len     => 4);\nbegin\n   Print_Stack (S);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.More_About_Records.Var_Size_Record_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "f2a6cd6960892563f27dec90c2f3a48be3d53c690c4049f2b62287dd2d774dad64988578ce3816e48fcb5a68cfa5833a32dc578be2d680e10d1cc2f2880d177c",
+    "text_hash_short": "4e8c102cd93dc5d8aa1b402589c5239b"
+}

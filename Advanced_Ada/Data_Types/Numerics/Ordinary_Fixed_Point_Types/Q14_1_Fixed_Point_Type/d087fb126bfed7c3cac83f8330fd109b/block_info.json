@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 7445,
+    "line_end": 7465,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Q14_1_Fixed_Point_Type is\n   type TQ14_1 is\n     delta  0.5\n     range -2.0 ** 14 ..\n            2.0 ** 14 - 0.5;\nbegin\n   Put_Line (\"TQ14_1 requires \"\n             & TQ14_1'Size'Image\n             & \" bits\");\n   Put_Line (\"The delta    value of TQ14_1 is \"\n             & TQ14_1'Delta'Image);\n   Put_Line (\"The minimum  value of TQ14_1 is \"\n             & TQ14_1'First'Image);\n   Put_Line (\"The maximum  value of TQ14_1 is \"\n             & TQ14_1'Last'Image);\nend Q14_1_Fixed_Point_Type;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Ordinary_Fixed_Point_Types.Q14_1_Fixed_Point_Type",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "q14_1_fixed_point_type.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "q14_1_fixed_point_type.adb",
+    "text_hash": "978b9267e02595f4ba1888e7e0888ed577dacf60c694233a08658d72c757d71e2e3c987d28ebffae103384b3a294dc4d39efef69d1a4b0c7f623b612710d6e8b",
+    "text_hash_short": "d087fb126bfed7c3cac83f8330fd109b"
+}

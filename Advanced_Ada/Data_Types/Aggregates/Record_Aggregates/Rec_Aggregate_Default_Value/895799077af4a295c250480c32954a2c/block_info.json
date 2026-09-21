@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/aggregates.rst",
+    "line_start": 403,
+    "line_end": 417,
+    "text": "with Points; use Points;\n\nprocedure Show_Record_Aggregates is\n   P : Point_3D := (0.0, 0.0, 0.0);\nbegin\n   --  Using default value of Point_Value\n   --  for all components\n   P := (X => <>,\n         Y => <>,\n         Z => <>);\n   Display (P);\nend Show_Record_Aggregates;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Aggregates.Record_Aggregates.Rec_Aggregate_Default_Value",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_record_aggregates.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_record_aggregates.adb",
+    "text_hash": "29455709dfb8012580bbc953621821a4e83fa2b1e9383ecc58bd6b615b8b32b0a6b3a1d7e936ae914f2e96d1680bec274aa3f47c1ace9ce016bbeff759643877",
+    "text_hash_short": "895799077af4a295c250480c32954a2c"
+}

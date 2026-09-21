@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/tasking.rst",
+    "line_start": 156,
+    "line_end": 166,
+    "text": "with Simple_Sync_Pkg;\n\nprocedure Test_Simple_Sync_Pkg is\nbegin\n   null;\n   --  Will wait here until all tasks\n   --  have terminated\nend Test_Simple_Sync_Pkg;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Tasking.Simple_Sync_Pkg",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "test_simple_sync_pkg.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "test_simple_sync_pkg.adb",
+    "text_hash": "808b4431be05edf6d47cd7c5b199b4436a3e54705c8e932460c1aaee3b1d852b0d207b4140ef780d47b89950804728cc018d23cf56e5bb0893dc20b6f5191cde",
+    "text_hash_short": "e51565b91767ce198496ef3e9c582ac8"
+}

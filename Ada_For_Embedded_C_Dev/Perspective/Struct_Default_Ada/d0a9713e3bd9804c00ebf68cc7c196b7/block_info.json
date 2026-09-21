@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 2291,
+    "line_end": 2321,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main is\n\n   type R is record\n      A, B : Integer := 0;\n      C    : Float   := 0.0;\n   end record;\n\n   procedure Put_R (V : R; Name : String) is\n   begin\n      Put_Line (Name & \" = (\"\n                & Integer'Image (V.A) & \", \"\n                & Integer'Image (V.B) & \", \"\n                & Float'Image (V.C) & \")\");\n   end Put_R;\n\n   V1 : constant R := (1, 2, 1.0);\n   V2 : constant R := (A => 1, B => 2, C => 1.0);\n   V3 : constant R := (C => 1.0, A => 1, B => 2);\n   V4 : constant R := (C => 1.0, others => <>);\n\nbegin\n   Put_R (V1, \"V1\");\n   Put_R (V2, \"V2\");\n   Put_R (V3, \"V3\");\n   Put_R (V4, \"V4\");\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Struct_Default_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "a0cf553aedff7e3c7edcccb4a606faeb9a76571310a807ebd146f8d95d3d787320076617474070577c934156d4d13b31ea217f886ae0b9dc757e34b7c0c9304f",
+    "text_hash_short": "d0a9713e3bd9804c00ebf68cc7c196b7"
+}

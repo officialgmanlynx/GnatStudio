@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/modular_prog/subprograms_modularity.rst",
+    "line_start": 179,
+    "line_end": 211,
+    "text": "private package Private_Data_Processing is\n\n   type Data is private;\n\n   procedure Process (D : in out Data);\n\nprivate\n\n    type Data is record\n       F : Float;\n    end record;\n\nend Private_Data_Processing;\n\npackage body Private_Data_Processing is\n\n   procedure Process (D : in out Data) is\n   begin\n      null;\n   end Process;\n\nend Private_Data_Processing;\n\nprocedure Private_Data_Processing.Test;\n\nprocedure Private_Data_Processing.Test is\n   D : Data := (F => 0.0);\nbegin\n   Process (D);\nend Private_Data_Processing.Test;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Modular_Prog.Subprograms_Modularity.Private_Subprograms.Private_Package_Child_Subprogram",
+    "main_file": "private_data_processing-test.adb",
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "private_data_processing.ads",
+        "private_data_processing.adb",
+        "private_data_processing-test.ads",
+        "private_data_processing-test.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "private_data_processing-test.adb",
+    "text_hash": "16952ccc4b8e49ce7b30d2dc1828f20713910e8740a8cdd2f77a2de93e9898aee606067c8b1c8a3c6cdb625764537e19c7eaa5c06bd7ef83f368e04e5c5c95c7",
+    "text_hash_short": "0726f5890a5b3847244d1ae08989e158"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 819,
+    "line_end": 849,
+    "text": "with Ada.Text_IO;         use Ada.Text_IO;\nwith Ada.Strings;         use Ada.Strings;\nwith Ada.Strings.Bounded;\n\nprocedure Show_Width_Attr is\n   package B_Str is new\n     Ada.Strings.Bounded.Generic_Bounded_Length\n       (Max => Integer'Width);\n   use B_Str;\n\n   Str_I : Bounded_String;\n\n   I : constant Integer := 42;\n   J : constant Integer := 103;\nbegin\n   Str_I := To_Bounded_String (I'Image);\n   Put_Line (\"Value:         \"\n             & To_String (Str_I));\n   Put_Line (\"String Length: \"\n             & Length (Str_I)'Image);\n   Put_Line (\"----\");\n\n   Str_I := To_Bounded_String (J'Image);\n   Put_Line (\"Value:         \"\n             & To_String (Str_I));\n   Put_Line (\"String Length: \"\n             & Length (Str_I)'Image);\nend Show_Width_Attr;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Scalar_Types.Width_Attr",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_width_attr.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_width_attr.adb",
+    "text_hash": "c196b6aae21907aa8ef27dbd0bdba5c12f9c47fd9b7018f0c2a5c60ac8f3417d0846084070c4ef1a74dbeee574c4b63e36b013140fc69f151642abbce52d2c49",
+    "text_hash_short": "82cff0cf4fecfdecce3020135cf98fd2"
+}

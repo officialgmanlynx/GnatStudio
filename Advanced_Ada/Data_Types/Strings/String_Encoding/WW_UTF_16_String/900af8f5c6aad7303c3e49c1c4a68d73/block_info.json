@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/strings.rst",
+    "line_start": 791,
+    "line_end": 831,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Ada.Strings.UTF_Encoding;\nuse  Ada.Strings.UTF_Encoding;\n\nwith Ada.Strings.UTF_Encoding.Wide_Wide_Strings;\nuse  Ada.Strings.UTF_Encoding.Wide_Wide_Strings;\n\nwith Ada.Strings.UTF_Encoding.Conversions;\nuse  Ada.Strings.UTF_Encoding.Conversions;\n\nprocedure Show_WW_UTF16_String is\n   Symbols_UTF_16 : constant\n     UTF_16_Wide_String :=\n       Wide_Character'Val (16#2665#) &\n       Wide_Character'Val (16#266B#);\n   --  ^ Calling Wide_Character'Val\n   --    to specify the UTF-16 BE code\n   --    for \"\u2665\" and \"\u266b\".\n\n   Symbols_WWS : constant\n     Wide_Wide_String :=\n       Decode (Symbols_UTF_16);\n   --  ^ Calling Decode for UTF_16_Wide_String\n   --    to Wide_Wide_String conversion.\nbegin\n   Put_Line (\"UTF_16_Wide_String: \"\n             & Convert (Symbols_UTF_16));\n   --          ^ Calling Convert for the\n   --            UTF_16_Wide_String to\n   --            UTF_8_String conversion.\n\n   Put_Line (\"Wide_Wide_String:   \"\n             & Encode (Symbols_WWS));\n   --          ^ Calling Encode for the\n   --            Wide_Wide_String to\n   --            UTF_8_String conversion.\nend Show_WW_UTF16_String;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Strings.String_Encoding.WW_UTF_16_String",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_ww_utf16_string.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_ww_utf16_string.adb",
+    "text_hash": "38ee1688cac85fdee1589ef3e2055ce480a8072a851939e70c994d70a77f8c252b8d3c0232470a3060f8c56a6078adc1e795c1a94b90eb42ace34e489d6c771e",
+    "text_hash_short": "900af8f5c6aad7303c3e49c1c4a68d73"
+}

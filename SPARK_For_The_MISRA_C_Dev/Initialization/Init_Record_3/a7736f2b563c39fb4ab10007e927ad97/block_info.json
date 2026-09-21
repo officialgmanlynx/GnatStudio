@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/05_initialization.rst",
+    "line_start": 353,
+    "line_end": 361,
+    "text": "package Init_Record is\n   type Rec is record\n      X, Y, Z : Integer;\n   end record;\n   R : Rec := (X => 1, others => <>);  --  ERROR, Y and Z not specified\nend Init_Record;\n",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Initialization.Init_Record_3",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow",
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": true,
+    "source_files": [
+        "init_record.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "4c80b1894b2d4202c36c88e748711855b681c1979f29853ebd33548f14bcf3ef81d85e6bacd2b509b8837eaa968c905b904cecd676eafdbaffc95ad0a7ede48c",
+    "text_hash_short": "a7736f2b563c39fb4ab10007e927ad97"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 794,
+    "line_end": 808,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Simple_Bitfield is\n   type Bit_Field is array (Natural range <>) of Boolean with Pack;\n\n   V : Integer := 0;\n   B : Bit_Field (0 .. V'Size - 1)\n     with Address => V'Address, Import, Volatile;\nbegin\n   B (2) := True;\n   Put_Line (\"V = \" & Integer'Image (V));\nend Simple_Bitfield;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.Bitfield_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple_bitfield.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "simple_bitfield.adb",
+    "text_hash": "e19428c57820f7d2c3e9559cd0a2bc297814c10565395d043eeb5bfd7b0e7203cfe90100497c6b54fa3389e6c9c0ee08b0442e0b91d9ffae201fae31149b676b",
+    "text_hash_short": "193a2db91619426a145cd267f873145f"
+}

@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 357,
+    "line_end": 410,
+    "text": "package Limited_Types is\n\n   type Integer_Access is access Integer;\n\n   type Simple_Rec is limited private;\n\n   function Init (I : Integer) return Simple_Rec;\n\n   function \"=\" (Left, Right : Simple_Rec)\n                 return Boolean;\n\nprivate\n\n   type Simple_Rec is limited record\n      V : Integer_Access;\n   end record;\n\nend Limited_Types;\n\npackage body Limited_Types is\n\n   function Init (I : Integer) return Simple_Rec\n   is\n   begin\n      return E : Simple_Rec do\n         E.V := new Integer'(I);\n      end return;\n   end Init;\n\n   function \"=\" (Left, Right : Simple_Rec)\n                 return Boolean is\n   begin\n      --  Comparing record components\n      return Left.V.all = Right.V.all;\n   end \"=\";\n\nend Limited_Types;\n\nwith Ada.Text_IO;   use Ada.Text_IO;\nwith Limited_Types; use Limited_Types;\n\nprocedure Show_Limited_Equality is\n   A : Simple_Rec := Init (5);\n   B : Simple_Rec := Init (6);\nbegin\n   if A = B then\n      Put_Line (\"A = B\");\n   else\n      Put_Line (\"A /= B\");\n   end if;\nend Show_Limited_Equality;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Assignment_Equality.Equality",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "limited_types.ads",
+        "limited_types.adb",
+        "show_limited_equality.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_limited_equality.adb",
+    "text_hash": "49559e66cf70abc5381378fa4d72ab6a0656283752ca5f0238a4d29912baf406afb2d8e97afc756cef183a95daa3815c4ca4056c8f6e96ca197b22078feb01f2",
+    "text_hash_short": "f56b2229443a5e4e33c402b41b02d318"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_strings.rst",
+    "line_start": 59,
+    "line_end": 92,
+    "text": "with Ada.Strings.Fixed; use Ada.Strings.Fixed;\nwith Ada.Text_IO;       use Ada.Text_IO;\n\nprocedure Show_Find_Substring is\n\n   S   : String := \"Hello\" & 3 * \" World\";\n   P   : constant String := \"World\";\n   Idx : Natural;\n   Cnt : Natural;\nbegin\n   Cnt := Ada.Strings.Fixed.Count\n     (Source  => S,\n      Pattern => P);\n\n   Put_Line (\"String: \" & S);\n   Put_Line (\"Count for '\" & P & \"': \"\n             & Natural'Image (Cnt));\n\n   Idx := 0;\n   for I in 1 .. Cnt loop\n      Idx := Index\n        (Source  => S,\n         Pattern => P,\n         From    => Idx + 1);\n\n      Put_Line (\"Found instance of '\"\n                & P & \"' at position: \"\n                & Natural'Image (Idx));\n   end loop;\n\nend Show_Find_Substring;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Find_Substring",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_find_substring.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_find_substring.adb",
+    "text_hash": "402ec68f52d0421dfdff47b5d946c43dc88433569612aaace32553c0f03f8308daa4cae25acd1085bf54e0527967af086f541167d99da31b66f1c1ac848bbd89",
+    "text_hash_short": "faa8373bf9aec9f9f5507cf55590b0c0"
+}

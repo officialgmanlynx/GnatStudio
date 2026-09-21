@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/02_Flow_Analysis.rst",
+    "line_start": 248,
+    "line_end": 270,
+    "text": "package Show_Global_Contracts is\n\n   X, Y, Z : Natural := 0;\n\n   procedure Set_X_To_Y_Plus_Z with\n     Global => (Input  => (Y, Z), --  reads values of Y and Z\n                Output => X);     --  modifies value of X\n\n   procedure Set_X_To_X_Plus_Y with\n     Global => (Input  => Y,  --  reads value of Y\n                In_Out => X); --  modifies value of X and\n                              --  also reads its initial value\n\n   function Get_Value_Of_X return Natural with\n     Global => X;  -- reads the value of the global variable X\n\n   procedure Incr_Parameter_X (X : in out Natural) with\n     Global => null; -- do not reference any global variable\n\nend Show_Global_Contracts;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Flow_Analysis.Global_Contracts",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "show_global_contracts.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "3f154ce06d988ff251bbfcd0acf6f85a7beaee8fe22efece171c9d6f520f722b53d2d6426510f44d61486b0338390308d2700858c9aaddc4586bc90bd013e4ab",
+    "text_hash_short": "2cbf90f2d27b6b0043a2e29449e79df9"
+}

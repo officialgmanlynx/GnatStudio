@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/exceptions.rst",
+    "line_start": 1071,
+    "line_end": 1106,
+    "text": "generic\n   type R is (<>);\npackage Some_Generic_Package is\n   procedure Process;\nend Some_Generic_Package;\n\npackage body Some_Generic_Package is\n\n   procedure Process is\n      type Arr is\n        array (R) of Integer;\n\n      Dummy : Arr := (others => 0);\n   begin\n      null;\n   end Process;\n\nend Some_Generic_Package;\n\nwith Some_Generic_Package;\n\nprocedure Show_Subtype_Predicate_Programm_Error is\n\n   type Custom_Range is range 1 .. 5\n     with Dynamic_Predicate =>\n            4 not in Custom_Range;\n\n   package P is new\n     Some_Generic_Package (Custom_Range);\n   use P;\nbegin\n   Process;\nend Show_Subtype_Predicate_Programm_Error;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Exceptions.Checks_And_Exceptions.Subtype_Predicate_Programm_Error",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "some_generic_package.ads",
+        "some_generic_package.adb",
+        "show_subtype_predicate_programm_error.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_subtype_predicate_programm_error.adb",
+    "text_hash": "4a9d63cdcb6753c3241174c9bfa9adfb31cee949593648c5b6d8073fba542708cc1008b88a23acb84bcc8fae546cab59bc1a68f546ac99f501836e3c42ead1a9",
+    "text_hash_short": "b1a5cc579393162dedecb6b65b75eef4"
+}

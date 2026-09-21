@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/strings.rst",
+    "line_start": 540,
+    "line_end": 604,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Ada.Strings.UTF_Encoding;\nuse  Ada.Strings.UTF_Encoding;\n\nwith Ada.Strings.UTF_Encoding.Wide_Wide_Strings;\nuse  Ada.Strings.UTF_Encoding.Wide_Wide_Strings;\n\nwith Ada.Strings.Wide_Wide_Unbounded;\nuse  Ada.Strings.Wide_Wide_Unbounded;\n\nprocedure Show_WW_UTF_String is\n\n   function To_UWWS\n     (Source : Wide_Wide_String)\n      return Unbounded_Wide_Wide_String\n        renames To_Unbounded_Wide_Wide_String;\n\n   function To_WWS\n     (Source : Unbounded_Wide_Wide_String)\n      return Wide_Wide_String\n        renames To_Wide_Wide_String;\n\n   Hello_World_Arabic : constant\n     UTF_8_String := \"\u0645\u0631\u062d\u0628\u0627 \u064a\u0627 \u0639\u0627\u0644\u0645\";\n   WWS_Hello_World_Arabic : constant\n     Wide_Wide_String :=\n       Decode (Hello_World_Arabic);\n\n   UWWS : Unbounded_Wide_Wide_String;\nbegin\n   UWWS := \"Hello World: \"\n           & To_UWWS (WWS_Hello_World_Arabic);\n\n   Show_WW_String : declare\n      WWS : constant Wide_Wide_String :=\n              To_WWS (UWWS);\n   begin\n      Put_Line (\"Wide_Wide_String Length: \"\n                & WWS'Length'Image);\n      Put_Line (\"Wide_Wide_String Size:   \"\n                & WWS'Size'Image);\n   end Show_WW_String;\n\n   Put_Line\n     (\"---------------------------------------\");\n   Put_Line\n     (\"Converting Wide_Wide_String to UTF-8...\");\n\n   Show_UTF_8_String : declare\n      S_UTF_8 : constant UTF_8_String :=\n                  Encode (To_WWS (UWWS));\n   begin\n      Put_Line (\"UTF-8 String:        \"\n                & S_UTF_8);\n      Put_Line (\"UTF-8 String Length: \"\n                & S_UTF_8'Length'Image);\n      Put_Line (\"UTF-8 String Size:   \"\n                & S_UTF_8'Size'Image);\n   end Show_UTF_8_String;\n\nend Show_WW_UTF_String;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Strings.String_Encoding.WW_UTF_String",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_ww_utf_string.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_ww_utf_string.adb",
+    "text_hash": "89cd932a9c54d95773e4199a882351bc8b1ae20f498cd9570ff08b8a231dff8ae719bef30620af9c562f20661162c083772b9e2e723bc6398b6f6592c121b9a3",
+    "text_hash_short": "cecfb420bb804f42e7a65b793abcbef5"
+}

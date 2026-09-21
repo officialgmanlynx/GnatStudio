@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/04_strong_typing.rst",
+    "line_start": 629,
+    "line_end": 641,
+    "text": "!main.c\n#include <stdbool.h>\n#include <assert.h>\n\nint main() {\n   typedef enum {Ape, Bee, Cat, Dog} Animal;\n   Animal mutant = Bee ^ Dog;\n   assert (mutant == Cat);\n   return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Strong_Typing.Bitwise_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "639a5f928c52cdeaf85ad0e7b540264e73eef01dac507c99f65002344ce3b144f327709ae644181be0f42b6c9069bd03d5b68829548ebd431025a35048695259",
+    "text_hash_short": "645b0b6155f1cb17d02c7bcbb976993c"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 3183,
+    "line_end": 3194,
+    "text": "package Defaults is\n\n   type E is (E1, E2, E3)\n     with Default_Value => E1;\n\n   type T is new Integer\n     with Default_Value => -1;\n\nend Defaults;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Default_Initial_Values.Defaults_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "defaults.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "8a872247788d3e606ef6642ef77d3265c7d46032d2481b833ad4d0ba5fce933c4c9552740af8b9abc07c22f7e118d5b9cb1590e0bb266c3db7d4f782e9d660a9",
+    "text_hash_short": "e6cd8261b099278ceeb5fda91d318f6e"
+}

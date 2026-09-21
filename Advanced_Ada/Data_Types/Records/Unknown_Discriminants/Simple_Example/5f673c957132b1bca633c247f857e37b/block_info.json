@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 2440,
+    "line_end": 2455,
+    "text": "package Unknown_Discriminants is\n\n   type T_Unknown_Discr (<>) is\n   --                   ^^^^\n   --   Unknown discriminant part\n     private;\n\nprivate\n\n   type T_Unknown_Discr is\n     null record;\n\nend Unknown_Discriminants;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Unknown_Discriminants.Simple_Example",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "unknown_discriminants.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "c40a8879377b063b5605e5431357463405aa91812fcc7adb098a83a4cddac0c399f5e0db1b4a978a374e870722c0ad3b5496d24cc5d70c8c11bc40ee3cb8c231",
+    "text_hash_short": "5f673c957132b1bca633c247f857e37b"
+}

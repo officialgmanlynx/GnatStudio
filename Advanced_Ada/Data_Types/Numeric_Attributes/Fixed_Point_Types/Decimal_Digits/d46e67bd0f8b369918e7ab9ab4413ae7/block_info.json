@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numeric_attributes.rst",
+    "line_start": 1491,
+    "line_end": 1504,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Decimal_Digits is\n   type T3_D6 is delta 10.0 ** (-3) digits 6;\n   subtype T3_D2 is T3_D6 digits 2;\nbegin\n   Put_Line (\"T3_D6'Digits: \"\n             & T3_D6'Digits'Image);\n   Put_Line (\"T3_D2'Digits: \"\n             & T3_D2'Digits'Image);\nend Show_Decimal_Digits;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numeric_Attributes.Fixed_Point_Types.Decimal_Digits",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_decimal_digits.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_decimal_digits.adb",
+    "text_hash": "9860661072568d42e4b748ec6aefd15b06276ba464233e05bb6989843c9fdafdb5a8c0dd19e8b589a2b2b198a30622b15408159ff5450b1e6b0543c58e920318",
+    "text_hash_short": "d46e67bd0f8b369918e7ab9ab4413ae7"
+}

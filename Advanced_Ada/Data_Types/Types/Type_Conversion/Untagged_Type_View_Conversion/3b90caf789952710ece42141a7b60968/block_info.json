@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 2749,
+    "line_end": 2770,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\nwith Double;\n\nprocedure Show_Conversion is\n   I : Integer;\nbegin\n   I := 2;\n   Put_Line (\"I : \"\n             & I'Image);\n\n   declare\n      F : Float := Float (I);\n   begin\n      Double (F);\n      I := Integer (F);\n   end;\n   Put_Line (\"I : \"\n             & I'Image);\nend Show_Conversion;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Type_Conversion.Untagged_Type_View_Conversion",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_conversion.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_conversion.adb",
+    "text_hash": "af5a23fe6c63fbc88f9a22be689cc4fde6bd83ed8c2f6db29fae9ea5fad1e46b165880594706a7c288bd25169ef073d998ca0bb80b0ff2e1b651450ab0e72ea1",
+    "text_hash_short": "3b90caf789952710ece42141a7b60968"
+}

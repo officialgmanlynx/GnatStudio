@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 11454,
+    "line_end": 11479,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Ada.Numerics.Big_Numbers.Big_Reals;\nuse  Ada.Numerics.Big_Numbers.Big_Reals;\n\nprocedure Show_Big_Real_Quotient_Conversion\nis\n   BR   : Big_Real;\nbegin\n   BR := 2 / 3;\n   --  Same as:\n   --  BR := From_Quotient_String (\"2 / 3\");\n\n   Put_Line (\"BR:   \" & BR'Image);\n\n   Put_Line (\"Q:    \"\n             & To_Quotient_String (BR));\n\n   Put_Line (\"Q numerator:    \"\n             & Numerator (BR)'Image);\n   Put_Line (\"Q denominator:  \"\n             & Denominator (BR)'Image);\nend Show_Big_Real_Quotient_Conversion;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Big_Numbers.Big_Real_Quotient_Conversion",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_big_real_quotient_conversion.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_big_real_quotient_conversion.adb",
+    "text_hash": "b4325bc8b6fc71a02a19ffe109e97f0ff0b3763edff4b3d8780411a66650851041b4b919aa7ff56bc558e7e829bb5db4f9d41121af3d8dde37b07836c82a256c",
+    "text_hash_short": "97d78457d3f6d5e1810e461c2c7cd172"
+}

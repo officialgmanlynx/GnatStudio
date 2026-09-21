@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/exceptions.rst",
+    "line_start": 1443,
+    "line_end": 1505,
+    "text": "with Ada.Text_IO;\n\nwith Ada.Streams.Stream_IO;\nuse  Ada.Streams.Stream_IO;\n\nwith Ada.Exceptions;\nuse  Ada.Exceptions;\n\nprocedure Exception_Occurrence_Stream is\n\n   Custom_Exception : exception;\n\n   S : Stream_Access;\n\n   procedure Nested_1 is\n   begin\n      raise Custom_Exception\n        with \"We got a problem\";\n   exception\n      when E : others =>\n         Exception_Occurrence'Write (S, E);\n   end Nested_1;\n\n   procedure Nested_2 is\n   begin\n      raise Constraint_Error\n        with \"Constraint is not correct\";\n   exception\n      when E : others =>\n         Exception_Occurrence'Write (S, E);\n   end Nested_2;\n\n   F         : File_Type;\n   File_Name : constant String :=\n                 \"exceptions_file.bin\";\nbegin\n   Create (F, Out_File, File_Name);\n   S := Stream (F);\n\n   Nested_1;\n   Nested_2;\n\n   Close (F);\n\n   Read_Exceptions : declare\n      E : Exception_Occurrence;\n   begin\n      Open (F, In_File, File_Name);\n      S := Stream (F);\n\n      while not End_Of_File (F) loop\n         Exception_Occurrence'Read (S, E);\n\n         Ada.Text_IO.Put_Line\n           (Exception_Information (E));\n      end loop;\n      Close (F);\n   end Read_Exceptions;\n\nend Exception_Occurrence_Stream;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Exceptions.Exceptions_Package.Exception_Occurrence_Stream",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "exception_occurrence_stream.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "exception_occurrence_stream.adb",
+    "text_hash": "0bc1d58918ba3bc76f360e014caa947be898447f5e75118fb5bac53e4804afd5a3946326ea90af86e21253656aca6f37bdf4ef332719c3db5100b9cb9393e514",
+    "text_hash_short": "3d9f2bd9480aa6dcc250b249b9ef4870"
+}

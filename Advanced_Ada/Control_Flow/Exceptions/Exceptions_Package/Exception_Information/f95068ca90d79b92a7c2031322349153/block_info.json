@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/exceptions.rst",
+    "line_start": 1519,
+    "line_end": 1540,
+    "text": "with Ada.Exceptions;\nwith Ada.Text_IO;   use Ada.Text_IO;\n\nprocedure Main is\n\n   procedure Nested is\n   begin\n      raise Constraint_Error\n              with \"some message\";\n   end Nested;\n\nbegin\n   Nested;\n\nexception\n   when E : others =>\n      Put_Line\n       (Ada.Exceptions.Exception_Information (E));\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Exceptions.Exceptions_Package.Exception_Information",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-g",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "87194b056afcd765a0b4b2e2b6e265e308560de06554b4b136f4f1890f343d49e57ab42b6e182a0ba450e7db32a24ce9abc161ce868740eb35bafd2dcd18257a",
+    "text_hash_short": "f95068ca90d79b92a7c2031322349153"
+}

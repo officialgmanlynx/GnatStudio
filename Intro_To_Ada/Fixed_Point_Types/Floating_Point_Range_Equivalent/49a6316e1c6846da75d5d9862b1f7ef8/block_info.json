@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/fixed_point_types.rst",
+    "line_start": 136,
+    "line_end": 150,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Decimal_Fixed_Point_Types is\n   type Float_999 is\n     digits 3\n     range -999.0 .. 999.0;\nbegin\n   Put_Line (\"The minimum value of Float_999 is \"\n             & Float_999'First'Image);\n   Put_Line (\"The maximum value of Float_999 is \"\n             & Float_999'Last'Image);\nend Decimal_Fixed_Point_Types;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Fixed_Point_Types.Floating_Point_Range_Equivalent",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "decimal_fixed_point_types.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "decimal_fixed_point_types.adb",
+    "text_hash": "c8c267258a0db3bfd8c2fd0a10136a4c62f759fd52fd96ca4be7250e33efe80b7c6ffe4cca8ba0aa444a2352ba476da5c10690fa9f0fdf5af45309f6f50d7153",
+    "text_hash_short": "49a6316e1c6846da75d5d9862b1f7ef8"
+}

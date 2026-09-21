@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_dates_times.rst",
+    "line_start": 47,
+    "line_end": 73,
+    "text": "with Ada.Text_IO;  use Ada.Text_IO;\nwith Ada.Calendar; use Ada.Calendar;\n\nprocedure Display_Current_Year is\n   Now         : Time := Clock;\n\n   Now_Year    : Year_Number;\n   Now_Month   : Month_Number;\n   Now_Day     : Day_Number;\n   Now_Seconds : Day_Duration;\nbegin\n   Split (Now,\n          Now_Year,\n          Now_Month,\n          Now_Day,\n          Now_Seconds);\n\n   Put_Line (\"Current year  is: \"\n             & Year_Number'Image (Now_Year));\n   Put_Line (\"Current month is: \"\n             & Month_Number'Image (Now_Month));\n   Put_Line (\"Current day   is: \"\n             & Day_Number'Image (Now_Day));\nend Display_Current_Year;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Display_Current_Year",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "display_current_year.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "display_current_year.adb",
+    "text_hash": "3df24d94c9af97eb25a4558c2dec6af756db06d44660bf8fcdff42fb5365923b3e42e3527b596f42a4d83ab43387c37e01a40967463f946597f0938bc8031e40",
+    "text_hash_short": "fdf298ee97f225261ce3839ebd833bbe"
+}

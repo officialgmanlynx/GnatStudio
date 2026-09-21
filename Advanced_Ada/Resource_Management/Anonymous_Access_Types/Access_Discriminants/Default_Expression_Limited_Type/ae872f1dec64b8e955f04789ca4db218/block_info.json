@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 968,
+    "line_end": 997,
+    "text": "package Custom_Recs is\n\n   --  Declaring a discriminant with an anonymous\n   --  access type and a default value:\n   type Rec (IA : access Integer :=\n                    new Integer'(0)) is limited\n   record\n      I : Integer := IA.all;\n   end record;\n\n   procedure Show (R : Rec);\n\nend Custom_Recs;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Custom_Recs is\n\n   procedure Show (R : Rec) is\n   begin\n      Put_Line (\"R.IA = \"\n                & Integer'Image (R.IA.all));\n      Put_Line (\"R.I  = \"\n                & Integer'Image (R.I));\n   end Show;\n\nend Custom_Recs;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Access_Discriminants.Default_Expression_Limited_Type",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_recs.ads",
+        "custom_recs.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "399bdda9ce4241d5c9be215a32ab82334ec992587db70fb01ac26dacfde95f492e5fa233018ca2ebaf96f400a181bd681e749669f6b5ea133479ca10b77b1cf5",
+    "text_hash_short": "ae872f1dec64b8e955f04789ca4db218"
+}

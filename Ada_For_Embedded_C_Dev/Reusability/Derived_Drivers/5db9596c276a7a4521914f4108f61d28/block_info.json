@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 377,
+    "line_end": 388,
+    "text": "package body Drivers_3 is\n\n   overriding\n   procedure Startup (Device : Device_3) is\n   begin\n      Drivers_1.Startup (Device_1 (Device));\n   end Startup;\n\nend Drivers_3;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.Derived_Drivers",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "drivers_3.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "5a406e4d05a3bf7814ac1eea4d61559e25c31614d55505fea299e91e0f330bebda5ceceb38e4452bbdb7b50fa903646978b2936ea7f0d8aba656046e0e9141b6",
+    "text_hash_short": "5db9596c276a7a4521914f4108f61d28"
+}

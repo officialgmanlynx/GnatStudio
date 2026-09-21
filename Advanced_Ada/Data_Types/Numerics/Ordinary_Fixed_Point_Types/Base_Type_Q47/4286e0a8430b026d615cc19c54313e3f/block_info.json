@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 7956,
+    "line_end": 7987,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Full_Range_Base_Type is\n   D : constant := 2.0 ** (-47);\n\n   type TQ47 is\n     delta D\n     range -1.0 .. 1.0 - D;\nbegin\n   Put_Line (\"The small          of TQ47      is \"\n             & TQ47'Small'Image);\n   Put_Line (\"The delta    value of TQ47      is \"\n             & TQ47'Delta'Image);\n\n   Put_Line (\"------------------------------\");\n\n   Put_Line (\"The small          of TQ47'Base is \"\n             & TQ47'Base'Small'Image);\n   Put_Line (\"The delta    value of TQ47'Base is \"\n             & TQ47'Base'Delta'Image);\n   Put_Line (\"The minimum  value of TQ47'Base is \"\n             & TQ47'Base'First'Image);\n   Put_Line (\"The maximum  value of TQ47'Base is \"\n             & TQ47'Base'Last'Image);\n   Put_Line (\"The size    of TQ47'Base        is \"\n             & TQ47'Base'Size'Image\n             & \" bits\");\n\nend Show_Full_Range_Base_Type;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Ordinary_Fixed_Point_Types.Base_Type_Q47",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_full_range_base_type.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_full_range_base_type.adb",
+    "text_hash": "ce682ad90746e1935bb25a8c47e9c41c750ba4a1a8b93eb129530963c36bfc431788314c3f3327de83c0a333cb8e8c373da6c09d1dbd96a551cf0fb7e9be2bc9",
+    "text_hash_short": "4286e0a8430b026d615cc19c54313e3f"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 562,
+    "line_end": 590,
+    "text": "with Ada.Text_IO;\n\nprocedure Main\nis\n   --  variable declaration\n   A, B : Integer := 0;\n   C    : Integer := 100;\n   D    : Integer;\nbegin\n   --  Ada does not have a shortcut format for increment like in C\n   A := A + 1;\n\n   --  regular addition\n   D := A + B + C;\n\n   --  printing the result\n   Ada.Text_IO.Put_Line (\"D =\" & D'Img);\n\n   declare\n      E : constant Integer := D * 100;\n   begin\n      --  printing the result\n      Ada.Text_IO.Put_Line (\"E =\" & E'Img);\n   end;\n\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Var_Decl_Block_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "8a1bc15db693ecb65d43b022f5832a88f48301ccf6a084cb641860eb73fec616feb8cd9cb46b30eeac1c3549b32e88588144c39f19f3f5da4ca4cafe7915bcc1",
+    "text_hash_short": "9239b993a7eadb13a27bd3618a03431f"
+}

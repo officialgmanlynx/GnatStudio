@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 4994,
+    "line_end": 5055,
+    "text": "generic\n   type T is private;\n\n   --\n   --  Declaring formal access-to-subprogram\n   --  type:\n   --\n   type T_Processing is\n     access procedure (Element : in out T);\n\n   --\n   --  Declaring formal access-to-subprogram\n   --  parameter:\n   --\n   Proc : T_Processing;\n\n   with function Image_T (Element : T)\n                          return String;\npackage Gen_Custom_Processing is\n\n   type Rec is private;\n\n   procedure Init (R     : in out Rec;\n                   Value :        T);\n\n   procedure Process (R : in out Rec);\n\n   procedure Show (R : Rec);\n\nprivate\n\n   type Rec is record\n      Comp : T;\n   end record;\n\nend Gen_Custom_Processing;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Gen_Custom_Processing is\n\n   procedure Init (R     : in out Rec;\n                   Value :        T) is\n   begin\n      R.Comp := Value;\n   end Init;\n\n   procedure Process (R : in out Rec) is\n   begin\n      Proc (R.Comp);\n   end Process;\n\n   procedure Show (R : Rec) is\n   begin\n      Put_Line (\"R.Comp = \"\n                & Image_T (R.Comp));\n   end Show;\n\nend Gen_Custom_Processing;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Access_To_Subprograms.Access_To_Subprogram_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "gen_custom_processing.ads",
+        "gen_custom_processing.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "078b1112a118ee3c932818123c40f51c3bd363841a4994ae8e1695b4e43d542a522eb581df0515fc76b71fb6d07f523b8a44b1adafab08189c7b79ae7975c1fa",
+    "text_hash_short": "6f06e066bafa5f02abb3ee1b33ea0831"
+}

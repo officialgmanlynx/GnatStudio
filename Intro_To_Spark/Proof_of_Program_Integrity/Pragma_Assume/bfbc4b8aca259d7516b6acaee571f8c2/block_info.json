@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/03_Proof_Of_Program_Integrity.rst",
+    "line_start": 409,
+    "line_end": 416,
+    "text": "procedure Incr (X : in out Integer) is\nbegin\n   pragma Assume (X < Integer'Last);\n   X := X + 1;\nend Incr;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Proof_of_Program_Integrity.Pragma_Assume",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_report_all"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "incr.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "90f4ab853e363688c3fd62bcf8f59f6158e238a2b54bb7347ead220698282a601ba9d699439e598f0a78928eb41ada5447d541c36ac125c28a62d9769130652e",
+    "text_hash_short": "bfbc4b8aca259d7516b6acaee571f8c2"
+}

@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/02_Flow_Analysis.rst",
+    "line_start": 451,
+    "line_end": 489,
+    "text": "package Show_Composite_Types_Shortcoming is\n\n   type T is array (Natural range <>) of Integer;\n\n   procedure Init_Chunks (A : out T);\n   procedure Init_Loop (A : out T);\n   procedure Init_Aggregate (A : out T);\n\nend Show_Composite_Types_Shortcoming;\n\npackage body Show_Composite_Types_Shortcoming is\n\n   procedure Init_Chunks (A : out T) is\n   begin\n      A (A'First) := 0;\n      for I in A'First + 1 .. A'Last loop\n         A (I) := 0;\n      end loop;\n      --  flow analysis doesn't know that A is initialized\n   end Init_Chunks;\n\n   procedure Init_Loop (A : out T) is\n   begin\n      for I in A'Range loop\n         A (I) := 0;\n      end loop;\n      --  flow analysis knows that A is initialized\n   end Init_Loop;\n\n   procedure Init_Aggregate (A : out T) is\n   begin\n      A := (others => 0);\n      --  flow analysis knows that A is initialized\n   end Init_Aggregate;\n\nend Show_Composite_Types_Shortcoming;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Flow_Analysis.Composite_Types_Shortcoming",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "show_composite_types_shortcoming.ads",
+        "show_composite_types_shortcoming.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "b196a1ff68688ca439993d85c207b94dbc5f6b95937f41d5d41af751c3c56577bf5980ca4e7f49361442fc67399109194ee7de92f8e5c4c2c956aea3ea7766c6",
+    "text_hash_short": "a366dcdd141191466027b2b928560c5e"
+}

@@ -1,0 +1,1 @@
+function Init_Zero return Float;

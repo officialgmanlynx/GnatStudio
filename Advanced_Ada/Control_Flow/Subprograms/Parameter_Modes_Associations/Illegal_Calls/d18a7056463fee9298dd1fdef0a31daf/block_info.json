@@ -1,0 +1,47 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/subprograms.rst",
+    "line_start": 644,
+    "line_end": 671,
+    "text": "package Machine_X is\n\n   procedure Update_Value (V1 : in out Integer;\n                           V2 :    out Integer);\n\nend Machine_X;\n\npackage body Machine_X is\n\n   procedure Update_Value (V1 : in out Integer;\n                           V2 :    out Integer) is\n   begin\n      V1 := V1 + 1;\n      V2 := V2 + 1;\n   end Update_Value;\n\nend Machine_X;\n\nwith Machine_X; use Machine_X;\n\nprocedure Show_By_Copy_By_Ref_Params is\n   A : Integer := 5;\nbegin\n   Update_Value (A, A);\nend Show_By_Copy_By_Ref_Params;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Subprograms.Parameter_Modes_Associations.Illegal_Calls",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "machine_x.ads",
+        "machine_x.adb",
+        "show_by_copy_by_ref_params.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_by_copy_by_ref_params.adb",
+    "text_hash": "93dc87dfe3fb4e14e9d341aaf5fc17dc6d3945065bceadfbc79e22e850af3792b89311755f3f4361f74b8145269d8788f5d6fa83bb099a5901224e9c4c2b9523",
+    "text_hash_short": "d18a7056463fee9298dd1fdef0a31daf"
+}

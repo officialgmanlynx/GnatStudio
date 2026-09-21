@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 844,
+    "line_end": 884,
+    "text": "package Custom_Recs is\n\n   --  Declaring a discriminant with an anonymous\n   --  access type:\n   type Rec (IA : access Integer) is record\n      I : Integer := IA.all;\n   end record;\n\n   procedure Show (R : Rec);\n\nend Custom_Recs;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Custom_Recs is\n\n   procedure Show (R : Rec) is\n   begin\n      Put_Line (\"R.IA = \"\n                & Integer'Image (R.IA.all));\n      Put_Line (\"R.I  = \"\n                & Integer'Image (R.I));\n   end Show;\n\nend Custom_Recs;\n\nwith Custom_Recs; use Custom_Recs;\n\nprocedure Show_Access_Discriminants is\n   I  : aliased Integer := 10;\n   R  : Rec (I'Access);\nbegin\n   Show (R);\n\n   I   := 20;\n   R.I := 30;\n   Show (R);\nend Show_Access_Discriminants;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Access_Discriminants.Simple_Example",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_recs.ads",
+        "custom_recs.adb",
+        "show_access_discriminants.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_access_discriminants.adb",
+    "text_hash": "6380f6bc55a210ca4c3d2c870009f8b3a34314805f73567df7ef1cd0e4c466ce8b23ef90b73de7980556242804c94ab29bb54186808c6edace89244e70753a65",
+    "text_hash_short": "f8e127fda4f7ea0f1593165d6a966df6"
+}

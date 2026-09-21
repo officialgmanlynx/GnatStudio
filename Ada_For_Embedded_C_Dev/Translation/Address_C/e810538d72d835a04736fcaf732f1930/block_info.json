@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 566,
+    "line_end": 575,
+    "text": "!test_c.c\nint main(int argc, const char * argv[])\n{\n    int * r = (int *)0xFFFF00A0;\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.Address_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "test_c.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "test_c.c",
+    "text_hash": "c039f910ae2dc7dde4049243618422293aa3c683515af2c51ca2af94bbe977042cd7f7399caf8d934a6e55e4c1ae1e993de84f4252fc261b3418a128be6b5d4a",
+    "text_hash_short": "e810538d72d835a04736fcaf732f1930"
+}

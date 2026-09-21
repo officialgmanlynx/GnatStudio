@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/modular_programming.rst",
+    "line_start": 527,
+    "line_end": 539,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Book.Additional_Operations;\nuse  Book.Additional_Operations;\n\nprocedure Main is\nbegin\n   Put_Line (Get_Extended_Title);\n   Put_Line (Get_Extended_Author);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Modular_Programming.Visibility",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "bb5ac9df1c4ff684a71a451125578ee39128289d5e29619101163b146ac5944d3e9db731988de7a32d084782f6446617b3377328ddf18bfc5dc7d6cbb0140bb5",
+    "text_hash_short": "bdc75987fe61e9401b400f8704890ebe"
+}

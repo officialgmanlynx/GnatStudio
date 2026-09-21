@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/more_about_records.rst",
+    "line_start": 66,
+    "line_end": 83,
+    "text": "package Var_Size_Record_2 is\n    type Items_Array is\n      array (Positive range <>) of Integer;\n\n    type Growable_Stack (Max_Len : Natural) is\n    record\n    --                   ^ Discriminant. Cannot be\n    --                     modified once\n    --                     initialized.\n       Items : Items_Array (1 .. Max_Len);\n       Len   : Natural := 0;\n    end record;\n    --  Growable_Stack is an indefinite type\n    --  (like an array)\nend Var_Size_Record_2;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.More_About_Records.Var_Size_Record_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "var_size_record_2.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "c46b3b7434c54dd5bf2ec7d7fb3534d92f49f0c3a290de4de760fac38625595c9c8faa5d1e3b6dcd5381c72d83d727ae47d0e3418f27110a01b8465b6efa0085",
+    "text_hash_short": "0c2ffe41b7553984e1ef48a50386559f"
+}

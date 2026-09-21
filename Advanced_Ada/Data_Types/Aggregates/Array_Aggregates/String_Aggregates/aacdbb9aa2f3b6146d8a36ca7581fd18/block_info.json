@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/aggregates.rst",
+    "line_start": 1274,
+    "line_end": 1321,
+    "text": "package String_Lists is\n\n   type String_List is array (Positive range <>,\n                              Positive range <>)\n                              of Character;\n\n   procedure Display (SL : String_List);\n\nend String_Lists;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body String_Lists is\n\n   procedure Display (SL : String_List) is\n\n      procedure Display_Row (SL : String_List;\n                             I  : Integer) is\n      begin\n         Put (\"  (\");\n         for J in SL'Range (2) loop\n            Put (SL (I, J));\n         end loop;\n         Put (\")\");\n      end Display_Row;\n\n   begin\n      Put_Line (\"Length (1) = \"\n                & SL'Length (1)'Image);\n      Put_Line (\"Length (2) = \"\n                & SL'Length (2)'Image);\n\n      Put_Line (\"(\");\n      for I in SL'Range (1) loop\n         Display_Row (SL, I);\n         if I /= SL'Last (1) then\n            Put_Line (\",\");\n         else\n            New_Line;\n         end if;\n      end loop;\n      Put_Line (\")\");\n   end Display;\n\nend String_Lists;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Aggregates.Array_Aggregates.String_Aggregates",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "string_lists.ads",
+        "string_lists.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "03fdc2478c28d7043a7adda89da490df289b62d27725c2f86ab6fdfbcd6bd83a0131d7177bfe6937f0e9c9c0da1901f1b328a857826c37304f4aea4c2bcddb8e",
+    "text_hash_short": "aacdbb9aa2f3b6146d8a36ca7581fd18"
+}

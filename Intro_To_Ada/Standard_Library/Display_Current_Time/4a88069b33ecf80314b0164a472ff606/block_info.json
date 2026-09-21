@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_dates_times.rst",
+    "line_start": 27,
+    "line_end": 40,
+    "text": "with Ada.Text_IO;  use Ada.Text_IO;\nwith Ada.Calendar; use Ada.Calendar;\n\nwith Ada.Calendar.Formatting;\nuse  Ada.Calendar.Formatting;\n\nprocedure Display_Current_Time is\n   Now : Time := Clock;\nbegin\n   Put_Line (\"Current time: \" & Image (Now));\nend Display_Current_Time;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Display_Current_Time",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "display_current_time.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "display_current_time.adb",
+    "text_hash": "859ef901b560d49d730dd49a3275dc95341305be09b6515c1b6caab427a6bef9c563747582782bbb3fc3203d1adee59ea1fd9d246a17ae110d3889651cfb2a01",
+    "text_hash_short": "4a88069b33ecf80314b0164a472ff606"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 2371,
+    "line_end": 2399,
+    "text": "!main.c\n#include <stdio.h>\n\nstruct R {\n    int A, B;\n};\n\nvoid print_r(const struct R *v,\n             const char     *name)\n{\n    printf(\"%s = (%d, %d)\\n\", name, v->A, v->B);\n}\n\nint main(int argc, const char * argv[])\n{\n    struct R V1, V2;\n    V1.A = 0;\n    V1.B = 0;\n    V2 = V1;\n    V2.A = 1;\n\n    print_r(&V1, \"V1\");\n    print_r(&V2, \"V2\");\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Pointers_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "0ae1bb773f55bd7d16a0eb0f9aedb4b20496b9d94dce56103499b8a77526a8602f6bf577d8258133d873b9e4916e0413fc020927cdafaec4f4c905dd7768f24d",
+    "text_hash_short": "e604bf19c98927151f3b4989dc50747a"
+}

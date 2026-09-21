@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/arrays.rst",
+    "line_start": 695,
+    "line_end": 733,
+    "text": "package Measurement_Defs is\n\n   type Measurements is\n     array (Positive range <>) of Float;\n\n   --\n   --  Simple subtype declaration:\n   --\n   subtype Measurements_Sub is Measurements;\n\n   --\n   --  Subtype with constraints:\n   --\n   subtype Measurements_10 is\n     Measurements (1 .. 10);\n\n   --\n   --  Subtype with dynamic predicate\n   --  (array can only have 20 components\n   --  at most):\n   --\n   subtype Measurements_Max_20 is Measurements\n       with Dynamic_Predicate =>\n              Measurements_Max_20'Length <= 20;\n\n   --\n   --  Subtype with constraints and\n   --  dynamic predicate (first element\n   --  must be 2.0).\n   --\n   subtype Measurements_First_Two is\n     Measurements (1 .. 10)\n       with Dynamic_Predicate =>\n              Measurements_First_Two (1) = 2.0;\n\nend Measurement_Defs;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Arrays.Derived_Arrays_And_Subtypes.Array_Subtypes",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "measurement_defs.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "ed93b7b3f10bd396b1d17d737728872615ccf2a649eaa4466b4f125840681e8a4cbd316782b3fca22ab6b41fd373c25d8aec4698938d67ece923f4504488cc70",
+    "text_hash_short": "fa03c836111aa2df223a38a5d04d18bc"
+}

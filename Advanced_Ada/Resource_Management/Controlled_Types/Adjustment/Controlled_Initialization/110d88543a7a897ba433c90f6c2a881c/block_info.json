@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/controlled_types.rst",
+    "line_start": 1275,
+    "line_end": 1350,
+    "text": "with Ada.Finalization;\n\npackage Subs is\n\n   type Sub_1 is tagged private;\n\n   type Sub_2 is tagged private;\n\nprivate\n\n   type Sub_1 is new\n     Ada.Finalization.Controlled\n       with null record;\n\n   overriding\n   procedure Initialize (E : in out Sub_1);\n\n   overriding\n   procedure Adjust (E : in out Sub_1);\n\n   overriding\n   procedure Finalize (E : in out Sub_1);\n\n   type Sub_2 is new\n     Ada.Finalization.Controlled\n       with null record;\n\n   overriding\n   procedure Initialize (E : in out Sub_2);\n\n   overriding\n   procedure Adjust (E : in out Sub_2);\n\n   overriding\n   procedure Finalize (E : in out Sub_2);\n\nend Subs;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Subs is\n\n   procedure Initialize (E : in out Sub_1) is\n   begin\n      Put_Line (\"Initialize: Sub_1...\");\n   end Initialize;\n\n   procedure Adjust (E : in out Sub_1) is\n   begin\n      Put_Line (\"Adjust: Sub_1...\");\n   end Adjust;\n\n   procedure Finalize (E : in out Sub_1) is\n   begin\n      Put_Line (\"Finalize: Sub_1...\");\n   end Finalize;\n\n   procedure Initialize (E : in out Sub_2) is\n   begin\n      Put_Line (\"Initialize: Sub_2...\");\n   end Initialize;\n\n   procedure Adjust (E : in out Sub_2) is\n   begin\n      Put_Line (\"Adjust: Sub_2...\");\n   end Adjust;\n\n   procedure Finalize (E : in out Sub_2) is\n   begin\n      Put_Line (\"Finalize: Sub_2...\");\n   end Finalize;\n\nend Subs;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Controlled_Types.Adjustment.Controlled_Initialization",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "subs.ads",
+        "subs.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "b47a1b7eb879453ba4a40016eb2952e4ff8f73b5420bbf7bdcc33c75f4cc103e59b190412dc557074d5f67d0467212e520bee4d411b789c86549be909f71564d",
+    "text_hash_short": "110d88543a7a897ba433c90f6c2a881c"
+}

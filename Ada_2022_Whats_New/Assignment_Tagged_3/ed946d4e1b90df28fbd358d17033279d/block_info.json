@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/whats-new-in-ada-2022/chapters/assignment_target.rst",
+    "line_start": 69,
+    "line_end": 87,
+    "text": "with Ada.Text_IO;\n\nprocedure Main is\n\n   My_Data : array (1 .. 5) of Float := [for J in 1 .. 5 => Float (J)];\n\n   function To_Index (Value : Positive) return Positive is\n   begin\n      Ada.Text_IO.Put_Line (\"To_Index is called.\");\n      return Value;\n   end To_Index;\n\nbegin\n   My_Data (To_Index (1)) := @ ** 2 - 3.0 * @;\n   Ada.Text_IO.Put_Line (My_Data'Image);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_2022_Whats_New.Assignment_Tagged_3",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "e2900773b29e8269ee240c2878092ef8f34c58da19f897cc36541325e5b53134f57faab153491ab1ccf4a282eadcbdf690498779467b57c22d4f1bac8c6b25c0",
+    "text_hash_short": "ed946d4e1b90df28fbd358d17033279d"
+}

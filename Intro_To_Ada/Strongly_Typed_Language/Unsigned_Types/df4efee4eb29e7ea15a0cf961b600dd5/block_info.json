@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/strongly_typed_language.rst",
+    "line_start": 171,
+    "line_end": 190,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main is\n   type Mod_Int is mod 2 ** 5;\n   --              ^ Range is 0 .. 31\n\n   A : constant Mod_Int := 20;\n   B : constant Mod_Int := 15;\n\n   M : constant Mod_Int := A + B;\n   --  No overflow here,\n   --  M = (20 + 15) mod 32 = 3\nbegin\n   for I in 1 .. M loop\n      Put_Line (\"Hello, World!\");\n   end loop;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Strongly_Typed_Language.Unsigned_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "c5766b128b081e06d4272cf4267331c16081173a286415af98b8ad8595728bbb170f5c4615ef037d32c354d7b4eb3dcbcdba92171e2bd5b6c74f196dd29e5717",
+    "text_hash_short": "df4efee4eb29e7ea15a0cf961b600dd5"
+}

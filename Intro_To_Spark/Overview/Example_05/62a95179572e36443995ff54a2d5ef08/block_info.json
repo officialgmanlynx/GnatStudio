@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/01_Overview.rst",
+    "line_start": 612,
+    "line_end": 639,
+    "text": "package P\n  with SPARK_Mode => On\nis\n   type P_Array is array (Natural range <>) of Positive;\n\n   procedure Swap_Indexes (A : in out P_Array; I, J : Natural);\n   procedure Swap (X, Y : in out Positive);\nend P;\n\npackage body P\n  with SPARK_Mode => On\nis\n   procedure Swap (X, Y : in out Positive) is\n      Tmp : constant Positive := X;\n   begin\n      X := Y;\n      Y := Tmp;\n   end Swap;\n\n   procedure Swap_Indexes (A : in out P_Array; I, J : Natural) is\n   begin\n      Swap (A (I), A (J));\n   end Swap_Indexes;\n\nend P;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Overview.Example_05",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "p.ads",
+        "p.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "d13b4648a739878d31ed7b5481981b03967ad3c0f829893885defa8429c457ad8c92089efcdeced8819fbd38bac9d28957fed91a53cdb88a1321a1c3f0a9105b",
+    "text_hash_short": "62a95179572e36443995ff54a2d5ef08"
+}

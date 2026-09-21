@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/modular_programming.rst",
+    "line_start": 457,
+    "line_end": 495,
+    "text": "package body Book is\n\n   Author : constant String :=\n     \"Author not visible for my children\";\n\n   function Get_Title return String is\n   begin\n      return Title;\n   end Get_Title;\n\n   function Get_Author return String is\n   begin\n      return Author;\n   end Get_Author;\n\nend Book;\n\npackage body Book.Additional_Operations is\n\n   function Get_Extended_Title return String is\n   begin\n      return \"Book Title: \" & Title;\n   end Get_Extended_Title;\n\n   function Get_Extended_Author return String is\n   begin\n      --  \"Author\" string declared in the body\n      --  of the Book package is not visible\n      --  here. Therefore, we cannot write:\n      --\n      --  return \"Book Author: \" & Author;\n\n      return \"Book Author: Unknown\";\n   end Get_Extended_Author;\n\nend Book.Additional_Operations;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Modular_Programming.Visibility",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "book.adb",
+        "book-additional_operations.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "806c18a7c87e8c29f55cb772783dedb55fff1bb143cfcc8825f375a0ba077bc96ee782c02a1540dac397615be609e91b1590096ff0e27def4a8afc0f9e6f198a",
+    "text_hash_short": "68b7490da12bafae0aa6fe0ab76c6b1c"
+}

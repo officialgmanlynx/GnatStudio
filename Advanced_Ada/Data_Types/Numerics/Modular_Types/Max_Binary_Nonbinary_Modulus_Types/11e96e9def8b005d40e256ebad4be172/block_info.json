@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 2001,
+    "line_end": 2014,
+    "text": "with System;\n\npackage Show_Max_Binary_Nonbinary_Modulus is\n\n   type Modular_Max is\n     mod System.Max_Binary_Modulus;\n\n   type Modular_Max_Non_Power_Two is\n     mod System.Max_Nonbinary_Modulus;\n\nend Show_Max_Binary_Nonbinary_Modulus;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Modular_Types.Max_Binary_Nonbinary_Modulus_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_max_binary_nonbinary_modulus.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "3175d7696516cbed12235e9d4361acb4eea5cc3afb40115b32e3b5be2590d5877f366dee10026849f94c3ff68af1121cc6c07b46cce672104d8c207cf087d286",
+    "text_hash_short": "11e96e9def8b005d40e256ebad4be172"
+}

@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 4884,
+    "line_end": 4905,
+    "text": "package Custom_Fixed_Point is\n   D_15 : constant := 2.0 ** (-15);\n   D_24 : constant := 2.0 ** (-24);\n   D_31 : constant := 2.0 ** (-31);\n\n   type TQ15 is\n     delta D_15\n     range -1.0 .. 1.0 - D_15;\n\n   type TQ31 is\n     delta D_31\n     range -1.0 .. 1.0 - D_31;\n\n   type TQ7_24 is\n     delta  D_24\n     range -2.0 ** 7 ..\n            2.0 ** 7   - D_24;\n\nend Custom_Fixed_Point;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Fixed_Point_Types.Universal_Fixed",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_fixed_point.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "486b941d9ccbbb3c88e63e46338b5f3fc75edab2c4978aa7199280f697ea723357e5038a08b3bddb13ed36e33258ea7c23791f5fe0e3cfd158c112fe722a2ffe",
+    "text_hash_short": "e047bb699de82ebf5011dada5cd9c2ac"
+}

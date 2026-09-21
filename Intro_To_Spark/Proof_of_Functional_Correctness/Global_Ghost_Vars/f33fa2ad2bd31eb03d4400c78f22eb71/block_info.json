@@ -1,0 +1,49 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/05_Proof_Of_Functional_Correctness.rst",
+    "line_start": 453,
+    "line_end": 495,
+    "text": "package Call_Sequence is\n\n   type T is new Integer;\n\n   Last_Accessed_Is_A : Boolean := False with Ghost;\n\n   procedure Access_A with\n     Post => Last_Accessed_Is_A;\n\n   procedure Access_B with\n     Pre  => Last_Accessed_Is_A,\n     Post => not Last_Accessed_Is_A;\n   --  B can only be accessed after A\n\nend Call_Sequence;\n\npackage body Call_Sequence is\n\n   procedure Access_A is\n   begin\n      --  ...\n      Last_Accessed_Is_A := True;\n   end Access_A;\n\n   procedure Access_B is\n   begin\n      --  ...\n      Last_Accessed_Is_A := False;\n   end Access_B;\n\nend Call_Sequence;\n\nwith Call_Sequence; use Call_Sequence;\n\nprocedure Main is\nbegin\n   Access_A;\n   Access_B;\n   Access_B; -- ERROR\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Proof_of_Functional_Correctness.Global_Ghost_Vars",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error",
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove",
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": true,
+    "source_files": [
+        "call_sequence.ads",
+        "call_sequence.adb",
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": "main.adb",
+    "text_hash": "1fd88081b6b451b8110417b98781880bcc6b229b1449962137d86665e99a2ec0ecd1428f111ff930bc758cf2832b2e366bee77f087adcaca167147ce2fc9f0e9",
+    "text_hash_short": "f33fa2ad2bd31eb03d4400c78f22eb71"
+}

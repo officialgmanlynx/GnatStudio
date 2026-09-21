@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 1799,
+    "line_end": 1809,
+    "text": "package Full_View is\n\n   --  Full view of the R type:\n   type R is record\n      I : Integer;\n   end record;\n\nend Full_View;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Type_View.Full_View",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "full_view.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "9290d8b1a8d791ddc820a737d02b3ce5842bca274b2fb3e858d03192d7e3cc0a74972a785c5291347418d9d3b2144bf4659ef0c8d3098253532235075b30cdbc",
+    "text_hash_short": "d37792287d08f9aa3d32499e233516df"
+}

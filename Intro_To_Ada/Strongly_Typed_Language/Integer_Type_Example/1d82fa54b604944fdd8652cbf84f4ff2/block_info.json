@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/strongly_typed_language.rst",
+    "line_start": 43,
+    "line_end": 64,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Integer_Type_Example is\n   --  Declare a signed integer type,\n   --  and give the bounds\n   type My_Int is range -1 .. 20;\n   --                         ^ High bound\n   --                   ^ Low bound\n\n   --  Like variables, type declarations can\n   --  only appear in declarative regions.\nbegin\n   for I in My_Int loop\n      Put_Line (My_Int'Image (I));\n      --              ^ 'Image attribute\n      --                converts a value\n      --                to a String.\n   end loop;\nend Integer_Type_Example;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Strongly_Typed_Language.Integer_Type_Example",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "integer_type_example.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "integer_type_example.adb",
+    "text_hash": "378da91c02285a3d0172ca1cccbfc81e560c0ecbb3c174e92f6ea0c4980c10d526ddb0ca0325c90a570b15e4f1eba98c46eb9d64ce59222f42f30fb94380e95b",
+    "text_hash_short": "1d82fa54b604944fdd8652cbf84f4ff2"
+}

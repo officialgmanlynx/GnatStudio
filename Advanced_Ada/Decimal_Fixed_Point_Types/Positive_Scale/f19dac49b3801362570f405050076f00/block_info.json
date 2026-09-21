@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 5408,
+    "line_end": 5428,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Positive_Scale is\n\n   type TP3_D3 is\n     delta 10.0 ** 3 digits 2;\n     --           ^^^\n     --  Scale N is -(-3), i.e.:\n     --  TP3_D3'Scale = -3\n\nbegin\n   Put_Line (\"TP3_D3'Range : \"\n             & TP3_D3'First'Image\n             & \" .. \"\n             & TP3_D3'Last'Image);\n   Put_Line (\"TP3_D3'Delta : \"\n             & TP3_D3'Delta'Image);\nend Show_Positive_Scale;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Decimal_Fixed_Point_Types.Positive_Scale",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_positive_scale.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_positive_scale.adb",
+    "text_hash": "4de748f852a34c96a1b32e85e91de2fa58c72c1bf06db9bc3bb9698cbda675a64dafd85a9556c78034fcb7d90ca259ee75c42554c44d19856beac29053923c2e",
+    "text_hash_short": "f19dac49b3801362570f405050076f00"
+}

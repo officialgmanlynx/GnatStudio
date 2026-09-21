@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 2259,
+    "line_end": 2316,
+    "text": "!process_values.h\ntypedef int (*process_one_callback) (int);\n\nvoid process_values (int                  *values,\n                     int                   len,\n                     process_one_callback  process_one);\n\n!process_values.c\n#include \"process_values.h\"\n\n#include <assert.h>\n#include <stdio.h>\n\nvoid process_values (int                  *values,\n                     int                   len,\n                     process_one_callback  process_one)\n{\n    int i;\n\n    assert (process_one != NULL);\n\n    for (i = 0; i < len; i++)\n    {\n        values[i] = process_one (values[i]);\n    }\n}\n\n!main.c\n#include <stdio.h>\n#include <stdlib.h>\n\n#include \"process_values.h\"\n\nint proc_10 (int val)\n{\n    return val + 10;\n}\n\n# define LEN_VALUES     5\n\nint main()\n{\n\n    int values[LEN_VALUES] = { 1, 2, 3, 4, 5 };\n    int i;\n\n    process_values (values, LEN_VALUES, &proc_10);\n\n    for (i = 0; i < LEN_VALUES; i++)\n    {\n        printf(\"Value [%d] = %d\\n\", i, values[i]);\n    }\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.Callback_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "process_values.h",
+        "process_values.c",
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "f3ccb173c2588e8e894e4a532495079f5de8138ea638ce40675884fbf0dac017f4a9a2b0105f3304a526195bbc528ffd2274358e178b21a1d3dda225eab953c3",
+    "text_hash_short": "ff5c8611d0901f40b6c4a9effeb0a323"
+}

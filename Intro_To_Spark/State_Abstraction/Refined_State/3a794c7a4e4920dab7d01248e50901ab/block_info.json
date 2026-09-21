@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/04_State_Abstraction.rst",
+    "line_start": 198,
+    "line_end": 235,
+    "text": "package Stack with\n  Abstract_State => The_Stack\nis\n   type Element is new Integer;\n\n   procedure Pop  (E : out Element);\n   procedure Push (E : Element);\n\nend Stack;\n\npackage body Stack with\n  Refined_State => (The_Stack => (Content, Top))\nis\n   Max : constant := 100;\n\n   type Element_Array is array (1 .. Max) of Element;\n\n   Content : Element_Array := (others => 0);\n   Top     : Natural range 0 .. Max := 0;\n   --  Both Content and Top must be listed in the list of\n   --  constituents of The_Stack\n\n   procedure Pop (E : out Element) is\n   begin\n      E   := Content (Top);\n      Top := Top - 1;\n   end Pop;\n\n   procedure Push (E : Element) is\n   begin\n      Top           := Top + 1;\n      Content (Top) := E;\n   end Push;\n\nend Stack;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.State_Abstraction.Refined_State",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow_report_all"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "stack.ads",
+        "stack.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "4c2860f416912f905b3af87319d670bd9d1ce24bee988b4860d8640f444d5f102a00a3f8498fc14d2a9a36bcd612fcac562f4bb1e691e91d7c68a4e687f31bd6",
+    "text_hash_short": "3a794c7a4e4920dab7d01248e50901ab"
+}

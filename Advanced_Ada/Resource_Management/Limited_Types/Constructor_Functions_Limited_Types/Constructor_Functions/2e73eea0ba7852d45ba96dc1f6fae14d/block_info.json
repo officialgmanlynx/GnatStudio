@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 2136,
+    "line_end": 2179,
+    "text": "with Ada.Strings.Unbounded;\nuse  Ada.Strings.Unbounded;\n\npackage P is\n   task type Some_Task_Type;\n\n   protected type Some_Protected_Type is\n      --  dummy type\n   end Some_Protected_Type;\n\n   type T (<>) is limited private;\n   function Make_T (Name : String) return T;\n   --       ^^^^^^\n   --  constructor function\nprivate\n   type T is limited\n      record\n         Name    : Unbounded_String;\n         My_Task : Some_Task_Type;\n         My_Prot : Some_Protected_Type;\n      end record;\nend P;\n\npackage body P is\n\n   task body Some_Task_Type is\n   begin\n      null;\n   end Some_Task_Type;\n\n   protected body Some_Protected_Type is\n   end Some_Protected_Type;\n\n   function Make_T (Name : String) return T is\n   begin\n      return (Name   =>\n                To_Unbounded_String (Name),\n              others => <>);\n   end Make_T;\n\nend P;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Constructor_Functions_Limited_Types.Constructor_Functions",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "p.ads",
+        "p.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "c8779400957d4985dcb74e7c45818191ee7af3589a16af5545f90f54e1d27534c5327ae9eecd07a6784a23614110bae5901642bc945049d97d948bdb06acc436",
+    "text_hash_short": "2e73eea0ba7852d45ba96dc1f6fae14d"
+}

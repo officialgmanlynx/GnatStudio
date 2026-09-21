@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 1553,
+    "line_end": 1571,
+    "text": "package Mutually_Dependent is\n\n   type T2;\n   type T2_Access is access T2;\n\n   type T1 is record\n      B : T2_Access;\n   end record;\n\n   type T1_Access is access T1;\n\n   type T2 is record\n      A : T1_Access;\n   end record;\n\nend Mutually_Dependent;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Mutually_Dependent_Access_Types.Example",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "mutually_dependent.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "85b5fb8afc52b9affaaa0ef235d661c124bb2c42002c3a545240697797e0bd45228fb8a21afd8a35178b4c69fb78bbc36b8c200bce0d1e641ba59a912633183b",
+    "text_hash_short": "b21ffc4cdfe3db939dfc841cf8434344"
+}

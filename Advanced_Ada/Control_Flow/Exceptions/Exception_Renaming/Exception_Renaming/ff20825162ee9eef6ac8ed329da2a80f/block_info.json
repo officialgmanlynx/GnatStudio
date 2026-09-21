@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/exceptions.rst",
+    "line_start": 1683,
+    "line_end": 1690,
+    "text": "procedure Show_Exception_Renaming is\n   CE : exception renames Constraint_Error;\nbegin\n   raise CE;\nend Show_Exception_Renaming;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Exceptions.Exception_Renaming.Exception_Renaming",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_exception_renaming.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_exception_renaming.adb",
+    "text_hash": "4e89ec122ff4301bffe3370a7ccd80382038678ab771d34f29fafad141c24909014c6f24b2144e999473c0e918d19e0ad70e1ed1808d247a08a459e0c7a90a12",
+    "text_hash_short": "ff20825162ee9eef6ac8ed329da2a80f"
+}

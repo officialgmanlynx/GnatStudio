@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/subprograms.rst",
+    "line_start": 503,
+    "line_end": 545,
+    "text": "package Operations is\n\n   procedure Add (Left  : in out Integer;\n                  Right :        Float := 1.0);\n\nend Operations;\n\npackage body Operations is\n\n   procedure Add (Left  : in out Integer;\n                  Right :        Float := 1.0) is\n   begin\n      Left := Left + Integer (Right);\n   end Add;\n\nend Operations;\n\nwith Operations; use Operations;\n\nprocedure Show_Param_Association is\n   A : Integer := 5;\nbegin\n   --  Positional association\n   Add (A, 2.0);\n\n   --  Positional association\n   --  (using default value)\n   Add (A);\n\n   --  Named association\n   Add (Left  => A,\n        Right => 2.0);\n\n   --  Named association (inversed order)\n   Add (Right => 2.0,\n        Left  => A);\n\n   --  Mixed positional / named association\n   Add (A, Right => 2.0);\nend Show_Param_Association;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Subprograms.Parameter_Modes_Associations.Param_Association_1",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "operations.ads",
+        "operations.adb",
+        "show_param_association.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_param_association.adb",
+    "text_hash": "60f3011a3ecd504b22d0fff197a1dd6b388b6b4eb12102e6db7d44d653d12e903966e772e5667df8187e00eb104955e1a14ba074984a055894b79673ecec7dc9",
+    "text_hash_short": "64d3f44ac2bf72317fae22658f6d218e"
+}

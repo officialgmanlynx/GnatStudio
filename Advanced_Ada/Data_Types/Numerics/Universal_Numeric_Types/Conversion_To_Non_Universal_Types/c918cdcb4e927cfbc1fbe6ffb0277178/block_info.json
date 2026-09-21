@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 733,
+    "line_end": 756,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Static_Expressions;\nuse  Static_Expressions;\n\nprocedure Show_Static_Expressions is\n   Two_Pi : constant Float := 2.0 * Pi;\n   --  Same as:\n   --  Two_Pi: constant Float :=\n   --            2.0 * Float (Pi);\n\n   Two_Pi_More_Precise :\n     constant Long_Long_Float := 2.0 * Pi;\n   --  Same as:\n   --  Two_Pi_More_Precise :\n   --    constant Long_Long_Float :=\n   --      2.0 * Long_Long_Float (Pi);\nbegin\n   Put_Line (Two_Pi'Image);\n   Put_Line (Two_Pi_More_Precise'Image);\nend Show_Static_Expressions;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Universal_Numeric_Types.Conversion_To_Non_Universal_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_static_expressions.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_static_expressions.adb",
+    "text_hash": "313db5ee76b4f25ced0fae33675e28def8980169163775cda1bb996c6bfbb1690b348fb5fbf89ea4291a041246f92a3372e6a10b092124e6854c328983fb4808",
+    "text_hash_short": "c918cdcb4e927cfbc1fbe6ffb0277178"
+}

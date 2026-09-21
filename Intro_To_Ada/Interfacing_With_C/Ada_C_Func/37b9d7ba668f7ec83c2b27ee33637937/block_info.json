@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/interfacing_with_c.rst",
+    "line_start": 95,
+    "line_end": 99,
+    "text": "!my_func.h\nint my_func (int a);\n",
+    "language": "c",
+    "project": "Courses.Intro_To_Ada.Interfacing_With_C.Ada_C_Func",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "my_func.h"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "e03cbc36557d1ed185c7cc81c3c612f410761eaad94927ebbb1129bb9cc41d5e9506054918bcbae01e678e09580b8a4217706eb043e3e2986513e941b31ded8e",
+    "text_hash_short": "37b9d7ba668f7ec83c2b27ee33637937"
+}

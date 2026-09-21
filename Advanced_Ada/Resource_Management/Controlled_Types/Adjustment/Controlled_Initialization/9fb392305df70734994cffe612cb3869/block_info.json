@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/controlled_types.rst",
+    "line_start": 1354,
+    "line_end": 1420,
+    "text": "with Ada.Finalization;\n\nwith Subs; use Subs;\n\npackage Simple_Controlled_Types is\n\n   type T is tagged private;\n\n   procedure Dummy (E : T);\n\nprivate\n\n   function Default_Init return Integer;\n\n   type T is new\n     Ada.Finalization.Controlled with\n   record\n      S1 : Sub_1;\n      S2 : Sub_2;\n      I  : Integer := Default_Init;\n   end record;\n\n   overriding\n   procedure Initialize (E : in out T);\n\n   overriding\n   procedure Adjust (E : in out T);\n\n   overriding\n   procedure Finalize (E : in out T);\n\nend Simple_Controlled_Types;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Simple_Controlled_Types is\n\n   function Default_Init return Integer is\n   begin\n      Put_Line (\"Default_Init: Integer...\");\n      return 42;\n   end Default_Init;\n\n   procedure Dummy (E : T) is\n   begin\n      Put_Line (\"(Dummy: T...)\");\n   end Dummy;\n\n   procedure Initialize (E : in out T) is\n   begin\n      Put_Line (\"Initialize: T...\");\n   end Initialize;\n\n   procedure Adjust (E : in out T) is\n   begin\n      Put_Line (\"Adjust: T...\");\n   end Adjust;\n\n   procedure Finalize (E : in out T) is\n   begin\n      Put_Line (\"Finalize: T...\");\n   end Finalize;\n\nend Simple_Controlled_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Controlled_Types.Adjustment.Controlled_Initialization",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple_controlled_types.ads",
+        "simple_controlled_types.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "f59d64dd30bd267d1dc878dd839e7598ae313c8bc79d20ace5eb3390ea04067137865ba49f9c501a6f40e4d1b4c798ca386a5c93d017217588cd34475e0aa3aa",
+    "text_hash_short": "9fb392305df70734994cffe612cb3869"
+}

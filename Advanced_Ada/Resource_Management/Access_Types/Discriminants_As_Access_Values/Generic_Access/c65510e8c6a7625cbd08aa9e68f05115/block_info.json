@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 751,
+    "line_end": 803,
+    "text": "generic\n   type T (<>);  --  any type\n   type T_Access is access T;\npackage Gen_Custom_Recs is\n   --  Declare a type whose discriminant D can\n   --  access any type:\n   type T_Rec (D : T_Access) is null record;\nend Gen_Custom_Recs;\n\nwith Gen_Custom_Recs;\n\npackage Custom_Recs is\n\n    type Incomp;\n    --  Incomplete type declaration!\n\n   type Incomp_Access is access Incomp;\n\n   --  Instantiating package using\n   --  incomplete type Incomp:\n   package Inst is new\n     Gen_Custom_Recs\n       (T        => Incomp,\n        T_Access => Incomp_Access);\n   subtype Rec is Inst.T_Rec;\n\n   --  At this point, Rec (Inst.T_Rec) uses\n   --  an incomplete type as the designated\n   --  subtype of its discriminant type\n\n   procedure Show (R : Rec) is null;\n\n   --  Now, we complete the Incomp type:\n   type Incomp (B : Boolean := True) is private;\n\nprivate\n   --  Finally, we have the full view of the\n   --  Incomp type:\n   type Incomp (B : Boolean := True) is\n     null record;\n\nend Custom_Recs;\n\nwith Custom_Recs; use Custom_Recs;\n\nprocedure Show_Rec is\n   R : Rec (new Incomp);\nbegin\n   Show (R);\nend Show_Rec;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Discriminants_As_Access_Values.Generic_Access",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "gen_custom_recs.ads",
+        "custom_recs.ads",
+        "show_rec.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_rec.adb",
+    "text_hash": "59a74ee6efe01d53354ac8eebe3e30b32ae75b2be8cdc19f9d71b2ac2f6b924b6a60daffcfb4ac094cec24a46b7dcbad1cfde1fd5ac2ae61bc5bc42d8ab0793b",
+    "text_hash_short": "c65510e8c6a7625cbd08aa9e68f05115"
+}

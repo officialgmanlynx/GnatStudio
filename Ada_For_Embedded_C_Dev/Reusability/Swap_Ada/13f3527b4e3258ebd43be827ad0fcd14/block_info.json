@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 83,
+    "line_end": 118,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main is\n\n   generic\n      type A_Type is private;\n   procedure Swap (Left, Right : in out A_Type);\n\n   procedure Swap (Left, Right : in out A_Type) is\n      Temp : constant A_Type := Left;\n   begin\n      Left  := Right;\n      Right := Temp;\n   end Swap;\n\n   procedure Swap_I is new Swap (Integer);\n\n   A : Integer := 10;\n   B : Integer := 42;\n\nbegin\n   Put_Line (\"A = \"\n             & Integer'Image (A)\n             & \", B = \"\n             & Integer'Image (B));\n\n   Swap_I (A, B);\n\n   Put_Line (\"A = \"\n             & Integer'Image (A)\n             & \", B = \"\n             & Integer'Image (B));\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.Swap_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "01b7e7b42be526e6e2cc5bb69c8a5b3415c93638cbcc68944c06f955e3c14fbc480d51678a0a700a5f8c3f9ef10068a43ae048da2d347c658cf6f249fbcde329",
+    "text_hash_short": "13f3527b4e3258ebd43be827ad0fcd14"
+}

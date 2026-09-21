@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 1772,
+    "line_end": 1793,
+    "text": "package Derived_With_Discriminants is\n\n   type T\n     (L : Positive;\n      M : Positive) is\n     null record;\n\n   --  The declaration:\n   --\n   --     type T_Derived is new T;\n   --\n   --  is the same as:\n   --\n   type T_Derived\n     (L : Positive;\n      M : Positive) is\n     new T (L => L, M => M);\n\nend Derived_With_Discriminants;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Discriminants.Derived_Types_Same_Discriminants",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "derived_with_discriminants.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "c7b0b3033324678b262c58f31ab10842d63e40d549fe57f81f1598b42853613ed438fce5f77861bd264d760f1164eb9be8431f0607381dec5d94c68224696144",
+    "text_hash_short": "3ee4b3a70e8ab9ba2684c6a2c695f689"
+}

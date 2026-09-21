@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 1380,
+    "line_end": 1474,
+    "text": "package Show_Immutably_Limited_Types is\n\n   --\n   --  Explicitly limited type\n   --\n   type Explicitly_Limited_Rec is limited\n   record\n      A : Integer;\n   end record;\n\n   --\n   --  Tagged limited type\n   --\n   type Limited_Tagged_Rec is tagged limited\n   record\n      A : Integer;\n   end record;\n\n   --\n   --  Tagged limited private type\n   --\n   type Limited_Tagged_Private is\n     tagged limited private;\n\n   --\n   --  Limited private type with an access\n   --  discriminant that has a default\n   --  expression\n   --\n   type Limited_Rec_Access_D\n     (AI : access Integer := new Integer) is\n       limited private;\n\n   --\n   --  Task type\n   --\n   task type TT is\n     entry Start;\n     entry Stop;\n   end TT;\n\n   --\n   --  Protected type\n   --\n   protected type PT is\n     function Value return Integer;\n   private\n     A : Integer;\n   end PT;\n\n  --\n  --  Synchronized interface\n  --\n  type SI is synchronized interface;\n\n  --\n  --  A type derived from an immutably\n  --  limited type\n  --\n  type Derived_Immutable is new\n    Explicitly_Limited_Rec;\n\nprivate\n\n   type Limited_Tagged_Private is tagged limited\n   record\n      A : Integer;\n   end record;\n\n   type Limited_Rec_Access_D\n     (AI : access Integer := new Integer)\n   is limited\n     record\n       A : Integer;\n     end record;\n\nend Show_Immutably_Limited_Types;\n\npackage body Show_Immutably_Limited_Types is\n\n   task body TT is\n   begin\n     accept Start;\n     accept Stop;\n   end TT;\n\n   protected body PT is\n     function Value return Integer is\n       (PT.A);\n   end PT;\n\nend Show_Immutably_Limited_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Immutably_Limited_Types.Example",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_immutably_limited_types.ads",
+        "show_immutably_limited_types.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "0720d0f16de57b7e8f71caad0ed5320f678a762dd97bb1f12cadedfc9c40e9bdb550c29946899d5258b0cf147ae049bc64d3363ded2d95ed2c6182380e996696",
+    "text_hash_short": "6bcb9582a10eedc96040ab11cd320153"
+}

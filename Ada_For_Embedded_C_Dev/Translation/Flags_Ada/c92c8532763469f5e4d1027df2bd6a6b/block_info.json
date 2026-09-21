@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 631,
+    "line_end": 645,
+    "text": "procedure Main is\n   type Values is (Flag_1, Flag_2, Flag_3, Flag_4);\n   type Value_Array is array (Values) of Boolean\n     with Pack;\n\n   Value : Value_Array :=\n      (Flag_2 => True,\n       Flag_4 => True,\n       others => False);\nbegin\n   null;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.Flags_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "4d404b6c601effff5cf7ac0fcac0eaaf9fee7ccbd2374618319bf7f79c3db6560ccceec40a38cc5cad03ba434ec8ea5c550d4fa4cad3840ac0ebc1b4e120fbed",
+    "text_hash_short": "c92c8532763469f5e4d1027df2bd6a6b"
+}

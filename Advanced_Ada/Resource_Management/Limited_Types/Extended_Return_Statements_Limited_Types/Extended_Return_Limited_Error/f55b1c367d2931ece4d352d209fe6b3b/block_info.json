@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 2345,
+    "line_end": 2374,
+    "text": "package Task_Construct_Error is\n\n   task type Task_Type (Discriminant : Integer);\n\n   function Make_Task (Val : Integer)\n                       return Task_Type;\n\nend Task_Construct_Error;\n\npackage body Task_Construct_Error is\n\n   task body Task_Type is\n   begin\n      null;\n   end Task_Type;\n\n   function Make_Task (Val : Integer)\n                       return Task_Type\n   is\n      Result : Task_Type\n                 (Discriminant => Val * 3);\n   begin\n      --  some statements...\n      return Result; -- Illegal!\n   end Make_Task;\n\nend Task_Construct_Error;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Extended_Return_Statements_Limited_Types.Extended_Return_Limited_Error",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "task_construct_error.ads",
+        "task_construct_error.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "d0ee8c0ce8267c8aff262f531960adef1923d7abbbecec2fc8f78fda3979179a56846856880d0cde8e0ccdc15edd3efb46a3dc4197c019dc4fac96d196883c74",
+    "text_hash_short": "f55b1c367d2931ece4d352d209fe6b3b"
+}

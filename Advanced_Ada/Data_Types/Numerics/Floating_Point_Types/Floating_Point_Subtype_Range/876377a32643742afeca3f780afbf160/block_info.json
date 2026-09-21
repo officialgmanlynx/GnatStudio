@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 2850,
+    "line_end": 2874,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Floating_Point_Subtype_Ranges is\n\n   type Float_6_Digits is\n     digits 6;\n\n   subtype Float_6_Digits_Subtype is\n     Float_6_Digits;\n   --  Same range as Float_6_Digits\n\n   subtype Float_6_Digits_Normalized is\n     Float_6_Digits\n       range -1.0 .. 1.0;\n\n   F6_N : Float_6_Digits_Normalized;\nbegin\n   F6_N := 0.123456123;\n\n   Put_Line (\"F6_N = \"\n             & F6_N'Image);\nend Show_Floating_Point_Subtype_Ranges;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Floating_Point_Types.Floating_Point_Subtype_Range",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_floating_point_subtype_ranges.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_floating_point_subtype_ranges.adb",
+    "text_hash": "7afb91999b1b218f3450db49fb23a707042d198fed6db31b14621456b3d7c36ee10154c15a638daadc484a51f8ff14b53904e0b8037b0adc56a7826ef378989f",
+    "text_hash_short": "876377a32643742afeca3f780afbf160"
+}

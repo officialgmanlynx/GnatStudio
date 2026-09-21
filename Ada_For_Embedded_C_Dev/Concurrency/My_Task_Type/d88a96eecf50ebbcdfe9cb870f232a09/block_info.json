@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/03_Concurrency.rst",
+    "line_start": 143,
+    "line_end": 154,
+    "text": "with My_Tasks; use My_Tasks;\n\nprocedure Main is\n   type Ptr_Task is access My_Task;\n\n   T : Ptr_Task;\nbegin\n   T := new My_Task ('W');\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Concurrency.My_Task_Type",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "bd3fd9758bc1e70f2d167dec6f4be9f1d6144f6e4950f45352f243426217385c16a8cea5f43defa340fdf822051e8e6c865c40879e860b18c3811badd48a5b39",
+    "text_hash_short": "d88a96eecf50ebbcdfe9cb870f232a09"
+}

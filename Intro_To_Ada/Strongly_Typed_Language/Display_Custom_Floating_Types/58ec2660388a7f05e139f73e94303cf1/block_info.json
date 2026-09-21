@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/strongly_typed_language.rst",
+    "line_start": 346,
+    "line_end": 364,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Display_Custom_Floating_Types is\n   type T3  is digits 3;\n   type T18 is digits 18;\n\n   C1 : constant := 1.0e-4;\n\n   A : constant T3  := 1.0 + C1;\n   B : constant T18 := 1.0 + C1;\nbegin\n   Put_Line (\"The value of A is \"\n             & T3'Image (A));\n   Put_Line (\"The value of B is \"\n             & T18'Image (B));\nend Display_Custom_Floating_Types;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Strongly_Typed_Language.Display_Custom_Floating_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "display_custom_floating_types.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "display_custom_floating_types.adb",
+    "text_hash": "9a6e234b88612ddc1336e26b33b465e93215a191b464ec9e636078f000909e98008ccbf93194521e5f343488a6210274ae32671fd13cd7629316b25ad6771140",
+    "text_hash_short": "58ec2660388a7f05e139f73e94303cf1"
+}

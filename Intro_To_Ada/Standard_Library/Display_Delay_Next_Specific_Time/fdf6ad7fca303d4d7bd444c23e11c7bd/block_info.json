@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_dates_times.rst",
+    "line_start": 139,
+    "line_end": 166,
+    "text": "with Ada.Text_IO;  use Ada.Text_IO;\nwith Ada.Calendar; use Ada.Calendar;\n\nwith Ada.Calendar.Formatting;\nuse  Ada.Calendar.Formatting;\n\nwith Ada.Calendar.Time_Zones;\nuse  Ada.Calendar.Time_Zones;\n\nprocedure Display_Delay_Next_Specific_Time is\n   TZ   : Time_Offset := UTC_Time_Offset;\n   Next : Time        :=\n     Ada.Calendar.Formatting.Value\n       (\"2018-05-01 15:00:00.00\", TZ);\n\n   --  Next = 2018-05-01 15:00:00.00\n   --         (local time-zone)\nbegin\n   Put_Line (\"Let's wait until...\");\n   Put_Line (Image (Next, True, TZ));\n\n   delay until Next;\n\n   Put_Line (\"Enough waiting!\");\nend Display_Delay_Next_Specific_Time;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Display_Delay_Next_Specific_Time",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "display_delay_next_specific_time.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "display_delay_next_specific_time.adb",
+    "text_hash": "ec18df69649bbeb2f515e644d9fac7ae20d105e3cf4e1d42e33f02ec41aba321241e356c01d74eee15903ba727eccda133d665c36626ee566a80453af7fe309c",
+    "text_hash_short": "fdf6ad7fca303d4d7bd444c23e11c7bd"
+}

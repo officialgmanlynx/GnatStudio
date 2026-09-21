@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/contracts.rst",
+    "line_start": 220,
+    "line_end": 290,
+    "text": "with Ada.Calendar; use Ada.Calendar;\n\nwith Ada.Containers.Vectors;\n\nwith Ada.Strings.Unbounded;\nuse  Ada.Strings.Unbounded;\n\nprocedure Show_Dynamic_Predicate_Courses is\n\n   package Courses is\n      type Course_Container is private;\n\n      type Course is record\n         Name       : Unbounded_String;\n         Start_Date : Time;\n         End_Date   : Time;\n      end record\n        with Dynamic_Predicate =>\n          Course.Start_Date <= Course.End_Date;\n\n      procedure Add (CC : in out Course_Container;\n                     C  :        Course);\n   private\n      package Course_Vectors is new\n        Ada.Containers.Vectors\n          (Index_Type   => Natural,\n           Element_Type => Course);\n\n      type Course_Container is record\n         V : Course_Vectors.Vector;\n      end record;\n   end Courses;\n\n   package body Courses is\n      procedure Add (CC : in out Course_Container;\n                     C  :        Course) is\n      begin\n         CC.V.Append (C);\n      end Add;\n   end Courses;\n\n   use Courses;\n\n   CC : Course_Container;\nbegin\n   Add (CC,\n        Course'(\n          Name       =>\n            To_Unbounded_String\n              (\"Intro to Photography\"),\n          Start_Date =>\n            Time_Of (2018, 5, 1),\n          End_Date   =>\n            Time_Of (2018, 5, 10)));\n\n   --  This should trigger an error in the\n   --  dynamic predicate check\n   Add (CC,\n        Course'(\n          Name       =>\n            To_Unbounded_String\n              (\"Intro to Video Recording\"),\n          Start_Date =>\n            Time_Of (2019, 5, 1),\n          End_Date   =>\n            Time_Of (2018, 5, 10)));\n\nend Show_Dynamic_Predicate_Courses;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Contracts.Show_Dynamic_Predicate_Courses",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_dynamic_predicate_courses.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_dynamic_predicate_courses.adb",
+    "text_hash": "edbb1700f68bf2153366f65548ea303e0f67101009b00949c30ba73f5e89040362abe47a2d866887e49ebb654cd0c0902b8d68e2c12e920de31b9cb83b550222",
+    "text_hash_short": "8bd6539e72995fececfcdf9666ffd04f"
+}

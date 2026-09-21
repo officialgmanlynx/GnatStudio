@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/tasking.rst",
+    "line_start": 227,
+    "line_end": 252,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Rendezvous is\n\n   task T is\n      entry Start;\n   end T;\n\n   task body T is\n   begin\n      accept Start;\n      --     ^ Waiting for somebody\n      --       to call the entry\n\n      Put_Line (\"In T\");\n   end T;\n\nbegin\n   Put_Line (\"In Main\");\n\n   --  Calling T's entry:\n   T.Start;\nend Show_Rendezvous;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Tasking.Show_Rendezvous",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_rendezvous.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_rendezvous.adb",
+    "text_hash": "91c901092255e18b44ff08f0dccd0966c2e05ad7d683bf8b28a4ddc2d61c82df1d19b4a96211f5637f539860ec94781ead70308a0e5d810a56e8054d999b15c8",
+    "text_hash_short": "479eea7adc876ac359ad20ac6e3acf66"
+}

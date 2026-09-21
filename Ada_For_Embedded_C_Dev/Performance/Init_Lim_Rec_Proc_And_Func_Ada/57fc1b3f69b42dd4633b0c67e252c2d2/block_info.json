@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/08_Performance.rst",
+    "line_start": 723,
+    "line_end": 746,
+    "text": "procedure Init_Limited_Record is\n\n   type Data is limited record\n      Prev : Integer;\n      Curr : Integer;\n   end record;\n\n   function Init return Data is\n   begin\n      return D : Data do\n         D.Prev := 0;\n         D.Curr := 1;\n      end return;\n   end Init;\n\n   D1 : Data := Init;\n\n   pragma Unreferenced (D1);\nbegin\n   null;\nend Init_Limited_Record;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Performance.Init_Lim_Rec_Proc_And_Func_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "init_limited_record.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "init_limited_record.adb",
+    "text_hash": "be6f00c597612c0eb711833d14065214c7c26b7585bbd1de6622120b7de74ce3f0246919fa81b391df2a43d3f255b75f4a673efe3b46fbc016a8adb3a33d88d0",
+    "text_hash_short": "57fc1b3f69b42dd4633b0c67e252c2d2"
+}

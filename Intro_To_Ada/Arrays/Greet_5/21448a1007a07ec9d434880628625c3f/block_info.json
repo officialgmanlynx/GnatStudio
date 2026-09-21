@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/arrays.rst",
+    "line_start": 483,
+    "line_end": 498,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Greet is\n   Message : constant String := \"dlroW olleH\";\n   --                 ^ Bounds are automatically\n   --                   computed from\n   --                   initialization value\nbegin\n   for I in reverse Message'Range loop\n      Put (Message (I));\n   end loop;\n   New_Line;\nend Greet;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Arrays.Greet_5",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "greet.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "greet.adb",
+    "text_hash": "44e5887342c9ea5075f16e83aa2f0331d6310a717c5ecdc9e497b1596cae8c59dda6309f150b50c5b22a754731f2ad02b6723f7bbf40590d35684b5bf234ee69",
+    "text_hash_short": "21448a1007a07ec9d434880628625c3f"
+}

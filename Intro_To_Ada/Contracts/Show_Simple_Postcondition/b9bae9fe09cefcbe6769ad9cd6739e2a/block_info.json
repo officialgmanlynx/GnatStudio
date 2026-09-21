@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/contracts.rst",
+    "line_start": 99,
+    "line_end": 141,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Simple_Postcondition is\n\n   type Int_8 is range -2 ** 7 .. 2 ** 7 - 1;\n\n   type Int_8_Array is\n     array (Integer range <>) of Int_8;\n\n   function Square (A : Int_8) return Int_8 is\n     (A * A)\n       with Post => (if abs A in 0 | 1\n                     then Square'Result = abs A\n                     else Square'Result > A);\n\n   procedure Square (A : in out Int_8_Array)\n     with Post => (for all I in A'Range =>\n                     A (I) = A'Old (I) *\n                             A'Old (I))\n   is\n   begin\n      for V of A loop\n         V := Square (V);\n      end loop;\n   end Square;\n\n   V : Int_8_Array := (-2, -1, 0, 1, 10, 11);\nbegin\n   for E of V loop\n      Put_Line (\"Original: \"\n                & Int_8'Image (E));\n   end loop;\n   New_Line;\n\n   Square (V);\n   for E of V loop\n      Put_Line (\"Square:   \"\n                & Int_8'Image (E));\n   end loop;\nend Show_Simple_Postcondition;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Contracts.Show_Simple_Postcondition",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_simple_postcondition.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_simple_postcondition.adb",
+    "text_hash": "57b24eafa99cd073e3b7a8d9f01ef63ad88887b2b7c29577cf7dc59215e6184ebc9c732ba07b7e648fb7d5e4fd71169cd4f029d0fc95c1670ac097e4387b1a08",
+    "text_hash_short": "b9bae9fe09cefcbe6769ad9cd6739e2a"
+}

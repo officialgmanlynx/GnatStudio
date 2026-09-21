@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/04_State_Abstraction.rst",
+    "line_start": 443,
+    "line_end": 457,
+    "text": "package Stack with\n   Abstract_State => (Top_State, Content_State)\nis\n   type Element is new Integer;\n\n   procedure Pop (E : out Element) with\n     Global  => (Input  => Content_State,\n                 In_Out => Top_State),\n     Depends => (Top_State => Top_State,\n                 E         => (Content_State, Top_State));\n\nend Stack;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.State_Abstraction.Global_Depends",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "stack.ads"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "1d7be3f93c45c75961f4519a747945c870feddf2003c66442d47cdc5339a7901de2eb0a6e6fd1b61c13f69e2acf2f622eefd9a328ec0486ea5995c5075e00b9e",
+    "text_hash_short": "a7b383c35508d6a8294bf7cf0fe332ac"
+}

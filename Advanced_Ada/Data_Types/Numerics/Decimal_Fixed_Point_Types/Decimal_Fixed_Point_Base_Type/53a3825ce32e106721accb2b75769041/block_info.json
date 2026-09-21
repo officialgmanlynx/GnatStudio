@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 5536,
+    "line_end": 5566,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Base_Type_Precision is\n\n   type DT_6 is\n     delta 10.0 ** (-2) digits 6;\n\n   type DT_12 is\n     delta 10.0 ** (-2) digits 12;\n\nbegin\n   Put_Line\n     (\"DT_6'Digits        :\"\n      & DT_6'Digits'Image\n      & \" digits\");\n   Put_Line\n     (\"DT_6'Base'Digits   :\"\n      & DT_6'Base'Digits'Image\n      & \" digits\");\n   Put_Line\n     (\"DT_12'Digits       :\"\n      & DT_12'Digits'Image\n      & \" digits\");\n   Put_Line\n     (\"DT_12'Base'Digits  :\"\n      & DT_12'Base'Digits'Image\n      & \" digits\");\nend Show_Base_Type_Precision;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Decimal_Fixed_Point_Types.Decimal_Fixed_Point_Base_Type",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_base_type_precision.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_base_type_precision.adb",
+    "text_hash": "8cb30c77b906c760b53c3a4bcbdd311dca5471103527f0f7fec80f012c7a92f58f267f33ebecf2eaa6d82c79369c106f22e827f3329142f64a47b53f88a29d93",
+    "text_hash_short": "53a3825ce32e106721accb2b75769041"
+}

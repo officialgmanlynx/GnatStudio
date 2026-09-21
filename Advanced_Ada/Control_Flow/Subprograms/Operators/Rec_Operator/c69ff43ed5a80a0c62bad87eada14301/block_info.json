@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/subprograms.rst",
+    "line_start": 885,
+    "line_end": 960,
+    "text": "package Addresses is\n\n   type Person is private;\n\n   function \"+\" (Name    : String;\n                 Address : String)\n                 return Person;\n   function \"+\" (Left, Right : Person)\n                 return Person;\n\n   procedure Display (P : Person);\n\nprivate\n\n   subtype Name_String    is String (1 .. 40);\n   subtype Address_String is String (1 .. 100);\n\n   type Person is record\n      Name    : Name_String;\n      Address : Address_String;\n   end record;\n\nend Addresses;\n\nwith Ada.Strings.Fixed; use Ada.Strings.Fixed;\nwith Ada.Text_IO;       use Ada.Text_IO;\n\npackage body Addresses is\n\n   function \"+\" (Name    : String;\n                 Address : String)\n                 return Person\n   is\n   begin\n      return (Name    =>\n                Head (Name,\n                      Name_String'Length),\n              Address =>\n                Head (Address,\n                      Address_String'Length));\n   end \"+\";\n\n   function \"+\" (Left, Right : Person)\n                 return Person\n   is\n   begin\n      return (Name    => Left.Name,\n              Address => Right.Address);\n   end \"+\";\n\n   procedure Display (P : Person) is\n   begin\n      Put_Line (\"Name:    \" & P.Name);\n      Put_Line (\"Address: \" & P.Address);\n      New_Line;\n   end Display;\n\nend Addresses;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Addresses;   use Addresses;\n\nprocedure Show_Address_Addition is\n   John : Person := \"John\" + \"4 Main Street\";\n   Jane : Person := \"Jane\" + \"7 High Street\";\nbegin\n   Display (John);\n   Display (Jane);\n   Put_Line (\"----------------\");\n\n   Jane := Jane + John;\n   Display (Jane);\nend Show_Address_Addition;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Subprograms.Operators.Rec_Operator",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "addresses.ads",
+        "addresses.adb",
+        "show_address_addition.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_address_addition.adb",
+    "text_hash": "17caacbd335005ea2be9e9f3e8d0591334468eabc5b7d51214bf79d2f653ff9f41ba8e0ce6a6564eb8607892e48921ca90766104d241993fc78374f7d3ac3eee",
+    "text_hash_short": "c69ff43ed5a80a0c62bad87eada14301"
+}

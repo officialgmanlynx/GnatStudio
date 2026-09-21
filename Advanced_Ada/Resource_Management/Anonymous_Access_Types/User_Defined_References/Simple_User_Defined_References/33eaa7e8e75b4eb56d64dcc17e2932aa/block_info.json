@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 1806,
+    "line_end": 1845,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_User_Defined_Reference is\n\n   type Id_Number is record\n      Id : Positive;\n   end record;\n\n   --\n   --  Reference type:\n   --\n   type Id_Ref (Ref : access Id_Number) is\n   --           ^ reference discriminant\n     null record\n       with Implicit_Dereference => Ref;\n     --                             ^^^\n     --               name of the reference\n     --               discriminant\n\n   --\n   --  Access value:\n   --\n   I : constant access Id_Number :=\n         new Id_Number'(Id => 42);\n\n   --\n   --  Reference object:\n   --\n   R : Id_Ref (I);\nbegin\n   Put_Line (\"ID: \"\n             & Positive'Image (R.Id));\n   --                          ^ Equivalent to:\n   --                              R.Ref.Id\n   --                            or:\n   --                             R.Ref.all.Id\nend Show_User_Defined_Reference;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.User_Defined_References.Simple_User_Defined_References",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_user_defined_reference.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_user_defined_reference.adb",
+    "text_hash": "e266a363833ee0945bf3b94793965392ccadfbd4e53f6ae687207a60f0fd02450f5e670fef65a5164fe4c33cc43db0c93429441de165424720ea543b823fb4fd",
+    "text_hash_short": "33eaa7e8e75b4eb56d64dcc17e2932aa"
+}

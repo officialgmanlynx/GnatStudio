@@ -1,0 +1,1 @@
+function Proc_10 (Value : Integer) return Integer;

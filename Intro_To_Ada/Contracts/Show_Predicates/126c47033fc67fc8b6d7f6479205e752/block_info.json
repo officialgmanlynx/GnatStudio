@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/contracts.rst",
+    "line_start": 340,
+    "line_end": 401,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Predicates is\n\n   type Week is (Mon, Tue, Wed, Thu,\n                 Fri, Sat, Sun);\n\n   subtype Work_Week is Week range Mon .. Fri;\n\n   subtype Test_Days is Work_Week\n     with Static_Predicate =>\n       Test_Days in Mon | Wed | Fri;\n\n   type Tests_Week is array (Week) of Natural\n     with Dynamic_Predicate =>\n       (for all I in Tests_Week'Range =>\n          (case I is\n               when Test_Days =>\n                  Tests_Week (I) > 0,\n               when others    =>\n                  Tests_Week (I) = 0));\n\n   Num_Tests : Tests_Week :=\n                 (Mon => 3, Tue => 0,\n                  Wed => 4, Thu => 0,\n                  Fri => 2, Sat => 0,\n                  Sun => 0);\n\n   procedure Display_Tests (N : Tests_Week) is\n   begin\n      for I in Test_Days loop\n         Put_Line (\"# tests on \"\n                   & Test_Days'Image (I)\n                   & \" => \"\n                   & Integer'Image (N (I)));\n      end loop;\n   end Display_Tests;\n\nbegin\n   Display_Tests (Num_Tests);\n\n   --  Assigning non-conformant values to\n   --  individual elements of the Tests_Week\n   --  type does not trigger a predicate\n   --  check:\n   Num_Tests (Tue) := 2;\n\n   --  However, assignments with the \"complete\"\n   --  Tests_Week type trigger a predicate\n   --  check. For example:\n   --\n   --  Num_Tests := (others => 0);\n\n   --  Also, calling any subprogram with\n   --  parameters of Tests_Week type\n   --  triggers a predicate check. Therefore,\n   --  the following line will fail:\n   Display_Tests (Num_Tests);\nend Show_Predicates;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Contracts.Show_Predicates",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_predicates.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_predicates.adb",
+    "text_hash": "5a3986eb419c82e03080aa5c7facf9b4d7b6ed401b07335d7f33ddb01001c4375d25b3d0916af93dea2dd6d55e1e3df9845fe607b995826de384e8590f6b052c",
+    "text_hash_short": "126c47033fc67fc8b6d7f6479205e752"
+}

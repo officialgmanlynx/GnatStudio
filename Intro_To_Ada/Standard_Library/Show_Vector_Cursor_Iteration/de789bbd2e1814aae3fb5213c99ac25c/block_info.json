@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_containers.rst",
+    "line_start": 350,
+    "line_end": 402,
+    "text": "with Ada.Containers.Vectors;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Vector_Cursor_Iteration is\n\n   package Integer_Vectors is new\n     Ada.Containers.Vectors\n       (Index_Type   => Natural,\n        Element_Type => Integer);\n\n   use Integer_Vectors;\n\n   V : Vector := 20 & 10 & 0 & 13;\nbegin\n   Put_Line (\"Vector elements are: \");\n\n   --\n   --  Use a cursor to iterate in a loop:\n   --\n   for C in V.Iterate loop\n      --  Using To_Index function to retrieve\n      --  the index for the cursor position\n      Put (\"- [\"\n           & Extended_Index'Image (To_Index (C))\n           & \"] \");\n\n      Put (Integer'Image (V (C)));\n\n      --  We could use Element (C) to retrieve\n      --  the vector element for the cursor\n      --  position\n\n      New_Line;\n   end loop;\n\n   --  Alternatively, we could iterate with a\n   --  while-loop:\n   --\n   --  declare\n   --     C : Cursor := V.First;\n   --  begin\n   --     while C /= No_Element loop\n   --        some processing here...\n   --\n   --        C := Next (C);\n   --     end loop;\n   --  end;\n\nend Show_Vector_Cursor_Iteration;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Vector_Cursor_Iteration",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_vector_cursor_iteration.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_vector_cursor_iteration.adb",
+    "text_hash": "974e3eb9f665ac723a976a322345ede27875283379f428e86358086f293137830123e83087825b2c0b233687f1ecad1377b8ea5df625ceeac92f9ee1f3ad7832",
+    "text_hash_short": "de789bbd2e1814aae3fb5213c99ac25c"
+}

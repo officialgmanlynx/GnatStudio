@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/object_oriented_programming.rst",
+    "line_start": 571,
+    "line_end": 581,
+    "text": "with P; use P;\n\nprocedure Dispatching_Example is\n   T2         :          T_New;\n   T_Dispatch : constant T'Class := T2;\nbegin\n   T_Dispatch.Show;\nend Dispatching_Example;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Object_Oriented_Programming.Classwide_Error",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "dispatching_example.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "dispatching_example.adb",
+    "text_hash": "e3dde04a26fef78c2af9734ab7ef740c51c3d7cf71df389953d2613237f80a3523c11cfa30d045840f37538c41239deba1c980de83e5f4e87689f5602e686d44",
+    "text_hash_short": "f8957b31c9c62db23759baad7b867a57"
+}

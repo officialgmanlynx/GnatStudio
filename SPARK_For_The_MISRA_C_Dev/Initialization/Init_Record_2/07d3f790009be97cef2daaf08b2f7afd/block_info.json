@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/05_initialization.rst",
+    "line_start": 327,
+    "line_end": 335,
+    "text": "package Init_Record is\n   type Rec is record\n      X, Y, Z : Integer;\n   end record;\n   R : Rec := (X => 1, Y => 1, Z => 1, X => 2);  --  ERROR, X duplicated\nend Init_Record;\n",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Initialization.Init_Record_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "init_record.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "dd72e1fac94e5153df2c149ae5dc099a29ca25c5af4974bc6f66a0a30bf012648da8502e840f7c667131c56d3618f64004a317e93dfae1330484790eb77de8e8",
+    "text_hash_short": "07d3f790009be97cef2daaf08b2f7afd"
+}

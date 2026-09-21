@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/02_Perspective.rst",
+    "line_start": 1196,
+    "line_end": 1216,
+    "text": "!main.c\n#include <stdio.h>\n\nint main(int argc, const char * argv[])\n{\n    unsigned char a = 0xFF;\n    char b = 0xFF;\n\n    printf(\"Does a == b?\\n\");\n    if(a == b)\n        printf(\"Yes.\\n\");\n    else\n        printf(\"No.\\n\");\n\n    printf(\"a: 0x%08X, b: 0x%08X\\n\", a, b);\n\n    return 0;\n}\n",
+    "language": "c",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Perspective.Strong_Typing_C",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": true,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.c"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.c",
+    "text_hash": "a79d60e7c401d46f97103da24d513b305614f967ac99ee5c1226b8ee6ea43d63833031c2d1674c506dc377a9d8fa665cf885026664599ecfbd43090465fc0cba",
+    "text_hash_short": "cab1ac9e2c86076d8435d53904783ba0"
+}

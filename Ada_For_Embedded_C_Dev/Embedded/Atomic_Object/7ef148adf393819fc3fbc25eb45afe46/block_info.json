@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/04_Embedded.rst",
+    "line_start": 739,
+    "line_end": 749,
+    "text": "with System;\n\nprocedure Show_Shared_HW_Register is\n   R   : Integer\n     with Atomic, Address => System'To_Address (16#FFFF00A0#);\nbegin\n   null;\nend Show_Shared_HW_Register;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Embedded.Atomic_Object",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "no"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": false,
+    "source_files": [
+        "show_shared_hw_register.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "0a9e08452e67539819abbc478d9275fbdeb751960a4f4182535eb229fefaf388fe42af6066104666a244ad97ec71e43e48d12355463783e16661bdcdee74f876",
+    "text_hash_short": "7ef148adf393819fc3fbc25eb45afe46"
+}

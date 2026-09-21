@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 3432,
+    "line_end": 3443,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Simple_Integer_Literal is\n   V : Integer;\nbegin\n   V := 10;\n\n   Put_Line (Integer'Image (V));\nend Simple_Integer_Literal;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.User_Defined_Literals.Simple_Integer_Literal",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "simple_integer_literal.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "simple_integer_literal.adb",
+    "text_hash": "0c560efe7fd66b1f7a6cc22ed3ef0180edc2563a361bad8cbd82dde2ae82f930303b57d9715289062131569d16b83f5b845e2ffc005b50c28401a171aa650161",
+    "text_hash_short": "9f65e7c319be2b292dc1fdf02dd7cfb4"
+}

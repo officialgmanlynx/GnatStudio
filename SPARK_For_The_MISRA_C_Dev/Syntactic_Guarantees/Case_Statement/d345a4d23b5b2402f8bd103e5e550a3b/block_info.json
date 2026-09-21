@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/03_syntactic_guarantees.rst",
+    "line_start": 287,
+    "line_end": 320,
+    "text": "package Sign_Domain is\n\n   type Sign is (Negative, Zero, Positive);\n\n   function Opposite (A : Sign) return Sign is\n     (case A is  --  ERROR\n         when Negative => Positive,\n         when Positive => Negative);\n\n   function Multiply (A, B : Sign) return Sign is\n     (case A is\n         when Negative        => Opposite (B),\n         when Zero | Positive => Zero,\n         when Positive        => B);  --  ERROR\n\n   procedure Get_Sign (X : Integer; S : out Sign);\n\nend Sign_Domain;\n\npackage body Sign_Domain is\n\n   procedure Get_Sign (X : Integer; S : out Sign) is\n   begin\n      case X is\n         when 0 => S := Zero;\n         when others => S := Negative;  --  ERROR\n         when 1 .. Integer'Last => S := Positive;\n      end case;\n   end Get_Sign;\n\nend Sign_Domain;\n",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Syntactic_Guarantees.Case_Statement",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "sign_domain.ads",
+        "sign_domain.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "sign_domain.adb",
+    "text_hash": "364c2192995f3760675c2fed1fad9652c6d44a72f68f8af633404ce51daa3ac4fa9e4b8068a362caafdf801495a82088f0cdf621050c31c302e694d2211da8ad",
+    "text_hash_short": "d345a4d23b5b2402f8bd103e5e550a3b"
+}

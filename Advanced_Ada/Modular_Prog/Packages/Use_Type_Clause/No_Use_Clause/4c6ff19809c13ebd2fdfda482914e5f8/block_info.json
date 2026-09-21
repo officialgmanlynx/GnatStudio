@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/modular_prog/packages.rst",
+    "line_start": 1310,
+    "line_end": 1318,
+    "text": "with Ada.Text_IO;\n\nprocedure Display_Message is\nbegin\n   Ada.Text_IO.Put_Line (\"Hello World!\");\nend Display_Message;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Modular_Prog.Packages.Use_Type_Clause.No_Use_Clause",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "display_message.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "display_message.adb",
+    "text_hash": "6d9cd79315fec7a2c2c06b4a5222cb306761dae922be8c49f2a9396dc2ff143b7bcc14843e07333c21922b383069b94eebe9d1533aa26a8eae6ed7cd5745ad87",
+    "text_hash_short": "4c6ff19809c13ebd2fdfda482914e5f8"
+}

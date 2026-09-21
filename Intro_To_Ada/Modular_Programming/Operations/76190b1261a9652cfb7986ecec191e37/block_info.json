@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/modular_programming.rst",
+    "line_start": 204,
+    "line_end": 242,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\nwith Operations;\n\nprocedure Main is\n   use Operations;\n\n   I : Integer := 0;\n   R : Integer;\n\n   procedure Display_Update_Values is\n      Incr : constant Integer :=\n               Get_Increment_Value;\n   begin\n      Put_Line (Integer'Image (I)\n                & \" incremented by \"\n                & Integer'Image (Incr)\n                & \" is \"\n                & Integer'Image (R));\n      I := R;\n   end Display_Update_Values;\nbegin\n   R := Increment_By (I);\n   Display_Update_Values;\n   R := Increment_By (I);\n   Display_Update_Values;\n\n   R := Increment_By (I, 5);\n   Display_Update_Values;\n   R := Increment_By (I);\n   Display_Update_Values;\n\n   R := Increment_By (I, 10);\n   Display_Update_Values;\n   R := Increment_By (I);\n   Display_Update_Values;\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Modular_Programming.Operations",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "d3c4638840872b916866fb0dabfa59d0f0fc36deeb511fe3153d0efa8e1ddbd09f536d1bfb36f6aca5dfacd9c8c57a2b7c5757f95594bcf12cb68e571bea241e",
+    "text_hash_short": "76190b1261a9652cfb7986ecec191e37"
+}

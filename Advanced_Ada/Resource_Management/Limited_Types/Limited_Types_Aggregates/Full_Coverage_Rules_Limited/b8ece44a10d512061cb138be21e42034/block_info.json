@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/limited_types.rst",
+    "line_start": 1981,
+    "line_end": 2001,
+    "text": "with Ada.Strings.Unbounded;\nuse  Ada.Strings.Unbounded;\n\npackage Persons is\n\n   type Limited_Person;\n   type Limited_Person_Access is\n     access all Limited_Person;\n\n   type Limited_Person is limited record\n      Self : Limited_Person_Access :=\n               Limited_Person'Unchecked_Access;\n      Name : Unbounded_String;\n      Age  : Natural;\n      Shoe_Size : Positive;\n   end record;\n\nend Persons;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Limited_Types.Limited_Types_Aggregates.Full_Coverage_Rules_Limited",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "persons.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "0cef5a2377f7742d3a044b6f347633968d6d713b289f59131373435d854c1c01921fd3ad12dbb47788400ea070a06f8da280c4185de60e62ba2d6aade137c1a0",
+    "text_hash_short": "b8ece44a10d512061cb138be21e42034"
+}

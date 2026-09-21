@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/06_Translation.rst",
+    "line_start": 702,
+    "line_end": 715,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main is\n   type Value_Type is mod 2 ** 32;\n   pragma Provide_Shift_Operators (Value_Type);\n\n   Value : Value_Type;\nbegin\n   Value := Shift_Left (2, 1) or 1;\n   Put_Line (\"Value = \" & Value_Type'Image (Value));\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Translation.Bitwise_Ops_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "1b5811633abd13a4ddbc550234d7b63e1a87c12ca056969364b5e65a1d94be13470bffdff2ec30d38e4a1501524d317e3eb4af63d0dfe50a33048e06cb9eb8e9",
+    "text_hash_short": "ac54e0b3722ba9d1c2c2cba9205ee278"
+}

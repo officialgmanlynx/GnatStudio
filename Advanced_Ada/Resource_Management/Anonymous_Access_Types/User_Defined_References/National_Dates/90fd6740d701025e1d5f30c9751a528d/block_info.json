@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 1976,
+    "line_end": 2014,
+    "text": "package National_Date_Info is\n\n   subtype Country_Code is String (1 .. 3);\n\n   type Time is record\n      Year  : Integer;\n      Month : Positive range 1 .. 12;\n      Day   : Positive range 1 .. 31;\n   end record;\n\n   type National_Date is tagged record\n      Country : Country_Code;\n      Date    : Time;\n   end record;\n\n   type National_Date_Access is\n     access National_Date;\n\n   procedure Show (Nat_Date : National_Date);\n\nend National_Date_Info;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body National_Date_Info is\n\n   procedure Show (Nat_Date : National_Date) is\n   begin\n      Put_Line (\"Country: \"\n                & Nat_Date.Country);\n      Put_Line (\"Year:    \"\n                & Integer'Image\n                    (Nat_Date.Date.Year));\n   end Show;\n\nend National_Date_Info;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.User_Defined_References.National_Dates",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "national_date_info.ads",
+        "national_date_info.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "187e4e515b5bc8a335954c78836fcb3000254e50bfd69202d6e883dc5d22e00bac8a3eb34faad9dc7a1de4ef08e887d7e055d7e349df3ee85c22e41fbe8f810f",
+    "text_hash_short": "90fd6740d701025e1d5f30c9751a528d"
+}

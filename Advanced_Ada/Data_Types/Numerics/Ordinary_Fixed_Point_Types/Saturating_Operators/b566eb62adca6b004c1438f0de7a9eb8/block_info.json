@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 10197,
+    "line_end": 10235,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Fixed_Types; use Fixed_Types;\n\nprocedure Show_Saturating is\n   A, B, C : Sample;\n   R       : Sat_Sample;\nbegin\n   A := 0.5;\n   B := 0.75;\n   R := Sat_Sample (A) + Sat_Sample (B);\n   C := Sample (R);\n   Put_Line (\"0.5 + 0.75    = \"\n             & C'Image);\n\n   A := -1.0;\n   B := -1.0;\n   R := Sat_Sample (A) * Sat_Sample (B);\n   C := Sample (R);\n   Put_Line (\"(-1.0)*(-1.0) = \"\n             & C'Image);\n\n   A := 0.5;\n   B := 0.25;\n   R := Sat_Sample (A) + Sat_Sample (B);\n   C := Sample (R);\n   Put_Line (\"0.5 + 0.25    = \"\n             & C'Image);\n\n   A := -0.5;\n   B := 0.75;\n   R := Sat_Sample (A) - Sat_Sample (B);\n   C := Sample (R);\n   Put_Line (\"-0.5 - 0.75   = \"\n             & C'Image);\nend Show_Saturating;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Ordinary_Fixed_Point_Types.Saturating_Operators",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_saturating.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_saturating.adb",
+    "text_hash": "80ebbc217bf48785cf9c7b6cbb96328676a1f61b0a506f2e9e4f47af8e7c5f6a0a8828ba6f805057d73998e1cf209a02bb5cc907cd776411c67a4aeba306171a",
+    "text_hash_short": "b566eb62adca6b004c1438f0de7a9eb8"
+}

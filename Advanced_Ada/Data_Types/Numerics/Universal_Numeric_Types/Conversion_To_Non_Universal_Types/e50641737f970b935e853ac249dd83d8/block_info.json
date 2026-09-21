@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 668,
+    "line_end": 699,
+    "text": "package Static_Expressions is\n\n   Pi : constant :=\n      3.14159_26535_89793_23846_26433_83279_50288;\n\n   Seed : constant :=\n      143_574_786_272_784_656_928_283_872_972_764;\n\n   Super_Seed : constant :=\n      Seed * Seed * Seed * Seed * Seed * Seed;\n\nend Static_Expressions;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Static_Expressions;\nuse  Static_Expressions;\n\nprocedure Show_Static_Expressions is\nbegin\n   Put_Line (Pi'Image);\n   --  Same as:\n   --  Put_Line (Float (Pi)'Image);\n\n   Put_Line (Seed'Image);\n   --  Same as:\n   --  Put_Line (\n   --    Long_Long_Long_Integer (Seed)'Image);\nend Show_Static_Expressions;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Universal_Numeric_Types.Conversion_To_Non_Universal_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "static_expressions.ads",
+        "show_static_expressions.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_static_expressions.adb",
+    "text_hash": "e66d3fb65c618e6ad8cb1776d3773181c733da5da2064cb71f029eb21cae3c4765c1c3b52321de2aea51065dce440a6a997da5c3dcd890db530cfb73a4727417",
+    "text_hash_short": "e50641737f970b935e853ac249dd83d8"
+}

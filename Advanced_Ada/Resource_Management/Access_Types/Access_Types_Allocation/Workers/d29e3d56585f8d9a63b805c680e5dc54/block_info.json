@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 469,
+    "line_end": 530,
+    "text": "package Workers is\n\n   task type Worker is\n      entry Start (Id : Positive);\n      entry Stop;\n   end Worker;\n\n   type Worker_Access is access Worker;\n\n   type Worker_Array is\n     array (Positive range <>) of Worker_Access;\n\nend Workers;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Workers is\n\n   task body Worker is\n      Id : Positive;\n   begin\n      accept Start (Id : Positive) do\n         Worker.Id := Id;\n      end Start;\n      Put_Line (\"Started Worker #\"\n                & Id'Image);\n\n      accept Stop;\n\n      Put_Line (\"Stopped Worker #\"\n                & Id'Image);\n   end Worker;\n\nend Workers;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Workers; use Workers;\n\nprocedure Show_Workers is\n   Worker_Arr : Worker_Array (1 .. 20);\nbegin\n   --\n   --  Allocating 20 workers at once:\n   --\n   Worker_Arr := (others => new Worker);\n\n   for I in Worker_Arr'Range loop\n      Worker_Arr (I).Start (I);\n   end loop;\n\n   Put_Line (\"Some processing...\");\n   delay 1.0;\n\n   for W of Worker_Arr loop\n      W.Stop;\n   end loop;\n\nend Show_Workers;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Access_Types_Allocation.Workers",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "workers.ads",
+        "workers.adb",
+        "show_workers.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_workers.adb",
+    "text_hash": "4aea7f2e0d0adf0a96eb1b2d2ec57b5f25849f6c41fa9569d543eb54bef2e2ececa6548c238f00498bf461434e4e219a53323fde8ad6471fa585aa80a7c13354",
+    "text_hash_short": "d29e3d56585f8d9a63b805c680e5dc54"
+}

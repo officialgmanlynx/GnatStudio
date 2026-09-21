@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 9542,
+    "line_end": 9553,
+    "text": "package Illegal_Fixed_Point is\n\n   D : constant := 2.0 ** (-128);\n\n   type TQ128 is\n     delta D\n     range -1.0 .. 1.0 - D;\n\nend Illegal_Fixed_Point;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Ordinary_Fixed_Point_Types.Illegal_Ordinary_Fixed_Point_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-compile-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "illegal_fixed_point.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "39aa2400df27a12b04a1aa5f0a85ab358f0d7b3b69b543aaaa8241150063264459adeb09bee23bf68a8708449d6522b58d6aa7954baf11b44f7b66e063e9debc",
+    "text_hash_short": "9644189f76cbd3ab03cbbfd699f6502e"
+}

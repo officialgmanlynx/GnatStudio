@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 4635,
+    "line_end": 4643,
+    "text": "procedure Add_Ten (I : in out Integer);\n\nprocedure Add_Ten (I : in out Integer) is\nbegin\n   I := I + 10;\nend Add_Ten;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Access_To_Subprograms.Access_To_Subprogram_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "add_ten.ads",
+        "add_ten.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "80ba77ea2482a361979e3263c169c3aa59f4632bfd3dd785fa9af36050147eb9ff0c2b7161fa0462875f5653ffb2d0d8d048d20007c5000b475a187c133518d1",
+    "text_hash_short": "8553ad7329bf1ed727147b47b7355a70"
+}

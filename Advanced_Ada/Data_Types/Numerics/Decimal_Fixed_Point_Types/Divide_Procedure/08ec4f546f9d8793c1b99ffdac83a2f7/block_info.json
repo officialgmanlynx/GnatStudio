@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 6579,
+    "line_end": 6611,
+    "text": "package Custom_Decimal_Types is\n\n   type T0_D4 is\n     delta 10.0 ** (-0) digits 4;\n\nend Custom_Decimal_Types;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Custom_Decimal_Types;\nuse  Custom_Decimal_Types;\n\nprocedure Show_Divide_Procedure is\n\n   Dividend  : T0_D4;\n   Divisor   : T0_D4;\n   Result    : T0_D4;\nbegin\n   Dividend := 501.0;\n   Divisor  := 2.0;\n\n   Result   := Dividend / Divisor;\n\n   Put_Line (\"Dividend           : \"\n             & Dividend'Image);\n   Put_Line (\"Divisor            : \"\n             & Divisor'Image);\n   Put_Line (\"Dividend / Divisor : \"\n             & Result'Image);\nend Show_Divide_Procedure;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Decimal_Fixed_Point_Types.Divide_Procedure",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_decimal_types.ads",
+        "show_divide_procedure.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_divide_procedure.adb",
+    "text_hash": "b961e1169347bac17bc312a86b24e5a08ada2ecda7dbcbfa72d46f74ea2b02d819ef9eca0c5a9dffcf7412c162a5517dcf9b68d2ef863fb869f824612b87fec3",
+    "text_hash_short": "08ec4f546f9d8793c1b99ffdac83a2f7"
+}

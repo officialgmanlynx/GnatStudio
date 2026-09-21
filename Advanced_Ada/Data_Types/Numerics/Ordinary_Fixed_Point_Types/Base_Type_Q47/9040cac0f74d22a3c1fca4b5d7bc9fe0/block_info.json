@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 9167,
+    "line_end": 9205,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Full_Range_Base_Type is\n   D : constant := 2.0 ** (-47);\n\n   type TQ47 is\n     delta D\n     range -1.0 .. 1.0 - D;\nbegin\n   Put_Line (\"The small          of TQ47      is \"\n             & TQ47'Small'Image);\n   Put_Line (\"The delta    value of TQ47      is \"\n             & TQ47'Delta'Image);\n   Put_Line (\"The minimum  value of TQ47      is \"\n             & TQ47'First'Image);\n   Put_Line (\"The maximum  value of TQ47      is \"\n             & TQ47'Last'Image);\n   Put_Line (\"The size           of TQ47      is \"\n             & TQ47'Size'Image\n             & \" bits\");\n\n   Put_Line (\"------------------------------\");\n\n   Put_Line (\"The small          of TQ47'Base is \"\n             & TQ47'Base'Small'Image);\n   Put_Line (\"The delta    value of TQ47'Base is \"\n             & TQ47'Base'Delta'Image);\n   Put_Line (\"The minimum  value of TQ47'Base is \"\n             & TQ47'Base'First'Image);\n   Put_Line (\"The maximum  value of TQ47'Base is \"\n             & TQ47'Base'Last'Image);\n   Put_Line (\"The size           of TQ47'Base is \"\n             & TQ47'Base'Size'Image\n             & \" bits\");\n\nend Show_Full_Range_Base_Type;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Ordinary_Fixed_Point_Types.Base_Type_Q47",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_full_range_base_type.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_full_range_base_type.adb",
+    "text_hash": "abaf6f18574ce011dbb753f337b7018d03b743459a198e9c9ecbbe541f7dfea6787328d18015389d1bc45d126f8391b569a8f0e489784d46261f3957f1a1122b",
+    "text_hash_short": "9040cac0f74d22a3c1fca4b5d7bc9fe0"
+}

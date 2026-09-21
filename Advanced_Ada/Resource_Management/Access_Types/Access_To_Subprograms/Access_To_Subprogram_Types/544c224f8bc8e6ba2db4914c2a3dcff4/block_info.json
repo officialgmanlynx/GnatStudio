@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/access_types.rst",
+    "line_start": 4940,
+    "line_end": 4980,
+    "text": "with Ada.Text_IO;       use Ada.Text_IO;\n\nwith Custom_Processing; use Custom_Processing;\n\nwith Add_Ten;\nwith Mult_Two;\n\nprocedure Show_Access_To_Subprogram_Discriminants\nis\n\n   R_Add_Ten  : Rec (IP => Add_Ten'Access);\n   --                ^^^^^^^^^^^^^^^^^^^^\n   --       Using access-to-subprogram as a\n   --       discriminant\n\n   R_Mult_Two : Rec (IP => Mult_Two'Access);\n   --                ^^^^^^^^^^^^^^^^^^^^^\n   --       Using access-to-subprogram as a\n   --       discriminant\n\nbegin\n   Init (R_Add_Ten,  1);\n   Init (R_Mult_Two, 2);\n\n   Put_Line (\"---- R_Add_Ten ----\");\n   Show (R_Add_Ten);\n\n   Put_Line (\"Calling Process procedure...\");\n   Process (R_Add_Ten);\n   Show (R_Add_Ten);\n\n   Put_Line (\"---- R_Mult_Two ----\");\n   Show (R_Mult_Two);\n\n   Put_Line (\"Calling Process procedure...\");\n   Process (R_Mult_Two);\n   Show (R_Mult_Two);\nend Show_Access_To_Subprogram_Discriminants;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Access_Types.Access_To_Subprograms.Access_To_Subprogram_Types",
+    "main_file": "show_access_to_subprogram_discriminants.adb",
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_access_to_subprogram_discriminants.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_access_to_subprogram_discriminants.adb",
+    "text_hash": "b189a403e694aa7bf911bf63eab4adc90af03c4f71d5ed4793e8284d37a5d5c1fe9732d79b5e896b6f0c4dbf5246b2d24b1d24f11e2b3910fd7c41f282f0b405",
+    "text_hash_short": "544c224f8bc8e6ba2db4914c2a3dcff4"
+}

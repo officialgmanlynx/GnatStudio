@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 2814,
+    "line_end": 2830,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Enumeration_Image is\n\n   type Months is\n     (January, February, March, April,\n      May, June, July, August, September,\n      October, November, December);\n\n   M : constant Months := January;\nbegin\n   Put_Line (\"Month: \"\n             & Months'Image (M));\nend Show_Enumeration_Image;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Discarding_Names.Enumeration_Image",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_enumeration_image.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_enumeration_image.adb",
+    "text_hash": "46868035dd5659cc0679d22e7b1cd293471656f0ec2ceb3f28845527962b69d6902751477d4dfae7a1422952100f6916bc4e2f4baac2915cff1ec0d43e1bd276",
+    "text_hash_short": "3863c5e06641d96b59edb9e76daa7560"
+}

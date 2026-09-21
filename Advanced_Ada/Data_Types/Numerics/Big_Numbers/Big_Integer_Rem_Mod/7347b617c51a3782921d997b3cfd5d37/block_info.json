@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 11400,
+    "line_end": 11416,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Ada.Numerics.Big_Numbers.Big_Integers;\nuse  Ada.Numerics.Big_Numbers.Big_Integers;\n\nprocedure Show_Big_Integer_Rem_Mod is\n   BI : Big_Integer;\nbegin\n   BI := 145 mod (-4);\n   Put_Line (\"BI (mod): \" & BI'Image);\n\n   BI := 145 rem (-4);\n   Put_Line (\"BI (rem): \" & BI'Image);\nend Show_Big_Integer_Rem_Mod;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Big_Numbers.Big_Integer_Rem_Mod",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnat2022",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_big_integer_rem_mod.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_big_integer_rem_mod.adb",
+    "text_hash": "e0814bc2cabdc1a72a196695067dd291b26295842c4536faefe5b6a8ee18e6febeb24cf61b2201e9d7f3e5a4b233adafc449d11bd64ff46a71c56e6df81d1969",
+    "text_hash_short": "7347b617c51a3782921d997b3cfd5d37"
+}

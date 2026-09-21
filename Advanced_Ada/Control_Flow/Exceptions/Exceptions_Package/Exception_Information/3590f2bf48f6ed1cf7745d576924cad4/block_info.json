@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/exceptions.rst",
+    "line_start": 1630,
+    "line_end": 1652,
+    "text": "with Ada.Exceptions;\nwith Ada.Text_IO;      use Ada.Text_IO;\n\nprocedure Main is\n\n   procedure Nested (Index : Integer) is\n      type T_Array is array (1 .. 2) of Integer;\n      T : constant T_Array := (10, 20);\n   begin\n      Put_Line (T (Index)'Img);\n   end Nested;\n\nbegin\n   Nested (3);\n\nexception\n   when E : others =>\n      Put_Line\n       (Ada.Exceptions.Exception_Information (E));\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Exceptions.Exceptions_Package.Exception_Information",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-g",
+        "-gnateE",
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "b514ac2a779d51eb4671dc01cc5b58c8d29036727f05b6e5d8e82273b6f5a27cfd64862cae47b3be7a84b0ae53fd92aba79cf4c597742b1804b951a742e8dba6",
+    "text_hash_short": "3590f2bf48f6ed1cf7745d576924cad4"
+}

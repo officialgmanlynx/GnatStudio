@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-ada/chapters/standard_library_containers.rst",
+    "line_start": 763,
+    "line_end": 839,
+    "text": "with Ada.Containers; use Ada.Containers;\nwith Ada.Containers.Vectors;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Show_Vector_Ops is\n\n   package Integer_Vectors is new\n     Ada.Containers.Vectors\n       (Index_Type   => Natural,\n        Element_Type => Integer);\n\n   package Integer_Vectors_Sorting is\n     new Integer_Vectors.Generic_Sorting;\n\n   use Integer_Vectors;\n   use Integer_Vectors_Sorting;\n\n   procedure Show_Elements (V : Vector) is\n   begin\n      New_Line;\n      Put_Line (\"Vector has \"\n                & Count_Type'Image (V.Length)\n                & \" elements\");\n\n      if not V.Is_Empty then\n         Put_Line (\"Vector elements are: \");\n         for E of V loop\n            Put_Line (\"- \" & Integer'Image (E));\n         end loop;\n      end if;\n   end Show_Elements;\n\n   V, V1, V2, V3 : Vector;\nbegin\n   V1 := 10 & 12 & 18;\n   V2 := 11 & 13 & 19;\n   V3 := 15 & 19;\n\n   New_Line;\n   Put_Line (\"---- V1 ----\");\n   Show_Elements (V1);\n\n   New_Line;\n   Put_Line (\"---- V2 ----\");\n   Show_Elements (V2);\n\n   New_Line;\n   Put_Line (\"---- V3 ----\");\n   Show_Elements (V3);\n\n   New_Line;\n   Put_Line\n     (\"Concatenating V1, V2 and V3 into V:\");\n\n   V := V1 & V2 & V3;\n\n   Show_Elements (V);\n\n   New_Line;\n   Put_Line (\"Sorting V:\");\n\n   Sort (V);\n\n   Show_Elements (V);\n\n   New_Line;\n   Put_Line (\"Merging V2 into V1:\");\n\n   Merge (V1, V2);\n\n   Show_Elements (V1);\n\nend Show_Vector_Ops;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Ada.Standard_Library.Show_Vector_Ops",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_vector_ops.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_vector_ops.adb",
+    "text_hash": "74d9dac7775d86affc2232a375e4a5d6320b7585ede22f3a4064cd231623dcaff3d6d248cf96b00a734454e87d685b3ae31be40d294afa6f97dbbf05328a0e4d",
+    "text_hash_short": "3301513e4e7fd2f28488966e5b24e448"
+}

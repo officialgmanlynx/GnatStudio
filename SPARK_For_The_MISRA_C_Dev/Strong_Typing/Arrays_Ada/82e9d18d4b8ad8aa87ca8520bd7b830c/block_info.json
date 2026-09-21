@@ -1,0 +1,46 @@
+{
+    "rst_file": "/vagrant/content/courses/SPARK_for_the_MISRA_C_Developer/chapters/04_strong_typing.rst",
+    "line_start": 235,
+    "line_end": 266,
+    "text": "package Types is\n   type Int_Array is array (Positive range <>) of Integer;\nend Types;\n\nwith Types; use Types;\n\nfunction Count (P : Int_Array; V : Integer) return Natural;\n\nfunction Count (P : Int_Array; V : Integer) return Natural is\n   Count : Natural := 0;\nbegin\n   for I in P'Range loop\n      if P (I) = V then\n         Count := Count + 1;\n      end if;\n   end loop;\n   return Count;\nend Count;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Types; use Types;\nwith Count;\n\nprocedure Test_Count is\n   P : constant Int_Array := (0, 3, 9, 3, 3);\n   C : constant Integer := Count (P, 3);\nbegin\n   Put_Line (\"value 3 is seen\" & C'Img & \" times in p\");\nend Test_Count;\n",
+    "language": "ada",
+    "project": "Courses.SPARK_For_The_MISRA_C_Dev.Strong_Typing.Arrays_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "types.ads",
+        "count.ads",
+        "count.adb",
+        "test_count.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "test_count.adb",
+    "text_hash": "2d65f45ebec396468f6d92095c14896e3a5d12ca35e72c44b523091abbd44e0c288d6ac296299ef648423af8f86340f65fea563ab00fdac9b9facb1b9a0bf2ed",
+    "text_hash_short": "82e9d18d4b8ad8aa87ca8520bd7b830c"
+}

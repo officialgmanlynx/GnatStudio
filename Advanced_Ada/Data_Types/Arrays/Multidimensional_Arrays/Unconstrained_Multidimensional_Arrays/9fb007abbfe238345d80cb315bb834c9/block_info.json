@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/arrays.rst",
+    "line_start": 428,
+    "line_end": 453,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nwith Multidimensional_Arrays_Decl;\nuse  Multidimensional_Arrays_Decl;\n\nprocedure Show_Multidimensional_Arrays is\n   A1 : F1 (1 .. 2);\n   A2 : F2 (1 .. 4, 10 .. 20);\n   A3 : F3 (2 .. 3, 1 .. 5, 1 .. 2);\nbegin\n   Put_Line (\"A1'Length (1): \"\n             & A1'Length (1)'Image);\n   Put_Line (\"A2'Length (1): \"\n             & A2'Length (1)'Image);\n   Put_Line (\"A2'Length (2): \"\n             & A2'Length (2)'Image);\n   Put_Line (\"A3'Length (1): \"\n             & A3'Length (1)'Image);\n   Put_Line (\"A3'Length (2): \"\n             & A3'Length (2)'Image);\n   Put_Line (\"A3'Length (3): \"\n             & A3'Length (3)'Image);\nend Show_Multidimensional_Arrays;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Arrays.Multidimensional_Arrays.Unconstrained_Multidimensional_Arrays",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_multidimensional_arrays.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_multidimensional_arrays.adb",
+    "text_hash": "c84ac19a7df135464b3f039d1d9e522304da6567568c1f0988926433ac9b485fc3cb0dc014c56421c34d7fdb0648d08ad8990e538c08bc9c825e5869360a9087",
+    "text_hash_short": "9fb007abbfe238345d80cb315bb834c9"
+}

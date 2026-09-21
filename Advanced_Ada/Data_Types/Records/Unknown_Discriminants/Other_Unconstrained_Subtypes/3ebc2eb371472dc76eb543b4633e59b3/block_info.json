@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 2903,
+    "line_end": 2923,
+    "text": "package Unconstrained_Subtypes is\n\n   type Arr is\n     array (Positive range <>) of\n       Integer;\n\n   type Rec (L : Positive) is\n     null record;\n\n   subtype Arr_Sub is Arr;\n   --                 ^^^\n   --  no constraints\n\n   subtype Rec_Sub is Rec;\n   --                 ^^^\n   --  no constraints\n\nend Unconstrained_Subtypes;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Unknown_Discriminants.Other_Unconstrained_Subtypes",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "unconstrained_subtypes.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "9603700387e08707bfb6cf7cf42ae0d324eadf8b2706feadd168559ecca17dfc0cea947ea0c066232a69d1382058859ac902fb3b6d644388e80e70ad0f38b639",
+    "text_hash_short": "3ebc2eb371472dc76eb543b4633e59b3"
+}

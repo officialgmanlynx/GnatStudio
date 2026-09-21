@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types_representation.rst",
+    "line_start": 642,
+    "line_end": 695,
+    "text": "package Custom_Types is\n\n   type UInt_7 is range 0 .. 127;\n\n   type Aligned_UInt_7 is new UInt_7\n     with Alignment => 4;\n\nend Custom_Types;\n\nwith Ada.Text_IO;  use Ada.Text_IO;\n\nwith Custom_Types; use Custom_Types;\n\nprocedure Show_Alignment is\n   V         : constant UInt_7         := 0;\n   Aligned_V : constant Aligned_UInt_7 := 0;\nbegin\n   Put_Line\n     (\"UInt_7'Alignment:           \"\n      & UInt_7'Alignment'Image);\n   Put_Line\n     (\"UInt_7'Size:                \"\n      & UInt_7'Size'Image);\n   Put_Line\n     (\"UInt_7'Object_Size:         \"\n      & UInt_7'Object_Size'Image);\n   Put_Line\n     (\"V'Alignment:                \"\n      & V'Alignment'Image);\n   Put_Line\n     (\"V'Size:                     \"\n      & V'Size'Image);\n   New_Line;\n\n   Put_Line\n     (\"Aligned_UInt_7'Alignment:   \"\n      & Aligned_UInt_7'Alignment'Image);\n   Put_Line\n     (\"Aligned_UInt_7'Size:        \"\n      & Aligned_UInt_7'Size'Image);\n   Put_Line\n     (\"Aligned_UInt_7'Object_Size: \"\n      & Aligned_UInt_7'Object_Size'Image);\n   Put_Line\n     (\"Aligned_V'Alignment:        \"\n      & Aligned_V'Alignment'Image);\n   Put_Line\n     (\"Aligned_V'Size:             \"\n      & Aligned_V'Size'Image);\n   New_Line;\nend Show_Alignment;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Type_Representation.Data_Representation.Alignment",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "custom_types.ads",
+        "show_alignment.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_alignment.adb",
+    "text_hash": "753a1fdb8c6281ac6af8f0bece0c34913f8eff704615b632e4e46d4d0ac8249e61e0352ec1efa52a02fc79eb5b198fd0ab3a6894d38b2c3485409c80e4555045",
+    "text_hash_short": "a2fea340559193c293ccaee226de2558"
+}

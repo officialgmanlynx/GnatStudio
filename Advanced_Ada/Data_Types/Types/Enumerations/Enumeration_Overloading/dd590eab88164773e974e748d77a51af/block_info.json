@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 1061,
+    "line_end": 1080,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\nwith Colors;      use Colors;\n\nprocedure Red_Colors is\n   C1 : constant Color         := Red;\n   --  Using Red from Color\n\n   C2 : constant Primary_Color := Red;\n   --  Using Red from Primary_Color\nbegin\n   if C1 = Red then\n      Put_Line (\"C1 = Red\");\n   end if;\n   if C2 = Red then\n      Put_Line (\"C2 = Red\");\n   end if;\nend Red_Colors;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Enumerations.Enumeration_Overloading",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "red_colors.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "red_colors.adb",
+    "text_hash": "55813741109f58ab2c5b07aabaae18fef7e107e13dcfa6e907eb57a33b9298f0dd3765843e2766bd3662b49c25d13157c22c829d5d69a7600c94db2e28197077",
+    "text_hash_short": "dd590eab88164773e974e748d77a51af"
+}

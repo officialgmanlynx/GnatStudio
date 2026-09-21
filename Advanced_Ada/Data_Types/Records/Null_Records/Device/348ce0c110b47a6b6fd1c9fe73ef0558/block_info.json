@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/records.rst",
+    "line_start": 726,
+    "line_end": 806,
+    "text": "package Devices is\n\n   type Device is private;\n\n   function Create (Active : Boolean)\n                    return Device;\n\n   procedure Reset (D : out Device);\n\n   procedure Process (D : in out Device);\n\n   procedure Activate (D : in out Device);\n\n   procedure Deactivate (D : in out Device);\n\nprivate\n\n   type Device is record\n      Active : Boolean;\n   end record;\n\nend Devices;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\npackage body Devices is\n\n   function Create (Active : Boolean)\n                    return Device\n   is\n      pragma Unreferenced (Active);\n   begin\n      Put_Line (\"Creating device...\");\n      return (Active => Active);\n   end Create;\n\n   procedure Reset (D : out Device)\n   is\n      pragma Unreferenced (D);\n   begin\n      Put_Line (\"Processing on device...\");\n   end Reset;\n\n   procedure Process (D : in out Device)\n   is\n      pragma Unreferenced (D);\n   begin\n      Put_Line (\"Deactivating device...\");\n   end Process;\n\n   procedure Activate (D : in out Device)\n   is\n   begin\n      Put_Line (\"Activating device...\");\n      D.Active := True;\n   end Activate;\n\n   procedure Deactivate (D : in out Device)\n   is\n   begin\n      Put_Line (\"Resetting device...\");\n      D.Active := False;\n   end Deactivate;\n\nend Devices;\n\nwith Ada.Text_IO; use Ada.Text_IO;\nwith Devices;     use Devices;\n\nprocedure Show_Device is\n   A : Device;\nbegin\n   A := Create (Active => True);\n   Process (A);\n   Deactivate (A);\n   Activate (A);\n   Reset (A);\nend Show_Device;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Records.Null_Records.Device",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "devices.ads",
+        "devices.adb",
+        "show_device.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_device.adb",
+    "text_hash": "8fc7553266b8b92409d2ebc439e2fffae44c74e5ec98f368359ba2918f707e9d95729c99c89654c7684a7950d5c72f4391c911985c2e294cd6288b6fdd80c5fb",
+    "text_hash_short": "348ce0c110b47a6b6fd1c9fe73ef0558"
+}

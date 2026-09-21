@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/intro-to-spark/chapters/02_Flow_Analysis.rst",
+    "line_start": 406,
+    "line_end": 421,
+    "text": "procedure Set_X_To_Y_Plus_Z\n  (Y, Z     :     Natural;\n   X        : out Natural;\n   Overflow : out Boolean)\nis\nbegin\n   if Natural'Last - Z < Y then\n      Overflow := True; -- X should be initialized on every path\n   else\n      Overflow := False;\n      X := Y + Z;\n   end if;\nend Set_X_To_Y_Plus_Z;\n",
+    "language": "ada",
+    "project": "Courses.Intro_To_Spark.Flow_Analysis.Set_X_To_Y_Plus_Z",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-expect-prove-error"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "prove_flow"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": false,
+    "prove_it": true,
+    "source_files": [
+        "set_x_to_y_plus_z.adb"
+    ],
+    "project_filename": null,
+    "spark_project_filename": "main_spark.gpr",
+    "project_main_file": null,
+    "text_hash": "7a33972236e640c212215a60f5398ca0024e8d66b72d5dbb2a289a55f37626a9867274fa49189d162df41b8904fcdd163547096a41d695fd5ed718c614294eed",
+    "text_hash_short": "be47cd769d2a7267c0bd1bb2ef0d6328"
+}

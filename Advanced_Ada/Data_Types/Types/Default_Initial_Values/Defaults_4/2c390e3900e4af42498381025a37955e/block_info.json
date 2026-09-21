@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/types.rst",
+    "line_start": 3212,
+    "line_end": 3221,
+    "text": "package Defaults is\n\n   type Arr is\n     array (Positive range <>) of Integer\n       with Default_Component_Value => -1;\n\nend Defaults;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Types.Default_Initial_Values.Defaults_4",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "defaults.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "9d95aa779b859c3ae7fe6425b6db99f5b759cc3793968efa5cb85a6d250bcc6698709f3e9088ff20c9beb5b49c17a7ab68c1ea03de85b28fa195afecdf62fe03",
+    "text_hash_short": "2c390e3900e4af42498381025a37955e"
+}

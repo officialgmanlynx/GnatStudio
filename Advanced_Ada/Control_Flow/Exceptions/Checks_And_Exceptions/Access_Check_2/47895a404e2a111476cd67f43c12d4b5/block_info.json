@@ -1,0 +1,45 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/control_flow/exceptions.rst",
+    "line_start": 531,
+    "line_end": 547,
+    "text": "procedure Show_Access_Check is\n\n   type Integer_Access is\n     access all Integer;\n\n   type Safe_Integer_Access is\n     not null access all Integer;\n\n   AI  : Integer_Access;\n   SAI : Safe_Integer_Access := new Integer;\n\nbegin\n   SAI := Safe_Integer_Access (AI);\nend Show_Access_Check;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Control_Flow.Exceptions.Checks_And_Exceptions.Access_Check_2",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [
+        "ada-run-expect-failure"
+    ],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "show_access_check.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_access_check.adb",
+    "text_hash": "25e1d73f5d03d49ff5436a50015e760bc963280c4e1fcd81ac3ec521f7d516e000a0d62b98c7172e879607604ea4f3910e2a679303c3d26b4fa95c25517a13e4",
+    "text_hash_short": "47895a404e2a111476cd67f43c12d4b5"
+}

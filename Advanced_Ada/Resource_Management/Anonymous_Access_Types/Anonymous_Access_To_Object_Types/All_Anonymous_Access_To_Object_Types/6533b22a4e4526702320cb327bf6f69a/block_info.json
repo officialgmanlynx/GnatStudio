@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/resource_management/anonymous_access_types.rst",
+    "line_start": 288,
+    "line_end": 326,
+    "text": "package All_Anonymous_Access_To_Object_Types is\n\n   procedure Add_One (A : access Integer) is null;\n   --                     ^ Anonymous access type\n\n   AI : access Integer;\n   --  ^ Anonymous access type\n\n   type Rec (AI : access Integer) is private;\n   --             ^ Anonymous access type\n\n   type Access_Array is\n      array (Positive range <>) of\n        access Integer;\n   --   ^ Anonymous access type\n\n   Arr : array (1 .. 5) of access Integer;\n   --                      ^ Anonymous access type\n\n   AI_Renaming : access Integer renames AI;\n   --            ^ Anonymous access type\n\n   function Init_Access_Integer\n     return access Integer is (null);\n   --       ^ Anonymous access type\n\nprivate\n\n   type Rec (AI : access Integer) is record\n   --             ^ Anonymous access type\n      Internal_AI : access Integer;\n   --               ^ Anonymous access type\n\n   end record;\n\nend All_Anonymous_Access_To_Object_Types;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Resource_Management.Anonymous_Access_Types.Anonymous_Access_To_Object_Types.All_Anonymous_Access_To_Object_Types",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "compile"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": false,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "all_anonymous_access_to_object_types.ads"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": null,
+    "text_hash": "e7a45e24e11ad8b24674dd754ab6f5c8e181f62082fc9b041d1b1c7a8aa94fe1d4fc335d910d27b697e76cbe3a83dc090cc8a1e87e58f02ff83c6f3e6e9efae0",
+    "text_hash_short": "6533b22a4e4526702320cb327bf6f69a"
+}

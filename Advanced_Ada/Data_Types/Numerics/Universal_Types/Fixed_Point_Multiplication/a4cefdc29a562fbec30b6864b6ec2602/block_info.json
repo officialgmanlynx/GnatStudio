@@ -1,0 +1,44 @@
+{
+    "rst_file": "/vagrant/content/courses/advanced-ada/parts/data_types/numerics.rst",
+    "line_start": 859,
+    "line_end": 885,
+    "text": "package Normalized_Fixed_Point_Types is\n\n   type TQ31 is\n     delta 2.0 ** (-31)\n     range -1.0 .. 1.0 - 2.0 ** (-31);\n\n   type TQ15 is\n     delta 2.0 ** (-15)\n     range -1.0 .. 1.0 - 2.0 ** (-15);\n\nend Normalized_Fixed_Point_Types;\n\nwith Ada.Text_IO; use Ada.Text_IO;\n\nwith Normalized_Fixed_Point_Types;\nuse  Normalized_Fixed_Point_Types;\n\nprocedure Show_Fixed_Multiplication is\n   A : TQ15 := 0.25;\n   B : TQ31 := 0.50;\nbegin\n   A := A * B;\n   Put_Line (\"A = \" & A'Image);\nend Show_Fixed_Multiplication;\n",
+    "language": "ada",
+    "project": "Courses.Advanced_Ada.Data_Types.Numerics.Universal_Types.Fixed_Point_Multiplication",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "normalized_fixed_point_types.ads",
+        "show_fixed_multiplication.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "show_fixed_multiplication.adb",
+    "text_hash": "66dc0fc494b051ef5d66cb7bccb787855beee830bc12847645372ae794a06b42e04c50b6bfc6e9275e88f341b2181a26a448cb02ddea5ad22c6da5702ee219ed",
+    "text_hash_short": "a4cefdc29a562fbec30b6864b6ec2602"
+}

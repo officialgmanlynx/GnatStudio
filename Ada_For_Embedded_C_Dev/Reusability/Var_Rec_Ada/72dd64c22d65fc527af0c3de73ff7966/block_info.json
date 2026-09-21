@@ -1,0 +1,43 @@
+{
+    "rst_file": "/vagrant/content/courses/Ada_For_The_Embedded_C_Developer/chapters/07_Reusability.rst",
+    "line_start": 974,
+    "line_end": 1003,
+    "text": "with Ada.Text_IO; use Ada.Text_IO;\n\nprocedure Main is\n\n   type Float_Int (Use_Float : Boolean) is record\n      case Use_Float is\n        when True  => F : Float;\n        when False => I : Integer;\n      end case;\n   end record;\n\n   procedure Display (V : Float_Int) is\n   begin\n      if V.Use_Float then\n         Put_Line (\"Float value:   \" & Float'Image (V.F));\n      else\n         Put_Line (\"Integer value: \" & Integer'Image (V.I));\n      end if;\n   end Display;\n\n   F : constant Float_Int := (Use_Float => True,  F => 10.0);\n   I : constant Float_Int := (Use_Float => False, I => 9);\n\nbegin\n   Display (F);\n   Display (I);\nend Main;\n",
+    "language": "ada",
+    "project": "Courses.Ada_For_Embedded_C_Dev.Reusability.Var_Rec_Ada",
+    "main_file": null,
+    "gnat_version": [
+        "default",
+        "15.1.0-2"
+    ],
+    "gnatprove_version": [
+        "default",
+        "15.1.0-1"
+    ],
+    "gprbuild_version": [
+        "default",
+        "25.0.0-1"
+    ],
+    "compiler_switches": [
+        "-gnata"
+    ],
+    "classes": [],
+    "manual_chop": false,
+    "buttons": [
+        "run"
+    ],
+    "active": true,
+    "no_check": false,
+    "syntax_only": false,
+    "run_it": true,
+    "compile_it": true,
+    "prove_it": false,
+    "source_files": [
+        "main.adb"
+    ],
+    "project_filename": "main.gpr",
+    "spark_project_filename": null,
+    "project_main_file": "main.adb",
+    "text_hash": "920432de3838176c015d6c93dec51fa0daafe1d700e288186a7d07ee5c7c88e48927f0c42865cac2eca6eb312973fe209152f353f5913ae5e7d54e4923159197",
+    "text_hash_short": "72dd64c22d65fc527af0c3de73ff7966"
+}
